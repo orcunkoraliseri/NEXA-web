@@ -1,16 +1,16 @@
-,Neighbourhood,RC-R ,RC-R ,RC-D,RC-D,RC-T,RC-T,RC-MR2,RC-MR2,RC-MR3,RC-MR3,RC-HR2,RC-HR2
-Config.,EV Integration Scenario,EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled)
-Config.,EV Penetration Rate,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-
-Config.,Daily Energy Demand (200 km Range),15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-
-Config.,Charging Efficiency,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-
-Config.,V2G Participation Rate,-,50%,-,50%,-,50%,-,50%,-,50%,-,50%
-Config.,Battery Efficiency,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%
-Config.,Discharge Capacity,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day
-Parameters, # HHs,24,24,48,48,56,56,256,256,384,384,640,640
-Parameters,Total floor area,5280,5280,10560,10560,10080,10080,25080,25080,37620,37620,94050,94050
-Results,Total EV Energy Demand (kWh/day),600,600,1200,1200,1400,1400,6720,6720,10080,10080,16800,16800
-Results,Storage Loss (kWh/day),30,30,60,60,70,70,320,320,480,480,800,800
-Results,V2G Power Available: V2G Discharge Contribution (kWh/day),-,180,-,360,-,420,-,1920,-,2880,-,4800
-Results,Net Energy Balance (kWh/day),630,450,1260,900,1470,1050,7040,5120,10560,7680,17600,12800
-Results,Net Energy Balance (kWh/m2-day),0.12,0.09,0.12,0.09,0.15,0.10,0.28,0.20,0.28,0.20,0.19,0.14
-Results,System Status Indicator,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit
+,Neighbourhood,RC-R ,RC-R ,RC-D,RC-D,RC-T,RC-T,RC-ML,RC-ML,RC-MR1,RC-MR1,RC-MR2,RC-MR2,RC-MR3,RC-MR3,RC-HR1,RC-HR1,RC-HR2,RC-HR2
+Config.,EV Integration Scenario,EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled),EV1 (Charging-Only),EV2 (V2G-Enabled)
+Config.,EV Penetration Rate,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-,1.5 EVs / household,-
+Config.,Daily Energy Demand (200 km Range),15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-,15 kWh / EV,-
+Config.,Charging Efficiency,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-
+Config.,V2G Participation Rate,-,50%,-,50%,-,50%,-,50%,-,50%,-,50%,-,50%,-,50%,-,50%
+Config.,Battery Efficiency,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%,-,90%
+Config.,Discharge Capacity,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day,-,10 kW / day
+Parameters, # HHs,24,24,48,48,56,56,52,52,156,156,256,256,384,384,448,448,640,640
+Parameters,Total floor area,5280,5280,10560,10560,10080,10080,10320,10320,17580,17580,25080,25080,37620,37620,59565,59565,94050,94050
+Results,Total EV Energy Demand (kWh/day),600,600,1200,1200,1400,1400,1300,1300,3900,3900,6720,6720,10080,10080,11200,11200,16800,16800
+Results,Storage Loss (kWh/day),30,30,60,60,70,70,65,65,195,195,320,320,480,480,560,560,800,800
+Results,V2G Power Available: V2G Discharge Contribution (kWh/day),-,180,-,360,-,420,-,390,-,1170,-,1920,-,2880,-,3360,-,4800
+Results,Net Energy Balance (kWh/day),630,450,1260,900,1470,1050,1365,975,4095,2925,7040,5120,10560,7680,11760,8400,17600,12800
+Results,Net Energy Balance (kWh/m2-day),0.12,0.09,0.12,0.09,0.15,0.10,0.13,0.09,0.23,0.17,0.28,0.20,0.28,0.20,0.20,0.14,0.19,0.14
+Results,System Status Indicator,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit,Grid Stressed - Deficit

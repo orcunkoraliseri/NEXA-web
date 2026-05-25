@@ -1,6 +1,6 @@
-,Neighbourhood,RC-R ,RC-D,RC-T,RC-MR2,RC-MR3,RC-HR2
-Config.,Land Allocation,20%,20%,20%,20%,20%,20%
-Config.,Usable Area,10%,10%,10%,10%,10%,10%
-Config.,Module Capacity,400W,400W,400W,400W,400W,400W
-Config.,Installed Capacity (Kilowatt-peak),475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp
-Results,Energy Generation,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year
+,Neighbourhood,RC-R ,RC-D,RC-T,RC-ML,RC-MR1,RC-MR2,RC-MR3,RC-HR1,RC-HR2
+Config.,Land Allocation,20%,20%,20%,20%,20%,20%,20%,20%,20%
+Config.,Usable Area,10%,10%,10%,10%,10%,10%,10%,10%,10%
+Config.,Module Capacity,400W,400W,400W,400W,400W,400W,400W,400W,400W
+Config.,Installed Capacity (Kilowatt-peak),475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp
+Results,Energy Generation,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year

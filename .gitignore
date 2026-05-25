@@ -21,3 +21,8 @@ build/
 npm-debug.log*
 
 .vs
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
