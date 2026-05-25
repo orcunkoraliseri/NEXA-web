@@ -13,6 +13,15 @@ function getNeighbourhoodFromURL() {
     return params.get('neighbourhood');
 }
 
+/**
+ * Get envelope standard from URL parameter.
+ * @returns {string} The envelope value or default 'necb-2017'.
+ */
+function getEnvelopeFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('envelope') || 'necb-2017';
+}
+
 // Current selection state (arrays for multi-select)
 const energySelections = {
     load: [],
@@ -130,13 +139,14 @@ function setupSubmitButton() {
     if (submitBtn) {
         submitBtn.addEventListener('click', () => {
             const neighbourhoodCode = getNeighbourhoodFromURL();
+            const envelope = getEnvelopeFromURL();
 
-            // Store selections in sessionStorage (for future use)
+            // Store selections in sessionStorage
             sessionStorage.setItem('energySelections', JSON.stringify(energySelections));
 
             if (neighbourhoodCode) {
-                // Navigate to the output energy results page
-                window.location.href = `layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+                // Navigate to the output energy results page, passing envelope
+                window.location.href = `layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             } else {
                 alert('No neighbourhood selected. Please go back and select a neighbourhood.');
             }
@@ -149,12 +159,21 @@ function setupSubmitButton() {
  */
 function initEnergySelectionPage() {
     const neighbourhoodCode = getNeighbourhoodFromURL();
+    const envelope = getEnvelopeFromURL();
     const titleElement = document.getElementById('neighbourhood-title');
     const backBtn = document.getElementById('back-btn');
 
+    // Display-friendly envelope names
+    const envelopeNames = {
+        'necb-2017': 'NECB 2017',
+        'ashrae': 'ASHRAE',
+        'high-performance construction': 'High-Performance'
+    };
+
     if (neighbourhoodCode) {
-        // Update title with neighbourhood code
-        titleElement.textContent = `Layer 2: Energy Design Interface for ${neighbourhoodCode}`;
+        // Update title with neighbourhood code and envelope standard
+        const envName = envelopeNames[envelope] || envelope;
+        titleElement.textContent = `Layer 2: Energy Design Interface for ${neighbourhoodCode} (${envName})`;
 
         // Update back button to maintain context (go back to selection page)
         if (backBtn) {

@@ -233,6 +233,10 @@ function renderTreemap(neighbourhoodCode) {
     const titleElement = document.getElementById('neighbourhood-title');
     const legendContainer = document.getElementById('legend');
 
+    // Read envelope from URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const envelope = urlParams.get('envelope') || 'necb-2017';
+
     // Read load and demand selections from sessionStorage
     const selections = JSON.parse(
         sessionStorage.getItem('energySelections') || '{"load":[], "demand":[]}'
@@ -240,32 +244,47 @@ function renderTreemap(neighbourhoodCode) {
     const loadSelections = selections.load || [];
     const demandSelections = selections.demand || [];
 
-    // Determine selected COP based on user choices. Defaults to COP 3.
-    let selectedCOP = "3";
+    // Map energy selections to CSV columns
+    // Priority: thermal_load → IAL, cop4 → EEM2, dhw → EEM3, appliances → EEM4
+    // Default (no specific energy selection) → DEFAULT
+    let selectedColumn = "DEFAULT";
     if (loadSelections.includes('thermal_load')) {
-        selectedCOP = "1";
+        selectedColumn = "IAL";
     } else if (demandSelections.includes('cop4')) {
-        selectedCOP = "4";
-    } else if (demandSelections.includes('cop3.5')) {
-        selectedCOP = "3.5";
-    } else if (demandSelections.includes('cop3')) {
-        selectedCOP = "3";
+        selectedColumn = "EEM2";
+    } else if (demandSelections.includes('dhw')) {
+        selectedColumn = "EEM3";
+    } else if (demandSelections.includes('appliances')) {
+        selectedColumn = "EEM4";
     }
 
-    // Get energy data for neighbourhood
-    const neighborhoodData = ENERGY_DATA[neighbourhoodCode];
+    // Get energy data using the new unified lookup
+    const energyData = getEnergyData(envelope, neighbourhoodCode, selectedColumn);
 
-    if (!neighborhoodData || !neighborhoodData[selectedCOP]) {
-        container.innerHTML = '<p class="error-message">Energy data not found for this neighbourhood and COP configuration.</p>';
+    if (!energyData) {
+        container.innerHTML = '<p class="error-message">Energy data not found for this neighbourhood and configuration.</p>';
         titleElement.textContent = 'Energy Breakdown';
         return;
     }
 
-    const energyData = neighborhoodData[selectedCOP];
+    // Display-friendly names
+    const envelopeNames = {
+        'necb-2017': 'NECB 2017',
+        'ashrae': 'ASHRAE',
+        'high-performance construction': 'High-Performance'
+    };
+    const columnNames = {
+        'IAL': 'Thermal Load (Ideal Air Load)',
+        'DEFAULT': 'Baseline',
+        'EEM1': 'High-Performance Envelope',
+        'EEM2': 'Heat Pump (COP 4)',
+        'EEM3': 'DHW',
+        'EEM4': 'Appliances & Equipment'
+    };
 
-    // Update header with new title format
-    const copDisplay = selectedCOP === "1" ? "Thermal Load (COP 1)" : `COP ${selectedCOP}`;
-    titleElement.textContent = `Layer 2: Space Conditioning (${copDisplay}) Breakdown of ${neighbourhoodCode}`;
+    const envName = envelopeNames[envelope] || envelope;
+    const colName = columnNames[selectedColumn] || selectedColumn;
+    titleElement.textContent = `Layer 2: ${colName} Breakdown of ${neighbourhoodCode} (${envName})`;
 
     // Render EUI Scale
     renderEUIScale(energyData.total);
@@ -276,7 +295,7 @@ function renderTreemap(neighbourhoodCode) {
     // Set back step button href to energy selection page
     const backStepBtn = document.getElementById('back-step-btn');
     if (backStepBtn) {
-        backStepBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+        backStepBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
     // Set next step button href
@@ -285,28 +304,8 @@ function renderTreemap(neighbourhoodCode) {
         nextStepBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&from=consumption`;
     }
 
-    // Define thermal categories
-    const THERMAL_CATEGORIES = ["Heating", "Cooling"];
-
-    // Filter breakdown based on selection
+    // Use full breakdown from the new data
     let filteredBreakdown = energyData.breakdown;
-    
-    // If only load selected -> show thermal
-    // If only demand selected (and specifically appliances only) -> show electric/equipment
-    // If both appliances and a space cooling/heating option is selected -> show all
-    const hasSpaceConditioning = loadSelections.includes('thermal_load') || demandSelections.some(v => ['cop4', 'cop3.5', 'cop3'].includes(v));
-    const hasAppliances = demandSelections.includes('appliances');
-
-    if (hasSpaceConditioning && !hasAppliances) {
-        filteredBreakdown = energyData.breakdown.filter(
-            item => THERMAL_CATEGORIES.includes(item.name)
-        );
-    } else if (hasAppliances && !hasSpaceConditioning) {
-        filteredBreakdown = energyData.breakdown.filter(
-            item => !THERMAL_CATEGORIES.includes(item.name)
-        );
-    }
-    // If both are selected, we show the full breakdown (Heating, Cooling, Electric, etc.)
 
     // Recalculate total from filtered data
     const filteredTotal = filteredBreakdown.reduce(

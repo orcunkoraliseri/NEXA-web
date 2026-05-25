@@ -238,8 +238,17 @@ function updateAvailableOptions() {
     // Get all matching neighbourhoods based on current filters
     const matchingNeighbourhoods = NEIGHBOURHOODS.filter(n => {
         for (const [category, value] of Object.entries(activeFilters)) {
-            if (value !== null && n[category] !== value) {
-                return false;
+            if (value !== null) {
+                const nVal = n[category];
+                if (category === 'envelope') {
+                    if (Array.isArray(nVal)) {
+                        if (!nVal.includes(value)) return false;
+                    } else if (nVal !== value) {
+                        return false;
+                    }
+                } else if (nVal !== value) {
+                    return false;
+                }
             }
         }
         return true;
@@ -259,7 +268,12 @@ function updateAvailableOptions() {
         availableValues.context.add(n.context);
         availableValues.density.add(n.density);
         availableValues.layout.add(n.layout);
-        availableValues.envelope.add(n.envelope);
+        
+        if (Array.isArray(n.envelope)) {
+            n.envelope.forEach(env => availableValues.envelope.add(env));
+        } else {
+            availableValues.envelope.add(n.envelope);
+        }
     });
 
     // If no filters are active, enable all cards
@@ -424,7 +438,11 @@ function setupLayer2Button() {
     if (layer2Btn) {
         layer2Btn.addEventListener('click', () => {
             if (selectedNeighbourhoodCode) {
-                window.location.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(selectedNeighbourhoodCode)}`;
+                // Get envelope from stored filters
+                const filtersJson = sessionStorage.getItem('activeFilters');
+                const filters = filtersJson ? JSON.parse(filtersJson) : {};
+                const envelope = filters.envelope || 'necb-2017';
+                window.location.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(selectedNeighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             }
         });
     }
@@ -484,7 +502,15 @@ function checkNeighbourhoodMatchesFilters(neighbourhood, filters) {
     for (const [category, value] of Object.entries(filters)) {
         if (value !== null) {
             const neighbourhoodValue = neighbourhood[category];
-            if (neighbourhoodValue !== value) {
+            if (category === 'envelope') {
+                if (Array.isArray(neighbourhoodValue)) {
+                    if (!neighbourhoodValue.includes(value)) {
+                        return false;
+                    }
+                } else if (neighbourhoodValue !== value) {
+                    return false;
+                }
+            } else if (neighbourhoodValue !== value) {
                 return false;
             }
         }
@@ -620,27 +646,45 @@ function createResultRow(concept, neighbourhood) {
     // Helper function to capitalize layout values
     const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
+    // Determine the active envelope standard to display (default to 'necb-2017')
+    const activeEnvelope = activeFilters.envelope || 'necb-2017';
+
+    // Map envelope standard to exact image filename and label display
+    const envelopeImageNames = {
+        'necb-2017': 'NECB 2017',
+        'ashrae': 'ASHRAE',
+        'high-performance construction': 'High-Performance Construction'
+    };
+    const envelopeDisplayNames = {
+        'necb-2017': 'necb-2017',
+        'ashrae': 'ashrae',
+        'high-performance construction': 'high'
+    };
+
+    const envelopeImageName = envelopeImageNames[activeEnvelope] || activeEnvelope;
+    const envelopeLabel = envelopeDisplayNames[activeEnvelope] || activeEnvelope;
+
     propertiesCell.innerHTML = `
-      <div class="properties-cell" style="display: flex; gap: var(--spacing-sm); justify-content: center; align-items: center; flex-wrap: wrap;">
+      <div class="properties-cell" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; justify-items: center; align-items: start;">
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">
-          <img src="Content/Images_Usage_Parameters/${neighbourhood.usage}.png" alt="${neighbourhood.usage}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
+          <img src="Content/Images_Usage_Parameters/${neighbourhood.usage}.png" alt="${neighbourhood.usage}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
           <span>${neighbourhood.usage}</span>
         </div>
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">
-          <img src="Content/Images_Context_Parameters/${neighbourhood.context}.png" alt="${neighbourhood.context}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
+          <img src="Content/Images_Context_Parameters/${neighbourhood.context}.png" alt="${neighbourhood.context}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
           <span>${neighbourhood.context}</span>
         </div>
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">
-          <img src="Content/Images_Layout_Parameters/${capitalize(neighbourhood.layout)}.png" alt="${neighbourhood.layout}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
+          <img src="Content/Images_Layout_Parameters/${capitalize(neighbourhood.layout)}.png" alt="${neighbourhood.layout}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
           <span>${neighbourhood.layout}</span>
         </div>
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">
-          <img src="Content/Images_Density_Parameters/${neighbourhood.density}.png" alt="${neighbourhood.density}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
+          <img src="Content/Images_Density_Parameters/${neighbourhood.density}.png" alt="${neighbourhood.density}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
           <span>${neighbourhood.density}</span>
         </div>
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">
-          <img src="Content/Images_Envelope_Parameters/${neighbourhood.envelope}.png" alt="${neighbourhood.envelope}" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
-          <span>${neighbourhood.envelope}</span>
+          <img src="Content/Images_Envelope_Parameters/${envelopeImageName}.png" alt="${activeEnvelope}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
+          <span>${envelopeLabel}</span>
         </div>
       </div>
     `;

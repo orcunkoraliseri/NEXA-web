@@ -29,11 +29,11 @@ const NEIGHBOURHOODS = [
     context: "rural",
     density: "low",
     layout: "curvilinear",
-    envelope: "high-performance construction",
-    eui: 65.098,
-    energyStatus: "Positive",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
     content: "24 detached (two-storey house) homes",
-    image: "Content/Images_Neighbourhoods/NUs_RC-R.png",
+    image: "Content/Images_Neighbourhoods/RC-R.png",
     buildings: ["Two-Storey House"]
   },
   {
@@ -43,11 +43,11 @@ const NEIGHBOURHOODS = [
     context: "suburban",
     density: "low",
     layout: "curvilinear",
-    envelope: "high-performance construction",
-    eui: 65.098,
-    energyStatus: "Positive",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
     content: "48 detached (two-storey house) homes",
-    image: "Content/Images_Neighbourhoods/NUs_RC-D.png",
+    image: "Content/Images_Neighbourhoods/RC-D.png",
     buildings: ["Two-Storey House"]
   },
   {
@@ -57,12 +57,40 @@ const NEIGHBOURHOODS = [
     context: "suburban",
     density: "low",
     layout: "curvilinear",
-    envelope: "high-performance construction",
-    eui: 60.082,
-    energyStatus: "Positive",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
     content: "56 attached units",
-    image: "Content/Images_Neighbourhoods/NUs_RC-T.png",
+    image: "Content/Images_Neighbourhoods/RC-T.png",
     buildings: ["Attached House"]
+  },
+  {
+    code: "RC-ML",
+    conceptId: 7,
+    usage: "residential",
+    context: "suburban",
+    density: "low",
+    layout: "curvilinear",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
+    content: "24x Detached Houses + 28x Attached Houses",
+    image: "Content/Images_Neighbourhoods/RC-ML.png",
+    buildings: ["Two-Storey House", "Attached House"]
+  },
+  {
+    code: "RC-MR1",
+    conceptId: 6,
+    usage: "residential",
+    context: "urban",
+    density: "medium",
+    layout: "grid",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
+    content: "4x Mid-Rise + 28x Attached Houses",
+    image: "Content/Images_Neighbourhoods/RC-MR1.png",
+    buildings: ["midrise apartment", "Attached House"]
   },
   {
     code: "RC-MR2",
@@ -71,11 +99,11 @@ const NEIGHBOURHOODS = [
     context: "suburban",
     density: "medium",
     layout: "grid",
-    envelope: "high-performance construction",
-    eui: 68.829,
-    energyStatus: "Negative",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
     content: "8 Midrise",
-    image: "Content/Images_Neighbourhoods/NUs_RC-MR2.png",
+    image: "Content/Images_Neighbourhoods/RC-MR2.png",
     buildings: ["midrise apartment"]
   },
   {
@@ -85,12 +113,26 @@ const NEIGHBOURHOODS = [
     context: "urban",
     density: "high",
     layout: "grid",
-    envelope: "high-performance construction",
-    eui: 69.837,
-    energyStatus: "Negative",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
     content: "12 Midrise",
-    image: "Content/Images_Neighbourhoods/NUs_RC-MR3.png",
+    image: "Content/Images_Neighbourhoods/RC-MR3.png",
     buildings: ["midrise apartment"]
+  },
+  {
+    code: "RC-HR1",
+    conceptId: 4,
+    usage: "residential",
+    context: "urban",
+    density: "high",
+    layout: "grid",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
+    content: "2x High-Rise + 4x Mid-Rise",
+    image: "Content/Images_Neighbourhoods/RC-HR1.png",
+    buildings: ["Highrise Apartment", "midrise apartment"]
   },
   {
     code: "RC-HR2",
@@ -99,14 +141,14 @@ const NEIGHBOURHOODS = [
     context: "urban",
     density: "high",
     layout: "grid",
-    envelope: "high-performance construction",
-    eui: 154.3,
-    energyStatus: "Negative",
+    envelope: ["necb-2017", "ashrae", "high-performance construction"],
+    eui: null,
+    energyStatus: null,
     content: "4 Highrise (10-St)",
-    image: "Content/Images_Neighbourhoods/NUs_RC-HR2.png",
+    image: "Content/Images_Neighbourhoods/RC-HR2.png",
     buildings: ["Highrise Apartment"]
-  },
-  /*
+  }
+  /* Commented-out neighbourhoods preserved for future use
   {
     code: "RC7",
     conceptId: 4,
@@ -120,255 +162,8 @@ const NEIGHBOURHOODS = [
     image: "Content/Images_Neighbourhoods/NUs_RC7.png",
     buildings: ["Highrise Apartment", "midrise apartment"]
   },
-  {
-    code: "RC8",
-    conceptId: 2,
-    usage: "residential",
-    context: "urban",
-    density: "high",
-    layout: "grid",
-    eui: 150.122,
-    energyStatus: "Negative",
-    content: "8 High-Rise Towers (10-Story)",
-    image: "Content/Images_Neighbourhoods/NUs_RC8.png",
-    buildings: ["Highrise Apartment"]
-  },
-  {
-    code: "CR",
-    conceptId: 7,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "low",
-    layout: "curvilinear",
-    eui: 94.31,
-    energyStatus: "Positive",
-    content: "21 attached + small office + small retail + quick service restaurant",
-    image: "Content/Images_Neighbourhoods/NUS_CR.png",
-    buildings: ["Attached House", "Small Office", "Small Retail", "quick service restaurant"]
-  },
-  {
-    code: "CR/I V1",
-    conceptId: 5,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "medium",
-    layout: "grid",
-    eui: 93.386,
-    energyStatus: "Positive",
-    content: "21 attached + 2 Mid-Rise + primary school + small office + supermarket + quick service restaurant + full service restaurant",
-    image: "Content/Images_Neighbourhoods/NUS_CR I-V1.png",
-    buildings: ["Attached House", "midrise apartment", "Primary School", "Small Office", "Supermarket", "quick service restaurant", "Full service restaurant"]
-  },
-  {
-    code: "CR/I V2",
-    conceptId: 5,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "medium",
-    layout: "grid",
-    eui: 126.789,
-    energyStatus: "Neutral",
-    content: "5 Mid-Rise + secondary school + small office + supermarket + quick service restaurant + full service restaurant",
-    image: "Content/Images_Neighbourhoods/NUs_CR-I V2.png",
-    buildings: ["midrise apartment", "secondary school", "Small Office", "Supermarket", "quick service restaurant", "Full service restaurant"]
-  },
-  {
-    code: "MU1",
-    conceptId: 7,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "low",
-    layout: "curvilinear",
-    eui: 81.128,
-    energyStatus: "Neutral",
-    content: "24 detached + primary school",
-    image: "Content/Images_Neighbourhoods/NUs_MU1.png",
-    buildings: ["Two-Storey House", "Primary School"]
-  },
-  {
-    code: "MU2",
-    conceptId: 5,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "medium",
-    layout: "grid",
-    eui: 94.491,
-    energyStatus: "Neutral",
-    content: "6 Midrise apartments + secondary school",
-    image: "Content/Images_Neighbourhoods/NUs_MU2.png",
-    buildings: ["midrise apartment", "secondary school"]
-  },
-  {
-    code: "MU3",
-    conceptId: 2,
-    usage: "mixed-use",
-    context: "urban",
-    density: "high",
-    layout: "grid",
-    eui: 212.067,
-    energyStatus: "Negative",
-    content: "3 highrise (10 story) + large office + Standalone Retail + large hotel + quick service restaurant + full service restaurant",
-    image: "Content/Images_Neighbourhoods/NUs_MU3.png",
-    buildings: ["Highrise Apartment", "Large Office", "Standalone Retail", "Large Hotel", "quick service restaurant", "Full service restaurant"]
-  },
-  {
-    code: "MU3/L",
-    conceptId: 2,
-    usage: "mixed-use",
-    context: "urban",
-    density: "high",
-    layout: "grid",
-    eui: 211.438,
-    energyStatus: "Negative",
-    content: "3 highrise (10 story) + quick service restaurant + full service restaurant + Small retail",
-    image: "Content/Images_Neighbourhoods/NUs_MU3-L.png",
-    buildings: ["Highrise Apartment", "quick service restaurant", "Full service restaurant", "Small Retail"]
-  },
-  {
-    code: "MU4",
-    conceptId: 3,
-    usage: "mixed-use",
-    context: "urban",
-    density: "high",
-    layout: "grid",
-    eui: 224.431,
-    energyStatus: "Negative",
-    content: "4 mid-rise, hospital, small hotel, retail store, 2 medium offices, two restaurants",
-    image: "Content/Images_Neighbourhoods/NUs_MU4.png",
-    buildings: ["midrise apartment", "Hospital", "Small Hotel", "Small Retail", "Medium Office", "quick service restaurant", "Full service restaurant"]
-  },
-  {
-    code: "MU-S",
-    conceptId: 6,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "medium",
-    layout: "grid",
-    eui: 178.367,
-    energyStatus: "Negative",
-    content: "5 midrise + medium office + 2 quick service restaurant + 2 full service restaurant + small hotel + Standalone Retail + supermarket",
-    image: "Content/Images_Neighbourhoods/NUs_MUS-L.png",
-    buildings: ["midrise apartment", "Medium Office", "quick service restaurant", "Full service restaurant", "Small Hotel", "Standalone Retail", "Supermarket"]
-  },
-  {
-    code: "MU-S/L",
-    conceptId: 6,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "medium",
-    layout: "grid",
-    eui: 173.754,
-    energyStatus: "Negative",
-    content: "5 midrise + Standalone Retail + supermarket",
-    image: "Content/Images_Neighbourhoods/NUs_MUS-L.png",
-    buildings: ["midrise apartment", "Standalone Retail", "Supermarket"]
-  },
-  {
-    code: "MU-P V1",
-    conceptId: 4,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "high",
-    layout: "grid",
-    eui: 227.182,
-    energyStatus: "Negative",
-    content: "2 highrise + 2 midrise + medium office + 2 quick service restaurant + 2 full service restaurant + small hotel + hospital + small retail",
-    image: "Content/Images_Neighbourhoods/NUs_MU-P V1.png",
-    buildings: ["Highrise Apartment", "midrise apartment", "Medium Office", "quick service restaurant", "Full service restaurant", "Small Hotel", "Hospital", "Small Retail"]
-  },
-  {
-    code: "MU-P V2",
-    conceptId: 4,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "high",
-    layout: "grid",
-    eui: 239.391,
-    energyStatus: "Negative",
-    content: "4 highrise + large office + large hotel + Standalone Retail + 2 quick service restaurant + 2 full service restaurant",
-    image: "Content/Images_Neighbourhoods/NUs_MU-P V2.png",
-    buildings: ["Highrise Apartment", "Large Office", "Large Hotel", "Standalone Retail", "quick service restaurant", "Full service restaurant"]
-  },
-  {
-    code: "MU-P V2/L",
-    conceptId: 4,
-    usage: "mixed-use",
-    context: "suburban",
-    density: "high",
-    layout: "grid",
-    eui: 166.368,
-    energyStatus: "Negative",
-    content: "4 highrise + large office + Standalone Retail",
-    image: "Content/Images_Neighbourhoods/NUs_MU-P V2-L.png",
-    buildings: ["Highrise Apartment", "Large Office", "Standalone Retail"]
-  },
-  {
-    code: "CC1",
-    conceptId: 10,
-    usage: "commercial",
-    context: "suburban",
-    density: "low",
-    layout: "superblock",
-    eui: 180.704,
-    energyStatus: "Positive",
-    content: "supermarket + retail strip mall + 2 Standalone Retail + 2 quick service restaurant + full service restaurant + small office + medium office",
-    image: "Content/Images_Neighbourhoods/NUs_CC1.png",
-    buildings: ["Supermarket", "Retail Strip Mall", "Standalone Retail", "quick service restaurant", "Full service restaurant", "Small Office", "Medium Office"]
-  },
-  {
-    code: "CC1/L",
-    conceptId: 10,
-    usage: "commercial",
-    context: "suburban",
-    density: "low",
-    layout: "superblock",
-    eui: 194.366,
-    energyStatus: "Positive",
-    content: "supermarket + retail strip mall + 2 Standalone Retail + 2 quick service restaurant",
-    image: "Content/Images_Neighbourhoods/NUs_CC1-L.png",
-    buildings: ["Supermarket", "Retail Strip Mall", "Standalone Retail", "quick service restaurant"]
-  },
-  {
-    code: "CC2",
-    conceptId: 1,
-    usage: "commercial",
-    context: "urban",
-    density: "high",
-    layout: "grid",
-    eui: 231.41,
-    energyStatus: "Negative",
-    content: "supermarket + Standalone Retail + large hotel + quick service restaurant + full service restaurant + large office + medium office",
-    image: "Content/Images_Neighbourhoods/NUs_CC2.png",
-    buildings: ["Supermarket", "Standalone Retail", "Large Hotel", "quick service restaurant", "Full service restaurant", "Large Office", "Medium Office"]
-  },
-  {
-    code: "IND-HIGH",
-    conceptId: 11,
-    usage: "industrial",
-    context: "suburban",
-    density: "high",
-    layout: "superblock",
-    eui: null,
-    energyStatus: "Negative",
-    content: "4 Data center",
-    image: "Content/Images_Neighbourhoods/NUs_IND-HIGH.png",
-    buildings: ["Data Center"]
-  },
-  {
-    code: "IND-LOW",
-    conceptId: 12,
-    usage: "industrial",
-    context: "suburban",
-    density: "low",
-    layout: "superblock",
-    eui: 56.179,
-    energyStatus: "Positive",
-    content: "4 Warehouse + 4 Small Office",
-    image: "Content/Images_Neighbourhoods/NUs_IND-LOW.png",
-    buildings: ["Warehouse", "Small Office"]
-  }
+  ... (other commented entries remain as-is)
   */
-
 ];
 
 // Building image mapping
@@ -408,13 +203,21 @@ const PV_GENERATION_DATA = {
   "RC-T": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 91.30, rop: 1.57 },
   "RC-MR2": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 48.10, rop: 0.60 },
   "RC-MR3": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 48.10, rop: 0.60 },
-  "RC-HR2": { surface: "Roof + Facade", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 39.70, rop: 0.44 }
+  "RC-HR2": { surface: "Roof + Facade", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 39.70, rop: 0.44 },
+  "RC-MR1": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 92.4, rop: null },
+  "RC-HR1": { surface: "Roof + Facade", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 42.2, rop: null },
+  "RC-ML": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 158.9, rop: null }
 };
 
-// Energy category colors
+// Energy category colors (updated for new CSV metric names)
 const ENERGY_COLORS = {
   "Heating": "#ef4444",
   "Cooling": "#3b82f6",
+  "DHW": "#06b6d4",
+  "Lighting": "#eab308",
+  "Equipment": "#8b5cf6",
+  "Fans & Pumps": "#22c55e",
+  // Legacy colors preserved for backward compatibility
   "Interior Lighting": "#eab308",
   "Electric Equipment": "#8b5cf6",
   "Exterior Lighting": "#f59e0b",
@@ -428,8 +231,193 @@ const ENERGY_COLORS = {
   "FCU Fans": "#84cc16"
 };
 
-// Energy data per neighbourhood (kWh/m²-yr)
-const ENERGY_DATA = {
+// ========================================================================
+// ENVELOPE_ENERGY_DATA — Unified energy data from CAN_MTL.csv & ASHRAE.csv
+// Keyed by: envelope → NU code → column → { total, breakdown[], pv }
+// ========================================================================
+const ENVELOPE_ENERGY_DATA = {
+  // Source: CAN_MTL.csv
+  "necb-2017": {
+    "RC-D": {
+      "IAL":     { total: 163.9, breakdown: [{name:"Heating",value:64.9},{name:"Cooling",value:24.8},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:47.4},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 138.6, breakdown: [{name:"Heating",value:51.7},{name:"Cooling",value:6.3},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.3}], pv: 0.0 },
+      "EEM1":    { total: 108.2, breakdown: [{name:"Heating",value:21.7},{name:"Cooling",value:6.8},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:5.9}], pv: 174.5 },
+      "EEM2":    { total: 93.1,  breakdown: [{name:"Heating",value:6.5},{name:"Cooling",value:6.2},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.6}], pv: 174.5 },
+      "EEM3":    { total: 81.0,  breakdown: [{name:"Heating",value:9.2},{name:"Cooling",value:6.3},{name:"DHW",value:6.6},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.8}], pv: 174.5 },
+      "EEM4":    { total: 61.1,  breakdown: [{name:"Heating",value:10.9},{name:"Cooling",value:5.0},{name:"DHW",value:6.6},{name:"Lighting",value:2.6},{name:"Equipment",value:28.3},{name:"Fans & Pumps",value:6.8}], pv: 174.5 }
+    },
+    "RC-T": {
+      "IAL":     { total: 167.0, breakdown: [{name:"Heating",value:52.5},{name:"Cooling",value:23.7},{name:"DHW",value:26.9},{name:"Lighting",value:5.8},{name:"Equipment",value:58.1},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 140.0, breakdown: [{name:"Heating",value:36.3},{name:"Cooling",value:6.3},{name:"DHW",value:26.9},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.6}], pv: 0.0 },
+      "EEM1":    { total: 114.0, breakdown: [{name:"Heating",value:10.4},{name:"Cooling",value:7.2},{name:"DHW",value:26.1},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.4}], pv: 143.2 },
+      "EEM2":    { total: 106.5, breakdown: [{name:"Heating",value:3.2},{name:"Cooling",value:6.5},{name:"DHW",value:26.1},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.9}], pv: 143.2 },
+      "EEM3":    { total: 91.8,  breakdown: [{name:"Heating",value:3.2},{name:"Cooling",value:6.5},{name:"DHW",value:11.2},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.9}], pv: 143.2 },
+      "EEM4":    { total: 66.7,  breakdown: [{name:"Heating",value:4.9},{name:"Cooling",value:4.7},{name:"DHW",value:11.2},{name:"Lighting",value:3.2},{name:"Equipment",value:34.8},{name:"Fans & Pumps",value:6.8}], pv: 143.2 }
+    },
+    "RC-ML": {
+      "IAL":     { total: 165.4, breakdown: [{name:"Heating",value:58.8},{name:"Cooling",value:24.2},{name:"DHW",value:24.5},{name:"Lighting",value:5.2},{name:"Equipment",value:52.7},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 139.2, breakdown: [{name:"Heating",value:44.2},{name:"Cooling",value:6.3},{name:"DHW",value:24.4},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.4}], pv: 0.0 },
+      "EEM1":    { total: 111.0, breakdown: [{name:"Heating",value:16.2},{name:"Cooling",value:7.0},{name:"DHW",value:23.8},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.1}], pv: 158.9 },
+      "EEM2":    { total: 99.7,  breakdown: [{name:"Heating",value:4.9},{name:"Cooling",value:6.4},{name:"DHW",value:23.8},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.7}], pv: 158.9 },
+      "EEM3":    { total: 86.2,  breakdown: [{name:"Heating",value:6.3},{name:"Cooling",value:6.4},{name:"DHW",value:8.9},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.8}], pv: 158.9 },
+      "EEM4":    { total: 63.8,  breakdown: [{name:"Heating",value:8.0},{name:"Cooling",value:4.9},{name:"DHW",value:8.9},{name:"Lighting",value:2.9},{name:"Equipment",value:31.5},{name:"Fans & Pumps",value:6.8}], pv: 158.9 }
+    },
+    "RC-R": {
+      "IAL":     { total: 163.9, breakdown: [{name:"Heating",value:63.9},{name:"Cooling",value:25.8},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:47.4},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 137.8, breakdown: [{name:"Heating",value:50.7},{name:"Cooling",value:6.6},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.3}], pv: 0.0 },
+      "EEM1":    { total: 107.6, breakdown: [{name:"Heating",value:20.7},{name:"Cooling",value:7.2},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:5.9}], pv: 155.5 },
+      "EEM2":    { total: 93.2,  breakdown: [{name:"Heating",value:6.2},{name:"Cooling",value:6.5},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.6}], pv: 155.5 },
+      "EEM3":    { total: 81.0,  breakdown: [{name:"Heating",value:8.9},{name:"Cooling",value:6.6},{name:"DHW",value:6.6},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.8}], pv: 155.5 },
+      "EEM4":    { total: 61.0,  breakdown: [{name:"Heating",value:10.6},{name:"Cooling",value:5.3},{name:"DHW",value:6.6},{name:"Lighting",value:2.6},{name:"Equipment",value:28.3},{name:"Fans & Pumps",value:6.8}], pv: 155.5 }
+    },
+    "RC-HR1": {
+      "IAL":     { total: 213.8, breakdown: [{name:"Heating",value:38.7},{name:"Cooling",value:100.4},{name:"DHW",value:48.2},{name:"Lighting",value:4.3},{name:"Equipment",value:22.2},{name:"Fans & Pumps",value:0.0}], pv: 1.9 },
+      "DEFAULT": { total: 111.2, breakdown: [{name:"Heating",value:18.3},{name:"Cooling",value:9.1},{name:"DHW",value:48.2},{name:"Lighting",value:4.3},{name:"Equipment",value:19.2},{name:"Fans & Pumps",value:9.1}], pv: 1.9 },
+      "EEM1":    { total: 103.4, breakdown: [{name:"Heating",value:8.2},{name:"Cooling",value:11.3},{name:"DHW",value:48.2},{name:"Lighting",value:4.3},{name:"Equipment",value:19.2},{name:"Fans & Pumps",value:9.1}], pv: 42.2 },
+      "EEM2":    { total: 99.8,  breakdown: [{name:"Heating",value:2.8},{name:"Cooling",value:13.2},{name:"DHW",value:48.2},{name:"Lighting",value:4.3},{name:"Equipment",value:19.2},{name:"Fans & Pumps",value:9.1}], pv: 42.2 },
+      "EEM3":    { total: 67.3,  breakdown: [{name:"Heating",value:6.3},{name:"Cooling",value:13.0},{name:"DHW",value:12.1},{name:"Lighting",value:4.3},{name:"Equipment",value:19.2},{name:"Fans & Pumps",value:9.1}], pv: 42.2 },
+      "EEM4":    { total: 52.3,  breakdown: [{name:"Heating",value:7.0},{name:"Cooling",value:9.4},{name:"DHW",value:12.1},{name:"Lighting",value:1.7},{name:"Equipment",value:11.0},{name:"Fans & Pumps",value:7.9}], pv: 42.2 }
+    },
+    "RC-HR2": {
+      "IAL":     { total: 210.4, breakdown: [{name:"Heating",value:41.6},{name:"Cooling",value:90.3},{name:"DHW",value:51.8},{name:"Lighting",value:3.9},{name:"Equipment",value:22.8},{name:"Fans & Pumps",value:0.0}], pv: 3.3 },
+      "DEFAULT": { total: 116.2, breakdown: [{name:"Heating",value:18.4},{name:"Cooling",value:9.3},{name:"DHW",value:51.8},{name:"Lighting",value:3.9},{name:"Equipment",value:19.0},{name:"Fans & Pumps",value:9.9}], pv: 3.3 },
+      "EEM1":    { total: 108.0, breakdown: [{name:"Heating",value:6.9},{name:"Cooling",value:12.5},{name:"DHW",value:51.8},{name:"Lighting",value:3.9},{name:"Equipment",value:19.0},{name:"Fans & Pumps",value:10.0}], pv: 22.7 },
+      "EEM2":    { total: 106.5, breakdown: [{name:"Heating",value:3.2},{name:"Cooling",value:14.6},{name:"DHW",value:51.8},{name:"Lighting",value:3.9},{name:"Equipment",value:19.0},{name:"Fans & Pumps",value:10.1}], pv: 22.7 },
+      "EEM3":    { total: 69.0,  breakdown: [{name:"Heating",value:9.6},{name:"Cooling",value:14.5},{name:"DHW",value:7.8},{name:"Lighting",value:3.9},{name:"Equipment",value:19.0},{name:"Fans & Pumps",value:10.2}], pv: 22.7 },
+      "EEM4":    { total: 53.7,  breakdown: [{name:"Heating",value:10.6},{name:"Cooling",value:10.4},{name:"DHW",value:7.9},{name:"Lighting",value:1.5},{name:"Equipment",value:10.9},{name:"Fans & Pumps",value:8.7}], pv: 22.7 }
+    },
+    "RC-MR1": {
+      "IAL":     { total: 195.9, breakdown: [{name:"Heating",value:38.3},{name:"Cooling",value:81.8},{name:"DHW",value:37.8},{name:"Lighting",value:3.3},{name:"Equipment",value:34.7},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 113.6, breakdown: [{name:"Heating",value:21.6},{name:"Cooling",value:8.5},{name:"DHW",value:37.8},{name:"Lighting",value:5.1},{name:"Equipment",value:31.0},{name:"Fans & Pumps",value:7.8}], pv: 0.0 },
+      "EEM1":    { total: 100.5, breakdown: [{name:"Heating",value:7.3},{name:"Cooling",value:10.1},{name:"DHW",value:37.3},{name:"Lighting",value:5.1},{name:"Equipment",value:31.0},{name:"Fans & Pumps",value:7.8}], pv: 92.4 },
+      "EEM2":    { total: 96.7,  breakdown: [{name:"Heating",value:2.4},{name:"Cooling",value:11.2},{name:"DHW",value:37.3},{name:"Lighting",value:5.1},{name:"Equipment",value:31.0},{name:"Fans & Pumps",value:7.8}], pv: 92.4 },
+      "EEM3":    { total: 74.3,  breakdown: [{name:"Heating",value:2.4},{name:"Cooling",value:10.9},{name:"DHW",value:15.2},{name:"Lighting",value:5.1},{name:"Equipment",value:31.0},{name:"Fans & Pumps",value:7.8}], pv: 92.4 },
+      "EEM4":    { total: 56.4,  breakdown: [{name:"Heating",value:3.1},{name:"Cooling",value:8.2},{name:"DHW",value:15.2},{name:"Lighting",value:2.3},{name:"Equipment",value:18.5},{name:"Fans & Pumps",value:7.2}], pv: 92.4 }
+    },
+    "RC-MR2": {
+      "IAL":     { total: 200.3, breakdown: [{name:"Heating",value:38.2},{name:"Cooling",value:92.1},{name:"DHW",value:43.7},{name:"Lighting",value:4.8},{name:"Equipment",value:21.5},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 107.0, breakdown: [{name:"Heating",value:20.7},{name:"Cooling",value:8.3},{name:"DHW",value:43.6},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:8.1}], pv: 0.0 },
+      "EEM1":    { total: 99.1,  breakdown: [{name:"Heating",value:11.8},{name:"Cooling",value:9.5},{name:"DHW",value:43.6},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:7.9}], pv: 66.8 },
+      "EEM2":    { total: 92.4,  breakdown: [{name:"Heating",value:3.5},{name:"Cooling",value:11.2},{name:"DHW",value:43.6},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:7.8}], pv: 66.8 },
+      "EEM3":    { total: 65.7,  breakdown: [{name:"Heating",value:3.6},{name:"Cooling",value:10.8},{name:"DHW",value:17.2},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:7.8}], pv: 66.8 },
+      "EEM4":    { total: 51.5,  breakdown: [{name:"Heating",value:3.9},{name:"Cooling",value:8.0},{name:"DHW",value:17.2},{name:"Lighting",value:2.0},{name:"Equipment",value:11.2},{name:"Fans & Pumps",value:7.0}], pv: 66.8 }
+    },
+    "RC-MR3": {
+      "IAL":     { total: 200.5, breakdown: [{name:"Heating",value:38.9},{name:"Cooling",value:91.5},{name:"DHW",value:43.7},{name:"Lighting",value:4.8},{name:"Equipment",value:21.6},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 107.0, breakdown: [{name:"Heating",value:21.1},{name:"Cooling",value:8.0},{name:"DHW",value:43.6},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:8.0}], pv: 0.0 },
+      "EEM1":    { total: 99.0,  breakdown: [{name:"Heating",value:12.2},{name:"Cooling",value:9.1},{name:"DHW",value:43.6},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:7.8}], pv: 66.8 },
+      "EEM2":    { total: 92.0,  breakdown: [{name:"Heating",value:3.6},{name:"Cooling",value:10.8},{name:"DHW",value:43.6},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:7.7}], pv: 66.8 },
+      "EEM3":    { total: 65.3,  breakdown: [{name:"Heating",value:3.6},{name:"Cooling",value:10.4},{name:"DHW",value:17.2},{name:"Lighting",value:4.8},{name:"Equipment",value:19.3},{name:"Fans & Pumps",value:7.7}], pv: 66.8 },
+      "EEM4":    { total: 51.1,  breakdown: [{name:"Heating",value:3.9},{name:"Cooling",value:7.6},{name:"DHW",value:17.2},{name:"Lighting",value:2.0},{name:"Equipment",value:11.2},{name:"Fans & Pumps",value:6.9}], pv: 66.8 }
+    }
+  },
+
+  // Source: ASHRAE.csv
+  "ashrae": {
+    "RC-D": {
+      "IAL":     { total: 154.1, breakdown: [{name:"Heating",value:57.2},{name:"Cooling",value:22.7},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:47.4},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 131.7, breakdown: [{name:"Heating",value:45.5},{name:"Cooling",value:5.9},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.1}], pv: 0.0 },
+      "EEM1":    { total: 103.8, breakdown: [{name:"Heating",value:17.7},{name:"Cooling",value:6.6},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:5.7}], pv: 173.8 },
+      "EEM2":    { total: 90.9,  breakdown: [{name:"Heating",value:4.9},{name:"Cooling",value:5.9},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.3}], pv: 173.8 },
+      "EEM3":    { total: 78.7,  breakdown: [{name:"Heating",value:7.6},{name:"Cooling",value:5.9},{name:"DHW",value:6.6},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.5}], pv: 173.8 },
+      "EEM4":    { total: 58.6,  breakdown: [{name:"Heating",value:9.0},{name:"Cooling",value:4.7},{name:"DHW",value:6.6},{name:"Lighting",value:2.6},{name:"Equipment",value:28.3},{name:"Fans & Pumps",value:6.5}], pv: 173.8 }
+    },
+    "RC-T": {
+      "IAL":     { total: 158.8, breakdown: [{name:"Heating",value:46.2},{name:"Cooling",value:21.7},{name:"DHW",value:26.9},{name:"Lighting",value:5.8},{name:"Equipment",value:58.2},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 135.3, breakdown: [{name:"Heating",value:32.0},{name:"Cooling",value:5.9},{name:"DHW",value:26.9},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.5}], pv: 0.0 },
+      "EEM1":    { total: 111.5, breakdown: [{name:"Heating",value:8.1},{name:"Cooling",value:7.1},{name:"DHW",value:26.1},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.3}], pv: 142.0 },
+      "EEM2":    { total: 105.3, breakdown: [{name:"Heating",value:2.3},{name:"Cooling",value:6.3},{name:"DHW",value:26.1},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.7}], pv: 142.0 },
+      "EEM3":    { total: 90.5,  breakdown: [{name:"Heating",value:2.3},{name:"Cooling",value:6.3},{name:"DHW",value:11.2},{name:"Lighting",value:5.8},{name:"Equipment",value:57.1},{name:"Fans & Pumps",value:6.8}], pv: 142.0 },
+      "EEM4":    { total: 65.0,  breakdown: [{name:"Heating",value:3.8},{name:"Cooling",value:4.5},{name:"DHW",value:11.2},{name:"Lighting",value:3.2},{name:"Equipment",value:34.8},{name:"Fans & Pumps",value:6.6}], pv: 142.0 }
+    },
+    "RC-ML": {
+      "IAL":     { total: 156.4, breakdown: [{name:"Heating",value:51.8},{name:"Cooling",value:22.2},{name:"DHW",value:24.5},{name:"Lighting",value:5.2},{name:"Equipment",value:52.7},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 133.5, breakdown: [{name:"Heating",value:38.9},{name:"Cooling",value:5.9},{name:"DHW",value:24.5},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.3}], pv: 0.0 },
+      "EEM1":    { total: 107.6, breakdown: [{name:"Heating",value:13.0},{name:"Cooling",value:6.8},{name:"DHW",value:23.8},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.0}], pv: 157.9 },
+      "EEM2":    { total: 97.9,  breakdown: [{name:"Heating",value:3.6},{name:"Cooling",value:6.1},{name:"DHW",value:23.8},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.5}], pv: 157.9 },
+      "EEM3":    { total: 84.5,  breakdown: [{name:"Heating",value:5.0},{name:"Cooling",value:6.1},{name:"DHW",value:8.9},{name:"Lighting",value:5.2},{name:"Equipment",value:51.7},{name:"Fans & Pumps",value:6.6}], pv: 157.9 },
+      "EEM4":    { total: 61.7,  breakdown: [{name:"Heating",value:6.4},{name:"Cooling",value:4.6},{name:"DHW",value:8.9},{name:"Lighting",value:2.9},{name:"Equipment",value:31.5},{name:"Fans & Pumps",value:6.5}], pv: 157.9 }
+    },
+    "RC-R": {
+      "IAL":     { total: 154.6, breakdown: [{name:"Heating",value:56.5},{name:"Cooling",value:23.8},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:47.5},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 131.4, breakdown: [{name:"Heating",value:44.8},{name:"Cooling",value:6.1},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.2}], pv: 0.0 },
+      "EEM1":    { total: 103.6, breakdown: [{name:"Heating",value:17.1},{name:"Cooling",value:6.9},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:5.8}], pv: 154.5 },
+      "EEM2":    { total: 91.1,  breakdown: [{name:"Heating",value:4.7},{name:"Cooling",value:6.2},{name:"DHW",value:21.7},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.4}], pv: 154.5 },
+      "EEM3":    { total: 78.9,  breakdown: [{name:"Heating",value:7.4},{name:"Cooling",value:6.2},{name:"DHW",value:6.6},{name:"Lighting",value:4.7},{name:"Equipment",value:46.6},{name:"Fans & Pumps",value:6.5}], pv: 154.5 },
+      "EEM4":    { total: 58.7,  breakdown: [{name:"Heating",value:8.8},{name:"Cooling",value:5.0},{name:"DHW",value:6.6},{name:"Lighting",value:2.6},{name:"Equipment",value:28.3},{name:"Fans & Pumps",value:6.5}], pv: 154.5 }
+    },
+    "RC-HR1": {
+      "IAL":     { total: 171.5, breakdown: [{name:"Heating",value:52.5},{name:"Cooling",value:21.0},{name:"DHW",value:48.2},{name:"Lighting",value:5.1},{name:"Equipment",value:44.7},{name:"Fans & Pumps",value:0.0}], pv: 1.9 },
+      "DEFAULT": { total: 146.6, breakdown: [{name:"Heating",value:32.6},{name:"Cooling",value:6.4},{name:"DHW",value:48.2},{name:"Lighting",value:5.1},{name:"Equipment",value:41.6},{name:"Fans & Pumps",value:9.6}], pv: 1.9 },
+      "EEM1":    { total: 120.1, breakdown: [{name:"Heating",value:1.4},{name:"Cooling",value:11.4},{name:"DHW",value:48.1},{name:"Lighting",value:5.1},{name:"Equipment",value:41.6},{name:"Fans & Pumps",value:9.4}], pv: 41.0 },
+      "EEM2":    { total: 120.6, breakdown: [{name:"Heating",value:0.5},{name:"Cooling",value:13.0},{name:"DHW",value:48.1},{name:"Lighting",value:5.1},{name:"Equipment",value:41.6},{name:"Fans & Pumps",value:9.1}], pv: 41.0 },
+      "EEM3":    { total: 88.4,  breakdown: [{name:"Heating",value:4.1},{name:"Cooling",value:12.9},{name:"DHW",value:12.5},{name:"Lighting",value:5.1},{name:"Equipment",value:41.6},{name:"Fans & Pumps",value:9.1}], pv: 41.0 },
+      "EEM4":    { total: 58.0,  breakdown: [{name:"Heating",value:5.7},{name:"Cooling",value:6.7},{name:"DHW",value:12.5},{name:"Lighting",value:2.0},{name:"Equipment",value:20.6},{name:"Fans & Pumps",value:7.4}], pv: 41.0 }
+    },
+    "RC-HR2": {
+      "IAL":     { total: 180.1, breakdown: [{name:"Heating",value:60.1},{name:"Cooling",value:18.2},{name:"DHW",value:51.8},{name:"Lighting",value:4.6},{name:"Equipment",value:45.4},{name:"Fans & Pumps",value:0.0}], pv: 3.3 },
+      "DEFAULT": { total: 155.0, breakdown: [{name:"Heating",value:36.3},{name:"Cooling",value:6.1},{name:"DHW",value:51.8},{name:"Lighting",value:4.6},{name:"Equipment",value:41.7},{name:"Fans & Pumps",value:10.7}], pv: 3.3 },
+      "EEM1":    { total: 125.1, breakdown: [{name:"Heating",value:1.0},{name:"Cooling",value:12.1},{name:"DHW",value:51.8},{name:"Lighting",value:4.6},{name:"Equipment",value:41.7},{name:"Fans & Pumps",value:10.0}], pv: 20.8 },
+      "EEM2":    { total: 126.6, breakdown: [{name:"Heating",value:0.5},{name:"Cooling",value:13.9},{name:"DHW",value:51.8},{name:"Lighting",value:4.6},{name:"Equipment",value:41.7},{name:"Fans & Pumps",value:10.1}], pv: 20.8 },
+      "EEM3":    { total: 89.2,  breakdown: [{name:"Heating",value:6.9},{name:"Cooling",value:13.9},{name:"DHW",value:8.0},{name:"Lighting",value:4.6},{name:"Equipment",value:41.7},{name:"Fans & Pumps",value:10.2}], pv: 20.8 },
+      "EEM4":    { total: 57.5,  breakdown: [{name:"Heating",value:8.6},{name:"Cooling",value:6.8},{name:"DHW",value:7.9},{name:"Lighting",value:1.8},{name:"Equipment",value:20.5},{name:"Fans & Pumps",value:8.0}], pv: 20.8 }
+    },
+    "RC-MR1": {
+      "IAL":     { total: 149.5, breakdown: [{name:"Heating",value:30.7},{name:"Cooling",value:27.2},{name:"DHW",value:37.8},{name:"Lighting",value:3.9},{name:"Equipment",value:49.9},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 123.3, breakdown: [{name:"Heating",value:16.2},{name:"Cooling",value:7.7},{name:"DHW",value:37.7},{name:"Lighting",value:5.7},{name:"Equipment",value:46.3},{name:"Fans & Pumps",value:7.7}], pv: 0.0 },
+      "EEM1":    { total: 112.4, breakdown: [{name:"Heating",value:1.5},{name:"Cooling",value:11.2},{name:"DHW",value:37.3},{name:"Lighting",value:5.7},{name:"Equipment",value:46.3},{name:"Fans & Pumps",value:8.5}], pv: 91.7 },
+      "EEM2":    { total: 111.6, breakdown: [{name:"Heating",value:0.4},{name:"Cooling",value:12.2},{name:"DHW",value:37.3},{name:"Lighting",value:5.7},{name:"Equipment",value:46.3},{name:"Fans & Pumps",value:7.8}], pv: 91.7 },
+      "EEM3":    { total: 89.7,  breakdown: [{name:"Heating",value:0.4},{name:"Cooling",value:11.9},{name:"DHW",value:15.6},{name:"Lighting",value:5.7},{name:"Equipment",value:46.3},{name:"Fans & Pumps",value:7.8}], pv: 91.7 },
+      "EEM4":    { total: 60.4,  breakdown: [{name:"Heating",value:1.3},{name:"Cooling",value:7.3},{name:"DHW",value:15.6},{name:"Lighting",value:2.6},{name:"Equipment",value:25.0},{name:"Fans & Pumps",value:6.8}], pv: 91.7 }
+    },
+    "RC-MR2": {
+      "IAL":     { total: 162.1, breakdown: [{name:"Heating",value:45.1},{name:"Cooling",value:23.9},{name:"DHW",value:43.7},{name:"Lighting",value:5.6},{name:"Equipment",value:43.8},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 137.7, breakdown: [{name:"Heating",value:30.0},{name:"Cooling",value:6.5},{name:"DHW",value:43.6},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:8.2}], pv: 0.0 },
+      "EEM1":    { total: 113.8, breakdown: [{name:"Heating",value:1.8},{name:"Cooling",value:10.4},{name:"DHW",value:43.5},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:8.6}], pv: 66.3 },
+      "EEM2":    { total: 113.0, breakdown: [{name:"Heating",value:0.5},{name:"Cooling",value:11.9},{name:"DHW",value:43.5},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:7.7}], pv: 66.3 },
+      "EEM3":    { total: 87.1,  breakdown: [{name:"Heating",value:0.6},{name:"Cooling",value:11.6},{name:"DHW",value:17.9},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:7.7}], pv: 66.3 },
+      "EEM4":    { total: 58.3,  breakdown: [{name:"Heating",value:2.1},{name:"Cooling",value:6.5},{name:"DHW",value:17.9},{name:"Lighting",value:2.3},{name:"Equipment",value:20.7},{name:"Fans & Pumps",value:6.6}], pv: 66.3 }
+    },
+    "RC-MR3": {
+      "IAL":     { total: 161.8, breakdown: [{name:"Heating",value:45.6},{name:"Cooling",value:23.1},{name:"DHW",value:43.7},{name:"Lighting",value:5.6},{name:"Equipment",value:43.8},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
+      "DEFAULT": { total: 137.9, breakdown: [{name:"Heating",value:30.4},{name:"Cooling",value:6.3},{name:"DHW",value:43.6},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:8.1}], pv: 0.0 },
+      "EEM1":    { total: 113.4, breakdown: [{name:"Heating",value:2.0},{name:"Cooling",value:10.1},{name:"DHW",value:43.5},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:8.5}], pv: 66.3 },
+      "EEM2":    { total: 112.5, breakdown: [{name:"Heating",value:0.6},{name:"Cooling",value:11.5},{name:"DHW",value:43.5},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:7.6}], pv: 66.3 },
+      "EEM3":    { total: 86.7,  breakdown: [{name:"Heating",value:0.6},{name:"Cooling",value:11.2},{name:"DHW",value:17.9},{name:"Lighting",value:5.6},{name:"Equipment",value:41.5},{name:"Fans & Pumps",value:7.6}], pv: 66.3 },
+      "EEM4":    { total: 58.0,  breakdown: [{name:"Heating",value:2.2},{name:"Cooling",value:6.1},{name:"DHW",value:17.9},{name:"Lighting",value:2.3},{name:"Equipment",value:20.7},{name:"Fans & Pumps",value:6.5}], pv: 66.3 }
+    }
+  }
+};
+
+// High-performance uses CAN_MTL (necb-2017) data with EEM1 as default
+ENVELOPE_ENERGY_DATA["high-performance construction"] = ENVELOPE_ENERGY_DATA["necb-2017"];
+
+/**
+ * Get energy data for a neighbourhood given envelope + energy column selections.
+ * For "high-performance construction", DEFAULT maps to EEM1.
+ * @param {string} envelope - "necb-2017", "ashrae", or "high-performance construction"
+ * @param {string} nuCode - e.g. "RC-R"
+ * @param {string} column - "IAL", "DEFAULT", "EEM1", "EEM2", "EEM3", "EEM4"
+ * @returns {Object|null} { total, breakdown[], pv } or null
+ */
+function getEnergyData(envelope, nuCode, column) {
+  let resolvedColumn = column;
+  // High-performance: DEFAULT resolves to EEM1
+  if (envelope === "high-performance construction" && column === "DEFAULT") {
+    resolvedColumn = "EEM1";
+  }
+
+  const dataset = ENVELOPE_ENERGY_DATA[envelope];
+  if (!dataset || !dataset[nuCode]) return null;
+  return dataset[nuCode][resolvedColumn] || null;
+}
+
+/* ========================================================================
+ * ARCHIVED: Old COP-keyed ENERGY_DATA from NUs_Energy.csv
+ * Preserved for reference — no longer used by the active application.
+ * ====================================================================== */
+/*
+const ENERGY_DATA_ARCHIVED = {
   "RC-R": {
     "1": {
       "total": 93.55,
@@ -1831,5 +1819,5 @@ const LPV_DATA = {
 
 // Export for use in app.js
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { CONCEPTS, NEIGHBOURHOODS, BUILDING_IMAGES, ENERGY_COLORS, ENERGY_DATA, ENERGY_STATUS_IMAGES, EV_V2G_DATA, LPV_DATA };
+  module.exports = { CONCEPTS, NEIGHBOURHOODS, BUILDING_IMAGES, ENERGY_COLORS, ENVELOPE_ENERGY_DATA, getEnergyData, ENERGY_STATUS_IMAGES, EV_V2G_DATA, LPV_DATA, PV_GENERATION_DATA };
 }

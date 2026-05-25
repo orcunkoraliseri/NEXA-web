@@ -5,3 +5,6 @@ Concept,Neighbourhood,Function,Context,Density,Layout,Envelope,Energy Status,Bui
 6. Midrise Suburb,RC-MR2,Residential,Suburban,Medium,Grid,High-Performance Construction,Negative,8 Midrise
 3. Urban Transition-Zone,RC-MR3,Residential,Urban,High,Grid,High-Performance Construction,Negative,12 Midrise
 2.Downtown Residential,RC-HR2,Residential,Urban,High,Grid,High-Performance Construction,Negative,4 Highrise (10-St)
+6. Midrise Suburb,RC-MR1,Residential,Urban,Medium,Grid,High-Performance Construction,Negative,4x Mid-Rise + 28x Attached Houses
+4. Suburban High-Density,RC-HR1,Residential,Urban,High,Grid,High-Performance Construction,Negative,2x High-Rise + 4x Mid-Rise
+7. Peripheral Community,RC-ML,Residential,Suburban,Low,Curvilinear,High-Performance Construction,Positive,24x Detached Houses + 28x Attached Houses 
