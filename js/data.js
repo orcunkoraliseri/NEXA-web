@@ -196,14 +196,14 @@ const BUILDING_IMAGES = {
   "Warehouse": "Content/Images_Buildings/Warehouse.png"
 };
 
-// PV parameters per neighbourhood
+// PV parameters per neighbourhood (source: PV_generation.csv, EEM1 values)
 const PV_GENERATION_DATA = {
-  "RC-R": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 91.38, rop: 1.490 },
-  "RC-D": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 91.20, rop: 1.47 },
-  "RC-T": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 91.30, rop: 1.57 },
-  "RC-MR2": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 48.10, rop: 0.60 },
-  "RC-MR3": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 48.10, rop: 0.60 },
-  "RC-HR2": { surface: "Roof + Facade", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 39.70, rop: 0.44 },
+  "RC-R": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 155.5, rop: 1.490 },
+  "RC-D": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 174.5, rop: 1.47 },
+  "RC-T": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 143.2, rop: 1.57 },
+  "RC-MR2": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 66.8, rop: 0.60 },
+  "RC-MR3": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 66.8, rop: 0.60 },
+  "RC-HR2": { surface: "Roof + Facade", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 22.7, rop: 0.44 },
   "RC-MR1": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 92.4, rop: null },
   "RC-HR1": { surface: "Roof + Facade", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Open Rack", generation: 42.2, rop: null },
   "RC-ML": { surface: "Roof", efficiency: "18.68%", gcr: "0.4", mounting: "Fixed Roof Mounted", generation: 158.9, rop: null }
@@ -232,11 +232,11 @@ const ENERGY_COLORS = {
 };
 
 // ========================================================================
-// ENVELOPE_ENERGY_DATA — Unified energy data from CAN_MTL.csv & ASHRAE.csv
+// ENVELOPE_ENERGY_DATA — Unified energy data from LMN_Energy_Database.csv
 // Keyed by: envelope → NU code → column → { total, breakdown[], pv }
 // ========================================================================
 const ENVELOPE_ENERGY_DATA = {
-  // Source: CAN_MTL.csv
+  // Source: LMN_Energy_Database.csv (Envelope=NECB-2017)
   "necb-2017": {
     "RC-D": {
       "IAL":     { total: 163.9, breakdown: [{name:"Heating",value:64.9},{name:"Cooling",value:24.8},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:47.4},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },
@@ -312,7 +312,7 @@ const ENVELOPE_ENERGY_DATA = {
     }
   },
 
-  // Source: ASHRAE.csv
+  // Source: LMN_Energy_Database.csv (Envelope=ASHRAE)
   "ashrae": {
     "RC-D": {
       "IAL":     { total: 154.1, breakdown: [{name:"Heating",value:57.2},{name:"Cooling",value:22.7},{name:"DHW",value:22.1},{name:"Lighting",value:4.7},{name:"Equipment",value:47.4},{name:"Fans & Pumps",value:0.0}], pv: 0.0 },

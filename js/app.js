@@ -424,6 +424,7 @@ function initOutputPage() {
     }
 
     const filters = JSON.parse(filtersJson);
+    Object.assign(activeFilters, filters);
     renderOutputTable(filters);
     setupLayer2Button();
 
