@@ -652,9 +652,9 @@ function createResultRow(concept, neighbourhood) {
 
     // Map envelope standard to exact image filename and label display
     const envelopeImageNames = {
-        'necb-2017': 'NECB 2017',
-        'ashrae': 'ASHRAE',
-        'high-performance construction': 'High-Performance Construction'
+        'necb-2017': 'necb 2017',
+        'ashrae': 'ashrae',
+        'high-performance construction': 'high-performance construction'
     };
     const envelopeDisplayNames = {
         'necb-2017': 'necb-2017',
@@ -676,7 +676,7 @@ function createResultRow(concept, neighbourhood) {
           <span>${neighbourhood.context}</span>
         </div>
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">
-          <img src="Content/Images_Layout_Parameters/${capitalize(neighbourhood.layout)}.png" alt="${neighbourhood.layout}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
+          <img src="Content/Images_Layout_Parameters/${neighbourhood.layout}.png" alt="${neighbourhood.layout}" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 4px;" onerror="this.style.display='none'">
           <span>${neighbourhood.layout}</span>
         </div>
         <div class="property-icon" style="text-align: center; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center;">

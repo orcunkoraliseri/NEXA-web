@@ -5,18 +5,18 @@
 
 // Concept definitions (for Concept column display)
 const CONCEPTS = [
-  { id: 1, name: "Financial Dist", image: "Content/Images_Concept/1-Financial_District.png" },
-  { id: 2, name: "Downtown Residential", image: "Content/Images_Concept/2-Dense_Residential.png" },
-  { id: 3, name: "Urban Transition-Zone", image: "Content/Images_Concept/3-Urban-Transit-Zone.png" },
-  { id: 4, name: "Suburban Transit-Zone", image: "Content/Images_Concept/4-Suburban-Transit-Zone.png" },
-  { id: 5, name: "Streetcar Suburb", image: "Content/Images_Concept/5-Streetcar_Suburb.png" },
-  { id: 6, name: "Modern Suburb", image: "Content/Images_Concept/6-Modern_Suburb.png" },
-  { id: 7, name: "Suburban Outer", image: "Content/Images_Concept/7-Suburban_Outer.png" },
-  { id: 8, name: "Townhouse Cluster", image: "Content/Images_Concept/8-Townhouse_Cluster.png" },
-  { id: 9, name: "Rural Cluster", image: "Content/Images_Concept/9-Rural_Cluster.png" },
-  { id: 10, name: "Commercial Park", image: "Content/Images_Concept/10-Commerical_Park.png" },
-  { id: 11, name: "Data Center Node", image: "Content/Images_Concept/11-Data_Center_Node.png" },
-  { id: 12, name: "Logistics/Industrial", image: "Content/Images_Concept/12-Logistics_Industrial.png" }
+  { id: 1, name: "Financial Dist", image: "Content/Images_Concept/1-financial_district.png" },
+  { id: 2, name: "Downtown Residential", image: "Content/Images_Concept/2-dense_residential.png" },
+  { id: 3, name: "Urban Transition-Zone", image: "Content/Images_Concept/3-urban-transit-zone.png" },
+  { id: 4, name: "Suburban Transit-Zone", image: "Content/Images_Concept/4-suburban-transit-zone.png" },
+  { id: 5, name: "Streetcar Suburb", image: "Content/Images_Concept/5-streetcar_suburb.png" },
+  { id: 6, name: "Modern Suburb", image: "Content/Images_Concept/6-modern_suburb.png" },
+  { id: 7, name: "Suburban Outer", image: "Content/Images_Concept/7-suburban_outer.png" },
+  { id: 8, name: "Townhouse Cluster", image: "Content/Images_Concept/8-townhouse_cluster.png" },
+  { id: 9, name: "Rural Cluster", image: "Content/Images_Concept/9-rural_cluster.png" },
+  { id: 10, name: "Commercial Park", image: "Content/Images_Concept/10-commerical_park.png" },
+  { id: 11, name: "Data Center Node", image: "Content/Images_Concept/11-data_center_node.png" },
+  { id: 12, name: "Logistics/Industrial", image: "Content/Images_Concept/12-logistics_industrial.png" }
 ];
 
 // Neighbourhood Units data based on Neighbourhoods_Concepts_Parameters_Buildings.csv
@@ -33,7 +33,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "24 detached (two-storey house) homes",
-    image: "Content/Images_Neighbourhoods/RC-R.png",
+    image: "Content/Images_Neighbourhoods/rc-r.png",
     buildings: ["Two-Storey House"]
   },
   {
@@ -47,7 +47,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "48 detached (two-storey house) homes",
-    image: "Content/Images_Neighbourhoods/RC-D.png",
+    image: "Content/Images_Neighbourhoods/rc-d.png",
     buildings: ["Two-Storey House"]
   },
   {
@@ -61,7 +61,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "56 attached units",
-    image: "Content/Images_Neighbourhoods/RC-T.png",
+    image: "Content/Images_Neighbourhoods/rc-t.png",
     buildings: ["Attached House"]
   },
   {
@@ -75,7 +75,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "24x Detached Houses + 28x Attached Houses",
-    image: "Content/Images_Neighbourhoods/RC-ML.png",
+    image: "Content/Images_Neighbourhoods/rc-ml.png",
     buildings: ["Two-Storey House", "Attached House"]
   },
   {
@@ -89,7 +89,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "4x Mid-Rise + 28x Attached Houses",
-    image: "Content/Images_Neighbourhoods/RC-MR1.png",
+    image: "Content/Images_Neighbourhoods/rc-mr1.png",
     buildings: ["midrise apartment", "Attached House"]
   },
   {
@@ -103,7 +103,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "8 Midrise",
-    image: "Content/Images_Neighbourhoods/RC-MR2.png",
+    image: "Content/Images_Neighbourhoods/rc-mr2.png",
     buildings: ["midrise apartment"]
   },
   {
@@ -117,7 +117,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "12 Midrise",
-    image: "Content/Images_Neighbourhoods/RC-MR3.png",
+    image: "Content/Images_Neighbourhoods/rc-mr3.png",
     buildings: ["midrise apartment"]
   },
   {
@@ -131,7 +131,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "2x High-Rise + 4x Mid-Rise",
-    image: "Content/Images_Neighbourhoods/RC-HR1.png",
+    image: "Content/Images_Neighbourhoods/rc-hr1.png",
     buildings: ["Highrise Apartment", "midrise apartment"]
   },
   {
@@ -145,7 +145,7 @@ const NEIGHBOURHOODS = [
     eui: null,
     energyStatus: null,
     content: "4 Highrise (10-St)",
-    image: "Content/Images_Neighbourhoods/RC-HR2.png",
+    image: "Content/Images_Neighbourhoods/rc-hr2.png",
     buildings: ["Highrise Apartment"]
   }
   /* Commented-out neighbourhoods preserved for future use
@@ -168,32 +168,32 @@ const NEIGHBOURHOODS = [
 
 // Building image mapping
 const BUILDING_IMAGES = {
-  "Two-Storey House": "Content/Images_Buildings/Two-Story House.png",
-  "Two-Story House": "Content/Images_Buildings/Two-Story House.png",
-  "Attached House": "Content/Images_Buildings/Attached House.png",
+  "Two-Storey House": "Content/Images_Buildings/two-story house.png",
+  "Two-Story House": "Content/Images_Buildings/two-story house.png",
+  "Attached House": "Content/Images_Buildings/attached house.png",
   "midrise apartment": "Content/Images_Buildings/midrise apartment.png",
   "Midrise Apartment": "Content/Images_Buildings/midrise apartment.png",
-  "Highrise Apartment": "Content/Images_Buildings/Highrise Apartment.png",
-  "Primary School": "Content/Images_Buildings/Primary School.png",
+  "Highrise Apartment": "Content/Images_Buildings/highrise apartment.png",
+  "Primary School": "Content/Images_Buildings/primary school.png",
   "secondary school": "Content/Images_Buildings/secondary school.png",
   "Secondary School": "Content/Images_Buildings/secondary school.png",
-  "Small Office": "Content/Images_Buildings/Small Office.png",
-  "Medium Office": "Content/Images_Buildings/Medium Office.png",
-  "Large Office": "Content/Images_Buildings/Large Office.png",
-  "Small Retail": "Content/Images_Buildings/Small Retail.png",
-  "Standalone Retail": "Content/Images_Buildings/Standalone Retail.png",
-  "Retail Strip Mall": "Content/Images_Buildings/Retail Strip Mall.png",
-  "Supermarket": "Content/Images_Buildings/Supermarket.png",
+  "Small Office": "Content/Images_Buildings/small office.png",
+  "Medium Office": "Content/Images_Buildings/medium office.png",
+  "Large Office": "Content/Images_Buildings/large office.png",
+  "Small Retail": "Content/Images_Buildings/small retail.png",
+  "Standalone Retail": "Content/Images_Buildings/standalone retail.png",
+  "Retail Strip Mall": "Content/Images_Buildings/retail strip mall.png",
+  "Supermarket": "Content/Images_Buildings/supermarket.png",
   "quick service restaurant": "Content/Images_Buildings/quick service restaurant.png",
   "Quick Service Restaurant": "Content/Images_Buildings/quick service restaurant.png",
-  "Full service restaurant": "Content/Images_Buildings/Full service restaurant.png",
-  "Full Service Restaurant": "Content/Images_Buildings/Full service restaurant.png",
-  "Small Hotel": "Content/Images_Buildings/Small Hotel.png",
-  "Large Hotel": "Content/Images_Buildings/Large Hotel.png",
-  "Hospital": "Content/Images_Buildings/Hospital.png",
-  "Data Center": "Content/Images_Buildings/DataCenter.png",
-  "Datacenter": "Content/Images_Buildings/DataCenter.png",
-  "Warehouse": "Content/Images_Buildings/Warehouse.png"
+  "Full service restaurant": "Content/Images_Buildings/full service restaurant.png",
+  "Full Service Restaurant": "Content/Images_Buildings/full service restaurant.png",
+  "Small Hotel": "Content/Images_Buildings/small hotel.png",
+  "Large Hotel": "Content/Images_Buildings/large hotel.png",
+  "Hospital": "Content/Images_Buildings/hospital.png",
+  "Data Center": "Content/Images_Buildings/datacenter.png",
+  "Datacenter": "Content/Images_Buildings/datacenter.png",
+  "Warehouse": "Content/Images_Buildings/warehouse.png"
 };
 
 // PV parameters per neighbourhood (source: PV_generation.csv, EEM1 values)
