@@ -1,10 +1,37 @@
 Concept,Neighbourhood,Function,Context,Density,Layout,Envelope,Energy Status,Buildings
-8. Rural Cluster,RC-R,Residential,Rural,Low,Curvilinear,High-Performance Construction,Positive,24 detached (two-storey house) homes
-7. Peripheral Community,RC-D,Residential,Suburban,Low,Curvilinear,High-Performance Construction,Positive,48 detached (two-storey house) homes
-7. Peripheral Community,RC-T,Residential,Suburban,Low,Curvilinear,High-Performance Construction,Positive,56 attached units
-6. Midrise Suburb,RC-MR2,Residential,Suburban,Medium,Grid,High-Performance Construction,Negative,8 Midrise
-3. Urban Transition-Zone,RC-MR3,Residential,Urban,High,Grid,High-Performance Construction,Negative,12 Midrise
-2.Downtown Residential,RC-HR2,Residential,Urban,High,Grid,High-Performance Construction,Negative,4 Highrise (10-St)
-6. Midrise Suburb,RC-MR1,Residential,Urban,Medium,Grid,High-Performance Construction,Negative,4x Mid-Rise + 28x Attached Houses
-4. Suburban High-Density,RC-HR1,Residential,Urban,High,Grid,High-Performance Construction,Negative,2x High-Rise + 4x Mid-Rise
-7. Peripheral Community,RC-ML,Residential,Suburban,Low,Curvilinear,High-Performance Construction,Positive,24x Detached Houses + 28x Attached Houses 
+8. Rural Cluster,RC-R,Residential,Rural,Low,Curvilinear,NECB-2017,Positive,24 detached (two-storey house) homes
+8. Rural Cluster,RC-R,Residential,Rural,Low,Curvilinear,ASHRAE,Positive,24 detached (two-storey house) homes
+8. Rural Cluster,RC-R,Residential,Rural,Low,Curvilinear,High-Performance (NECB),Positive,24 detached (two-storey house) homes
+8. Rural Cluster,RC-R,Residential,Rural,Low,Curvilinear,High-Performance (ASHRAE),Positive,24 detached (two-storey house) homes
+7. Peripheral Community,RC-D,Residential,Suburban,Low,Curvilinear,NECB-2017,Positive,48 detached (two-storey house) homes
+7. Peripheral Community,RC-D,Residential,Suburban,Low,Curvilinear,ASHRAE,Positive,48 detached (two-storey house) homes
+7. Peripheral Community,RC-D,Residential,Suburban,Low,Curvilinear,High-Performance (NECB),Positive,48 detached (two-storey house) homes
+7. Peripheral Community,RC-D,Residential,Suburban,Low,Curvilinear,High-Performance (ASHRAE),Positive,48 detached (two-storey house) homes
+7. Peripheral Community,RC-T,Residential,Suburban,Low,Curvilinear,NECB-2017,Positive,56 attached units
+7. Peripheral Community,RC-T,Residential,Suburban,Low,Curvilinear,ASHRAE,Positive,56 attached units
+7. Peripheral Community,RC-T,Residential,Suburban,Low,Curvilinear,High-Performance (NECB),Positive,56 attached units
+7. Peripheral Community,RC-T,Residential,Suburban,Low,Curvilinear,High-Performance (ASHRAE),Positive,56 attached units
+6. Midrise Suburb,RC-MR2,Residential,Suburban,Medium,Grid,NECB-2017,Negative,8 Midrise
+6. Midrise Suburb,RC-MR2,Residential,Suburban,Medium,Grid,ASHRAE,Negative,8 Midrise
+6. Midrise Suburb,RC-MR2,Residential,Suburban,Medium,Grid,High-Performance (NECB),Negative,8 Midrise
+6. Midrise Suburb,RC-MR2,Residential,Suburban,Medium,Grid,High-Performance (ASHRAE),Negative,8 Midrise
+3. Urban Transition-Zone,RC-MR3,Residential,Urban,High,Grid,NECB-2017,Negative,12 Midrise
+3. Urban Transition-Zone,RC-MR3,Residential,Urban,High,Grid,ASHRAE,Negative,12 Midrise
+3. Urban Transition-Zone,RC-MR3,Residential,Urban,High,Grid,High-Performance (NECB),Negative,12 Midrise
+3. Urban Transition-Zone,RC-MR3,Residential,Urban,High,Grid,High-Performance (ASHRAE),Negative,12 Midrise
+2.Downtown Residential,RC-HR2,Residential,Urban,High,Grid,NECB-2017,Negative,4 Highrise (10-St)
+2.Downtown Residential,RC-HR2,Residential,Urban,High,Grid,ASHRAE,Negative,4 Highrise (10-St)
+2.Downtown Residential,RC-HR2,Residential,Urban,High,Grid,High-Performance (NECB),Negative,4 Highrise (10-St)
+2.Downtown Residential,RC-HR2,Residential,Urban,High,Grid,High-Performance (ASHRAE),Negative,4 Highrise (10-St)
+6. Midrise Suburb,RC-MR1,Residential,Urban,Medium,Grid,NECB-2017,Negative,4x Mid-Rise + 28x Attached Houses
+6. Midrise Suburb,RC-MR1,Residential,Urban,Medium,Grid,ASHRAE,Negative,4x Mid-Rise + 28x Attached Houses
+6. Midrise Suburb,RC-MR1,Residential,Urban,Medium,Grid,High-Performance (NECB),Negative,4x Mid-Rise + 28x Attached Houses
+6. Midrise Suburb,RC-MR1,Residential,Urban,Medium,Grid,High-Performance (ASHRAE),Negative,4x Mid-Rise + 28x Attached Houses
+4. Suburban High-Density,RC-HR1,Residential,Urban,High,Grid,NECB-2017,Negative,2x High-Rise + 4x Mid-Rise
+4. Suburban High-Density,RC-HR1,Residential,Urban,High,Grid,ASHRAE,Negative,2x High-Rise + 4x Mid-Rise
+4. Suburban High-Density,RC-HR1,Residential,Urban,High,Grid,High-Performance (NECB),Negative,2x High-Rise + 4x Mid-Rise
+4. Suburban High-Density,RC-HR1,Residential,Urban,High,Grid,High-Performance (ASHRAE),Negative,2x High-Rise + 4x Mid-Rise
+7. Peripheral Community,RC-ML,Residential,Suburban,Low,Curvilinear,NECB-2017,Positive,24x Detached Houses + 28x Attached Houses
+7. Peripheral Community,RC-ML,Residential,Suburban,Low,Curvilinear,ASHRAE,Positive,24x Detached Houses + 28x Attached Houses
+7. Peripheral Community,RC-ML,Residential,Suburban,Low,Curvilinear,High-Performance (NECB),Positive,24x Detached Houses + 28x Attached Houses
+7. Peripheral Community,RC-ML,Residential,Suburban,Low,Curvilinear,High-Performance (ASHRAE),Positive,24x Detached Houses + 28x Attached Houses
