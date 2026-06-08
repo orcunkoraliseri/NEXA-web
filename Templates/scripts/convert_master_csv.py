@@ -4,6 +4,7 @@ import os
 import re
 
 MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\LMN_full_NU_master.csv"
+IAL_MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\IAL_full_NU_master.csv"
 ARCHETYPES_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\Full_NUs_Archetypes.csv"
 OUT_JS_DATA = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\scripts\out_data.js"
 OUT_CAN_MTL = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\CAN_MTL.csv"
@@ -51,6 +52,29 @@ def load_archive_ial(filepath):
             if nu not in ial_data:
                 ial_data[nu] = {}
             ial_data[nu][metric] = val
+    return ial_data
+
+def load_master_ial(filepath):
+    ial_data = {"necb-2017": {}, "ashrae": {}}
+    if not os.path.exists(filepath):
+        return ial_data
+    with open(filepath, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            b_id = row["building_id"].strip()
+            standard = row["standard"].strip()
+            env_key = "necb-2017" if standard == "CAN_MTL" else "ashrae"
+            
+            ial_data[env_key][b_id] = {
+                "EUI": float(row["EUI_total_kWh_m2"]) if row["EUI_total_kWh_m2"].strip() else 0.0,
+                "Htg": float(row["EUI_heating_kWh_m2"]) if row["EUI_heating_kWh_m2"].strip() else 0.0,
+                "Clg": float(row["EUI_cooling_kWh_m2"]) if row["EUI_cooling_kWh_m2"].strip() else 0.0,
+                "DHW": float(row["EUI_DHW_kWh_m2"]) if row["EUI_DHW_kWh_m2"].strip() else 0.0,
+                "Ltg": float(row["EUI_lights_kWh_m2"]) if row["EUI_lights_kWh_m2"].strip() else 0.0,
+                "Equip": float(row["EUI_equip_kWh_m2"]) if row["EUI_equip_kWh_m2"].strip() else 0.0,
+                "F+P": float(row["EUI_fans_pumps_kWh_m2"]) if row["EUI_fans_pumps_kWh_m2"].strip() else 0.0,
+                "PV": float(row["PV_gen_kWh_m2"]) if row["PV_gen_kWh_m2"].strip() else 0.0
+            }
     return ial_data
 
 def load_archetypes():
@@ -205,7 +229,10 @@ def process():
             else:
                 ashrae_rows.append(csv_row)
 
-    # Load archive IAL data
+    # Load master IAL data
+    master_ial = load_master_ial(IAL_MASTER_CSV)
+    
+    # Load archive IAL data to fall back on if master has 0.0 for EUI
     archive_ial = {
         "necb-2017": load_archive_ial(ARCHIVE_CAN_MTL),
         "ashrae": load_archive_ial(ARCHIVE_ASHRAE)
@@ -214,7 +241,17 @@ def process():
     # Populate IAL data for all building ids present in energy_data
     for env_key in ["necb-2017", "ashrae"]:
         for b_id in list(energy_data[env_key].keys()):
-            if b_id in archive_ial[env_key]:
+            if b_id in master_ial[env_key] and master_ial[env_key][b_id].get("EUI", 0.0) > 0.0:
+                metrics = master_ial[env_key][b_id]
+                total = metrics.get("EUI", 0.0)
+                htg = metrics.get("Htg", 0.0)
+                clg = metrics.get("Clg", 0.0)
+                dhw = metrics.get("DHW", 0.0)
+                ltg = metrics.get("Ltg", 0.0)
+                eqp = metrics.get("Equip", 0.0)
+                fan = metrics.get("F+P", 0.0)
+                pv = metrics.get("PV", 0.0)
+            elif b_id in archive_ial[env_key]:
                 metrics = archive_ial[env_key][b_id]
                 total = metrics.get("EUI", 0.0)
                 htg = metrics.get("Htg", 0.0)
