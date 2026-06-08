@@ -652,14 +652,16 @@ function createResultRow(concept, neighbourhood) {
 
     // Map envelope standard to exact image filename and label display
     const envelopeImageNames = {
-        'necb-2017': 'necb 2017',
-        'ashrae': 'ashrae',
-        'high-performance construction': 'high-performance construction'
+        'necb-2017': 'standard construction',
+        'ashrae': 'standard construction',
+        'high-performance-necb': 'high-performance construction',
+        'high-performance-ashrae': 'high-performance construction'
     };
     const envelopeDisplayNames = {
-        'necb-2017': 'necb-2017',
-        'ashrae': 'ashrae',
-        'high-performance construction': 'high'
+        'necb-2017': 'Standard (NECB)',
+        'ashrae': 'Standard (ASHRAE)',
+        'high-performance-necb': 'High-Performance (NECB)',
+        'high-performance-ashrae': 'High-Performance (ASHRAE)'
     };
 
     const envelopeImageName = envelopeImageNames[activeEnvelope] || activeEnvelope;

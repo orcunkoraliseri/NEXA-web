@@ -258,6 +258,10 @@ h3 {
   padding: 0 var(--spacing-lg);
 }
 
+.container-wide {
+  max-width: 1400px;
+}
+
 /* Parameters Section - Compact */
 .parameters-section {
   padding: var(--spacing-sm) 0;
@@ -1669,7 +1673,7 @@ h3 {
 .table-container {
   border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: var(--radius-md);
-  overflow: hidden;
+  overflow-x: auto;
   margin-top: var(--spacing-lg);
 }
 
@@ -1687,37 +1691,37 @@ h3 {
 /* Concepts - first column */
 .results-table th:nth-child(1),
 .results-table td:nth-child(1) {
-  width: 18%;
+  width: 12%;
 }
 
 /* Neighbourhoods */
 .results-table th:nth-child(2),
 .results-table td:nth-child(2) {
-  width: 22%;
+  width: 18%;
 }
 
-/* Properties - increased width */
+/* Properties */
 .results-table th:nth-child(3),
 .results-table td:nth-child(3) {
-  width: 30%;
+  width: 25%;
 }
 
 /* Buildings column */
 .results-table th:nth-child(4),
 .results-table td:nth-child(4) {
-  width: 30%;
+  width: 45%;
 }
 
 /* Energy Results Table Column Widths (6 columns) */
 .energy-results-table th:nth-child(1),
 .energy-results-table td:nth-child(1) {
-  width: 18%;
+  width: 10%;
   /* Match output.html */
 }
 
 .energy-results-table th:nth-child(2),
 .energy-results-table td:nth-child(2) {
-  width: 22%;
+  width: 15%;
   /* Match output.html */
 }
 
@@ -1729,20 +1733,18 @@ h3 {
 
 .energy-results-table th:nth-child(4),
 .energy-results-table td:nth-child(4) {
-  width: 15%;
-  /* Taken from 45% Buildings */
+  width: 30%;
+  /* Match output.html */
 }
 
 .energy-results-table th:nth-child(5),
 .energy-results-table td:nth-child(5) {
   width: 15%;
-  /* Taken from 45% Buildings */
 }
 
 .energy-results-table th:nth-child(6),
 .energy-results-table td:nth-child(6) {
   width: 15%;
-  /* Taken from 45% Buildings */
 }
 
 /* EUI Cell Styling */
@@ -2687,4 +2689,39 @@ h3 {
   font-weight: 600;
   color: var(--text-primary);
   font-size: 1rem;
+}
+
+/* ========================================
+   Site Footer & Brand Logo
+   ======================================== */
+.site-footer {
+  padding: 0.5rem 1.5rem 2rem 1.5rem;
+  margin-top: 0;
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  max-height: 125px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.footer-logo:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  text-align: center;
 }

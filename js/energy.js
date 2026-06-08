@@ -269,12 +269,12 @@ function renderTreemap(neighbourhoodCode) {
 
     // Display-friendly names
     const envelopeNames = {
-        'necb-2017': 'NECB 2017',
+        'necb-2017': 'NECB',
         'ashrae': 'ASHRAE',
         'high-performance construction': 'High-Performance'
     };
     const columnNames = {
-        'IAL': 'Thermal Load (Ideal Air Load)',
+        'IAL': 'Thermal Load',
         'DEFAULT': 'Baseline',
         'EEM1': 'High-Performance Envelope',
         'EEM2': 'Heat Pump (COP 4)',

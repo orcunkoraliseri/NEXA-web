@@ -165,7 +165,7 @@ function initEnergySelectionPage() {
 
     // Display-friendly envelope names
     const envelopeNames = {
-        'necb-2017': 'NECB 2017',
+        'necb-2017': 'NECB',
         'ashrae': 'ASHRAE',
         'high-performance construction': 'High-Performance'
     };
@@ -173,7 +173,7 @@ function initEnergySelectionPage() {
     if (neighbourhoodCode) {
         // Update title with neighbourhood code and envelope standard
         const envName = envelopeNames[envelope] || envelope;
-        titleElement.textContent = `Layer 2: Energy Design Interface for ${neighbourhoodCode} (${envName})`;
+        titleElement.textContent = `Layer 2: Energy Design for ${neighbourhoodCode} (${envName})`;
 
         // Update back button to maintain context (go back to selection page)
         if (backBtn) {

@@ -34,7 +34,10 @@ const EV_STATUS_IMAGE_MAP = {
 };
 
 function populateTable(neighbourhoodCode, scenario) {
-    if (!EV_V2G_DATA || !EV_V2G_DATA[neighbourhoodCode]) return;
+    if (!EV_V2G_DATA || !EV_V2G_DATA[neighbourhoodCode]) {
+        alert("No EV data available for this neighbourhood yet.");
+        return;
+    }
     const d = EV_V2G_DATA[neighbourhoodCode][scenario];
     if (!d) return;
 
