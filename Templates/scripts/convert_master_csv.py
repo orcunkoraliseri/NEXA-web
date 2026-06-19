@@ -3,7 +3,7 @@ import json
 import os
 import re
 
-MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\LMN_full_NU_master.csv"
+MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\LMN_full_NU_master_healed.csv"
 IAL_MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\IAL_full_NU_master.csv"
 ARCHETYPES_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\new\Full_NUs_Archetypes.csv"
 OUT_JS_DATA = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\scripts\out_data.js"
