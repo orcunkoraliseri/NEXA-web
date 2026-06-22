@@ -128,12 +128,12 @@ function populateLPVTable(code) {
 // Maps energy_integrated selection values to their image paths and display labels
 const GI_IMAGE_MAP = {
     'pv_green_roofs': {
-        src:   'Content/Images_Layer4_EnergyIntegratedGI/PV-Green Roofs Integrated Modules.png',
+        src:   'Content/Images_Layer4_EnergyIntegratedGI/pv-green roofs integrated modules.png',
         label: 'PV-Green Roofs'
     },
     'pv_vgs': {
-        src:   'Content/Images_Layer4_EnergyIntegratedGI/PV-VGS Integrated Modules.png',
-        label: 'PV-VGS Modules'
+        src:   'Content/Images_Layer4_EnergyIntegratedGI/lpv.png',
+        label: 'Landscape PV'
     }
 };
 
@@ -191,7 +191,7 @@ function renderLPVVisualHeader(code) {
 
     // 3. LPV.png — right column, spans both rows
     cards += makeLPVImageCard(
-        'Content/Images_LPVProfile/LPV.png',
+        'Content/Images_LPVProfile/lpv.png',
         'LPV Profile',
         'lpv-card--lpv'
     );

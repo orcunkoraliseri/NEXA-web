@@ -28,9 +28,9 @@ const TRANSPORT_LABEL_MAP = {
 };
 
 const EV_STATUS_IMAGE_MAP = {
-    'Grid Stressed - Deficit':   'Content/Images_Layer3_Transportation/Grid Stressed - Deficit.png',
-    'Energy Positive - Surplus': 'Content/Images_Layer3_Transportation/Energy Positive - Surplus.png',
-    'Load Balanced - Net Zero':  'Content/Images_Layer3_Transportation/Load Balanced - Net Zero.png'
+    'Grid Stressed - Deficit':   'Content/Images_Layer3_Transportation/grid stressed - deficit.png',
+    'Energy Positive - Surplus': 'Content/Images_Layer3_Transportation/energy positive - surplus.png',
+    'Load Balanced - Net Zero':  'Content/Images_Layer3_Transportation/load balanced - net zero.png'
 };
 
 function populateTable(neighbourhoodCode, scenario) {
@@ -91,7 +91,7 @@ function renderVisualHeader(neighbourhoodCode) {
     // 1. EV car image (always first, if EV selected)
     if (transport.includes('ev')) {
         cards += makeImageCard(
-            'Content/Images_Layer3_Transportation/EV.png',
+            'Content/Images_Layer3_Transportation/ev.png',
             'EV', 'ev-header-card--ev'
         );
     }
@@ -99,7 +99,7 @@ function renderVisualHeader(neighbourhoodCode) {
     // 2. V2G Stations image (if selected, shown next to EV car)
     if (transport.includes('v2g_stations')) {
         cards += makeImageCard(
-            'Content/Images_Layer3_Transportation/V2G Stations.png',
+            'Content/Images_Layer3_Transportation/v2g stations.png',
             'V2G Stations', ''
         );
     }

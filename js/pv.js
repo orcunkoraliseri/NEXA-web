@@ -304,18 +304,107 @@ function isCOP4Selected() {
 }
 
 /**
+ * Resolve the active envelope and EEM scenario tag using the same logic as
+ * energy.js renderTreemap(), so the PV page and the energy breakdown page
+ * always read from the identical data row.
+ *
+ * Returns { envelope, scenario, pvIntensity } where:
+ *   envelope      — the raw URL param (e.g. 'necb-2017', 'high-performance-necb')
+ *   scenario      — one of DEFAULT / IAL / EEM1 / EEM2 / EEM3 / EEM4
+ *   pvIntensity   — ENVELOPE_ENERGY_DATA[refEnvelope][code][scenario].pv (or undefined)
+ *
+ * @param {string} code - Neighbourhood code
+ * @returns {{ envelope: string, scenario: string, pvIntensity: number|undefined }}
+ */
+function resolveEnvelopeAndScenario(code) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const envelope = urlParams.get('envelope') || 'necb-2017';
+
+    // Read selections from sessionStorage (mirrors energy.js exactly)
+    const selections = JSON.parse(
+        sessionStorage.getItem('energySelections') || '{"load":[], "demand":[]}'
+    );
+    const loadSelections = selections.load || [];
+    const demandSelections = selections.demand || [];
+
+    // 1. Determine reference envelope and base level (mirrors energy.js)
+    let refEnvelope = envelope;
+    let baseLevel = 'DEFAULT';
+    if (envelope.startsWith('high-performance-')) {
+        refEnvelope = envelope.replace('high-performance-', '');
+        if (refEnvelope === 'necb') refEnvelope = 'necb-2017';
+        baseLevel = 'EEM1';
+    }
+
+    // 2. Determine the active scenario tag
+    let scenario;
+
+    if (loadSelections.includes('thermal_load')) {
+        // IAL path: prefer IAL, fall back to DEFAULT (mirrors energy.js)
+        const hasIal = !!(ENVELOPE_ENERGY_DATA &&
+                         ENVELOPE_ENERGY_DATA[refEnvelope] &&
+                         ENVELOPE_ENERGY_DATA[refEnvelope][code] &&
+                         ENVELOPE_ENERGY_DATA[refEnvelope][code]['IAL']);
+        scenario = hasIal ? 'IAL' : 'DEFAULT';
+    } else {
+        const hasHP = demandSelections.includes('cop4') ||
+                      demandSelections.includes('cop3.5') ||
+                      demandSelections.includes('cop3');
+        const hasDhw = demandSelections.includes('dhw');
+        const hasAppliances = demandSelections.includes('appliances');
+
+        // Mirror energy.js: pv = startDataset.pv, where startDataset is
+        // determined by hasHP only (DHW/Appliances without HP still use the
+        // baseline dataset for pv — savings are applied only to the breakdown).
+        if (hasHP) {
+            if (hasDhw && hasAppliances) scenario = 'EEM4';
+            else if (hasDhw) scenario = 'EEM3';
+            else scenario = 'EEM2';
+        } else {
+            // No HP: baseline scenario carries the pv value
+            scenario = (baseLevel === 'EEM1') ? 'EEM1' : 'DEFAULT';
+        }
+    }
+
+    // 3. Look up pvIntensity from the SAME source as the energy page
+    const pvIntensity = (ENVELOPE_ENERGY_DATA &&
+                         ENVELOPE_ENERGY_DATA[refEnvelope] &&
+                         ENVELOPE_ENERGY_DATA[refEnvelope][code] &&
+                         ENVELOPE_ENERGY_DATA[refEnvelope][code][scenario] !== undefined)
+        ? ENVELOPE_ENERGY_DATA[refEnvelope][code][scenario].pv
+        : undefined;
+
+    return { envelope, scenario, pvIntensity };
+}
+
+/**
  * Update PV parameter values dynamically.
+ * PV intensity is sourced from ENVELOPE_ENERGY_DATA (same source as energy.js),
+ * so it always reflects the active envelope + EEM scenario selection.
  * RoP is only displayed when Heat Pump COP 4 is the active demand selection;
  * for all other selections (COP 3 or Thermal Load COP 1) it is shown as —.
  * @param {string} neighbourhoodCode - The neighbourhood code
+ * @returns {number|undefined} pvIntensity for use in renderPVScale
  */
 function updatePVParameters(neighbourhoodCode) {
-    if (!PV_GENERATION_DATA || !PV_GENERATION_DATA[neighbourhoodCode]) return;
+    if (!PV_GENERATION_DATA || !PV_GENERATION_DATA[neighbourhoodCode]) return undefined;
 
     const data = PV_GENERATION_DATA[neighbourhoodCode];
     const showRoP = isCOP4Selected();
     const gcrValue = data.gcr ? (parseFloat(data.gcr) * 100).toFixed(0) + '%' : '';
     const ropValue = showRoP ? data.rop : '—';
+
+    // Resolve pvIntensity from envelope-aware source (same as energy.js)
+    const { pvIntensity } = resolveEnvelopeAndScenario(neighbourhoodCode);
+    const generationDisplay = (pvIntensity != null) ? pvIntensity.toFixed(1) : '—';
+
+    // GFA lookup
+    const gfa = (typeof GFA_DATA !== 'undefined') ? GFA_DATA[neighbourhoodCode] : undefined;
+    const gfaDisplay = (gfa != null) ? gfa.toLocaleString() + ' m²' : '—';
+
+    // Total PV Generation = intensity × GFA, displayed in MWh/yr
+    const totalMWh = (pvIntensity != null && gfa != null) ? (pvIntensity * gfa / 1000) : null;
+    const totalDisplay = (totalMWh != null) ? totalMWh.toFixed(1) + ' MWh/yr' : '—';
 
     const isLegacy = (neighbourhoodCode === 'RC-HR2');
 
@@ -326,7 +415,9 @@ function updatePVParameters(neighbourhoodCode) {
             '#pv-efficiency-val-legacy': data.efficiency,
             '#pv-mounting-val-legacy':   data.mounting,
             '#pv-gcr-val-legacy':        gcrValue,
-            '#pv-generation-val-legacy': data.generation,
+            '#pv-generation-val-legacy': generationDisplay,
+            '#pv-gfa-val-legacy':        gfaDisplay,
+            '#pv-total-val-legacy':      totalDisplay,
             '#pv-rop-val-legacy':        ropValue
         };
         for (const [selector, value] of Object.entries(legacyMap)) {
@@ -340,7 +431,9 @@ function updatePVParameters(neighbourhoodCode) {
             '#pv-efficiency-val': data.efficiency,
             '#pv-mounting-val':   data.mounting,
             '#pv-gcr-val':        gcrValue,
-            '#pv-generation-val': data.generation,
+            '#pv-generation-val': generationDisplay,
+            '#pv-gfa-val':        gfaDisplay,
+            '#pv-total-val':      totalDisplay,
             '#pv-rop-val':        ropValue
         };
         for (const [selector, value] of Object.entries(newMap)) {
@@ -348,6 +441,8 @@ function updatePVParameters(neighbourhoodCode) {
             if (el && value !== undefined) el.textContent = value;
         }
     }
+
+    return pvIntensity;
 }
 
 /**
@@ -359,9 +454,6 @@ function initPVPage() {
     const backStepBtn = document.getElementById('back-step-btn');
     const nextStepBtn = document.getElementById('next-step-btn');
 
-    // Render scale with random value (0-100 range as proxy)
-    renderPVScale(70.5);
-
     // Toggle between new 3-row layout and legacy layout (RC-HR2 only)
     const isLegacy = (neighbourhoodCode === 'RC-HR2');
     const newLayout = document.getElementById('pv-new-layout');
@@ -369,11 +461,15 @@ function initPVPage() {
     if (newLayout) newLayout.style.display = isLegacy ? 'none' : 'block';
     if (legacyLayout) legacyLayout.style.display = isLegacy ? 'block' : 'none';
 
-    // Render Energy Status icon and PV Images
+    // Render Energy Status icon and PV Images; updatePVParameters returns pvIntensity
     if (neighbourhoodCode) {
         renderEnergyStatus(neighbourhoodCode);
         updatePVImages(neighbourhoodCode);
-        updatePVParameters(neighbourhoodCode);
+        const pvIntensity = updatePVParameters(neighbourhoodCode);
+        // Drive the scale bar with real intensity (not a hardcoded dummy)
+        renderPVScale(pvIntensity ?? 0);
+    } else {
+        renderPVScale(0);
     }
 
     if (neighbourhoodCode) {

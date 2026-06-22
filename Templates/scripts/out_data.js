@@ -15,7 +15,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "24x Detached Houses (2-St, Residential, 110sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-r.png",
+    "image": "Content/Images_Neighbourhoods/RC-R.png",
     "buildings": [
       "Detached Houses"
     ]
@@ -36,7 +36,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "48x Detached Houses (2-St, Residential, 110sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-d.png",
+    "image": "Content/Images_Neighbourhoods/RC-D.png",
     "buildings": [
       "Detached Houses"
     ]
@@ -57,7 +57,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "24x Detached Houses (2-St, Residential, 110sqm) + 28x Attached Houses (2-St, Residential, 180sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-ml.png",
+    "image": "Content/Images_Neighbourhoods/RC-ML.png",
     "buildings": [
       "Attached Houses",
       "Detached Houses"
@@ -79,7 +79,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "56x Attached Houses (2-St, Residential, 180sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-t.png",
+    "image": "Content/Images_Neighbourhoods/RC-T.png",
     "buildings": [
       "Attached Houses"
     ]
@@ -100,7 +100,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "4x Mid-Rise (4-St, Residential, 784sqm) + 28x Attached Houses (2-St, Residential, 180sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-mr1.png",
+    "image": "Content/Images_Neighbourhoods/RC-MR1.png",
     "buildings": [
       "Attached Houses",
       "Mid Rise"
@@ -122,7 +122,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "8x Mid-Rise (4-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-mr2.png",
+    "image": "Content/Images_Neighbourhoods/RC-MR2.png",
     "buildings": [
       "Mid Rise"
     ]
@@ -143,7 +143,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "12x Midrise (4-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-mr3.png",
+    "image": "Content/Images_Neighbourhoods/RC-MR3.png",
     "buildings": [
       "Midrise"
     ]
@@ -164,7 +164,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "2x High-Rise (10-St, Residential, 784sqm) + 4x Mid-Rise (4-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-hr1.png",
+    "image": "Content/Images_Neighbourhoods/RC-HR1.png",
     "buildings": [
       "High Rise",
       "Mid Rise"
@@ -186,7 +186,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "4x High-Rise (10-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-hr2.png",
+    "image": "Content/Images_Neighbourhoods/RC-HR2.png",
     "buildings": [
       "High Rise"
     ]

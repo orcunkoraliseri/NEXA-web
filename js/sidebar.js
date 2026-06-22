@@ -255,7 +255,8 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             // Make generation active if currentLayer is 'pv' AND it's a visualization mode
             const activeClass = (isClickable && currentLayer === 'pv') ? 'sidebar-item--active' : '';
-            const dataset = isClickable ? `data-target="layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}"` : '';
+            const _envelopeSb = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const dataset = isClickable ? `data-target="layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb)}"` : '';
 
             html += `
                 <div class="sidebar-item ${clickableClass} ${activeClass}" ${dataset}>
@@ -380,14 +381,17 @@ function generateLayer3Block(greenSelections, isClickable, currentLayer, nuCode)
     html += `<div class="sidebar-block">
                 <h3 class="sidebar-subtitle">Energy-Integrated GI</h3>
                 <div class="sidebar-items-grid">`;
-    const integratedLabels = { 'pv_green_roofs': 'PV-Green Roofs Integrated Modules', 'pv_vgs': 'PV-VGS Integrated Modules' };
+    const integratedInfo = {
+        'pv_green_roofs': { img: 'pv-green roofs integrated modules.png', label: 'PV-Green Roofs Integrated Modules' },
+        'pv_vgs':         { img: 'lpv.png', label: 'Landscape PV' }
+    };
     if (greenSelections.energy_integrated && greenSelections.energy_integrated.length > 0) {
         greenSelections.energy_integrated.forEach(val => {
-            const label = integratedLabels[val] || val;
+            const info = integratedInfo[val] || { img: `${val}.png`, label: val };
             html += `
                 <div class="sidebar-item">
-                    <img src="Content/Images_Layer4_EnergyIntegratedGI/${label}.png" alt="${label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
-                    <span>${label}</span>
+                    <img src="Content/Images_Layer4_EnergyIntegratedGI/${info.img}" alt="${info.label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
+                    <span>${info.label}</span>
                 </div>
             `;
         });

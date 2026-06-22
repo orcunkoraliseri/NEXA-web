@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LMN &mdash; References &amp; Methodology</title>
+    <link rel="stylesheet" href="css/styles.css?v=3" />
+    <style>
+        /* ===== Documentation page helpers (uses existing design tokens) ===== */
+        .doc-page {
+            max-width: min(1320px, 95vw);
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        .doc-hero {
+            text-align: center;
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .doc-hero h1 {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .doc-hero p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Disclaimer banner */
+        .doc-disclaimer {
+            background: rgba(245, 196, 0, 0.12);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: var(--radius-sm);
+            padding: var(--spacing-md) var(--spacing-md);
+            margin: var(--spacing-md) 0 var(--spacing-lg);
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        .doc-disclaimer strong {
+            color: var(--accent-burnt);
+        }
+
+        /* Table of Contents */
+        .doc-toc {
+            background: var(--bg-card);
+            box-shadow: var(--shadow-card);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md) var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .doc-toc h2 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .doc-toc ol {
+            margin: 0;
+            padding-left: 1.4rem;
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .doc-toc li {
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        .doc-toc a {
+            color: var(--accent-amber);
+            text-decoration: none;
+            font-family: var(--font-primary);
+            transition: color var(--transition-normal);
+        }
+
+        .doc-toc a:hover {
+            color: var(--accent-burnt);
+            text-decoration: underline;
+        }
+
+        /* Section cards */
+        .doc-section {
+            background: var(--bg-card);
+            box-shadow: var(--shadow-card);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .doc-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-xs);
+            border-bottom: 2px solid var(--border-subtle);
+        }
+
+        .doc-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent-burnt);
+            margin: var(--spacing-md) 0 var(--spacing-sm);
+        }
+
+        .doc-section p {
+            color: var(--text-primary);
+            line-height: 1.75;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+
+        .doc-section ul,
+        .doc-section ol {
+            color: var(--text-primary);
+            line-height: 1.75;
+            padding-left: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+        }
+
+        .doc-section li {
+            margin-bottom: 0.35rem;
+        }
+
+        /* Tables */
+        .doc-table-wrap {
+            overflow-x: auto;
+            margin: var(--spacing-sm) 0 var(--spacing-md);
+            border-radius: var(--radius-sm);
+        }
+
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            color: var(--text-primary);
+        }
+
+        .doc-table th {
+            background: var(--accent-gradient);
+            color: #fff;
+            font-family: var(--font-display);
+            font-weight: 600;
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+        }
+
+        .doc-table td {
+            padding: 0.55rem 0.9rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .doc-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-table tr:nth-child(even) td {
+            background: var(--bg-secondary);
+        }
+
+        /* Preliminary badge */
+        .badge-prelim {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-burnt);
+            background: rgba(201, 61, 10, 0.1);
+            border: 1px solid rgba(201, 61, 10, 0.25);
+            border-radius: 4px;
+            padding: 0.1rem 0.45rem;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+            letter-spacing: 0.04em;
+        }
+
+        /* Back link */
+        .doc-back {
+            display: inline-block;
+            margin-bottom: var(--spacing-lg);
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-amber);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+        }
+
+        .doc-back:hover {
+            color: var(--accent-burnt);
+            text-decoration: underline;
+        }
+
+        /* References numbered list */
+        .doc-references ol {
+            padding-left: 1.8rem;
+        }
+
+        .doc-references li {
+            margin-bottom: 0.55rem;
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        /* Responsive: collapse TOC to single column on narrow screens */
+        @media (max-width: 640px) {
+            .doc-toc ol {
+                columns: 1;
+            }
+            .doc-hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <div class="doc-page">
+
+        <!-- Back link -->
+        <a class="doc-back" href="index.html">&larr; Back to the LMN Tool</a>
+
+        <!-- Hero -->
+        <div class="doc-hero">
+            <h1>LMN &mdash; References &amp; Methodology</h1>
+            <p>Standards, assumptions, methodologies, and references behind the LMN neighbourhood-energy tool.</p>
+        </div>
+
+        <!-- DISCLAIMER -->
+        <div class="doc-disclaimer" role="note" aria-label="Important disclaimer">
+            The information in this tool is produced by building-energy simulation under a defined set of
+            assumptions and simplified calculations. <strong>Layers 3 (Mobility / EV-V2G) and 4 (Green Infrastructure
+            / Landscape PV) are preliminary and still under active development &mdash; their values are based on
+            simplified assumptions and are subject to refinement.</strong> Energy and PV results (Layers 1&ndash;2) are
+            validated against published literature (see <a href="#sec-validation">Validation</a>) but remain modelling estimates.
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="doc-toc" role="navigation" aria-label="Table of Contents">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#sec-what-is-lmn">What is LMN</a></li>
+                <li><a href="#sec-layers">How the Four Layers Work</a></li>
+                <li><a href="#sec-pv">PV Methodology &amp; kWh/m&sup2; Definition</a></li>
+                <li><a href="#sec-standards">Standards &amp; Codes</a></li>
+                <li><a href="#sec-climate">Climate Zone &amp; Weather</a></li>
+                <li><a href="#sec-archetypes">Building Archetypes &amp; Sources</a></li>
+                <li><a href="#sec-modelling">Energy Modelling Basis</a></li>
+                <li><a href="#sec-mobility">Layer 3: Mobility (EV / V2G)</a></li>
+                <li><a href="#sec-green">Layer 4: Green Infrastructure / LPV</a></li>
+                <li><a href="#sec-resizing">Resizing Methodology</a></li>
+                <li><a href="#sec-validation">Validation Summary</a></li>
+                <li><a href="#sec-references">References</a></li>
+            </ol>
+        </div>
+
+        <!-- Section A: What is LMN -->
+        <section class="doc-section" id="sec-what-is-lmn">
+            <h2>A &mdash; What is LMN</h2>
+            <p>
+                LMN is an interactive neighbourhood-energy explorer. The user composes a neighbourhood by typology
+                (Layer 1), then overlays energy demand + generation systems (Layer 2), electric mobility (Layer 3),
+                and green infrastructure (Layer 4). Behind each neighbourhood archetype sits a full EnergyPlus
+                simulation campaign across a ladder of energy-efficiency scenarios, so the user can compare code
+                baselines against progressively deeper retrofits.
+            </p>
+        </section>
+
+        <!-- Section B: Four Layers -->
+        <section class="doc-section" id="sec-layers">
+            <h2>B &mdash; How the Four Layers Work</h2>
+            <ul>
+                <li><strong>Layer 1 &mdash; Neighbourhood selection:</strong> choose land use, context, density, layout,
+                    and envelope code. Returns matching neighbourhood archetypes.</li>
+                <li><strong>Layer 2 &mdash; Energy:</strong> energy demand systems (Heat Pump COP 4, DHW, appliances)
+                    and on-site generation (PV). Shows EUI breakdown + PV generation.</li>
+                <li><strong>Layer 3 &mdash; Mobility (preliminary):</strong> EV demand and V2G balance.</li>
+                <li><strong>Layer 4 &mdash; Green infrastructure (preliminary):</strong> landscape PV (LPV) and green systems.</li>
+            </ul>
+        </section>
+
+        <!-- Section G (first among methodology): PV Methodology -->
+        <section class="doc-section" id="sec-pv">
+            <h2>C &mdash; PV Methodology &amp; the kWh/m&sup2; Definition</h2>
+
+            <h3>Two PV tracks</h3>
+            <ul>
+                <li><strong>DEFAULT:</strong> native PV only &mdash; whatever the source prototype ships with.
+                    &asymp;&thinsp;0 kWh/m&sup2; for Canadian baselines; a few high-rise/ASHRAE prototypes carry a
+                    small native array (e.g. 1.9&ndash;3.3 kWh/m&sup2;).</li>
+                <li><strong>EEM1&ndash;EEM4:</strong> a &ldquo;Tier-3&rdquo; injector adds rooftop PV sized from
+                    the actual roof geometry.</li>
+            </ul>
+
+            <h3>Sizing rules</h3>
+            <ul>
+                <li><strong>Flat roofs</strong> &rarr; a single world-south rack at <strong>45&deg; tilt</strong>;
+                    active area = &Sigma;(roof area) &times; GCR / cos(45&deg;). The rack is corrected for the
+                    building&rsquo;s <code>North Axis</code> so it always faces true south.</li>
+                <li><strong>Pitched roofs</strong> (houses, some small commercial) &rarr; panels on the
+                    <strong>south-facing dominant pitched face</strong> only (dominant-face fallback if no south slope);
+                    array tilt = roof pitch.</li>
+            </ul>
+
+            <h3>Assumptions (identical for native + Tier-3)</h3>
+            <p>Module efficiency 20% of aperture (pitched) / 200 W/m&sup2; roof power density (flat);
+            ground-coverage ratio (GCR) 0.40; DC&rarr;AC system losses 14%; inverter efficiency 96%;
+            azimuth = world south.</p>
+
+            <h3>Units &amp; normalization</h3>
+            <p>
+                PV intensity is reported as <strong>kWh per m&sup2; of gross (conditioned) floor area</strong> &mdash;
+                the <strong>same denominator as EUI</strong>. It is <strong>not</strong> normalized by roof area,
+                and <strong>not</strong> by footprint.
+            </p>
+            <p>
+                <strong>Why it varies from one neighbourhood to another:</strong> the numerator (roof PV generation)
+                is limited by available roof area, while the denominator is the building&rsquo;s <em>total floor area</em>.
+                Low-rise forms (detached, row houses) have a large roof-area-per-floor-area ratio &rarr;
+                <strong>high</strong> intensity; tall forms (mid-/high-rise) spread the same rooftop over many
+                storeys &rarr; <strong>low</strong> intensity. This is physically expected, not an inconsistency.
+                Representative NECB-2017 values: Detached (RC-D) &asymp; 100.7, MidRise &asymp; 66&ndash;75,
+                HighRise (RC-HR1) &asymp; 45.8, (RC-HR2) &asymp; 26.0 kWh/m&sup2;.
+            </p>
+            <p>
+                <strong>Total vs intensity are linked by:</strong>
+                <code>Total PV (kWh/yr) = PV intensity (kWh/m&sup2;) &times; gross floor area (m&sup2;)</code>.
+                The PV page surfaces gross floor area and the absolute total alongside the intensity so the two
+                are explicitly consistent.
+            </p>
+        </section>
+
+        <!-- Section C: Standards & Codes -->
+        <section class="doc-section" id="sec-standards">
+            <h2>D &mdash; Standards &amp; Codes Implemented</h2>
+
+            <div class="doc-table-wrap">
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Standard</th>
+                            <th>Version</th>
+                            <th>Governs</th>
+                            <th>Applied to</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ANSI/ASHRAE/IES 90.1</td>
+                            <td>2022</td>
+                            <td>Envelope, HVAC, lighting, internal loads</td>
+                            <td>US commercial prototype baselines (16 DOE/PNNL prototypes)</td>
+                        </tr>
+                        <tr>
+                            <td>IECC</td>
+                            <td>2024</td>
+                            <td>Residential envelope + systems</td>
+                            <td>US single-family residential baselines</td>
+                        </tr>
+                        <tr>
+                            <td>ANSI/ASHRAE/IES 90.1</td>
+                            <td>2019</td>
+                            <td>Commercial baseline</td>
+                            <td>OpenStudio supplementals (College, Lab, Tall, SuperTall) + datacenters</td>
+                        </tr>
+                        <tr>
+                            <td>NECB (National Energy Code for Buildings)</td>
+                            <td>2017</td>
+                            <td>Canadian commercial/institutional prescriptive baseline</td>
+                            <td>All Canadian commercial archetypes (CZ6 Montr&eacute;al, CZ7A Calgary)</td>
+                        </tr>
+                        <tr>
+                            <td>NBC Section 9.36 (National Building Code)</td>
+                            <td>current</td>
+                            <td>Canadian low-rise residential prescriptive baseline</td>
+                            <td>Canadian single-family residential</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                Canadian baselines also apply <strong>BTAP</strong> (Building Technology Assessment Platform,
+                NRCan/CanmetENERGY) internal-load densities and schedules: occupancy 0.04 people/m&sup2;,
+                plug loads 7.5 W/m&sup2;, NECB thermostat schedules.
+            </p>
+            <p>
+                NECB 2017 prescriptive caps used (selected): wall U &le; 0.247 (Z6) / 0.210 (Z7A) W/m&sup2;&middot;K;
+                roof U &le; 0.183 / 0.162; window U &le; 1.90 / 1.60; air leakage 0.25 L/(s&middot;m&sup2;)
+                @ 75 Pa; HVAC efficiency floors (DX cooling COP &ge; 3.0, DX heating COP &ge; 3.1,
+                gas/boiler &ge; 0.80, chiller COP &ge; 4.7). NBC 9.36 residential: window U &le; 1.60 (Z6)
+                / 1.40 (Z7A); air leakage 2.5 ACH&#x2085;&#x2080; (Z6) / 2.0 ACH&#x2085;&#x2080; (Z7A).
+            </p>
+        </section>
+
+        <!-- Section D: Climate zone & weather -->
+        <section class="doc-section" id="sec-climate">
+            <h2>E &mdash; Climate Zone &amp; Weather</h2>
+            <ul>
+                <li>
+                    Modelled climate zone: <strong>ASHRAE CZ6A</strong> (cold, humid continental) &mdash;
+                    represented by <strong>Montr&eacute;al</strong>. A colder <strong>CZ7A (Calgary)</strong>
+                    variant is also simulated.
+                </li>
+                <li>
+                    Weather files: <strong>CWEC2020v2 Montr&eacute;al Trudeau Intl AP</strong> (CZ6) and
+                    <strong>CWEC2020v2 Calgary Olympic Park Upper</strong> (CZ7A).
+                </li>
+                <li>
+                    The DOE/PNNL prototype library has no Canadian city; <strong>Buffalo, NY (CZ6A)</strong> is used
+                    as the geometric proxy for US prototypes (Buffalo HDD&#x2081;&#x2088; &asymp; 3,500 vs
+                    Montr&eacute;al &asymp; 3,900; closest humid-climate match, preserves latent-cooling realism).
+                    US constructions/schedules are then replaced by NECB/NBC/BTAP equivalents for the Canadian baselines.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section E: Building archetypes & sources -->
+        <section class="doc-section" id="sec-archetypes">
+            <h2>F &mdash; Building Archetypes &amp; Sources</h2>
+            <ul>
+                <li><strong>Commercial:</strong> 16 DOE/PNNL ASHRAE 90.1-2022 prototypes (offices, retail,
+                    schools, hotels, hospital, outpatient, restaurants, warehouse, apartment mid/high-rise)
+                    + 2 in-house high-rise variants (15, 20 storeys).</li>
+                <li><strong>Residential:</strong> 3 IECC 2024 single-family variants (detached + garage,
+                    no-garage, row-house).</li>
+                <li><strong>Supplemental (OpenStudio, 90.1-2019):</strong> College, Laboratory, TallBuilding,
+                    SuperTallBuilding, 2 small datacenters.</li>
+                <li><strong>Datacenters:</strong> ASHRAE 90.1-2019 large-format prototypes (passed through,
+                    NECB-exempt).</li>
+                <li>Three large prototypes (Primary School, Secondary School, Warehouse) are used at
+                    <strong>50% floor area</strong> to fit neighbourhood plots (see
+                    <a href="#sec-resizing">Resizing</a>).</li>
+            </ul>
+        </section>
+
+        <!-- Section F: Energy modelling basis -->
+        <section class="doc-section" id="sec-modelling">
+            <h2>G &mdash; Energy Modelling Basis</h2>
+            <ul>
+                <li><strong>Engine:</strong> EnergyPlus <strong>22.1</strong> (mid/high-rise + commercial)
+                    and <strong>23.1</strong> (single-family/attached).</li>
+                <li><strong>EUI:</strong> site gross energy use intensity in <strong>kWh/m&sup2;&middot;yr</strong>,
+                    normalized to <strong>conditioned floor area</strong>. PV generation is reported
+                    <strong>separately and never netted into EUI</strong>.</li>
+                <li><strong>Neighbourhood airflow:</strong>
+                    <code>AirflowNetwork:SimulationControl = MultizoneWithoutDistribution</code>.</li>
+                <li><strong>Envelope-code options</strong> offered per neighbourhood: NECB-2017, ASHRAE,
+                    High-Performance (NECB), High-Performance (ASHRAE).</li>
+            </ul>
+
+            <h3>Scenario ladder (cumulative)</h3>
+            <div class="doc-table-wrap">
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>What it adds</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>DEFAULT</strong></td>
+                            <td>Code-compliant baseline as designed; native PV only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IAL (Ideal Air Loads)</strong></td>
+                            <td>HVAC replaced by ideal loads to expose pure thermal demand (district-energy sizing); not directly comparable to fuel/electricity</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EEM1 &mdash; Envelope</strong></td>
+                            <td>High-performance opaque assemblies; triple-glazed windows U=0.85, SHGC=0.40; foundation/slab insulation (CZ6/CZ7A); infiltration &times;0.25 (Passive-House target)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EEM2 &mdash; + HVAC</strong></td>
+                            <td>EEM1 + air-source heat pump (COP 4.0&ndash;4.5) with cold-climate (CCHP) curves; inverter cooling (SEER 22/EER 14); per-zone heat pumps; supplemental-heater lockout; defrost on-demand</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EEM3 &mdash; + DHW</strong></td>
+                            <td>EEM2 + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EEM4 &mdash; + Lighting/Equipment/Cooling</strong></td>
+                            <td>EEM3 + automated blinds; daylight dimming; LED (LPD &times;0.55); occupancy-sensor trim; ENERGY STAR plug loads (EPD &times;0.75); smart power management; gas-appliance electrification (residential)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section H: Layer 3 Mobility -->
+        <section class="doc-section" id="sec-mobility">
+            <h2>H &mdash; Layer 3: Mobility (EV / V2G) <span class="badge-prelim">PRELIMINARY</span></h2>
+            <p>Assumptions (from the tool&rsquo;s <code>Templates/NUS_EV.csv</code>; currently the 9&ndash;10 RC neighbourhoods):</p>
+            <ul>
+                <li>EV penetration: <strong>1.5 EVs per household</strong>; daily energy demand
+                    <strong>15 kWh/EV</strong> (&asymp; 200 km range); charging efficiency <strong>90%</strong>.</li>
+                <li>V2G: participation <strong>50%</strong>; battery efficiency <strong>90%</strong>;
+                    discharge capacity <strong>10 kW/day</strong>.</li>
+                <li>Reported metric: <strong>Net Energy Balance in kWh/m&sup2;&middot;day</strong>, plus a
+                    grid-status indicator.</li>
+                <li><strong>Status:</strong> preliminary, simplified &mdash; under development.</li>
+            </ul>
+        </section>
+
+        <!-- Section I: Layer 4 Green Infrastructure -->
+        <section class="doc-section" id="sec-green">
+            <h2>I &mdash; Layer 4: Green Infrastructure / Landscape PV (LPV) <span class="badge-prelim">PRELIMINARY</span></h2>
+            <p>Assumptions (from <code>Templates/NUs_LPV.csv</code>; currently 9 RC neighbourhoods):</p>
+            <ul>
+                <li>Land allocation <strong>20%</strong>; usable area <strong>10%</strong>;
+                    module capacity <strong>400 W</strong>; installed capacity <strong>475 kWp</strong>;
+                    annual generation <strong>608 MWh/year</strong>; configurable location / height / transparency.</li>
+                <li>Green roofs, vertical greening, urban agriculture: shown as selectable infrastructure;
+                    quantitative models pending.</li>
+                <li><strong>Status:</strong> preliminary, simplified &mdash; under development.</li>
+            </ul>
+        </section>
+
+        <!-- Section J: Resizing -->
+        <section class="doc-section" id="sec-resizing">
+            <h2>J &mdash; Resizing Methodology</h2>
+            <p>
+                Three oversized prototypes (Primary School, Secondary School, Warehouse) run at 50% floor area to fit
+                the largest neighbourhood plots; geometry proportions and HVAC sizing ratios are preserved.
+                High-rise storey variants (15/20) are derived by <code>ZoneGroup</code> multiplier with corrected
+                zone Z-origins so solar and wind exposure stay physically correct.
+            </p>
+        </section>
+
+        <!-- Section K: Validation -->
+        <section class="doc-section" id="sec-validation">
+            <h2>K &mdash; Validation Summary</h2>
+            <ul>
+                <li>
+                    <strong>Whole-building EUI ladder</strong> validated against deep-energy-retrofit literature
+                    (NRCan PEER/BTAP, PNNL, NEEA/WSU): EEM3 &asymp; &minus;33% to &minus;42%, EEM4 &asymp;
+                    &minus;52% to &minus;62% vs baseline &mdash; <strong>within literature bands for 19 of 22
+                    measures</strong> (2 conservative/under-credit, 1 no-direct-evidence).
+                </li>
+                <li>
+                    <strong>Ideal-load (IAL) thermal demand</strong> validated against NRCan CEUD/NEUD and PNNL
+                    prototype baselines (heating, DHW, IAL/DEFAULT ratios all within expected ranges).
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section L: References -->
+        <section class="doc-section doc-references" id="sec-references">
+            <h2>L &mdash; References</h2>
+
+            <h3>Standards &amp; Codes</h3>
+            <ol>
+                <li>ANSI/ASHRAE/IES Standard 90.1-2022; 90.1-2019; 90.1-2016 (comparison); 90.1 Appendix G.</li>
+                <li>International Energy Conservation Code (IECC) 2024; IECC 2021 (comparison).</li>
+                <li>NECB 2017 &mdash; National Energy Code of Canada for Buildings (NRC).</li>
+                <li>NBC Section 9.36 &mdash; National Building Code of Canada.</li>
+            </ol>
+
+            <h3>Prototype &amp; Benchmark Models</h3>
+            <ol start="5">
+                <li>DOE Commercial Building Benchmark Models (Torcellini, Deru, Griffith, Benne, Halverson,
+                    Winiarski, Crawley, 2008).</li>
+                <li>DOE/PNNL Commercial Prototype Building Models (energycodes.gov/prototype-building-models).</li>
+                <li>U.S. DOE BTO Residential Prototype Building Models &mdash; IECC 2024 Single-Family.</li>
+                <li>NRCan / CanmetENERGY &mdash; BTAP (Building Technology Assessment Platform),
+                    github.com/canmet-energy/btap_batch.</li>
+                <li>NRCan &mdash; Canadian National Median Reference Values (Portfolio Manager), 2018.</li>
+            </ol>
+
+            <h3>Envelope / Windows / Retrofit</h3>
+            <ol start="10">
+                <li>NRCan / CanmetENERGY (2023) &mdash; Deep Energy Retrofits for Canadian Buildings (PEER).</li>
+                <li>Gunderson et al. (2022) &mdash; Thin Triple-Pane Windows, Buildings XV, PNNL-SA-172226.</li>
+                <li>Hosseini et al. (2017) &mdash; Comparison of building energy codes, Energy &amp; Buildings.</li>
+                <li>Mendon, Lucas &amp; Goel (2015) &mdash; National Cost-Effectiveness of the 2015 IECC,
+                    PNNL-24240.</li>
+            </ol>
+
+            <h3>Heat Pumps (Space + Water)</h3>
+            <ol start="14">
+                <li>IEA HPT Annex 52 (2021); IGSHPA (2024) Cold Week Case Study.</li>
+                <li>Mendon et al. (2024/2025) &mdash; DOE Cold Climate Heat Pump Challenge, PNNL-37127.</li>
+                <li>NREL (2024) &mdash; Basalt Vista Heat Pump Field Study.</li>
+                <li>CCHT / NRCan (2018); Sager, Barton &amp; Ricketts (2018) &mdash; CC-ASHP performance.</li>
+                <li>Sparn, Hudon &amp; Christensen (2014) &mdash; Integrated HPWH, NREL/TP-5500-52635.</li>
+                <li>Anderson, Eklund et al. / NEEA &amp; WSU (2018) &mdash; CO&#x2082; HPWH Field Study.</li>
+                <li>NREL (2022) &mdash; Stratification impacts on HPWH performance.</li>
+            </ol>
+
+            <h3>Lighting / Equipment / Controls / Shading</h3>
+            <ol start="21">
+                <li>DOE (2020) &mdash; LED Adoption, DOE/EE-2136. PNNL-23800.
+                    Mass EEAC RLPNC 19-2 (2019).</li>
+                <li>Lobato, Pless &amp; Sheppy (2011) &mdash; Plug &amp; process loads, NREL/CP-5500-49002.</li>
+                <li>Karlsen, Heiselberg &amp; Bryn (2016) &mdash; Solar shading control, Energy &amp; Buildings 118.</li>
+                <li>ANSI/RESNET/ICC 301-2022.</li>
+            </ol>
+
+            <h3>PV</h3>
+            <ol start="25">
+                <li>U.S. DOE / NREL &mdash; Solar PV System Cost Benchmarks (2024); NREL SAM Technical
+                    Reference; NREL PVWatts v5 Manual (FY14OSTI-62641); PNNL GridPIQ.</li>
+                <li>Rousse et al. (2025) &mdash; Best tilt of PV systems in Canada, &Eacute;TS Montr&eacute;al.</li>
+                <li>NRCan / IEA-PVPS &mdash; BIPV Potential in Canada (2006-047).</li>
+                <li>Sandia / PVPMC &mdash; CEC Inverter Test Protocol; Ladybug Tools Honeybee-Energy PVProperties.</li>
+            </ol>
+
+            <h3>Urban Building Energy Modelling (Context)</h3>
+            <ol start="29">
+                <li>Reinhart &amp; Cerezo Davila (2016) &mdash; UBEM review, Building and Environment 97.</li>
+                <li>Hong et al. (2016) &mdash; CityBES, ACM KDD Urban Computing.</li>
+                <li>EnerSys Analytics / Pembina Institute (2018) &mdash; NECB 2017 vs ASHRAE 90.1-2016.</li>
+                <li>D&rsquo;Almeida (2022) &mdash; Energy districts, M.Sc. thesis, University of Calgary.</li>
+            </ol>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
+            <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
+            <a class="footer-doc-link" href="index.html">Back to the LMN Tool</a>
+        </footer>
+
+    </div><!-- /.doc-page -->
+</main>
+</body>
+</html>

@@ -1,6 +1,6 @@
-,Neighbourhood,RC-R ,RC-D,RC-T,RC-ML,RC-MR1,RC-MR2,RC-MR3,RC-HR1,RC-HR2
-Config.,Land Allocation,20%,20%,20%,20%,20%,20%,20%,20%,20%
-Config.,Usable Area,10%,10%,10%,10%,10%,10%,10%,10%,10%
-Config.,Module Capacity,400W,400W,400W,400W,400W,400W,400W,400W,400W
-Config.,Installed Capacity (Kilowatt-peak),475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp
-Results,Energy Generation,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year
+,Neighbourhood,RC-R,RC-D,RC-ML,RC-T,RC-MR1,RC-MR2,RC-MR3,RC-HR1,RC-HR2,RS-S,RS-I1,RS-I2,RS-I3,RS-I4,MU-C1,MU-C2,MU-U1,MU-L,MU-S1,MU-S2,MU-W,MU-W2,MU-HS,MU-HC,CC-S1,CC-S2,CC-B,CC-E1,CC-E2,CC-E3,CC-FD1,CC-FD2,CC-FD3,IC-DE,IC-DC
+Config.,Land Allocation,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%,20%
+Config.,Usable Area,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%,10%
+Config.,Module Capacity,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W,400W
+Config.,Installed Capacity (Kilowatt-peak),475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp,475 kWp
+Results,Energy Generation,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year,608 MWh/year

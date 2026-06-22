@@ -386,7 +386,7 @@ function renderTreemap(neighbourhoodCode) {
     // Set next step button href
     const nextStepBtn = document.getElementById('next-step-btn');
     if (nextStepBtn) {
-        nextStepBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&from=consumption`;
+        nextStepBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}&from=consumption`;
     }
 
     // Use full breakdown from the new data
@@ -488,8 +488,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextBtn = document.getElementById('next-step-btn');
 
         if (backBtn) backBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
-        // Assume next page from Energy should be PV Generation
-        if (nextBtn) nextBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+        // Assume next page from Energy should be PV Generation (renderTreemap overwrites this with envelope included)
+        const _envelopeForNav = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        if (nextBtn) nextBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(_envelopeForNav)}`;
 
         // Re-render on window resize
         let resizeTimer;
