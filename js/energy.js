@@ -244,46 +244,131 @@ function renderTreemap(neighbourhoodCode) {
     const loadSelections = selections.load || [];
     const demandSelections = selections.demand || [];
 
-    // Map energy selections to CSV columns
-    // Priority: thermal_load → IAL, cop4 → EEM2, dhw → EEM3, appliances → EEM4
-    // Default (no specific energy selection) → DEFAULT
-    let selectedColumn = "DEFAULT";
-    if (loadSelections.includes('thermal_load')) {
-        selectedColumn = "IAL";
-    } else if (demandSelections.includes('cop4')) {
-        selectedColumn = "EEM2";
-    } else if (demandSelections.includes('dhw')) {
-        selectedColumn = "EEM3";
-    } else if (demandSelections.includes('appliances')) {
-        selectedColumn = "EEM4";
+    // 1. Determine reference envelope and base level
+    let refEnvelope = envelope;
+    let baseLevel = "DEFAULT";
+
+    if (envelope.startsWith("high-performance-")) {
+        refEnvelope = envelope.replace("high-performance-", "");
+        if (refEnvelope === "necb") refEnvelope = "necb-2017";
+        baseLevel = "EEM1";
     }
 
-    // Get energy data using the new unified lookup
-    const energyData = getEnergyData(envelope, neighbourhoodCode, selectedColumn);
+    // 2. Fetch the reference data for all needed columns from the standard envelope
+    const baseDefault = getEnergyData(refEnvelope, neighbourhoodCode, "DEFAULT");
+    const baseEem1 = getEnergyData(refEnvelope, neighbourhoodCode, "EEM1");
+    const baseEem2 = getEnergyData(refEnvelope, neighbourhoodCode, "EEM2");
+    const baseEem3 = getEnergyData(refEnvelope, neighbourhoodCode, "EEM3");
+    const baseEem4 = getEnergyData(refEnvelope, neighbourhoodCode, "EEM4");
+    const baseIal = getEnergyData(refEnvelope, neighbourhoodCode, "IAL");
 
-    if (!energyData) {
+    let energyData = null;
+    let colName = "Baseline";
+
+    if (!baseDefault) {
         container.innerHTML = '<p class="error-message">Energy data not found for this neighbourhood and configuration.</p>';
         titleElement.textContent = 'Energy Breakdown';
         return;
     }
 
-    // Display-friendly names
-    const envelopeNames = {
-        'necb-2017': 'NECB',
-        'ashrae': 'ASHRAE',
-        'high-performance construction': 'High-Performance'
-    };
-    const columnNames = {
-        'IAL': 'Thermal Load',
-        'DEFAULT': 'Baseline',
-        'EEM1': 'High-Performance Envelope',
-        'EEM2': 'Heat Pump (COP 4)',
-        'EEM3': 'DHW',
-        'EEM4': 'Appliances & Equipment'
-    };
+    const hasHP = demandSelections.includes('cop4') || demandSelections.includes('cop3.5') || demandSelections.includes('cop3');
+    const hasDhw = demandSelections.includes('dhw');
+    const hasAppliances = demandSelections.includes('appliances');
 
+    if (loadSelections.includes('thermal_load')) {
+        energyData = baseIal || baseDefault;
+        colName = "Thermal Load";
+    } else {
+        // Baseline is EEM1 for high-performance envelope, DEFAULT for standard envelope
+        const baseDataset = (baseLevel === "EEM1" && baseEem1) ? baseEem1 : baseDefault;
+        
+        let startDataset;
+        if (hasHP) {
+            if (hasDhw && hasAppliances && baseEem4) {
+                startDataset = baseEem4;
+            } else if (hasDhw && baseEem3) {
+                startDataset = baseEem3;
+            } else if (baseEem2) {
+                startDataset = baseEem2;
+            } else {
+                startDataset = baseDataset;
+            }
+        } else {
+            startDataset = baseDataset;
+        }
+
+        // Deep clone starting breakdown
+        const breakdown = JSON.parse(JSON.stringify(startDataset.breakdown));
+        const pv = startDataset.pv;
+
+        // Calculate individual savings for DHW (EEM2 -> EEM3)
+        const dhwSavings = {};
+        if (baseEem2 && baseEem3) {
+            baseEem2.breakdown.forEach(item => {
+                const targetItem = baseEem3.breakdown.find(i => i.name === item.name);
+                if (targetItem) {
+                    dhwSavings[item.name] = item.value - targetItem.value;
+                }
+            });
+        }
+
+        // Calculate individual savings for Appliances (EEM3 -> EEM4)
+        const appSavings = {};
+        if (baseEem3 && baseEem4) {
+            baseEem3.breakdown.forEach(item => {
+                const targetItem = baseEem4.breakdown.find(i => i.name === item.name);
+                if (targetItem) {
+                    appSavings[item.name] = item.value - targetItem.value;
+                }
+            });
+        }
+
+        // Apply DHW savings if selected but not in starting dataset
+        if (hasDhw && !hasHP) {
+            breakdown.forEach(item => {
+                const saving = dhwSavings[item.name] || 0;
+                item.value = Math.max(0, item.value - saving);
+            });
+        }
+
+        // Apply Appliances savings if selected but not in starting dataset (not started from EEM4)
+        const startedFromEem4 = (hasHP && hasDhw && hasAppliances);
+        if (hasAppliances && !startedFromEem4) {
+            breakdown.forEach(item => {
+                const saving = appSavings[item.name] || 0;
+                item.value = Math.max(0, item.value - saving);
+            });
+        }
+
+        // Recalculate total
+        const total = breakdown.reduce((sum, item) => sum + item.value, 0);
+
+        energyData = {
+            total: parseFloat(total.toFixed(1)),
+            breakdown: breakdown,
+            pv: pv
+        };
+
+        // Determine title
+        const parts = [];
+        if (hasHP) parts.push("Heat Pump (COP 4)");
+        if (hasDhw) parts.push("HP DHW");
+        if (hasAppliances) parts.push("Efficient Appliances");
+
+        if (parts.length === 0) {
+            colName = envelope.startsWith("high-performance-") ? "High-Performance Envelope" : "Baseline";
+        } else {
+            colName = parts.join(" + ");
+        }
+    }
+
+    const envelopeNames = {
+        'necb-2017': 'Standard (NECB)',
+        'ashrae': 'Standard (ASHRAE)',
+        'high-performance-necb': 'High-Performance (NECB)',
+        'high-performance-ashrae': 'High-Performance (ASHRAE)'
+    };
     const envName = envelopeNames[envelope] || envelope;
-    const colName = columnNames[selectedColumn] || selectedColumn;
     titleElement.textContent = `Layer 2: ${colName} Breakdown of ${neighbourhoodCode} (${envName})`;
 
     // Render EUI Scale

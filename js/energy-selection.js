@@ -1,7 +1,7 @@
 /**
  * Energy Selection Page
  * Handles parameter selection for energy consumption and generation
- * Note: This is a demo page - selections do not affect the energy data shown
+ * Selections map to energy data columns (IAL, DEFAULT, EEM1-EEM4)
  */
 
 /**
@@ -30,13 +30,50 @@ const energySelections = {
 };
 
 /**
- * Setup load card event listeners (multi-selection with mutual exclusion for space heating).
+ * Update the disabled/enabled visual state of groups based on mutual exclusion.
+ * - If Thermal Load is active  → disable all demand cards
+ * - If any demand card is active → disable all load cards
+ * - If neither group has selections → enable both groups
+ */
+function updateMutualExclusion() {
+    const loadCards = document.querySelectorAll('.load-card');
+    const demandCards = document.querySelectorAll('.demand-card');
+
+    const hasLoad = energySelections.load.length > 0;
+    const hasDemand = energySelections.demand.length > 0;
+
+    // Disable demand cards when Thermal Load is selected
+    demandCards.forEach(card => {
+        // Never re-enable permanently disabled items (e.g. "Other TBA")
+        if (card.hasAttribute('data-permanently-disabled')) return;
+        if (hasLoad) {
+            card.disabled = true;
+        } else {
+            card.disabled = false;
+        }
+    });
+
+    // Disable load cards when any Energy Systems button is selected
+    loadCards.forEach(card => {
+        if (card.hasAttribute('data-permanently-disabled')) return;
+        if (hasDemand) {
+            card.disabled = true;
+        } else {
+            card.disabled = false;
+        }
+    });
+}
+
+/**
+ * Setup load card event listeners (Thermal Load selection with mutual exclusion).
  */
 function setupLoadCards() {
     const cards = document.querySelectorAll('.load-card');
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
+            if (card.disabled) return; // Respect disabled state
+
             const value = card.dataset.value;
 
             // Toggle this card
@@ -49,29 +86,33 @@ function setupLoadCards() {
                 }
 
                 if (value === 'thermal_load') {
-                    // Deselect COP options in demand
-                    energySelections.demand = energySelections.demand.filter(v => !['cop4', 'cop3.5', 'cop3'].includes(v));
+                    // Clear all demand selections
+                    energySelections.demand = [];
                     document.querySelectorAll('.demand-card').forEach(dCard => {
-                        if (['cop4', 'cop3.5', 'cop3'].includes(dCard.dataset.value)) {
-                            dCard.classList.remove('active');
-                        }
+                        dCard.classList.remove('active');
                     });
                 }
             } else {
                 energySelections.load = energySelections.load.filter(v => v !== value);
             }
+
+            updateMutualExclusion();
         });
     });
 }
 
 /**
- * Setup demand card event listeners (multi-selection with mutual exclusion for space heating).
+ * Setup demand card event listeners (multi-selection for Heat Pump, DHW, Appliances).
+ * Heat Pump (COP 4) is mutually exclusive with other COP values.
+ * Selecting any demand card disables Thermal Load.
  */
 function setupDemandCards() {
     const cards = document.querySelectorAll('.demand-card');
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
+            if (card.disabled) return; // Respect disabled state
+
             const value = card.dataset.value;
 
             // Toggle this card
@@ -79,13 +120,11 @@ function setupDemandCards() {
 
             // Update selection state
             if (card.classList.contains('active')) {
-                // If this is a COP value, we enforce mutual exclusivity against thermal_load and other COPs
+                // If this is a COP value, enforce mutual exclusivity among COP variants only
                 if (['cop4', 'cop3.5', 'cop3'].includes(value)) {
-                    energySelections.load = energySelections.load.filter(v => v !== 'thermal_load');
-                    energySelections.demand = energySelections.demand.filter(v => !['cop4', 'cop3.5', 'cop3'].includes(v) || v === value);
-                    
-                    // Visually deselect others
-                    document.querySelectorAll('.load-card[data-value="thermal_load"]').forEach(c => c.classList.remove('active'));
+                    energySelections.demand = energySelections.demand.filter(v => !['cop4', 'cop3.5', 'cop3'].includes(v));
+
+                    // Visually deselect other COP cards
                     document.querySelectorAll('.demand-card').forEach(dCard => {
                         if (['cop4', 'cop3.5', 'cop3'].includes(dCard.dataset.value) && dCard.dataset.value !== value) {
                             dCard.classList.remove('active');
@@ -96,9 +135,16 @@ function setupDemandCards() {
                 if (!energySelections.demand.includes(value)) {
                     energySelections.demand.push(value);
                 }
+
+                // Clear Thermal Load when any demand is selected
+                energySelections.load = energySelections.load.filter(v => v !== 'thermal_load');
+                document.querySelectorAll('.load-card[data-value="thermal_load"]').forEach(c => c.classList.remove('active'));
+
             } else {
                 energySelections.demand = energySelections.demand.filter(v => v !== value);
             }
+
+            updateMutualExclusion();
         });
     });
 }
@@ -111,6 +157,8 @@ function setupGenerationCards() {
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
+            if (card.disabled) return; // Respect disabled state
+
             const value = card.dataset.value;
 
             // Toggle this card (multi-select)
@@ -189,6 +237,9 @@ function initEnergySelectionPage() {
     setupDemandCards();
     setupGenerationCards();
     setupSubmitButton();
+
+    // Initialize mutual exclusion state
+    updateMutualExclusion();
 }
 
 // Initialize on page load

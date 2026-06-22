@@ -22,7 +22,7 @@ function renderOutputEnergyTable() {
     if (!tableBody || !neighbourhoodCode) return;
 
     // Get selections from sessionStorage
-    const energySelections = JSON.parse(sessionStorage.getItem('energySelections') || '{"consumption":[], "generation":[]}');
+    const energySelections = JSON.parse(sessionStorage.getItem('energySelections') || '{"load":[], "demand":[], "generation":[]}');
 
     // Find the specific neighbourhood
     const neighbourhood = NEIGHBOURHOODS.find(n => n.code === neighbourhoodCode);
@@ -106,17 +106,53 @@ function renderOutputEnergyTable() {
     const consumptionWrapper = document.createElement('div');
     consumptionWrapper.className = 'energy-selection-cell';
 
-    energySelections.consumption.forEach(val => {
-        const item = document.createElement('div');
-        item.className = 'energy-selection-item';
-        // Capitalize first letter for display
-        const displayVal = val.charAt(0).toUpperCase() + val.slice(1);
-        item.innerHTML = `
-            <img src="Content/Images_Layer2_EnergyConsumption/${displayVal}.png" alt="${displayVal}" onerror="this.style.display='none'">
-            <span>${displayVal}</span>
-        `;
-        consumptionWrapper.appendChild(item);
-    });
+    // 1. Add active loads
+    if (energySelections.load) {
+        energySelections.load.forEach(val => {
+            if (val === 'thermal_load') {
+                const item = document.createElement('div');
+                item.className = 'energy-selection-item';
+                item.innerHTML = `
+                    <img src="Content/Images_Layer2_ThermalLoad/thermalload.png" alt="Thermal Load" onerror="this.style.display='none'">
+                    <span>Thermal Load</span>
+                `;
+                consumptionWrapper.appendChild(item);
+            }
+        });
+    }
+
+    // 2. Add active demands
+    if (energySelections.demand) {
+        const demandLabels = {
+            'cop4': 'Heat Pump (COP 4)',
+            'dhw': 'DHW',
+            'appliances': 'Appliances and Equipment'
+        };
+        const demandImages = {
+            'cop4': 'heatpump_cop4',
+            'dhw': 'dhw',
+            'appliances': 'appliancesequipment'
+        };
+
+        energySelections.demand.forEach(val => {
+            if (demandLabels[val]) {
+                const item = document.createElement('div');
+                item.className = 'energy-selection-item';
+                const label = demandLabels[val];
+                const imgName = demandImages[val];
+                item.innerHTML = `
+                    <img src="Content/Images_Layer2_EnergyDemand/${imgName}.png" alt="${label}" onerror="this.style.display='none'">
+                    <span>${label}</span>
+                `;
+                consumptionWrapper.appendChild(item);
+            }
+        });
+    }
+
+    if (consumptionWrapper.children.length === 0) {
+        consumptionWrapper.innerHTML = '<span>None selected</span>';
+    }
+
     consumptionCell.appendChild(consumptionWrapper);
 
     // Navigation for consumption

@@ -14,7 +14,7 @@ function buildSidebar(currentLayer, mode) {
     if (!sidebarContainer) return;
 
     // Retrieve data across layers
-    const energySelections = JSON.parse(sessionStorage.getItem('energySelections') || '{"consumption":[], "generation":[]}');
+    const energySelections = JSON.parse(sessionStorage.getItem('energySelections') || '{"load":[], "demand":[], "generation":[]}');
     const lpvSelections = JSON.parse(sessionStorage.getItem('lpvSelections') || '{}');
     const evSelections = JSON.parse(sessionStorage.getItem('evSelections') || '{}');
     const mobilitySelections = JSON.parse(sessionStorage.getItem('mobilitySelections') || '{"transportation":[], "mobility":[]}');
@@ -206,12 +206,14 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
         'cop4': 'Heat Pump COP 4',
         'cop3.5': 'HVAC COP 3.5',
         'cop3': 'HVAC COP 3',
+        'dhw': 'DHW',
         'appliances': 'Appliances and Equipment'
     };
     const demandImages = {
         'cop4': 'HeatPump_COP4',
         'cop3.5': 'HVAC_COP3.5',
         'cop3': 'HVAC_COP3',
+        'dhw': 'dhw',
         'appliances': 'AppliancesEquipment'
     };
 

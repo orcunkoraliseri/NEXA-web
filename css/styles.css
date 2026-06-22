@@ -356,7 +356,10 @@ h3 {
 .usage-card.disabled,
 .context-card.disabled,
 .density-card.disabled,
-.layout-card.disabled {
+.layout-card.disabled,
+.generation-card:disabled,
+.demand-card:disabled,
+.load-card:disabled {
   opacity: 0.3;
   filter: grayscale(100%);
   pointer-events: none;
@@ -366,9 +369,13 @@ h3 {
 .usage-card.disabled:hover,
 .context-card.disabled:hover,
 .density-card.disabled:hover,
-.layout-card.disabled:hover {
+.layout-card.disabled:hover,
+.generation-card:disabled:hover,
+.demand-card:disabled:hover,
+.load-card:disabled:hover {
   transform: none;
   box-shadow: none;
+  border-color: var(--border-subtle);
 }
 
 /* Context Image Cards - Compact */
