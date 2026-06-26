@@ -2749,17 +2749,26 @@ h3 {
 }
 
 .footer-doc-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: #ffffff;
+  border: 1.5px solid var(--text-secondary);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 600;
-  color: #4a4a4a;
-  background: #e8e8e8;
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius-lg);
-  text-decoration: none;
-  border: 1px solid #d0d0d0;
   text-align: center;
-  line-height: 1.15;
-  transition: background var(--transition-normal), color var(--transition-normal);
+  line-height: 1.2;
+  transition: all var(--transition-normal);
 }
-.footer-doc-link:hover { background: #dcdcdc; color: #2a2a2a; }
+.footer-doc-link:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
