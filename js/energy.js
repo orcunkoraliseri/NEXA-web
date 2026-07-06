@@ -352,7 +352,7 @@ function renderTreemap(neighbourhoodCode) {
         // Determine title
         const parts = [];
         if (hasHP) parts.push("Heat Pump (COP 4)");
-        if (hasDhw) parts.push("HP DHW");
+        if (hasDhw) parts.push("Heat Pump for DHW");
         if (hasAppliances) parts.push("Efficient Appliances");
 
         if (parts.length === 0) {
@@ -365,8 +365,8 @@ function renderTreemap(neighbourhoodCode) {
     const envelopeNames = {
         'necb-2017': 'Standard (NECB)',
         'ashrae': 'Standard (ASHRAE)',
-        'high-performance-necb': 'High-Performance (NECB)',
-        'high-performance-ashrae': 'High-Performance (ASHRAE)'
+        'high-performance-necb': 'High Performance based on NECB',
+        'high-performance-ashrae': 'High Performance based on ASHRAE'
     };
     const envName = envelopeNames[envelope] || envelope;
     titleElement.textContent = `Layer 2: ${colName} Breakdown of ${neighbourhoodCode} (${envName})`;

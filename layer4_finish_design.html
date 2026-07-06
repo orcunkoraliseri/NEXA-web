@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consolidated summary and outputs of all design layers.">
+    <title>Design Summary | Neighbourhood Design Interface</title>
+    <link rel="stylesheet" href="css/styles.css?v=3">
+    <style>
+        /* Summary Dashboard Specific Styles */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        @media (max-width: 1200px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .summary-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--accent-burnt);
+            padding-bottom: var(--spacing-xs);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .summary-card-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .summary-card-badge {
+            background: rgba(200, 150, 150, 0.2);
+            color: var(--text-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Scales Row in Header */
+        .consolidated-scales {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-sm);
+            background: rgba(0, 0, 0, 0.02);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            border: 1px dashed rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 900px) {
+            .consolidated-scales {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .scale-box {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            background: var(--bg-card);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .scale-box-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+        }
+
+        /* Lists and Selections styling inside cards */
+        .selection-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .selection-pill {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .selection-pill img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+
+        /* Compact Data Tables */
+        .compact-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: var(--spacing-xs);
+        }
+
+        .compact-table tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .compact-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .compact-table td {
+            padding: 0.6rem 0.5rem;
+            vertical-align: middle;
+        }
+
+        .compact-table td.label-cell {
+            color: var(--text-secondary);
+            font-weight: 500;
+            width: 50%;
+        }
+
+        .compact-table td.value-cell {
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: right;
+        }
+
+        .nu-preview-box {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+            background: rgba(0, 0, 0, 0.01);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .nu-preview-img {
+            width: 100px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nu-preview-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .nu-preview-code {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .nu-preview-concept {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main class="container container-wide">
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <a id="back-step-btn" href="layer4_lpv_breakdown.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to Land-PV Breakdown
+            </a>
+            <a id="next-step-btn" href="layer1_NUs_selection.html" class="next-button">
+                Restart Design Flow
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        <div class="sidebar-layout">
+            <aside id="sidebar" class="sidebar"></aside>
+
+            <div id="visual-content" class="main-content">
+                <!-- Header -->
+                <header class="header">
+                    <h1 id="neighbourhood-title">Consolidated Design Summary</h1>
+                    <p>Review the comprehensive outputs of your cumulative design parameters and configurations.</p>
+                </header>
+
+                <!-- Top Disclaimer Box -->
+                <div class="top-disclaimer-box">
+                    <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <span><strong>Disclaimer:</strong> The consolidated details represent a synthesis of all selections made. Layers 3 and 4 calculations are subject to active refinement.</span>
+                </div>
+
+                <!-- Consolidated Scales -->
+                <div class="consolidated-scales">
+                    <div class="scale-box">
+                        <span class="scale-box-title">Layer 2: Energy Use Intensity (EUI)</span>
+                        <div id="eui-scale-container" class="eui-scale-container"></div>
+                    </div>
+                    <div class="scale-box">
+                        <span class="scale-box-title">Layer 2: Roof &amp; Facade PV Generation</span>
+                        <div id="pv-scale-container" class="eui-scale-container"></div>
+                    </div>
+                    <div class="scale-box">
+                        <span class="scale-box-title">Layer 4: Landscape PV Generation</span>
+                        <div id="lpv-scale-container" class="eui-scale-container"></div>
+                    </div>
+                </div>
+
+                <!-- Grid Layout for 4 Layer Summary Cards -->
+                <div class="summary-grid">
+
+                    <!-- CARD 1: LAYER 1 - MORPHOLOGY -->
+                    <div class="summary-card">
+                        <div class="summary-card-header">
+                            <span class="summary-card-title">Layer 1: Morphology &amp; Site</span>
+                            <span class="summary-card-badge">Neighbourhood Unit</span>
+                        </div>
+                        <div class="nu-preview-box">
+                            <img id="l1-nu-image" src="" alt="Neighbourhood Unit" class="nu-preview-img" onerror="this.src='https://via.placeholder.com/200x150?text=N/A'">
+                            <div class="nu-preview-info">
+                                <span id="l1-nu-code" class="nu-preview-code">—</span>
+                                <span id="l1-nu-concept" class="nu-preview-concept">—</span>
+                            </div>
+                        </div>
+                        <table class="compact-table">
+                            <tbody>
+                                <tr>
+                                    <td class="label-cell">Context Boundary</td>
+                                    <td id="l1-context" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Zoning Usage</td>
+                                    <td id="l1-usage" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Morphology Density</td>
+                                    <td id="l1-density" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Street Layout</td>
+                                    <td id="l1-layout" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Total Gross Floor Area (GFA)</td>
+                                    <td id="l1-gfa" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Building Typologies</td>
+                                    <td id="l1-buildings" class="value-cell">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- CARD 2: LAYER 2 - ENERGY & PV -->
+                    <div class="summary-card">
+                        <div class="summary-card-header">
+                            <span class="summary-card-title">Layer 2: Energy &amp; PV</span>
+                            <span class="summary-card-badge">Energy Generation</span>
+                        </div>
+                        <div class="selection-pills" id="l2-pills"></div>
+                        <table class="compact-table">
+                            <tbody>
+                                <tr>
+                                    <td class="label-cell">Envelope Insulation</td>
+                                    <td id="l2-envelope" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Calculated EUI Score</td>
+                                    <td id="l2-eui-val" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">PV Surface Coverage</td>
+                                    <td id="l2-pv-surface" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">PV Module Efficiency</td>
+                                    <td id="l2-pv-efficiency" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Ground Coverage Ratio (GCR)</td>
+                                    <td id="l2-pv-gcr" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">PV Mounting Type</td>
+                                    <td id="l2-pv-mounting" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Total PV Generation</td>
+                                    <td id="l2-pv-total" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Ratio of Performance (RoP)</td>
+                                    <td id="l2-pv-rop" class="value-cell">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- CARD 3: LAYER 3 - EV & MOBILITY -->
+                    <div class="summary-card">
+                        <div class="summary-card-header">
+                            <span class="summary-card-title">Layer 3: EV &amp; Mobility</span>
+                            <span class="summary-card-badge">Transportation</span>
+                        </div>
+                        <div class="selection-pills" id="l3-pills"></div>
+                        <table class="compact-table">
+                            <tbody>
+                                <tr>
+                                    <td class="label-cell">EV Penetration Rate</td>
+                                    <td id="l3-ev-penetration" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Charging Efficiency</td>
+                                    <td id="l3-charging-efficiency" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Daily Demand per EV</td>
+                                    <td id="l3-daily-demand" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">V2G Participation Rate</td>
+                                    <td id="l3-v2g-rate" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Total EV Energy Demand</td>
+                                    <td id="l3-total-ev-demand" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Storage Loss</td>
+                                    <td id="l3-storage-loss" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">V2G Power Available</td>
+                                    <td id="l3-v2g-power" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">Net Energy Balance</td>
+                                    <td id="l3-net-balance" class="value-cell">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- CARD 4: LAYER 4 - GREEN INFRASTRUCTURE & LPV -->
+                    <div class="summary-card">
+                        <div class="summary-card-header">
+                            <span class="summary-card-title">Layer 4: Green &amp; Land PV</span>
+                            <span class="summary-card-badge">Green Infrastructure</span>
+                        </div>
+                        <div class="selection-pills" id="l4-pills"></div>
+                        <table class="compact-table">
+                            <tbody>
+                                <tr>
+                                    <td class="label-cell">LPV Land Allocation</td>
+                                    <td id="l4-land-allocation" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">LPV Usable Area</td>
+                                    <td id="l4-usable-area" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">LPV Module Capacity</td>
+                                    <td id="l4-module-capacity" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">LPV Installed Capacity</td>
+                                    <td id="l4-installed-capacity" class="value-cell">—</td>
+                                </tr>
+                                <tr>
+                                    <td class="label-cell">LPV Energy Generation</td>
+                                    <td id="l4-energy-generation" class="value-cell">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <footer class="site-footer">
+            <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
+            <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
+            <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/data.js?v=3"></script>
+    <script src="js/sidebar.js?v=3"></script>
+    <script src="js/finish-design.js?v=3"></script>
+</body>
+
+</html>

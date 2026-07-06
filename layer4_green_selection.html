@@ -32,6 +32,16 @@
                     <p>Select green infrastructure and urban agriculture parameters for your analysis.</p>
                 </header>
 
+                <!-- Top Disclaimer Box -->
+                <div class="top-disclaimer-box">
+                    <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <span><strong>Disclaimer:</strong> The information presented in Layers&nbsp;3 and&nbsp;4 is based on preliminary assumptions and simplified calculations. These layers are still under development and subject to refinement.</span>
+                </div>
+
                 <!-- Parameters Section -->
                 <section class="parameters-section" id="selection-form">
 
@@ -41,27 +51,27 @@
                         <div class="generation-container">
                             <div class="generation-row">
                                 <button class="generation-card green-card" data-category="infrastructure"
-                                    data-value="green_roofs">
+                                    data-value="green_roofs" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/green roofs.png" alt="Green Roofs"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>Green Roofs</span>
                                 </button>
                                 <button class="generation-card green-card" data-category="infrastructure"
-                                    data-value="vertical_greening_systems">
+                                    data-value="vertical_greening_systems" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/vertical greening systems.png"
                                         alt="Vertical Greening Systems"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>Vertical Greening Systems</span>
                                 </button>
                                 <button class="generation-card green-card" data-category="infrastructure"
-                                    data-value="linear_greenery">
+                                    data-value="linear_greenery" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/linear greenery.png"
                                         alt="Linear Greenery"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>Linear Greenery</span>
                                 </button>
                                 <button class="generation-card green-card" data-category="infrastructure"
-                                    data-value="green_spaces">
+                                    data-value="green_spaces" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/green spaces.png" alt="Green Spaces"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>Green Spaces</span>
@@ -75,13 +85,13 @@
                         <div class="parameter-label">Urban Agriculture</div>
                         <div class="consumption-cards">
                             <button class="consumption-card green-card" data-category="urban_agriculture"
-                                data-value="roof_gardens">
+                                data-value="roof_gardens" disabled>
                                 <img src="Content/Images_Layer4_UrbanAgriculture/roof gardens.png" alt="Roof Gardens"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
                                 <span>Roof Gardens</span>
                             </button>
                             <button class="consumption-card green-card" data-category="urban_agriculture"
-                                data-value="food_gardens">
+                                data-value="food_gardens" disabled>
                                 <img src="Content/Images_Layer4_UrbanAgriculture/food gardens.png" alt="Food Gardens"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
                                 <span>Food Gardens</span>
@@ -94,7 +104,7 @@
                         <div class="parameter-label">Energy-Integrated GI</div>
                         <div class="consumption-cards">
                             <button class="consumption-card green-card" data-category="energy_integrated"
-                                data-value="pv_green_roofs">
+                                data-value="pv_green_roofs" disabled>
                                 <img src="Content/Images_Layer4_EnergyIntegratedGI/pv-green roofs integrated modules.png"
                                     alt="PV-Green Roofs Integrated Modules"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
@@ -121,7 +131,6 @@
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <p class="footer-disclaimer"><strong>Disclaimer:</strong> The information presented in Layers&nbsp;3 and&nbsp;4 is based on preliminary assumptions and simplified calculations. These layers are still under development and subject to refinement.</p>
             <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
         </footer>
 </main>

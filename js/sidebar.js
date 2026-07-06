@@ -164,6 +164,19 @@ function buildSidebar(currentLayer, mode) {
 
     // Add click listeners to clickable items
     setupSidebarInteractions();
+
+    // Programmatically hide broken images inside the sidebar to prevent duplicate alt text display
+    const sidebarImages = sidebarContainer.querySelectorAll('img');
+    sidebarImages.forEach(img => {
+        // Hide immediately if already complete and naturalWidth is 0 (load failed)
+        if (img.complete && img.naturalWidth === 0) {
+            img.style.display = 'none';
+        }
+        // Attach error event handler to hide the image if it fails to load later
+        img.addEventListener('error', function() {
+            this.style.display = 'none';
+        });
+    });
 }
 
 /**

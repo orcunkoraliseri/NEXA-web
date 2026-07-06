@@ -261,30 +261,7 @@ function renderHourlyHeatmaps(neighbourhoodCode) {
  * @param {string} neighbourhoodCode - The neighbourhood code
  */
 function updatePVImages(neighbourhoodCode) {
-    if (neighbourhoodCode === 'RC-HR2') return;
-
-    // For new neighbourhoods not in RC folder, adjust base path if needed
-    // Assuming they are added in their respective folders later, or just hide if missing
-    const prefix = neighbourhoodCode.split('-')[0];
-    const base = `Content/Images_PVpage/${prefix}/${neighbourhoodCode}`;
-    const imgMap = {
-        'wall-ir-img':     `${base}/${neighbourhoodCode}_Wall_IR_compressed_cropped.png`,
-        'wall-dsh-img':    `${base}/${neighbourhoodCode}_Wall_DSH_compressed_cropped.png`,
-        'roof-ir-img':     `${base}/${neighbourhoodCode}_Roof_IR_compressed_cropped.png`,
-        'roof-dsh-img':    `${base}/${neighbourhoodCode}_Roof_DSH_compressed_cropped.png`,
-    };
-
-    for (const [id, src] of Object.entries(imgMap)) {
-        const el = document.getElementById(id);
-        if (el) {
-            el.style.display = 'block';
-            el.onerror = function() { this.style.display = 'none'; };
-            el.src = src;
-        }
-    }
-
-    // Render hourly heatmaps from embedded data
-    renderHourlyHeatmaps(neighbourhoodCode);
+    // No figures/images to update or render
 }
 
 /**

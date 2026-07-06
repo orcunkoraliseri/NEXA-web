@@ -221,7 +221,8 @@ function initLPVPage() {
             backStepBtn.href = `layer4_output_selection.html?neighbourhood=${encodeURIComponent(code)}`;
         }
         if (nextStepBtn) {
-            nextStepBtn.href = `layer1_NUs_selection.html`;
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            nextStepBtn.href = `layer4_finish_design.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(envelope)}`;
         }
     }
 

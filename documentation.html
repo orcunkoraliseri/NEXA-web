@@ -234,6 +234,135 @@
                 font-size: 1.7rem;
             }
         }
+
+        /* Reports box styles */
+        .doc-reports-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: var(--radius-sm);
+            padding: var(--spacing-sm) var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .doc-reports-box h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-reports-box p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem !important;
+        }
+
+        .doc-reports-list {
+            list-style: none !important;
+            padding-left: 0 !important;
+            margin-bottom: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .doc-reports-list li {
+            margin-bottom: 0 !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .report-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-amber);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color var(--transition-normal), transform var(--transition-fast);
+        }
+
+        .report-link:hover {
+            color: var(--accent-burnt);
+            text-decoration: none;
+            transform: translateX(3px);
+        }
+
+        .report-link svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Publications Table Styles */
+        .publications-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+        }
+
+        .doc-publications-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+            background: var(--bg-card);
+        }
+
+        .doc-publications-table th, 
+        .doc-publications-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            line-height: 1.5;
+        }
+
+        .doc-publications-table th {
+            background: var(--bg-secondary);
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .doc-publications-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .doc-publications-table code {
+            font-family: var(--font-mono);
+            background: var(--bg-secondary);
+            padding: 0.15rem 0.35rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--accent-burnt);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .status-under-review {
+            background-color: rgba(232, 134, 10, 0.12);
+            color: var(--accent-amber);
+            border: 1px solid rgba(232, 134, 10, 0.25);
+        }
     </style>
 </head>
 <body>
@@ -273,7 +402,8 @@
                 <li><a href="#sec-green">Layer 4: Green Infrastructure / LPV</a></li>
                 <li><a href="#sec-resizing">Resizing Methodology</a></li>
                 <li><a href="#sec-validation">Validation Summary</a></li>
-                <li><a href="#sec-references">References</a></li>
+                <li><a href="#sec-limitations">Limitations</a></li>
+                <li><a href="#sec-references">Publications &amp; References</a></li>
             </ol>
         </div>
 
@@ -287,6 +417,25 @@
                 simulation campaign across a ladder of energy-efficiency scenarios, so the user can compare code
                 baselines against progressively deeper retrofits.
             </p>
+            
+            <div class="doc-reports-box">
+                <h4>Detailed Reports &amp; Documentation</h4>
+                <p>For an overall index and summary of the modeling methodology, you can view the following technical documents:</p>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Documentation_Index.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Documentation Index (PDF)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Methodology_Overview.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Methodology Overview (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section B: Four Layers -->
@@ -295,7 +444,7 @@
             <ul>
                 <li><strong>Layer 1 &mdash; Neighbourhood selection:</strong> choose land use, context, density, layout,
                     and envelope code. Returns matching neighbourhood archetypes.</li>
-                <li><strong>Layer 2 &mdash; Energy:</strong> energy demand systems (Heat Pump COP 4, DHW, appliances)
+                <li><strong>Layer 2 &mdash; Energy:</strong> energy demand systems (Heat Pump COP 4, Heat Pump for DHW, appliances)
                     and on-site generation (PV). Shows EUI breakdown + PV generation.</li>
                 <li><strong>Layer 3 &mdash; Mobility (preliminary):</strong> EV demand and V2G balance.</li>
                 <li><strong>Layer 4 &mdash; Green infrastructure (preliminary):</strong> landscape PV (LPV) and green systems.</li>
@@ -351,6 +500,18 @@
                 The PV page surfaces gross floor area and the absolute total alongside the intensity so the two
                 are explicitly consistent.
             </p>
+
+            <div class="doc-reports-box">
+                <h4>Related Technical Reports</h4>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Photovoltaic_Methodology.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Photovoltaic Methodology (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section C: Standards & Codes -->
@@ -414,6 +575,24 @@
                 gas/boiler &ge; 0.80, chiller COP &ge; 4.7). NBC 9.36 residential: window U &le; 1.60 (Z6)
                 / 1.40 (Z7A); air leakage 2.5 ACH&#x2085;&#x2080; (Z6) / 2.0 ACH&#x2085;&#x2080; (Z7A).
             </p>
+
+            <div class="doc-reports-box">
+                <h4>Related Technical Reports</h4>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Canadian_Baseline_Transformation.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Canadian Baseline Transformation (PDF)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Reference_Standards.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Reference Standards (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section D: Climate zone & weather -->
@@ -436,6 +615,18 @@
                     US constructions/schedules are then replaced by NECB/NBC/BTAP equivalents for the Canadian baselines.
                 </li>
             </ul>
+
+            <div class="doc-reports-box">
+                <h4>Related Technical Reports</h4>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Climate_Zone_6A_Selection_Rationale.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Climate Zone 6A Selection Rationale (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section E: Building archetypes & sources -->
@@ -455,6 +646,18 @@
                     <strong>50% floor area</strong> to fit neighbourhood plots (see
                     <a href="#sec-resizing">Resizing</a>).</li>
             </ul>
+
+            <div class="doc-reports-box">
+                <h4>Related Technical Reports</h4>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Secondary_School_Layout_Investigation.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Secondary School Layout Investigation (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section F: Energy modelling basis -->
@@ -468,8 +671,7 @@
                     <strong>separately and never netted into EUI</strong>.</li>
                 <li><strong>Neighbourhood airflow:</strong>
                     <code>AirflowNetwork:SimulationControl = MultizoneWithoutDistribution</code>.</li>
-                <li><strong>Envelope-code options</strong> offered per neighbourhood: NECB-2017, ASHRAE,
-                    High-Performance (NECB), High-Performance (ASHRAE).</li>
+                <li><strong>Envelope-code options</strong> offered per neighbourhood: Standard (NECB), Standard (ASHRAE), High Performance based on NECB, and High Performance based on ASHRAE. Note that the high-performance options represent high-performance envelope improvements (EEM1) implemented strictly on the building envelope for buildings built to either NECB or ASHRAE standards.</li>
             </ul>
 
             <h3>Scenario ladder (cumulative)</h3>
@@ -499,7 +701,7 @@
                             <td>EEM1 + air-source heat pump (COP 4.0&ndash;4.5) with cold-climate (CCHP) curves; inverter cooling (SEER 22/EER 14); per-zone heat pumps; supplemental-heater lockout; defrost on-demand</td>
                         </tr>
                         <tr>
-                            <td><strong>EEM3 &mdash; + DHW</strong></td>
+                            <td><strong>EEM3 &mdash; + Heat Pump for DHW</strong></td>
                             <td>EEM2 + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
                         </tr>
                         <tr>
@@ -508,6 +710,24 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="doc-reports-box">
+                <h4>Related Technical Reports</h4>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Parallel_IDF_Preparation_Technical_Reference.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Parallel IDF Preparation Technical Reference (PDF)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Energy_Efficiency_Measures_Framework.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Energy Efficiency Measures Framework (PDF)
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -524,6 +744,19 @@
                     grid-status indicator.</li>
                 <li><strong>Status:</strong> preliminary, simplified &mdash; under development.</li>
             </ul>
+
+            <div class="doc-reports-box">
+                <h4>Layer 3 Mobility Technical Report</h4>
+                <p>For more detailed information regarding the EV charging calculations, battery loss equations, household configurations, and grid stress metrics, you can download the full report:</p>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Transportation_EV_V2G_Mobility_Analysis.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Transportation EV V2G Mobility Analysis (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section I: Layer 4 Green Infrastructure -->
@@ -538,6 +771,19 @@
                     quantitative models pending.</li>
                 <li><strong>Status:</strong> preliminary, simplified &mdash; under development.</li>
             </ul>
+
+            <div class="doc-reports-box">
+                <h4>Layer 4 Green Infrastructure &amp; LPV Report</h4>
+                <p>For more detailed information regarding the green infrastructure types, Land PV (LPV) sizing formulas, and shading surface cooling co-benefits, you can download the full report:</p>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Green_Infrastructure_Landscape_PV_Analysis.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            Building Energy Modeling Green Infrastructure Landscape PV Analysis (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!-- Section J: Resizing -->
@@ -568,9 +814,87 @@
             </ul>
         </section>
 
-        <!-- Section L: References -->
+        <!-- Section L: Limitations -->
+        <section class="doc-section" id="sec-limitations">
+            <h2>L &mdash; Limitations</h2>
+            
+            <h3>Envelope &amp; HVAC Modeling Constraints</h3>
+            <ul>
+                <li>
+                    <strong>AirflowNetwork Numerical Singularities:</strong> To prevent numerical singularities in the AirflowNetwork solver during high-wind winter events at the neighbourhood scale, the detailed duct distribution and leakage solver (`MultizoneWithDistribution`) is disabled. Neighbourhood simulations use the simpler `MultizoneWithoutDistribution` mode, dropping the duct leakage component (estimated to introduce a &le; 5% EUI difference, but reducing simulation times tenfold).
+                </li>
+                <li>
+                    <strong>Daylighting and Venetian Blinds Skip Rules:</strong> Daylighting controls are automatically skipped in zones with continuous-use schedules (e.g., life-safety/process) or specialty functions (labs, kitchens, surgical rooms) where dimming is impractical. Automated interior venetian blinds are skipped on Laboratory, Tall, and SuperTall buildings due to EnergyPlus v22.1 engine crash constraints.
+                </li>
+                <li>
+                    <strong>Stratified Tank Reporting Anomaly (Phase P):</strong> In EnergyPlus v22.1, central stratified HPWH backup-resistance energy (&asymp; 7 kWh/m&sup2;&middot;yr) is mis-bucketed under Space Heating instead of Water Heating. While the total combined energy is conserved, the individual end-use columns contain this reporting discrepancy.
+                </li>
+                <li>
+                    <strong>Process-Load Dominated Typologies:</strong> Industrial and IT-heavy archetypes (e.g., Data Centers, Laboratories) exhibit low EUI sensitivity to typical envelope and HVAC EEM retrofits because their energy budgets are heavily dominated by IT plug loads and ventilation process exhaust, which are outside the scope of building-level EEMs.
+                </li>
+            </ul>
+
+            <h3>Solar Photovoltaic (PV) Modeling Constraints</h3>
+            <ul>
+                <li>
+                    <strong>Facade PV Validation:</strong> Facade PV (building-integrated photovoltaics on vertical walls) is only applied to high-rise typologies (ApartmentHighRise, ST15, and ST20) where vertical area is significant. Additionally, facade PV yields have only been simulated and validated for Montreal (CZ6A), with Calgary (CZ7A) validation pending.
+                </li>
+                <li>
+                    <strong>Pitched Commercial PV Sizing:</strong> Sizing values for pitched commercial buildings (OfficeSmall, RestaurantFastFood, RestaurantSitDown) are pending re-simulation under the south-facing dominant-pitched-roof constraint; current reporting reflects pre-fix values across all slopes.
+                </li>
+                <li>
+                    <strong>Racking Tilt vs. Market Standards:</strong> While flat-roof PV racks are modeled at an energy-optimal tilt of 45&deg; (or 20&deg; for EEM4) for high-latitude winter performance, this tilt angle exceeds typical flat-roof commercial solar racking standards of 10&ndash;15&deg;, which are constrained in practice by wind-uplift and structural ballast load limits.
+                </li>
+                <li>
+                    <strong>Snow-Cover Losses:</strong> Current PV generation calculations do not account for snow accumulation, snow-shedding, or winter albedo gains, which may overestimate actual winter yields in cold Canadian climates.
+                </li>
+                <li>
+                    <strong>No Electrical Storage or Grid Dynamics:</strong> The PV simulation layer assumes a simple baseload configuration where all generated DC electricity is inverted and fed directly into the building's electrical bus. No battery storage, peak-shaving control, or grid feed-in dynamics are modeled.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Section M: References -->
         <section class="doc-section doc-references" id="sec-references">
-            <h2>L &mdash; References</h2>
+            <h2>M &mdash; Publications &amp; References</h2>
+
+            <h3>Publications (Under Review)</h3>
+            <div class="publications-table-container">
+                <table class="doc-publications-table">
+                    <thead>
+                        <tr>
+                            <th>Journal</th>
+                            <th>Manuscript ID</th>
+                            <th>Title</th>
+                            <th>Authors</th>
+                            <th>Submission Date</th>
+                            <th>Last Status Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sustainable Cities and Society</strong> (SCS)</td>
+                            <td><code>SCSI-D-26-06496</code></td>
+                            <td><em>Development of Neighborhood Archetypes and Their Translation into Parametric Neighborhood Units for Scalable Urban Energy Simulation</em></td>
+                            <td>Caroline Hachem-Vermette, Orçun Koral İşeri</td>
+                            <td>May 31, 2026</td>
+                            <td>June 21, 2026</td>
+                            <td><span class="status-badge status-under-review">Under Review</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Energy and Buildings</strong> (ENB)</td>
+                            <td><code>ENB-D-26-04798</code></td>
+                            <td><em>Morphological Drivers and Cost-Effective Pathways to Net-Zero Across Neighborhood Archetypes</em></td>
+                            <td>Caroline Hachem-Vermette, Orçun Koral İşeri</td>
+                            <td>June 19, 2026</td>
+                            <td>July 05, 2026</td>
+                            <td><span class="status-badge status-under-review">Under Review</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h3>Standards &amp; Codes</h3>
             <ol>

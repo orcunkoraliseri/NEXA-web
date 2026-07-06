@@ -181,7 +181,7 @@ The foundation layer. The user defines the **spatial and typological character**
 | **Context**  | Urban, Suburban, Suburban Edge, Rural                                       |
 | **Density**  | High, Medium, Low                                                           |
 | **Layout**   | Grid, Curvilinear, Superblock                                               |
-| **Envelope** | Standard (NECB-2017), Standard (ASHRAE), High-Performance (NECB), High-Performance (ASHRAE) |
+| **Envelope** | Standard (NECB-2017), Standard (ASHRAE), High Performance based on NECB, High Performance based on ASHRAE |
 
 All five labels display **warm gradient banner bars** (gold→amber→burnt-red).
 

@@ -32,6 +32,16 @@
                     <p>Select mobility and transportation parameters for your analysis.</p>
                 </header>
 
+                <!-- Top Disclaimer Box -->
+                <div class="top-disclaimer-box">
+                    <svg class="disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <span><strong>Disclaimer:</strong> The information presented in Layers&nbsp;3 and&nbsp;4 is based on preliminary assumptions and simplified calculations. These layers are still under development and subject to refinement.</span>
+                </div>
+
                 <!-- Parameters Section -->
                 <section class="parameters-section" id="selection-form">
 
@@ -47,24 +57,24 @@
                                     <span>EV</span>
                                 </button>
                                 <button class="generation-card transportation-card" data-category="transportation"
-                                    data-value="ev_public_transport">
+                                    data-value="v2g_stations">
+                                    <img src="Content/Images_Layer3_Transportation/v2g stations.png" alt="V2G Stations"
+                                        onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
+                                    <span>V2G Stations</span>
+                                </button>
+                                <button class="generation-card transportation-card" data-category="transportation"
+                                    data-value="ev_public_transport" disabled>
                                     <img src="Content/Images_Layer3_Transportation/ev public transport.png"
                                         alt="EV Public Transport"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>EV Public Transport</span>
                                 </button>
                                 <button class="generation-card transportation-card" data-category="transportation"
-                                    data-value="ev_charging_stations">
+                                    data-value="ev_charging_stations" disabled>
                                     <img src="Content/Images_Layer3_Transportation/ev charging stations.png"
                                         alt="EV Charging Stations"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>EV Charging Stations</span>
-                                </button>
-                                <button class="generation-card transportation-card" data-category="transportation"
-                                    data-value="v2g_stations">
-                                    <img src="Content/Images_Layer3_Transportation/v2g stations.png" alt="V2G Stations"
-                                        onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
-                                    <span>V2G Stations</span>
                                 </button>
                             </div>
                         </div>
@@ -75,14 +85,14 @@
                         <div class="parameter-label">Mobility</div>
                         <div class="consumption-cards">
                             <button class="consumption-card mobility-card" data-category="mobility"
-                                data-value="bicycle_infrastructure">
+                                data-value="bicycle_infrastructure" disabled>
                                 <img src="Content/Images_Layer3_Mobility/bicycle infrastructure.png"
                                     alt="Bicycle Infrastructure"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
                                 <span>Bicycle Infrastructure</span>
                             </button>
                             <button class="consumption-card mobility-card" data-category="mobility"
-                                data-value="pedestrian_oriented_design">
+                                data-value="pedestrian_oriented_design" disabled>
                                 <img src="Content/Images_Layer3_Mobility/pedestrian-oriented design.png"
                                     alt="Pedestrian-oriented design"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
@@ -101,7 +111,6 @@
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <p class="footer-disclaimer"><strong>Disclaimer:</strong> The information presented in Layers&nbsp;3 and&nbsp;4 is based on preliminary assumptions and simplified calculations. These layers are still under development and subject to refinement.</p>
             <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
         </footer>
 </main>

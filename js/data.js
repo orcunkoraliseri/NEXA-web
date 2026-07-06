@@ -26743,7 +26743,7 @@ const ENVELOPE_ENERGY_DATA = {
 };
 
 // ========================================================================
-// High-Performance (NECB) — CAN_MTL data, DEFAULT = EEM1 values
+// High Performance based on NECB — CAN_MTL data, DEFAULT = EEM1 values
 // ========================================================================
 ENVELOPE_ENERGY_DATA["high-performance-necb"] = {
     "RC-D": {
@@ -26821,7 +26821,7 @@ ENVELOPE_ENERGY_DATA["high-performance-necb"] = {
 };
 
 // ========================================================================
-// High-Performance (ASHRAE) — ASHRAE data, DEFAULT = EEM1 values
+// High Performance based on ASHRAE — ASHRAE data, DEFAULT = EEM1 values
 // ========================================================================
 ENVELOPE_ENERGY_DATA["high-performance-ashrae"] = {
     "RC-D": {

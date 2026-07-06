@@ -660,8 +660,8 @@ function createResultRow(concept, neighbourhood) {
     const envelopeDisplayNames = {
         'necb-2017': 'Standard (NECB)',
         'ashrae': 'Standard (ASHRAE)',
-        'high-performance-necb': 'High-Performance (NECB)',
-        'high-performance-ashrae': 'High-Performance (ASHRAE)'
+        'high-performance-necb': 'High Performance based on NECB',
+        'high-performance-ashrae': 'High Performance based on ASHRAE'
     };
 
     const envelopeImageName = envelopeImageNames[activeEnvelope] || activeEnvelope;
