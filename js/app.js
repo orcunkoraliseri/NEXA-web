@@ -654,14 +654,38 @@ function createResultRow(concept, neighbourhood) {
     const envelopeImageNames = {
         'necb-2017': 'standard construction',
         'ashrae': 'standard construction',
+        'necb-z4': 'standard construction',
+        'necb-z5': 'standard construction',
+        'necb-z6': 'standard construction',
+        'necb-z7a': 'standard construction',
+        'necb-z7b': 'standard construction',
+        'necb-z8': 'standard construction',
         'high-performance-necb': 'high-performance construction',
-        'high-performance-ashrae': 'high-performance construction'
+        'high-performance-ashrae': 'high-performance construction',
+        'high-performance-z4': 'high-performance construction',
+        'high-performance-z5': 'high-performance construction',
+        'high-performance-z6': 'high-performance construction',
+        'high-performance-z7a': 'high-performance construction',
+        'high-performance-z7b': 'high-performance construction',
+        'high-performance-z8': 'high-performance construction'
     };
     const envelopeDisplayNames = {
-        'necb-2017': 'Standard (NECB)',
+        'necb-2017': 'NECB Zone 6 (Montréal)',
         'ashrae': 'Standard (ASHRAE)',
-        'high-performance-necb': 'High Performance based on NECB',
-        'high-performance-ashrae': 'High Performance based on ASHRAE'
+        'necb-z4': 'NECB Zone 4 (Windsor)',
+        'necb-z5': 'NECB Zone 5 (Toronto/Ottawa)',
+        'necb-z6': 'NECB Zone 6 (Montréal)',
+        'necb-z7a': 'NECB Zone 7A (Calgary)',
+        'necb-z7b': 'NECB Zone 7B (Whitehorse)',
+        'necb-z8': 'NECB Zone 8 (Yellowknife)',
+        'high-performance-necb': 'High Perf. Zone 6 (Montréal)',
+        'high-performance-ashrae': 'High Perf. (ASHRAE)',
+        'high-performance-z4': 'High Perf. Zone 4 (Windsor)',
+        'high-performance-z5': 'High Perf. Zone 5 (Toronto/Ottawa)',
+        'high-performance-z6': 'High Perf. Zone 6 (Montréal)',
+        'high-performance-z7a': 'High Perf. Zone 7A (Calgary)',
+        'high-performance-z7b': 'High Perf. Zone 7B (Whitehorse)',
+        'high-performance-z8': 'High Perf. Zone 8 (Yellowknife)'
     };
 
     const envelopeImageName = envelopeImageNames[activeEnvelope] || activeEnvelope;

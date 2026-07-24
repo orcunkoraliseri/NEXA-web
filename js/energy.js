@@ -244,14 +244,25 @@ function renderTreemap(neighbourhoodCode) {
     const loadSelections = selections.load || [];
     const demandSelections = selections.demand || [];
 
-    // 1. Determine reference envelope and base level
+    // 1. Determine reference envelope and base level.
+    // For high-performance zone envelopes (high-performance-z4, -z5, -z6, etc.)
+    // the data is stored directly under that key — do NOT strip the prefix.
+    // Only the legacy "high-performance-necb" / "high-performance-ashrae" pair
+    // needs a base-envelope fallback mapping.
     let refEnvelope = envelope;
     let baseLevel = "DEFAULT";
 
     if (envelope.startsWith("high-performance-")) {
-        refEnvelope = envelope.replace("high-performance-", "");
-        if (refEnvelope === "necb") refEnvelope = "necb-2017";
         baseLevel = "EEM1";
+        // For legacy NECB/ASHRAE HP variants, also maintain a base reference
+        if (envelope === "high-performance-necb") {
+            refEnvelope = "necb-2017";
+        } else if (envelope === "high-performance-ashrae") {
+            refEnvelope = "ashrae";
+        }
+        // For zone-specific HP variants (high-performance-z4, -z5, etc.)
+        // the envelope key itself exists directly in ENVELOPE_ENERGY_DATA —
+        // so refEnvelope stays as-is (the full "high-performance-z*" key).
     }
 
     // 2. Fetch the reference data for all needed columns from the standard envelope
@@ -363,10 +374,22 @@ function renderTreemap(neighbourhoodCode) {
     }
 
     const envelopeNames = {
-        'necb-2017': 'Standard (NECB)',
+        'necb-2017': 'Standard (NECB Zone 6, Montréal)',
         'ashrae': 'Standard (ASHRAE)',
+        'necb-z4': 'NECB Zone 4 (Windsor)',
+        'necb-z5': 'NECB Zone 5 (Toronto / Ottawa)',
+        'necb-z6': 'NECB Zone 6 (Montréal)',
+        'necb-z7a': 'NECB Zone 7A (Calgary)',
+        'necb-z7b': 'NECB Zone 7B (Whitehorse)',
+        'necb-z8': 'NECB Zone 8 (Yellowknife)',
         'high-performance-necb': 'High Performance based on NECB',
-        'high-performance-ashrae': 'High Performance based on ASHRAE'
+        'high-performance-ashrae': 'High Performance based on ASHRAE',
+        'high-performance-z4': 'High Perf. Zone 4 (Windsor)',
+        'high-performance-z5': 'High Perf. Zone 5 (Toronto / Ottawa)',
+        'high-performance-z6': 'High Perf. Zone 6 (Montréal)',
+        'high-performance-z7a': 'High Perf. Zone 7A (Calgary)',
+        'high-performance-z7b': 'High Perf. Zone 7B (Whitehorse)',
+        'high-performance-z8': 'High Perf. Zone 8 (Yellowknife)'
     };
     const envName = envelopeNames[envelope] || envelope;
     titleElement.textContent = `Layer 2: ${colName} Breakdown of ${neighbourhoodCode} (${envName})`;

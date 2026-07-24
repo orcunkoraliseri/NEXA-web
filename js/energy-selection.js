@@ -213,8 +213,22 @@ function initEnergySelectionPage() {
 
     // Display-friendly envelope names
     const envelopeNames = {
-        'necb-2017': 'NECB',
+        'necb-2017': 'NECB Zone 6 (Montréal)',
         'ashrae': 'ASHRAE',
+        'necb-z4': 'NECB Zone 4 (Windsor)',
+        'necb-z5': 'NECB Zone 5 (Toronto / Ottawa)',
+        'necb-z6': 'NECB Zone 6 (Montréal)',
+        'necb-z7a': 'NECB Zone 7A (Calgary)',
+        'necb-z7b': 'NECB Zone 7B (Whitehorse)',
+        'necb-z8': 'NECB Zone 8 (Yellowknife)',
+        'high-performance-necb': 'High Perf. NECB',
+        'high-performance-ashrae': 'High Perf. ASHRAE',
+        'high-performance-z4': 'High Perf. Zone 4 (Windsor)',
+        'high-performance-z5': 'High Perf. Zone 5 (Toronto / Ottawa)',
+        'high-performance-z6': 'High Perf. Zone 6 (Montréal)',
+        'high-performance-z7a': 'High Perf. Zone 7A (Calgary)',
+        'high-performance-z7b': 'High Perf. Zone 7B (Whitehorse)',
+        'high-performance-z8': 'High Perf. Zone 8 (Yellowknife)',
         'high-performance construction': 'High-Performance'
     };
 

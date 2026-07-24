@@ -559,31 +559,38 @@ h3 {
 
 
 
-/* Envelope Image Cards - Compact */
+/* Envelope Image Cards - Grid (2 rows x 7 columns) */
 .envelope-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: var(--spacing-sm);
-    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 .envelope-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 0.25rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: all var(--transition-normal);
-    width: 160px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .envelope-card img {
-    width: 130px;
-    height: 90px;
+    width: 100%;
+    max-width: 120px;
+    height: 70px;
     object-fit: contain;
     background: #fff;
     border-radius: var(--radius-sm);
@@ -592,10 +599,24 @@ h3 {
 
 .envelope-card span {
     font-family: var(--font-display);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--text-primary);
     text-transform: capitalize;
+    text-align: center;
+    line-height: 1.1;
+}
+
+@media (max-width: 1200px) {
+    .envelope-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .envelope-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .envelope-card:hover {
