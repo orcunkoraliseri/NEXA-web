@@ -374,19 +374,20 @@ function setupNeighbourhoodModal() {
 
     let selectedModelCode = ""; // Variable to store the code of the clicked neighborhood
 
-    // 1. Listen for clicks on the images inside the results table
+    // 1. Listen for clicks on neighbourhood cells inside the results table
     resultsBody.addEventListener('click', (e) => {
-        // Check if the clicked element is an image inside a neighbourhood-cell
         const cell = e.target.closest('.neighbourhood-cell');
 
-        if (e.target.tagName === 'IMG' && cell) {
+        if (cell) {
             e.stopPropagation();
 
             // Get the text from the <span class="code"> inside that cell
-            selectedModelCode = cell.querySelector('.code').textContent.trim();
-
-            // Show the popup
-            modal.style.display = "block";
+            const codeSpan = cell.querySelector('.code');
+            if (codeSpan) {
+                selectedModelCode = codeSpan.textContent.trim();
+                // Show the popup
+                modal.style.display = "block";
+            }
         }
     });
 
