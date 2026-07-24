@@ -25,7 +25,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "24x Detached Houses (2-St, Residential, 110sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-r.png",
+    "image": "Content/Images_Neighbourhoods/RC-R.png",
     "buildings": [
       "Detached Houses"
     ]
@@ -56,7 +56,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "48x Detached Houses (2-St, Residential, 110sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-d.png",
+    "image": "Content/Images_Neighbourhoods/RC-D.png",
     "buildings": [
       "Detached Houses"
     ]
@@ -87,10 +87,10 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "24x Detached Houses (2-St, Residential, 110sqm) + 28x Attached Houses (2-St, Residential, 180sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-ml.png",
+    "image": "Content/Images_Neighbourhoods/RC-ML.png",
     "buildings": [
-      "Attached Houses",
-      "Detached Houses"
+      "Detached Houses",
+      "Attached Houses"
     ]
   },
   {
@@ -119,7 +119,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "56x Attached Houses (2-St, Residential, 180sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-t.png",
+    "image": "Content/Images_Neighbourhoods/RC-T.png",
     "buildings": [
       "Attached Houses"
     ]
@@ -150,10 +150,10 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "4x Mid-Rise (4-St, Residential, 784sqm) + 28x Attached Houses (2-St, Residential, 180sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-mr1.png",
+    "image": "Content/Images_Neighbourhoods/RC-MR1.png",
     "buildings": [
-      "Attached Houses",
-      "Mid Rise"
+      "Mid Rise",
+      "Attached Houses"
     ]
   },
   {
@@ -182,7 +182,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "8x Mid-Rise (4-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-mr2.png",
+    "image": "Content/Images_Neighbourhoods/RC-MR2.png",
     "buildings": [
       "Mid Rise"
     ]
@@ -213,7 +213,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "12x Midrise (4-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-mr3.png",
+    "image": "Content/Images_Neighbourhoods/RC-MR3.png",
     "buildings": [
       "Midrise"
     ]
@@ -244,10 +244,10 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "2x High-Rise (10-St, Residential, 784sqm) + 4x Mid-Rise (4-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-hr1.png",
+    "image": "Content/Images_Neighbourhoods/RC-HR1.png",
     "buildings": [
-      "Mid Rise",
-      "High Rise"
+      "High Rise",
+      "Mid Rise"
     ]
   },
   {
@@ -276,7 +276,7 @@ const NEIGHBOURHOODS = [
     "eui": null,
     "energyStatus": null,
     "content": "4x High-Rise (10-St, Residential, 784sqm)",
-    "image": "Content/Images_Neighbourhoods/rc-hr2.png",
+    "image": "Content/Images_Neighbourhoods/RC-HR2.png",
     "buildings": [
       "High Rise"
     ]
@@ -309,12 +309,12 @@ const NEIGHBOURHOODS = [
     "content": "12x Detached Houses (2-St, Residential, 110sqm) + 28x Attached Houses (2-St, Residential, 180sqm) + 1x Small Office (1-St, Commercial, 511sqm) + 1x Small Retail (1-St, Commercial, 390sqm) + 1x QSR (1-St, Commercial, 232sqm) + 1x FSR (1-St, Commercial, 511sqm)",
     "image": "Content/Images_Neighbourhoods/RS-S.png",
     "buildings": [
+      "Quick Service Restaurant",
       "Full Service Restaurant",
       "Small Office",
-      "Attached Houses",
-      "Quick Service Restaurant",
       "Small Retail",
-      "Detached Houses"
+      "Detached Houses",
+      "Attached Houses"
     ]
   },
   {
@@ -345,12 +345,12 @@ const NEIGHBOURHOODS = [
     "content": "14x Attached Houses (2-St, Residential, 180sqm) + 3x Mid-Rise (4-St, Residential, 784sqm) + 1x Primary School (1-St, Institutional, 6871sqm) + 1x Small Office (1-St, Commercial, 511sqm) + 1x QSR (1-St, Commercial, 232sqm) + 1x FSR (1-St, Commercial, 511sqm)",
     "image": "Content/Images_Neighbourhoods/RS-I1.png",
     "buildings": [
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Mid Rise",
       "Small Office",
+      "Mid Rise",
       "Primary School",
-      "Attached Houses",
-      "Quick Service Restaurant"
+      "Attached Houses"
     ]
   },
   {
@@ -381,13 +381,13 @@ const NEIGHBOURHOODS = [
     "content": "5x Mid-Rise (4-St, Residential, 784sqm) + 1x Secondary School (2-St, Institutional, 5553sqm) + 1x Medium Office (3-St, Commercial, 1661sqm) + 1x Small Office (1-St, Commercial, 511sqm) + 1x Small Retail (1-St, Commercial, 390sqm) + 1x QSR (1-St, Commercial, 232sqm) + 1x FSR (1-St, Commercial, 511sqm)",
     "image": "Content/Images_Neighbourhoods/RS-I2.png",
     "buildings": [
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Mid Rise",
-      "Medium Office",
       "Small Office",
-      "Secondary School",
       "Small Retail",
-      "Quick Service Restaurant"
+      "Secondary School",
+      "Mid Rise",
+      "Medium Office"
     ]
   },
   {
@@ -418,10 +418,10 @@ const NEIGHBOURHOODS = [
     "content": "28x Attached Houses (2-St, Residential, 180sqm) + 1x Primary School (1-St, Institutional, 6871sqm) + 1x Small Retail (1-St, Commercial, 390sqm) + 1x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/RS-I3.png",
     "buildings": [
-      "Attached Houses",
+      "Quick Service Restaurant",
       "Small Retail",
       "Primary School",
-      "Quick Service Restaurant"
+      "Attached Houses"
     ]
   },
   {
@@ -452,10 +452,10 @@ const NEIGHBOURHOODS = [
     "content": "5x Mid-Rise (4-St, Residential, 784sqm) + 1x Secondary School (2-St, Institutional, 5553sqm) + 1x QSR (1-St, Commercial, 232sqm) + 1x Small Retail (1-St, Commercial, 390sqm)",
     "image": "Content/Images_Neighbourhoods/RS-I4.png",
     "buildings": [
-      "Small Retail",
-      "Mid Rise",
       "Quick Service Restaurant",
-      "Secondary School"
+      "Small Retail",
+      "Secondary School",
+      "Mid Rise"
     ]
   },
   {
@@ -486,13 +486,13 @@ const NEIGHBOURHOODS = [
     "content": "4x High-Rise (15-St, Residential, 784sqm) + 1x Medium Office (3-St, Commercial, 1661sqm) + 2x QSR (1-St, Commercial, 232sqm) + 2x FSR (1-St, Commercial, 511sqm) + 1x Small Hotel (4-St, Commercial, 1003sqm) + 1x Hospital (6-St, Commercial, 3739sqm) + 1x Small Retail (1-St, Commercial, 390sqm)",
     "image": "Content/Images_Neighbourhoods/MU-C1.png",
     "buildings": [
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Small Hotel",
-      "Small Retail",
-      "Hospital",
-      "Medium Office",
       "High Rise",
-      "Quick Service Restaurant"
+      "Small Retail",
+      "Medium Office",
+      "Small Hotel",
+      "Hospital"
     ]
   },
   {
@@ -523,12 +523,12 @@ const NEIGHBOURHOODS = [
     "content": "4x High-Rise (20-St, Residential, 784sqm) + 1x Large Office (10-St, Commercial, 3563sqm) + 1x Large Hotel (6-St, Commercial, 1979sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 2x QSR (1-St, Commercial, 232sqm) + 2x FSR (1-St, Commercial, 511sqm)",
     "image": "Content/Images_Neighbourhoods/MU-C2.png",
     "buildings": [
-      "Standalone Retail",
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Large Hotel",
-      "Large Office",
       "High Rise",
-      "Quick Service Restaurant"
+      "Large Hotel",
+      "Standalone Retail",
+      "Large Office"
     ]
   },
   {
@@ -559,10 +559,10 @@ const NEIGHBOURHOODS = [
     "content": "4x High-Rise (20-St, Residential, 784sqm) + 1x Large Office (10-St, Commercial, 3563sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 2x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/MU-U1.png",
     "buildings": [
-      "Standalone Retail",
-      "Quick Service Restaurant",
       "High Rise",
-      "Large Office"
+      "Large Office",
+      "Quick Service Restaurant",
+      "Standalone Retail"
     ]
   },
   {
@@ -593,10 +593,10 @@ const NEIGHBOURHOODS = [
     "content": "4x Mid-Rise (4-St, Residential, 784sqm) + 4x Small Office (1-St, Commercial, 511sqm) + 2x Small Retail (1-St, Commercial, 390sqm) + 2x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/MU-L.png",
     "buildings": [
-      "Small Office",
+      "Quick Service Restaurant",
       "Small Retail",
-      "Mid Rise",
-      "Quick Service Restaurant"
+      "Small Office",
+      "Mid Rise"
     ]
   },
   {
@@ -627,13 +627,13 @@ const NEIGHBOURHOODS = [
     "content": "5x Mid-Rise (4-St, Residential, 784sqm) + 1x Medium Office (3-St, Commercial, 1661sqm) + 2x QSR (1-St, Commercial, 232sqm) + 2x FSR (1-St, Commercial, 511sqm) + 1x Small Hotel (4-St, Commercial, 1003sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 1x Supermarket (1-St, Commercial, 2090sqm)",
     "image": "Content/Images_Neighbourhoods/MU-S1.png",
     "buildings": [
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Small Hotel",
-      "Standalone Retail",
-      "Mid Rise",
       "Supermarket",
+      "Mid Rise",
       "Medium Office",
-      "Quick Service Restaurant"
+      "Small Hotel",
+      "Standalone Retail"
     ]
   },
   {
@@ -664,10 +664,10 @@ const NEIGHBOURHOODS = [
     "content": "5x Mid-Rise (4-St, Residential, 784sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 1x Supermarket (1-St, Commercial, 2090sqm) + 2x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/MU-S2.png",
     "buildings": [
-      "Standalone Retail",
-      "Mid Rise",
+      "Supermarket",
       "Quick Service Restaurant",
-      "Supermarket"
+      "Mid Rise",
+      "Standalone Retail"
     ]
   },
   {
@@ -698,11 +698,11 @@ const NEIGHBOURHOODS = [
     "content": "2x Mid-Rise (4-St, Residential, 784sqm) + 1x Warehouse (Eg, Industrial) (1-St, Industrial, 4598sqm) + 2x QSR (1-St, Commercial, 232sqm) + 1x Small Office (1-St, Commercial, 511sqm) + 1x Small Retail (1-St, Commercial, 390sqm)",
     "image": "Content/Images_Neighbourhoods/MU-W.png",
     "buildings": [
-      "Warehouse",
-      "Mid Rise",
+      "Quick Service Restaurant",
       "Small Office",
       "Small Retail",
-      "Quick Service Restaurant"
+      "Mid Rise",
+      "Warehouse"
     ]
   },
   {
@@ -733,10 +733,10 @@ const NEIGHBOURHOODS = [
     "content": "4x Small Warehouse (Eg, Industrial) (1-St, Industrial, 4598sqm) + 2x QSR (1-St, Commercial, 232sqm) + 4x Small Office (1-St, Commercial, 511sqm) + 2x Small Retail (1-St, Commercial, 390sqm)",
     "image": "Content/Images_Neighbourhoods/MU-W2.png",
     "buildings": [
-      "Small Office",
-      "Small Retail",
       "Quick Service Restaurant",
-      "Small Warehouse"
+      "Small Warehouse",
+      "Small Office",
+      "Small Retail"
     ]
   },
   {
@@ -767,11 +767,11 @@ const NEIGHBOURHOODS = [
     "content": "3\u00d7 Mid-Rise Apartment (4-St, Residential, 784 sqm/fl) + 14\u00d7 Attached House (2-St, Residential, 7 units/row, 190 sqm/unit) + 1\u00d7 Outpatient Health Care (3-St, Commercial, 1268 sqm/fl) + 1\u00d7 Small Office (1-St, Commercial, 511 sqm) + 1\u00d7 QSR (1-St, Commercial, 232 sqm) + 1\u00d7 FSR (1-St, Commercial, 511 sqm) + 2\u00d7 Small Retail (1-St, Commercial, 390 sqm)",
     "image": "Content/Images_Neighbourhoods/MU-HS.png",
     "buildings": [
-      "Full Service Restaurant",
-      "Mid Rise Apartment",
       "Outpatient Health Care",
+      "Mid Rise Apartment",
       "Small Office",
       "Quick Service Restaurant",
+      "Full Service Restaurant",
       "Small Retail",
       "Attached House"
     ]
@@ -804,14 +804,14 @@ const NEIGHBOURHOODS = [
     "content": "2\u00d7 High-Rise Apartment (10-St, Residential, 784 sqm/fl) + 2\u00d7 Mid-Rise Apartment (4-St, Residential, 784 sqm/fl)+ 1\u00d7 Outpatient Health Care (3-St, Commercial, 1268 sqm/fl) + 1\u00d7 Medium Office (3-St, Commercial, 1661 sqm/fl) + 2\u00d7 QSR (1-St, Commercial, 232 sqm) + 1\u00d7 FSR (1-St, Commercial, 511 sqm) + 1\u00d7 Small Hotel (4-St, Commercial, 1003 sqm/fl) + 1\u00d7 Small Retail (1-St, Commercial, 390 sqm)",
     "image": "Content/Images_Neighbourhoods/MU-HC.png",
     "buildings": [
-      "Full Service Restaurant",
-      "Small Hotel",
-      "Small Retail",
-      "Mid Rise Apartment",
       "Outpatient Health Care",
-      "High Rise Apartment",
+      "Mid Rise Apartment",
+      "Quick Service Restaurant",
+      "Full Service Restaurant",
+      "Small Retail",
       "Medium Office",
-      "Quick Service Restaurant"
+      "Small Hotel",
+      "High Rise Apartment"
     ]
   },
   {
@@ -842,13 +842,13 @@ const NEIGHBOURHOODS = [
     "content": "1x Supermarket (1-St, Commercial, 2090sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 2x Small Retail (1-St, Commercial, 390sqm) + 2x QSR (1-St, Commercial, 232sqm) + 1x FSR (1-St, Commercial, 511sqm) + 1x Small Office (1-St, Commercial, 511sqm) + 1x Medium Office (3-St, Commercial, 1661sqm)",
     "image": "Content/Images_Neighbourhoods/CC-S1.png",
     "buildings": [
-      "Standalone Retail",
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Medium Office",
       "Small Office",
       "Supermarket",
       "Small Retail",
-      "Quick Service Restaurant"
+      "Medium Office",
+      "Standalone Retail"
     ]
   },
   {
@@ -879,10 +879,10 @@ const NEIGHBOURHOODS = [
     "content": "1x Supermarket (1-St, Commercial, 2090sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 2x Small Retail (1-St, Commercial, 390sqm) + 2x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/CC-S2.png",
     "buildings": [
-      "Standalone Retail",
+      "Supermarket",
       "Small Retail",
       "Quick Service Restaurant",
-      "Supermarket"
+      "Standalone Retail"
     ]
   },
   {
@@ -913,13 +913,13 @@ const NEIGHBOURHOODS = [
     "content": "1x Supermarket (1-St, Commercial, 2090sqm) + 1x Standalone Retail (1-St, Commercial, 2294sqm) + 1x Large Hotel (6-St, Commercial, 1979sqm) + 1x QSR (1-St, Commercial, 232sqm) + 1x FSR (1-St, Commercial, 511sqm) + 1x Large Office (10-St, Commercial, 3563sqm) + 1x Medium Office (3-St, Commercial, 1661sqm)",
     "image": "Content/Images_Neighbourhoods/CC-B.png",
     "buildings": [
-      "Standalone Retail",
+      "Quick Service Restaurant",
       "Full Service Restaurant",
-      "Large Hotel",
       "Supermarket",
-      "Large Office",
+      "Large Hotel",
       "Medium Office",
-      "Quick Service Restaurant"
+      "Standalone Retail",
+      "Large Office"
     ]
   },
   {
@@ -950,10 +950,10 @@ const NEIGHBOURHOODS = [
     "content": "6x DataCenterLargeHighITE (1-St, Industrial, 4598 sqm)+ 1x Medium Office (2-St, Commercial, 1661 sqm/fl)+ 1x Warehouse (1-St, Industrial, 2302 sqm) + 2x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/IC-DE.png",
     "buildings": [
-      "Data Center Large<br>High ITE",
-      "Warehouse",
+      "Quick Service Restaurant",
       "Medium Office",
-      "Quick Service Restaurant"
+      "Data Center Large<br>High ITE",
+      "Warehouse"
     ]
   },
   {
@@ -984,10 +984,10 @@ const NEIGHBOURHOODS = [
     "content": "6x DataCenterLargeLowITE (1-St, Industrial, 4598 sqm)+ 3x Small Office (1-St, Commercial, 511 sqm)+ 1x Warehouse (1-St, Industrial, 1131 sqm) + 1x QSR (1-St, Commercial, 232sqm)",
     "image": "Content/Images_Neighbourhoods/IC-DC.png",
     "buildings": [
-      "Warehouse",
-      "Data Center Large<br>Low ITE",
+      "Quick Service Restaurant",
       "Small Office",
-      "Quick Service Restaurant"
+      "Warehouse",
+      "Data Center Large<br>Low ITE"
     ]
   },
   {
@@ -1018,12 +1018,12 @@ const NEIGHBOURHOODS = [
     "content": "4\u00d7 College \u00b7 1\u00d7 Large Office \u00b7 1\u00d7 MidriseApartment \u00b7 1\u00d7 FSR \u00b7 2\u00d7 QSR + 1\u00d7 SmallDataCenterLowITE",
     "image": "Content/Images_Neighbourhoods/CC-E1.png",
     "buildings": [
+      "College",
+      "Quick Service Restaurant",
       "Full Service Restaurant",
       "Midrise Apartment",
       "Small Data Center<br>Low ITE",
-      "Large Office",
-      "College",
-      "Quick Service Restaurant"
+      "Large Office"
     ]
   },
   {
@@ -1054,14 +1054,14 @@ const NEIGHBOURHOODS = [
     "content": "3\u00d7 College \u00b7 1\u00d7 Medium Office \u00b7 1\u00d7 Laboratory \u00b7 1\u00d7 MidriseApartment \u00b7 1\u00d7 Small Retail \u00b7 1\u00d7 FSR \u00b7 1\u00d7 QSR + 1\u00d7 SmallDataCenterLowITE",
     "image": "Content/Images_Neighbourhoods/CC-E2.png",
     "buildings": [
-      "Full Service Restaurant",
-      "Midrise Apartment",
-      "Laboratory",
-      "Medium Office",
-      "Small Data Center<br>Low ITE",
       "College",
+      "Full Service Restaurant",
+      "Quick Service Restaurant",
       "Small Retail",
-      "Quick Service Restaurant"
+      "Medium Office",
+      "Midrise Apartment",
+      "Small Data Center<br>Low ITE",
+      "Laboratory"
     ]
   },
   {
@@ -1092,14 +1092,14 @@ const NEIGHBOURHOODS = [
     "content": "3\u00d7 College \u00b7 1\u00d7 Laboratory \u00b7 3\u00d7 MidriseApartment \u00b7 2\u00d7 Small Office \u00b7 1\u00d7 Outpatient \u00b7 1\u00d7 FSR \u00b7 1\u00d7 QSR + 1\u00d7 SmallDataCenterHighITE",
     "image": "Content/Images_Neighbourhoods/CC-E3.png",
     "buildings": [
-      "Full Service Restaurant",
-      "Midrise Apartment",
-      "Laboratory",
-      "Small Office",
-      "Small Data Center<br>High ITE",
-      "Outpatient",
       "College",
-      "Quick Service Restaurant"
+      "Full Service Restaurant",
+      "Small Office",
+      "Quick Service Restaurant",
+      "Midrise Apartment",
+      "Outpatient",
+      "Small Data Center<br>High ITE",
+      "Laboratory"
     ]
   },
   {
@@ -1130,13 +1130,13 @@ const NEIGHBOURHOODS = [
     "content": "1\u00d7 SuperTallBuilding + 1\u00d7 TallBuilding + 1\u00d7 HotelSmall + 1\u00d7 Supermarket + 2\u00d7 RestaurantSitDown + 2\u00d7 RestaurantFastFood + 1\u00d7 RetailStandalone",
     "image": "Content/Images_Neighbourhoods/CC-FD1.png",
     "buildings": [
-      "Hotel Small",
       "Full Service Restaurant",
-      "Retail Standalone",
+      "Quick Service Restaurant",
+      "Hotel Small",
       "Supermarket",
+      "Retail Standalone",
       "Super Tall Building",
-      "Tall Building",
-      "Quick Service Restaurant"
+      "Tall Building"
     ]
   },
   {
@@ -1167,13 +1167,13 @@ const NEIGHBOURHOODS = [
     "content": "1\u00d7 TallBuilding + 1\u00d7 OfficeLarge + 1\u00d7 HotelSmall + 1\u00d7 Supermarket + 2\u00d7 RestaurantSitDown + 2\u00d7 RestaurantFastFood + 2\u00d7 Small_Retail ",
     "image": "Content/Images_Neighbourhoods/CC-FD2.png",
     "buildings": [
-      "Hotel Small",
       "Full Service Restaurant",
-      "Office Large",
+      "Quick Service Restaurant",
+      "Hotel Small",
       "Supermarket",
-      "Tall Building",
       "Small Retail",
-      "Quick Service Restaurant"
+      "Office Large",
+      "Tall Building"
     ]
   },
   {
@@ -1204,13 +1204,13 @@ const NEIGHBOURHOODS = [
     "content": "2\u00d7 TallBuilding + 2\u00d7 OfficeMedium +1\u00d7 HotelLarge + 1\u00d7 Supermarket + 21 RestaurantSitDown + 4\u00d7 RestaurantFastFood + 1\u00d7 RetailStripmall",
     "image": "Content/Images_Neighbourhoods/CC-FD3.png",
     "buildings": [
-      "Full Service Restaurant",
       "Office Medium",
+      "Full Service Restaurant",
+      "Quick Service Restaurant",
+      "Retail Strip Mall",
       "Supermarket",
       "Hotel Large",
-      "Tall Building",
-      "Retail Strip Mall",
-      "Quick Service Restaurant"
+      "Tall Building"
     ]
   }
 ];
@@ -86660,40 +86660,40 @@ const PV_GENERATION_DATA = {
   "Mid Rise": "Content/Images_Buildings/midrise apartment.png",
   "Midrise": "Content/Images_Buildings/midrise apartment.png",
   "High Rise": "Content/Images_Buildings/highrise apartment.png",
+  "Quick Service Restaurant": "Content/Images_Buildings/quick service restaurant.png",
   "Full Service Restaurant": "Content/Images_Buildings/full service restaurant.png",
   "Small Office": "Content/Images_Buildings/small office.png",
-  "Quick Service Restaurant": "Content/Images_Buildings/quick service restaurant.png",
   "Small Retail": "Content/Images_Buildings/small retail.png",
   "Primary School": "Content/Images_Buildings/primary school.png",
-  "Medium Office": "Content/Images_Buildings/medium office.png",
   "Secondary School": "Content/Images_Buildings/secondary school.png",
+  "Medium Office": "Content/Images_Buildings/medium office.png",
   "Small Hotel": "Content/Images_Buildings/small hotel.png",
   "Hospital": "Content/Images_Buildings/hospital.png",
-  "Standalone Retail": "Content/Images_Buildings/standalone retail.png",
   "Large Hotel": "Content/Images_Buildings/large hotel.png",
+  "Standalone Retail": "Content/Images_Buildings/standalone retail.png",
   "Large Office": "Content/Images_Buildings/large office.png",
   "Supermarket": "Content/Images_Buildings/supermarket.png",
   "Warehouse": "Content/Images_Buildings/warehouse.png",
   "Small Warehouse": "Content/Images_Buildings/warehouse.png",
-  "Mid Rise Apartment": "Content/Images_Buildings/midrise apartment.png",
   "Outpatient Health Care": "Content/Images_Buildings/outpatient healthcare.png",
+  "Mid Rise Apartment": "Content/Images_Buildings/midrise apartment.png",
   "Attached House": "Content/Images_Buildings/attached house.png",
   "High Rise Apartment": "Content/Images_Buildings/highrise apartment.png",
   "Data Center Large<br>High ITE": "Content/Images_Buildings/large datacenter.png",
   "Data Center Large<br>Low ITE": "Content/Images_Buildings/large datacenter.png",
+  "College": "Content/Images_Buildings/college.png",
   "Midrise Apartment": "Content/Images_Buildings/midrise apartment.png",
   "Small Data Center<br>Low ITE": "Content/Images_Buildings/small data center.png",
-  "College": "Content/Images_Buildings/college.png",
   "Laboratory": "Content/Images_Buildings/Laboratory.png",
-  "Small Data Center<br>High ITE": "Content/Images_Buildings/small data center.png",
   "Outpatient": "Content/Images_Buildings/outpatient healthcare.png",
+  "Small Data Center<br>High ITE": "Content/Images_Buildings/small data center.png",
   "Hotel Small": "Content/Images_Buildings/small hotel.png",
   "Retail Standalone": "Content/Images_Buildings/standalone retail.png",
   "Super Tall Building": "Content/Images_Buildings/super tall building.png",
   "Tall Building": "Content/Images_Buildings/tall building.png",
   "Office Large": "Content/Images_Buildings/large office.png",
   "Office Medium": "Content/Images_Buildings/medium office.png",
-  "Hotel Large": "Content/Images_Buildings/large hotel.png",
-  "Retail Strip Mall": "Content/Images_Buildings/retail strip mall.png"
+  "Retail Strip Mall": "Content/Images_Buildings/retail strip mall.png",
+  "Hotel Large": "Content/Images_Buildings/large hotel.png"
 };
 

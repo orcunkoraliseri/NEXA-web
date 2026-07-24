@@ -86,17 +86,18 @@
     </div>
 
     <script>
-        // 1. Get the model code from the URL (e.g., ?model=RC1)
+        // 1. Get the model code from the URL (e.g., ?model=RC-I1 or ?model=rc-r)
         const urlParams = new URLSearchParams(window.location.search);
-        const modelCode = urlParams.get('model');
+        const rawModelCode = urlParams.get('model');
         const displayLabel = document.getElementById('model-id-display');
         const viewer = document.getElementById('main-viewer');
 
-        if (modelCode) {
+        if (rawModelCode) {
+            const modelCode = rawModelCode.trim().toUpperCase();
             displayLabel.textContent = modelCode;
 
             // 2. UPDATED PATH: Points to Content/Glb_Models/
-            // This will result in: Content/Glb_Models/RC1.glb
+            // Results in: Content/Glb_Models/RC-R.glb, RS-I1.glb, etc.
             viewer.src = `Content/Glb_Models/${modelCode}.glb`;
 
         } else {
@@ -105,7 +106,7 @@
 
         // Error handling
         viewer.addEventListener('error', () => {
-            displayLabel.textContent = "Error: File not found in Content/Glb_Models/";
+            displayLabel.textContent = `Error: Model file Content/Glb_Models/${displayLabel.textContent}.glb not found`;
         });
     </script>
 </body>

@@ -399,8 +399,7 @@ function setupNeighbourhoodModal() {
     btnYes.onclick = () => {
         modal.style.display = "none";
         if (selectedModelCode) {
-            // This will result in 3dviewer.html?model=RC1
-            window.open(`3dviewer.html?model=${selectedModelCode}`, '_blank');
+            window.open(`3dviewer.html?model=${encodeURIComponent(selectedModelCode.trim().toUpperCase())}`, '_blank');
         }
     };
 

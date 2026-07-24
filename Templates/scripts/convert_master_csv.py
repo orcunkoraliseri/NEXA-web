@@ -281,9 +281,9 @@ def process():
     building_images = {}
     
     rc_image_map = {
-        "RC-R": "rc-r.png", "RC-D": "rc-d.png", "RC-T": "rc-t.png", "RC-ML": "rc-ml.png",
-        "RC-MR1": "rc-mr1.png", "RC-MR2": "rc-mr2.png", "RC-MR3": "rc-mr3.png", 
-        "RC-HR1": "rc-hr1.png", "RC-HR2": "rc-hr2.png"
+        "RC-R": "RC-R.png", "RC-D": "RC-D.png", "RC-T": "RC-T.png", "RC-ML": "RC-ML.png",
+        "RC-MR1": "RC-MR1.png", "RC-MR2": "RC-MR2.png", "RC-MR3": "RC-MR3.png", 
+        "RC-HR1": "RC-HR1.png", "RC-HR2": "RC-HR2.png"
     }
 
     for b_id, props in archs.items():
