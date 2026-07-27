@@ -171,9 +171,12 @@ function resolveEnvelopeAndScenario(code) {
     let refEnvelope = envelope;
     let baseLevel = 'DEFAULT';
     if (envelope.startsWith('high-performance-')) {
-        refEnvelope = envelope.replace('high-performance-', '');
-        if (refEnvelope === 'necb') refEnvelope = 'necb-2017';
         baseLevel = 'EEM1';
+        if (envelope === 'high-performance-necb') {
+            refEnvelope = 'necb-2017';
+        } else if (envelope === 'high-performance-ashrae') {
+            refEnvelope = 'ashrae';
+        }
     }
 
     let scenario;

@@ -157,7 +157,8 @@ function renderOutputEnergyTable() {
 
     // Navigation for consumption
     consumptionCell.addEventListener('click', () => {
-        window.location.href = `layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        window.location.href = `layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     });
 
     // Energy Generation cell
@@ -196,7 +197,8 @@ function renderOutputEnergyTable() {
 
     // Navigation for generation
     generationCell.addEventListener('click', () => {
-        window.location.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        window.location.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     });
 
     // Append cells to row
@@ -219,12 +221,14 @@ function setupNavigation() {
     const neighbourhoodCode = getNeighbourhoodFromURL();
 
     if (backBtn && neighbourhoodCode) {
-        backBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        backBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
     if (proceedBtn && neighbourhoodCode) {
         proceedBtn.addEventListener('click', () => {
-            window.location.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            window.location.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         });
     }
 }

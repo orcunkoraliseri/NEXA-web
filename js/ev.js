@@ -57,7 +57,8 @@ function initEVPage() {
 
         // Set back button href based on 'from' parameter or default to LPV
         if (backStepBtn) {
-            backStepBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            backStepBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 
         // Set next step button href

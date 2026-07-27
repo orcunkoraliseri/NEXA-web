@@ -308,9 +308,12 @@ function resolveEnvelopeAndScenario(code) {
     let refEnvelope = envelope;
     let baseLevel = 'DEFAULT';
     if (envelope.startsWith('high-performance-')) {
-        refEnvelope = envelope.replace('high-performance-', '');
-        if (refEnvelope === 'necb') refEnvelope = 'necb-2017';
         baseLevel = 'EEM1';
+        if (envelope === 'high-performance-necb') {
+            refEnvelope = 'necb-2017';
+        } else if (envelope === 'high-performance-ashrae') {
+            refEnvelope = 'ashrae';
+        }
     }
 
     // 2. Determine the active scenario tag
@@ -460,12 +463,14 @@ function initPVPage() {
 
         // Set back button href to energy-selection page
         if (backStepBtn) {
-            backStepBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            backStepBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 
         // Set next step button href
         if (nextStepBtn) {
-            nextStepBtn.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}`;
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            nextStepBtn.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
     } else {
         titleElement.textContent = 'PV Generation Profile';

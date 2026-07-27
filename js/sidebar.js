@@ -196,7 +196,8 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
             const label = "Thermal Load";
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const activeClass = (isClickable && currentLayer === 'energy') ? 'sidebar-item--active' : '';
-            const dataset = isClickable ? `data-target="layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}"` : '';
+            const _envelopeSb = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const dataset = isClickable ? `data-target="layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb)}"` : '';
 
             html += `
                 <div class="sidebar-item ${clickableClass} ${activeClass}" ${dataset}>
@@ -236,7 +237,8 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
             const imgName = demandImages[val] || val;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const activeClass = (isClickable && currentLayer === 'energy') ? 'sidebar-item--active' : '';
-            const dataset = isClickable ? `data-target="layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}"` : '';
+            const _envelopeSb2 = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const dataset = isClickable ? `data-target="layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb2)}"` : '';
 
             html += `
                 <div class="sidebar-item ${clickableClass} ${activeClass}" ${dataset}>
@@ -306,7 +308,8 @@ function generateLayer2Block(mobilitySelections, isClickable, currentLayer, nuCo
         mobilitySelections.transportation.forEach(val => {
             const label = transportLabels[val] || val;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
-            const dataset = isClickable ? `data-target="layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(nuCode)}"` : '';
+            const _envelopeSb3 = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const dataset = isClickable ? `data-target="layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb3)}"` : '';
 
             html += `
                 <div class="sidebar-item ${clickableClass}" ${dataset}>
