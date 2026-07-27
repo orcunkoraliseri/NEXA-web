@@ -3,6 +3,22 @@
  * Dynamically builds the left sidebar by reading cumulative state from sessionStorage.
  */
 
+function getSidebarEnvelope() {
+    const envParam = new URLSearchParams(window.location.search).get('envelope');
+    if (envParam) {
+        sessionStorage.setItem('selectedEnvelope', envParam);
+        return envParam;
+    }
+    try {
+        const filtersJson = sessionStorage.getItem('activeFilters');
+        if (filtersJson) {
+            const filters = JSON.parse(filtersJson);
+            if (filters.envelope) return filters.envelope;
+        }
+    } catch (e) {}
+    return sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+}
+
 /**
  * Builds and inserts the sidebar HTML into the placeholder element.
  * 
@@ -19,6 +35,9 @@ function buildSidebar(currentLayer, mode) {
     const evSelections = JSON.parse(sessionStorage.getItem('evSelections') || '{}');
     const mobilitySelections = JSON.parse(sessionStorage.getItem('mobilitySelections') || '{"transportation":[], "mobility":[]}');
     const greenSelections = JSON.parse(sessionStorage.getItem('greenSelections') || '{"infrastructure":[], "urban_agriculture":[], "energy_integrated":[]}');
+
+    // Retrieve active envelope with fallback to sessionStorage
+    const currentEnvelope = getSidebarEnvelope();
 
     // Retrieve basic neighbourhood info
     const params = new URLSearchParams(window.location.search);
@@ -196,7 +215,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
             const label = "Thermal Load";
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const activeClass = (isClickable && currentLayer === 'energy') ? 'sidebar-item--active' : '';
-            const _envelopeSb = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const _envelopeSb = currentEnvelope;
             const dataset = isClickable ? `data-target="layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb)}"` : '';
 
             html += `
@@ -237,7 +256,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
             const imgName = demandImages[val] || val;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const activeClass = (isClickable && currentLayer === 'energy') ? 'sidebar-item--active' : '';
-            const _envelopeSb2 = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const _envelopeSb2 = currentEnvelope;
             const dataset = isClickable ? `data-target="layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb2)}"` : '';
 
             html += `
@@ -270,7 +289,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             // Make generation active if currentLayer is 'pv' AND it's a visualization mode
             const activeClass = (isClickable && currentLayer === 'pv') ? 'sidebar-item--active' : '';
-            const _envelopeSb = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const _envelopeSb = currentEnvelope;
             const dataset = isClickable ? `data-target="layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb)}"` : '';
 
             html += `
@@ -308,7 +327,7 @@ function generateLayer2Block(mobilitySelections, isClickable, currentLayer, nuCo
         mobilitySelections.transportation.forEach(val => {
             const label = transportLabels[val] || val;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
-            const _envelopeSb3 = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const _envelopeSb3 = currentEnvelope;
             const dataset = isClickable ? `data-target="layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb3)}"` : '';
 
             html += `

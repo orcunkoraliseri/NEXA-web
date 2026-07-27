@@ -71,7 +71,7 @@ function setupSubmitButton() {
 
             if (neighbourhoodCode) {
                 const evSelected = mobilitySelections.transportation.includes('ev');
-                const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+                const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
                 window.location.href = `layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             } else {
                 alert('No neighbourhood selected. Please go back and select a neighbourhood.');
@@ -92,7 +92,7 @@ function initMobilitySelectionPage() {
         titleElement.textContent = `Layer 3: Mobility Selection for ${neighbourhoodCode}`;
 
         if (backBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             backBtn.href = `layer2_output_energy.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 

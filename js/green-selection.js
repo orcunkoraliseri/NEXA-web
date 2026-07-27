@@ -63,10 +63,10 @@ function setupSubmitButton() {
 
             // If any Energy-Integrated GI option is active, go directly to LPV breakdown
             if (greenSelections.energy_integrated.length > 0) {
-                const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+                const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
                 window.location.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             } else {
-                const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+                const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
                 window.location.href = `layer4_output_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             }
         });
@@ -85,7 +85,7 @@ function initGreenSelectionPage() {
         titleElement.textContent = `Layer 4: Green Selection for ${neighbourhoodCode}`;
 
         if (backBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             backBtn.href = `layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 

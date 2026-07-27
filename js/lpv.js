@@ -218,11 +218,11 @@ function initLPVPage() {
     const nextStepBtn = document.getElementById('next-step-btn');
     if (code) {
         if (backStepBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             backStepBtn.href = `layer4_output_selection.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(envelope)}`;
         }
         if (nextStepBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             nextStepBtn.href = `layer4_finish_design.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(envelope)}`;
         }
     }

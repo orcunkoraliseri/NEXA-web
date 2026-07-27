@@ -157,7 +157,7 @@ function renderOutputEnergyTable() {
 
     // Navigation for consumption
     consumptionCell.addEventListener('click', () => {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         window.location.href = `layer2_energy_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     });
 
@@ -197,7 +197,7 @@ function renderOutputEnergyTable() {
 
     // Navigation for generation
     generationCell.addEventListener('click', () => {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         window.location.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     });
 
@@ -221,13 +221,13 @@ function setupNavigation() {
     const neighbourhoodCode = getNeighbourhoodFromURL();
 
     if (backBtn && neighbourhoodCode) {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         backBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
     if (proceedBtn && neighbourhoodCode) {
         proceedBtn.addEventListener('click', () => {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             window.location.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         });
     }

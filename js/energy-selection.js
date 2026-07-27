@@ -13,13 +13,27 @@ function getNeighbourhoodFromURL() {
     return params.get('neighbourhood');
 }
 
-/**
- * Get envelope standard from URL parameter.
- * @returns {string} The envelope value or default 'necb-2017'.
- */
 function getEnvelopeFromURL() {
     const params = new URLSearchParams(window.location.search);
-    return params.get('envelope') || 'necb-2017';
+    const envFromURL = params.get('envelope');
+    if (envFromURL) {
+        sessionStorage.setItem('selectedEnvelope', envFromURL);
+        return envFromURL;
+    }
+    try {
+        const filtersJson = sessionStorage.getItem('activeFilters');
+        if (filtersJson) {
+            const filters = JSON.parse(filtersJson);
+            if (filters.envelope) {
+                sessionStorage.setItem('selectedEnvelope', filters.envelope);
+                return filters.envelope;
+            }
+        }
+    } catch (e) {}
+    const stored = sessionStorage.getItem('selectedEnvelope');
+    if (stored) return stored;
+
+    return 'necb-2017';
 }
 
 // Current selection state (arrays for multi-select)

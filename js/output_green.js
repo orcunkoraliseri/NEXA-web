@@ -23,14 +23,14 @@ function setupNavigation() {
     const neighbourhoodCode = getNeighbourhoodFromURL();
 
     if (backBtn && neighbourhoodCode) {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         backBtn.href = `layer4_green_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
     const lpvBtn = document.getElementById('proceed-lpv-btn');
     if (lpvBtn && neighbourhoodCode) {
         lpvBtn.addEventListener('click', () => {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             window.location.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         });
     }

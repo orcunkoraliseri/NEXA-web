@@ -295,7 +295,19 @@ function isCOP4Selected() {
  */
 function resolveEnvelopeAndScenario(code) {
     const urlParams = new URLSearchParams(window.location.search);
-    const envelope = urlParams.get('envelope') || 'necb-2017';
+    let envelope = urlParams.get('envelope');
+    if (envelope) {
+        sessionStorage.setItem('selectedEnvelope', envelope);
+    } else {
+        try {
+            const filtersJson = sessionStorage.getItem('activeFilters');
+            if (filtersJson) {
+                const filters = JSON.parse(filtersJson);
+                if (filters.envelope) envelope = filters.envelope;
+            }
+        } catch (e) {}
+        if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+    }
 
     // Read selections from sessionStorage (mirrors energy.js exactly)
     const selections = JSON.parse(
@@ -325,7 +337,7 @@ function resolveEnvelopeAndScenario(code) {
                          ENVELOPE_ENERGY_DATA[refEnvelope] &&
                          ENVELOPE_ENERGY_DATA[refEnvelope][code] &&
                          ENVELOPE_ENERGY_DATA[refEnvelope][code]['IAL']);
-        scenario = hasIal ? 'IAL' : 'DEFAULT';
+        scenario = hasIal ? 'IAL' : (baseLevel === 'EEM1' ? 'EEM1' : 'DEFAULT');
     } else {
         const hasHP = demandSelections.includes('cop4') ||
                       demandSelections.includes('cop3.5') ||
@@ -463,13 +475,13 @@ function initPVPage() {
 
         // Set back button href to energy-selection page
         if (backStepBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             backStepBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 
         // Set next step button href
         if (nextStepBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
             nextStepBtn.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
     } else {

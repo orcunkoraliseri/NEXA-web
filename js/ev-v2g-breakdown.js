@@ -137,13 +137,13 @@ function initEvV2gBreakdownPage() {
     // Update navigation buttons
     const backBtn = document.getElementById('back-step-btn');
     if (backBtn && neighbourhoodCode) {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         backBtn.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
     const nextBtn = document.getElementById('next-step-btn');
     if (nextBtn && neighbourhoodCode) {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         nextBtn.href = `layer4_green_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 

@@ -353,6 +353,9 @@ function setupSubmitButton() {
         submitBtn.addEventListener('click', () => {
             // Store filters in sessionStorage
             sessionStorage.setItem('activeFilters', JSON.stringify(activeFilters));
+            if (activeFilters.envelope) {
+                sessionStorage.setItem('selectedEnvelope', activeFilters.envelope);
+            }
 
             // Navigate to output page
             window.location.href = 'layer1_output.html';
@@ -442,7 +445,8 @@ function setupLayer2Button() {
                 // Get envelope from stored filters
                 const filtersJson = sessionStorage.getItem('activeFilters');
                 const filters = filtersJson ? JSON.parse(filtersJson) : {};
-                const envelope = filters.envelope || 'necb-2017';
+                const envelope = filters.envelope || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+                sessionStorage.setItem('selectedEnvelope', envelope);
                 window.location.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(selectedNeighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             }
         });

@@ -160,7 +160,7 @@ function renderEnergyStatus(neighbourhoodCode) {
 // Resolve active scenario & energy metrics (mirrors energy.js / pv.js)
 // -------------------------------------------------------------
 function resolveEnvelopeAndScenario(code) {
-    const envelope = getQueryParam('envelope') || 'necb-2017';
+    const envelope = getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
 
     const selections = JSON.parse(
         sessionStorage.getItem('energySelections') || '{"load":[], "demand":[]}'
@@ -185,7 +185,7 @@ function resolveEnvelopeAndScenario(code) {
                          ENVELOPE_ENERGY_DATA[refEnvelope] &&
                          ENVELOPE_ENERGY_DATA[refEnvelope][code] &&
                          ENVELOPE_ENERGY_DATA[refEnvelope][code]['IAL']);
-        scenario = hasIal ? 'IAL' : 'DEFAULT';
+        scenario = hasIal ? 'IAL' : (baseLevel === 'EEM1' ? 'EEM1' : 'DEFAULT');
     } else {
         const hasHP = demandSelections.includes('cop4') ||
                       demandSelections.includes('cop3.5') ||
@@ -237,7 +237,7 @@ function initSummaryPage() {
     // Set Back button href
     const backBtn = document.getElementById('back-step-btn');
     if (backBtn) {
-        backBtn.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || 'necb-2017')}`;
+        backBtn.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
     }
 
     // Lookup neighbourhood

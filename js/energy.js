@@ -233,9 +233,21 @@ function renderTreemap(neighbourhoodCode) {
     const titleElement = document.getElementById('neighbourhood-title');
     const legendContainer = document.getElementById('legend');
 
-    // Read envelope from URL params
+    // Read envelope from URL params or sessionStorage
     const urlParams = new URLSearchParams(window.location.search);
-    const envelope = urlParams.get('envelope') || 'necb-2017';
+    let envelope = urlParams.get('envelope');
+    if (envelope) {
+        sessionStorage.setItem('selectedEnvelope', envelope);
+    } else {
+        try {
+            const filtersJson = sessionStorage.getItem('activeFilters');
+            if (filtersJson) {
+                const filters = JSON.parse(filtersJson);
+                if (filters.envelope) envelope = filters.envelope;
+            }
+        } catch (e) {}
+        if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+    }
 
     // Read load and demand selections from sessionStorage
     const selections = JSON.parse(
@@ -510,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const backBtn = document.getElementById('back-step-btn');
         const nextBtn = document.getElementById('next-step-btn');
 
-        const _envelopeForNav = new URLSearchParams(window.location.search).get('envelope') || 'necb-2017';
+        const _envelopeForNav = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
         if (backBtn) backBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(_envelopeForNav)}`;
         // Assume next page from Energy should be PV Generation (renderTreemap overwrites this with envelope included)
         if (nextBtn) nextBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(_envelopeForNav)}`;
