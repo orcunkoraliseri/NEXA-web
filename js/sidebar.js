@@ -202,6 +202,7 @@ function buildSidebar(currentLayer, mode) {
  * Helper to generate Layer 2 (Energy + Generation) HTML blocks
  */
 function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode) {
+    const currentEnvelope = getSidebarEnvelope();
     let html = ``;
 
     // --- Load ---
@@ -311,6 +312,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
  * Helper to generate Layer 3 Mobility blocks
  */
 function generateLayer2Block(mobilitySelections, isClickable, currentLayer, nuCode) {
+    const currentEnvelope = getSidebarEnvelope();
     let html = ``;
 
     // --- Transportation ---
