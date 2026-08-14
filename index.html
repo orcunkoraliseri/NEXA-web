@@ -3,13 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LMN tool � Welcome</title>
-    <link rel="stylesheet" href="css/styles.css?v=5" />
+    <title>Layered Modular Neighbourhood (LMN) Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=6" />
 </head>
 <body>
     <header class="header" role="banner">
-        <h1 class="welcome-title">Welcome to the LMN Tool!</h1>
-        <p class="welcome-subtitle">A tool that allows stakeholders to design and optimize their neighborhoods</p>
+        <!-- CHV, Stage 1, 2026-08-13: the full name once, and a description
+             that claims only what the tool does. The previous subtitle said
+             the tool lets stakeholders "design and optimize" a neighbourhood.
+             No optimisation method is implemented and nothing here designs
+             anything: the tool compares 35 neighbourhood units that were
+             simulated in advance. DBG-020. -->
+        <h1 class="welcome-title">Welcome to the Layered Modular Neighbourhood (LMN) Tool</h1>
+        <p class="welcome-subtitle">An early stage decision support tool for comparing neighbourhood designs at pre-feasibility.</p>
     </header>
 
     <main class="container" role="main">
@@ -26,12 +32,21 @@
                         <span>Existing Neighborhood</span>
                     </button>
 
+                    <!-- CHV, Stage 1 item 4. The second pathway is not built. It used to
+                         accept a click and do nothing, which reads as a choice. It now
+                         carries the same status vocabulary and the same greyed treatment
+                         every other unbuilt option on the site uses: the word comes from
+                         LMN_CONFIG.availability.notModelledLabel, and the picture and the
+                         name dim while the status stays readable. -->
                     <button type="button"
-                            class="toggle-btn initial-choice initial-btn usage"
+                            class="toggle-btn initial-btn usage is-unavailable"
                             data-choice="new"
-                            aria-pressed="false">
+                            disabled
+                            aria-disabled="true"
+                            data-permanently-disabled>
                         <img class="initial-btn-img" src="Content/Images_ProjectType/new neighborhood.png" alt="New Neighborhood" onerror="this.style.display='none'">
                         <span>New Neighborhood</span>
+                        <span class="card-status">Not modelled yet</span>
                     </button>
                 </div>
             </div>
@@ -39,14 +54,43 @@
             <div class="submit-section">
                 <button id="get-started-btn" class="submit-btn" type="button">Get Started</button>
             </div>
+
+            <!-- CHV, Stage 1, 2026-08-13. The scope sentence, in the same
+                 component every other explanatory sentence on the site uses. -->
+            <div class="info-box" id="landing-scope-note">
+              <div class="info-box-body">
+                <p class="info-box-title">What this tool is for</p>
+                <p class="info-box-line">It compares a fixed set of 35 neighbourhood units that have already been simulated, so that an energy result can be read early, before a design exists. It is a pre-feasibility comparison tool. It does not design a neighbourhood, it does not optimise one, and it is not a substitute for detailed building energy modelling later in the project.</p>
+              </div>
+            </div>
         </section>
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
+
+            <!-- CHV, Stage 1, 2026-08-13: About, Limitations and Methodology
+                 reachable from the first page, and a version stamp. All three
+                 links land in documentation.html, which is where each of those
+                 sections already lives. -->
+            <a class="footer-doc-link" href="documentation.html#sec-what-is-lmn">About the tool</a>
+            <a class="footer-doc-link" href="documentation.html#sec-limitations">Limitations</a>
+            <a class="footer-doc-link" href="documentation.html">Methodology &amp; references</a>
+            <p class="site-version" id="site-version"></p>
         </footer>
 </main>
 
+    <script src="js/config.js?v=6"></script>
     <script>(function () {
+            // CHV, Stage 1 item 7. The version and the date come from
+            // LMN_CONFIG, the same pair the assumptions box on the Layer 2
+            // result prints, so the landing page cannot claim a different
+            // version from the one the results were computed under.
+            const stamp = document.getElementById('site-version');
+            if (stamp && typeof LMN_CONFIG !== 'undefined') {
+                stamp.textContent = 'Version ' + LMN_CONFIG.version +
+                    ', last updated ' + LMN_CONFIG.lastUpdated + '.';
+            }
+
             const choices = document.querySelectorAll('.initial-choice');
             const getStarted = document.getElementById('get-started-btn');
             let selected = null;

@@ -9,15 +9,95 @@ function getNeighbourhoodFromURL() {
 }
 
 /**
- * Returns "EV2" if both 'ev' and 'v2g_stations' are in the transportation selections,
- * otherwise returns "EV1".
+ * STAGE-06 task 6.2, CHV Stage 6 item 2. Returns "EV2" when EV and V2G are both
+ * selected, "EV1" when EV alone is selected, and null when the selection maps to
+ * no scenario at all.
+ *
+ * It used to return 'EV1' for an absent selection and for a V2G-only selection
+ * alike, so the page rendered a complete EV-only result for a visitor who had
+ * chosen nothing, and for one who had asked for something else. DBG-007. Null
+ * is the whole point of this function now: no scenario, no numbers.
  */
 function getScenarioFromSession() {
     const stored = sessionStorage.getItem('mobilitySelections');
-    if (!stored) return 'EV1';
-    const mobilitySelections = JSON.parse(stored);
-    const transport = mobilitySelections.transportation || [];
-    return (transport.includes('ev') && transport.includes('v2g_stations')) ? 'EV2' : 'EV1';
+    if (!stored) return null;
+
+    let mobilitySelections;
+    try {
+        mobilitySelections = JSON.parse(stored);
+    } catch (e) {
+        return null;                       // a corrupted session is not a scenario
+    }
+
+    const transport = (mobilitySelections && mobilitySelections.transportation) || [];
+    if (!transport.includes('ev')) return null;   // V2G alone is not a scenario
+    return transport.includes('v2g_stations') ? 'EV2' : 'EV1';
+}
+
+/**
+ * STAGE-06 task 6.2. The page with no numbers on it.
+ */
+function showEmptyState() {
+    const empty = document.getElementById('ev-empty-state');
+    const table = document.getElementById('ev-v2g-table');
+    const header = document.getElementById('ev-visual-header');
+
+    if (table) table.hidden = true;
+    if (header) header.hidden = true;
+    // The three reading notes are wrapped in one box, so the box goes with
+    // them. Without this the empty state still ships a titled box with
+    // nothing inside it.
+    ['ev-sign-note', 'ev-intensity-note', 'ev-discharge-eff-note', 'ev-preliminary-note',
+     'ev-notes-box'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.hidden = true;
+    });
+
+    if (empty) {
+        empty.hidden = false;
+        setText('ev-empty-title', LMN_CONFIG.ev.emptyStateTitle);
+        setText('ev-empty-body', LMN_CONFIG.ev.emptyStateBody);
+
+        // Carry the context back, so the way out of the empty state is one click
+        // and lands on the same neighbourhood rather than at the beginning.
+        const link = document.getElementById('ev-empty-link');
+        const code = getNeighbourhoodFromURL();
+        if (link && code) {
+            const envelope = new URLSearchParams(window.location.search).get('envelope')
+                || sessionStorage.getItem('selectedEnvelope') || '';
+            link.href = 'layer3_mobility_selection.html?neighbourhood=' + encodeURIComponent(code)
+                + (envelope ? '&envelope=' + encodeURIComponent(envelope) : '');
+        }
+    }
+}
+
+/**
+ * STAGE-06 tasks 6.4 to 6.8, CHV Stage 6 items 4 to 8. Every label and unit on
+ * this page, written once from LMN_CONFIG.ev.
+ */
+function applyLabels() {
+    const ev = LMN_CONFIG.ev;
+
+    setText('lbl-ev-ownership',        ev.ownershipRateLabel);
+    setText('lbl-daily-demand',        ev.dailyChargingDemandLabel);
+    setText('unit-daily-demand',       ev.dailyChargingDemandUnit);
+    setText('lbl-charging-eff',        ev.chargingEfficiencyLabel);
+    setText('lbl-v2g-participation',   ev.v2gParticipationLabel);
+    setText('lbl-discharge-eff',       ev.dischargeEfficiencyLabel);
+    setText('lbl-v2g-export-per-ev',   ev.dailyV2gExportPerEvLabel);
+    setText('unit-v2g-export-per-ev',  ev.dailyV2gExportPerEvUnit);
+
+    setText('lbl-v2g-energy',          ev.dailyV2gEnergyLabel);
+    setText('unit-v2g-energy',         ev.dailyV2gEnergyUnit);
+    setText('lbl-net-total',           ev.netGridDemandTotalLabel);
+    setText('unit-net-total',          ev.netGridDemandTotalUnit);
+    setText('lbl-net-intensity',       ev.netGridDemandIntensityLabel);
+    setText('unit-net-intensity',      ev.netGridDemandIntensityUnit);
+
+    setText('ev-sign-note',            ev.signSentence);
+    setText('ev-intensity-note',       'The intensity is measured ' + ev.intensityBasis + '.');
+    setText('ev-discharge-eff-note',   ev.dischargeEfficiencyLabel + ': ' + ev.dischargeEfficiencyNote);
+    setText('ev-preliminary-note',     ev.preliminaryNote);
 }
 
 const TRANSPORT_LABEL_MAP = {
@@ -41,7 +121,7 @@ function populateTable(neighbourhoodCode, scenario) {
     const d = EV_V2G_DATA[neighbourhoodCode][scenario];
     if (!d) return;
 
-    // Configurations — all rows always shown; fields absent in this scenario show "-"
+    // Configurations, all rows always shown; fields absent in this scenario show "-"
     setText('cfg-ev-penetration',   d.evPenetrationRate    || '-');
     setText('cfg-daily-demand',     d.dailyEnergyDemand    || '-');
     setText('cfg-charging-eff',     d.chargingEfficiency   || '-');
@@ -60,6 +140,9 @@ function populateTable(neighbourhoodCode, scenario) {
     setText('res-net-balance-kwh-m2', d.netEnergyBalance_kWh_m2);
     setText('res-v2g-power',          d.v2gPowerAvailable !== null ? d.v2gPowerAvailable.toLocaleString() : '-');
 
+    // D6.11, D0.4a. The stored string names an image file. The three states are
+    // worded once, in LMN_CONFIG.ev.statusStates, and the page reads them there.
+    setText('res-status',             LMN_CONFIG.evStatusLabel(d.systemStatusIndicator));
 }
 
 function setText(id, value) {
@@ -112,7 +195,7 @@ function renderVisualHeader(neighbourhoodCode) {
         cards += makeImageCard(nuData.image, neighbourhoodCode, 'ev-header-card--neighbourhood');
     }
 
-    // 4. System status image — read from EV_V2G_DATA using current scenario
+    // 4. System status image, read from EV_V2G_DATA using current scenario
     const scenario = getScenarioFromSession();
     const statusLabel = EV_V2G_DATA && EV_V2G_DATA[neighbourhoodCode]
         ? EV_V2G_DATA[neighbourhoodCode][scenario].systemStatusIndicator
@@ -147,13 +230,21 @@ function initEvV2gBreakdownPage() {
         nextBtn.href = `layer4_green_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
-    if (neighbourhoodCode) {
-        renderVisualHeader(neighbourhoodCode);
-        populateTable(neighbourhoodCode, scenario);
-
+    // STAGE-06 task 6.2. No scenario, or no neighbourhood, means no numbers.
+    if (!neighbourhoodCode || !scenario) {
+        showEmptyState();
         if (typeof buildSidebar === 'function') {
             buildSidebar('layer3_output', 'visuals');
         }
+        return;
+    }
+
+    applyLabels();
+    renderVisualHeader(neighbourhoodCode);
+    populateTable(neighbourhoodCode, scenario);
+
+    if (typeof buildSidebar === 'function') {
+        buildSidebar('layer3_output', 'visuals');
     }
 }
 

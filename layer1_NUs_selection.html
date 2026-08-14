@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="LMN tool: Design positive-energy district neighbourhoods">
   <title>LMN tool: Design positive-energy district neighbourhoods</title>
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -109,71 +109,80 @@
           <div class="parameter-group">
               <div class="parameter-label">Envelope</div>
               <div class="envelope-cards">
-                  <!-- Standard Construction -->
-                  <button class="envelope-card" data-category="envelope" data-value="ashrae">
-                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="Standard (ASHRAE)">
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="ashrae">
+                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="ASHRAE">
                       <span>Standard (ASHRAE)</span>
+                      <span class="envelope-card-standard">ASHRAE 90.1</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
-                  <button class="envelope-card" data-category="envelope" data-value="necb-z4">
-                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 4 (Windsor)">
-                      <span>NECB Zone 4<br>(Windsor)</span>
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z4">
+                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 4 (Vancouver)">
+                      <span>NECB Zone 4<br>(Vancouver)</span>
+                      <span class="envelope-card-standard">NECB 2017</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
-                  <button class="envelope-card" data-category="envelope" data-value="necb-z5">
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z5">
                       <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 5 (Toronto/Ottawa)">
                       <span>NECB Zone 5<br>(Toronto / Ottawa)</span>
+                      <span class="envelope-card-standard">NECB 2017</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
-                  <button class="envelope-card" data-category="envelope" data-value="necb-z6">
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z6">
                       <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 6 (Montréal)">
                       <span>NECB Zone 6<br>(Montréal)</span>
+                      <span class="envelope-card-standard">NECB 2017</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
-                  <button class="envelope-card" data-category="envelope" data-value="necb-z7a">
-                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 7A (Calgary)">
-                      <span>NECB Zone 7A<br>(Calgary)</span>
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z7a">
+                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 7A (Winnipeg)">
+                      <span>NECB Zone 7A<br>(Winnipeg)</span>
+                      <span class="envelope-card-standard">NECB 2017</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
-                  <button class="envelope-card" data-category="envelope" data-value="necb-z7b">
-                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 7B (Whitehorse)">
-                      <span>NECB Zone 7B<br>(Whitehorse)</span>
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z7b">
+                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 7B (Fort McMurray)">
+                      <span>NECB Zone 7B<br>(Fort McMurray)</span>
+                      <span class="envelope-card-standard">NECB 2017</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
-                  <button class="envelope-card" data-category="envelope" data-value="necb-z8">
-                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 8 (Yellowknife)">
-                      <span>NECB Zone 8<br>(Yellowknife)</span>
+                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z8">
+                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 8 (Chisasibi)">
+                      <span>NECB Zone 8<br>(Chisasibi)</span>
+                      <span class="envelope-card-standard">NECB 2017</span>
+                      <span class="envelope-region-badge"></span>
                   </button>
+              </div>
 
-                  <!-- High Performance Construction -->
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-ashrae">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. (ASHRAE)">
-                      <span>High Perf.<br>(ASHRAE)</span>
-                  </button>
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-z4">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. Zone 4 (Windsor)">
-                      <span>High Perf. Zone 4<br>(Windsor)</span>
-                  </button>
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-z5">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. Zone 5 (Toronto/Ottawa)">
-                      <span>High Perf. Zone 5<br>(Toronto / Ottawa)</span>
-                  </button>
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-z6">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. Zone 6 (Montréal)">
-                      <span>High Perf. Zone 6<br>(Montréal)</span>
-                  </button>
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-z7a">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. Zone 7A (Calgary)">
-                      <span>High Perf. Zone 7A<br>(Calgary)</span>
-                  </button>
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-z7b">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. Zone 7B (Whitehorse)">
-                      <span>High Perf. Zone 7B<br>(Whitehorse)</span>
-                  </button>
-                  <button class="envelope-card" data-category="envelope" data-value="high-performance-z8">
-                      <img src="Content/Images_Envelope_Parameters/high-performance construction.png" alt="High Perf. Zone 8 (Yellowknife)">
-                      <span>High Perf. Zone 8<br>(Yellowknife)</span>
-                  </button>
+              <!-- Envelope Performance Tier Popup Modal -->
+              <div id="envelope-popup" class="modal envelope-popup-modal" style="display:none;">
+                  <div class="modal-content envelope-popup-content">
+                      <h3 class="envelope-popup-title">Select Performance Level</h3>
+                      <p class="envelope-popup-subtitle" id="envelope-popup-region-name">Region Name</p>
+                      <div class="envelope-popup-options">
+                          <button class="envelope-tier-btn" data-tier="vintage-1983" id="tier-btn-1983" style="display:none;">
+                              <span class="tier-label">1983</span>
+                              <span class="tier-sub">Quebec Vintage</span>
+                          </button>
+                          <button class="envelope-tier-btn" data-tier="standard">
+                              <span class="tier-label">Standard</span>
+                              <span class="tier-sub">NECB 2017</span>
+                          </button>
+                          <button class="envelope-tier-btn" data-tier="high-performance">
+                              <span class="tier-label">HPENV</span>
+                              <span class="tier-sub">Hyper-performance</span>
+                          </button>
+                      </div>
+                      <button class="envelope-popup-close" id="envelope-popup-close" type="button">&times;</button>
+                  </div>
               </div>
           </div>
 
           <!-- Submit Button -->
           <div class="submit-section">
-              <button id="view-results-btn" class="submit-btn">View Neighbourhoods</button>
+              <!-- D2.9, DBG-022, P0: ships disabled. js/app.js turns it on only
+                   once a climate and envelope have been chosen. -->
+              <button id="view-results-btn" class="submit-btn" disabled aria-disabled="true">View Neighbourhoods</button>
+              <p id="view-results-hint" class="submit-hint">Choose a climate and envelope above to continue.</p>
           </div>
       </section>
       <footer class="site-footer">
@@ -184,8 +193,9 @@
 </main>
 
   <!-- Scripts -->
-  <script src="js/data.js?v=5"></script>
-  <script src="js/app.js?v=5"></script>
+  <script src="js/config.js?v=6"></script>
+  <script src="js/data.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
 </body>
 
 </html>

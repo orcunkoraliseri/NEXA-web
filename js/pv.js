@@ -88,169 +88,18 @@ function renderEnergyStatus(neighbourhoodCode) {
     }
 }
 
-// ── Heatmap canvas renderer ─────────────────────────────────────────────────
-
-// RdYlBu_r colorscale stops (matplotlib equivalent)
-const RDYLBU_R = [
-    [0.000, [49,  54,  149]],
-    [0.125, [69,  117, 180]],
-    [0.250, [116, 173, 209]],
-    [0.375, [171, 217, 233]],
-    [0.500, [255, 255, 191]],
-    [0.625, [253, 174, 97 ]],
-    [0.750, [244, 109, 67 ]],
-    [0.875, [215, 48,  39 ]],
-    [1.000, [165, 0,   38 ]]
-];
-
-function heatmapColor(value, vmin, vmax) {
-    const t = Math.max(0, Math.min(1, (value - vmin) / (vmax - vmin)));
-    let lo = RDYLBU_R[0], hi = RDYLBU_R[RDYLBU_R.length - 1];
-    for (let i = 0; i < RDYLBU_R.length - 1; i++) {
-        if (t <= RDYLBU_R[i + 1][0]) { lo = RDYLBU_R[i]; hi = RDYLBU_R[i + 1]; break; }
-    }
-    const f = lo[0] === hi[0] ? 0 : (t - lo[0]) / (hi[0] - lo[0]);
-    return [
-        Math.round(lo[1][0] + f * (hi[1][0] - lo[1][0])),
-        Math.round(lo[1][1] + f * (hi[1][1] - lo[1][1])),
-        Math.round(lo[1][2] + f * (hi[1][2] - lo[1][2]))
-    ];
-}
-
-/**
- * Draw a 4-season hourly heatmap on a canvas element.
- * Replicates the matplotlib RdYlBu_r heatmap from the .py scripts.
- * Data comes from HOURLY_HEATMAP_DATA (heatmap-data.js) — no fetch needed.
- * @param {number[][]} rows - 24 rows × 4 seasons (row 0 = 12 AM)
- * @param {string[]} seasons - season labels e.g. ['Mar 21', 'Jun 21', ...]
- * @param {string} canvasId - target canvas element ID
- */
-function drawHeatmapCanvas(rows, seasons, canvasId) {
-    const canvas = document.getElementById(canvasId);
-    if (!canvas) return;
-
-    const container = canvas.parentElement;
-    const W = container ? container.clientWidth || 360 : 360;
-    const H = 260;
-    canvas.width  = W;
-    canvas.height = H;
-
-    const nHours   = rows.length;    // 24
-    const nSeasons = seasons.length; // 4
-
-    const ML = 50, MR = 66, MT = 14, MB = 28;
-    const plotW  = W - ML - MR;
-    const plotH  = H - MT - MB;
-    const colGap = 7;
-    const colW   = (plotW - colGap * (nSeasons - 1)) / nSeasons;
-    const cellH  = plotH / nHours;
-
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, W, H);
-
-    // Background
-    ctx.fillStyle = '#f5f7fa';
-    ctx.fillRect(0, 0, W, H);
-
-    // ── Heatmap cells ──────────────────────────────────────────
-    for (let s = 0; s < nSeasons; s++) {
-        const colX = ML + s * (colW + colGap);
-        for (let h = 0; h < nHours; h++) {
-            const val = rows[h][s];
-            const [r, g, b] = heatmapColor(val, 0, 900);
-            // origin='lower': hour 0 at bottom of plot
-            const cellY = MT + plotH - (h + 1) * cellH;
-            ctx.fillStyle = `rgb(${r},${g},${b})`;
-            ctx.fillRect(colX, cellY, colW, cellH + 0.5);
-        }
-    }
-
-    // ── Y-axis labels & ticks (left, origin=lower) ─────────────
-    ctx.fillStyle   = '#555';
-    ctx.font        = '10px Inter, sans-serif';
-    ctx.textAlign   = 'right';
-    ctx.textBaseline = 'middle';
-    const yTicks = [
-        { h: 0,  label: '12 AM' },
-        { h: 6,  label: '6 AM'  },
-        { h: 12, label: '12 PM' },
-        { h: 18, label: '6 PM'  },
-        { h: 24, label: '12 AM' }
-    ];
-    yTicks.forEach(({ h, label }) => {
-        const y = MT + plotH - h * cellH;
-        ctx.fillText(label, ML - 5, y);
-        ctx.strokeStyle = '#aaa';
-        ctx.lineWidth   = 0.5;
-        ctx.beginPath();
-        ctx.moveTo(ML - 3, y);
-        ctx.lineTo(ML,     y);
-        ctx.stroke();
-    });
-
-    // ── Season labels (x-axis, below each column) ──────────────
-    ctx.fillStyle    = '#555';
-    ctx.font         = '10px Inter, sans-serif';
-    ctx.textAlign    = 'center';
-    ctx.textBaseline = 'top';
-    for (let s = 0; s < nSeasons; s++) {
-        const colX = ML + s * (colW + colGap);
-        ctx.fillText(seasons[s], colX + colW / 2, MT + plotH + 6);
-    }
-
-    // ── Colorbar ────────────────────────────────────────────────
-    const cbX = W - MR + 12;
-    const cbW = 11;
-    const cbH = plotH;
-
-    // Gradient: top = red (900), bottom = blue (0)
-    for (let py = 0; py < cbH; py++) {
-        const val = (1 - py / cbH) * 900;
-        const [r, g, b] = heatmapColor(val, 0, 900);
-        ctx.fillStyle = `rgb(${r},${g},${b})`;
-        ctx.fillRect(cbX, MT + py, cbW, 1);
-    }
-
-    // Colorbar border
-    ctx.strokeStyle = '#bbb';
-    ctx.lineWidth   = 0.5;
-    ctx.strokeRect(cbX, MT, cbW, cbH);
-
-    // Colorbar ticks & labels
-    ctx.fillStyle    = '#555';
-    ctx.font         = '9px Inter, sans-serif';
-    ctx.textAlign    = 'left';
-    ctx.textBaseline = 'middle';
-    [0, 180, 360, 540, 720, 900].forEach(val => {
-        const ty = MT + cbH - (val / 900) * cbH;
-        ctx.fillText(val, cbX + cbW + 3, ty);
-        ctx.strokeStyle = '#aaa';
-        ctx.lineWidth   = 0.5;
-        ctx.beginPath();
-        ctx.moveTo(cbX + cbW, ty);
-        ctx.lineTo(cbX + cbW + 3, ty);
-        ctx.stroke();
-    });
-
-    // Colorbar title
-    ctx.fillStyle    = '#555';
-    ctx.font         = '9px Inter, sans-serif';
-    ctx.textAlign    = 'left';
-    ctx.textBaseline = 'alphabetic';
-    ctx.fillText('kWh/m²', cbX, MT - 3);
-}
-
-/**
- * Render both wall and roof hourly heatmaps for a neighbourhood.
- * @param {string} neighbourhoodCode
- */
-function renderHourlyHeatmaps(neighbourhoodCode) {
-    if (!HOURLY_HEATMAP_DATA || !HOURLY_HEATMAP_DATA[neighbourhoodCode]) return;
-    const entry   = HOURLY_HEATMAP_DATA[neighbourhoodCode];
-    const seasons = HOURLY_HEATMAP_DATA.seasons;
-    drawHeatmapCanvas(entry.wall, seasons, 'wall-hourly-chart');
-    drawHeatmapCanvas(entry.roof, seasons, 'roof-hourly-chart');
-}
+// ── Hourly heatmap: removed ─────────────────────────────────────────────────
+//
+// STAGE-04 task 4.11, decided by Koral 2026-08-10. The wall and roof hourly
+// irradiation heatmap was dead code. js/heatmap-data.js carried data for 5 of
+// the 35 neighbourhoods (RC-R, RC-D, RC-T, RC-MR2, RC-MR3), the ten source CSVs
+// under Content/Images_PVpage/RC/ all exist, but layer2_pv_breakdown.html has
+// no canvas to draw into and renderHourlyHeatmaps() was never called. The file
+// was still downloaded on every visit to the page.
+//
+// Removed: RDYLBU_R, heatmapColor(), drawHeatmapCanvas(), renderHourlyHeatmaps(),
+// js/heatmap-data.js and its script tag. The source CSVs are untouched, so this
+// is recoverable if the other 30 neighbourhoods are ever produced upstream.
 
 // ── Image updater ────────────────────────────────────────────────────────────
 
@@ -269,6 +118,12 @@ function updatePVImages(neighbourhoodCode) {
  * RoP is only applicable when Heat Pump COP 4 is selected.
  * @returns {boolean} True if cop4 demand is selected.
  */
+/*
+ * isCOP4Selected() was the RoP display gate. Removed from use on 2026-08-10,
+ * D0.3b: the publication computes RoP at COP 1 and COP 3.5, never COP 4, so
+ * the gate hid the metric in every case the paper reports. The function is
+ * kept because it is cheap and may be wanted for a COP specific note later.
+ */
 function isCOP4Selected() {
     try {
         const raw = sessionStorage.getItem('energySelections');
@@ -278,6 +133,35 @@ function isCOP4Selected() {
     } catch (e) {
         return false;
     }
+}
+
+/**
+ * D0.3, D0.3b, DBG-018. Ratio of Performance, computed rather than stored.
+ *
+ * Published definition, NUs_1st_Paper.md line 309: annual on-site PV
+ * generation divided by annual total building energy demand, site energy, per
+ * Neighbourhood Unit. RoP > 1 is net energy positive, RoP > 0.95 is near
+ * energy positive.
+ *
+ * The old COP 4 display gate is gone, D0.3b: the publication computes RoP at
+ * COP 1 and COP 3.5, never COP 4, so gating on COP 4 hid the metric in every
+ * case the paper actually reports. It is shown for every demand option except
+ * the ideal thermal load, where an ideal load makes the ratio meaningless.
+ *
+ * @param {string} nuCode
+ * @param {string} envelope - active envelope key
+ * @param {string} scenario - active scenario tag
+ * @param {number|undefined} pvIntensity - kWh/m²·yr, already resolved
+ * @returns {string} the ratio to three decimals, or an em dash
+ */
+function computeRoP(nuCode, envelope, scenario, pvIntensity) {
+    const hidden = (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.rop.hiddenForScenarios : ['IAL'];
+    if (hidden.indexOf(scenario) !== -1) return '—';
+
+    const demand = getEnergyData(envelope, nuCode, scenario);
+    if (!demand || !demand.total || pvIntensity == null) return '—';
+
+    return (pvIntensity / demand.total).toFixed(3);
 }
 
 /**
@@ -382,33 +266,91 @@ function updatePVParameters(neighbourhoodCode) {
     if (!PV_GENERATION_DATA || !PV_GENERATION_DATA[neighbourhoodCode]) return undefined;
 
     const data = PV_GENERATION_DATA[neighbourhoodCode];
-    const showRoP = isCOP4Selected();
-    const gcrValue = data.gcr ? (parseFloat(data.gcr) * 100).toFixed(0) + '%' : '';
-    const ropValue = showRoP ? data.rop : '—';
+
+    // STAGE-04, DBG-013, answered by Koral 2026-08-10. The array parameters are
+    // a property of the roof, not of the neighbourhood, and this page used to
+    // report the flat-roof set for all 35 NUs. On the four house neighbourhoods
+    // the panels lie flush on a pitched face: no rack, and ground coverage
+    // ratio does not apply at all, so its row is suppressed rather than filled
+    // with a number that means nothing. Both sets come from PV_methodology.md.
+    const roof = (typeof LMN_CONFIG !== 'undefined')
+        ? LMN_CONFIG.roofGroupFor(neighbourhoodCode)
+        : null;
+
+    const surfaceValue = roof ? roof.surface : data.surface;
+    const mountingValue = roof ? roof.mounting : data.mounting;
+    const gcrValue = (roof && !roof.gcrApplies)
+        ? 'Does not apply'
+        : (data.gcr ? (parseFloat(data.gcr) * 100).toFixed(0) + '%' : '');
+
+    // D0.2, STAGE-00 task 0.7. The module efficiency is a single modelling
+    // assumption, so it is never read from a per NU field or an HTML literal.
+    // It does differ by roof group, because the pitched group is quoted on
+    // aperture area and the flat group on module area.
+    const efficiencyValue = roof
+        ? roof.moduleEfficiencyLabel
+        : LMN_CONFIG.pv.moduleEfficiencyLabel;
 
     // Resolve pvIntensity from envelope-aware source (same as energy.js)
-    const { pvIntensity } = resolveEnvelopeAndScenario(neighbourhoodCode);
+    const { envelope, scenario, pvIntensity } = resolveEnvelopeAndScenario(neighbourhoodCode);
     const generationDisplay = (pvIntensity != null) ? pvIntensity.toFixed(1) : '—';
+
+    // D0.3, D0.3a, D0.3b and DBG-018. RoP is COMPUTED here, from the same two
+    // numbers the rest of the tool uses, and is not read from a stored field.
+    //
+    // Two reasons. First, PV_GENERATION_DATA.rop is one value per NU and was
+    // null on all 35, while RoP varies by envelope AND scenario, so there are
+    // 2,845 of them. Second, DBG-018: storing a value derived from total and
+    // pv creates a regeneration obligation every time either changes, and
+    // both changed in 100 cells during the corrections of 2026-08-10.
+    // Computing it at display time closes that obligation permanently.
+    //
+    // Floor area cancels out of the ratio, so D6.0 does not block it:
+    //   RoP = (pv x area) / (total x area) = pv / total
+    const ropValue = computeRoP(neighbourhoodCode, envelope, scenario, pvIntensity);
 
     // GFA lookup
     const gfa = (typeof GFA_DATA !== 'undefined') ? GFA_DATA[neighbourhoodCode] : undefined;
     const gfaDisplay = (gfa != null) ? gfa.toLocaleString() + ' m²' : '—';
 
-    // Total PV Generation = intensity × GFA, displayed in MWh/yr
-    const totalMWh = (pvIntensity != null && gfa != null) ? (pvIntensity * gfa / 1000) : null;
+    // Total PV Generation = intensity × conditioned area, displayed in MWh/yr
+    //
+    // DBG-029, fixed 2026-08-10. This used to multiply by GFA_DATA, the total
+    // building area, which is the wrong denominator: pvIntensity is per HEATED
+    // AND COOLED area, so the product was mixed-basis and read about twice the
+    // truth on the house neighbourhoods. The upstream pipeline settles it,
+    // main_BEM.py:1139 divides by conditioned_floor_area, and the CHV report
+    // says the PV denominator is "the same denominator used for EUI".
+    // CONDITIONED_AREA_DATA now carries that area for all 35 NUs.
+    const condArea = (typeof CONDITIONED_AREA_DATA !== 'undefined')
+        ? CONDITIONED_AREA_DATA[neighbourhoodCode]
+        : undefined;
+    const totalMWh = (pvIntensity != null && condArea != null)
+        ? (pvIntensity * condArea / 1000)
+        : null;
     const totalDisplay = (totalMWh != null) ? totalMWh.toFixed(1) + ' MWh/yr' : '—';
+
+    // STAGE-04 task 4.8, decided by Koral 2026-08-10. Both areas are now on
+    // screen. The page used to show the total building area alone directly
+    // above a total computed against the heated and cooled area, so a reader
+    // who multiplied the two numbers in front of them got twice the answer:
+    // RC-D showed 21,201 m² beside 1,064.2 MWh/yr, and 100.4 x 21,201 / 1000
+    // is 2,128. Naming the area the arithmetic actually uses removes that.
+    const condDisplay = (condArea != null) ? condArea.toLocaleString() + ' m²' : '—';
+    const totalTitle = 'Annual PV generation for the whole neighbourhood. Intensity multiplied by the heated and cooled floor area, which is the area the intensity is measured against.';
 
     const isLegacy = (neighbourhoodCode === 'RC-HR2');
 
     if (isLegacy) {
         // Populate legacy layout IDs
         const legacyMap = {
-            '#pv-surface-val-legacy':    data.surface,
-            '#pv-efficiency-val-legacy': data.efficiency,
-            '#pv-mounting-val-legacy':   data.mounting,
+            '#pv-surface-val-legacy':    surfaceValue,
+            '#pv-efficiency-val-legacy': efficiencyValue,
+            '#pv-mounting-val-legacy':   mountingValue,
             '#pv-gcr-val-legacy':        gcrValue,
             '#pv-generation-val-legacy': generationDisplay,
             '#pv-gfa-val-legacy':        gfaDisplay,
+            '#pv-cond-area-val-legacy': condDisplay,
             '#pv-total-val-legacy':      totalDisplay,
             '#pv-rop-val-legacy':        ropValue
         };
@@ -419,12 +361,13 @@ function updatePVParameters(neighbourhoodCode) {
     } else {
         // Populate new layout IDs
         const newMap = {
-            '#pv-surface-val':    data.surface,
-            '#pv-efficiency-val': data.efficiency,
-            '#pv-mounting-val':   data.mounting,
+            '#pv-surface-val':    surfaceValue,
+            '#pv-efficiency-val': efficiencyValue,
+            '#pv-mounting-val':   mountingValue,
             '#pv-gcr-val':        gcrValue,
             '#pv-generation-val': generationDisplay,
             '#pv-gfa-val':        gfaDisplay,
+            '#pv-cond-area-val': condDisplay,
             '#pv-total-val':      totalDisplay,
             '#pv-rop-val':        ropValue
         };
@@ -432,6 +375,51 @@ function updatePVParameters(neighbourhoodCode) {
             const el = document.querySelector(selector);
             if (el && value !== undefined) el.textContent = value;
         }
+    }
+
+    // DBG-029. What the total is multiplied by, on hover, on whichever of the
+    // two layouts is in use.
+    const totalEl = document.querySelector(isLegacy ? '#pv-total-val-legacy' : '#pv-total-val');
+    if (totalEl && totalMWh != null) totalEl.title = totalTitle;
+
+    // STAGE-04, answered by Koral. Two things the page never said out loud.
+    //
+    // 1. Which result this is. Without it a Calgary selection can display a
+    //    number with nothing on screen naming the climate or the rung. The
+    //    wording comes from LMN_CONFIG so it matches the energy pages, and it
+    //    uses the ladder names, never the word EEM.
+    const captionEl = document.querySelector(isLegacy ? '#pv-result-caption-legacy' : '#pv-result-caption');
+    if (captionEl && typeof LMN_CONFIG !== 'undefined') {
+        captionEl.textContent = LMN_CONFIG.resultCaption(envelope, scenario);
+    }
+
+    // 2. Why the parameters above look different on a house. Same pattern as
+    //    the notes already carried by the other result pages.
+    const roofNoteEl = document.querySelector(isLegacy ? '#pv-roof-note-legacy' : '#pv-roof-note');
+    if (roofNoteEl && roof) roofNoteEl.textContent = roof.note;
+
+    // 2b. What the Ratio of Performance means, on the page that prints it.
+    //     CHV, 2026-08-13: keep RoP, and give it "a short and understandable
+    //     explanation in the interface of what the value means and how it
+    //     should be interpreted". The definition, the formula, the source and
+    //     the worked examples stay in documentation.html section D.
+    //
+    //     Nothing is written when the ratio itself is not shown, on the ideal
+    //     thermal load, because explaining a placeholder explains nothing. The
+    //     test is that the value starts with a digit, so this line does not
+    //     have to carry a copy of the placeholder character.
+    const ropNoteEl = document.querySelector(isLegacy ? '#pv-rop-note-legacy' : '#pv-rop-note');
+    if (ropNoteEl && typeof LMN_CONFIG !== 'undefined') {
+        ropNoteEl.textContent = /^[0-9]/.test(String(ropValue)) ? LMN_CONFIG.rop.interfaceNote : '';
+    }
+
+    // 3. STAGE-04 tasks 4.2 and 4.3, CHV action plan Stage 4 items 2 and 3.
+    //    Whether a rooftop array is installed at all, and why the rooftop
+    //    figure is the same on every rung of the ladder. Wording lives in
+    //    LMN_CONFIG so it cannot drift from the documentation.
+    const scenNoteEl = document.querySelector(isLegacy ? '#pv-scenario-note-legacy' : '#pv-scenario-note');
+    if (scenNoteEl && typeof LMN_CONFIG !== 'undefined') {
+        scenNoteEl.textContent = LMN_CONFIG.pvScenarioNote(scenario);
     }
 
     return pvIntensity;
@@ -445,6 +433,24 @@ function initPVPage() {
     const titleElement = document.getElementById('neighbourhood-title');
     const backStepBtn = document.getElementById('back-step-btn');
     const nextStepBtn = document.getElementById('next-step-btn');
+
+    // CHV, 2026-08-13. Second gate, before any number is drawn. The PV
+    // intensity, the total and the ratio of performance all come out of the
+    // same withheld row. See the note in js/config.js on dataGapNotice.
+    if (typeof LMN_CONFIG !== 'undefined' && neighbourhoodCode) {
+        const envelopeKey = new URLSearchParams(window.location.search).get('envelope')
+            || sessionStorage.getItem('selectedEnvelope');
+        const gapNotice = envelopeKey
+            ? LMN_CONFIG.dataGapNotice(neighbourhoodCode, envelopeKey)
+            : null;
+        if (gapNotice) {
+            const main = document.querySelector('main.container') || document.body;
+            main.innerHTML = gapNotice +
+                '<p class="info-box"><a href="layer1_output.html">Back to the neighbourhood table</a></p>';
+            if (titleElement) titleElement.textContent = 'Layer 2: PV Generation';
+            return;
+        }
+    }
 
     // Toggle between new 3-row layout and legacy layout (RC-HR2 only)
     const isLegacy = (neighbourhoodCode === 'RC-HR2');

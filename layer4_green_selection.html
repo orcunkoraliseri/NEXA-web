@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select green parameters for neighbourhood analysis.">
     <title>Green Selection | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -45,36 +45,67 @@
                 <!-- Parameters Section -->
                 <section class="parameters-section" id="selection-form">
 
+                    <!-- STAGE-07 tasks 7.1 and 7.2, CHV Stage 7 items 1 and 2,
+                         decision D7.6. One option on this layer has a
+                         calculation behind it. Until 2026-08-12 it sat in the
+                         same block as seven options that have none, so the
+                         difference between them was carried only by a grey
+                         badge. The two are now separate groups with their own
+                         headings. -->
+                    <h2 class="group-heading">Available now</h2>
+                    <p class="group-heading-note info-box">This option has a calculation method, so it produces a number.</p>
+
+                    <div class="parameter-group">
+                        <div class="parameter-label">Energy-Integrated GI</div>
+                        <div class="consumption-cards">
+                            <button class="consumption-card green-card" data-category="energy_integrated"
+                                data-value="pv_vgs">
+                                <img src="Content/Images_Layer4_EnergyIntegratedGI/lpv.png"
+                                    alt="Landscape PV"
+                                    onerror="LMN_CONFIG.iconMissing(this)">
+                                <span>Landscape PV</span>
+                                <span class="card-status card-status--preliminary">Preliminary</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h2 class="group-heading">Future capabilities</h2>
+                    <p class="group-heading-note info-box">No quantitative method exists for these yet, so they cannot be selected and the tool shows no energy result for them.</p>
+
                     <!-- INFRASTRUCTURE -->
                     <div class="parameter-group">
                         <div class="parameter-label">Infrastructure</div>
                         <div class="generation-container">
                             <div class="generation-row">
-                                <button class="generation-card green-card" data-category="infrastructure"
+                                <button class="generation-card green-card is-unavailable" data-category="infrastructure"
                                     data-value="green_roofs" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/green roofs.png" alt="Green Roofs"
-                                        onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
+                                        onerror="LMN_CONFIG.iconMissing(this)">
                                     <span>Green Roofs</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card green-card" data-category="infrastructure"
+                                <button class="generation-card green-card is-unavailable" data-category="infrastructure"
                                     data-value="vertical_greening_systems" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/vertical greening systems.png"
                                         alt="Vertical Greening Systems"
-                                        onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
+                                        onerror="LMN_CONFIG.iconMissing(this)">
                                     <span>Vertical Greening Systems</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card green-card" data-category="infrastructure"
+                                <button class="generation-card green-card is-unavailable" data-category="infrastructure"
                                     data-value="linear_greenery" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/linear greenery.png"
                                         alt="Linear Greenery"
-                                        onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
+                                        onerror="LMN_CONFIG.iconMissing(this)">
                                     <span>Linear Greenery</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card green-card" data-category="infrastructure"
+                                <button class="generation-card green-card is-unavailable" data-category="infrastructure"
                                     data-value="green_spaces" disabled>
                                     <img src="Content/Images_Layer4_Infrastructure/green spaces.png" alt="Green Spaces"
-                                        onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
+                                        onerror="LMN_CONFIG.iconMissing(this)">
                                     <span>Green Spaces</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
                             </div>
                         </div>
@@ -84,17 +115,19 @@
                     <div class="parameter-group">
                         <div class="parameter-label">Urban Agriculture</div>
                         <div class="consumption-cards">
-                            <button class="consumption-card green-card" data-category="urban_agriculture"
+                            <button class="consumption-card green-card is-unavailable" data-category="urban_agriculture"
                                 data-value="roof_gardens" disabled>
                                 <img src="Content/Images_Layer4_UrbanAgriculture/roof gardens.png" alt="Roof Gardens"
-                                    onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
+                                    onerror="LMN_CONFIG.iconMissing(this)">
                                 <span>Roof Gardens</span>
+                                <span class="card-status">Not modelled yet</span>
                             </button>
-                            <button class="consumption-card green-card" data-category="urban_agriculture"
+                            <button class="consumption-card green-card is-unavailable" data-category="urban_agriculture"
                                 data-value="food_gardens" disabled>
                                 <img src="Content/Images_Layer4_UrbanAgriculture/food gardens.png" alt="Food Gardens"
-                                    onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
+                                    onerror="LMN_CONFIG.iconMissing(this)">
                                 <span>Food Gardens</span>
+                                <span class="card-status">Not modelled yet</span>
                             </button>
                         </div>
                     </div>
@@ -103,19 +136,13 @@
                     <div class="parameter-group">
                         <div class="parameter-label">Energy-Integrated GI</div>
                         <div class="consumption-cards">
-                            <button class="consumption-card green-card" data-category="energy_integrated"
+                            <button class="consumption-card green-card is-unavailable" data-category="energy_integrated"
                                 data-value="pv_green_roofs" disabled>
                                 <img src="Content/Images_Layer4_EnergyIntegratedGI/pv-green roofs integrated modules.png"
                                     alt="PV-Green Roofs Integrated Modules"
-                                    onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
+                                    onerror="LMN_CONFIG.iconMissing(this)">
                                 <span>PV-Green Roofs Integrated Modules</span>
-                            </button>
-                            <button class="consumption-card green-card" data-category="energy_integrated"
-                                data-value="pv_vgs">
-                                <img src="Content/Images_Layer4_EnergyIntegratedGI/lpv.png"
-                                    alt="Landscape PV"
-                                    onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
-                                <span>Landscape PV</span>
+                                <span class="card-status">Not modelled yet</span>
                             </button>
                         </div>
                     </div>
@@ -136,9 +163,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/green-selection.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/green-selection.js?v=6"></script>
 </body>
 
 </html>

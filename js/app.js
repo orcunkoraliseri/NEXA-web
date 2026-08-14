@@ -26,6 +26,9 @@ function initWelcomePage() {
     setupLayoutCards();
     setupEnvelopeCards();
     setupSubmitButton();
+    // D2.9. Set the guard state once at load, before the user has touched
+    // anything, so the button ships grey rather than becoming grey later.
+    checkAllFiltersSelected();
 }
 
 /**
@@ -197,36 +200,132 @@ function setupLayoutCards() {
 
 
 /**
- * Set up Envelope image card event listeners (single selection)
+ * Helper to compose envelope filter value from region and tier
+ */
+function getEnvelopeValue(region, tier) {
+    if (tier === 'standard') {
+        return region;
+    }
+    if (tier === 'vintage-1983') {
+        return 'vintage-1983-z6';
+    }
+    if (region === 'ashrae') {
+        return 'high-performance-ashrae';
+    }
+    if (region.startsWith('necb-')) {
+        return 'high-performance-' + region.replace('necb-', '');
+    }
+    return 'high-performance-' + region;
+}
+
+/**
+ * Helper to parse envelope filter value into region and tier
+ */
+function parseEnvelopeValue(envelopeValue) {
+    if (!envelopeValue) return { region: null, tier: null };
+    if (envelopeValue.startsWith('vintage-1983-')) {
+        return { region: 'necb-z6', tier: 'vintage-1983' };
+    }
+    if (envelopeValue.startsWith('high-performance-')) {
+        let r = envelopeValue.replace('high-performance-', '');
+        if (r.startsWith('z')) {
+            r = 'necb-' + r;
+        }
+        return { region: r, tier: 'high-performance' };
+    } else {
+        return { region: envelopeValue, tier: 'standard' };
+    }
+}
+
+/**
+ * Set up Envelope image card event listeners and Popup Modal (Region selection + Tier popup)
  */
 function setupEnvelopeCards() {
-    const cards = document.querySelectorAll('.envelope-card');
+    const regionCards = document.querySelectorAll('.envelope-region-btn');
+    const popup = document.getElementById('envelope-popup');
+    const popupRegionName = document.getElementById('envelope-popup-region-name');
+    const closeBtn = document.getElementById('envelope-popup-close');
+    const tierBtns = document.querySelectorAll('.envelope-tier-btn');
 
-    cards.forEach(card => {
+    let pendingRegion = null;
+
+    if (!regionCards.length || !popup) return;
+
+    // Open popup when region card is clicked
+    regionCards.forEach(card => {
         card.addEventListener('click', () => {
-            const category = card.dataset.category;
-            const value = card.dataset.value;
+            const region = card.dataset.region;
+            pendingRegion = region;
 
-            // Deselect all other cards in this category
-            cards.forEach(c => {
-                if (c !== card) {
-                    c.classList.remove('active');
+            // Set region name in popup
+            const spanText = card.querySelector('span:not(.envelope-region-badge)').innerText.replace('\n', ' ');
+            popupRegionName.textContent = spanText;
+
+            // Show/hide 1983 vintage button (only for Zone 6)
+            const btn1983 = document.getElementById('tier-btn-1983');
+            if (btn1983) {
+                btn1983.style.display = (region === 'necb-z6') ? '' : 'none';
+            }
+
+            // Highlight current tier in popup if this region is already active
+            const currentParsed = parseEnvelopeValue(activeFilters.envelope);
+            tierBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (currentParsed.region === region && btn.dataset.tier === currentParsed.tier) {
+                    btn.classList.add('active');
                 }
             });
 
-            // Toggle this card
-            card.classList.toggle('active');
+            // Show modal
+            popup.style.display = 'flex';
+        });
+    });
 
-            // Update filter state (single value or null)
-            if (card.classList.contains('active')) {
-                activeFilters[category] = value;
-            } else {
-                activeFilters[category] = null;
-            }
+    // Handle tier selection inside popup
+    tierBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (!pendingRegion) return;
 
-            // Update available options in other parameters
+            const tier = btn.dataset.tier;
+            const fullEnvelopeValue = getEnvelopeValue(pendingRegion, tier);
+
+            // Update active filter state
+            activeFilters.envelope = fullEnvelopeValue;
+
+            // Update region cards visual states
+            regionCards.forEach(card => {
+                const badge = card.querySelector('.envelope-region-badge');
+                if (card.dataset.region === pendingRegion) {
+                    card.classList.add('active');
+                    if (badge) {
+                        badge.textContent = tier === 'high-performance' ? 'HPENV' : tier === 'vintage-1983' ? '1983' : 'Standard';
+                    }
+                } else {
+                    card.classList.remove('active');
+                    if (badge) {
+                        badge.textContent = '';
+                    }
+                }
+            });
+
+            // Hide popup and update available filter options
+            popup.style.display = 'none';
             updateAvailableOptions();
         });
+    });
+
+    // Close popup on close button click
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    }
+
+    // Close popup when clicking outside modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
     });
 }
 
@@ -319,10 +418,15 @@ function updateAvailableOptions() {
         }
     });
 
-    // Update envelope cards
-    document.querySelectorAll('.envelope-card').forEach(card => {
-        const value = card.dataset.value;
-        if (!hasActiveFilters || availableValues.envelope.has(value) || activeFilters.envelope === value) {
+    // Update envelope region cards
+    document.querySelectorAll('.envelope-region-btn').forEach(card => {
+        const region = card.dataset.region;
+        const stdVal = getEnvelopeValue(region, 'standard');
+        const hpVal = getEnvelopeValue(region, 'high-performance');
+        const vintageVal = (region === 'necb-z6') ? getEnvelopeValue(region, 'vintage-1983') : null;
+        const isSelected = activeFilters.envelope === stdVal || activeFilters.envelope === hpVal || (vintageVal && activeFilters.envelope === vintageVal);
+
+        if (!hasActiveFilters || availableValues.envelope.has(stdVal) || availableValues.envelope.has(hpVal) || (vintageVal && availableValues.envelope.has(vintageVal)) || isSelected) {
             card.classList.remove('disabled');
         } else {
             card.classList.add('disabled');
@@ -338,8 +442,23 @@ function updateAvailableOptions() {
  */
 function checkAllFiltersSelected() {
     const submitBtn = document.getElementById('view-results-btn');
-    if (submitBtn) {
-        submitBtn.disabled = false;
+    if (!submitBtn) return;
+
+    // D2.9, DBG-022, P0. Until 2026-08-10 this function checked nothing: it
+    // only ever switched the button on. A user could therefore reach every
+    // result in the tool without choosing a climate, and silently got
+    // Montreal, because roughly 30 call sites fall back to necb-2017.
+    const requireClimate = (typeof LMN_CONFIG !== 'undefined' && LMN_CONFIG.requireClimateSelection !== undefined)
+        ? LMN_CONFIG.requireClimateSelection
+        : true;
+    const ready = !requireClimate || Boolean(activeFilters.envelope);
+
+    submitBtn.disabled = !ready;
+    submitBtn.setAttribute('aria-disabled', String(!ready));
+
+    const hint = document.getElementById('view-results-hint');
+    if (hint) {
+        hint.style.display = ready ? 'none' : 'block';
     }
 }
 
@@ -351,6 +470,16 @@ function setupSubmitButton() {
 
     if (submitBtn) {
         submitBtn.addEventListener('click', () => {
+            // D2.9, DBG-022. Second gate, so the climate cannot be skipped by
+            // clearing the disabled attribute in the browser inspector.
+            const requireClimate = (typeof LMN_CONFIG !== 'undefined' && LMN_CONFIG.requireClimateSelection !== undefined)
+                ? LMN_CONFIG.requireClimateSelection
+                : true;
+            if (requireClimate && !activeFilters.envelope) {
+                checkAllFiltersSelected();
+                return;
+            }
+
             // Store filters in sessionStorage
             sessionStorage.setItem('activeFilters', JSON.stringify(activeFilters));
             if (activeFilters.envelope) {
@@ -364,54 +493,14 @@ function setupSubmitButton() {
 }
 
 
-/**
- * Ahmed: Setup the popup logic for the Neighbourhood images
+/*
+ * The hidden 3D popup that used to live here was removed on 2026-08-10, D2.8.
+ * It listened for a click anywhere on the neighbourhood cell, called
+ * stopPropagation, and so opened a Yes/No confirmation while silently failing
+ * to select the row. Both actions are now labelled buttons built in
+ * createResultRow, and the nav-modal markup was deleted from
+ * layer1_output.html in the same pass.
  */
-function setupNeighbourhoodModal() {
-    const modal = document.getElementById("nav-modal");
-    const resultsBody = document.getElementById("results-body");
-    const btnYes = document.getElementById("btn-yes");
-    const btnNo = document.getElementById("btn-no");
-
-    if (!modal || !resultsBody) return;
-
-    let selectedModelCode = ""; // Variable to store the code of the clicked neighborhood
-
-    // 1. Listen for clicks on neighbourhood cells inside the results table
-    resultsBody.addEventListener('click', (e) => {
-        const cell = e.target.closest('.neighbourhood-cell');
-
-        if (cell) {
-            e.stopPropagation();
-
-            // Get the text from the <span class="code"> inside that cell
-            const codeSpan = cell.querySelector('.code');
-            if (codeSpan) {
-                selectedModelCode = codeSpan.textContent.trim();
-                // Show the popup
-                modal.style.display = "block";
-            }
-        }
-    });
-
-    // 2. Handle the "No" button
-    btnNo.onclick = () => {
-        modal.style.display = "none";
-    };
-
-    // 3. Handle the "Yes" button - Opens 3dviewer.html in a new tab
-    btnYes.onclick = () => {
-        modal.style.display = "none";
-        if (selectedModelCode) {
-            window.open(`3dviewer.html?model=${encodeURIComponent(selectedModelCode.trim().toUpperCase())}`, '_blank');
-        }
-    };
-
-    // 4. Close if user clicks outside the white box
-    window.onclick = (event) => {
-        if (event.target == modal) { modal.style.display = "none"; }
-    };
-}
 
 
 /**
@@ -430,8 +519,6 @@ function initOutputPage() {
     Object.assign(activeFilters, filters);
     renderOutputTable(filters);
     setupLayer2Button();
-
-    setupNeighbourhoodModal();
 }
 
 /**
@@ -477,7 +564,7 @@ function renderOutputTable(filters) {
     if (results.length === 0) {
         tableBody.innerHTML = `
       <tr>
-        <td colspan="4" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+        <td colspan="6" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
           <h3>No matching neighbourhoods</h3>
           <p>Try adjusting your parameter selections.</p>
         </td>
@@ -490,6 +577,67 @@ function renderOutputTable(filters) {
         const row = createResultRow(concept, neighbourhood);
         tableBody.appendChild(row);
     });
+
+    renderDataGapNotes(filters);
+}
+
+/**
+ * DBG-027, task 3.12. Print the reason for every neighbourhood withheld from
+ * this climate, under the table. A withheld case that is not explained looks
+ * like a filter result, which is the failure mode the release rule targets.
+ * @param {Object} filters - The active filter selections
+ */
+function renderDataGapNotes(filters) {
+    const holder = document.getElementById('data-gap-notes');
+    if (!holder) return;
+
+    holder.innerHTML = '';
+    if (typeof LMN_CONFIG === 'undefined' || !filters.envelope) return;
+
+    const gaps = LMN_CONFIG.dataGaps.filter(g => g.climates.indexOf(filters.envelope) !== -1);
+    if (gaps.length === 0) return;
+
+    // One box per reason, not one box per neighbourhood. CHV's decision of
+    // 2026-08-13 withholds five neighbourhoods at once in five climates, and
+    // five copies of one sentence is not an explanation, it is noise that
+    // gets skipped. Neighbourhoods sharing a reason are named together.
+    const groups = [];
+    gaps.forEach(gap => {
+        const existing = groups.find(group => group.reason === gap.reason);
+        if (existing) { existing.nus.push(gap.nu); return; }
+        groups.push({
+            label: gap.label || LMN_CONFIG.availability.notAvailableLabel,
+            reason: gap.reason,
+            nus: [gap.nu]
+        });
+    });
+
+    const climate = LMN_CONFIG.envelopeLabel(filters.envelope);
+
+    // The box, not a loose line: CHV asked for the reason to be stated, and
+    // session 16 settled what a stated reason looks like on this site.
+    holder.innerHTML = groups.map(group => {
+        const names = joinNuNames(group.nus);
+        const verb = group.nus.length > 1 ? 'are' : 'is';
+        return `
+    <div class="info-box">
+      <div class="info-box-body">
+        <p class="info-box-title">${group.label}</p>
+        <p class="info-box-line"><strong>${names}</strong> ${verb} not shown for ${climate}. ${group.reason}</p>
+      </div>
+    </div>`;
+    }).join('');
+}
+
+/**
+ * "RC-D", "RC-D and RC-T", "RC-D, RC-ML and RC-T". Used only by the note
+ * above, and kept here rather than in config because it is presentation.
+ * @param {string[]} names - The neighbourhood codes
+ * @returns {string} The codes as one readable list
+ */
+function joinNuNames(names) {
+    if (names.length === 1) return names[0];
+    return names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
 }
 
 /**
@@ -499,6 +647,15 @@ function renderOutputTable(filters) {
  * @returns {boolean} Whether the neighbourhood matches
  */
 function checkNeighbourhoodMatchesFilters(neighbourhood, filters) {
+    // DBG-027, P0, task 3.12. A neighbourhood with no usable result for the
+    // chosen climate is not offered at all. The reason is printed under the
+    // table by renderOutputTable, so the absence is explained rather than
+    // silent. This test runs before the filter test, because it holds even
+    // when no other filter is active.
+    if (typeof LMN_CONFIG !== 'undefined' && filters.envelope) {
+        if (LMN_CONFIG.dataGapFor(neighbourhood.code, filters.envelope)) return false;
+    }
+
     // If no filters are active, show all
     const hasActiveFilters = Object.values(filters).some(val => val !== null);
     if (!hasActiveFilters) return true;
@@ -614,19 +771,28 @@ function createResultRow(concept, neighbourhood) {
     //   `;
     // }
 
-    // Neighbourhood cell
+    // Neighbourhood cell.
+    // D2.8, CHV Stage 2 item 5: two clearly labelled actions per NU. Both
+    // already existed and both were invisible: selecting was an unlabelled
+    // whole row click, and the 3D view was a hidden click on the picture that
+    // opened a Yes/No popup and, because of stopPropagation, failed to select
+    // the row at the same time. The popup and the picture handler are gone.
     const neighbourhoodCell = document.createElement('td');
     const nuImage = neighbourhood.image || 'https://via.placeholder.com/200x150?text=' + encodeURIComponent(neighbourhood.code);
     neighbourhoodCell.innerHTML = `
     <div class="neighbourhood-cell">
       <img src="${nuImage}" alt="${neighbourhood.code}" onerror="this.src='https://via.placeholder.com/200x150?text=${encodeURIComponent(neighbourhood.code)}'">
       <span class="code">${neighbourhood.code}</span>
+      <div class="nu-actions">
+        <button type="button" class="nu-action-btn nu-select-btn">Select this NU</button>
+        <button type="button" class="nu-action-btn nu-view3d-btn">View 3D</button>
+      </div>
     </div>
   `;
 
-    // Handle row selection
-    row.style.cursor = 'pointer';
-    row.addEventListener('click', () => {
+    // Handle row selection. The whole row stays clickable as a shortcut, and
+    // the labelled button calls the same function, so the two cannot drift.
+    const selectThisNU = () => {
         // Deselect previous
         document.querySelectorAll('.results-table tr').forEach(r => r.classList.remove('selected'));
 
@@ -643,7 +809,29 @@ function createResultRow(concept, neighbourhood) {
         if (nextBtn) {
             nextBtn.disabled = false;
         }
-    });
+    };
+
+    row.style.cursor = 'pointer';
+    row.addEventListener('click', selectThisNU);
+
+    const selectBtn = neighbourhoodCell.querySelector('.nu-select-btn');
+    if (selectBtn) {
+        selectBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectThisNU();
+        });
+    }
+
+    const view3dBtn = neighbourhoodCell.querySelector('.nu-view3d-btn');
+    if (view3dBtn) {
+        // D2.8: opens the viewer directly. A button already labelled View 3D
+        // makes the old "Would you like to navigate the Neighbourhood Unit?"
+        // confirmation redundant.
+        view3dBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.open(`3dviewer.html?model=${encodeURIComponent(neighbourhood.code.trim().toUpperCase())}`, '_blank');
+        });
+    }
 
     // Properties cell - display the user's selected parameters visually
     const propertiesCell = document.createElement('td');
@@ -671,29 +859,14 @@ function createResultRow(concept, neighbourhood) {
         'high-performance-z6': 'high-performance construction',
         'high-performance-z7a': 'high-performance construction',
         'high-performance-z7b': 'high-performance construction',
-        'high-performance-z8': 'high-performance construction'
+        'high-performance-z8': 'high-performance construction',
+        'vintage-1983-z6': 'standard construction'
     };
-    const envelopeDisplayNames = {
-        'necb-2017': 'NECB Zone 6 (Montréal)',
-        'ashrae': 'Standard (ASHRAE)',
-        'necb-z4': 'NECB Zone 4 (Windsor)',
-        'necb-z5': 'NECB Zone 5 (Toronto/Ottawa)',
-        'necb-z6': 'NECB Zone 6 (Montréal)',
-        'necb-z7a': 'NECB Zone 7A (Calgary)',
-        'necb-z7b': 'NECB Zone 7B (Whitehorse)',
-        'necb-z8': 'NECB Zone 8 (Yellowknife)',
-        'high-performance-necb': 'High Perf. Zone 6 (Montréal)',
-        'high-performance-ashrae': 'High Perf. (ASHRAE)',
-        'high-performance-z4': 'High Perf. Zone 4 (Windsor)',
-        'high-performance-z5': 'High Perf. Zone 5 (Toronto/Ottawa)',
-        'high-performance-z6': 'High Perf. Zone 6 (Montréal)',
-        'high-performance-z7a': 'High Perf. Zone 7A (Calgary)',
-        'high-performance-z7b': 'High Perf. Zone 7B (Whitehorse)',
-        'high-performance-z8': 'High Perf. Zone 8 (Yellowknife)'
-    };
-
+    // Envelope display names now come from LMN_CONFIG, D0.1 / DBG-016. The map
+    // that used to sit here named four cities that were never simulated:
+    // Windsor, Calgary, Whitehorse and Yellowknife.
     const envelopeImageName = envelopeImageNames[activeEnvelope] || activeEnvelope;
-    const envelopeLabel = envelopeDisplayNames[activeEnvelope] || activeEnvelope;
+    const envelopeLabel = LMN_CONFIG.envelopeLabel(activeEnvelope);
 
     propertiesCell.innerHTML = `
       <div class="properties-cell" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; justify-items: center; align-items: start;">
@@ -744,12 +917,41 @@ function createResultRow(concept, neighbourhood) {
 
     buildingsCell.appendChild(buildingsWrapper);
 
+    // D2.7, CHV Stage 2 item 4: two planning quantities per NU.
+    //
+    // Number of buildings is the count of simulated buildings, one per merged
+    // sector IDF in the campaign that feeds this site. It is NOT parsed from
+    // the composition text, because that text counts dwelling units and an
+    // attached-house prototype is a row of 7 units. DBG-021.
+    const countCell = document.createElement('td');
+    const count = neighbourhood.buildingCount;
+    countCell.innerHTML = `
+    <div class="metric-cell" title="Buildings actually simulated. One row of attached houses is one building and contains several dwellings.">
+      <span class="metric-value">${(typeof count === 'number') ? count : 'not established'}</span>
+      <span class="metric-unit">buildings</span>
+    </div>
+  `;
+
+    // Floor area is GFA_DATA, the EnergyPlus Total Building Area, which is
+    // GROSS. The EUI and PV intensities are published on NET CONDITIONED area,
+    // so the basis is named here rather than left to be assumed. D6.0.
+    const areaCell = document.createElement('td');
+    const gfa = (typeof GFA_DATA !== 'undefined') ? GFA_DATA[neighbourhood.code] : undefined;
+    areaCell.innerHTML = `
+    <div class="metric-cell" title="Total built floor area, the EnergyPlus Total Building Area, including unheated attics and basements. The energy intensities elsewhere in the tool are per heated and cooled floor area, which for the house neighbourhoods is half of this.">
+      <span class="metric-value">${(typeof gfa === 'number') ? gfa.toLocaleString('en-CA') : 'not established'}</span>
+      <span class="metric-unit">m² total</span>
+    </div>
+  `;
+
     // row.appendChild(euiCell);  // COMMENTED OUT (preserved for future use)
     // row.appendChild(statusCell);  // COMMENTED OUT (moved to Energy page)
     row.appendChild(conceptCell);
     row.appendChild(neighbourhoodCell);
     row.appendChild(propertiesCell);
     row.appendChild(buildingsCell);
+    row.appendChild(countCell);
+    row.appendChild(areaCell);
 
     return row;
 }

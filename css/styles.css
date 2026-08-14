@@ -328,7 +328,7 @@ h3 {
 .usage-card img {
   width: 120px;
   height: 70px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-sm);
   transition: transform var(--transition-normal);
 }
@@ -395,6 +395,257 @@ h3 {
   border-color: var(--border-subtle);
 }
 
+/* STAGE-05 tasks 5.2 and 5.6, CHV Stage 5 items 2 and 6.
+   A card can be greyed for two different reasons: the technology is not
+   modelled yet, or it is modelled but not for this neighbourhood. Either way
+   the card now carries a visible reason, and the generic rule above fades the
+   whole button to 0.3, which would leave that reason unreadable. A card that
+   carries a status therefore dims its picture and its name only, and keeps the
+   status at full contrast. */
+.is-unavailable:disabled {
+  opacity: 1;
+  filter: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.is-unavailable:disabled img,
+.is-unavailable:disabled > span:not(.card-status) {
+  opacity: 0.35;
+  filter: grayscale(100%);
+}
+
+.card-status {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #ececec;
+  color: #5f5f5f;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* An author rule that sets display beats the browser rule for [hidden], so
+   the two elements the facade PV rule fills in have to say it themselves.
+   Without this the page ships an empty grey badge on every neighbourhood. */
+.card-status[hidden],
+.selection-note[hidden] {
+  display: none;
+}
+
+/* =====================================================================
+   STAGE-08. The final results page. CHV Stage 8 items 1 to 9.
+   ===================================================================== */
+
+.final-block {
+  margin: 22px 0;
+}
+
+.scenario-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.scenario-list > div {
+  display: grid;
+  grid-template-columns: minmax(140px, 22%) 1fr;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-subtle, #ececec);
+}
+
+.scenario-list dt {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.scenario-list dd {
+  margin: 0;
+  color: var(--text-secondary, #4a4a4a);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-subtle, #ececec);
+  text-align: left;
+}
+
+.comparison-table th {
+  font-weight: 700;
+  background: #f6f6f6;
+}
+
+.comparison-table td.value-cell {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Item 7. The constraint sentence appears only when a limit actually fires, so
+   it is styled to be read rather than to be decorative, and it ships hidden. */
+.constraint-line {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid #b8860b;
+  background: #fdf8ec;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.constraint-line[hidden],
+.final-block[hidden] {
+  display: none;
+}
+
+/* Item 9. Print carries the numbers, the assumptions and the status labels,
+   and drops the parts of the page that mean nothing on paper. */
+@media print {
+  .no-print,
+  .sidebar,
+  .nav-buttons,
+  .site-footer {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .final-block,
+  .summary-card {
+    break-inside: avoid;
+  }
+
+  .comparison-table th {
+    background: #eee !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* STAGE-07 task 7.2, CHV Stage 7 item 2. The heading that separates the option
+   with a calculation method from the ones without. A grey badge on a card is
+   easy to miss; a heading over a group is not. */
+.group-heading {
+  margin: 26px 0 2px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-subtle, #d9d9d9);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.group-heading-note {
+  margin: 0 0 10px;
+  max-width: 70ch;
+  color: var(--text-secondary, #5f5f5f);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* A status on a card that is selectable, so it must not read as a refusal. */
+.card-status--preliminary {
+  background: #f3e6c8;
+  color: #6b5518;
+}
+
+/* STAGE-06 task 6.9 and STAGE-07 task 7.6, CHV Stage 6 item 9 and Stage 7
+   item 6. The maturity of a whole page, in one of the four words of
+   LMN_CONFIG.statusTerms. Same reasoning as .card-status[hidden] above: a page
+   that ships the badge hidden and fills it by script needs its own rule, or the
+   browser rule for [hidden] loses to this one and an empty box is drawn. */
+.status-badge-line {
+  margin: 6px 0 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: #f3e6c8;
+  color: #6b5518;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-badge-line[hidden],
+.status-badge[hidden],
+.empty-state[hidden] {
+  display: none;
+}
+
+/* STAGE-06 task 6.2, CHV Stage 6 item 2. What the results page shows when no
+   scenario was selected. It replaces the table rather than sitting above it, so
+   there is no number anywhere on the page to misread. */
+.empty-state {
+  margin: 24px 0;
+  padding: 28px 24px;
+  border: 1px solid var(--border-subtle, #d9d9d9);
+  border-radius: 6px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.empty-state p {
+  margin: 0 auto 18px;
+  max-width: 60ch;
+  color: var(--text-secondary, #5f5f5f);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* The one line under a group of cards that explains a restriction, for
+   example why facade PV is offered on nine neighbourhoods and not on 35. */
+.selection-note {
+  margin: 8px 2px 0;
+  max-width: 70ch;
+  color: var(--text-secondary, #5f5f5f);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+/* STAGE-05 task 5.6. What a missing icon looks like once it stops hiding
+   itself. LMN_CONFIG.iconMissing drops the src and adds this class, so the row
+   keeps its alignment, the reader sees a neutral plate instead of a gap, and
+   the console names the file. */
+img.icon-missing {
+  min-width: 40px;
+  min-height: 40px;
+  background: #e4e4e4;
+  border-radius: 3px;
+  color: transparent;
+  font-size: 0;
+}
+
 /* Context Image Cards - Compact */
 .context-cards {
   display: flex;
@@ -420,7 +671,7 @@ h3 {
 .context-card img {
   width: 120px;
   height: 70px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-sm);
   transition: transform var(--transition-normal);
 }
@@ -474,7 +725,7 @@ h3 {
 .layout-card img {
   width: 120px;
   height: 70px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-sm);
   transition: transform var(--transition-normal);
 }
@@ -528,7 +779,7 @@ h3 {
 .density-card img {
   width: 120px;
   height: 70px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-sm);
   transition: transform var(--transition-normal);
 }
@@ -559,37 +810,36 @@ h3 {
 
 
 
-/* Envelope Image Cards - Grid (2 rows x 7 columns) */
+/* Envelope Image Cards - Flexible Grid for Regions */
 .envelope-cards {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, auto);
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-sm);
-    justify-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
 }
 
 .envelope-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 0.25rem;
-    padding: 0.4rem;
+    padding: 0.5rem;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: all var(--transition-normal);
-    width: 100%;
+    width: 140px;
     box-sizing: border-box;
 }
 
 .envelope-card img {
-    width: 100%;
-    max-width: 120px;
+    width: 120px;
     height: 70px;
     object-fit: contain;
     background: #fff;
@@ -607,22 +857,38 @@ h3 {
     line-height: 1.1;
 }
 
-@media (max-width: 1200px) {
-    .envelope-cards {
-        grid-template-columns: repeat(4, 1fr);
-    }
+/* D2.6, CHV Stage 2 item 3: name the standard on each climate card, so the
+   reader can see that ASHRAE 90.1 and NECB 2017 are two different standards.
+   Deliberately smaller and lighter than the card name, it is a qualifier. */
+.envelope-card .envelope-card-standard {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    text-transform: none;
+    line-height: 1;
+    margin-top: 1px;
 }
 
-@media (max-width: 640px) {
-    .envelope-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.envelope-region-badge {
+    display: none;
+    font-size: 0.65rem;
+    font-weight: 700;
+    background: var(--accent-amber);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-top: 2px;
+}
+
+.envelope-card.active .envelope-region-badge:not(:empty) {
+    display: inline-block;
 }
 
 .envelope-card:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-glow);
-    border-color: var(--envelope-color);
+    border-color: var(--usage-color);
 }
 
 .envelope-card:hover img {
@@ -630,9 +896,127 @@ h3 {
 }
 
 .envelope-card.active {
-    border-color: var(--envelope-color);
-    background: var(--envelope-active);
-    box-shadow: 0 0 20px rgba(253, 164, 175, 0.4);
+    border: 2px solid #E8860A;
+    background: rgba(245, 196, 0, 0.35);
+    box-shadow: 0 0 20px rgba(232, 134, 10, 0.35);
+}
+
+/* Envelope Popup Modal Styles */
+.envelope-popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 1100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope-popup-content {
+    position: relative;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 24px 28px;
+    border-radius: var(--radius-md);
+    width: 420px;
+    max-width: 92vw;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: popupFadeIn 0.2s ease-out;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.envelope-popup-title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.envelope-popup-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.envelope-popup-options {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.envelope-tier-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 10px;
+    background: var(--bg-secondary);
+    border: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.envelope-tier-btn .tier-label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.envelope-tier-btn .tier-sub {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 3px;
+}
+
+.envelope-tier-btn:hover {
+    border-color: #E8860A;
+    background: rgba(245, 196, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.envelope-tier-btn.active {
+    border-color: #E8860A;
+    background: rgba(245, 196, 0, 0.35);
+    box-shadow: 0 0 12px rgba(232, 134, 10, 0.3);
+}
+
+.envelope-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    transition: color 0.15s ease;
+}
+
+.envelope-popup-close:hover {
+    color: var(--text-primary);
 }
 
 /* ========================================
@@ -868,6 +1252,30 @@ h3 {
 .submit-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(232, 134, 10, 0.5);
+}
+
+/* D2.9, DBG-022, P0: the button ships grey and wakes up only once a climate
+   has been chosen. Without this a user reached every result in the tool on a
+   silent Montreal fallback. */
+.submit-btn:disabled,
+.submit-btn[disabled] {
+  background: var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.submit-btn:disabled:hover,
+.submit-btn[disabled]:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.submit-hint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
 }
 
 .submit-btn:active {
@@ -1937,6 +2345,182 @@ h3 {
   font-size: 1.1rem;
 }
 
+/* D2.8, CHV Stage 2 item 5: the two actions per NU, both labelled. Before
+   this they existed but were invisible, one as an unlabelled row click and
+   one as a hidden click on the picture. */
+.nu-actions {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nu-action-btn {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.15s);
+}
+
+.nu-action-btn:hover {
+  border-color: var(--usage-color);
+  box-shadow: var(--shadow-glow);
+}
+
+.nu-select-btn {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* Task 3.4, D3.2: the energy basis, next to the EUI value. */
+.energy-basis-note {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Task 3.2, D3.5, CHV Stage 3 item 2: baseline, selected and change. */
+.baseline-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 1rem auto 1.25rem;
+  max-width: 900px;
+}
+
+.baseline-comparison:empty {
+  display: none;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 6.5rem 5rem 6rem 1fr;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+
+.comparison-row--selected {
+  border-color: var(--usage-color);
+}
+
+.comparison-row--change {
+  background: rgba(232, 134, 10, 0.08);
+}
+
+.comparison-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.comparison-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: right;
+}
+
+.comparison-unit,
+.comparison-note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Task 3.5: assumptions and model info. */
+.assumptions-box {
+  margin: 1.5rem auto 0;
+  max-width: 900px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+
+.assumptions-box:empty {
+  display: none;
+}
+
+.assumptions-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.assumptions-list {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.assumptions-list dt {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.assumptions-list dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Documentation page: a note that records a decision or a correction. */
+.doc-note {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.03);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* DBG-027, task 3.12: why a neighbourhood is missing from this climate. */
+.data-gap-note {
+  margin: 1rem auto 0;
+  max-width: 1100px;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--accent-amber);
+  background: rgba(232, 134, 10, 0.08);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+/* D2.7, CHV Stage 2 item 4: the two planning quantities. The unit sits under
+   the value because the floor-area basis has to be readable, D6.0. */
+.metric-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.metric-cell .metric-value {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric-cell .metric-unit {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
 /* Properties Cell */
 .properties-cell {
   font-size: 0.9rem;
@@ -2146,6 +2730,74 @@ h3 {
   font-size: 0.9rem;
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
+}
+
+/* STAGE-03 task 3.3, D6.0. The floor-area basis, written under the compact
+   unit rather than folded into it. The compact form alone does not say which
+   square metres the number is divided by, and for the house neighbourhoods the
+   two candidate areas differ by a factor of 2. Only the energy scale carries
+   this caption; the PV and LPV scales reuse .eui-scale-unit and are untouched. */
+.eui-scale-basis {
+  font-size: 0.78rem;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  opacity: 0.85;
+  text-align: center;
+  margin-top: -0.15rem;
+  margin-bottom: 0.35rem;
+}
+
+/* STAGE-04. The PV result caption: which standard and which rung produced the
+   numbers below it. Both PV layouts use it, and both are empty until js/pv.js
+   fills them, so an empty element must not leave a gap. */
+.pv-result-caption {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  margin: 0 0 0.6rem 0;
+}
+.pv-result-caption:empty {
+  display: none;
+}
+
+/* STAGE-04, DBG-013. Why the four house neighbourhoods report a different
+   array. Reads as a footnote to the parameter row above it. */
+.pv-roof-note {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  opacity: 0.9;
+  margin: 0.7rem 0 0 0;
+  padding-left: 0.7rem;
+  border-left: 2px solid var(--border-subtle);
+}
+/* STAGE-04 tasks 4.2, 4.3 and 4.9. */
+.pv-scenario-note {
+    margin: 0.35rem 0 0.75rem 0;
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--border-subtle);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    max-width: 70ch;
+}
+
+.pv-scenario-note:empty {
+    display: none;
+}
+
+.pv-method-link-wrap {
+    margin: 0.25rem 0 1rem 0;
+}
+
+.pv-method-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+.pv-roof-note:empty {
+  display: none;
 }
 
 .eui-scale-bar {
@@ -2783,6 +3435,20 @@ h3 {
   text-align: center;
 }
 
+/* STAGE-01 item 7, built 2026-08-13 on CHV's instruction. The version and
+   last-updated stamp on the landing page. Its own row under the logo and the
+   copyright, quieter than either, because it is a fact about the build and
+   not a thing to read first. */
+.site-version {
+  flex-basis: 100%;
+  width: 100%;
+  margin: 0.4rem 0 0 0;
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
 .footer-disclaimer {
   flex-basis: 100%;          /* force its own row below the logo + copyright */
   width: 100%;
@@ -2844,4 +3510,131 @@ h3 {
   width: 20px;
   height: 20px;
   color: var(--accent-amber);
+}
+
+/* =====================================================================
+   Explanation boxes, session 16.
+
+   Every sentence that says how to read a number, or what a number does
+   not include, used to sit as a loose grey line under the table it
+   belonged to. On a page that already carries a table, a badge and a
+   disclaimer, a loose line reads as leftover text and gets skipped.
+   These sentences are the ones CHV asked for, so they are given the
+   same standing as the assumptions card: a bounded box with a rule down
+   its left edge.
+
+   Teal is the explanation colour. Amber already means "warning about
+   this whole layer" on the disclaimer box, so it is kept here only for
+   .info-box--caution, a stated limitation. The two never sit next to
+   each other by accident.
+
+   A box is made by adding one class to the paragraph the script already
+   fills, so no script has to learn a new element. Several sentences that
+   belong together are wrapped in an .info-box with .info-box-line
+   children instead, and only that form carries a title.
+   ===================================================================== */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  /* Centred on the column, like the assumptions card, not hung on the left
+     margin. This is a web page and its content sits in the middle of it; a
+     block pinned to the left edge is the shape of a printed report. The box
+     hugs its sentence rather than running to a fixed width, so a short note
+     does not become a wide empty panel. The text inside stays left aligned,
+     because a centred paragraph is unreadable past one line. */
+  width: fit-content;
+  max-width: min(74ch, 100%);
+  margin: 12px auto;
+  padding: 10px 14px;
+  border: 1px solid rgba(107, 168, 184, 0.35);
+  border-left: 4px solid var(--accent-teal);
+  border-radius: var(--radius-sm);
+  background: rgba(107, 168, 184, 0.09);
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* The mark that opens the box. A glyph rather than an inline SVG, so a
+   note becomes a box by adding a class and nothing else. */
+.info-box::before {
+  content: "i";
+  flex: 0 0 17px;
+  height: 17px;
+  margin-top: 1px;
+  border: 1.5px solid var(--accent-teal);
+  border-radius: 50%;
+  color: var(--accent-teal);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+.info-box--caution {
+  border-color: rgba(232, 134, 10, 0.35);
+  border-left-color: var(--accent-amber);
+  background: rgba(232, 134, 10, 0.08);
+}
+
+.info-box--caution::before {
+  content: "!";
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
+/* A box with nothing in it is a box with no reason to be on the page.
+   The selector repeats the class so it outranks .info-box itself, and
+   it leaves .selection-note[hidden] and .pv-roof-note:empty alone. */
+.info-box.info-box:empty,
+.info-box-line:empty {
+  display: none;
+}
+
+/* display: flex above outranks the browser rule for [hidden], the same trap
+   that once shipped an empty grey badge on every card. */
+.info-box[hidden] {
+  display: none;
+}
+
+.info-box-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.info-box-title {
+  margin: 0 0 5px;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.info-box-line {
+  margin: 0;
+  max-width: none;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Two sentences in one box stay two sentences. */
+.info-box-line + .info-box-line {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+@media print {
+  .info-box {
+    background: #fff;
+    border-color: #999;
+    color: #333;
+  }
 }

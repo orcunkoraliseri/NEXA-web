@@ -98,6 +98,18 @@ function getLPVDataForNeighbourhood(code) {
 }
 
 /**
+ * STAGE-07 task 7.5. Find a row by its label rather than by its position.
+ *
+ * The table used to be read as configs[0] to configs[3], so adding the site
+ * area row that CHV item 5 asks for would have shifted every value into the
+ * wrong cell in silence. D7.1.
+ */
+function lpvRowByLabel(configs, label) {
+    const row = configs.filter(function (r) { return r.label === label; })[0];
+    return row ? row.value : '—';
+}
+
+/**
  * Set the text content of an element by id.
  * @param {string} id
  * @param {string} value
@@ -115,14 +127,25 @@ function setText(id, value) {
 function populateLPVTable(code) {
     const { configs, results } = getLPVDataForNeighbourhood(code);
 
-    // Config rows (order matches LPV_DATA: Land Allocation, Usable Area, Module Capacity, Installed Capacity)
-    setText('cfg-land-allocation',    configs[0] ? configs[0].value : '—');
-    setText('cfg-usable-area',        configs[1] ? configs[1].value : '—');
-    setText('cfg-module-capacity',    configs[2] ? configs[2].value : '—');
-    setText('cfg-installed-capacity', configs[3] ? configs[3].value : '—');
+    // Config rows, addressed by label. See lpvRowByLabel above for why.
+    setText('cfg-site-area',          lpvRowByLabel(configs, 'Land / site area'));
+    setText('cfg-land-allocation',    lpvRowByLabel(configs, 'Land Allocation'));
+    setText('cfg-usable-area',        lpvRowByLabel(configs, 'Usable Area'));
+    setText('cfg-module-capacity',    lpvRowByLabel(configs, 'Module Capacity'));
+    setText('cfg-installed-capacity', lpvRowByLabel(configs, 'Installed Capacity (kWp)'));
+
+    // The specific yield is the last step of the chain and was never on screen,
+    // so a reader could not get from 80.9 kWp to 103.6 MWh/yr. CHV item 5.
+    setText('cfg-specific-yield',
+        LMN_CONFIG.lpv.specificYieldKWhPerKWpYr.toLocaleString() + ' kWh/kWp·yr');
 
     // Results rows (order matches LPV_DATA: Energy Generation)
     setText('res-energy-generation',  results[0] ? results[0].value : '—');
+
+    // STAGE-07 tasks 7.5 and 7.6, CHV Stage 7 items 5 and 6.
+    setText('lpv-uniformity-note',    LMN_CONFIG.lpv.uniformityNote);
+    setText('lpv-usable-note',        LMN_CONFIG.lpv.usableFractionNote);
+    setText('lpv-preliminary-note',   LMN_CONFIG.lpv.preliminaryNote);
 }
 
 // Maps energy_integrated selection values to their image paths and display labels
@@ -227,8 +250,17 @@ function initLPVPage() {
         }
     }
 
-    // Header indicators
-    renderLPVScale(65.2);
+    // Header indicators.
+    //
+    // DBG-033, 2026-08-12. The scale bar used to be called as
+    // renderLPVScale(65.2): a literal, identical on all 35 neighbourhoods,
+    // printed as "65.2 kWh/m²·yr" beside real results. It traces to no upstream
+    // document, no CSV and no calculation in this repository. CHV's release rule
+    // forbids an unsupported figure that looks like a normal result, and Stage 7
+    // item 7 forbids an energy number for anything without a model, so it is
+    // removed rather than explained. renderLPVScale is kept and unused: the bar
+    // itself is sound and can be called again the day a defined intensity
+    // exists for landscape PV.
     if (code) renderEnergyStatus(code);
 
     // Data table

@@ -212,8 +212,12 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
 
     if (energySelections.load && energySelections.load.length > 0) {
         energySelections.load.forEach(val => {
-            const displayVal = "ThermalLoad"; // Fixed label for thermal load image
-            const label = "Thermal Load";
+            // Task 3.1: one label and one icon path, from LMN_CONFIG. The
+            // literal "ThermalLoad" that used to be here 404s on GitHub Pages,
+            // where the filesystem is case sensitive and the file is
+            // thermalload.png.
+            const sel = LMN_CONFIG.selection('load', val);
+            const label = sel.label;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const activeClass = (isClickable && currentLayer === 'energy') ? 'sidebar-item--active' : '';
             const _envelopeSb = currentEnvelope;
@@ -221,7 +225,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
 
             html += `
                 <div class="sidebar-item ${clickableClass} ${activeClass}" ${dataset}>
-                    <img src="Content/Images_Layer2_ThermalLoad/${displayVal}.png" alt="${label}" onerror="this.style.display='none'">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -236,25 +240,13 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
                 <h3 class="sidebar-subtitle">Energy Demand</h3>
                 <div class="sidebar-items-grid">`;
 
-    const demandLabels = {
-        'cop4': 'Heat Pump COP 4',
-        'cop3.5': 'HVAC COP 3.5',
-        'cop3': 'HVAC COP 3',
-        'dhw': 'DHW',
-        'appliances': 'Appliances and Equipment'
-    };
-    const demandImages = {
-        'cop4': 'HeatPump_COP4',
-        'cop3.5': 'HVAC_COP3.5',
-        'cop3': 'HVAC_COP3',
-        'dhw': 'dhw',
-        'appliances': 'AppliancesEquipment'
-    };
-
+    // Task 3.1: labels and icon paths come from LMN_CONFIG. The two maps that
+    // stood here named the same measure differently from every other page and
+    // built four of their five image paths in the wrong case.
     if (energySelections.demand && energySelections.demand.length > 0) {
         energySelections.demand.forEach(val => {
-            const label = demandLabels[val] || val;
-            const imgName = demandImages[val] || val;
+            const sel = LMN_CONFIG.selection('demand', val);
+            const label = sel.label;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const activeClass = (isClickable && currentLayer === 'energy') ? 'sidebar-item--active' : '';
             const _envelopeSb2 = currentEnvelope;
@@ -262,7 +254,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
 
             html += `
                 <div class="sidebar-item ${clickableClass} ${activeClass}" ${dataset}>
-                    <img src="Content/Images_Layer2_EnergyDemand/${imgName}.png" alt="${label}" onerror="this.style.display='none'">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -277,16 +269,12 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
                 <h3 class="sidebar-subtitle">Energy Generation</h3>
                 <div class="sidebar-items-grid">`;
 
-    const generationLabels = {
-        'pv_roof': 'PV on Roof', 'pv_facade': 'PV on Facade',
-        'pvt_roof': 'PV-T on Roof', 'pvt_facade': 'PV-T on Facade',
-        'stc_roof': 'STC on Roof', 'stc_facade': 'STC on Facade',
-        'biomass': 'Biomass', 'wind': 'Wind', 'geothermal': 'Geothermal'
-    };
-
+    // Task 3.1, same reason. The path used to be built by interpolating the
+    // display label, "PV on Roof.png", against a file named "pv on roof.png".
     if (energySelections.generation && energySelections.generation.length > 0) {
         energySelections.generation.forEach(val => {
-            const label = generationLabels[val] || val;
+            const sel = LMN_CONFIG.selection('generation', val);
+            const label = sel.label;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             // Make generation active if currentLayer is 'pv' AND it's a visualization mode
             const activeClass = (isClickable && currentLayer === 'pv') ? 'sidebar-item--active' : '';
@@ -295,7 +283,7 @@ function generateLayer1Block(energySelections, isClickable, currentLayer, nuCode
 
             html += `
                 <div class="sidebar-item ${clickableClass} ${activeClass}" ${dataset}>
-                    <img src="Content/Images_Layer2_EnergyGeneration/${label}.png" alt="${label}" onerror="this.style.display='none'">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -320,21 +308,20 @@ function generateLayer2Block(mobilitySelections, isClickable, currentLayer, nuCo
                 <h3 class="sidebar-subtitle">Transportation</h3>
                 <div class="sidebar-items-grid">`;
 
-    const transportLabels = {
-        'ev': 'EV', 'ev_public_transport': 'EV Public Transport',
-        'ev_charging_stations': 'EV Charging Stations', 'v2g_stations': 'V2G Stations'
-    };
-
+    // STAGE-05 task 5.4, DBG-006. The label and the image path both come from
+    // LMN_CONFIG.selectionLabels. Nothing interpolates a display label into a
+    // filename any more: that is what 404s on the case sensitive live server.
     if (mobilitySelections.transportation && mobilitySelections.transportation.length > 0) {
         mobilitySelections.transportation.forEach(val => {
-            const label = transportLabels[val] || val;
+            const sel = LMN_CONFIG.selection('transportation', val);
+            const label = sel.label;
             const clickableClass = isClickable ? 'sidebar-item--clickable' : '';
             const _envelopeSb3 = currentEnvelope;
             const dataset = isClickable ? `data-target="layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(nuCode)}&envelope=${encodeURIComponent(_envelopeSb3)}"` : '';
 
             html += `
                 <div class="sidebar-item ${clickableClass}" ${dataset}>
-                    <img src="Content/Images_Layer3_Transportation/${label}.png" alt="${label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -349,17 +336,13 @@ function generateLayer2Block(mobilitySelections, isClickable, currentLayer, nuCo
                 <h3 class="sidebar-subtitle">Mobility</h3>
                 <div class="sidebar-items-grid">`;
 
-    const mobilityLabels = {
-        'bicycle_infrastructure': 'Bicycle Infrastructure',
-        'pedestrian_oriented_design': 'Pedestrian-oriented design'
-    };
-
     if (mobilitySelections.mobility && mobilitySelections.mobility.length > 0) {
         mobilitySelections.mobility.forEach(val => {
-            const label = mobilityLabels[val] || val;
+            const sel = LMN_CONFIG.selection('mobility', val);
+            const label = sel.label;
             html += `
                 <div class="sidebar-item">
-                    <img src="Content/Images_Layer3_Mobility/${label}.png" alt="${label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -382,13 +365,13 @@ function generateLayer3Block(greenSelections, isClickable, currentLayer, nuCode)
     html += `<div class="sidebar-block">
                 <h3 class="sidebar-subtitle">Infrastructure</h3>
                 <div class="sidebar-items-grid">`;
-    const infraLabels = { 'green_roofs': 'Green Roofs', 'vertical_greening_systems': 'Vertical Greening Systems', 'linear_greenery': 'Linear Greenery', 'green_spaces': 'Green Spaces' };
     if (greenSelections.infrastructure && greenSelections.infrastructure.length > 0) {
         greenSelections.infrastructure.forEach(val => {
-            const label = infraLabels[val] || val;
+            const sel = LMN_CONFIG.selection('infrastructure', val);
+            const label = sel.label;
             html += `
                 <div class="sidebar-item">
-                    <img src="Content/Images_Layer4_Infrastructure/${label}.png" alt="${label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -400,13 +383,13 @@ function generateLayer3Block(greenSelections, isClickable, currentLayer, nuCode)
     html += `<div class="sidebar-block">
                 <h3 class="sidebar-subtitle">Urban Agriculture</h3>
                 <div class="sidebar-items-grid">`;
-    const agLabels = { 'roof_gardens': 'Roof Gardens', 'food_gardens': 'Food Gardens' };
     if (greenSelections.urban_agriculture && greenSelections.urban_agriculture.length > 0) {
         greenSelections.urban_agriculture.forEach(val => {
-            const label = agLabels[val] || val;
+            const sel = LMN_CONFIG.selection('urbanAgriculture', val);
+            const label = sel.label;
             html += `
                 <div class="sidebar-item">
-                    <img src="Content/Images_Layer4_UrbanAgriculture/${label}.png" alt="${label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
+                    <img src="${sel.image}" alt="${label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${label}</span>
                 </div>
             `;
@@ -418,16 +401,12 @@ function generateLayer3Block(greenSelections, isClickable, currentLayer, nuCode)
     html += `<div class="sidebar-block">
                 <h3 class="sidebar-subtitle">Energy-Integrated GI</h3>
                 <div class="sidebar-items-grid">`;
-    const integratedInfo = {
-        'pv_green_roofs': { img: 'pv-green roofs integrated modules.png', label: 'PV-Green Roofs Integrated Modules' },
-        'pv_vgs':         { img: 'lpv.png', label: 'Landscape PV' }
-    };
     if (greenSelections.energy_integrated && greenSelections.energy_integrated.length > 0) {
         greenSelections.energy_integrated.forEach(val => {
-            const info = integratedInfo[val] || { img: `${val}.png`, label: val };
+            const info = LMN_CONFIG.selection('energyIntegrated', val);
             html += `
                 <div class="sidebar-item">
-                    <img src="Content/Images_Layer4_EnergyIntegratedGI/${info.img}" alt="${info.label}" onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='40px'; this.style.minWidth='40px';">
+                    <img src="${info.image}" alt="${info.label}" onerror="LMN_CONFIG.iconMissing(this)">
                     <span>${info.label}</span>
                 </div>
             `;

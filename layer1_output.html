@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View compatible neighbourhood configurations based on your design parameters.">
     <title>Neighbourhood Results | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -49,6 +49,9 @@
                         <th>Neighbourhoods</th>
                         <th>Properties</th>
                         <th>Buildings</th>
+                        <!-- D2.7, CHV Stage 2 item 4 -->
+                        <th>Number of buildings</th>
+                        <th>Floor area (m&sup2;, total)</th>
                     </tr>
                 </thead>
                 <tbody id="results-body">
@@ -56,28 +59,26 @@
                 </tbody>
             </table>
         </div>
+
+        <!-- DBG-027, task 3.12: reasons for any neighbourhood withheld from the
+             chosen climate. Filled by js/app.js, empty when there is nothing
+             to report. -->
+        <div id="data-gap-notes"></div>
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
+            <a class="footer-doc-link" href="documentation.html#sec-archetypes">Methodology: Neighbourhood archetypes</a>
         </footer>
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/app.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/app.js?v=6"></script>
 
-    <!-- 3D Viewer Button -->
-    <div id="nav-modal" class="modal">
-        <div class="modal-content">
-            <h3>Neighborhood Navigation</h3>
-            <p>Would you like to navigate the Neighbourhood Unit?</p>
-            <div class="modal-buttons">
-                <button id="btn-yes" class="confirm-btn">Yes</button>
-                <button id="btn-no" class="cancel-btn">No</button>
-            </div>
-        </div>
-    </div>
+    <!-- The 3D confirmation popup that stood here was removed on 2026-08-10,
+         D2.8. "View 3D" is now a labelled button on every row and opens the
+         viewer directly. -->
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EV & V2G mobility output and energy breakdown for the selected neighbourhood.">
     <title>EV &amp; V2G Mobility Output | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -39,6 +39,9 @@
                 <!-- Header -->
                 <header class="header">
                     <h1 id="neighbourhood-title">Layer 3: EV &amp; V2G Mobility Output</h1>
+                    <!-- STAGE-06 task 6.9, CHV Stage 6 item 9. -->
+                    <p class="status-badge-line"><span class="status-badge">Preliminary</span></p>
+                    <p id="ev-preliminary-note" class="selection-note info-box"></p>
                 </header>
 
                 <!-- Top Disclaimer Box -->
@@ -54,6 +57,16 @@
                 <!-- Visual Header: single row of image cards -->
                 <div id="ev-visual-header" class="ev-visual-header-row"></div>
 
+                <!-- STAGE-06 task 6.2, CHV Stage 6 item 2. With no scenario in
+                     the session this block is the whole page: no table, no
+                     numbers. js/ev-v2g-breakdown.js decides which of the two is
+                     shown, and it fills the text from LMN_CONFIG.ev. -->
+                <section id="ev-empty-state" class="empty-state" hidden>
+                    <h2 id="ev-empty-title"></h2>
+                    <p id="ev-empty-body"></p>
+                    <a id="ev-empty-link" class="back-button" href="layer3_mobility_selection.html">Go to mobility selection</a>
+                </section>
+
                 <table id="ev-v2g-table" class="ev-v2g-table">
                     <thead>
                         <tr>
@@ -62,11 +75,18 @@
                             <th>Results</th>
                         </tr>
                     </thead>
+                    <!-- STAGE-06 tasks 6.4 to 6.7, CHV Stage 6 items 4, 5, 6 and 7.
+                         Every label and every unit below is written by
+                         js/ev-v2g-breakdown.js from LMN_CONFIG.ev, which holds the
+                         RT01 terminology. The markup carries no wording of its own,
+                         so "10 kW / day", an invalid composite unit, and two boxes
+                         both called "Net Energy Balance" cannot come back by editing
+                         this file. -->
                     <tbody>
                         <!-- Row 1 -->
                         <tr>
                             <td>
-                                <span class="metric-label">EV Penetration Rate</span>
+                                <span class="metric-label" id="lbl-ev-ownership"></span>
                                 <span id="cfg-ev-penetration" class="metric-value">—</span>
                             </td>
                             <td>
@@ -74,7 +94,7 @@
                                 <span id="param-num-hh" class="metric-value">—</span>
                             </td>
                             <td>
-                                <span class="metric-label">Total EV Energy Demand</span>
+                                <span class="metric-label">Total EV charging demand</span>
                                 <span id="res-total-ev-demand" class="metric-value">—</span>
                                 <span class="metric-unit">kWh/day</span>
                             </td>
@@ -82,16 +102,17 @@
                         <!-- Row 2 -->
                         <tr>
                             <td>
-                                <span class="metric-label">Daily Energy Demand</span>
+                                <span class="metric-label" id="lbl-daily-demand"></span>
                                 <span id="cfg-daily-demand" class="metric-value">—</span>
+                                <span class="metric-unit" id="unit-daily-demand"></span>
                             </td>
                             <td>
-                                <span class="metric-label">Total Floor Area</span>
+                                <span class="metric-label">Heated and cooled floor area</span>
                                 <span id="param-floor-area" class="metric-value">—</span>
                                 <span class="metric-unit">m²</span>
                             </td>
                             <td>
-                                <span class="metric-label">Storage Loss</span>
+                                <span class="metric-label">Storage loss</span>
                                 <span id="res-storage-loss" class="metric-value">—</span>
                                 <span class="metric-unit">kWh/day</span>
                             </td>
@@ -99,66 +120,84 @@
                         <!-- Row 3 -->
                         <tr>
                             <td>
-                                <span class="metric-label">Charging Efficiency</span>
+                                <span class="metric-label" id="lbl-charging-eff"></span>
                                 <span id="cfg-charging-eff" class="metric-value">—</span>
                             </td>
                             <td></td>
                             <td>
-                                <span class="metric-label">Net Energy Balance</span>
+                                <span class="metric-label" id="lbl-net-total"></span>
                                 <span id="res-net-balance-kwh" class="metric-value">—</span>
-                                <span class="metric-unit">kWh/day</span>
+                                <span class="metric-unit" id="unit-net-total"></span>
                             </td>
                         </tr>
                         <!-- Row 4 -->
                         <tr>
                             <td>
-                                <span class="metric-label">V2G Participation Rate</span>
+                                <span class="metric-label" id="lbl-v2g-participation"></span>
                                 <span id="cfg-v2g-participation" class="metric-value">—</span>
                             </td>
                             <td></td>
                             <td>
-                                <span class="metric-label">Net Energy Balance</span>
+                                <span class="metric-label" id="lbl-net-intensity"></span>
                                 <span id="res-net-balance-kwh-m2" class="metric-value">—</span>
-                                <span class="metric-unit">kWh/m²-day</span>
+                                <span class="metric-unit" id="unit-net-intensity"></span>
                             </td>
                         </tr>
                         <!-- Row 5 -->
                         <tr>
                             <td>
-                                <span class="metric-label">Battery Efficiency</span>
+                                <span class="metric-label" id="lbl-discharge-eff"></span>
                                 <span id="cfg-battery-eff" class="metric-value">—</span>
                             </td>
                             <td></td>
                             <td>
-                                <span class="metric-label">V2G Power Available</span>
+                                <span class="metric-label" id="lbl-v2g-energy"></span>
                                 <span id="res-v2g-power" class="metric-value">—</span>
-                                <span class="metric-unit">kWh/day</span>
+                                <span class="metric-unit" id="unit-v2g-energy"></span>
                             </td>
                         </tr>
                         <!-- Row 6 -->
                         <tr>
                             <td>
-                                <span class="metric-label">Discharge Capacity</span>
+                                <span class="metric-label" id="lbl-v2g-export-per-ev"></span>
                                 <span id="cfg-discharge-cap" class="metric-value">—</span>
+                                <span class="metric-unit" id="unit-v2g-export-per-ev"></span>
                             </td>
                             <td></td>
-                            <td></td>
+                            <td>
+                                <span class="metric-label">Status</span>
+                                <span id="res-status" class="metric-value">—</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- STAGE-06 task 6.8, CHV Stage 6 item 8. The direction of the
+                     sign, in words, under the numbers it applies to. D6.11 keeps
+                     the ISO 52000-1 and ASHRAE 228 convention, where energy the
+                     grid delivers is positive. -->
+                <aside id="ev-notes-box" class="info-box">
+                    <div class="info-box-body">
+                        <p class="info-box-title">How to read these numbers</p>
+                        <p id="ev-sign-note" class="selection-note info-box-line"></p>
+                        <p id="ev-intensity-note" class="selection-note info-box-line"></p>
+                        <p id="ev-discharge-eff-note" class="selection-note info-box-line"></p>
+                    </div>
+                </aside>
             </div>
         </div>
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
+            <a class="footer-doc-link" href="documentation.html#sec-mobility">Methodology: Mobility, EV and V2G methodology</a>
         </footer>
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/ev-v2g-breakdown.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/ev-v2g-breakdown.js?v=6"></script>
 </body>
 
 </html>

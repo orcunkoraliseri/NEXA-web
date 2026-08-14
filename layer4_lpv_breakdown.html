@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LPV Profile visualization for neighbourhood configurations.">
     <title>LPV Profile | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -39,7 +39,14 @@
                 <!-- Header -->
                 <header class="header">
                     <h1 id="neighbourhood-title">Layer 4: Land-PV Profile</h1>
-                    <!-- Energy indicators row: Energy Status + PV Scale -->
+                    <!-- STAGE-07 task 7.6, CHV Stage 7 item 6, D7.7. -->
+                    <p class="status-badge-line"><span class="status-badge">Preliminary</span></p>
+                    <!-- Energy indicators row: Energy Status.
+                         DBG-033: the scale bar that sat here displayed a literal
+                         65.2 kWh/m²·yr, the same on all 35 neighbourhoods and
+                         traceable to nothing. The container is kept, empty, so
+                         the row keeps its layout and the bar can return the day
+                         a defined intensity exists. -->
                     <div class="energy-indicators-row">
                         <div id="energy-status-container" class="energy-status-header"></div>
                         <div id="lpv-scale-container" class="eui-scale-container"></div>
@@ -70,31 +77,51 @@
                                 <th>Results</th>
                             </tr>
                         </thead>
+                        <!-- STAGE-07 tasks 7.4 and 7.5, CHV Stage 7 items 4 and 5.
+                             The four configuration rows are the calculation, in
+                             order, so a reader can close the arithmetic without
+                             leaving the page: site area, then the share of it
+                             allocated, then the share of THAT which carries
+                             modules, then the capacity, then the generation.
+                             Until 2026-08-12 the second and third were applied in
+                             parallel and the result was 5.87 times too large. -->
                         <tbody>
-                            <!-- Row 1: Land Allocation | Module Capacity | Energy Generation -->
+                            <!-- Row 1: Land / site area | Module Capacity | Energy Generation -->
                             <tr>
                                 <td>
-                                    <span class="metric-label">Land Allocation</span>
-                                    <span id="cfg-land-allocation" class="metric-value">—</span>
+                                    <span class="metric-label">Land / site area</span>
+                                    <span id="cfg-site-area" class="metric-value">—</span>
                                 </td>
                                 <td>
                                     <span class="metric-label">Module Capacity</span>
                                     <span id="cfg-module-capacity" class="metric-value">—</span>
                                 </td>
                                 <td>
-                                    <span class="metric-label">Energy Generation</span>
+                                    <span class="metric-label">Annual energy generation</span>
                                     <span id="res-energy-generation" class="metric-value">—</span>
                                 </td>
                             </tr>
-                            <!-- Row 2: Usable Area | Installed Capacity | (empty) -->
+                            <!-- Row 2: Land Allocation | Installed Capacity | (empty) -->
+                            <tr>
+                                <td>
+                                    <span class="metric-label">Land Allocation</span>
+                                    <span id="cfg-land-allocation" class="metric-value">—</span>
+                                </td>
+                                <td>
+                                    <span class="metric-label">Installed Capacity</span>
+                                    <span id="cfg-installed-capacity" class="metric-value">—</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <!-- Row 3: Usable Area | Specific yield | (empty) -->
                             <tr>
                                 <td>
                                     <span class="metric-label">Usable Area</span>
                                     <span id="cfg-usable-area" class="metric-value">—</span>
                                 </td>
                                 <td>
-                                    <span class="metric-label">Installed Capacity</span>
-                                    <span id="cfg-installed-capacity" class="metric-value">—</span>
+                                    <span class="metric-label">Specific yield</span>
+                                    <span id="cfg-specific-yield" class="metric-value">—</span>
                                 </td>
                                 <td></td>
                             </tr>
@@ -103,19 +130,41 @@
 
                 </div>
 
+                <!-- STAGE-07 tasks 7.5 and 7.6, CHV Stage 7 items 5 and 6. Why
+                     every neighbourhood shows the same number, and what the
+                     10 % usable fraction is. Filled from LMN_CONFIG.lpv. -->
+                <aside class="info-box">
+                    <div class="info-box-body">
+                        <p class="info-box-title">How this number is built</p>
+                        <p id="lpv-uniformity-note" class="selection-note info-box-line"></p>
+                        <p id="lpv-preliminary-note" class="selection-note info-box-line"></p>
+                    </div>
+                </aside>
+
+                <!-- The usable fraction is the one figure on this page that sits
+                     outside the published range, so it is the one that reads as
+                     a limitation rather than as an explanation. -->
+                <aside class="info-box info-box--caution">
+                    <div class="info-box-body">
+                        <p class="info-box-title">Known limitation</p>
+                        <p id="lpv-usable-note" class="selection-note info-box-line"></p>
+                    </div>
+                </aside>
+
             </div>
         </div>
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
+            <a class="footer-doc-link" href="documentation.html#sec-green">Methodology: Landscape PV methodology</a>
         </footer>
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/lpv.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/lpv.js?v=6"></script>
 </body>
 
 </html>

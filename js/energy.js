@@ -13,6 +13,166 @@ function getNeighbourhoodFromURL() {
 }
 
 /**
+ * DBG-024, P0, task 3.11.
+ *
+ * The stored `total` is the real EUI, the EnergyPlus "Total End Uses" row.
+ * The stored `breakdown` holds only six of the fourteen end uses EnergyPlus
+ * reports, so summing it understates the EUI. Until 2026-08-10 this page
+ * summed the six and showed 72.3 while the final summary page showed the
+ * stored 86.8 for the same design.
+ *
+ * This returns the residual, total minus the six, which is the seven dropped
+ * buckets. It is never negative and is 0 when the six already add up.
+ *
+ * @param {Object} dataset - a stored { total, breakdown[], pv } object
+ * @returns {number} the residual in kWh/m²·yr, one decimal place
+ */
+function otherEndUseResidual(dataset) {
+    if (!dataset || !Array.isArray(dataset.breakdown)) return 0;
+    const six = dataset.breakdown.reduce((sum, item) => sum + item.value, 0);
+    const residual = (dataset.total || 0) - six;
+    return residual > 0.05 ? parseFloat(residual.toFixed(1)) : 0;
+}
+
+/**
+ * DBG-024. Append the residual as a seventh, labelled block, so the chart adds
+ * up to the number printed above it.
+ * @param {Array} breakdown - the six stored end uses
+ * @param {number} residual - from otherEndUseResidual
+ * @returns {Array} six or seven blocks
+ */
+function withOtherEndUse(breakdown, residual) {
+    if (!residual) return breakdown;
+    return breakdown.concat([{
+        name: (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.otherEndUseLabel : 'Other',
+        value: residual,
+        description: (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.otherEndUseDescription : ''
+    }]);
+}
+
+/**
+ * Task 3.4, D3.2. State in one sentence what the number above actually is.
+ * Measured, not assumed: site energy, the EnergyPlus "Total End Uses" row,
+ * electricity plus gas, with no source energy multipliers.
+ */
+function renderEnergyBasisNote() {
+    const el = document.getElementById('energy-basis-note');
+    if (!el || typeof LMN_CONFIG === 'undefined') return;
+    el.textContent = LMN_CONFIG.units.energyBasisSentence;
+}
+
+/**
+ * Task 3.2, D3.5, CHV Stage 3 item 2. Show the baseline beside the selected
+ * case, with the change in absolute and percentage terms.
+ *
+ * The baseline is the building with NO measure applied, so it is the DEFAULT
+ * scenario of the STANDARD envelope for the chosen climate. Choosing the high
+ * performance envelope does not move it: that envelope IS a measure, EEM1,
+ * verified at 245 of 245 rows. Before this, ticking one measure made the
+ * envelope choice change nothing visible on screen.
+ *
+ * @param {string} envelope - the active envelope key
+ * @param {string} neighbourhoodCode - the active NU
+ * @param {number} selectedTotal - the EUI now on screen
+ */
+function renderBaselineComparison(envelope, neighbourhoodCode, selectedTotal) {
+    const el = document.getElementById('baseline-comparison');
+    if (!el) return;
+
+    // The standard arm of the same climate, whatever the user picked.
+    const standardEnvelope = LMN_CONFIG.baselineEnvelopeFor(envelope);
+    const baselineData = getEnergyData(standardEnvelope, neighbourhoodCode, 'DEFAULT');
+
+    if (!baselineData || typeof selectedTotal !== 'number') {
+        el.innerHTML = '';
+        return;
+    }
+
+    const baseline = baselineData.total;
+    const change = selectedTotal - baseline;
+    const percent = baseline ? (change / baseline) * 100 : 0;
+    const unit = (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.units.euiCompact : 'kWh/m²·yr';
+    // Task 3.3. Dense table, so the compact unit stays and the long form is
+    // the tooltip. The caption under the EUI scale carries the words.
+    const long = (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.units.eui : '';
+    const sign = change > 0 ? '+' : '';
+    const direction = change < 0 ? 'saving' : (change > 0 ? 'increase' : 'no change');
+
+    el.innerHTML = `
+    <div class="comparison-row">
+      <span class="comparison-label">Baseline</span>
+      <span class="comparison-value">${baseline.toFixed(1)}</span>
+      <span class="comparison-unit" title="${long}">${unit}</span>
+      <span class="comparison-note">${LMN_CONFIG.envelopeLabel(standardEnvelope)}, no measure applied</span>
+    </div>
+    <div class="comparison-row comparison-row--selected">
+      <span class="comparison-label">Selected</span>
+      <span class="comparison-value">${selectedTotal.toFixed(1)}</span>
+      <span class="comparison-unit" title="${long}">${unit}</span>
+      <span class="comparison-note">${LMN_CONFIG.envelopeLabel(envelope)}, with your selection</span>
+    </div>
+    <div class="comparison-row comparison-row--change">
+      <span class="comparison-label">Change</span>
+      <span class="comparison-value">${sign}${change.toFixed(1)}</span>
+      <span class="comparison-unit" title="${long}">${unit}</span>
+      <span class="comparison-note">${sign}${percent.toFixed(1)} %, ${direction}</span>
+    </div>
+  `;
+}
+
+/**
+ * Task 3.5. An assumptions and model info box, so a reader can tell what the
+ * number on this page was computed from without opening the documentation.
+ * @param {string} envelope - the active envelope key
+ * @param {string} neighbourhoodCode - the active NU
+ * @param {Object} energySelections - the user's Layer 2 selections
+ * @param {string} scenarioKey - the ladder rung the numbers came from
+ * @param {boolean} scenarioExact - false when the rung was adjusted by savings
+ */
+function renderAssumptionsBox(envelope, neighbourhoodCode, energySelections, scenarioKey, scenarioExact) {
+    const el = document.getElementById('assumptions-box');
+    if (!el || typeof LMN_CONFIG === 'undefined') return;
+
+    const climateKey = LMN_CONFIG.climateOfEnvelope(envelope);
+    const climate = LMN_CONFIG.climates.find(c => c.key === climateKey);
+    const measures = []
+        .concat((energySelections.load || []).map(v => LMN_CONFIG.selection('load', v).label))
+        .concat((energySelections.demand || []).map(v => LMN_CONFIG.selection('demand', v).label));
+    const snow = LMN_CONFIG.snowNote(climateKey);
+
+    // Task 3.1, D3.3. Name the rung of the simulated ladder, so a reader can
+    // tell which stored case the number came from and not only which boxes
+    // they ticked. The ladder is cumulative: each rung contains the one below.
+    const rungLabel = LMN_CONFIG.eemLabel(scenarioKey);
+    const rungDetail = LMN_CONFIG.eemDetail(scenarioKey);
+    const rung = scenarioExact
+        ? `${rungLabel}. ${rungDetail}`
+        : `Nearest simulated rung: ${rungLabel}. Your combination was not simulated on its own, so the remaining measure is applied to that rung as a saving. ${rungDetail}`;
+
+    const rows = [
+        ['Climate and standard', climate ? `${LMN_CONFIG.envelopeLabel(climateKey)}, ${climate.standard}` : LMN_CONFIG.envelopeLabel(envelope)],
+        ['Envelope', LMN_CONFIG.envelopeLabel(envelope)],
+        ['Measures applied', measures.length ? measures.join(', ') : 'None, this is the baseline building'],
+        ['Scenario', rung],
+        ['Energy basis', LMN_CONFIG.units.energyBasisSentence],
+        // Task 3.3, D6.0. One sentence, written out, rather than two adjectives
+        // a reader has to know the EnergyPlus vocabulary to decode.
+        ['Floor area basis', LMN_CONFIG.units.floorAreaBasisNote],
+        ['Simulation campaign', `${LMN_CONFIG.dataCampaign.climates}, ${LMN_CONFIG.dataCampaign.engine}`],
+        ['Data version', `${LMN_CONFIG.version}, updated ${LMN_CONFIG.lastUpdated}`],
+        ['Status', 'Simulation-backed']
+    ];
+    if (snow) rows.push(['Snow cover', snow]);
+
+    el.innerHTML = `
+    <h2 class="assumptions-title">Assumptions and model info</h2>
+    <dl class="assumptions-list">
+      ${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}
+    </dl>
+  `;
+}
+
+/**
  * Render the EUI scale bar showing where this neighbourhood's energy usage falls
  * @param {number} euiValue - The EUI value for the neighbourhood
  */
@@ -45,10 +205,19 @@ function renderEUIScale(euiValue) {
         color = `rgb(${r}, ${g}, ${b})`;
     }
 
+    // STAGE-03 task 3.3, D6.0. The compact unit stays, because it is what
+    // fits beside a large number, and the basis is written underneath it in
+    // words. Both strings come from LMN_CONFIG so that the day the basis
+    // changes, it changes in one place.
+    const unit  = LMN_CONFIG.units.euiCompact;
+    const basis = LMN_CONFIG.euiBasis();
+    const long  = LMN_CONFIG.units.eui;
+
     container.innerHTML = `
         <div class="eui-scale-display">
             <span class="eui-scale-value" style="color: ${color}">${euiValue.toFixed(1)}</span>
-            <span class="eui-scale-unit">kWh/m²·yr</span>
+            <span class="eui-scale-unit" title="${long}">${unit}</span>
+            <span class="eui-scale-basis">${basis}</span>
             <div class="eui-scale-bar">
                 <div class="eui-scale-indicator" style="left: ${position}%"></div>
             </div>
@@ -249,6 +418,18 @@ function renderTreemap(neighbourhoodCode) {
         if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
     }
 
+    // CHV, 2026-08-13. Second gate, before any number is read. See the note
+    // in js/config.js on dataGapNotice.
+    if (typeof LMN_CONFIG !== 'undefined') {
+        const gapNotice = LMN_CONFIG.dataGapNotice(neighbourhoodCode, envelope);
+        if (gapNotice && container) {
+            container.innerHTML = gapNotice;
+            if (legendContainer) legendContainer.innerHTML = '';
+            if (titleElement) titleElement.textContent = 'Energy Breakdown';
+            return;
+        }
+    }
+
     // Read load and demand selections from sessionStorage
     const selections = JSON.parse(
         sessionStorage.getItem('energySelections') || '{"load":[], "demand":[]}'
@@ -298,9 +479,26 @@ function renderTreemap(neighbourhoodCode) {
     const hasDhw = demandSelections.includes('dhw');
     const hasAppliances = demandSelections.includes('appliances');
 
+    // Task 3.1, D3.3. Which rung of the simulated ladder the number on screen
+    // came from. Assigned in the same branches that choose the dataset, never
+    // recomputed from the tick boxes a second time, so the name cannot drift
+    // away from the arithmetic. `scenarioExact` goes false when the selection
+    // is a combination the campaign never stored and savings are applied on
+    // top of the nearest rung.
+    let scenarioKey = (baseLevel === "EEM1") ? "EEM1" : "DEFAULT";
+    let scenarioExact = true;
+
     if (loadSelections.includes('thermal_load')) {
-        energyData = baseIal || baseDefault;
-        colName = "Thermal Load";
+        // DBG-024: the stored total is authoritative here too, so the seventh
+        // block is added rather than the six being re-summed.
+        const ialSource = baseIal || baseDefault;
+        energyData = {
+            total: ialSource.total,
+            breakdown: withOtherEndUse(ialSource.breakdown, otherEndUseResidual(ialSource)),
+            pv: ialSource.pv
+        };
+        colName = LMN_CONFIG.selection('load', 'thermal_load').label;
+        if (baseIal) scenarioKey = "IAL";
     } else {
         // Baseline is EEM1 for high-performance envelope, DEFAULT for standard envelope
         const baseDataset = (baseLevel === "EEM1" && baseEem1) ? baseEem1 : baseDefault;
@@ -309,10 +507,13 @@ function renderTreemap(neighbourhoodCode) {
         if (hasHP) {
             if (hasDhw && hasAppliances && baseEem4) {
                 startDataset = baseEem4;
+                scenarioKey = "EEM4";
             } else if (hasDhw && baseEem3) {
                 startDataset = baseEem3;
+                scenarioKey = "EEM3";
             } else if (baseEem2) {
                 startDataset = baseEem2;
+                scenarioKey = "EEM2";
             } else {
                 startDataset = baseDataset;
             }
@@ -352,6 +553,7 @@ function renderTreemap(neighbourhoodCode) {
                 const saving = dhwSavings[item.name] || 0;
                 item.value = Math.max(0, item.value - saving);
             });
+            scenarioExact = false;
         }
 
         // Apply Appliances savings if selected but not in starting dataset (not started from EEM4)
@@ -361,22 +563,31 @@ function renderTreemap(neighbourhoodCode) {
                 const saving = appSavings[item.name] || 0;
                 item.value = Math.max(0, item.value - saving);
             });
+            scenarioExact = false;
         }
 
-        // Recalculate total
-        const total = breakdown.reduce((sum, item) => sum + item.value, 0);
+        // DBG-024, P0, task 3.11. The total is NOT the sum of the six charted
+        // end uses. The seven end uses this tool does not chart are carried
+        // through as a constant residual, taken from the starting dataset,
+        // because no measure on this page touches them. When the selection
+        // maps exactly onto a stored scenario, which is the usual case, the
+        // number below is identical to the stored total.
+        const other = otherEndUseResidual(startDataset);
+        const sixSum = breakdown.reduce((sum, item) => sum + item.value, 0);
+        const total = sixSum + other;
 
         energyData = {
             total: parseFloat(total.toFixed(1)),
-            breakdown: breakdown,
+            breakdown: withOtherEndUse(breakdown, other),
             pv: pv
         };
 
         // Determine title
+        // Task 3.1: the same names the sidebar and the finish page use.
         const parts = [];
-        if (hasHP) parts.push("Heat Pump (COP 4)");
-        if (hasDhw) parts.push("Heat Pump for DHW");
-        if (hasAppliances) parts.push("Efficient Appliances");
+        if (hasHP) parts.push(LMN_CONFIG.selection('demand', 'cop4').label);
+        if (hasDhw) parts.push(LMN_CONFIG.selection('demand', 'dhw').label);
+        if (hasAppliances) parts.push(LMN_CONFIG.selection('demand', 'appliances').label);
 
         if (parts.length === 0) {
             colName = envelope.startsWith("high-performance-") ? "High-Performance Envelope" : "Baseline";
@@ -385,29 +596,23 @@ function renderTreemap(neighbourhoodCode) {
         }
     }
 
-    const envelopeNames = {
-        'necb-2017': 'Standard (NECB Zone 6, Montréal)',
-        'ashrae': 'Standard (ASHRAE)',
-        'necb-z4': 'NECB Zone 4 (Windsor)',
-        'necb-z5': 'NECB Zone 5 (Toronto / Ottawa)',
-        'necb-z6': 'NECB Zone 6 (Montréal)',
-        'necb-z7a': 'NECB Zone 7A (Calgary)',
-        'necb-z7b': 'NECB Zone 7B (Whitehorse)',
-        'necb-z8': 'NECB Zone 8 (Yellowknife)',
-        'high-performance-necb': 'High Performance based on NECB',
-        'high-performance-ashrae': 'High Performance based on ASHRAE',
-        'high-performance-z4': 'High Perf. Zone 4 (Windsor)',
-        'high-performance-z5': 'High Perf. Zone 5 (Toronto / Ottawa)',
-        'high-performance-z6': 'High Perf. Zone 6 (Montréal)',
-        'high-performance-z7a': 'High Perf. Zone 7A (Calgary)',
-        'high-performance-z7b': 'High Perf. Zone 7B (Whitehorse)',
-        'high-performance-z8': 'High Perf. Zone 8 (Yellowknife)'
-    };
+    // Envelope display names come from LMN_CONFIG, D0.1 / DBG-016. The local
+    // copy that used to sit here named four cities that were never simulated.
+    const envelopeNames = LMN_CONFIG.envelopeLabels;
     const envName = envelopeNames[envelope] || envelope;
     titleElement.textContent = `Layer 2: ${colName} Breakdown of ${neighbourhoodCode} (${envName})`;
 
     // Render EUI Scale
     renderEUIScale(energyData.total);
+
+    // Task 3.4, D3.2: name the energy basis next to the value.
+    renderEnergyBasisNote();
+
+    // Task 3.2, D3.5: baseline, selected and change, together.
+    renderBaselineComparison(envelope, neighbourhoodCode, energyData.total);
+
+    // Task 3.5: assumptions and model info.
+    renderAssumptionsBox(envelope, neighbourhoodCode, selections, scenarioKey, scenarioExact);
 
     // Render Energy Status icon
     renderEnergyStatus(neighbourhoodCode);
@@ -427,10 +632,9 @@ function renderTreemap(neighbourhoodCode) {
     // Use full breakdown from the new data
     let filteredBreakdown = energyData.breakdown;
 
-    // Recalculate total from filtered data
-    const filteredTotal = filteredBreakdown.reduce(
-        (sum, item) => sum + item.value, 0
-    );
+    // DBG-024. Percentages are taken against the reported EUI, which the
+    // seventh block now makes the breakdown add up to.
+    const filteredTotal = energyData.total;
 
     // Calculate percentages and filter zero values
     const breakdown = calculatePercentages(filteredBreakdown, filteredTotal);
@@ -476,8 +680,11 @@ function renderTreemap(neighbourhoodCode) {
             div.innerHTML = `<span class="treemap-value" style="font-size: 0.8rem">${item.value.toFixed(1)}</span>`;
         }
 
-        // Tooltip on hover
-        div.title = `${item.name}: ${item.value.toFixed(1)} kWh/m²·yr (${item.percentage}%)`;
+        // Tooltip on hover. DBG-024: the "Other" block explains itself here,
+        // because its label alone would not tell the reader what is in it.
+        div.title = item.description
+            ? `${item.name}: ${item.value.toFixed(1)} kWh/m²·yr (${item.percentage}%). ${item.description}`
+            : `${item.name}: ${item.value.toFixed(1)} kWh/m²·yr (${item.percentage}%)`;
 
         container.appendChild(div);
     });
@@ -502,6 +709,8 @@ function renderLegend(breakdown, container) {
             <span class="legend-name">${item.name}</span>
             <span class="legend-value">${item.value.toFixed(1)} (${item.percentage}%)</span>
         `;
+        // DBG-024: the "Other" block carries its contents in a tooltip.
+        if (item.description) legendItem.title = item.description;
         container.appendChild(legendItem);
     });
 }

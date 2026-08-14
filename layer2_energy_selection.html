@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select energy parameters for neighbourhood energy analysis.">
     <title>Energy Selection | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -65,11 +65,12 @@
                                 <button class="demand-card" data-category="demand" data-value="appliances">
                                     <img src="Content/Images_Layer2_EnergyDemand/appliancesequipment.png"
                                         alt="Appliances and Equipment">
-                                    <span>Appliances and Equipment</span>
+                                    <span>Efficient Appliances and Equipment</span>
                                 </button>
-                                <button class="demand-card" data-category="demand" data-value="ideal_air_load" disabled data-permanently-disabled>
+                                <button class="demand-card is-unavailable" data-category="demand" data-value="ideal_air_load" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyDemand/hvac_cop3.png" alt="Ideal Air Load">
                                     <span>Other (TBA)</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
                             </div>
                         </div>
@@ -88,43 +89,53 @@
                                     <img src="Content/Images_Layer2_EnergyGeneration/pv on facade.png"
                                         alt="PV on Facade">
                                     <span>PV on Facade</span>
+                                    <span class="card-status" id="pv-facade-status" hidden></span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="pvt_roof" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="pvt_roof" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/pv-t on roof.png"
                                         alt="PV-T on Roof">
                                     <span>PV-T on Roof</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="pvt_facade" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="pvt_facade" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/pv-t on facade.png"
                                         alt="PV-T on Facade">
                                     <span>PV-T on Facade</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="stc_roof" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="stc_roof" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/stc on roof.png" alt="STC on Roof">
                                     <span>STC on Roof</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="stc_facade" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="stc_facade" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/stc on facade.png"
                                         alt="STC on Facade">
                                     <span>STC on Facade</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="biomass" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="biomass" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/biomass.png" alt="Biomass">
                                     <span>Biomass</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="wind" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="wind" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/wind.png" alt="Wind">
                                     <span>Wind</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="geothermal" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="geothermal" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/geothermal.png" alt="Geothermal">
                                     <span>Geothermal</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card" data-category="generation" data-value="other_tba" disabled data-permanently-disabled>
+                                <button class="generation-card is-unavailable" data-category="generation" data-value="other_tba" disabled data-permanently-disabled>
                                     <img src="Content/Images_Layer2_EnergyGeneration/geothermal.png" alt="Other TBA">
                                     <span>Other (TBA)</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
                             </div>
+                            <p class="selection-note info-box" id="pv-facade-note" hidden></p>
                         </div>
                     </div>
 
@@ -143,9 +154,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/energy-selection.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/energy-selection.js?v=6"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LMN &mdash; References &amp; Methodology</title>
-    <link rel="stylesheet" href="css/styles.css?v=5" />
+    <link rel="stylesheet" href="css/styles.css?v=6" />
     <style>
         /* ===== Documentation page helpers (uses existing design tokens) ===== */
         .doc-page {
@@ -394,6 +394,7 @@
                 <li><a href="#sec-what-is-lmn">What is LMN</a></li>
                 <li><a href="#sec-layers">How the Four Layers Work</a></li>
                 <li><a href="#sec-pv">PV Methodology &amp; kWh/m&sup2; Definition</a></li>
+                <li><a href="#sec-rop">Ratio of Performance (RoP)</a></li>
                 <li><a href="#sec-standards">Standards &amp; Codes</a></li>
                 <li><a href="#sec-climate">Climate Zone &amp; Weather</a></li>
                 <li><a href="#sec-archetypes">Building Archetypes &amp; Sources</a></li>
@@ -402,6 +403,7 @@
                 <li><a href="#sec-green">Layer 4: Green Infrastructure / LPV</a></li>
                 <li><a href="#sec-resizing">Resizing Methodology</a></li>
                 <li><a href="#sec-validation">Validation Summary</a></li>
+                <li><a href="#sec-vintage-1983">1983 Vintage Envelope (Quebec)</a></li>
                 <li><a href="#sec-limitations">Limitations</a></li>
                 <li><a href="#sec-references">Publications &amp; References</a></li>
             </ol>
@@ -411,12 +413,50 @@
         <section class="doc-section" id="sec-what-is-lmn">
             <h2>A &mdash; What is LMN</h2>
             <p>
-                LMN is an interactive neighbourhood-energy explorer. The user composes a neighbourhood by typology
+                <strong>LMN stands for Layered Modular Neighbourhood.</strong> It is an interactive
+                neighbourhood energy explorer. The user composes a neighbourhood by typology
                 (Layer 1), then overlays energy demand + generation systems (Layer 2), electric mobility (Layer 3),
                 and green infrastructure (Layer 4). Behind each neighbourhood archetype sits a full EnergyPlus
                 simulation campaign across a ladder of energy-efficiency scenarios, so the user can compare code
                 baselines against progressively deeper retrofits.
             </p>
+
+            <h3>Intended use</h3>
+            <p>
+                LMN is an <strong>early stage comparison tool</strong>. It is meant for a planner, a
+                municipality or a researcher who wants to see how neighbourhood form, envelope standard,
+                on-site generation and electric mobility move a small set of energy indicators, before any
+                design work begins.
+            </p>
+            <p>It is <strong>not</strong>, in this version:</p>
+            <ul>
+                <li>a design or compliance tool for an individual building,</li>
+                <li>an optimisation engine: no formal optimisation method is implemented, so the tool
+                    never ranks the scenarios and never recommends one of them,</li>
+                <li>a substitute for a project specific energy model.</li>
+            </ul>
+
+            <h3>Coverage, and what each status word means</h3>
+            <p>
+                Seven climate arms are exposed and all seven are real simulation campaigns:
+                <strong>Vancouver (zone 4), Toronto / Ottawa (zone 5), Montr&eacute;al (zone 6),
+                Winnipeg (zone 7A), Fort McMurray (zone 7B), Chisasibi (zone 8)</strong>, each on
+                NECB 2017, and one <strong>ASHRAE 90.1</strong> arm. Each carries 35 neighbourhood
+                units and a five rung scenario ladder, and each has a high performance twin.
+                Montr&eacute;al additionally carries a 1983 vintage arm. The exceptions to that
+                coverage are listed in the limitations chapter and are not silent.
+            </p>
+            <p>Four words, and no others, describe the maturity of a number anywhere in this tool:</p>
+            <ul>
+                <li><strong>Simulation-backed:</strong> the figure comes from the EnergyPlus campaign.
+                    Layer 1 and Layer 2 results are in this class.</li>
+                <li><strong>Preliminary:</strong> the figure comes from a documented calculation chain
+                    rather than from a simulation. Layer 3 mobility and Layer 4 landscape PV are in
+                    this class, and both pages say so.</li>
+                <li><strong>In development:</strong> being worked on, no figure shown.</li>
+                <li><strong>Not modelled yet:</strong> no quantitative method exists, the option cannot
+                    be selected, and no figure is shown for it anywhere, including the exported scenario.</li>
+            </ul>
             
             <div class="doc-reports-box">
                 <h4>Detailed Reports &amp; Documentation</h4>
@@ -432,6 +472,12 @@
                         <a href="Content/References%20%26%20Methodology/Reports/Building_Energy_Modeling_Methodology_Overview.pdf" target="_blank" class="report-link">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
                             Building Energy Modeling Methodology Overview (PDF)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/LMN1983_NU_validation_all35.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            1983 Vintage Validation Report &mdash; All 35 NUs (PDF)
                         </a>
                     </li>
                 </ul>
@@ -474,32 +520,77 @@
                     array tilt = roof pitch.</li>
             </ul>
 
-            <h3>Assumptions (identical for native + Tier-3)</h3>
-            <p>Module efficiency 20% of aperture (pitched) / 200 W/m&sup2; roof power density (flat);
-            ground-coverage ratio (GCR) 0.40; DC&rarr;AC system losses 14%; inverter efficiency 96%;
-            azimuth = world south.</p>
+            <h3>Assumptions, and why two efficiency figures both belong here</h3>
+            <p>
+                The array assumptions are a property of the <strong>roof</strong>, not of the
+                neighbourhood. There are two roof groups, and they carry different figures because
+                the two figures measure different things. Common to both: DC&rarr;AC system losses
+                14%, inverter efficiency 96%, azimuth = world south.
+            </p>
+            <table class="doc-table">
+                <thead>
+                    <tr><th>&nbsp;</th><th>Flat roof</th><th>Pitched roof</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Neighbourhoods</strong></td>
+                        <td>31 of 35</td>
+                        <td>4 of 35: RC-R, RC-D, RC-ML, RC-T</td></tr>
+                    <tr><td><strong>Efficiency</strong></td>
+                        <td><strong>18.65%</strong> module efficiency, equivalent to about
+                            200&nbsp;W/m&sup2; of installed power density</td>
+                        <td><strong>20%</strong> of <em>aperture</em> area, with a 0.9 active-area
+                            fraction</td></tr>
+                    <tr><td><strong>Mounting</strong></td>
+                        <td>Fixed Open Rack, 45&deg; tilt</td>
+                        <td>Flush on the south-facing face, tilt = roof pitch</td></tr>
+                    <tr><td><strong>Ground-coverage ratio</strong></td>
+                        <td>0.40</td>
+                        <td>Does not apply: there is no row spacing on a flush array</td></tr>
+                </tbody>
+            </table>
+            <p class="doc-note">
+                <strong>Decisions D0.2 and D4.3, and defect DBG-013, closed 2026-08-10.</strong>
+                Three efficiency figures were visible in the tool at once and were treated as three
+                versions of one number. They were not. <strong>18.65%</strong> is the cell efficiency
+                the pipeline actually uses on a flat roof and <strong>20% of aperture</strong> is the
+                pitched-roof assumption, so both survive and each is now shown only where it applies.
+                The third, <strong>18.68%</strong>, was stored on all thirty-five neighbourhoods and
+                appears in <em>no</em> upstream source; it is deleted. Separately, the mounting and
+                ground-coverage rows had been reporting the flat-roof set for all thirty-five, so the
+                four house neighbourhoods were described as sitting on racks they do not have. Both
+                sets now live once in <code>js/config.js</code> and every page reads them from there.
+            </p>
 
             <h3>Units &amp; normalization</h3>
             <p>
-                PV intensity is reported as <strong>kWh per m&sup2; of gross (conditioned) floor area</strong> &mdash;
-                the <strong>same denominator as EUI</strong>. It is <strong>not</strong> normalized by roof area,
-                and <strong>not</strong> by footprint.
+                PV intensity is reported as <strong>kWh per m&sup2; of heated and cooled floor area</strong>,
+                the <strong>same denominator as EUI</strong>, so that the two can be compared and divided by one
+                another. It is <strong>not</strong> normalized by roof area, and <strong>not</strong> by footprint.
+                Section G defines that area exactly and tabulates it against the total building area.
             </p>
             <p>
                 <strong>Why it varies from one neighbourhood to another:</strong> the numerator (roof PV generation)
-                is limited by available roof area, while the denominator is the building&rsquo;s <em>total floor area</em>.
+                is limited by available roof area, while the denominator grows with every storey.
                 Low-rise forms (detached, row houses) have a large roof-area-per-floor-area ratio &rarr;
                 <strong>high</strong> intensity; tall forms (mid-/high-rise) spread the same rooftop over many
                 storeys &rarr; <strong>low</strong> intensity. This is physically expected, not an inconsistency.
-                Representative NECB-2017 values: Detached (RC-D) &asymp; 100.7, MidRise &asymp; 66&ndash;75,
+                Representative NECB-2017 values: Detached (RC-D) &asymp; 100.7, MidRise &asymp; 66 to 75,
                 HighRise (RC-HR1) &asymp; 45.8, (RC-HR2) &asymp; 26.0 kWh/m&sup2;.
             </p>
             <p>
                 <strong>Total vs intensity are linked by:</strong>
-                <code>Total PV (kWh/yr) = PV intensity (kWh/m&sup2;) &times; gross floor area (m&sup2;)</code>.
-                The PV page surfaces gross floor area and the absolute total alongside the intensity so the two
-                are explicitly consistent.
+                <code>Total PV (kWh/yr) = PV intensity (kWh/m&sup2;) &times; heated and cooled floor area (m&sup2;)</code>.
+                The worked example on record for RC-D is
+                <code>100.7 &times; 10,560 = 1,063.4 MWh/yr</code>, and 10,560 m&sup2; is the heated and cooled
+                area, not the 21,201 m&sup2; total building area.
             </p>
+            <p class="doc-note">Corrected 2026-08-10, tracked as <strong>DBG-029</strong>. The absolute
+            total on the PV page had been computed against the <em>total</em> building area rather than the
+            heated and cooled area, so for the house-based neighbourhoods it read about twice the figure
+            quoted above. The intensity and the ratio of PV to demand were never affected, because the same
+            area cancels from both sides. The heated and cooled area is now carried for all thirty-five
+            neighbourhoods, taken from the same simulation campaign that produced the energy results, so the
+            identity above now holds on every page.</p>
 
             <div class="doc-reports-box">
                 <h4>Related Technical Reports</h4>
@@ -515,8 +606,78 @@
         </section>
 
         <!-- Section C: Standards & Codes -->
+        <!-- Section D: Ratio of Production -->
+        <section class="doc-section" id="sec-rop">
+            <h2>D &mdash; Ratio of Performance (RoP)</h2>
+            <p>
+                RoP is not a website invention. It is a published metric of the neighbourhood
+                paper, which defines it as the ratio of annual on-site PV generation to annual
+                total building energy demand, site energy, per Neighbourhood Unit.
+            </p>
+            <p>
+                <strong>In plain words:</strong> what share of the energy this
+                neighbourhood uses in a year can its own rooftop solar produce in that same year?
+            </p>
+            <p>
+                <code>RoP = annual PV generation (kWh/m&sup2;) &divide; annual energy demand (kWh/m&sup2;)</code>
+            </p>
+            <p>
+                Both quantities are annual, both are per square metre of heated and cooled floor
+                area, and both are read from the same simulated scenario. The floor area is
+                therefore on both sides of the division and cancels out, which is why RoP does not
+                depend on which floor area is used. It is a pure ratio with no unit.
+            </p>
+
+            <h3>How to read the number</h3>
+            <ul>
+                <li><strong>RoP = 1.00</strong> &mdash; over a year, rooftop PV generates as much
+                    energy as the neighbourhood consumes. This is annual net zero on a site-energy basis.</li>
+                <li><strong>RoP below 1.00</strong> &mdash; the roof covers only part of the demand.
+                    An RoP of 0.35 means 35&nbsp;% of the annual demand.</li>
+                <li><strong>RoP above 1.00</strong> &mdash; the roof generates a yearly surplus.</li>
+            </ul>
+
+            <h3>What RoP does not say</h3>
+            <p>
+                RoP is an <strong>annual</strong> balance, not an hourly one. A neighbourhood at
+                RoP&nbsp;1.00 is still importing electricity on a December evening and exporting it at
+                midday in June. Reaching net zero over the year does not mean the neighbourhood is
+                independent of the grid, and RoP says nothing about storage, peak demand or the
+                capacity of the local network. Layer&nbsp;3 vehicle-to-grid and any battery are outside
+                this ratio.
+            </p>
+            <p>
+                It is also a ratio of two intensities, so a low RoP is often a statement about form
+                rather than about the solar design. A high-rise has roughly the same roof as a
+                low-rise but many times the floor area beneath it, so its RoP is structurally lower
+                even with an identical PV system. Section&nbsp;C explains that effect.
+            </p>
+
+            <h3>Worked example</h3>
+            <p>
+                RC-D, detached houses, NECB&nbsp;2017. At EEM1 the PV generation is
+                <code>100.4&nbsp;kWh/m&sup2;&middot;yr</code> against a demand of
+                <code>107.0&nbsp;kWh/m&sup2;&middot;yr</code>, so
+                <code>RoP = 100.4 &divide; 107.0 = 0.94</code>: the roof covers about 94&nbsp;% of the
+                year. Climb to EEM4 and the roof is unchanged while demand falls to
+                <code>60.6</code>, giving <code>RoP = 1.66</code>. This is the general shape of the
+                result: RoP rises because the measures cut demand, not because more panels were added.
+            </p>
+            <p>
+                On the baseline the same neighbourhood shows <code>RoP = 0</code>. That is correct,
+                not missing data. The baseline models only the PV the building already had, and a
+                detached house prototype ships with none. Section&nbsp;C explains that distinction.
+            </p>
+
+            <p class="doc-note">RoP is computed when the page is drawn, from the PV intensity and
+            the demand intensity of the scenario on screen. It is not a stored number, so it cannot
+            fall out of step with the two values it is derived from. Before 2026-08-10 the tool
+            carried a stored <code>rop</code> field that was empty for all thirty-five
+            neighbourhoods; that field is gone.</p>
+        </section>
+
         <section class="doc-section" id="sec-standards">
-            <h2>D &mdash; Standards &amp; Codes Implemented</h2>
+            <h2>E &mdash; Standards &amp; Codes Implemented</h2>
 
             <div class="doc-table-wrap">
                 <table class="doc-table">
@@ -597,7 +758,7 @@
 
         <!-- Section D: Climate zone & weather -->
         <section class="doc-section" id="sec-climate">
-            <h2>E &mdash; Climate Zone &amp; Weather</h2>
+            <h2>F &mdash; Climate Zone &amp; Weather</h2>
             <ul>
                 <li>
                     Modelled climate zone: <strong>ASHRAE CZ6A</strong> (cold, humid continental) &mdash;
@@ -631,7 +792,7 @@
 
         <!-- Section E: Building archetypes & sources -->
         <section class="doc-section" id="sec-archetypes">
-            <h2>F &mdash; Building Archetypes &amp; Sources</h2>
+            <h2>G &mdash; Building Archetypes &amp; Sources</h2>
             <ul>
                 <li><strong>Commercial:</strong> 16 DOE/PNNL ASHRAE 90.1-2022 prototypes (offices, retail,
                     schools, hotels, hospital, outpatient, restaurants, warehouse, apartment mid/high-rise)
@@ -662,17 +823,81 @@
 
         <!-- Section F: Energy modelling basis -->
         <section class="doc-section" id="sec-modelling">
-            <h2>G &mdash; Energy Modelling Basis</h2>
+            <h2>H &mdash; Energy Modelling Basis</h2>
             <ul>
                 <li><strong>Engine:</strong> EnergyPlus <strong>22.1</strong> (mid/high-rise + commercial)
                     and <strong>23.1</strong> (single-family/attached).</li>
-                <li><strong>EUI:</strong> site gross energy use intensity in <strong>kWh/m&sup2;&middot;yr</strong>,
-                    normalized to <strong>conditioned floor area</strong>. PV generation is reported
-                    <strong>separately and never netted into EUI</strong>.</li>
+                <li><strong>EUI:</strong> site energy use intensity in <strong>kWh/m&sup2;&middot;yr</strong>,
+                    per <strong>heated and cooled floor area</strong>. PV generation is reported
+                    <strong>separately and never netted into EUI</strong>. Both terms are defined
+                    exactly below.</li>
                 <li><strong>Neighbourhood airflow:</strong>
                     <code>AirflowNetwork:SimulationControl = MultizoneWithoutDistribution</code>.</li>
                 <li><strong>Envelope-code options</strong> offered per neighbourhood: Standard (NECB), Standard (ASHRAE), High Performance based on NECB, and High Performance based on ASHRAE. Note that the high-performance options represent high-performance envelope improvements (EEM1) implemented strictly on the building envelope for buildings built to either NECB or ASHRAE standards.</li>
             </ul>
+
+            <h3>How the EUI is computed</h3>
+            <p>
+                <code>EUI (kWh/m&sup2;&middot;yr) = Total End Uses (kWh/yr) &divide; Net Conditioned Building Area (m&sup2;)</code>
+            </p>
+            <ul>
+                <li><strong>Numerator.</strong> The EnergyPlus <code>Total End Uses</code> row of the
+                    Annual Building Utility Performance Summary: electricity plus natural gas, with no
+                    source-energy multipliers applied. It is <strong>site</strong> energy, not source
+                    energy. It covers every end use the model reports, including the ones the breakdown
+                    chart does not draw separately. Those are collected into the block labelled
+                    <strong>Other</strong>, so the chart adds up to the number printed above it.</li>
+                <li><strong>Denominator.</strong> The EnergyPlus <code>Net Conditioned Building Area</code>:
+                    the floor area the model actually heats and cools. This is what the pages mean by
+                    <em>heated and cooled floor area</em>.</li>
+                <li><strong>Not included.</strong> On-site PV generation is never subtracted from the EUI.
+                    It is reported separately, in section C.</li>
+            </ul>
+
+            <h3>The two floor areas, and which number uses which</h3>
+            <p>
+                EnergyPlus reports two building areas, and this tool uses both, for two different jobs.
+                <code>Total Building Area</code> is everything enclosed, including unheated attics and
+                unconditioned basements; it is the floor area listed on the neighbourhood table.
+                <code>Net Conditioned Building Area</code> is the heated and cooled part of it, and it is
+                the denominator of every intensity on the energy pages.
+            </p>
+            <p>
+                The gap is not small. For the neighbourhoods built from houses the conditioned share is
+                <strong>exactly one half</strong>, because the attic and the unheated basement together are
+                half the enclosed area and neither is conditioned. For the apartment neighbourhoods the
+                share is close to nine tenths.
+            </p>
+            <div class="doc-table-wrap">
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Neighbourhood</th>
+                            <th>Total building area (m&sup2;)</th>
+                            <th>Net conditioned (m&sup2;)</th>
+                            <th>Conditioned share</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>RC-D</td><td>21,201</td><td>10,600</td><td>0.50</td></tr>
+                        <tr><td>RC-ML</td><td>20,681</td><td>10,341</td><td>0.50</td></tr>
+                        <tr><td>RC-R</td><td>10,600</td><td>5,300</td><td>0.50</td></tr>
+                        <tr><td>RC-T</td><td>20,162</td><td>10,081</td><td>0.50</td></tr>
+                        <tr><td>RC-MR1</td><td>22,618</td><td>16,336</td><td>0.72</td></tr>
+                        <tr><td>RC-MR2</td><td>25,077</td><td>22,592</td><td>0.90</td></tr>
+                        <tr><td>RC-MR3</td><td>37,615</td><td>33,888</td><td>0.90</td></tr>
+                        <tr><td>RC-HR1</td><td>28,211</td><td>25,416</td><td>0.90</td></tr>
+                        <tr><td>RC-HR2</td><td>31,346</td><td>28,240</td><td>0.90</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="doc-note">Decision D6.0, 2026-08-10: the published intensities stay on the heated and
+            cooled area, which is the basis the simulation wrote, and every page that carries an intensity
+            now names that basis in words. No stored value was changed. The nine areas above are measured,
+            not assumed, and are read from the EnergyPlus <code>Building Area</code> table for each
+            neighbourhood; the total-area column matches the floor areas this tool ships. The remaining
+            twenty-six neighbourhoods have not had their conditioned area tabulated yet, so this table
+            lists the nine that have.</p>
 
             <h3>Scenario ladder (cumulative)</h3>
             <div class="doc-table-wrap">
@@ -733,17 +958,62 @@
 
         <!-- Section H: Layer 3 Mobility -->
         <section class="doc-section" id="sec-mobility">
-            <h2>H &mdash; Layer 3: Mobility (EV / V2G) <span class="badge-prelim">PRELIMINARY</span></h2>
-            <p>Assumptions (from the tool&rsquo;s <code>Templates/NUS_EV.csv</code>; currently the 9&ndash;10 RC neighbourhoods):</p>
+            <h2>I &mdash; Layer 3: Mobility (EV / V2G) <span class="badge-prelim">PRELIMINARY</span></h2>
+            <p>Assumptions, from <code>Templates/NUS_EV.csv</code>, applied to all 35 neighbourhood units.
+                Names and units follow the RT01 terminology review and are held once, in
+                <code>js/config.js</code>, so the page and this chapter cannot drift apart.</p>
             <ul>
-                <li>EV penetration: <strong>1.5 EVs per household</strong>; daily energy demand
-                    <strong>15 kWh/EV</strong> (&asymp; 200 km range); charging efficiency <strong>90%</strong>.</li>
-                <li>V2G: participation <strong>50%</strong>; battery efficiency <strong>90%</strong>;
-                    discharge capacity <strong>10 kW/day</strong>.</li>
-                <li>Reported metric: <strong>Net Energy Balance in kWh/m&sup2;&middot;day</strong>, plus a
-                    grid-status indicator.</li>
-                <li><strong>Status:</strong> preliminary, simplified &mdash; under development.</li>
+                <li><strong>EV ownership rate:</strong> 1.5 EVs per household. This is an ownership rate,
+                    not a penetration rate: a penetration rate is the share of a vehicle stock that is
+                    electric, expressed as a percentage.</li>
+                <li><strong>Specific daily charging demand:</strong> 15 kWh per EV per day, about 200 km of range.</li>
+                <li><strong>Grid to vehicle charging efficiency:</strong> 90 %.</li>
+                <li><strong>V2G fleet participation rate:</strong> 50 % of the EVs.</li>
+                <li><strong>Specific daily V2G discharge energy:</strong> 10 kWh per participating EV per day.
+                    This was published as "10 kW / day" until 2026-08-12. That is not a valid unit:
+                    kW is a power and kW per day is neither a power nor an energy. The quantity was always
+                    a daily energy.</li>
+                <li><strong>Vehicle to grid discharging efficiency:</strong> 90 %. It is displayed for
+                    reference and is <em>not</em> applied to the exported energy in this version. The
+                    method is under review, so the figure below assumes the full 10 kWh reaches the grid.</li>
             </ul>
+
+            <h3>The calculation chain</h3>
+            <p>Per neighbourhood, per day. Worked example: RC-R, 24 households.</p>
+            <ol>
+                <li><strong>Total EV charging demand</strong> = households x 1.5 EV per household x 15 kWh
+                    per EV / 0.90 charging efficiency.<br>
+                    24 x 1.5 x 15 / 0.90 = <strong>600 kWh/day</strong>.</li>
+                <li><strong>Storage loss</strong> = 5 % of the charging demand.<br>
+                    600 x 0.05 = <strong>30 kWh/day</strong>. The origin of this 5 % is undocumented
+                    upstream and is an open question with the supervisor, listed in the limitations
+                    chapter.</li>
+                <li><strong>Daily V2G energy delivered</strong> = households x 1.5 EV x 0.50 participation
+                    x 10 kWh per participating EV.<br>
+                    24 x 1.5 x 0.50 x 10 = <strong>180 kWh/day</strong>. Zero when V2G is not selected.</li>
+                <li><strong>Net grid demand (total)</strong> = charging demand + storage loss, minus the
+                    V2G energy delivered.<br>
+                    600 + 30 = 630 kWh/day without V2G; 630 - 180 = <strong>450 kWh/day</strong> with it.</li>
+                <li><strong>Net grid demand intensity</strong> = net grid demand / heated and cooled floor
+                    area.<br>
+                    450 / 5,300 m&sup2; = <strong>0.08 kWh per m&sup2; per day</strong>. Until 2026-08-12
+                    this was divided by a superseded floor area table and read up to three times too high
+                    on the tall neighbourhoods.</li>
+            </ol>
+
+            <h3>Sign convention</h3>
+            <p>A <strong>positive</strong> net grid demand means the neighbourhood must draw that much
+                energy from the grid each day, which is a deficit. The tool follows the delivered energy
+                convention of ISO 52000-1 and ASHRAE Standard 228. Note that the net zero building and
+                positive energy district literature uses the opposite sign, where positive means a
+                surplus, so the direction is stated in words next to every figure rather than left to
+                the reader.</p>
+            <p>The status indicator has three states: grid import required (deficit), net zero balance,
+                and net energy export (surplus). Only the first can occur today, because the on-site PV
+                generation is not netted against the EV load. Whether it should be is a methodology
+                question with the supervisor.</p>
+            <p><strong>Status:</strong> Preliminary. These figures come from the fixed chain above, not
+                from a building energy simulation.</p>
 
             <div class="doc-reports-box">
                 <h4>Layer 3 Mobility Technical Report</h4>
@@ -761,16 +1031,46 @@
 
         <!-- Section I: Layer 4 Green Infrastructure -->
         <section class="doc-section" id="sec-green">
-            <h2>I &mdash; Layer 4: Green Infrastructure / Landscape PV (LPV) <span class="badge-prelim">PRELIMINARY</span></h2>
-            <p>Assumptions (from <code>Templates/NUs_LPV.csv</code>; currently 9 RC neighbourhoods):</p>
-            <ul>
-                <li>Land allocation <strong>20%</strong>; usable area <strong>10%</strong>;
-                    module capacity <strong>400 W</strong>; installed capacity <strong>475 kWp</strong>;
-                    annual generation <strong>608 MWh/year</strong>; configurable location / height / transparency.</li>
-                <li>Green roofs, vertical greening, urban agriculture: shown as selectable infrastructure;
-                    quantitative models pending.</li>
-                <li><strong>Status:</strong> preliminary, simplified &mdash; under development.</li>
-            </ul>
+            <h2>J &mdash; Layer 4: Green Infrastructure / Landscape PV (LPV) <span class="badge-prelim">PRELIMINARY</span></h2>
+            <p>Landscape PV is the one Layer 4 option with a calculation method behind it, so it is the
+                one option that produces a number. The chain is held once, in <code>js/config.js</code>,
+                and every row on the Layer 4 page is generated from it.</p>
+
+            <h3>The calculation chain</h3>
+            <p>Identical for all 35 neighbourhood units, by decision. See the note below.</p>
+            <ol>
+                <li><strong>Land / site area:</strong> 5 acres, 20,234 m&sup2;.</li>
+                <li><strong>Land allocation:</strong> 20 % of the site = <strong>4,046.8 m&sup2;</strong>.</li>
+                <li><strong>Usable area:</strong> 10 % of the allocated land = <strong>404.7 m&sup2;</strong>.
+                    The two fractions are applied in series. Until 2026-08-12 they were applied in
+                    parallel, so the usable area was reported as 2,023 m&sup2;, which is 10 % of the whole
+                    site, and the 20 % allocation was silently discarded.</li>
+                <li><strong>Installed capacity:</strong> 404.7 m&sup2; x 200 W/m&sup2;, which is a 400 W
+                    module on 2 m&sup2;, = <strong>80.9 kWp</strong>. The figure published before
+                    2026-08-12 was 475 kWp, which would require 29.3 acres of land rather than 5.</li>
+                <li><strong>Annual generation:</strong> 80.9 kWp x 1,280 kWh/kWp per year =
+                    <strong>103.6 MWh/yr</strong>. The specific yield of 1,280 kWh/kWp per year is sound
+                    for southern Qu&eacute;bec and was never the problem; the capacity it multiplied was.
+                    The figure published before 2026-08-12 was 608 MWh/yr, which is 5.87 times the
+                    result its own configuration rows produce.</li>
+            </ol>
+
+            <h3>Why every neighbourhood shows the same number</h3>
+            <p>A uniform 5 acre landscape allocation is applied to every neighbourhood unit and is not
+                scaled to neighbourhood size. This is a project decision recorded upstream, not a defect:
+                per-neighbourhood variation in landscape PV is intentionally absent in this version.</p>
+            <p>The 10 % usable fraction is below the published range for fixed tilt ground mount
+                installations, which is roughly 30 to 50 %. Raising it would be a redesign of the
+                landscape PV facility rather than a correction, and it belongs to a later round.</p>
+
+            <h3>The other green infrastructure options</h3>
+            <p>Green roofs, vertical greening systems, linear greenery, green spaces, roof gardens, food
+                gardens and PV-green roof integrated modules have <strong>no quantitative method</strong>
+                in this version. They are grouped on the page under "Future capabilities", cannot be
+                selected, and produce no energy figure anywhere in the tool, including the final summary
+                and the exported scenario.</p>
+            <p><strong>Status:</strong> Preliminary. Landscape PV is a fixed area assumption multiplied by
+                a specific yield, not a building energy simulation.</p>
 
             <div class="doc-reports-box">
                 <h4>Layer 4 Green Infrastructure &amp; LPV Report</h4>
@@ -788,7 +1088,7 @@
 
         <!-- Section J: Resizing -->
         <section class="doc-section" id="sec-resizing">
-            <h2>J &mdash; Resizing Methodology</h2>
+            <h2>K &mdash; Resizing Methodology</h2>
             <p>
                 Three oversized prototypes (Primary School, Secondary School, Warehouse) run at 50% floor area to fit
                 the largest neighbourhood plots; geometry proportions and HVAC sizing ratios are preserved.
@@ -799,7 +1099,7 @@
 
         <!-- Section K: Validation -->
         <section class="doc-section" id="sec-validation">
-            <h2>K &mdash; Validation Summary</h2>
+            <h2>L &mdash; Validation Summary</h2>
             <ul>
                 <li>
                     <strong>Whole-building EUI ladder</strong> validated against deep-energy-retrofit literature
@@ -814,9 +1114,107 @@
             </ul>
         </section>
 
-        <!-- Section L: Limitations -->
+        <!-- Section L: 1983 Vintage Envelope -->
+        <section class="doc-section" id="sec-vintage-1983">
+            <h2>M &mdash; 1983 Vintage Envelope (Quebec NECB Zone 6)</h2>
+            <p>
+                The 1983 vintage envelope option represents the <strong>pre-code building stock</strong> typical of
+                Montr&eacute;al and Quebec&rsquo;s existing urban fabric. These envelope parameters are based on
+                construction practices prevalent before the adoption of modern energy codes, featuring
+                significantly lower insulation levels, higher infiltration rates, and single- or double-pane
+                glazing systems.
+            </p>
+
+            <h3>Purpose &amp; Context</h3>
+            <p>
+                While the standard NECB 2017 and high-performance (HPENV) envelopes model <em>new construction</em>,
+                the 1983 vintage captures the <strong>retrofit potential</strong> of existing buildings. By comparing
+                1983 baseline EUI against progressively deeper EEM scenarios, users can estimate the energy savings
+                achievable through envelope upgrades, HVAC electrification, DHW heat pumps, and efficient
+                lighting/equipment on <em>real existing building stock</em>.
+            </p>
+
+            <h3>Simulation Campaign</h3>
+            <ul>
+                <li><strong>Weather file:</strong> Montr&eacute;al (CWEC &mdash; CAN_MTL), Climate Zone 6A.</li>
+                <li><strong>Neighbourhood units:</strong> All 35 NUs (RC, RS, MU, CC, IC archetypes).</li>
+                <li><strong>Scenarios per NU:</strong> 16 EEM combinations (4 binary flags: Envelope, HVAC, DHW, Lighting/Equipment) &mdash; 560 total simulation runs.</li>
+                <li><strong>Engine:</strong> EnergyPlus v22.1, consistent with the standard NECB/HPENV campaigns.</li>
+            </ul>
+
+            <h3>Key Envelope Differences vs. NECB 2017</h3>
+            <div class="doc-table-wrap">
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>1983 Vintage</th>
+                            <th>NECB 2017 Standard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Wall Insulation (R-value)</td>
+                            <td>R-8 to R-12</td>
+                            <td>R-17 to R-22</td>
+                        </tr>
+                        <tr>
+                            <td>Roof Insulation (R-value)</td>
+                            <td>R-14 to R-20</td>
+                            <td>R-30 to R-40</td>
+                        </tr>
+                        <tr>
+                            <td>Window U-factor (W/m&sup2;&middot;K)</td>
+                            <td>3.0 &ndash; 5.0</td>
+                            <td>1.6 &ndash; 2.2</td>
+                        </tr>
+                        <tr>
+                            <td>Air Infiltration (ACH@50Pa)</td>
+                            <td>Higher (leaky assemblies)</td>
+                            <td>Code-compliant air barrier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>EUI Comparison (Baseline)</h3>
+            <p>
+                The 1983 vintage baseline (DEFAULT scenario, no EEM upgrades) shows substantially higher
+                energy use intensities than the NECB 2017 baseline, primarily driven by increased
+                <strong>heating demand</strong> due to poor envelope thermal performance. Typical increases
+                range from <strong>+40% to +80%</strong> in heating EUI depending on the archetype, with
+                mixed-use and commercial typologies showing the largest absolute differences.
+            </p>
+
+            <h3>Validation &amp; Documentation</h3>
+            <p>
+                A comprehensive validation report covering all 35 neighbourhood units is available:
+            </p>
+            <div class="doc-reports-box">
+                <h4>1983 Vintage Validation Report</h4>
+                <p>Detailed comparison of 1983 vintage EUI results against literature benchmarks and the NECB 2017 baseline for all 35 NUs.</p>
+                <ul class="doc-reports-list">
+                    <li>
+                        <a href="Content/References%20%26%20Methodology/Reports/LMN1983_NU_validation_all35.pdf" target="_blank" class="report-link">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
+                            1983 Vintage Validation Report &mdash; All 35 NUs (PDF)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Availability</h3>
+            <p>
+                The 1983 vintage option is currently available <strong>only for NECB Zone 6 (Montr&eacute;al)</strong>.
+                When selecting an envelope in Layer&nbsp;1, the &ldquo;1983 &mdash; Quebec Vintage&rdquo; button
+                appears exclusively in the NECB Zone&nbsp;6 performance-level popup. All 35 neighbourhood archetypes
+                are supported under this vintage.
+            </p>
+        </section>
+
+        <!-- Section M: Limitations -->
         <section class="doc-section" id="sec-limitations">
-            <h2>L &mdash; Limitations</h2>
+            <h2>N &mdash; Limitations</h2>
             
             <h3>Envelope &amp; HVAC Modeling Constraints</h3>
             <ul>
@@ -853,11 +1251,57 @@
                 </li>
             </ul>
 
+            <h3>Coverage gaps, stated rather than hidden</h3>
+            <p>These are cases where the tool either declines to show a result, or shows one that is known
+                to rest on a weaker footing than the rest. They are listed here so that a reader never has
+                to discover them from a number.</p>
+            <ul>
+                <li>
+                    <strong>Five neighbourhoods outside Montreal:</strong> RC-D, RC-ML, RC-MR1, RC-R and
+                    RC-T are merged from a United States detached house prototype in climate zones 4, 5,
+                    7A, 7B and 8. The prototype is the zone 6A one in every case, so in those five
+                    climates these neighbourhoods differ from Montreal only by weather file. Montreal has
+                    a corrected campaign; the other five need re-simulation.
+                </li>
+                <li>
+                    <strong>Zone 7B, MU-HC:</strong> the baseline run for this pair does not exist
+                    upstream. The tool does not offer the combination and says so on the selection page,
+                    rather than filling the hole with a neighbouring value.
+                </li>
+                <li>
+                    <strong>The 5 % storage loss in Layer 3:</strong> its origin is undocumented. It may
+                    duplicate part of the 90 % charging efficiency, which already includes conversion
+                    losses. If it is instead the drain of a parked vehicle, the standards express that as
+                    a fixed amount per vehicle per day rather than a percentage of charging demand. Open
+                    with the supervisor.
+                </li>
+                <li>
+                    <strong>The 90 % discharging efficiency in Layer 3:</strong> displayed but not applied
+                    to the exported energy, so the V2G contribution is reported as if discharge were
+                    lossless. Open with the supervisor.
+                </li>
+                <li>
+                    <strong>On-site PV is not netted against the EV load:</strong> the mobility status
+                    indicator considers the EV load alone, so it can only ever report a deficit. Whether
+                    the two should be netted is a methodology decision, not a defect.
+                </li>
+                <li>
+                    <strong>Landscape PV usable fraction:</strong> 10 % of the allocated land, which is
+                    below the 30 to 50 % published range for fixed tilt ground mount. The result is
+                    conservative rather than wrong, and raising it is a redesign of the facility.
+                </li>
+                <li>
+                    <strong>Facade PV:</strong> offered only for the nine Montreal neighbourhoods that
+                    contain one of the three tall building archetypes it was tested on, marked
+                    Preliminary, and excluded from the totals.
+                </li>
+            </ul>
+
         </section>
 
-        <!-- Section M: References -->
+        <!-- Section N: References -->
         <section class="doc-section doc-references" id="sec-references">
-            <h2>M &mdash; Publications &amp; References</h2>
+            <h2>O &mdash; Publications &amp; References</h2>
 
             <h3>Publications (Under Review)</h3>
             <div class="publications-table-container">
@@ -875,7 +1319,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Sustainable Cities and Society</strong> (SCS)</td>
+                            <td><strong>Pending</strong></td>
                             <td><code>SCSI-D-26-06496</code></td>
                             <td><em>Development of Neighborhood Archetypes and Their Translation into Parametric Neighborhood Units for Scalable Urban Energy Simulation</em></td>
                             <td>Caroline Hachem-Vermette, Orçun Koral İşeri</td>
@@ -971,5 +1415,6 @@
 
     </div><!-- /.doc-page -->
 </main>
+    <script src="js/config.js?v=6"></script>
 </body>
 </html>

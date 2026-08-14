@@ -29,3 +29,9 @@ __pycache__/
 
 # Backups
 *.bak
+# Internal revision correspondence and working notes. This repository is
+# public and serves GitHub Pages, so the emails, progress trackers, debug
+# register and session prompts stay on the local machine and are never
+# published. Added 2026-08-14.
+docs_implementation/documentation-revisions/
+docs_methodology/

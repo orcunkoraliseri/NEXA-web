@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PV Generation profile visualization for neighbourhood configurations.">
     <title>PV Generation | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
@@ -49,6 +49,15 @@
                 <!-- NEW LAYOUT: RC-R, RC-D, RC-T, RC-MR2, RC-MR3 -->
                 <div id="pv-new-layout">
 
+                    <!-- STAGE-04. Names the result on screen: standard and
+                         rung, in the ladder wording. Filled by js/pv.js. -->
+                    <p class="pv-result-caption" id="pv-result-caption"></p>
+
+                    <!-- STAGE-04 tasks 4.2 and 4.3. What is being shown, and
+                         why the rooftop figure does not move between rungs.
+                         Filled by js/pv.js from LMN_CONFIG. -->
+                    <p class="pv-scenario-note info-box" id="pv-scenario-note"></p>
+
                     <!-- Row 1: Stats Bar -->
                     <div class="pv-stats-bar">
                         <div class="pv-stat-item">
@@ -67,13 +76,22 @@
                             <span class="pv-stat-label">Ground Coverage Ratio</span>
                             <span class="pv-stat-value" id="pv-gcr-val">—</span>
                         </div>
+                        <!-- STAGE-04 task 4.7. Plain-language unit, worded
+                             exactly as CHV's action plan Stage 4 item 6. -->
                         <div class="pv-stat-item">
-                            <span class="pv-stat-label">PV Generation (kWh/m²)</span>
+                            <span class="pv-stat-label">PV generation, kWh/m² of gross floor area per year</span>
                             <span class="pv-stat-value" id="pv-generation-val">—</span>
                         </div>
+                        <!-- STAGE-04 task 4.8, decided by Koral. Both areas are
+                             shown, because the total below is computed against
+                             the heated and cooled one. -->
                         <div class="pv-stat-item">
-                            <span class="pv-stat-label">Gross Floor Area</span>
+                            <span class="pv-stat-label">Total Building Area</span>
                             <span class="pv-stat-value" id="pv-gfa-val">—</span>
+                        </div>
+                        <div class="pv-stat-item">
+                            <span class="pv-stat-label">Heated and Cooled Floor Area</span>
+                            <span class="pv-stat-value" id="pv-cond-area-val">—</span>
                         </div>
                         <div class="pv-stat-item">
                             <span class="pv-stat-label">Total PV Generation</span>
@@ -85,38 +103,63 @@
                         </div>
                     </div>
 
+                    <!-- STAGE-04, DBG-013. Why a house shows a different
+                         parameter set. Filled by js/pv.js. -->
+                    <p class="pv-roof-note info-box" id="pv-roof-note"></p>
+
+                    <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
+                         the number means and how to read it. Text from
+                         LMN_CONFIG.rop.interfaceNote, filled by js/pv.js, empty
+                         and therefore invisible when the ratio is not shown. -->
+                    <p class="info-box" id="pv-rop-note"></p>
+
+                    <!-- STAGE-04 task 4.9, CHV action plan Stage 4 item 8. -->
+                    <p class="pv-method-link-wrap"><a class="pv-method-link" href="documentation.html#sec-pv">How this is calculated &rarr;</a></p>
+
                 </div>
 
                 <!-- LEGACY LAYOUT: RC-HR2 only -->
                 <div id="pv-legacy-layout" style="display:none;">
+                    <p class="pv-result-caption" id="pv-result-caption-legacy"></p>
+
+                    <!-- STAGE-04 tasks 4.2 and 4.3. What is being shown, and
+                         why the rooftop figure does not move between rungs.
+                         Filled by js/pv.js from LMN_CONFIG. -->
+                    <p class="pv-scenario-note info-box" id="pv-scenario-note-legacy"></p>
                     <div class="pv-profile-layout">
                         <div class="pv-left-column">
                             <div class="pv-section pv-inputs-section">
                                 <div class="pv-input-bar">
                                     <span class="pv-input-label">PV Surface:</span>
-                                    <span class="pv-input-value" id="pv-surface-val-legacy">Roof + Facade</span>
+                                    <span class="pv-input-value" id="pv-surface-val-legacy">&mdash;</span>
                                 </div>
                                 <div class="pv-input-bar">
                                     <span class="pv-input-label">PV Efficiency:</span>
-                                    <span class="pv-input-value" id="pv-efficiency-val-legacy">18.65%</span>
+                                    <!-- D0.2, task 0.7: filled by js/pv.js from
+                                         LMN_CONFIG. No efficiency literal here. -->
+                                    <span class="pv-input-value" id="pv-efficiency-val-legacy">&mdash;</span>
                                 </div>
                                 <div class="pv-input-bar">
                                     <span class="pv-input-label">PV Mounting:</span>
-                                    <span class="pv-input-value" id="pv-mounting-val-legacy">Fixed Open Rack</span>
+                                    <span class="pv-input-value" id="pv-mounting-val-legacy">&mdash;</span>
                                 </div>
                                 <div class="pv-input-bar">
                                     <span class="pv-input-label">Ground Coverage Ratio:</span>
-                                    <span class="pv-input-value" id="pv-gcr-val-legacy">60%</span>
+                                    <span class="pv-input-value" id="pv-gcr-val-legacy">&mdash;</span>
                                 </div>
                             </div>
                             <div class="pv-section pv-kpis-section">
                                 <div class="pv-kpi-item">
-                                    <h3 class="pv-kpi-label">PV Generation (kWh/m2)</h3>
+                                    <h3 class="pv-kpi-label">PV generation, kWh/m&sup2; of gross floor area per year</h3>
                                     <div class="pv-kpi-value" id="pv-generation-val-legacy">—</div>
                                 </div>
                                 <div class="pv-kpi-item">
-                                    <h3 class="pv-kpi-label">Gross Floor Area</h3>
+                                    <h3 class="pv-kpi-label">Total Building Area</h3>
                                     <div class="pv-kpi-value" id="pv-gfa-val-legacy">—</div>
+                                </div>
+                                <div class="pv-kpi-item">
+                                    <h3 class="pv-kpi-label">Heated and Cooled Floor Area</h3>
+                                    <div class="pv-kpi-value" id="pv-cond-area-val-legacy">—</div>
                                 </div>
                                 <div class="pv-kpi-item">
                                     <h3 class="pv-kpi-label">Total PV Generation</h3>
@@ -130,6 +173,16 @@
                         </div>
 
                     </div>
+                    <p class="pv-roof-note info-box" id="pv-roof-note-legacy"></p>
+
+                    <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
+                         the number means and how to read it. Text from
+                         LMN_CONFIG.rop.interfaceNote, filled by js/pv.js, empty
+                         and therefore invisible when the ratio is not shown. -->
+                    <p class="info-box" id="pv-rop-note-legacy"></p>
+
+                    <!-- STAGE-04 task 4.9, CHV action plan Stage 4 item 8. -->
+                    <p class="pv-method-link-wrap"><a class="pv-method-link" href="documentation.html#sec-pv">How this is calculated &rarr;</a></p>
                 </div>
 
             </div>
@@ -137,15 +190,15 @@
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
+            <a class="footer-doc-link" href="documentation.html#sec-pv">Methodology: PV methodology</a>
         </footer>
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/heatmap-data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/pv.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/pv.js?v=6"></script>
 </body>
 
 </html>

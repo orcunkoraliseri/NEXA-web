@@ -193,6 +193,51 @@ function setupGenerationCards() {
 }
 
 /**
+ * STAGE-05 task 5.1, D0.5, DBG-017. Facade PV is offered only where it was
+ * actually studied.
+ *
+ * Until now the card was enabled for all 35 neighbourhoods in all 7 climates,
+ * 245 combinations, while upstream it exists as three single building runs in
+ * Montreal (PV_methodology.md section 9). No neighbourhood level facade result
+ * was ever produced, so the card also changed no number anywhere: a user could
+ * select it, see nothing move, and reasonably conclude the tool was broken.
+ *
+ * The card is greyed everywhere else, and it says why on the page rather than
+ * only in the code. It stays live for the nine Montreal neighbourhoods that
+ * contain one of the three tall building archetypes it was tested on.
+ */
+function applyFacadePvRule(neighbourhoodCode, envelope) {
+    const card = document.querySelector('.generation-card[data-value="pv_facade"]');
+    if (!card) return;
+
+    const allowed = LMN_CONFIG.facadePvAllowed(neighbourhoodCode, envelope);
+    const status = document.getElementById('pv-facade-status');
+    const note = document.getElementById('pv-facade-note');
+
+    if (allowed) {
+        card.disabled = false;
+        card.classList.remove('is-unavailable');
+        if (status) { status.hidden = true; status.textContent = ''; }
+        if (note) { note.hidden = true; note.textContent = ''; }
+        return;
+    }
+
+    card.disabled = true;
+    card.classList.add('is-unavailable');
+    // Not "Not modelled yet": this one IS modelled, just not here. The reason is
+    // a restriction, so the reason is what the card says. D9.2 changed the other
+    // wording and deliberately left this one alone.
+    if (status) {
+        status.hidden = false;
+        status.textContent = 'Montreal only';
+    }
+    if (note) {
+        note.hidden = false;
+        note.textContent = LMN_CONFIG.facadePv.restrictionNote;
+    }
+}
+
+/**
  * Setup submit button to navigate to energy page.
  */
 function setupSubmitButton() {
@@ -225,26 +270,23 @@ function initEnergySelectionPage() {
     const titleElement = document.getElementById('neighbourhood-title');
     const backBtn = document.getElementById('back-btn');
 
-    // Display-friendly envelope names
-    const envelopeNames = {
-        'necb-2017': 'NECB Zone 6 (Montréal)',
-        'ashrae': 'ASHRAE',
-        'necb-z4': 'NECB Zone 4 (Windsor)',
-        'necb-z5': 'NECB Zone 5 (Toronto / Ottawa)',
-        'necb-z6': 'NECB Zone 6 (Montréal)',
-        'necb-z7a': 'NECB Zone 7A (Calgary)',
-        'necb-z7b': 'NECB Zone 7B (Whitehorse)',
-        'necb-z8': 'NECB Zone 8 (Yellowknife)',
-        'high-performance-necb': 'High Perf. NECB',
-        'high-performance-ashrae': 'High Perf. ASHRAE',
-        'high-performance-z4': 'High Perf. Zone 4 (Windsor)',
-        'high-performance-z5': 'High Perf. Zone 5 (Toronto / Ottawa)',
-        'high-performance-z6': 'High Perf. Zone 6 (Montréal)',
-        'high-performance-z7a': 'High Perf. Zone 7A (Calgary)',
-        'high-performance-z7b': 'High Perf. Zone 7B (Whitehorse)',
-        'high-performance-z8': 'High Perf. Zone 8 (Yellowknife)',
-        'high-performance construction': 'High-Performance'
-    };
+    // Envelope display names come from LMN_CONFIG, D0.1 / DBG-016. The local
+    // copy that used to sit here named four cities that were never simulated.
+    const envelopeNames = LMN_CONFIG.envelopeLabels;
+
+    // CHV, 2026-08-13. A withheld neighbourhood and climate pair is not
+    // offered on the Layer 1 table, so this page is reachable for one only by
+    // a stored session or a typed URL. It stops here, with the reason, rather
+    // than letting the visitor build a design on a result that is not
+    // published. The gate is the same object the table filters on.
+    const gapNotice = LMN_CONFIG.dataGapNotice(neighbourhoodCode, envelope);
+    if (gapNotice) {
+        const main = document.querySelector('main.container') || document.body;
+        main.innerHTML = gapNotice +
+            '<p class="info-box"><a href="layer1_output.html">Back to the neighbourhood table</a></p>';
+        titleElement.textContent = 'Layer 2: Energy Design';
+        return;
+    }
 
     if (neighbourhoodCode) {
         // Update title with neighbourhood code and envelope standard
@@ -266,8 +308,57 @@ function initEnergySelectionPage() {
     setupGenerationCards();
     setupSubmitButton();
 
+    // STAGE-05 task 5.1. Before the stored selection is restored, so that a
+    // facade PV choice made on a Montreal neighbourhood cannot come back to
+    // life on a neighbourhood where it is not offered.
+    applyFacadePvRule(neighbourhoodCode, envelope);
+
+    // Task 3.8, CHV Stage 3 item 6: Back then Next must return the same
+    // scenario. Until 2026-08-10 this page started empty on every load, so
+    // pressing Back from the breakdown silently cleared the user's measures
+    // and pressing Next again recomputed the baseline instead of what they
+    // had chosen. Restore before the mutual exclusion state is worked out.
+    restoreEnergySelections();
+
     // Initialize mutual exclusion state
     updateMutualExclusion();
+}
+
+/**
+ * Task 3.8. Re-apply the stored selection to the cards.
+ * The state lives in sessionStorage under "energySelections", written by the
+ * submit handler, and the neighbourhood and envelope stay in the URL, so a
+ * refresh mid-flow also survives.
+ */
+function restoreEnergySelections() {
+    let stored;
+    try {
+        stored = JSON.parse(sessionStorage.getItem('energySelections') || 'null');
+    } catch (e) {
+        stored = null;
+    }
+    if (!stored) return;
+
+    const groups = [
+        ['load', '.load-card'],
+        ['demand', '.demand-card'],
+        ['generation', '.generation-card']
+    ];
+
+    groups.forEach(([group, selector]) => {
+        const values = Array.isArray(stored[group]) ? stored[group] : [];
+        energySelections[group] = [];
+        document.querySelectorAll(selector).forEach(card => {
+            const isChosen = values.indexOf(card.dataset.value) !== -1;
+            // A card that has since been disabled must not come back active.
+            if (isChosen && !card.disabled) {
+                card.classList.add('active');
+                energySelections[group].push(card.dataset.value);
+            } else {
+                card.classList.remove('active');
+            }
+        });
+    });
 }
 
 // Initialize on page load

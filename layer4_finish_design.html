@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
     <title>Design Summary | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
     <style>
         /* Summary Dashboard Specific Styles */
         .summary-grid {
@@ -236,6 +236,70 @@
                     <span><strong>Disclaimer:</strong> The consolidated details represent a synthesis of all selections made. Layers 3 and 4 calculations are subject to active refinement.</span>
                 </div>
 
+                <!-- =====================================================
+                     STAGE-08, CHV Stage 9 items 1 to 10. The final page is the
+                     main output: what was selected, how it differs from the
+                     baseline, what was assumed, and what that means. Everything
+                     below is written by js/finish-design.js from the same values
+                     the layer pages display, never from a literal.
+                     ===================================================== -->
+
+                <!-- Item 1. The scenario, in one line, before any number. -->
+                <section class="final-block" id="scenario-block">
+                    <h2 class="group-heading">Selected scenario</h2>
+                    <dl class="scenario-list">
+                        <div><dt>Neighbourhood</dt><dd id="fs-nu">—</dd></div>
+                        <div><dt>Climate and standard</dt><dd id="fs-climate">—</dd></div>
+                        <div><dt>Envelope and measures</dt><dd id="fs-scenario">—</dd></div>
+                        <div><dt>Mobility</dt><dd id="fs-mobility">—</dd></div>
+                        <div><dt>Green infrastructure</dt><dd id="fs-green">—</dd></div>
+                    </dl>
+                </section>
+
+                <!-- Items 2, 3 and 4, decision D8.1. Four metrics, and only the
+                     four the tool actually computes. A metric the visitor did
+                     not select prints "Not selected" in all three columns rather
+                     than a zero, because zero is a result and this is not. -->
+                <section class="final-block" id="comparison-block">
+                    <h2 class="group-heading">Baseline and selected pathway</h2>
+                    <table class="comparison-table" id="fs-comparison">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Baseline</th>
+                                <th>Selected pathway</th>
+                                <th>Change</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fs-comparison-body"></tbody>
+                    </table>
+                    <p id="fs-baseline-note" class="selection-note info-box"></p>
+                </section>
+
+                <!-- Items 6 and 7, decision D8.3. The sentence is built only
+                     from numbers computed above. The constraint line is absent
+                     unless a real limit fires; it is never a guess. -->
+                <section class="final-block" id="meaning-block">
+                    <h2 class="group-heading">What this means</h2>
+                    <p id="fs-meaning">—</p>
+                    <p id="fs-constraint" class="constraint-line" hidden></p>
+                </section>
+
+                <!-- Item 8. Every assumption behind the numbers above, on the
+                     same screen and in the print and the export. -->
+                <section class="final-block" id="assumptions-block">
+                    <h2 class="group-heading">Assumptions and model information</h2>
+                    <dl class="scenario-list" id="fs-assumptions"></dl>
+                </section>
+
+                <!-- Item 9, decision D8.2. Print, and a file that carries the
+                     same values, the same assumptions and the same status. -->
+                <section class="final-block no-print" id="export-block">
+                    <button type="button" id="fs-print-btn" class="submit-btn">Print scenario</button>
+                    <button type="button" id="fs-export-btn" class="submit-btn">Download scenario (.json)</button>
+                </section>
+
                 <!-- Consolidated Scales -->
                 <div class="consolidated-scales">
                     <div class="scale-box">
@@ -353,7 +417,7 @@
                         <table class="compact-table">
                             <tbody>
                                 <tr>
-                                    <td class="label-cell">EV Penetration Rate</td>
+                                    <td class="label-cell">EV ownership rate (EVs/household)</td>
                                     <td id="l3-ev-penetration" class="value-cell">—</td>
                                 </tr>
                                 <tr>
@@ -361,7 +425,7 @@
                                     <td id="l3-charging-efficiency" class="value-cell">—</td>
                                 </tr>
                                 <tr>
-                                    <td class="label-cell">Daily Demand per EV</td>
+                                    <td class="label-cell">Daily charging demand per EV</td>
                                     <td id="l3-daily-demand" class="value-cell">—</td>
                                 </tr>
                                 <tr>
@@ -377,11 +441,11 @@
                                     <td id="l3-storage-loss" class="value-cell">—</td>
                                 </tr>
                                 <tr>
-                                    <td class="label-cell">V2G Power Available</td>
+                                    <td class="label-cell">Daily V2G energy delivered</td>
                                     <td id="l3-v2g-power" class="value-cell">—</td>
                                 </tr>
                                 <tr>
-                                    <td class="label-cell">Net Energy Balance</td>
+                                    <td class="label-cell">Net grid demand (total and intensity)</td>
                                     <td id="l3-net-balance" class="value-cell">—</td>
                                 </tr>
                             </tbody>
@@ -397,6 +461,13 @@
                         <div class="selection-pills" id="l4-pills"></div>
                         <table class="compact-table">
                             <tbody>
+                                <tr>
+                                    <!-- STAGE-07 item 5. The first step of the
+                                         chain, so the allocation below has
+                                         something to be a share of. -->
+                                    <td class="label-cell">LPV Land / site area</td>
+                                    <td id="l4-site-area" class="value-cell">—</td>
+                                </tr>
                                 <tr>
                                     <td class="label-cell">LPV Land Allocation</td>
                                     <td id="l4-land-allocation" class="value-cell">—</td>
@@ -428,14 +499,15 @@
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <a class="footer-doc-link" href="documentation.html">References &amp; Methodology</a>
+            <a class="footer-doc-link" href="documentation.html#sec-limitations">Methodology: Assumptions and limitations</a>
         </footer>
     </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/finish-design.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/finish-design.js?v=6"></script>
 </body>
 
 </html>

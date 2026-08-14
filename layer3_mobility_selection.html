@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select mobility parameters for neighbourhood analysis.">
     <title>Mobility Selection | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=5">
+    <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body>
     <!-- Main Content -->
     <main class="container">
         <!-- Navigation Back Button -->
-        <a id="back-btn" href="layer2_output_energy.html" class="back-button">
+        <a id="back-btn" href="layer2_pv_breakdown.html" class="back-button">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -30,6 +30,9 @@
                 <header class="header">
                     <h1 id="neighbourhood-title">Layer 3: Mobility Selection</h1>
                     <p>Select mobility and transportation parameters for your analysis.</p>
+                    <!-- STAGE-06 task 6.9, CHV Stage 6 item 9. One of the four
+                         status terms of LMN_CONFIG.statusTerms, and no other. -->
+                    <p class="status-badge-line"><span class="status-badge">Preliminary</span></p>
                 </header>
 
                 <!-- Top Disclaimer Box -->
@@ -56,11 +59,16 @@
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>EV</span>
                                 </button>
-                                <button class="generation-card transportation-card" data-category="transportation"
-                                    data-value="v2g_stations">
+                                <!-- STAGE-06 task 6.1, CHV Stage 6 item 1. Ships
+                                     disabled: V2G is only reachable once EV is
+                                     selected. js/mobility-selection.js sets the
+                                     state, and the status span is filled there. -->
+                                <button class="generation-card transportation-card is-unavailable"
+                                    data-category="transportation" data-value="v2g_stations" disabled>
                                     <img src="Content/Images_Layer3_Transportation/v2g stations.png" alt="V2G Stations"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>V2G Stations</span>
+                                    <span class="card-status">Requires EV</span>
                                 </button>
                                 <button class="generation-card transportation-card" data-category="transportation"
                                     data-value="ev_public_transport" disabled>
@@ -101,9 +109,12 @@
                         </div>
                     </div>
 
-                    <!-- Submit Button -->
+                    <!-- Submit Button. STAGE-06 task 6.3, CHV Stage 6 item 3.
+                         Ships disabled with the reason visible; the second gate
+                         is inside the click handler. -->
                     <div class="submit-section">
-                        <button id="view-mobility-btn" class="submit-btn">View Mobility Performance</button>
+                        <button id="view-mobility-btn" class="submit-btn" disabled>View Mobility Performance</button>
+                        <p id="mobility-submit-reason" class="selection-note info-box">Select EV to see mobility results. V2G is an option on top of EV.</p>
                     </div>
                 </section>
             </div>
@@ -116,9 +127,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/data.js?v=5"></script>
-    <script src="js/sidebar.js?v=5"></script>
-    <script src="js/mobility-selection.js?v=5"></script>
+    <script src="js/config.js?v=6"></script>
+    <script src="js/data.js?v=6"></script>
+    <script src="js/sidebar.js?v=6"></script>
+    <script src="js/mobility-selection.js?v=6"></script>
 </body>
 
 </html>
