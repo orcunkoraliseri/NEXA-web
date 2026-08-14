@@ -27,6 +27,7 @@ A web-based decision-support tool for early-stage design of **positive-energy di
 
 ---
 
+
 ## Project Overview
 
 The LMN Tool supports the **Simplistic Modular Holistic (SMH)** methodology for positive-energy district design. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to explore compatible neighbourhood configurations by filtering across four thematic layers.
