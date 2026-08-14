@@ -359,13 +359,14 @@ h3 {
   transform: scale(1.02);
 }
 
-/* Selection is drawn as a frame, not as a fill. A tinted card left the white
-   icon tiles sitting on a coloured ground, which read as unfinished. The ring
-   is an inset shadow so the card does not change size when it is picked. */
+/* The parameter cards keep the tinted fill. The frame treatment was tried on
+   2026-08-14 and reverted the same day on Koral's reading: on this page the
+   fill is the better drawing. The framed selection stays on the neighbourhood
+   table, where the cell holds a photograph and white icon tiles. */
 .usage-card.active {
-  border-color: #E8860A;
-  background: var(--bg-card);
-  box-shadow: inset 0 0 0 3px #E8860A, 0 0 14px rgba(232, 134, 10, 0.25);
+  border: 2px solid #E8860A;
+  background: rgba(245, 196, 0, 0.35);
+  box-shadow: 0 0 20px rgba(232, 134, 10, 0.35);
 }
 
 /* Disabled state for all parameter cards */
@@ -699,8 +700,8 @@ img.icon-missing {
 
 .context-card.active {
   border-color: var(--context-color);
-  background: var(--bg-card);
-  box-shadow: inset 0 0 0 3px var(--context-color), 0 0 14px rgba(253, 164, 175, 0.3);
+  background: var(--context-active);
+  box-shadow: 0 0 20px rgba(253, 164, 175, 0.4);
 }
 
 /* Layout Image Cards - Compact */
@@ -753,8 +754,8 @@ img.icon-missing {
 
 .layout-card.active {
   border-color: var(--layout-color);
-  background: var(--bg-card);
-  box-shadow: inset 0 0 0 3px var(--layout-color), 0 0 14px rgba(125, 211, 252, 0.3);
+  background: var(--layout-active);
+  box-shadow: 0 0 20px rgba(125, 211, 252, 0.4);
 }
 
 /* Density Image Cards - Compact */
@@ -807,8 +808,8 @@ img.icon-missing {
 
 .density-card.active {
   border-color: var(--density-color);
-  background: var(--bg-card);
-  box-shadow: inset 0 0 0 3px var(--density-color), 0 0 14px rgba(253, 164, 175, 0.3);
+  background: var(--density-active);
+  box-shadow: 0 0 20px rgba(253, 164, 175, 0.4);
 }
 
 
@@ -899,9 +900,9 @@ img.icon-missing {
 }
 
 .envelope-card.active {
-    border-color: #E8860A;
-    background: var(--bg-card);
-    box-shadow: inset 0 0 0 3px #E8860A, 0 0 14px rgba(232, 134, 10, 0.25);
+    border: 2px solid #E8860A;
+    background: rgba(245, 196, 0, 0.35);
+    box-shadow: 0 0 20px rgba(232, 134, 10, 0.35);
 }
 
 /* Envelope Popup Modal Styles */
