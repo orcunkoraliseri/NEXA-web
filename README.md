@@ -1,6 +1,79 @@
-# LMN Tool — Neighbourhood Design Interface
+# Layered Modular Neighbourhood (LMN) Tool
 
-A web-based decision-support tool for early-stage design of **positive-energy district (PED) neighbourhoods**. Stakeholders configure urban parameters layer by layer — from spatial layout to energy, mobility, and green infrastructure — progressively building a holistic neighbourhood profile.
+An early-stage decision-support tool for **pre-feasibility comparison** of neighbourhood
+designs. It compares neighbourhood units that have already been simulated in EnergyPlus, so
+that an energy result can be read early, before a design exists.
+
+**It does not design a neighbourhood, it does not optimise one, and it is not a substitute
+for detailed building energy modelling later in a project.**
+
+Live: **https://orcunkoraliseri.github.io/LMN-tool/**
+
+---
+
+## What the tool does and does not do
+
+*Last reviewed 17 August 2026. This section, and Capabilities and Limitations below, are the
+current statement of scope. The Development History further down is a record of how the tool
+was built and is not a description of what it does today.*
+
+| | |
+|---|---|
+| **It does** | Let you pick a simulated neighbourhood unit and a climate, then read the annual energy use intensity, the on-site PV generation, the ratio between them, and the effect of a cumulative package of efficiency measures |
+| **It does** | State, on every result page, the location, the exact weather file, the standard, the floor-area basis and the model version the number came from |
+| **It does not** | Generate a new neighbourhood, or a new building, or a new layout |
+| **It does not** | Optimise anything. No optimisation method is implemented |
+| **It does not** | Simulate on demand. Every number on screen comes from a campaign that has already been run |
+
+### Capabilities
+
+- **Neighbourhood units:** simulated archetypes in five families, RC, RS, MU, CC and IC.
+- **Climates:** **six**, all Canadian, each simulated on its own CWEC weather file. NECB Zone
+  4 (Vancouver), Zone 5 (Toronto), Zone 6 (Montréal), Zone 7A (Winnipeg), Zone 7B (Fort
+  McMurray) and Zone 8 (Chisasibi, on a proxy station about 90 km inland). Montréal
+  additionally offers a 1983 Quebec vintage starting point.
+- **Envelope and measures:** a cumulative ladder, **Baseline**, **HPerf**,
+  **HPerf + Heat Pump**, **HPerf + Heat Pump + DHW**, and
+  **HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling**. HPerf is the High-Performance
+  Envelope package. An **Ideal thermal load** case is available separately for district
+  energy sizing.
+- **Energy metric:** **Annual EUI (kWh/m² of heated and cooled floor area per year)**, as
+  **site energy**: the annual electricity and natural gas the buildings use, added together,
+  with no source or primary-energy conversion factors. Gas and electricity are read from the
+  same EnergyPlus End Uses table and converted with the same factor, 1 GJ = 277.778 kWh.
+- **PV:** **PV generation intensity (kWh/m² of heated and cooled floor area per year)**, total
+  PV generation in MWh/yr, and the **Ratio of Performance**, which is the annual on-site
+  generation divided by the annual demand of the same neighbourhood.
+- **Layers 3 and 4:** electric vehicle and vehicle-to-grid figures, and landscape PV. Both are
+  **preliminary** and are labelled as such on the pages that carry them.
+- **Provenance on the page:** every result states whether it is **directly simulated** or
+  **derived** from simulated values or from an assumption chain.
+
+### Limitations
+
+- **Pre-feasibility only.** The comparison is between pre-simulated units. It is not a design
+  or sizing tool.
+- **Some neighbourhood and climate combinations are withheld.** Five house archetypes are not
+  published outside Montréal, because their upstream results were merged from a United States
+  prototype and a corrected campaign exists for Montréal only. One further combination has no
+  baseline run. Each is marked on the page with the reason.
+- **The ASHRAE 90.1 case is not offered.** It was a United States reference case on a United
+  States weather file and was withdrawn from the climate selection on 17 August 2026. It is
+  not deleted, and it is not called validated.
+- **Snow cover is not modelled**, so rooftop PV is optimistic in the three coldest zones, by
+  roughly 10 to 15 % in Zone 7A, 15 to 20 % in Zone 7B and 20 to 25 % in Zone 8. The published
+  numbers are not derated; the margin is stated on the page instead.
+- **Facade PV is indicative.** It is based on three single-building runs in Montréal, is
+  offered only for the nine Montréal neighbourhoods containing one of those building types,
+  and is **excluded from the neighbourhood balance**.
+- **Landscape PV is not a building energy simulation.** It is a fixed land-area assumption
+  multiplied by a specific yield, shown step by step.
+- **Green infrastructure options other than landscape PV have no quantitative model** and are
+  labelled **Not modelled yet**.
+- **Design-day sizing inside the models is inherited from the source prototypes.** The annual
+  results come from the weather file named on each page.
+
+Full methodology, assumptions and references: `documentation.html` on the live site.
 
 ---
 
@@ -30,7 +103,7 @@ A web-based decision-support tool for early-stage design of **positive-energy di
 
 ## Project Overview
 
-The LMN Tool supports the **Simplistic Modular Holistic (SMH)** methodology for positive-energy district design. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to explore compatible neighbourhood configurations by filtering across four thematic layers.
+The LMN Tool supports the **Simplistic Modular Holistic (SMH)** methodology. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
 
 Each layer adds a new set of systems on top of the previous, so the neighbourhood profile grows in complexity and completeness as the user progresses — from a blank canvas to a fully specified, energy-balanced urban unit.
 
@@ -182,7 +255,7 @@ The foundation layer. The user defines the **spatial and typological character**
 | **Context**  | Urban, Suburban, Suburban Edge, Rural                                       |
 | **Density**  | High, Medium, Low                                                           |
 | **Layout**   | Grid, Curvilinear, Superblock                                               |
-| **Envelope** | Standard (NECB-2017), Standard (ASHRAE), High Performance based on NECB, High Performance based on ASHRAE |
+| **Climate and envelope** | Six NECB 2017 climate zones, each with **Standard** and **HPerf** (High-Performance Envelope). Montréal additionally offers a 1983 Quebec vintage. The ASHRAE 90.1 options were withdrawn on 17 August 2026 |
 
 All five labels display **warm gradient banner bars** (gold→amber→burnt-red).
 
@@ -196,7 +269,7 @@ The user selects a neighbourhood from the results to carry it forward into Layer
 
 **Dynamic filtering:** Parameters that would result in zero matching neighbourhoods are automatically disabled (greyed out) as the user makes selections, preventing dead-end combinations.
 
-> **Envelope options:** Four envelope choices are available — two standard code-baseline options (NECB-2017 and ASHRAE) and two high-performance variants. Selecting *High-Performance* replaces the baseline EEM level with the EEM1 (envelope-only efficiency measure) scenario, reflecting improved insulation and fenestration performance.
+> **Envelope options, current as of 17 August 2026.** Each of the six climate zones offers **Standard**, the NECB 2017 code baseline for that zone, and **HPerf**, the High-Performance Envelope package. Montréal additionally offers a **1983 Quebec vintage** starting point, which is compared against itself because it is a different code era. Choosing HPerf uses the envelope-only scenario stored as `EEM1`, and its baseline is the Standard arm of the same climate, so the envelope gain is what the reported change shows. **The two ASHRAE 90.1 options were withdrawn from the selection**: that arm is a United States reference case simulated on a United States weather file, not a Canadian climate. Its data is retained but is not offered and is not called validated.
 
 ---
 
@@ -221,10 +294,10 @@ The results page displays the neighbourhood's energy footprint — combining dem
 
 - **Energy Demand Treemap** (`layer2_energy_breakdown.html`) — Interactive treemap rendered with **D3.js** visualising the breakdown of thermal, electrical, and equipment loads sized proportionally to demand. Includes Energy Status indicators (Positive/Neutral/Negative) and EUI scale.
 - **PV Generation Profile** (`layer2_pv_breakdown.html`) — Dual-layout PV analysis page:
-  - **New layout** (for RC-R, RC-D, RC-T, RC-MR2, RC-MR3 configurations): Stats bar with KPIs (PV Surface, Efficiency, Mounting, GCR, Generation, RoP) + wall and roof rows showing hourly charts (**Chart.js** canvas), incident radiation images, and direct sun hours images.
-  - **Legacy layout** (for RC-HR2): Two-column layout with pink horizontal bars for input parameters and static chart images.
+  - **New layout:** three results, **PV generation intensity**, **Total PV Generation** and **Ratio of Performance**, plus wall and roof rows showing hourly charts (**Chart.js** canvas), incident radiation images, and direct sun hours images. The model inputs (PV surface, efficiency, mounting, ground coverage ratio, both floor areas, weather file, floor-area basis, model version) are under **Assumptions & Model Information** on the same page, since 17 August 2026.
+  - **Legacy layout** (for RC-HR2): two-column layout with static chart images, carrying the same three results and the same assumptions block.
 
-**Energy data coverage:** All five EEM levels (DEFAULT, EEM1–EEM4) plus the IAL (Initial Loads with Air-conditioning) baseline scenario are stored and correctly rendered for all 35 neighbourhood archetypes across both NECB-2017 and ASHRAE code standards.
+**Energy data coverage:** all five scenarios, stored as `DEFAULT` and `EEM1` to `EEM4`, plus the ideal thermal load case, are stored and rendered for all 35 neighbourhood archetypes in every published climate. `EEM1` to `EEM4` are data keys; the names the user reads are the cumulative ones listed under [Capabilities](#capabilities).
 
 ---
 
@@ -460,16 +533,20 @@ The central data file (~630 KB) contains:
 
 ### Envelope Model
 
-The tool supports four distinct envelope configurations:
+The data file holds 17 envelope keys. **Seven were selectable until 17 August 2026; six are
+selectable now**, each with a Standard and an HPerf tier:
 
-| Key                    | Description                                           | EEM Mapping |
-|------------------------|-------------------------------------------------------|-------------|
-| `necb-2017`            | Standard construction, NECB-2017 code baseline        | DEFAULT     |
-| `ashrae`               | Standard construction, ASHRAE code baseline           | DEFAULT     |
-| `high-performance-necb`| High-performance envelope, NECB-2017 standard         | EEM1        |
-| `high-performance-ashrae` | High-performance envelope, ASHRAE standard         | EEM1        |
+| Key | What the user reads | Baseline it is compared against |
+|---|---|---|
+| `necb-z4` … `necb-z8` | Standard, for the six NECB 2017 climate zones | itself |
+| `high-performance-z4` … `high-performance-z8` | HPerf, the High-Performance Envelope | the Standard arm of the same climate |
+| `vintage-1983-z6` | 1983 Quebec Vintage, Montréal only | itself, because it is a different code era |
+| `necb-2017`, `high-performance-necb` | legacy aliases of the two Montréal keys | as above |
+| `ashrae`, `high-performance-ashrae` | **withdrawn 17 August 2026.** Retained in the data, not offered, not called validated | not applicable |
 
-EEM1 represents the envelope-only efficiency measure (improved insulation + fenestration). Higher EEM levels (EEM2–EEM4) represent progressively deeper system-level upgrades applied independently of the envelope choice.
+**HPerf has no baseline run of its own.** Its baseline is the Standard arm of the same
+climate, verified equal at 245 of 245 rows, which is why the envelope gain is visible in the
+reported change. That mapping is a **derived** result and the tool says so on the page.
 
 ### CSV Reference Data (`Templates/`)
 
@@ -515,14 +592,17 @@ The tool covers **35 neighbourhood archetypes** across five typological families
 
 Each archetype is simulated across **six scenario levels**:
 
-| Level     | Description                                                        |
-|-----------|--------------------------------------------------------------------|
-| `IAL`     | Initial Loads (air-conditioning reference baseline — no EEMs)     |
-| `DEFAULT` | Code-compliant baseline (NECB-2017 or ASHRAE)                     |
-| `EEM1`    | Envelope improvement (high-performance insulation + glazing)       |
-| `EEM2`    | HVAC upgrade (high-efficiency systems)                             |
-| `EEM3`    | DHW upgrade (heat pump water heaters, solar thermal)              |
-| `EEM4`    | Lighting & appliance upgrade (LED + efficient equipment)           |
+The ladder is **cumulative**: each rung contains the one below it. The data key and the name
+the user reads are two different things, and both are given here.
+
+| Data key  | What the user reads | Description |
+|-----------|---------------------|-------------|
+| `DEFAULT` | **Baseline** | Code-compliant baseline as designed, native PV only |
+| `EEM1`    | **HPerf** | High-Performance Envelope: opaque assemblies, triple glazing, foundation and slab insulation, infiltration reduced to a quarter |
+| `EEM2`    | **HPerf + Heat Pump** | Everything in HPerf, plus a cold-climate air-source heat pump, inverter cooling and ventilation heat recovery |
+| `EEM3`    | **HPerf + Heat Pump + DHW** | Everything above, plus a heat-pump water heater with a stratified tank and drain-water heat recovery. DHW is domestic hot water |
+| `EEM4`    | **HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling** | Everything above, plus automated shading, daylight dimming, LED lighting, efficient plug loads and appliance electrification |
+| `IAL`     | **Ideal thermal load** | HVAC replaced by ideal air loads, to expose the pure thermal demand for district-energy sizing. Not directly comparable with delivered fuel or electricity |
 
 ### PV Generation Data
 
@@ -549,6 +629,12 @@ js/data.js                                  ← Frontend database (served direct
 ---
 
 ## Development History
+
+> **This section is a record of how the tool was built, not a description of what it does
+> today.** Terminology, climate coverage and result definitions have changed since the
+> earlier phases were written. For the current statement of scope, read
+> [What the tool does and does not do](#what-the-tool-does-and-does-not-do),
+> [Capabilities](#capabilities) and [Limitations](#limitations) at the top of this file.
 
 The following major development milestones have been completed in sequence:
 
