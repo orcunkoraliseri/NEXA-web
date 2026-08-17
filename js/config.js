@@ -171,13 +171,22 @@ const LMN_CONFIG = {
   // reason: no corrected data can be put behind it, so a permanently dead option
   // is clutter rather than a lesson. The markup is kept commented in
   // layer1_NUs_selection.html so that bringing it back is uncommenting a block
-  // and emptying this array. While the array is not empty, the notice below the
-  // climate row and every gate in dataGapFor stay on, whether or not a card
-  // exists, so the case cannot come back silently.
+  // and emptying this array. While the array is not empty, every gate in
+  // dataGapFor stays on, whether or not a card exists, so the case cannot come
+  // back silently.
+  //
+  // KORAL, 2026-08-17: showOnSelection is false. The box that printed this
+  // reason under the climate row is off the page. With the card already gone
+  // the box explained an option the visitor never saw, which reads as a note
+  // the team left behind rather than as information about the tool. The reason
+  // is still written the moment it is needed: a typed address or a session
+  // stored before today lands on dataGapNotice and is stopped with this exact
+  // sentence. Set showOnSelection back to true to print it under the row again.
   withdrawnClimates: [
     {
       scope: "climate",
       climates: ["ashrae", "high-performance-ashrae"],
+      showOnSelection: false,
       label: "Results under revision",
       reason: "This is a United States reference case, not a Canadian climate. It was simulated with United States prototypes against ASHRAE 90.1 on a United States weather file, Buffalo Niagara Intl AP, NY. It has been taken out of the climate selection until it can be re-run on the Canadian weather file for the same zone. The six NECB climates are unaffected: each of them runs on its own Canadian CWEC weather file.",
       debugRef: "DBG-034"

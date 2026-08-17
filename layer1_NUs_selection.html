@@ -10,7 +10,7 @@
        still carrying it, in the description and in the tab title. -->
   <meta name="description" content="LMN tool: early stage, pre-feasibility comparison of simulated neighbourhood units.">
   <title>Neighbourhood Selection | Layered Modular Neighbourhood (LMN) Tool</title>
-  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/styles.css?v=12">
 </head>
 
 <body>
@@ -189,12 +189,18 @@
                   </button>
               </div>
 
-              <!-- CHV, 2026-08-17, point 1. Why the ASHRAE case is not in the
-                   row. Since Koral's decision of 2026-08-17 this box is the only
-                   thing the visitor sees of it, so it names the case itself. The
-                   text is written by js/app.js from
+              <!-- CHV, 2026-08-17, point 1. The home of the withdrawn climate
+                   reason, written by js/app.js from
                    LMN_CONFIG.withdrawnClimates, so the page carries no copy of
-                   the reason. -->
+                   the text.
+
+                   KORAL, 2026-08-17: IT SHIPS EMPTY. The entry carries
+                   showOnSelection: false, because with the card off the row the
+                   box explained an option nobody could see. The element stays so
+                   that restoring the case is one flag rather than an edit here.
+                   The reason is still printed where it does work: a typed
+                   address on the withdrawn arm is stopped by dataGapNotice, on
+                   this page and on the four result pages. -->
               <div id="envelope-withdrawn-note"></div>
 
               <!-- Envelope Performance Tier Popup Modal -->
@@ -250,9 +256,9 @@
 </main>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=11"></script>
-  <script src="js/data.js?v=11"></script>
-  <script src="js/app.js?v=11"></script>
+  <script src="js/config.js?v=12"></script>
+  <script src="js/data.js?v=12"></script>
+  <script src="js/app.js?v=12"></script>
 </body>
 
 </html>

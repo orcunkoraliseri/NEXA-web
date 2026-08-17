@@ -244,12 +244,18 @@ function parseEnvelopeValue(envelopeValue) {
  * One box for the whole set rather than one per card. Session 17 paid for that
  * lesson on the five withheld neighbourhoods: five identical boxes taught
  * nothing and got skipped.
+ *
+ * KORAL, 2026-08-17: an entry with showOnSelection false is not printed here.
+ * The visitor chooses from six Canadian climates and never sees a seventh, so a
+ * box explaining why a card they cannot see is missing is a note about our
+ * work, not about the tool. The gate itself is untouched: dataGapNotice still
+ * stops a typed address on this arm with the same sentence.
  */
 function renderWithdrawnClimateNote() {
     const host = document.getElementById('envelope-withdrawn-note');
     if (!host || typeof LMN_CONFIG === 'undefined' || !LMN_CONFIG.withdrawnClimates) return;
 
-    const entries = LMN_CONFIG.withdrawnClimates;
+    const entries = LMN_CONFIG.withdrawnClimates.filter(e => e.showOnSelection !== false);
     if (!entries.length) { host.innerHTML = ''; return; }
 
     host.innerHTML = entries.map(entry => {
