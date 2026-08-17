@@ -35,3 +35,11 @@ __pycache__/
 # published. Added 2026-08-14.
 docs_implementation/documentation-revisions/
 docs_methodology/
+
+# Walkthrough recordings and their working notes. About 250 MB of GIFs and
+# MP4s that nothing on the site links to, so publishing them would cost every
+# visitor nothing and every clone a quarter of a gigabyte. It was untracked and
+# unignored, which is the one combination a single `git add -A` turns into a
+# public commit. Stage with `git add -u`, and keep this line either way.
+# Added 2026-08-17.
+docs_implementation/Demo/
