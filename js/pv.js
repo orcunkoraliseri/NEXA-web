@@ -190,7 +190,9 @@ function resolveEnvelopeAndScenario(code) {
                 if (filters.envelope) envelope = filters.envelope;
             }
         } catch (e) {}
-        if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+        // CHV, 2026-08-17, point 2. No silent Montreal default. initPVPage
+        // stops the page before this is reached with nothing.
+        if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || '';
     }
 
     // Read selections from sessionStorage (mirrors energy.js exactly)
@@ -422,7 +424,75 @@ function updatePVParameters(neighbourhoodCode) {
         scenNoteEl.textContent = LMN_CONFIG.pvScenarioNote(scenario);
     }
 
+    // 4. CHV, 2026-08-17, points 1, 5 and 7. The Assumptions & Model
+    //    Information block. Her point 1 lists what the public tool has to
+    //    carry: "only the relevant location, weather/standard, envelope and
+    //    model/data version need to appear under Assumptions & Model
+    //    Information". Every value is read from LMN_CONFIG, so this page cannot
+    //    name a weather file the config does not know about.
+    renderPvAssumptions(isLegacy, envelope);
+
     return pvIntensity;
+}
+
+/**
+ * CHV, 2026-08-17, points 1, 5 and 7. Fill the Assumptions & Model Information
+ * block on whichever of the two PV layouts is in use.
+ *
+ * @param {boolean} isLegacy - true for the RC-HR2 layout
+ * @param {string} envelope - the selected envelope key
+ */
+function renderPvAssumptions(isLegacy, envelope) {
+    if (typeof LMN_CONFIG === 'undefined') return;
+    const s = isLegacy ? '-legacy' : '';
+    const set = (id, value) => {
+        const el = document.getElementById(id + s);
+        if (el) el.textContent = value;
+    };
+
+    const climateKey = LMN_CONFIG.climateOfEnvelope(envelope);
+    const climate = LMN_CONFIG.climates.find(c => c.key === climateKey);
+
+    // The location is the city and the zone, not the envelope key. ASHRAE has
+    // no city by decision, so it names itself and its country instead of
+    // printing "null, ASHRAE".
+    set('pv-location-val', climate
+        ? (climate.city ? climate.city + ', ' + climate.zone : climate.zone + ' (United States reference case)')
+        : '—');
+    set('pv-weatherfile-val', LMN_CONFIG.weatherFileFor(envelope) || '—');
+    set('pv-standard-val', LMN_CONFIG.envelopeLabel(envelope));
+    set('pv-areabasis-val', LMN_CONFIG.units.floorAreaBasisNote);
+    set('pv-modelversion-val',
+        'Tool ' + LMN_CONFIG.version + ', data ' + LMN_CONFIG.lastUpdated +
+        ', campaign ' + LMN_CONFIG.dataCampaign.climates +
+        ', ' + LMN_CONFIG.dataCampaign.engine);
+
+    // CHV, 2026-08-17, point 5: what each efficiency represents and the
+    // arithmetic behind it, in the same box as the value it explains.
+    const effEl = document.getElementById('pv-efficiency-explainer' + s);
+    if (effEl) {
+        const e = LMN_CONFIG.pv.efficiencyExplanation;
+        effEl.innerHTML = '<div class="info-box-body">' +
+            '<p class="info-box-title">The two module efficiencies</p>' +
+            '<p class="info-box-line">' + e.sameTechnology + '</p>' +
+            '<p class="info-box-line">' + e.pitched + '</p>' +
+            '<p class="info-box-line">' + e.flat + '</p>' +
+            '<p class="info-box-line">' + e.shared + '</p>' +
+            '</div>';
+    }
+
+    // CHV, 2026-08-17, point 8: directly simulated against derived. On this
+    // page the intensity is simulated and the two numbers beside it are not.
+    const provEl = document.getElementById('pv-provenance-note' + s);
+    if (provEl) {
+        const p = LMN_CONFIG.provenance;
+        provEl.innerHTML = '<div class="info-box-body">' +
+            '<p class="info-box-title">Where these three numbers come from</p>' +
+            '<p class="info-box-line"><strong>PV generation intensity, ' + p.simulatedLabel.toLowerCase() + '.</strong> ' + p.results.pvIntensity.note + '</p>' +
+            '<p class="info-box-line"><strong>Total PV generation, ' + p.derivedLabel.toLowerCase() + '.</strong> ' + p.results.pvTotal.note + '</p>' +
+            '<p class="info-box-line"><strong>Ratio of Performance, ' + p.derivedLabel.toLowerCase() + '.</strong> ' + p.results.rop.note + '</p>' +
+            '</div>';
+    }
 }
 
 /**
@@ -433,6 +503,19 @@ function initPVPage() {
     const titleElement = document.getElementById('neighbourhood-title');
     const backStepBtn = document.getElementById('back-step-btn');
     const nextStepBtn = document.getElementById('next-step-btn');
+
+    // CHV, 2026-08-17, point 2. No climate chosen: stop, do not draw Montreal.
+    // This page reads the envelope in three places and one of them, line 193,
+    // used to end in "|| 'necb-2017'".
+    if (typeof LMN_CONFIG !== 'undefined' && neighbourhoodCode) {
+        const chosen = LMN_CONFIG.selectedEnvelopeOrEmpty(window.location.search, sessionStorage);
+        if (!chosen) {
+            const main = document.querySelector('main.container') || document.body;
+            main.innerHTML = LMN_CONFIG.noClimateNoticeHtml();
+            if (titleElement) titleElement.textContent = 'Layer 2: PV Generation';
+            return;
+        }
+    }
 
     // CHV, 2026-08-13. Second gate, before any number is drawn. The PV
     // intensity, the total and the ratio of performance all come out of the

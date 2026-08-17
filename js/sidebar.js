@@ -16,7 +16,13 @@ function getSidebarEnvelope() {
             if (filters.envelope) return filters.envelope;
         }
     } catch (e) {}
-    return sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+    // CHV, 2026-08-17, point 2: "Remove any silent default to Montreal/NECB
+    // when a valid climate has not been selected." This used to answer
+    // 'necb-2017', so the sidebar named Montreal beside a result that had no
+    // climate at all. The pages that draw numbers stop before the sidebar is
+    // built; this returns nothing so that, if one ever does not, the sidebar
+    // says nothing rather than saying Montreal.
+    return sessionStorage.getItem('selectedEnvelope') || '';
 }
 
 /**
@@ -109,11 +115,19 @@ function buildSidebar(currentLayer, mode) {
                 <img src="${nuImage}" alt="${neighbourhood.code}" onerror="this.src='https://via.placeholder.com/200x150?text=${encodeURIComponent(neighbourhood.code)}'">
                 <span class="code">${neighbourhood.code}</span>
             </div>
+            <!-- CHV, 2026-08-17, point 8: "ensure FAR/density is shown
+                 consistently if it remains part of Stage 2." Density itself was
+                 already consistent, low, medium or high, in the same words on
+                 the selection card, in the table, here and on the summary. What
+                 was NOT consistent was the empty placeholder: this block said
+                 "N/A" while every other page on the site uses the em dash.
+                 There is no FAR anywhere in the tool; it is not computed and it
+                 is not displayed. -->
             <div class="sidebar-properties">
-                <p><strong>Context:</strong> ${neighbourhood.context || 'N/A'}</p>
-                <p><strong>Usage:</strong> ${neighbourhood.usage || 'N/A'}</p>
-                <p><strong>Layout:</strong> ${neighbourhood.layout || 'N/A'}</p>
-                <p><strong>Density:</strong> ${neighbourhood.density || 'N/A'}</p>
+                <p><strong>Context:</strong> ${neighbourhood.context || '&mdash;'}</p>
+                <p><strong>Usage:</strong> ${neighbourhood.usage || '&mdash;'}</p>
+                <p><strong>Layout:</strong> ${neighbourhood.layout || '&mdash;'}</p>
+                <p><strong>Density:</strong> ${neighbourhood.density || '&mdash;'}</p>
             </div>
         </div>
         

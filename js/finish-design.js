@@ -167,7 +167,9 @@ function renderEnergyStatus(neighbourhoodCode) {
 // Resolve active scenario & energy metrics (mirrors energy.js / pv.js)
 // -------------------------------------------------------------
 function resolveEnvelopeAndScenario(code) {
-    const envelope = getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+    // CHV, 2026-08-17, point 2. No silent Montreal default. renderFinishDesign
+    // stops the page before this is reached with nothing.
+    const envelope = getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
 
     const selections = JSON.parse(
         sessionStorage.getItem('energySelections') || '{"load":[], "demand":[]}'
@@ -391,10 +393,38 @@ function fsConstraint(ctx) {
 function fsAssumptions(code, ctx) {
     const chain = LMN_CONFIG.lpvChain();
     const group = LMN_CONFIG.roofGroupFor(code);
+    const climateKey = LMN_CONFIG.climateOfEnvelope(ctx.envelope);
+    const climate = LMN_CONFIG.climates.find(function (c) { return c.key === climateKey; });
+    const eff = LMN_CONFIG.pv.efficiencyExplanation;
+    const prov = LMN_CONFIG.provenance;
     const items = [
+        // CHV, 2026-08-17, points 1 and 7. Location, exact weather file and the
+        // model and data version are the three she asked to find here.
+        ['Location and climate zone', climate ? (climate.city ? climate.city + ', ' + climate.zone : climate.zone) : '—'],
+        ['Weather file', LMN_CONFIG.weatherFileFor(ctx.envelope) || '—'],
         ['Climate and standard', LMN_CONFIG.envelopeLabel(ctx.envelope)],
-        ['Floor area basis', LMN_CONFIG.euiBasis()],
-        ['Rooftop PV', group.surface + ', module efficiency ' + group.moduleEfficiencyLabel],
+        ['Model and data version', LMN_CONFIG.version + ', updated ' + LMN_CONFIG.lastUpdated
+            + ', campaign ' + LMN_CONFIG.dataCampaign.climates + ', ' + LMN_CONFIG.dataCampaign.engine],
+        // CHV, 2026-08-17, point 3. The full label, then the basis, then the
+        // gas conversion she asked to have documented.
+        ['Energy metric', LMN_CONFIG.units.euiLabel + ', site energy'],
+        ['Floor area basis', LMN_CONFIG.units.floorAreaBasisNote],
+        ['Energy basis', LMN_CONFIG.units.energyBasisPlain + ' ' + LMN_CONFIG.units.energyBasisSentence],
+        ['Gas converted to kWh', LMN_CONFIG.units.gasConversionSentence],
+        // CHV, 2026-08-17, points 5 and 7. The four PV parameters that used to
+        // be rows of the Layer 2 card above, and the arithmetic behind the two
+        // efficiency figures she asked about.
+        ['Rooftop PV', group.surface + ', module efficiency ' + group.moduleEfficiencyLabel
+            + ', mounting ' + group.mounting + ', tilt ' + group.tiltLabel
+            + ', ground coverage ratio ' + (group.gcrApplies ? LMN_CONFIG.pv.gcr : 'does not apply on a pitched roof')],
+        ['PV module efficiency, both roof groups', eff.sameTechnology + ' ' + eff.pitched + ' ' + eff.flat + ' ' + eff.shared],
+        // CHV, 2026-08-17, point 8: directly simulated against derived, for
+        // every result this page repeats.
+        ['Directly simulated on this page', prov.results.eui.note + ' The PV generation intensity is on the same footing.'],
+        ['Derived on this page', 'Total PV generation: ' + prov.results.pvTotal.note
+            + ' Ratio of Performance: ' + prov.results.rop.note
+            + ' Landscape PV: ' + prov.results.landscapePv.note
+            + ' EV and V2G: ' + prov.results.evV2g.note],
         ['Facade PV', LMN_CONFIG.facadePvAllowed(code, ctx.envelope)
             ? 'Offered for this neighbourhood, indicative only, excluded from the totals'
             : LMN_CONFIG.facadePv.restrictionNote],
@@ -513,6 +543,18 @@ function initSummaryPage() {
     // is guarded explicitly rather than by assuming the earlier gates held:
     // four sessions running, a defect fixed on a layer page was still live
     // here. See the note in js/config.js on dataGapNotice.
+    // CHV, 2026-08-17, point 2. No climate chosen: stop. This page draws the
+    // four energy results, so it is the last place a silent Montreal default
+    // could still publish a number under the wrong label.
+    if (typeof LMN_CONFIG !== 'undefined') {
+        const chosen = LMN_CONFIG.selectedEnvelopeOrEmpty(window.location.search, sessionStorage);
+        if (!chosen) {
+            const main = document.querySelector('main.container') || document.body;
+            main.innerHTML = LMN_CONFIG.noClimateNoticeHtml();
+            return;
+        }
+    }
+
     if (typeof LMN_CONFIG !== 'undefined') {
         const envelopeKey = getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope');
         const gapNotice = envelopeKey ? LMN_CONFIG.dataGapNotice(code, envelopeKey) : null;
@@ -605,18 +647,19 @@ function initSummaryPage() {
         // neighbourhood, and this card reported the flat-roof set for all 35.
         // On the four house neighbourhoods the panels lie flush on a pitched
         // face, so there is no rack and no ground coverage ratio at all.
-        const roof = LMN_CONFIG.roofGroupFor(code);
-        setText('l2-pv-surface', roof ? roof.surface : (pvData.surface || '—'));
-        // D0.2, task 0.7, and D4.3: the efficiency comes from LMN_CONFIG and
-        // differs by roof group, because the pitched group is quoted on
-        // aperture area and the flat group on module area. Never from the per
-        // NU field, which carried the unsourced 18.68 %.
-        setText('l2-pv-efficiency', roof ? roof.moduleEfficiencyLabel : LMN_CONFIG.pv.moduleEfficiencyLabel);
-        setText('l2-pv-mounting', roof ? roof.mounting : (pvData.mounting || '—'));
-        const gcr = (roof && !roof.gcrApplies)
-            ? 'Does not apply'
-            : (pvData.gcr ? (parseFloat(pvData.gcr) * 100).toFixed(0) + '%' : '—');
-        setText('l2-pv-gcr', gcr);
+        //
+        // CHV, 2026-08-17, point 7. Those four rows have LEFT this card and are
+        // written into Assumptions & Model Information by fsAssumptions, from
+        // the same LMN_CONFIG.roofGroupFor(code) this block used. The four
+        // setText calls that stood here are gone rather than left pointing at
+        // element ids that no longer exist, because a silent no-op is how the
+        // next maintainer comes to believe a card is still being filled.
+        //
+        // D0.2, task 0.7, and D4.3 still hold and are worth keeping written
+        // down: the efficiency differs by roof group, because the pitched group
+        // is quoted on aperture area and the flat group on module area. Never
+        // from the per NU field, which carried the unsourced 18.68 %.
+        //
         // DBG-029: the absolute total must be multiplied by the HEATED AND
         // COOLED area, because that is the area pvIntensity is measured
         // against. Multiplying by gfa (the EnergyPlus Total Building Area)

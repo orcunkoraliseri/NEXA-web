@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PV Generation profile visualization for neighbourhood configurations.">
     <title>PV Generation | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=8">
+    <link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 
 <body>
@@ -58,40 +58,37 @@
                          Filled by js/pv.js from LMN_CONFIG. -->
                     <p class="pv-scenario-note info-box" id="pv-scenario-note"></p>
 
-                    <!-- Row 1: Stats Bar -->
+                    <!-- Row 1: the results.
+                         CHV, 2026-08-17, point 7: "Please simplify the main
+                         results to the most useful decision-support
+                         information ... PV: PV generation intensity, Total PV
+                         generation, and RoP with a short explanation.
+                         Technical parameters such as PV efficiency, PV area,
+                         GCR, weather file, floor-area basis, model version,
+                         etc. should remain accessible under Assumptions & Model
+                         Information, rather than appearing as main KPIs."
+
+                         Nine fields become three. NOTHING IS DELETED: the other
+                         six are in the assumptions block below, with the same
+                         element ids, so js/pv.js writes them exactly as before.
+
+                         Four of the six also failed her own test measured on
+                         2026-08-10: PV Surface, PV Efficiency, PV Mounting and
+                         Ground Coverage Ratio hold ONE distinct value across all
+                         35 neighbourhoods, so they cannot tell two designs
+                         apart. -->
                     <div class="pv-stats-bar">
+                        <!-- CHV, 2026-08-17, point 6: "Please use PV generation
+                             intensity (kWh/m2 of heated and cooled floor area
+                             per year) if this is the actual denominator used in
+                             the calculation." It is: verified against
+                             js/data.js on all 35 neighbourhoods in sessions 12
+                             and 15. This label used to say "gross floor area",
+                             which was the wording of her own Stage 4 item 6 and
+                             was the thing that was wrong. -->
                         <div class="pv-stat-item">
-                            <span class="pv-stat-label">PV Surface</span>
-                            <span class="pv-stat-value" id="pv-surface-val">—</span>
-                        </div>
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">PV Efficiency</span>
-                            <span class="pv-stat-value" id="pv-efficiency-val">—</span>
-                        </div>
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">PV Mounting</span>
-                            <span class="pv-stat-value" id="pv-mounting-val">—</span>
-                        </div>
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">Ground Coverage Ratio</span>
-                            <span class="pv-stat-value" id="pv-gcr-val">—</span>
-                        </div>
-                        <!-- STAGE-04 task 4.7. Plain-language unit, worded
-                             exactly as CHV's action plan Stage 4 item 6. -->
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">PV generation, kWh/m² of gross floor area per year</span>
+                            <span class="pv-stat-label">PV generation intensity (kWh/m² of heated and cooled floor area per year)</span>
                             <span class="pv-stat-value" id="pv-generation-val">—</span>
-                        </div>
-                        <!-- STAGE-04 task 4.8, decided by Koral. Both areas are
-                             shown, because the total below is computed against
-                             the heated and cooled one. -->
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">Total Building Area</span>
-                            <span class="pv-stat-value" id="pv-gfa-val">—</span>
-                        </div>
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">Heated and Cooled Floor Area</span>
-                            <span class="pv-stat-value" id="pv-cond-area-val">—</span>
                         </div>
                         <div class="pv-stat-item">
                             <span class="pv-stat-label">Total PV Generation</span>
@@ -113,6 +110,39 @@
                          and therefore invisible when the ratio is not shown. -->
                     <p class="info-box" id="pv-rop-note"></p>
 
+                    <!-- CHV, 2026-08-17, points 1, 5 and 7. Her named container.
+                         Everything that is a model input rather than a result
+                         lives here: the four PV parameters that used to be main
+                         KPIs, both floor areas, the location, the exact weather
+                         file, the standard, the two module efficiencies with the
+                         arithmetic behind them, and the model and data version.
+                         Written by js/pv.js from LMN_CONFIG, so no value on this
+                         page is typed into the markup. -->
+                    <details class="assumptions-details" id="pv-assumptions">
+                        <summary>Assumptions &amp; Model Information</summary>
+                        <dl class="assumptions-list" id="pv-assumptions-list">
+                            <dt>PV Surface</dt><dd id="pv-surface-val">—</dd>
+                            <dt>PV Efficiency</dt><dd id="pv-efficiency-val">—</dd>
+                            <dt>PV Mounting</dt><dd id="pv-mounting-val">—</dd>
+                            <dt>Ground Coverage Ratio</dt><dd id="pv-gcr-val">—</dd>
+                            <dt>Total Building Area</dt><dd id="pv-gfa-val">—</dd>
+                            <dt>Heated and Cooled Floor Area</dt><dd id="pv-cond-area-val">—</dd>
+                            <dt>Location and climate zone</dt><dd id="pv-location-val">—</dd>
+                            <dt>Weather file</dt><dd id="pv-weatherfile-val">—</dd>
+                            <dt>Standard and envelope</dt><dd id="pv-standard-val">—</dd>
+                            <dt>Floor area basis</dt><dd id="pv-areabasis-val">—</dd>
+                            <dt>Model and data version</dt><dd id="pv-modelversion-val">—</dd>
+                        </dl>
+                        <!-- CHV, 2026-08-17, point 5: "show me clearly what each
+                             efficiency represents and the formula/assumptions
+                             behind each." -->
+                        <div class="info-box" id="pv-efficiency-explainer"></div>
+                        <!-- CHV, 2026-08-17, point 8: "distinguish directly
+                             simulated results from results derived from another
+                             simulated scenario." -->
+                        <div class="info-box" id="pv-provenance-note"></div>
+                    </details>
+
                     <!-- STAGE-04 task 4.9, CHV action plan Stage 4 item 8. -->
                     <p class="pv-method-link-wrap"><a class="pv-method-link" href="documentation.html#sec-pv">How this is calculated &rarr;</a></p>
 
@@ -128,38 +158,16 @@
                     <p class="pv-scenario-note info-box" id="pv-scenario-note-legacy"></p>
                     <div class="pv-profile-layout">
                         <div class="pv-left-column">
-                            <div class="pv-section pv-inputs-section">
-                                <div class="pv-input-bar">
-                                    <span class="pv-input-label">PV Surface:</span>
-                                    <span class="pv-input-value" id="pv-surface-val-legacy">&mdash;</span>
-                                </div>
-                                <div class="pv-input-bar">
-                                    <span class="pv-input-label">PV Efficiency:</span>
-                                    <!-- D0.2, task 0.7: filled by js/pv.js from
-                                         LMN_CONFIG. No efficiency literal here. -->
-                                    <span class="pv-input-value" id="pv-efficiency-val-legacy">&mdash;</span>
-                                </div>
-                                <div class="pv-input-bar">
-                                    <span class="pv-input-label">PV Mounting:</span>
-                                    <span class="pv-input-value" id="pv-mounting-val-legacy">&mdash;</span>
-                                </div>
-                                <div class="pv-input-bar">
-                                    <span class="pv-input-label">Ground Coverage Ratio:</span>
-                                    <span class="pv-input-value" id="pv-gcr-val-legacy">&mdash;</span>
-                                </div>
-                            </div>
+                            <!-- CHV, 2026-08-17, points 6 and 7. The same three
+                                 results as the current layout, and the same six
+                                 model inputs moved into her named container
+                                 below. This page has two layouts and only one
+                                 gets looked at, so every change here is made
+                                 twice on purpose. -->
                             <div class="pv-section pv-kpis-section">
                                 <div class="pv-kpi-item">
-                                    <h3 class="pv-kpi-label">PV generation, kWh/m&sup2; of gross floor area per year</h3>
+                                    <h3 class="pv-kpi-label">PV generation intensity (kWh/m&sup2; of heated and cooled floor area per year)</h3>
                                     <div class="pv-kpi-value" id="pv-generation-val-legacy">—</div>
-                                </div>
-                                <div class="pv-kpi-item">
-                                    <h3 class="pv-kpi-label">Total Building Area</h3>
-                                    <div class="pv-kpi-value" id="pv-gfa-val-legacy">—</div>
-                                </div>
-                                <div class="pv-kpi-item">
-                                    <h3 class="pv-kpi-label">Heated and Cooled Floor Area</h3>
-                                    <div class="pv-kpi-value" id="pv-cond-area-val-legacy">—</div>
                                 </div>
                                 <div class="pv-kpi-item">
                                     <h3 class="pv-kpi-label">Total PV Generation</h3>
@@ -174,6 +182,27 @@
 
                     </div>
                     <p class="pv-roof-note info-box" id="pv-roof-note-legacy"></p>
+
+                    <details class="assumptions-details" id="pv-assumptions-legacy">
+                        <summary>Assumptions &amp; Model Information</summary>
+                        <dl class="assumptions-list" id="pv-assumptions-list-legacy">
+                            <dt>PV Surface</dt><dd id="pv-surface-val-legacy">&mdash;</dd>
+                            <!-- D0.2, task 0.7: filled by js/pv.js from
+                                 LMN_CONFIG. No efficiency literal here. -->
+                            <dt>PV Efficiency</dt><dd id="pv-efficiency-val-legacy">&mdash;</dd>
+                            <dt>PV Mounting</dt><dd id="pv-mounting-val-legacy">&mdash;</dd>
+                            <dt>Ground Coverage Ratio</dt><dd id="pv-gcr-val-legacy">&mdash;</dd>
+                            <dt>Total Building Area</dt><dd id="pv-gfa-val-legacy">&mdash;</dd>
+                            <dt>Heated and Cooled Floor Area</dt><dd id="pv-cond-area-val-legacy">&mdash;</dd>
+                            <dt>Location and climate zone</dt><dd id="pv-location-val-legacy">&mdash;</dd>
+                            <dt>Weather file</dt><dd id="pv-weatherfile-val-legacy">&mdash;</dd>
+                            <dt>Standard and envelope</dt><dd id="pv-standard-val-legacy">&mdash;</dd>
+                            <dt>Floor area basis</dt><dd id="pv-areabasis-val-legacy">&mdash;</dd>
+                            <dt>Model and data version</dt><dd id="pv-modelversion-val-legacy">&mdash;</dd>
+                        </dl>
+                        <div class="info-box" id="pv-efficiency-explainer-legacy"></div>
+                        <div class="info-box" id="pv-provenance-note-legacy"></div>
+                    </details>
 
                     <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
                          the number means and how to read it. Text from
@@ -195,10 +224,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=8"></script>
-    <script src="js/data.js?v=8"></script>
-    <script src="js/sidebar.js?v=8"></script>
-    <script src="js/pv.js?v=8"></script>
+    <script src="js/config.js?v=9"></script>
+    <script src="js/data.js?v=9"></script>
+    <script src="js/sidebar.js?v=9"></script>
+    <script src="js/pv.js?v=9"></script>
 </body>
 
 </html>

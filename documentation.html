@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LMN &mdash; References &amp; Methodology</title>
-    <link rel="stylesheet" href="css/styles.css?v=8" />
+    <link rel="stylesheet" href="css/styles.css?v=9" />
     <style>
         /* ===== Documentation page helpers (uses existing design tokens) ===== */
         .doc-page {
@@ -548,6 +548,41 @@
                         <td>Does not apply: there is no row spacing on a flush array</td></tr>
                 </tbody>
             </table>
+            <!-- CHV, 2026-08-17, point 5: "If the same PV technology is used, I
+                 would expect one consistent module efficiency; roof differences
+                 should normally be represented through available area, tilt,
+                 orientation, active fraction, GCR, etc. Please show me clearly
+                 what each efficiency represents and the formula/assumptions
+                 behind each." Rechecked against both sources on 2026-08-17. She
+                 is right about the mechanism, and the arithmetic is worth
+                 printing because it is what makes the two figures agree. -->
+            <div class="doc-note">
+                <p>
+                    <strong>The two figures are the same panel, measured against different
+                    areas.</strong> The same module technology is assumed on both roof types. What
+                    differs is the active-area fraction and the area each figure is applied to, not
+                    the panel:
+                </p>
+                <ul>
+                    <li><strong>Pitched roof, the four house neighbourhoods.</strong> 20% module
+                        efficiency <em>of aperture area</em>, with a 0.9 active-area fraction.
+                        <code>0.20 &times; 0.9 = 0.18</code>, so <strong>18% of the gross roof
+                        face</strong>. Source: <code>PV_methodology.md</code>, sections 6 and 11.</li>
+                    <li><strong>Flat roof, the other 31 neighbourhoods.</strong> 18.65% <em>cell</em>
+                        efficiency applied to the racked module area. Source:
+                        <code>BEM_utils/pv_tier1.py</code>, line 105,
+                        <code>apply_tier1_pv(cell_efficiency=0.1865)</code>. The same section also
+                        states 200&nbsp;W/m&sup2; of roof area for this group.</li>
+                </ul>
+                <p>
+                    18.0% against 18.65% is a difference of 0.65 of a percentage point. Everything
+                    downstream is shared: 14% DC&rarr;AC system losses and 96% inverter efficiency.
+                    Available area, tilt, orientation and, on flat roofs only, the ground-coverage
+                    ratio are what separate the two groups, which is exactly the set of mechanisms
+                    the difference should be carried by.
+                </p>
+            </div>
+
             <p class="doc-note">
                 <strong>Decisions D0.2 and D4.3, and defect DBG-013, closed 2026-08-10.</strong>
                 Three efficiency figures were visible in the tool at once and were treated as three
@@ -759,23 +794,101 @@
         <!-- Section D: Climate zone & weather -->
         <section class="doc-section" id="sec-climate">
             <h2>F &mdash; Climate Zone &amp; Weather</h2>
-            <ul>
-                <li>
-                    Modelled climate zone: <strong>ASHRAE CZ6A</strong> (cold, humid continental) &mdash;
-                    represented by <strong>Montr&eacute;al</strong>. A colder <strong>CZ7A (Calgary)</strong>
-                    variant is also simulated.
-                </li>
-                <li>
-                    Weather files: <strong>CWEC2020v2 Montr&eacute;al Trudeau Intl AP</strong> (CZ6) and
-                    <strong>CWEC2020v2 Calgary Olympic Park Upper</strong> (CZ7A).
-                </li>
-                <li>
-                    The DOE/PNNL prototype library has no Canadian city; <strong>Buffalo, NY (CZ6A)</strong> is used
-                    as the geometric proxy for US prototypes (Buffalo HDD&#x2081;&#x2088; &asymp; 3,500 vs
-                    Montr&eacute;al &asymp; 3,900; closest humid-climate match, preserves latent-cooling realism).
-                    US constructions/schedules are then replaced by NECB/NBC/BTAP equivalents for the Canadian baselines.
-                </li>
-            </ul>
+            <!-- Rewritten 2026-08-17 on CHV's point 1. What stood here named
+                 two climates, Montreal and Calgary, and was written before the
+                 national campaign of 7 July 2026 replaced them with six NECB
+                 zones. It also stated the Buffalo geometric proxy without
+                 saying which arm it applies to, which is the sentence that
+                 raised her question. Every row below was read from
+                 plan_national_zones.md section 1, the standard to zone to city
+                 to EPW registry, and each is also carried in js/config.js so the
+                 result pages print the same file this table lists. -->
+            <p>
+                Each climate the tool offers is a separate EnergyPlus campaign on its own weather
+                file. The exact file is named on every result page, under
+                <strong>Assumptions &amp; Model Information</strong>.
+            </p>
+
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Location and climate zone</th>
+                        <th>Exact weather file used</th>
+                        <th>Standard</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vancouver, BC &mdash; NECB Zone 4</td>
+                        <td><code>CAN_BC_Vancouver.Intl.AP.718920_CWEC2020v2.epw</code></td>
+                        <td>NECB 2017</td>
+                        <td>Simulation-backed</td>
+                    </tr>
+                    <tr>
+                        <td>Toronto, ON &mdash; NECB Zone 5</td>
+                        <td><code>CAN_ON_Bishop-Toronto.City.AP.712650_CWEC2020v2.epw</code></td>
+                        <td>NECB 2017</td>
+                        <td>Simulation-backed. The card reads &ldquo;Toronto / Ottawa&rdquo;: both are in Zone 5, and Toronto is the city that was simulated</td>
+                    </tr>
+                    <tr>
+                        <td>Montr&eacute;al, QC &mdash; NECB Zone 6</td>
+                        <td><code>CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2020v2.epw</code></td>
+                        <td>NECB 2017</td>
+                        <td>Simulation-backed</td>
+                    </tr>
+                    <tr>
+                        <td>Winnipeg, MB &mdash; NECB Zone 7A</td>
+                        <td><code>CAN_MB_Winnipeg-Richardson.Intl.AP.718520_CWEC2020v2.epw</code></td>
+                        <td>NECB 2017</td>
+                        <td>Simulation-backed. Edmonton is the preferred representative city for Zone 7A and has no CWEC2020v2 file, so Winnipeg substitutes. Winnipeg sits at the cold edge of the zone</td>
+                    </tr>
+                    <tr>
+                        <td>Fort McMurray, AB &mdash; NECB Zone 7B</td>
+                        <td><code>CAN_AB_Fort.McMurray.AP.716890_CWEC2020v2.epw</code></td>
+                        <td>NECB 2017</td>
+                        <td>Simulation-backed</td>
+                    </tr>
+                    <tr>
+                        <td>Chisasibi, QC &mdash; NECB Zone 8</td>
+                        <td><code>CAN_QC_La.Grande.Riviere.AP.718270_CWEC.epw</code></td>
+                        <td>NECB 2017</td>
+                        <td>Simulation-backed. Chisasibi has no CWEC2020v2 file. The run uses the La Grande Rivi&egrave;re airport station, CYGL, about 90&nbsp;km inland, and it is a proxy</td>
+                    </tr>
+                    <tr>
+                        <td>ASHRAE reference case &mdash; United States</td>
+                        <td><code>Buffalo Niagara Intl AP, NY, USA, TMY3, WMO 725280</code></td>
+                        <td>ASHRAE 90.1</td>
+                        <td><strong>Withdrawn from the climate selection, 17 August 2026.</strong> See below</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="doc-note">
+                <p>
+                    <strong>Why an ASHRAE case existed, and why it is no longer offered.</strong>
+                    It is a United States reference case, not a Canadian climate: United States
+                    DOE/PNNL prototypes, ASHRAE 90.1, and a United States weather file. Buffalo, NY
+                    is in ASHRAE climate zone 6A, the same zone as Montr&eacute;al, and is the
+                    closest United States humid-continental analogue
+                    (Buffalo HDD&#x2081;&#x2088; &asymp;&nbsp;3,500 against Montr&eacute;al
+                    &asymp;&nbsp;3,900), which is why it was chosen. Offering it beside six Canadian
+                    climate zones made it read as a seventh Canadian climate, which it is not. It has
+                    been withdrawn from the selection rather than renamed. Its results are not
+                    deleted, and it can return if it is re-run on the Canadian weather file for the
+                    same zone.
+                </p>
+                <p>
+                    <strong>Buffalo also appears inside prototype file names, where it is not a
+                    weather file.</strong> The DOE/PNNL prototype library has no Canadian city, so
+                    the prototypes carry their source city in their name, for example
+                    <code>ASHRAE901_OfficeMedium_STD2022_Buffalo_NECB17_Z5</code>. In that name
+                    Buffalo identifies the prototype geometry; <code>NECB17_Z5</code> is the code
+                    substitution applied to it, and the weather file is the Canadian one for that
+                    zone, from the table above. United States constructions and schedules are
+                    replaced by NECB, NBC and BTAP equivalents for every Canadian baseline.
+                </p>
+            </div>
 
             <div class="doc-reports-box">
                 <h4>Related Technical Reports</h4>
@@ -833,7 +946,16 @@
                     exactly below.</li>
                 <li><strong>Neighbourhood airflow:</strong>
                     <code>AirflowNetwork:SimulationControl = MultizoneWithoutDistribution</code>.</li>
-                <li><strong>Envelope-code options</strong> offered per neighbourhood: Standard (NECB), Standard (ASHRAE), High Performance based on NECB, and High Performance based on ASHRAE. Note that the high-performance options represent high-performance envelope improvements (EEM1) implemented strictly on the building envelope for buildings built to either NECB or ASHRAE standards.</li>
+                <!-- Updated 2026-08-17, CHV points 1 and 4. The ASHRAE options
+                     are no longer offered, and the tier is named as she named
+                     it, HPerf, instead of "High Performance based on". -->
+                <li><strong>Envelope-code options</strong> offered per neighbourhood: <strong>Standard</strong>,
+                    the NECB 2017 baseline for the selected climate zone, and <strong>HPerf</strong>,
+                    the High-Performance Envelope. HPerf is an envelope package only: it is applied
+                    strictly to the building envelope of a building built to NECB 2017, and it is the
+                    rung stored as <code>EEM1</code> in the data. Montr&eacute;al additionally offers
+                    a <strong>1983 Quebec Vintage</strong> starting point. The ASHRAE 90.1 options
+                    were withdrawn from the selection on 17 August 2026; see section F.</li>
             </ul>
 
             <h3>How the EUI is computed</h3>
@@ -853,6 +975,33 @@
                 <li><strong>Not included.</strong> On-site PV generation is never subtracted from the EUI.
                     It is reported separately, in section C.</li>
             </ul>
+
+            <!-- CHV, 2026-08-17, point 3: "explain simply that this includes
+                 annual electricity and natural-gas energy used by the buildings,
+                 without source/primary-energy conversion factors. Please also
+                 document how gas is converted to kWh before being combined with
+                 electricity." The second half was nowhere on the site. The
+                 factor below was read from the pipeline itself, not from a
+                 summary: idf_reader/main_BEM.py, _eui_to_kwh, line 682. -->
+            <h3>How natural gas is converted to kWh before it is added to electricity</h3>
+            <p>
+                Both fuels are read from the <strong>same EnergyPlus End Uses table</strong>, in the
+                same reported unit, which is gigajoules in these runs, and both go through the
+                <strong>same conversion</strong>:
+            </p>
+            <p>
+                <code>1 GJ = 277.778 kWh</code>, which is the exact identity
+                <code>1 kWh = 3.6 MJ</code>. Where the table is reported in kBtu instead, the factor
+                is <code>1 kBtu = 0.293071 kWh</code>.
+            </p>
+            <p>
+                <strong>Nothing is weighted by fuel.</strong> A kWh of gas and a kWh of electricity
+                are added as equals, because this is site energy. No source-energy or
+                primary-energy conversion factor, no grid emissions factor and no fuel-specific
+                multiplier is applied at any point in the chain. A tool that reported source energy
+                would multiply electricity by roughly 1.8 to 3 and gas by roughly 1.05, depending on
+                the jurisdiction; this one does neither.
+            </p>
 
             <h3>The two floor areas, and which number uses which</h3>
             <p>
@@ -903,35 +1052,48 @@
             <div class="doc-table-wrap">
                 <table class="doc-table">
                     <thead>
+                        <!-- CHV, 2026-08-17, point 4: the cumulative names are
+                             hers, and "EEM1, EEM2, etc. can remain in the
+                             technical documentation, but not as the main
+                             user-facing names". This page is the technical
+                             documentation, so both columns are carried and the
+                             mapping between them is explicit. -->
                         <tr>
-                            <th>Scenario</th>
+                            <th>What the user reads</th>
+                            <th>Data key</th>
                             <th>What it adds</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>DEFAULT</strong></td>
+                            <td><strong>Baseline</strong></td>
+                            <td><code>DEFAULT</code></td>
                             <td>Code-compliant baseline as designed; native PV only</td>
                         </tr>
                         <tr>
-                            <td><strong>IAL (Ideal Air Loads)</strong></td>
-                            <td>HVAC replaced by ideal loads to expose pure thermal demand (district-energy sizing); not directly comparable to fuel/electricity</td>
-                        </tr>
-                        <tr>
-                            <td><strong>EEM1 &mdash; Envelope</strong></td>
+                            <td><strong>HPerf</strong><br><span class="doc-small">High-Performance Envelope</span></td>
+                            <td><code>EEM1</code></td>
                             <td>High-performance opaque assemblies; triple-glazed windows U=0.85, SHGC=0.40; foundation/slab insulation (CZ6/CZ7A); infiltration &times;0.25 (Passive-House target)</td>
                         </tr>
                         <tr>
-                            <td><strong>EEM2 &mdash; + HVAC</strong></td>
-                            <td>EEM1 + air-source heat pump (COP 4.0&ndash;4.5) with cold-climate (CCHP) curves; inverter cooling (SEER 22/EER 14); per-zone heat pumps; supplemental-heater lockout; defrost on-demand</td>
+                            <td><strong>HPerf + Heat Pump</strong></td>
+                            <td><code>EEM2</code></td>
+                            <td>HPerf + air-source heat pump (COP 4.0&ndash;4.5) with cold-climate (CCHP) curves; inverter cooling (SEER 22/EER 14); per-zone heat pumps; supplemental-heater lockout; defrost on-demand</td>
                         </tr>
                         <tr>
-                            <td><strong>EEM3 &mdash; + Heat Pump for DHW</strong></td>
-                            <td>EEM2 + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
+                            <td><strong>HPerf + Heat Pump + DHW</strong><br><span class="doc-small">DHW: domestic hot water</span></td>
+                            <td><code>EEM3</code></td>
+                            <td>HPerf + Heat Pump + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
                         </tr>
                         <tr>
-                            <td><strong>EEM4 &mdash; + Lighting/Equipment/Cooling</strong></td>
-                            <td>EEM3 + automated blinds; daylight dimming; LED (LPD &times;0.55); occupancy-sensor trim; ENERGY STAR plug loads (EPD &times;0.75); smart power management; gas-appliance electrification (residential)</td>
+                            <td><strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong></td>
+                            <td><code>EEM4</code></td>
+                            <td>HPerf + Heat Pump + DHW + automated blinds; daylight dimming; LED (LPD &times;0.55); occupancy-sensor trim; ENERGY STAR plug loads (EPD &times;0.75); smart power management; gas-appliance electrification (residential)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ideal thermal load</strong></td>
+                            <td><code>IAL</code></td>
+                            <td>HVAC replaced by ideal air loads to expose pure thermal demand (district-energy sizing); not directly comparable to fuel/electricity</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1127,9 +1289,10 @@
 
             <h3>Purpose &amp; Context</h3>
             <p>
-                While the standard NECB 2017 and high-performance (HPENV) envelopes model <em>new construction</em>,
+                While the Standard (NECB 2017) and HPerf (High-Performance Envelope) options model <em>new
+                construction</em>,
                 the 1983 vintage captures the <strong>retrofit potential</strong> of existing buildings. By comparing
-                1983 baseline EUI against progressively deeper EEM scenarios, users can estimate the energy savings
+                1983 baseline EUI against progressively deeper scenarios on the ladder above, users can estimate the energy savings
                 achievable through envelope upgrades, HVAC electrification, DHW heat pumps, and efficient
                 lighting/equipment on <em>real existing building stock</em>.
             </p>
@@ -1139,7 +1302,7 @@
                 <li><strong>Weather file:</strong> Montr&eacute;al (CWEC &mdash; CAN_MTL), Climate Zone 6A.</li>
                 <li><strong>Neighbourhood units:</strong> All 35 NUs (RC, RS, MU, CC, IC archetypes).</li>
                 <li><strong>Scenarios per NU:</strong> 16 EEM combinations (4 binary flags: Envelope, HVAC, DHW, Lighting/Equipment) &mdash; 560 total simulation runs.</li>
-                <li><strong>Engine:</strong> EnergyPlus v22.1, consistent with the standard NECB/HPENV campaigns.</li>
+                <li><strong>Engine:</strong> EnergyPlus v22.1, consistent with the Standard and HPerf campaigns.</li>
             </ul>
 
             <h3>Key Envelope Differences vs. NECB 2017</h3>
@@ -1415,6 +1578,6 @@
 
     </div><!-- /.doc-page -->
 </main>
-    <script src="js/config.js?v=8"></script>
+    <script src="js/config.js?v=9"></script>
 </body>
 </html>

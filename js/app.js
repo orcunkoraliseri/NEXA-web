@@ -238,6 +238,36 @@ function parseEnvelopeValue(envelopeValue) {
 }
 
 /**
+ * CHV, 2026-08-17, point 1. Print the reason a climate arm is withdrawn, under
+ * the row of climate cards.
+ *
+ * One box for the whole set rather than one per card. Session 17 paid for that
+ * lesson on the five withheld neighbourhoods: five identical boxes taught
+ * nothing and got skipped.
+ */
+function renderWithdrawnClimateNote() {
+    const host = document.getElementById('envelope-withdrawn-note');
+    if (!host || typeof LMN_CONFIG === 'undefined' || !LMN_CONFIG.withdrawnClimates) return;
+
+    const entries = LMN_CONFIG.withdrawnClimates;
+    if (!entries.length) { host.innerHTML = ''; return; }
+
+    host.innerHTML = entries.map(entry => {
+        // Name the cards the visitor can actually see, not every key in the
+        // entry: "high-performance-ashrae" is a tier of the same card.
+        const shown = entry.climates
+            .filter(k => document.querySelector('.envelope-region-btn[data-region="' + k + '"]'))
+            .map(k => LMN_CONFIG.envelopeLabel(k));
+        const names = shown.length ? shown.join(', ') : '';
+        return '<div class="info-box info-box--caution">' +
+            '<div class="info-box-body">' +
+            '<p class="info-box-title">' + entry.label + '</p>' +
+            '<p class="info-box-line">' + (names ? '<strong>' + names + '</strong>. ' : '') + entry.reason + '</p>' +
+            '</div></div>';
+    }).join('');
+}
+
+/**
  * Set up Envelope image card event listeners and Popup Modal (Region selection + Tier popup)
  */
 function setupEnvelopeCards() {
@@ -251,11 +281,50 @@ function setupEnvelopeCards() {
 
     if (!regionCards.length || !popup) return;
 
+    // CHV, 2026-08-17, point 2. The high performance tier is named once, in
+    // LMN_CONFIG.envelopeTiers, and written in here. The markup ships empty on
+    // purpose: "HPENV" and "Hyper-performance" used to live in the HTML, so the
+    // tier had one name in the popup, another in the badge below, and neither
+    // was hers.
+    const tiers = (typeof LMN_CONFIG !== 'undefined' && LMN_CONFIG.envelopeTiers) ? LMN_CONFIG.envelopeTiers : null;
+    if (tiers) {
+        const hpLabel = document.getElementById('tier-label-hperf');
+        const hpSub = document.getElementById('tier-sub-hperf');
+        const hpDef = document.getElementById('envelope-popup-hperf-definition');
+        if (hpLabel) hpLabel.textContent = tiers.highPerformance.short;
+        if (hpSub) hpSub.textContent = tiers.highPerformance.full;
+        // "Define HPerf once as High-Performance Envelope", her point 4. This is
+        // the one place a user meets the abbreviation before choosing it.
+        if (hpDef) hpDef.textContent = tiers.highPerformance.definition;
+    }
+
+    // CHV, 2026-08-17, point 1. Why the withdrawn climate card is greyed. The
+    // reason is read from config rather than written into the page, so the page
+    // and the gate on the result pages cannot say different things.
+    renderWithdrawnClimateNote();
+
     // Open popup when region card is clicked
     regionCards.forEach(card => {
         card.addEventListener('click', () => {
+            // CHV, 2026-08-17, point 1. A withdrawn arm ships disabled, and the
+            // second gate is here so that clearing the attribute in an inspector
+            // does not open the popup. Same two-gate shape as the submit button,
+            // D2.9.
+            if (card.disabled || card.hasAttribute('data-permanently-disabled')) return;
+
             const region = card.dataset.region;
             pendingRegion = region;
+
+            // CHV, 2026-08-17, point 2: "ASHRAE selection should never show NECB
+            // 2017 in the following popup." The Standard tier names the standard
+            // of the region that was actually clicked.
+            const subStandard = document.getElementById('tier-sub-standard');
+            if (subStandard) {
+                const entry = (typeof LMN_CONFIG !== 'undefined' && LMN_CONFIG.climates)
+                    ? LMN_CONFIG.climates.find(c => c.key === region)
+                    : null;
+                subStandard.textContent = entry ? entry.standard : '';
+            }
 
             // Set region name in popup
             const spanText = card.querySelector('span:not(.envelope-region-badge)').innerText.replace('\n', ' ');
@@ -298,7 +367,16 @@ function setupEnvelopeCards() {
                 if (card.dataset.region === pendingRegion) {
                     card.classList.add('active');
                     if (badge) {
-                        badge.textContent = tier === 'high-performance' ? 'HPENV' : tier === 'vintage-1983' ? '1983' : 'Standard';
+                        // CHV, 2026-08-17, point 2. Read from the same map the
+                        // popup reads, so the badge and the popup cannot name
+                        // the same tier differently. This literal used to say
+                        // "HPENV".
+                        const t = (typeof LMN_CONFIG !== 'undefined' && LMN_CONFIG.envelopeTiers) ? LMN_CONFIG.envelopeTiers : null;
+                        badge.textContent = tier === 'high-performance'
+                            ? (t ? t.highPerformance.short : 'HPerf')
+                            : tier === 'vintage-1983'
+                                ? (t ? t.vintage1983.short : '1983')
+                                : (t ? t.standard.short : 'Standard');
                     }
                 } else {
                     card.classList.remove('active');
@@ -532,7 +610,13 @@ function setupLayer2Button() {
                 // Get envelope from stored filters
                 const filtersJson = sessionStorage.getItem('activeFilters');
                 const filters = filtersJson ? JSON.parse(filtersJson) : {};
-                const envelope = filters.envelope || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+                // CHV, 2026-08-17, point 2. This used to end in
+                // "|| 'necb-2017'", so a visitor with no climate was carried
+                // into Layer 2 as if they had chosen Montreal. The climate
+                // cannot be skipped in the normal flow, D2.9, so this is a
+                // guard: with nothing chosen the button does not navigate.
+                const envelope = filters.envelope || sessionStorage.getItem('selectedEnvelope') || '';
+                if (!envelope) return;
                 sessionStorage.setItem('selectedEnvelope', envelope);
                 window.location.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(selectedNeighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             }
@@ -593,6 +677,17 @@ function renderDataGapNotes(filters) {
 
     holder.innerHTML = '';
     if (typeof LMN_CONFIG === 'undefined' || !filters.envelope) return;
+
+    // CHV, 2026-08-17, point 1. A withdrawn arm withholds all 35 rows, so the
+    // table is empty and an empty table with no note reads as a broken filter.
+    // The arm cannot be chosen by clicking, its card ships disabled, but it can
+    // still be reached by a typed address or a session stored before today,
+    // which is the same hole session 17 closed for the withheld pairs.
+    const withdrawn = LMN_CONFIG.climateWithdrawn(filters.envelope);
+    if (withdrawn) {
+        holder.innerHTML = LMN_CONFIG.dataGapNotice(null, filters.envelope);
+        return;
+    }
 
     const gaps = LMN_CONFIG.dataGaps.filter(g => g.climates.indexOf(filters.envelope) !== -1);
     if (gaps.length === 0) return;
@@ -839,8 +934,13 @@ function createResultRow(concept, neighbourhood) {
     // Helper function to capitalize layout values
     const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
-    // Determine the active envelope standard to display (default to 'necb-2017')
-    const activeEnvelope = activeFilters.envelope || 'necb-2017';
+    // CHV, 2026-08-17, point 2. No silent Montreal default. This cell used to
+    // read "activeFilters.envelope || 'necb-2017'", which drew the Montreal
+    // icon and the Montreal label on a row where no climate had been chosen.
+    // The table is only built after a climate is chosen, D2.9, so the empty
+    // case is a guard rather than a normal path: it draws nothing rather than
+    // drawing the wrong thing.
+    const activeEnvelope = activeFilters.envelope || '';
 
     // Map envelope standard to exact image filename and label display
     const envelopeImageNames = {
@@ -865,8 +965,8 @@ function createResultRow(concept, neighbourhood) {
     // Envelope display names now come from LMN_CONFIG, D0.1 / DBG-016. The map
     // that used to sit here named four cities that were never simulated:
     // Windsor, Calgary, Whitehorse and Yellowknife.
-    const envelopeImageName = envelopeImageNames[activeEnvelope] || activeEnvelope;
-    const envelopeLabel = LMN_CONFIG.envelopeLabel(activeEnvelope);
+    const envelopeImageName = activeEnvelope ? (envelopeImageNames[activeEnvelope] || activeEnvelope) : '';
+    const envelopeLabel = activeEnvelope ? LMN_CONFIG.envelopeLabel(activeEnvelope) : '';
 
     propertiesCell.innerHTML = `
       <div class="properties-cell" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; justify-items: center; align-items: start;">

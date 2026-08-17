@@ -33,7 +33,10 @@ function getEnvelopeFromURL() {
     const stored = sessionStorage.getItem('selectedEnvelope');
     if (stored) return stored;
 
-    return 'necb-2017';
+    // CHV, 2026-08-17, point 2: "Remove any silent default to Montreal/NECB
+    // when a valid climate has not been selected." This used to return
+    // 'necb-2017'. The caller stops the page instead.
+    return '';
 }
 
 // Current selection state (arrays for multi-select)
@@ -273,6 +276,15 @@ function initEnergySelectionPage() {
     // Envelope display names come from LMN_CONFIG, D0.1 / DBG-016. The local
     // copy that used to sit here named four cities that were never simulated.
     const envelopeNames = LMN_CONFIG.envelopeLabels;
+
+    // CHV, 2026-08-17, point 2. No climate chosen: stop before the selection is
+    // built. getEnvelope() used to answer 'necb-2017' here.
+    if (!envelope) {
+        const main = document.querySelector('main.container') || document.body;
+        main.innerHTML = LMN_CONFIG.noClimateNoticeHtml();
+        titleElement.textContent = 'Layer 2: Energy Design';
+        return;
+    }
 
     // CHV, 2026-08-13. A withheld neighbourhood and climate pair is not
     // offered on the Layer 1 table, so this page is reachable for one only by

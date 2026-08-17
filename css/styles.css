@@ -2493,6 +2493,55 @@ img.icon-missing {
   color: var(--text-secondary);
 }
 
+/* CHV, 2026-08-17, point 7. Her named container for everything that is a model
+   input rather than a result: "Technical parameters such as PV efficiency, PV
+   area, GCR, weather file, floor-area basis, model version, etc. should remain
+   accessible under Assumptions & Model Information, rather than appearing as
+   main KPIs."
+
+   Accessible, not prominent, so it is a <details> that opens closed. It reuses
+   .assumptions-list inside, so the rows above need no second rule.
+
+   Centred on the column and sized to itself, like every other block on this
+   site. Koral, 2026-08-12: "ceci n'est pas une rapport, c'est une page de web." */
+.assumptions-details {
+  margin: 1.5rem auto 0;
+  max-width: 900px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  text-align: left;
+}
+
+.assumptions-details > summary {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: revert;
+}
+
+.assumptions-details[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
+/* The two explanation boxes inside it are styled down in the explanation-box
+   section, not here. That placement is deliberate: verify_session16.js reads
+   the first rule for that component in this file to test its colour, so a
+   nested selector written above the component would be the rule it found, and
+   the colour check would silently start testing the wrong block. */
+
+/* Documentation page: the expansion of an abbreviation, under the name it
+   expands. Added 2026-08-17 with CHV's scenario names, which use HPerf and DHW
+   and have to say once what each stands for. */
+.doc-small {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
 /* Documentation page: a note that records a decision or a correction. */
 .doc-note {
   margin-top: 0.5rem;
@@ -3618,6 +3667,14 @@ img.icon-missing {
    that once shipped an empty grey badge on every card. */
 .info-box[hidden] {
   display: none;
+}
+
+/* CHV, 2026-08-17, points 5 and 8. Inside Assumptions & Model Information the
+   two explanation boxes sit under the rows rather than beside them. The empty
+   case needs no rule of its own: .info-box.info-box:empty above already hides
+   it, which is why this block is here and not up with .assumptions-details. */
+.assumptions-details .info-box {
+  margin-top: 0.9rem;
 }
 
 .info-box-body {

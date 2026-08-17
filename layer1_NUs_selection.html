@@ -4,9 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LMN tool: Design positive-energy district neighbourhoods">
-  <title>LMN tool: Design positive-energy district neighbourhoods</title>
-  <link rel="stylesheet" href="css/styles.css?v=8">
+  <!-- CHV, 2026-08-17, point 2: "Remove old wording such as 'Design
+       positive-energy district neighbourhoods' and keep the agreed early-stage
+       decision-support/pre-feasibility positioning." This page was the last one
+       still carrying it, in the description and in the tab title. -->
+  <meta name="description" content="LMN tool: early stage, pre-feasibility comparison of simulated neighbourhood units.">
+  <title>Neighbourhood Selection | Layered Modular Neighbourhood (LMN) Tool</title>
+  <link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 
 <body>
@@ -109,10 +113,28 @@
           <div class="parameter-group">
               <div class="parameter-label">Envelope</div>
               <div class="envelope-cards">
-                  <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="ashrae">
+                  <!-- CHV, 2026-08-17, point 1. The ASHRAE arm is withdrawn from
+                       the climate selection: it is a United States reference
+                       case, simulated with United States prototypes against
+                       ASHRAE 90.1 on Buffalo Niagara Intl AP TMY3. It is not
+                       renamed, which she ruled out, and it is not deleted: all
+                       35 neighbourhoods and all 5 scenarios stay in js/data.js
+                       under "ashrae" and "high-performance-ashrae".
+                       The reason it stays on the page as a disabled card rather
+                       than vanishing is the same reason every other unavailable
+                       option does: a card that disappears teaches nothing, and
+                       CHV has seen this one. The reason is printed under the
+                       row, from LMN_CONFIG.withdrawnClimates. -->
+                  <button class="envelope-card envelope-region-btn is-unavailable"
+                          data-category="envelope"
+                          data-region="ashrae"
+                          disabled
+                          aria-disabled="true"
+                          data-permanently-disabled>
                       <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="ASHRAE">
                       <span>Standard (ASHRAE)</span>
                       <span class="envelope-card-standard">ASHRAE 90.1</span>
+                      <span class="card-status">Results under revision</span>
                       <span class="envelope-region-badge"></span>
                   </button>
                   <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z4">
@@ -153,6 +175,12 @@
                   </button>
               </div>
 
+              <!-- CHV, 2026-08-17, point 1. Why the ASHRAE card is greyed. The
+                   text is written by js/app.js from
+                   LMN_CONFIG.withdrawnClimates, so the page carries no copy of
+                   the reason. -->
+              <div id="envelope-withdrawn-note"></div>
+
               <!-- Envelope Performance Tier Popup Modal -->
               <div id="envelope-popup" class="modal envelope-popup-modal" style="display:none;">
                   <div class="modal-content envelope-popup-content">
@@ -163,15 +191,28 @@
                               <span class="tier-label">1983</span>
                               <span class="tier-sub">Quebec Vintage</span>
                           </button>
+                          <!-- CHV, 2026-08-17, point 2: "ASHRAE selection should
+                               never show NECB 2017 in the following popup."
+                               The standard used to be hard coded here, so it was
+                               right for six regions out of seven. It now ships
+                               EMPTY and js/app.js writes it from
+                               LMN_CONFIG.climates for the region that was
+                               clicked, which is the only way the defect cannot
+                               come back by copy. -->
                           <button class="envelope-tier-btn" data-tier="standard">
                               <span class="tier-label">Standard</span>
-                              <span class="tier-sub">NECB 2017</span>
+                              <span class="tier-sub" id="tier-sub-standard"></span>
                           </button>
+                          <!-- CHV, 2026-08-17, point 2: "Replace
+                               Hyper-performance with High-Performance Envelope
+                               (HPerf)." Both strings are written from
+                               LMN_CONFIG.envelopeTiers, defined once. -->
                           <button class="envelope-tier-btn" data-tier="high-performance">
-                              <span class="tier-label">HPENV</span>
-                              <span class="tier-sub">Hyper-performance</span>
+                              <span class="tier-label" id="tier-label-hperf"></span>
+                              <span class="tier-sub" id="tier-sub-hperf"></span>
                           </button>
                       </div>
+                      <p class="envelope-popup-note" id="envelope-popup-hperf-definition"></p>
                       <button class="envelope-popup-close" id="envelope-popup-close" type="button">&times;</button>
                   </div>
               </div>
@@ -193,9 +234,9 @@
 </main>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=8"></script>
-  <script src="js/data.js?v=8"></script>
-  <script src="js/app.js?v=8"></script>
+  <script src="js/config.js?v=9"></script>
+  <script src="js/data.js?v=9"></script>
+  <script src="js/app.js?v=9"></script>
 </body>
 
 </html>

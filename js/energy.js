@@ -150,22 +150,47 @@ function renderAssumptionsBox(envelope, neighbourhoodCode, energySelections, sce
         : `Nearest simulated rung: ${rungLabel}. Your combination was not simulated on its own, so the remaining measure is applied to that rung as a saving. ${rungDetail}`;
 
     const rows = [
+        // CHV, 2026-08-17, point 1: "On the public tool, only the relevant
+        // location, weather/standard, envelope and model/data version need to
+        // appear under Assumptions & Model Information." Location and the exact
+        // weather file were the two she could not find. Both now come from
+        // LMN_CONFIG.climates, which is also what Results/RESULT-12 is generated
+        // from, so the page and the register cannot disagree.
+        ['Location and climate zone', climate ? (climate.city ? `${climate.city}, ${climate.zone}` : climate.zone) : '—'],
+        ['Weather file', LMN_CONFIG.weatherFileFor(envelope) || '—'],
         ['Climate and standard', climate ? `${LMN_CONFIG.envelopeLabel(climateKey)}, ${climate.standard}` : LMN_CONFIG.envelopeLabel(envelope)],
         ['Envelope', LMN_CONFIG.envelopeLabel(envelope)],
         ['Measures applied', measures.length ? measures.join(', ') : 'None, this is the baseline building'],
         ['Scenario', rung],
-        ['Energy basis', LMN_CONFIG.units.energyBasisSentence],
+        // CHV, 2026-08-17, point 3. Three sentences: what site energy is, in
+        // plain words; the technical statement that was already here; and how
+        // gas becomes kWh before it is added to electricity, which is the part
+        // she asked to be documented and which nothing on the site said.
+        ['Energy basis', `${LMN_CONFIG.units.energyBasisPlain} ${LMN_CONFIG.units.energyBasisSentence}`],
+        ['Gas converted to kWh', LMN_CONFIG.units.gasConversionSentence],
         // Task 3.3, D6.0. One sentence, written out, rather than two adjectives
         // a reader has to know the EnergyPlus vocabulary to decode.
         ['Floor area basis', LMN_CONFIG.units.floorAreaBasisNote],
         ['Simulation campaign', `${LMN_CONFIG.dataCampaign.climates}, ${LMN_CONFIG.dataCampaign.engine}`],
-        ['Data version', `${LMN_CONFIG.version}, updated ${LMN_CONFIG.lastUpdated}`],
-        ['Status', 'Simulation-backed']
+        ['Model and data version', `${LMN_CONFIG.version}, updated ${LMN_CONFIG.lastUpdated}`],
+        // CHV, 2026-08-17, point 8: "distinguish directly simulated results
+        // from results derived from another simulated scenario." The EUI on
+        // this page is simulated. Its baseline is not, when the selection is a
+        // High-Performance Envelope arm, because that arm has no baseline run
+        // of its own, D3.5.
+        ['Where this number comes from', envelope.startsWith('high-performance-')
+            ? `${LMN_CONFIG.provenance.simulatedLabel}. ${LMN_CONFIG.provenance.results.eui.note} The baseline it is compared against is ${LMN_CONFIG.provenance.derivedLabel.toLowerCase()}: ${LMN_CONFIG.provenance.results.highPerfBase.note}`
+            : `${LMN_CONFIG.provenance.simulatedLabel}. ${LMN_CONFIG.provenance.results.eui.note}`],
+        // Read from the climate rather than written as a literal, since
+        // 2026-08-17: CHV's point 1 says a case that is under revision must not
+        // be called validated, and a hard coded "Simulation-backed" cannot obey
+        // that.
+        ['Status', climate && climate.status === 'simulation-backed' ? 'Simulation-backed' : LMN_CONFIG.availability.underRevisionLabel]
     ];
     if (snow) rows.push(['Snow cover', snow]);
 
     el.innerHTML = `
-    <h2 class="assumptions-title">Assumptions and model info</h2>
+    <h2 class="assumptions-title">Assumptions &amp; Model Information</h2>
     <dl class="assumptions-list">
       ${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}
     </dl>
@@ -210,8 +235,14 @@ function renderEUIScale(euiValue) {
     // words. Both strings come from LMN_CONFIG so that the day the basis
     // changes, it changes in one place.
     const unit  = LMN_CONFIG.units.euiCompact;
-    const basis = LMN_CONFIG.euiBasis();
     const long  = LMN_CONFIG.units.eui;
+
+    // CHV, 2026-08-17, point 3: "Please use: Annual EUI (kWh/m2 of heated and
+    // cooled floor area per year) and identify it as site energy." Her label in
+    // full, and the words "site energy" beside the number rather than only
+    // inside the assumptions block. This line used to print euiBasis(), "per
+    // heated and cooled floor area", which named the area and not the metric.
+    const basis = LMN_CONFIG.units.euiLabel + ', site energy';
 
     container.innerHTML = `
         <div class="eui-scale-display">
@@ -415,7 +446,19 @@ function renderTreemap(neighbourhoodCode) {
                 if (filters.envelope) envelope = filters.envelope;
             }
         } catch (e) {}
-        if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+        if (!envelope) envelope = sessionStorage.getItem('selectedEnvelope') || '';
+    }
+
+    // CHV, 2026-08-17, point 2: "Remove any silent default to Montreal/NECB
+    // when a valid climate has not been selected." This page used to read
+    // '|| necb-2017' above and draw Montreal under a Montreal label. It now
+    // stops. First gate, before the withheld gate, because a page with no
+    // climate cannot even ask whether the pair is withheld.
+    if (typeof LMN_CONFIG !== 'undefined' && !envelope) {
+        if (container) container.innerHTML = LMN_CONFIG.noClimateNoticeHtml();
+        if (legendContainer) legendContainer.innerHTML = '';
+        if (titleElement) titleElement.textContent = 'Energy Breakdown';
+        return;
     }
 
     // CHV, 2026-08-13. Second gate, before any number is read. See the note

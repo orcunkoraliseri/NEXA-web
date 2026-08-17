@@ -29,8 +29,8 @@ const LMN_CONFIG = {
   // 0. Identity
   // =====================================================================
 
-  version: "0.9.0",
-  lastUpdated: "2026-08-13",
+  version: "0.10.0",
+  lastUpdated: "2026-08-17",
 
   // Which simulation campaign the shipped numbers come from.
   // Source: option_9_j_20260707_v2 for the six NECB climates and ASHRAE;
@@ -52,10 +52,34 @@ const LMN_CONFIG = {
     eui: "kWh/m² of heated and cooled floor area per year",
     euiCompact: "kWh/m²·yr",
 
-    // D3.2, measured 2026-08-10, no longer an open question.
-    // EnergyPlus "Total End Uses", electricity plus gas, no source multipliers.
+    // CHV, 2026-08-17, point 3, answering our D3.2. Her wording, exactly:
+    // "Annual EUI (kWh/m2 of heated and cooled floor area per year)" and
+    // "identify it as site energy". This is the string the pages print as the
+    // headline label. eui above stays as the bare unit, for tables that
+    // already carry their own heading.
+    euiLabel: "Annual EUI (kWh/m² of heated and cooled floor area per year)",
+    euiLabelShort: "Annual EUI",
+
+    // D3.2, measured 2026-08-10, no longer an open question, and CONFIRMED by
+    // CHV on 2026-08-17. EnergyPlus "Total End Uses", electricity plus gas, no
+    // source multipliers.
     energyBasis: "site",
     energyBasisSentence: "Site energy: EnergyPlus Total End Uses, electricity plus gas, with no source energy multipliers.",
+
+    // CHV, 2026-08-17, point 3: "explain simply that this includes annual
+    // electricity and natural-gas energy used by the buildings, without
+    // source/primary-energy conversion factors. Please also document how gas
+    // is converted to kWh before being combined with electricity."
+    //
+    // Measured 2026-08-17, not quoted from a summary. Both fuels are read out
+    // of the same EnergyPlus End Uses table, in the same reported unit, GJ in
+    // these runs, and converted by one function: idf_reader/main_BEM.py line
+    // 682, _eui_to_kwh. 1 GJ = 277.778 kWh, which is 1 kWh = 3.6 MJ. kBtu maps
+    // at 0.293071. There is no fuel specific weighting and no source energy
+    // factor at any point in the chain.
+    energyBasisPlain: "This is site energy: the annual electricity and natural gas the buildings themselves use, added together. No source or primary energy conversion factors are applied.",
+    gasConversionSentence: "Natural gas and electricity are read from the same EnergyPlus End Uses table in the same unit, gigajoules, and converted to kWh by the same factor: 1 GJ = 277.778 kWh, which is 1 kWh = 3.6 MJ. Nothing is weighted by fuel.",
+    gasConversionFactor: 277.778,
 
     // D6.0, ANSWERED 2026-08-10 by Koral: keep every published number on the
     // basis the simulation actually used, and name that basis in words on the
@@ -87,21 +111,66 @@ const LMN_CONFIG = {
   // 2. Climates. D0.1, DBG-016
   // =====================================================================
   //
-  // All seven regions are real, validated simulation arms. D2.1: nothing is
-  // disabled. The defect D0.1 found was that four of the six NECB buttons
-  // named the WRONG CITY. The names below are the corrected ones and are the
-  // only ones that may be shown.
+  // The six NECB regions are real, validated simulation arms, each on its own
+  // Canadian CWEC weather file. D2.1: none of the six is disabled. The defect
+  // D0.1 found was that four of the six NECB buttons named the WRONG CITY. The
+  // names below are the corrected ones and are the only ones that may be shown.
   //
-  // Source: plan_national_zones.md lines 39 to 44.
+  // Source: plan_national_zones.md section 1, the standard to zone to city to
+  // EPW registry, lines 39 to 44. The exact file per climate is in weatherFile
+  // below, added 2026-08-17 on CHV's point 1.
+  //
+  // THE SEVENTH REGION IS WITHDRAWN, 2026-08-17. See withdrawnClimates.
 
   climates: [
-    { key: "ashrae",   city: null,               zone: "ASHRAE",  standard: "ASHRAE 90.1", status: "simulation-backed", label: "Standard (ASHRAE)" }, // no city shown, unchanged
-    { key: "necb-z4",  city: "Vancouver",        zone: "NECB 4",  standard: "NECB 2017",   status: "simulation-backed" }, // was wrongly "Windsor"
-    { key: "necb-z5",  city: "Toronto / Ottawa", zone: "NECB 5",  standard: "NECB 2017",   status: "simulation-backed" }, // correct as shipped
-    { key: "necb-z6",  city: "Montréal",         zone: "NECB 6",  standard: "NECB 2017",   status: "simulation-backed" }, // correct as shipped
-    { key: "necb-z7a", city: "Winnipeg",         zone: "NECB 7A", standard: "NECB 2017",   status: "simulation-backed" }, // was wrongly "Calgary"
-    { key: "necb-z7b", city: "Fort McMurray",    zone: "NECB 7B", standard: "NECB 2017",   status: "simulation-backed" }, // was wrongly "Whitehorse"
-    { key: "necb-z8",  city: "Chisasibi",        zone: "NECB 8",  standard: "NECB 2017",   status: "simulation-backed" }  // was wrongly "Yellowknife"
+    { key: "ashrae",   city: null,               zone: "ASHRAE",  standard: "ASHRAE 90.1", status: "withdrawn", withdrawn: true, label: "Standard (ASHRAE)", weatherFile: "Buffalo Niagara Intl AP, NY, USA, TMY3, WMO 725280" },
+    { key: "necb-z4",  city: "Vancouver",        zone: "NECB 4",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_BC_Vancouver.Intl.AP.718920_CWEC2020v2.epw" }, // was wrongly "Windsor"
+    { key: "necb-z5",  city: "Toronto / Ottawa", zone: "NECB 5",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_ON_Bishop-Toronto.City.AP.712650_CWEC2020v2.epw" }, // correct as shipped. Toronto ran; Ottawa is in the same zone and was not run
+    { key: "necb-z6",  city: "Montréal",         zone: "NECB 6",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2020v2.epw" }, // correct as shipped
+    { key: "necb-z7a", city: "Winnipeg",         zone: "NECB 7A", standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_MB_Winnipeg-Richardson.Intl.AP.718520_CWEC2020v2.epw" }, // was wrongly "Calgary". Edmonton has no CWEC2020v2 file, so Winnipeg substitutes
+    { key: "necb-z7b", city: "Fort McMurray",    zone: "NECB 7B", standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_AB_Fort.McMurray.AP.716890_CWEC2020v2.epw" }, // was wrongly "Whitehorse"
+    { key: "necb-z8",  city: "Chisasibi",        zone: "NECB 8",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_QC_La.Grande.Riviere.AP.718270_CWEC.epw" }  // was wrongly "Yellowknife". La Grande Riviere, CYGL, is a proxy station about 90 km inland
+  ],
+
+  // CHV, 2026-08-17, point 1, in her words: "We cannot have Buffalo/Niagara as
+  // a climate case in this tool. The simulations need to correspond to the
+  // actual Canadian locations represented ... Do not simply rename the existing
+  // Buffalo case ... Until this is resolved, do not call the affected case
+  // validated."
+  //
+  // MEASURED 2026-08-17, session 20, before anything was changed:
+  //
+  //   * The six NECB arms run on the six Canadian CWEC files listed above.
+  //     Source: plan_national_zones.md section 1. Her concern does not reach
+  //     them.
+  //   * The ashrae arm really is a United States arm end to end: US DOE
+  //     prototypes, ASHRAE 90.1, and Buffalo Niagara Intl AP TMY3. Read from
+  //     the simulation input itself, SITE:LOCATION in
+  //     option_9_j3_20260602_v2/US_ASHRAE/CC-B/.../results/in.idf, and from
+  //     results/eplustbl.csv line 217.
+  //   * "Buffalo" ALSO appears inside DOE prototype file names, for example
+  //     ASHRAE901_OfficeMedium_STD2022_Buffalo_NECB17_Z5_v221, where it names
+  //     the prototype's source city and NOT the weather used. The naming
+  //     grammar is in BEM_utils/results_csv.py, _parse_sim_id. That occurrence
+  //     is not a defect and nothing here depends on it.
+  //
+  // DECIDED by Koral, 2026-08-17: withdraw it from the climate selection. Not
+  // renamed, which she ruled out, and not re-simulated. ASHRAE is a CODE arm,
+  // not a Canadian climate, so offering it on the same row as six climate zones
+  // is what made it read as one.
+  //
+  // NOTHING IS DELETED. All 35 neighbourhoods and all 5 scenarios stay in
+  // js/data.js under "ashrae" and "high-performance-ashrae". This reverses in
+  // one line the day a Montreal re-run lands or a code comparison feature is
+  // asked for.
+  withdrawnClimates: [
+    {
+      scope: "climate",
+      climates: ["ashrae", "high-performance-ashrae"],
+      label: "Results under revision",
+      reason: "This is a United States reference case, not a Canadian climate. It was simulated with United States prototypes against ASHRAE 90.1 on a United States weather file, Buffalo Niagara Intl AP, NY. It has been taken out of the climate selection until it can be re-run on the Canadian weather file for the same zone. The six NECB climates are unaffected: each of them runs on its own Canadian CWEC weather file.",
+      debugRef: "DBG-034"
+    }
   ],
 
   // Display names for every key that can appear in ENVELOPE_ENERGY_DATA or in
@@ -263,7 +332,55 @@ const LMN_CONFIG = {
 
   // The legacy silent fallback. Kept here only so the guard can name it.
   // It must never be used to compute a displayed number.
+  //
+  // CHV, 2026-08-17, point 2: "Remove any silent default to Montreal/NECB when
+  // a valid climate has not been selected." DBG-004, open by decision since
+  // 2026-08-10 and audited in full in Results/RESULT-11, is closed by that
+  // instruction. The string survives ONLY so that noClimateNotice below can
+  // name what used to happen; nothing computes a number from it any more.
   legacyFallbackClimate: "necb-2017",
+
+  // CHV, 2026-08-17, point 2. What a result page shows when it is reached with
+  // no climate in the URL and none in the session: a typed address, a bookmark
+  // from before a change, or a cleared session. It used to draw Montreal.
+  //
+  // Same amber caution box as the withheld pairs, for the same reason: this
+  // stands where a number would have been, so it is not an explanation, it is a
+  // stop.
+  noClimateNotice: {
+    label: "No climate selected",
+    reason: "This page needs a climate before it can show a result, and none was chosen. Nothing is assumed on your behalf. Go back to the neighbourhood selection and choose a climate and an envelope.",
+    linkText: "Choose a climate",
+    linkHref: "layer1_NUs_selection.html"
+  },
+
+  // CHV, 2026-08-17, point 8: "distinguish directly simulated results from
+  // results derived from another simulated scenario."
+  //
+  // Two words only, and every entry names the decision that established it. A
+  // result is "simulated" when an EnergyPlus run produced the number that is on
+  // screen. It is "derived" when the number on screen is computed from
+  // simulated values, or from an assumption chain, at render time.
+  //
+  // Nothing here is new work: each of these was established in an earlier
+  // session and written into its own decision. What is new is that the tool
+  // now says which is which, on the page, instead of leaving the reader to
+  // guess.
+  provenance: {
+    simulatedLabel: "Directly simulated",
+    derivedLabel: "Derived",
+    simulatedNote: "This number comes straight from an EnergyPlus run of this neighbourhood in this climate.",
+    results: {
+      eui:            { kind: "simulated", note: "EnergyPlus Total End Uses for this neighbourhood, this climate and this scenario." },
+      pvIntensity:    { kind: "simulated", note: "EnergyPlus PV generation for the same run, divided by the heated and cooled floor area of the same run." },
+      pvTotal:        { kind: "derived",   note: "The simulated PV intensity multiplied by the heated and cooled floor area. D0.6." },
+      highPerfBase:   { kind: "derived",   note: "The High-Performance Envelope arm has no baseline run of its own. Its baseline is the standard arm of the same climate, verified equal at 245 of 245 rows. D3.5." },
+      rop:            { kind: "derived",   note: "Computed at render time from two simulated values, the PV generation and the total demand of the same run. It is a ratio, so it is never stored. D0.6, DBG-018." },
+      landscapePv:    { kind: "derived",   note: "Not a building energy simulation. A fixed land area assumption multiplied by a specific yield, step by step. D7.1." },
+      evV2g:          { kind: "derived",   note: "Not a building energy simulation. An assumption chain from the RT01 mobility reference, applied per household." },
+      facadePv:       { kind: "derived",   note: "Three single building runs in Montreal, not a neighbourhood result. Preliminary, and excluded from the totals. D0.5." }
+    }
+  },
 
   // =====================================================================
   // 3. Photovoltaics
@@ -346,6 +463,40 @@ const LMN_CONFIG = {
         gcrApplies: true,
         note: "The array sits on a tilted rack on a flat roof. Rows are spaced so they do not shade each other, which is what the ground coverage ratio describes."
       }
+    },
+
+    // CHV, 2026-08-17, point 5: "Please recheck the 18.65% versus 20%
+    // assumptions. If the same PV technology is used, I would expect one
+    // consistent module efficiency; roof differences should normally be
+    // represented through available area, tilt, orientation, active fraction,
+    // GCR, etc. Please show me clearly what each efficiency represents and the
+    // formula/assumptions behind each."
+    //
+    // RECHECKED 2026-08-17 against the two sources, and she is essentially
+    // right. They are not two technologies:
+    //
+    //   Pitched, the 4 house NUs. 20 % module efficiency OF APERTURE AREA with
+    //   a 0.9 active area fraction. PV_methodology.md sections 6 and 11.
+    //   Effective on gross area: 0.20 x 0.9 = 0.18, so 18 %.
+    //
+    //   Flat, the other 31 NUs. 18.65 % CELL efficiency applied to the racked
+    //   module area. BEM_utils/pv_tier1.py line 105,
+    //   apply_tier1_pv(cell_efficiency=0.1865). PV_methodology.md section 6
+    //   also states 200 W/m2 of roof area for this group.
+    //
+    // 18.0 % against 18.65 % is a difference of 0.65 of a percentage point, and
+    // what separates them is the active area fraction and what the figure is
+    // applied to, which is exactly the mechanism she names. The panel is the
+    // same in both groups.
+    //
+    // Whether to harmonise the two into one number is an upstream question and
+    // it would change published results, so it is NOT decided here and nothing
+    // on the site moves because of it.
+    efficiencyExplanation: {
+      sameTechnology: "The same module technology is assumed on both roof types. The two efficiency figures differ because of the active area fraction and the area each one is applied to, not because of a different panel.",
+      pitched: "Pitched roofs, the four house neighbourhoods: 20 % module efficiency of aperture area, with a 0.9 active area fraction. 0.20 x 0.9 = 0.18, so 18 % of the gross roof face. Source: PV_methodology.md, sections 6 and 11.",
+      flat: "Flat roofs, the other 31 neighbourhoods: 18.65 % cell efficiency applied to the racked module area. Source: BEM_utils/pv_tier1.py line 105. The same section also states 200 W/m2 of roof area for this group.",
+      shared: "Both groups share the rest of the chain: 14 % system DC to AC losses and 96 % inverter efficiency. Array tilt, azimuth, available area and, on flat roofs only, the ground coverage ratio, are what differ between the two."
     },
 
     // D0.1a, DBG-019. Snow cover is not modelled. Roof PV is optimistic in the
@@ -499,25 +650,72 @@ const LMN_CONFIG = {
   // was wrong: EEM4 adds lighting, equipment and cooling, not a deeper
   // envelope. Corrected with the same edit.
 
-  eemLabelsPending: false,    // D3.3 answered
+  // SUPERSEDED 2026-08-17 by CHV, point 4, which is the answer to D3.3. She
+  // gave the five names herself and they replace the cumulative wording chosen
+  // on 2026-08-10. Her instruction, in full:
+  //
+  //   "Please use the cumulative names: Baseline -> HPerf -> HPerf + Heat Pump
+  //   -> HPerf + Heat Pump + DHW -> HPerf + Heat Pump + DHW +
+  //   Lighting/Equipment/Cooling. Define HPerf once as High-Performance
+  //   Envelope. EEM1, EEM2, etc. can remain in the technical documentation, but
+  //   not as the main user-facing names. Please remove Deep Retrofit."
+  //
+  // The ladder is unchanged, only its wording: each rung is still a strict
+  // superset of the one below it. EEM1 to EEM4 survive as the DATA KEYS, which
+  // is what js/data.js is keyed by, and they appear on screen nowhere. They
+  // stay in documentation.html as the technical keys, which is exactly where
+  // she allows them.
+  //
+  // "Deep retrofit" was already removed on 2026-08-10; the comment recording
+  // why is above this block and stays, because it is the record of the fix.
+  eemLabelsPending: false,    // D3.3 answered, then confirmed and reworded by CHV
   eemLabels: {
-    DEFAULT: "Baseline as built",
-    EEM1:    "+ Envelope",
-    EEM2:    "+ Envelope, heat pump",
-    EEM3:    "+ Envelope, heat pump, hot water",
-    EEM4:    "+ Envelope, heat pump, hot water, lighting, equipment and cooling",
+    DEFAULT: "Baseline",
+    EEM1:    "HPerf",
+    EEM2:    "HPerf + Heat Pump",
+    EEM3:    "HPerf + Heat Pump + DHW",
+    EEM4:    "HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling",
     IAL:     "Ideal thermal load"
+  },
+
+  // CHV, 2026-08-17, points 2 and 4: "Replace Hyper-performance with
+  // High-Performance Envelope (HPerf)" and "Define HPerf once as
+  // High-Performance Envelope".
+  //
+  // Defined ONCE, here, and read by the Layer 1 performance popup, by the badge
+  // on the climate card, and by every page that names the tier. Before this,
+  // the popup said "HPENV" and "Hyper-performance" in the markup and js/app.js
+  // wrote "HPENV" into the badge from a literal, so the same tier had three
+  // names and none of them was hers.
+  //
+  // dhw is spelled out here for the same reason: her ladder uses the acronym
+  // and the tool has to say once what it stands for.
+  envelopeTiers: {
+    standard:        { short: "Standard", full: "Standard", definition: "The building code baseline for the selected climate." },
+    highPerformance: { short: "HPerf",    full: "High-Performance Envelope", definition: "HPerf is the High-Performance Envelope package: high performance opaque assemblies, triple glazed windows, foundation and slab insulation, and infiltration reduced to a quarter." },
+    vintage1983:     { short: "1983",     full: "1983 Quebec Vintage", definition: "The 1983 Quebec construction era, kept as a retrofit starting point. It is a different code era and is compared against itself." }
+  },
+  acronyms: {
+    HPerf: "High-Performance Envelope",
+    DHW:   "Domestic hot water",
+    EUI:   "Energy Use Intensity",
+    RoP:   "Ratio of Performance",
+    GCR:   "Ground coverage ratio"
   },
 
   // The long form, for tooltips and for the assumptions box. Same source as
   // the labels above. Kept out of eemLabels so that a caller asking for a name
   // can never accidentally print a paragraph.
+  // Reworded 2026-08-17 with the labels above. Each rung now names the rung
+  // below it by HER name rather than by the data key, because these strings are
+  // read on screen, in the tooltip and in the assumptions box. The data keys
+  // survive as the keys of this object and in documentation.html.
   eemDetails: {
     DEFAULT: "Code compliant baseline as designed. Native PV only.",
-    EEM1:    "High performance opaque assemblies, triple glazed windows (U 0.85, SHGC 0.40), foundation and slab insulation, infiltration reduced to a quarter.",
-    EEM2:    "Everything in EEM1, plus a cold climate air source heat pump (COP 4.0 to 4.5), inverter cooling, per zone heat pumps and ventilation heat recovery.",
-    EEM3:    "Everything in EEM2, plus a transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements.",
-    EEM4:    "Everything in EEM3, plus automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads and electrification of gas appliances in the residential archetypes.",
+    EEM1:    "HPerf, the High-Performance Envelope: high performance opaque assemblies, triple glazed windows (U 0.85, SHGC 0.40), foundation and slab insulation, infiltration reduced to a quarter.",
+    EEM2:    "Everything in HPerf, plus a cold climate air source heat pump (COP 4.0 to 4.5), inverter cooling, per zone heat pumps and ventilation heat recovery.",
+    EEM3:    "Everything in HPerf + Heat Pump, plus a transcritical CO2 heat pump water heater (DHW, domestic hot water) with a stratified tank, drain water heat recovery and distribution improvements.",
+    EEM4:    "Everything in HPerf + Heat Pump + DHW, plus automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads and electrification of gas appliances in the residential archetypes.",
     IAL:     "HVAC replaced by ideal air loads to expose the pure thermal demand, for district energy sizing. Not directly comparable with delivered fuel or electricity."
   },
 
@@ -749,8 +947,8 @@ LMN_CONFIG.resultCaption = function (envelopeKey, scenarioKey) {
   const standard = LMN_CONFIG.envelopeLabel(envelopeKey);
   const rung     = LMN_CONFIG.eemLabel(scenarioKey);
   if (!rung || rung === standard) return standard;
-  // "+ Envelope, heat pump" reads as a continuation, so it joins with a comma
-  // and keeps its leading plus: "NECB Zone 6 (Montréal), + Envelope, heat pump".
+  // The rung is a name, not a continuation, since CHV's wording of 2026-08-17:
+  // "NECB Zone 6 (Montréal), HPerf + Heat Pump".
   return standard + ", " + rung;
 };
 
@@ -826,21 +1024,107 @@ LMN_CONFIG.dataGapNotice = function (nuCode, envelopeKey) {
   const gap = LMN_CONFIG.dataGapFor(nuCode, envelopeKey);
   if (!gap) return null;
   const label = gap.label || LMN_CONFIG.availability.notAvailableLabel;
+  // A withdrawn climate is not about one neighbourhood, so the sentence names
+  // the climate instead. Added 2026-08-17 with withdrawnClimates: every page
+  // that already called this function gates the withdrawn arm as well, without
+  // being edited, which is the point of writing the notice once.
+  const subject = gap.scope === "climate"
+    ? '<strong>' + LMN_CONFIG.envelopeLabel(envelopeKey) + '</strong> is not currently offered. '
+    : '<strong>' + nuCode + '</strong> is not shown for ' + LMN_CONFIG.envelopeLabel(envelopeKey) + '. ';
   return '<div class="info-box info-box--caution">' +
     '<div class="info-box-body">' +
     '<p class="info-box-title">' + label + '</p>' +
-    '<p class="info-box-line"><strong>' + nuCode + '</strong> is not shown for ' +
-    LMN_CONFIG.envelopeLabel(envelopeKey) + '. ' + gap.reason + '</p>' +
+    '<p class="info-box-line">' + subject + gap.reason + '</p>' +
     '</div></div>';
 };
 
 // DBG-027, task 3.12. Returns the gap entry when this NU has no usable result
 // for this envelope, or null when the pair is fine.
+//
+// The withdrawn climates are tested FIRST and independently of the
+// neighbourhood, because a withdrawn arm withholds all 35 of them. CHV point 1,
+// 2026-08-17, DBG-034.
 LMN_CONFIG.dataGapFor = function (nuCode, envelopeKey) {
+  const withdrawn = LMN_CONFIG.climateWithdrawn(envelopeKey);
+  if (withdrawn) return withdrawn;
   for (const gap of LMN_CONFIG.dataGaps) {
     if (gap.nu === nuCode && gap.climates.indexOf(envelopeKey) !== -1) return gap;
   }
   return null;
+};
+
+// CHV, 2026-08-17, point 2. The stop a result page shows when it was reached
+// with no climate. Written once, here, for the same reason dataGapNotice is:
+// five pages must not carry five wordings of the same refusal.
+//
+// It is the caution box, not the explanation box, because it stands where the
+// result would have been.
+LMN_CONFIG.noClimateNoticeHtml = function () {
+  const n = LMN_CONFIG.noClimateNotice;
+  return '<div class="info-box info-box--caution">' +
+    '<div class="info-box-body">' +
+    '<p class="info-box-title">' + n.label + '</p>' +
+    '<p class="info-box-line">' + n.reason + '</p>' +
+    '<p class="info-box-line"><a href="' + n.linkHref + '">' + n.linkText + '</a></p>' +
+    '</div></div>';
+};
+
+// CHV, 2026-08-17, point 2. Read the chosen climate from the URL, then from the
+// session, and RETURN AN EMPTY STRING when there is none. This is the function
+// that replaces "|| 'necb-2017'" on every page that prints a number.
+//
+// The old expression made a wrong default look like a choice. DBG-004, audited
+// in Results/RESULT-11 section 3, where it was left open by decision on
+// 2026-08-10 and disclosed rather than removed. Her instruction closes it.
+//
+// The pages that read the value only to build the next page's link keep their
+// own expression: they draw no number, and rewriting them would be a refactor
+// nobody asked for.
+LMN_CONFIG.selectedEnvelopeOrEmpty = function (search, storage) {
+  try {
+    const params = new URLSearchParams(search || "");
+    const fromUrl = params.get("envelope");
+    if (fromUrl) {
+      if (storage) storage.setItem("selectedEnvelope", fromUrl);
+      return fromUrl;
+    }
+    if (storage) {
+      const filtersJson = storage.getItem("activeFilters");
+      if (filtersJson) {
+        const filters = JSON.parse(filtersJson);
+        if (filters && filters.envelope) {
+          storage.setItem("selectedEnvelope", filters.envelope);
+          return filters.envelope;
+        }
+      }
+      const stored = storage.getItem("selectedEnvelope");
+      if (stored) return stored;
+    }
+  } catch (e) {}
+  return "";
+};
+
+// CHV point 1, 2026-08-17. Is this envelope key part of a withdrawn climate
+// arm? Returns the entry, or null. Tested on the envelope KEY rather than on
+// the climate, so that both "ashrae" and "high-performance-ashrae" are caught
+// without relying on climateOf.
+LMN_CONFIG.climateWithdrawn = function (envelopeKey) {
+  if (!envelopeKey) return null;
+  for (const entry of LMN_CONFIG.withdrawnClimates) {
+    if (entry.climates.indexOf(envelopeKey) !== -1) return entry;
+  }
+  return null;
+};
+
+// CHV point 1, 2026-08-17: the public tool must name the weather file under
+// Assumptions and Model Information. Returns the exact file, or an empty string
+// for a key with no climate entry.
+LMN_CONFIG.weatherFileFor = function (envelopeKey) {
+  const climateKey = LMN_CONFIG.climateOfEnvelope(envelopeKey);
+  for (const c of LMN_CONFIG.climates) {
+    if (c.key === climateKey) return c.weatherFile || "";
+  }
+  return "";
 };
 
 // D6.11, CHV Stage 6 item 8. The stored status string is a file name, not a

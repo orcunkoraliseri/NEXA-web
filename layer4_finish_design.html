@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
     <title>Design Summary | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=8">
+    <link rel="stylesheet" href="css/styles.css?v=9">
     <style>
         /* Summary Dashboard Specific Styles */
         .summary-grid {
@@ -375,26 +375,24 @@
                                     <td class="label-cell">Envelope Insulation</td>
                                     <td id="l2-envelope" class="value-cell">—</td>
                                 </tr>
+                                <!-- CHV, 2026-08-17, point 3: the metric is
+                                     named in full, "Annual EUI", instead of
+                                     "Calculated EUI Score", which is not a
+                                     quantity anyone can look up. -->
                                 <tr>
-                                    <td class="label-cell">Calculated EUI Score</td>
+                                    <td class="label-cell">Annual EUI</td>
                                     <td id="l2-eui-val" class="value-cell">—</td>
                                 </tr>
-                                <tr>
-                                    <td class="label-cell">PV Surface Coverage</td>
-                                    <td id="l2-pv-surface" class="value-cell">—</td>
-                                </tr>
-                                <tr>
-                                    <td class="label-cell">PV Module Efficiency</td>
-                                    <td id="l2-pv-efficiency" class="value-cell">—</td>
-                                </tr>
-                                <tr>
-                                    <td class="label-cell">Ground Coverage Ratio (GCR)</td>
-                                    <td id="l2-pv-gcr" class="value-cell">—</td>
-                                </tr>
-                                <tr>
-                                    <td class="label-cell">PV Mounting Type</td>
-                                    <td id="l2-pv-mounting" class="value-cell">—</td>
-                                </tr>
+                                <!-- CHV, 2026-08-17, point 7. PV Surface
+                                     Coverage, PV Module Efficiency, Ground
+                                     Coverage Ratio and PV Mounting Type were
+                                     four rows here. They are model inputs, not
+                                     results, and all four hold one value across
+                                     all 35 neighbourhoods, so they compare
+                                     nothing. They are now in Assumptions &
+                                     Model Information, above, in full and with
+                                     the roof group they belong to. Deleted from
+                                     nowhere. -->
                                 <tr>
                                     <td class="label-cell">Total PV Generation</td>
                                     <td id="l2-pv-total" class="value-cell">—</td>
@@ -504,10 +502,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=8"></script>
-    <script src="js/data.js?v=8"></script>
-    <script src="js/sidebar.js?v=8"></script>
-    <script src="js/finish-design.js?v=8"></script>
+    <script src="js/config.js?v=9"></script>
+    <script src="js/data.js?v=9"></script>
+    <script src="js/sidebar.js?v=9"></script>
+    <script src="js/finish-design.js?v=9"></script>
 </body>
 
 </html>
