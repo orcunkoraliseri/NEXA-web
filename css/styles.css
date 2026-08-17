@@ -51,6 +51,14 @@
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Outfit', var(--font-primary);
+  /* KORAL, 2026-08-17. --font-body was asked for by eight rules and defined by
+     none of them, so `font-family: var(--font-body)` was an invalid value and
+     every one of those rules silently fell back to inheritance. It happened to
+     land on --font-primary through body, so nothing looked wrong, but the token
+     was dead and any element whose parent set --font-display would have taken
+     the display face instead. It is the reading face, and it is the one face
+     the explanation boxes use. */
+  --font-body: var(--font-primary);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -1002,6 +1010,35 @@ img.icon-missing {
     border-color: #E8860A;
     background: rgba(245, 196, 0, 0.35);
     box-shadow: 0 0 12px rgba(232, 134, 10, 0.3);
+}
+
+/* KORAL, 2026-08-17. The HPerf definition written in by js/app.js from
+   LMN_CONFIG.envelopeTiers. It shipped with no rule of its own, so it took
+   text-align: center and the 1rem body size straight off
+   .envelope-popup-content and read as a centred ragged block rather than as a
+   paragraph. It is an explanation, so it takes the explanation face and the
+   explanation size: the same --font-body, 0.8rem, 1.5 and --text-secondary
+   that .info-box and .selection-note carry, and it is justified because it is
+   a paragraph and the popup is a fixed 420px column. hyphens keeps the
+   justification from opening rivers in a box that narrow. */
+.envelope-popup-note {
+    margin: 16px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Written by script: before the popup is opened for the first time it is
+   empty, and an empty note is a rule with a border and nothing above it. */
+.envelope-popup-note:empty {
+    display: none;
 }
 
 .envelope-popup-close {
