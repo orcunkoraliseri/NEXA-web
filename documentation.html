@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LMN &mdash; References &amp; Methodology</title>
-    <link rel="stylesheet" href="css/styles.css?v=9" />
+    <link rel="stylesheet" href="css/styles.css?v=10" />
     <style>
         /* ===== Documentation page helpers (uses existing design tokens) ===== */
         .doc-page {
@@ -503,11 +503,11 @@
 
             <h3>Two PV tracks</h3>
             <ul>
-                <li><strong>DEFAULT:</strong> native PV only &mdash; whatever the source prototype ships with.
+                <li><strong>Baseline:</strong> native PV only &mdash; whatever the source prototype ships with.
                     &asymp;&thinsp;0 kWh/m&sup2; for Canadian baselines; a few high-rise/ASHRAE prototypes carry a
                     small native array (e.g. 1.9&ndash;3.3 kWh/m&sup2;).</li>
-                <li><strong>EEM1&ndash;EEM4:</strong> a &ldquo;Tier-3&rdquo; injector adds rooftop PV sized from
-                    the actual roof geometry.</li>
+                <li><strong>HPerf and every rung above it:</strong> a &ldquo;Tier-3&rdquo; injector adds rooftop PV
+                    sized from the actual roof geometry.</li>
             </ul>
 
             <h3>Sizing rules</h3>
@@ -690,11 +690,12 @@
 
             <h3>Worked example</h3>
             <p>
-                RC-D, detached houses, NECB&nbsp;2017. At EEM1 the PV generation is
+                RC-D, detached houses, NECB&nbsp;2017. At <strong>HPerf</strong> the PV generation is
                 <code>100.4&nbsp;kWh/m&sup2;&middot;yr</code> against a demand of
                 <code>107.0&nbsp;kWh/m&sup2;&middot;yr</code>, so
                 <code>RoP = 100.4 &divide; 107.0 = 0.94</code>: the roof covers about 94&nbsp;% of the
-                year. Climb to EEM4 and the roof is unchanged while demand falls to
+                year. Climb to the top rung, <strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong>,
+                and the roof is unchanged while demand falls to
                 <code>60.6</code>, giving <code>RoP = 1.66</code>. This is the general shape of the
                 result: RoP rises because the measures cut demand, not because more panels were added.
             </p>
@@ -953,7 +954,7 @@
                     the NECB 2017 baseline for the selected climate zone, and <strong>HPerf</strong>,
                     the High-Performance Envelope. HPerf is an envelope package only: it is applied
                     strictly to the building envelope of a building built to NECB 2017, and it is the
-                    rung stored as <code>EEM1</code> in the data. Montr&eacute;al additionally offers
+                    first rung of the scenario ladder. Montr&eacute;al additionally offers
                     a <strong>1983 Quebec Vintage</strong> starting point. The ASHRAE 90.1 options
                     were withdrawn from the selection on 17 August 2026; see section F.</li>
             </ul>
@@ -1055,49 +1056,56 @@
                         <!-- CHV, 2026-08-17, point 4: the cumulative names are
                              hers, and "EEM1, EEM2, etc. can remain in the
                              technical documentation, but not as the main
-                             user-facing names". This page is the technical
-                             documentation, so both columns are carried and the
-                             mapping between them is explicit. -->
+                             user-facing names".
+
+                             KORAL, 2026-08-17, narrowing that: do not show the
+                             EEM titles here either, on any page, and use the
+                             cumulative names instead. The Data key column is
+                             therefore gone from this table and every EEM label
+                             is out of the prose on this page. One footnote
+                             survives, below, and only that one: js/data.js and
+                             the source CSVs really are keyed DEFAULT, EEM1 to
+                             EEM4 and IAL, and a reader who opens those files
+                             with no mapping at all cannot tell which row is
+                             which. It is a data-file note, not a name. -->
                         <tr>
-                            <th>What the user reads</th>
-                            <th>Data key</th>
+                            <th>Scenario</th>
                             <th>What it adds</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Baseline</strong></td>
-                            <td><code>DEFAULT</code></td>
                             <td>Code-compliant baseline as designed; native PV only</td>
                         </tr>
                         <tr>
                             <td><strong>HPerf</strong><br><span class="doc-small">High-Performance Envelope</span></td>
-                            <td><code>EEM1</code></td>
                             <td>High-performance opaque assemblies; triple-glazed windows U=0.85, SHGC=0.40; foundation/slab insulation (CZ6/CZ7A); infiltration &times;0.25 (Passive-House target)</td>
                         </tr>
                         <tr>
                             <td><strong>HPerf + Heat Pump</strong></td>
-                            <td><code>EEM2</code></td>
                             <td>HPerf + air-source heat pump (COP 4.0&ndash;4.5) with cold-climate (CCHP) curves; inverter cooling (SEER 22/EER 14); per-zone heat pumps; supplemental-heater lockout; defrost on-demand</td>
                         </tr>
                         <tr>
                             <td><strong>HPerf + Heat Pump + DHW</strong><br><span class="doc-small">DHW: domestic hot water</span></td>
-                            <td><code>EEM3</code></td>
                             <td>HPerf + Heat Pump + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
                         </tr>
                         <tr>
                             <td><strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong></td>
-                            <td><code>EEM4</code></td>
                             <td>HPerf + Heat Pump + DHW + automated blinds; daylight dimming; LED (LPD &times;0.55); occupancy-sensor trim; ENERGY STAR plug loads (EPD &times;0.75); smart power management; gas-appliance electrification (residential)</td>
                         </tr>
                         <tr>
                             <td><strong>Ideal thermal load</strong></td>
-                            <td><code>IAL</code></td>
                             <td>HVAC replaced by ideal air loads to expose pure thermal demand (district-energy sizing); not directly comparable to fuel/electricity</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <p class="doc-note">The five rungs are cumulative: each one keeps everything below it and adds one
+            measure package. These names are the only ones used anywhere in the tool. If you open the raw data
+            file or the source CSVs, the six rows above are stored in that same order under the internal keys
+            <code>DEFAULT</code>, <code>EEM1</code> to <code>EEM4</code> and <code>IAL</code>; those keys are
+            file column values, not names for the scenarios, and they appear nowhere on any page.</p>
 
             <div class="doc-reports-box">
                 <h4>Related Technical Reports</h4>
@@ -1265,7 +1273,8 @@
             <ul>
                 <li>
                     <strong>Whole-building EUI ladder</strong> validated against deep-energy-retrofit literature
-                    (NRCan PEER/BTAP, PNNL, NEEA/WSU): EEM3 &asymp; &minus;33% to &minus;42%, EEM4 &asymp;
+                    (NRCan PEER/BTAP, PNNL, NEEA/WSU): <strong>HPerf + Heat Pump + DHW</strong> &asymp; &minus;33%
+                    to &minus;42%, <strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong> &asymp;
                     &minus;52% to &minus;62% vs baseline &mdash; <strong>within literature bands for 19 of 22
                     measures</strong> (2 conservative/under-credit, 1 no-direct-evidence).
                 </li>
@@ -1301,7 +1310,7 @@
             <ul>
                 <li><strong>Weather file:</strong> Montr&eacute;al (CWEC &mdash; CAN_MTL), Climate Zone 6A.</li>
                 <li><strong>Neighbourhood units:</strong> All 35 NUs (RC, RS, MU, CC, IC archetypes).</li>
-                <li><strong>Scenarios per NU:</strong> 16 EEM combinations (4 binary flags: Envelope, HVAC, DHW, Lighting/Equipment) &mdash; 560 total simulation runs.</li>
+                <li><strong>Scenarios per NU:</strong> 16 upgrade-measure combinations (4 binary flags: Envelope, HVAC, DHW, Lighting/Equipment) &mdash; 560 total simulation runs. The five published rungs are the cumulative subset of those 16.</li>
                 <li><strong>Engine:</strong> EnergyPlus v22.1, consistent with the Standard and HPerf campaigns.</li>
             </ul>
 
@@ -1342,7 +1351,7 @@
 
             <h3>EUI Comparison (Baseline)</h3>
             <p>
-                The 1983 vintage baseline (DEFAULT scenario, no EEM upgrades) shows substantially higher
+                The 1983 vintage baseline (the Baseline rung, no upgrade measures) shows substantially higher
                 energy use intensities than the NECB 2017 baseline, primarily driven by increased
                 <strong>heating demand</strong> due to poor envelope thermal performance. Typical increases
                 range from <strong>+40% to +80%</strong> in heating EUI depending on the archetype, with
@@ -1391,7 +1400,7 @@
                     <strong>Stratified Tank Reporting Anomaly (Phase P):</strong> In EnergyPlus v22.1, central stratified HPWH backup-resistance energy (&asymp; 7 kWh/m&sup2;&middot;yr) is mis-bucketed under Space Heating instead of Water Heating. While the total combined energy is conserved, the individual end-use columns contain this reporting discrepancy.
                 </li>
                 <li>
-                    <strong>Process-Load Dominated Typologies:</strong> Industrial and IT-heavy archetypes (e.g., Data Centers, Laboratories) exhibit low EUI sensitivity to typical envelope and HVAC EEM retrofits because their energy budgets are heavily dominated by IT plug loads and ventilation process exhaust, which are outside the scope of building-level EEMs.
+                    <strong>Process-Load Dominated Typologies:</strong> Industrial and IT-heavy archetypes (e.g., Data Centers, Laboratories) exhibit low EUI sensitivity to typical envelope and HVAC retrofits because their energy budgets are heavily dominated by IT plug loads and ventilation process exhaust, which are outside the scope of the building-level measures on the ladder.
                 </li>
             </ul>
 
@@ -1404,7 +1413,7 @@
                     <strong>Pitched Commercial PV Sizing:</strong> Sizing values for pitched commercial buildings (OfficeSmall, RestaurantFastFood, RestaurantSitDown) are pending re-simulation under the south-facing dominant-pitched-roof constraint; current reporting reflects pre-fix values across all slopes.
                 </li>
                 <li>
-                    <strong>Racking Tilt vs. Market Standards:</strong> While flat-roof PV racks are modeled at an energy-optimal tilt of 45&deg; (or 20&deg; for EEM4) for high-latitude winter performance, this tilt angle exceeds typical flat-roof commercial solar racking standards of 10&ndash;15&deg;, which are constrained in practice by wind-uplift and structural ballast load limits.
+                    <strong>Racking Tilt vs. Market Standards:</strong> While flat-roof PV racks are modeled at an energy-optimal tilt of 45&deg; (or 20&deg; on the top rung, HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling) for high-latitude winter performance, this tilt angle exceeds typical flat-roof commercial solar racking standards of 10&ndash;15&deg;, which are constrained in practice by wind-uplift and structural ballast load limits.
                 </li>
                 <li>
                     <strong>Snow-Cover Losses:</strong> Current PV generation calculations do not account for snow accumulation, snow-shedding, or winter albedo gains, which may overestimate actual winter yields in cold Canadian climates.
@@ -1578,6 +1587,6 @@
 
     </div><!-- /.doc-page -->
 </main>
-    <script src="js/config.js?v=9"></script>
+    <script src="js/config.js?v=10"></script>
 </body>
 </html>

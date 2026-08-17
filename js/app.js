@@ -255,10 +255,18 @@ function renderWithdrawnClimateNote() {
     host.innerHTML = entries.map(entry => {
         // Name the cards the visitor can actually see, not every key in the
         // entry: "high-performance-ashrae" is a tier of the same card.
+        //
+        // KORAL, 2026-08-17: the ASHRAE card is now commented out of the page,
+        // so nothing matches and this box is the only trace of the case left.
+        // It therefore falls back to naming the first key in the entry. Without
+        // that fallback the box would read "This is a United States reference
+        // case" with no subject, which is worse than not printing it at all.
         const shown = entry.climates
             .filter(k => document.querySelector('.envelope-region-btn[data-region="' + k + '"]'))
             .map(k => LMN_CONFIG.envelopeLabel(k));
-        const names = shown.length ? shown.join(', ') : '';
+        const names = shown.length
+            ? shown.join(', ')
+            : (entry.climates.length ? LMN_CONFIG.envelopeLabel(entry.climates[0]) : '');
         return '<div class="info-box info-box--caution">' +
             '<div class="info-box-body">' +
             '<p class="info-box-title">' + entry.label + '</p>' +

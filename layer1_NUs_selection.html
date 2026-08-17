@@ -10,7 +10,7 @@
        still carrying it, in the description and in the tab title. -->
   <meta name="description" content="LMN tool: early stage, pre-feasibility comparison of simulated neighbourhood units.">
   <title>Neighbourhood Selection | Layered Modular Neighbourhood (LMN) Tool</title>
-  <link rel="stylesheet" href="css/styles.css?v=9">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 
 <body>
@@ -120,11 +120,24 @@
                        renamed, which she ruled out, and it is not deleted: all
                        35 neighbourhoods and all 5 scenarios stay in js/data.js
                        under "ashrae" and "high-performance-ashrae".
-                       The reason it stays on the page as a disabled card rather
-                       than vanishing is the same reason every other unavailable
-                       option does: a card that disappears teaches nothing, and
-                       CHV has seen this one. The reason is printed under the
-                       row, from LMN_CONFIG.withdrawnClimates. -->
+
+                       KORAL, 2026-08-17: the card is taken off the page as well.
+                       It first shipped as a greyed card on 2026-08-17, on the
+                       argument that a card which disappears teaches nothing. His
+                       decision reverses that: while no corrected data can be put
+                       behind it, an option the visitor can neither choose nor
+                       ever see change is clutter, and the reason is carried in
+                       words under the row instead, from
+                       LMN_CONFIG.withdrawnClimates.
+
+                       THE MARKUP IS KEPT HERE, COMMENTED, ON PURPOSE. The day a
+                       Canadian re-run lands, or a code comparison feature is
+                       asked for, uncomment the block and take the entry out of
+                       LMN_CONFIG.withdrawnClimates. Nothing else has to be
+                       rebuilt: the label, the badge and the tier text already
+                       come from config, and the gate in LMN_CONFIG.dataGapFor
+                       opens with the same one line.
+
                   <button class="envelope-card envelope-region-btn is-unavailable"
                           data-category="envelope"
                           data-region="ashrae"
@@ -137,6 +150,7 @@
                       <span class="card-status">Results under revision</span>
                       <span class="envelope-region-badge"></span>
                   </button>
+                  -->
                   <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z4">
                       <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 4 (Vancouver)">
                       <span>NECB Zone 4<br>(Vancouver)</span>
@@ -175,7 +189,9 @@
                   </button>
               </div>
 
-              <!-- CHV, 2026-08-17, point 1. Why the ASHRAE card is greyed. The
+              <!-- CHV, 2026-08-17, point 1. Why the ASHRAE case is not in the
+                   row. Since Koral's decision of 2026-08-17 this box is the only
+                   thing the visitor sees of it, so it names the case itself. The
                    text is written by js/app.js from
                    LMN_CONFIG.withdrawnClimates, so the page carries no copy of
                    the reason. -->
@@ -234,9 +250,9 @@
 </main>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=9"></script>
-  <script src="js/data.js?v=9"></script>
-  <script src="js/app.js?v=9"></script>
+  <script src="js/config.js?v=10"></script>
+  <script src="js/data.js?v=10"></script>
+  <script src="js/app.js?v=10"></script>
 </body>
 
 </html>

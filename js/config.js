@@ -29,7 +29,10 @@ const LMN_CONFIG = {
   // 0. Identity
   // =====================================================================
 
-  version: "0.10.0",
+  // 0.10.1, 2026-08-17: presentation only. No stored value and no campaign
+  // changed. The ASHRAE card came off the page and the EEM keys came out of the
+  // documentation, so the patch number moves and the minor does not.
+  version: "0.10.1",
   lastUpdated: "2026-08-17",
 
   // Which simulation campaign the shipped numbers come from.
@@ -163,6 +166,14 @@ const LMN_CONFIG = {
   // js/data.js under "ashrae" and "high-performance-ashrae". This reverses in
   // one line the day a Montreal re-run lands or a code comparison feature is
   // asked for.
+  //
+  // KORAL, 2026-08-17: the card is off the page as well, not only disabled. His
+  // reason: no corrected data can be put behind it, so a permanently dead option
+  // is clutter rather than a lesson. The markup is kept commented in
+  // layer1_NUs_selection.html so that bringing it back is uncommenting a block
+  // and emptying this array. While the array is not empty, the notice below the
+  // climate row and every gate in dataGapFor stay on, whether or not a card
+  // exists, so the case cannot come back silently.
   withdrawnClimates: [
     {
       scope: "climate",

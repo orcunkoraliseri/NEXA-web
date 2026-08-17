@@ -269,7 +269,7 @@ The user selects a neighbourhood from the results to carry it forward into Layer
 
 **Dynamic filtering:** Parameters that would result in zero matching neighbourhoods are automatically disabled (greyed out) as the user makes selections, preventing dead-end combinations.
 
-> **Envelope options, current as of 17 August 2026.** Each of the six climate zones offers **Standard**, the NECB 2017 code baseline for that zone, and **HPerf**, the High-Performance Envelope package. Montréal additionally offers a **1983 Quebec vintage** starting point, which is compared against itself because it is a different code era. Choosing HPerf uses the envelope-only scenario stored as `EEM1`, and its baseline is the Standard arm of the same climate, so the envelope gain is what the reported change shows. **The two ASHRAE 90.1 options were withdrawn from the selection**: that arm is a United States reference case simulated on a United States weather file, not a Canadian climate. Its data is retained but is not offered and is not called validated.
+> **Envelope options, current as of 17 August 2026.** Each of the six climate zones offers **Standard**, the NECB 2017 code baseline for that zone, and **HPerf**, the High-Performance Envelope package. Montréal additionally offers a **1983 Quebec vintage** starting point, which is compared against itself because it is a different code era. Choosing HPerf uses the envelope-only rung of the scenario ladder, and its baseline is the Standard arm of the same climate, so the envelope gain is what the reported change shows. **The two ASHRAE 90.1 options were withdrawn from the selection**: that arm is a United States reference case simulated on a United States weather file, not a Canadian climate. Its data is retained but is not offered and is not called validated.
 
 ---
 
@@ -297,7 +297,7 @@ The results page displays the neighbourhood's energy footprint — combining dem
   - **New layout:** three results, **PV generation intensity**, **Total PV Generation** and **Ratio of Performance**, plus wall and roof rows showing hourly charts (**Chart.js** canvas), incident radiation images, and direct sun hours images. The model inputs (PV surface, efficiency, mounting, ground coverage ratio, both floor areas, weather file, floor-area basis, model version) are under **Assumptions & Model Information** on the same page, since 17 August 2026.
   - **Legacy layout** (for RC-HR2): two-column layout with static chart images, carrying the same three results and the same assumptions block.
 
-**Energy data coverage:** all five scenarios, stored as `DEFAULT` and `EEM1` to `EEM4`, plus the ideal thermal load case, are stored and rendered for all 35 neighbourhood archetypes in every published climate. `EEM1` to `EEM4` are data keys; the names the user reads are the cumulative ones listed under [Capabilities](#capabilities).
+**Energy data coverage:** all five rungs of the cumulative ladder, Baseline through HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling, plus the ideal thermal load case, are stored and rendered for all 35 neighbourhood archetypes in every published climate. Those names are the only ones the tool uses; the keys they are stored under are listed once under [Scenario Coverage](#scenario-coverage).
 
 ---
 
@@ -418,7 +418,7 @@ LMN-tool/
 │   └── styles.v2.backup.css             ─ v2 pre-banner-bar palette backup
 │
 ├── js/
-│   ├── data.js                          ─ Neighbourhood database (~630 KB) — 35 NUs, all EEM levels + IAL
+│   ├── data.js                          ─ Neighbourhood database (~630 KB) — 35 NUs, all 5 scenario rungs + ideal load
 │   ├── app.js                           ─ Layer 1 filtering, dynamic disabling, output rendering
 │   ├── sidebar.js                       ─ Persistent multi-layer sidebar construction
 │   ├── energy-selection.js              ─ Layer 2 selection state management
@@ -460,9 +460,9 @@ LMN-tool/
 │   └── Images_EVProfile/               ─ EV impact and charging state charts
 │
 ├── Templates/
-│   ├── ASHRAE.csv                       ─ Energy data: all 35 NUs × 5 EEM levels + IAL (ASHRAE code)
-│   ├── CAN_MTL.csv                      ─ Energy data: all 35 NUs × 5 EEM levels + IAL (NECB-2017 / CAN_MTL)
-│   ├── PV_generation.csv                ─ PV generation scenario parameters (EEM0–EEM4)
+│   ├── ASHRAE.csv                       ─ Energy data: all 35 NUs × 5 scenario rungs + ideal load (ASHRAE code)
+│   ├── CAN_MTL.csv                      ─ Energy data: all 35 NUs × 5 scenario rungs + ideal load (NECB-2017 / CAN_MTL)
+│   ├── PV_generation.csv                ─ PV generation scenario parameters, one row per rung
 │   ├── NUS_EV.csv                       ─ EV scenario parameter data
 │   ├── NUs_LPV.csv                      ─ LPV scenario parameter data
 │   ├── Welcome_Page_Parameters.csv      ─ Parameter card definitions (all 4 envelopes)
@@ -526,8 +526,8 @@ LMN-tool/
 
 The central data file (~630 KB) contains:
 - **Neighbourhood configurations** — 35 configurations (RS-*, MU-*, CC-*, IC-*, RC-*) store land use, context, density, layout, envelope options, building composition, area, and physical properties.
-- **Energy data** — Per-neighbourhood energy demand breakdowns by EEM level (DEFAULT, EEM1–EEM4) and IAL baseline, for both NECB-2017 and ASHRAE code standards, with colour mappings.
-- **PV generation data** — Rooftop PV sizing parameters per NU per EEM level.
+- **Energy data** — Per-neighbourhood energy demand breakdowns for each of the five ladder rungs and the ideal thermal load case, for both NECB-2017 and ASHRAE code standards, with colour mappings.
+- **PV generation data** — Rooftop PV sizing parameters per NU per scenario rung.
 - **Building types** — 19+ building typologies with images and metadata (including data centers, supermarkets, warehouses, outpatient health care).
 - **Energy status thresholds** — Positive / Neutral / Negative energy balance classification.
 
@@ -552,9 +552,9 @@ reported change. That mapping is a **derived** result and the tool says so on th
 
 | File                    | Purpose                                                                       |
 |-------------------------|-------------------------------------------------------------------------------|
-| `CAN_MTL.csv`           | Pivoted energy data for all 35 NUs, NECB-2017 code — EEM0–EEM4 + IAL rows   |
-| `ASHRAE.csv`            | Pivoted energy data for all 35 NUs, ASHRAE code — EEM0–EEM4 + IAL rows      |
-| `PV_generation.csv`     | PV generation values per NU per EEM level (synced with May 2026 simulation)  |
+| `CAN_MTL.csv`           | Pivoted energy data for all 35 NUs, NECB-2017 code — one row per scenario rung plus the ideal load |
+| `ASHRAE.csv`            | Pivoted energy data for all 35 NUs, ASHRAE code — one row per scenario rung plus the ideal load |
+| `PV_generation.csv`     | PV generation values per NU per scenario rung (synced with May 2026 simulation) |
 | `Welcome_Page_Parameters.csv` | Parameter card definitions for Layer 1 (all 4 envelopes listed)        |
 | `Interface_Connections.csv`   | Page navigation flow — 9 NUs × 4 envelope options (36 rows)            |
 | `NUs_LPV.csv`           | LPV (Landscape PV) scenario parameters                                        |
@@ -588,25 +588,28 @@ The tool covers **35 neighbourhood archetypes** across five typological families
 | Industrial     | `IC-*`      | 2     | Data centres (large/edge)                      |
 | Residential Compact | `RC-*` | 10   | The original compact residential study set     |
 
-### EEM Scenario Coverage
+### Scenario Coverage
 
-Each archetype is simulated across **six scenario levels**:
+Each archetype is simulated across **six scenario levels**. The ladder is **cumulative**: each
+rung contains the one below it.
 
-The ladder is **cumulative**: each rung contains the one below it. The data key and the name
-the user reads are two different things, and both are given here.
+**These names are the only ones used anywhere in the tool.** The right-hand column is not a
+second set of names; it is the literal key each row is stored under in `js/data.js` and in the
+source CSVs, and it is here only so that a developer opening those files can tell which row is
+which. It appears on no page.
 
-| Data key  | What the user reads | Description |
-|-----------|---------------------|-------------|
-| `DEFAULT` | **Baseline** | Code-compliant baseline as designed, native PV only |
-| `EEM1`    | **HPerf** | High-Performance Envelope: opaque assemblies, triple glazing, foundation and slab insulation, infiltration reduced to a quarter |
-| `EEM2`    | **HPerf + Heat Pump** | Everything in HPerf, plus a cold-climate air-source heat pump, inverter cooling and ventilation heat recovery |
-| `EEM3`    | **HPerf + Heat Pump + DHW** | Everything above, plus a heat-pump water heater with a stratified tank and drain-water heat recovery. DHW is domestic hot water |
-| `EEM4`    | **HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling** | Everything above, plus automated shading, daylight dimming, LED lighting, efficient plug loads and appliance electrification |
-| `IAL`     | **Ideal thermal load** | HVAC replaced by ideal air loads, to expose the pure thermal demand for district-energy sizing. Not directly comparable with delivered fuel or electricity |
+| Scenario | Description | Key in the data files |
+|----------|-------------|-----------------------|
+| **Baseline** | Code-compliant baseline as designed, native PV only | `DEFAULT` |
+| **HPerf** | High-Performance Envelope: opaque assemblies, triple glazing, foundation and slab insulation, infiltration reduced to a quarter | `EEM1` |
+| **HPerf + Heat Pump** | Everything in HPerf, plus a cold-climate air-source heat pump, inverter cooling and ventilation heat recovery | `EEM2` |
+| **HPerf + Heat Pump + DHW** | Everything above, plus a heat-pump water heater with a stratified tank and drain-water heat recovery. DHW is domestic hot water | `EEM3` |
+| **HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling** | Everything above, plus automated shading, daylight dimming, LED lighting, efficient plug loads and appliance electrification | `EEM4` |
+| **Ideal thermal load** | HVAC replaced by ideal air loads, to expose the pure thermal demand for district-energy sizing. Not directly comparable with delivered fuel or electricity | `IAL` |
 
 ### PV Generation Data
 
-PV generation values are derived from rooftop sizing calculations per archetype and synced with the **May 2026 simulation run** (`LMN_RC_NU_20260531_master.csv`). RC archetypes (RC-D, RC-T, RC-ML, RC-MR1) received updated EEM1–EEM4 PV generation values from this run.
+PV generation values are derived from rooftop sizing calculations per archetype and synced with the **May 2026 simulation run** (`LMN_RC_NU_20260531_master.csv`). RC archetypes (RC-D, RC-T, RC-ML, RC-MR1) received updated PV generation values for every rung above Baseline from this run.
 
 ### Data Pipeline
 
