@@ -294,8 +294,21 @@ function updatePVParameters(neighbourhoodCode) {
         : LMN_CONFIG.pv.moduleEfficiencyLabel;
 
     // Resolve pvIntensity from envelope-aware source (same as energy.js)
+    //
+    // CHV, 2026-08-24: the intensity no longer appears on this page. It is
+    // still read here because the total in MWh/yr below is computed from it,
+    // which is the arithmetic dependency her instruction must not break.
     const { envelope, scenario, pvIntensity } = resolveEnvelopeAndScenario(neighbourhoodCode);
-    const generationDisplay = (pvIntensity != null) ? pvIntensity.toFixed(1) : '—';
+
+    // CHV, 2026-08-24: total PV array area, in square metres, in place of the
+    // intensity. The value is an upstream extraction over the injected IDFs,
+    // logged as X23 and DBG-038, and it is a parse rather than an EnergyPlus
+    // run. WHERE IT HAS NOT PRODUCED A NUMBER, NOTHING IS SHOWN: the row is
+    // hidden and no estimate is drawn. Never invent a number.
+    const pvArea = (typeof PV_AREA_DATA !== 'undefined') ? PV_AREA_DATA[neighbourhoodCode] : undefined;
+    const pvAreaDisplay = (pvArea != null)
+        ? Math.round(pvArea).toLocaleString() + ' m²'
+        : null;
 
     // D0.3, D0.3a, D0.3b and DBG-018. RoP is COMPUTED here, from the same two
     // numbers the rest of the tool uses, and is not read from a stored field.
@@ -350,7 +363,7 @@ function updatePVParameters(neighbourhoodCode) {
             '#pv-efficiency-val-legacy': efficiencyValue,
             '#pv-mounting-val-legacy':   mountingValue,
             '#pv-gcr-val-legacy':        gcrValue,
-            '#pv-generation-val-legacy': generationDisplay,
+
             '#pv-gfa-val-legacy':        gfaDisplay,
             '#pv-cond-area-val-legacy': condDisplay,
             '#pv-total-val-legacy':      totalDisplay,
@@ -367,7 +380,7 @@ function updatePVParameters(neighbourhoodCode) {
             '#pv-efficiency-val': efficiencyValue,
             '#pv-mounting-val':   mountingValue,
             '#pv-gcr-val':        gcrValue,
-            '#pv-generation-val': generationDisplay,
+
             '#pv-gfa-val':        gfaDisplay,
             '#pv-cond-area-val': condDisplay,
             '#pv-total-val':      totalDisplay,
@@ -383,6 +396,21 @@ function updatePVParameters(neighbourhoodCode) {
     // two layouts is in use.
     const totalEl = document.querySelector(isLegacy ? '#pv-total-val-legacy' : '#pv-total-val');
     if (totalEl && totalMWh != null) totalEl.title = totalTitle;
+
+    // CHV, 2026-08-24. The area row appears only when a number exists for this
+    // neighbourhood, and the row is removed from the page otherwise.
+    const areaItem = document.getElementById('pv-area-item' + (isLegacy ? '-legacy' : ''));
+    const areaVal = document.getElementById('pv-area-val' + (isLegacy ? '-legacy' : ''));
+    if (areaItem && areaVal) {
+        if (pvAreaDisplay) {
+            areaItem.hidden = false;
+            areaVal.textContent = pvAreaDisplay;
+            areaVal.title = 'The total area of photovoltaic array injected on this neighbourhood: the active roof face area on pitched roofs, plus the rack area on flat roofs.';
+        } else {
+            areaItem.hidden = true;
+            areaVal.textContent = '—';
+        }
+    }
 
     // STAGE-04, answered by Koral. Two things the page never said out loud.
     //
@@ -430,7 +458,7 @@ function updatePVParameters(neighbourhoodCode) {
     //    model/data version need to appear under Assumptions & Model
     //    Information". Every value is read from LMN_CONFIG, so this page cannot
     //    name a weather file the config does not know about.
-    renderPvAssumptions(isLegacy, envelope);
+    renderPvAssumptions(isLegacy, envelope, neighbourhoodCode);
 
     return pvIntensity;
 }
@@ -441,8 +469,9 @@ function updatePVParameters(neighbourhoodCode) {
  *
  * @param {boolean} isLegacy - true for the RC-HR2 layout
  * @param {string} envelope - the selected envelope key
+ * @param {string} neighbourhoodCode - the active NU, needed for the PV area row
  */
-function renderPvAssumptions(isLegacy, envelope) {
+function renderPvAssumptions(isLegacy, envelope, neighbourhoodCode) {
     if (typeof LMN_CONFIG === 'undefined') return;
     const s = isLegacy ? '-legacy' : '';
     const set = (id, value) => {
@@ -460,6 +489,26 @@ function renderPvAssumptions(isLegacy, envelope) {
         ? (climate.city ? climate.city + ', ' + climate.zone : climate.zone + ' (United States reference case)')
         : '—');
     set('pv-weatherfile-val', LMN_CONFIG.weatherFileFor(envelope) || '—');
+
+    // CHV, 2026-08-24, her section 4 item 5. Snow cover is not modelled, and
+    // the PV page is where the number it makes optimistic is read.
+    // LMN_CONFIG.snowNote already existed, D0.1a and DBG-019, and was printed
+    // on the energy breakdown and the summary but never here. It returns an
+    // empty string for a climate with no note, and the box stays hidden then.
+    const snowEl = document.getElementById('pv-snow-note' + s);
+    if (snowEl) {
+        const snow = LMN_CONFIG.snowNote(climateKey);
+        if (snow) {
+            snowEl.hidden = false;
+            snowEl.innerHTML = '<div class="info-box-body">' +
+                '<p class="info-box-title">Snow cover is not modelled</p>' +
+                '<p class="info-box-line">' + snow + '</p>' +
+                '</div>';
+        } else {
+            snowEl.hidden = true;
+            snowEl.innerHTML = '';
+        }
+    }
     set('pv-standard-val', LMN_CONFIG.envelopeLabel(envelope));
     set('pv-areabasis-val', LMN_CONFIG.units.floorAreaBasisNote);
     set('pv-modelversion-val',
@@ -467,17 +516,23 @@ function renderPvAssumptions(isLegacy, envelope) {
         ', campaign ' + LMN_CONFIG.dataCampaign.climates +
         ', ' + LMN_CONFIG.dataCampaign.engine);
 
-    // CHV, 2026-08-17, point 5: what each efficiency represents and the
-    // arithmetic behind it, in the same box as the value it explains.
+    // CHV, 2026-08-17 point 5, reopened 2026-08-24 point 3. DBG-037. The box
+    // now states the model that produced the results, Tier 3, and then names
+    // 18.65 % and 20 % as what they are, a retired convention and a literature
+    // reference. She asked for "the exact original model/source for both
+    // assumptions", so both are printed with their active fractions.
     const effEl = document.getElementById('pv-efficiency-explainer' + s);
     if (effEl) {
         const e = LMN_CONFIG.pv.efficiencyExplanation;
         effEl.innerHTML = '<div class="info-box-body">' +
-            '<p class="info-box-title">The two module efficiencies</p>' +
+            '<p class="info-box-title">PV model assumptions, Preliminary</p>' +
             '<p class="info-box-line">' + e.sameTechnology + '</p>' +
             '<p class="info-box-line">' + e.pitched + '</p>' +
             '<p class="info-box-line">' + e.flat + '</p>' +
             '<p class="info-box-line">' + e.shared + '</p>' +
+            '<p class="info-box-line"><strong>The two other figures, and neither made these results.</strong> ' + e.retired + '</p>' +
+            '<p class="info-box-line"><strong>What changed on 2026-08-24.</strong> ' + e.correction + '</p>' +
+            '<p class="info-box-line">' + e.preliminary + '</p>' +
             '</div>';
     }
 
@@ -486,11 +541,19 @@ function renderPvAssumptions(isLegacy, envelope) {
     const provEl = document.getElementById('pv-provenance-note' + s);
     if (provEl) {
         const p = LMN_CONFIG.provenance;
+        // CHV, 2026-08-24. The rows follow what the page now shows: the array
+        // area, the total generation and the ratio. The intensity is named last
+        // and named for what it is, the internal value the total comes from.
+        const hasArea = (typeof PV_AREA_DATA !== "undefined") && PV_AREA_DATA[neighbourhoodCode] != null;
+        const areaLine = hasArea
+            ? '<p class="info-box-line"><strong>Total PV array area, ' + p.simulatedLabel.toLowerCase() + '.</strong> ' + p.results.pvArea.note + '</p>'
+            : '';
         provEl.innerHTML = '<div class="info-box-body">' +
-            '<p class="info-box-title">Where these three numbers come from</p>' +
-            '<p class="info-box-line"><strong>PV generation intensity, ' + p.simulatedLabel.toLowerCase() + '.</strong> ' + p.results.pvIntensity.note + '</p>' +
+            '<p class="info-box-title">Where these numbers come from</p>' +
+            areaLine +
             '<p class="info-box-line"><strong>Total PV generation, ' + p.derivedLabel.toLowerCase() + '.</strong> ' + p.results.pvTotal.note + '</p>' +
             '<p class="info-box-line"><strong>Ratio of Performance, ' + p.derivedLabel.toLowerCase() + '.</strong> ' + p.results.rop.note + '</p>' +
+            '<p class="info-box-line"><strong>PV generation intensity, ' + p.simulatedLabel.toLowerCase() + ', and no longer shown as a result.</strong> ' + p.results.pvIntensity.note + '</p>' +
             '</div>';
     }
 }

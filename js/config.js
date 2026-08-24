@@ -29,11 +29,27 @@ const LMN_CONFIG = {
   // 0. Identity
   // =====================================================================
 
-  // 0.10.1, 2026-08-17: presentation only. No stored value and no campaign
-  // changed. The ASHRAE card came off the page and the EEM keys came out of the
-  // documentation, so the patch number moves and the minor does not.
-  version: "0.10.1",
-  lastUpdated: "2026-08-17",
+  // CHV, 2026-08-24: "Please change the title shown in the tool to clearly
+  // identify this release as LMN V1, Layered Modular Neighbourhood Tool. I
+  // would like LMN V1 to be immediately visible in the main title, not only in
+  // the footer or documentation. Please use the same V1 designation
+  // consistently in the methodology, README, results/export and handover so
+  // that future developments can clearly become V2, etc."
+  //
+  // These two strings are the single source of the release name. No page, no
+  // export and no report writes it as a literal.
+  releaseName: "LMN V1",
+  productName: "LMN V1, Layered Modular Neighbourhood Tool",
+
+  // 1.0.0, 2026-08-24. The release identity she asked for. The campaign, the
+  // stored values and the engine are unchanged: this is the version number of
+  // the published tool, not of the simulation data, which carries its own
+  // dataCampaign below.
+  //
+  // 0.10.1, 2026-08-17: presentation only. The ASHRAE card came off the page
+  // and the EEM keys came out of the documentation.
+  version: "1.0.0",
+  lastUpdated: "2026-08-24",
 
   // Which simulation campaign the shipped numbers come from.
   // Source: option_9_j_20260707_v2 for the six NECB climates and ASHRAE;
@@ -123,12 +139,14 @@ const LMN_CONFIG = {
   // EPW registry, lines 39 to 44. The exact file per climate is in weatherFile
   // below, added 2026-08-17 on CHV's point 1.
   //
-  // THE SEVENTH REGION IS WITHDRAWN, 2026-08-17. See withdrawnClimates.
+  // THE SEVENTH REGION IS WITHDRAWN, 2026-08-17, and NECB ZONE 8 IS WITHDRAWN
+  // FROM THE PUBLIC TOOL, 2026-08-24. See withdrawnClimates. Neither is
+  // deleted here: both keep every row in js/data.js.
 
   climates: [
     { key: "ashrae",   city: null,               zone: "ASHRAE",  standard: "ASHRAE 90.1", status: "withdrawn", withdrawn: true, label: "Standard (ASHRAE)", weatherFile: "Buffalo Niagara Intl AP, NY, USA, TMY3, WMO 725280" },
     { key: "necb-z4",  city: "Vancouver",        zone: "NECB 4",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_BC_Vancouver.Intl.AP.718920_CWEC2020v2.epw" }, // was wrongly "Windsor"
-    { key: "necb-z5",  city: "Toronto / Ottawa", zone: "NECB 5",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_ON_Bishop-Toronto.City.AP.712650_CWEC2020v2.epw" }, // correct as shipped. Toronto ran; Ottawa is in the same zone and was not run
+    { key: "necb-z5",  city: "Toronto",          zone: "NECB 5",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_ON_Bishop-Toronto.City.AP.712650_CWEC2020v2.epw" }, // CHV 2026-08-24: "change Toronto / Ottawa to Toronto, since Toronto is the actual weather location used in the simulation". Ottawa is in the same zone and was never run, so it is no longer named
     { key: "necb-z6",  city: "Montréal",         zone: "NECB 6",  standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_QC_Montreal-Trudeau.Intl.AP.716270_CWEC2020v2.epw" }, // correct as shipped
     { key: "necb-z7a", city: "Winnipeg",         zone: "NECB 7A", standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_MB_Winnipeg-Richardson.Intl.AP.718520_CWEC2020v2.epw" }, // was wrongly "Calgary". Edmonton has no CWEC2020v2 file, so Winnipeg substitutes
     { key: "necb-z7b", city: "Fort McMurray",    zone: "NECB 7B", standard: "NECB 2017",   status: "simulation-backed", weatherFile: "CAN_AB_Fort.McMurray.AP.716890_CWEC2020v2.epw" }, // was wrongly "Whitehorse"
@@ -187,9 +205,39 @@ const LMN_CONFIG = {
       scope: "climate",
       climates: ["ashrae", "high-performance-ashrae"],
       showOnSelection: false,
-      label: "Results under revision",
+      label: "Not available in this climate",
       reason: "This is a United States reference case, not a Canadian climate. It was simulated with United States prototypes against ASHRAE 90.1 on a United States weather file, Buffalo Niagara Intl AP, NY. It has been taken out of the climate selection until it can be re-run on the Canadian weather file for the same zone. The six NECB climates are unaffected: each of them runs on its own Canadian CWEC weather file.",
       debugRef: "DBG-034"
+    },
+    // CHV, 2026-08-24, in her words: "I also do not want Chisasibi published in
+    // the public tool at this stage. It can remain part of the research work,
+    // database and technical documentation, but please disable it from the
+    // public climate selection and do not expose its quantitative results
+    // publicly for now."
+    //
+    // Same mechanism as the ASHRAE withdrawal and for the same reason: the gate
+    // lives inside dataGapFor, so a typed address, a bookmark or a session
+    // stored before today is stopped on all four result pages without any of
+    // them being edited. NOTHING IS DELETED. All 35 neighbourhoods and all 5
+    // scenarios stay in js/data.js under "necb-z8" and "high-performance-z8",
+    // and the zone stays in the technical register in documentation.html,
+    // marked not published in V1, which her own sentence permits.
+    //
+    // showOnSelection is false, for the reason given above the ASHRAE entry:
+    // with the card off the row, a box under the row explains an option the
+    // visitor never saw.
+    //
+    // The reason below is written for a reader, and it is the reason the
+    // methodology already carried at documentation.html: Chisasibi has no
+    // CWEC2020v2 file, so the run uses La Grande Riviere airport, CYGL, about
+    // 90 km inland, and it is the only one of the six on an older CWEC edition.
+    {
+      scope: "climate",
+      climates: ["necb-z8", "high-performance-z8"],
+      showOnSelection: false,
+      label: "Not available in this climate",
+      reason: "NECB Zone 8 is not published in LMN V1. The zone was simulated, and it remains part of the research database and the technical documentation, but its quantitative results are not exposed in the public tool at this stage. It is also the only zone in the campaign without a CWEC2020v2 weather file: the run uses La Grande Riviere airport, CYGL, about 90 km inland from Chisasibi, as a proxy station.",
+      debugRef: "CHV-2026-08-24"
     }
   ],
 
@@ -204,7 +252,7 @@ const LMN_CONFIG = {
   envelopeLabels: {
     "ashrae":                  "Standard (ASHRAE 90.1)",
     "necb-z4":                 "NECB Zone 4 (Vancouver)",
-    "necb-z5":                 "NECB Zone 5 (Toronto / Ottawa)",
+    "necb-z5":                 "NECB Zone 5 (Toronto)",
     "necb-z6":                 "NECB Zone 6 (Montréal)",
     "necb-z7a":                "NECB Zone 7A (Winnipeg)",
     "necb-z7b":                "NECB Zone 7B (Fort McMurray)",
@@ -212,13 +260,15 @@ const LMN_CONFIG = {
     "necb-2017":               "NECB Zone 6 (Montréal)",
     "high-performance-ashrae": "High Perf. (ASHRAE 90.1)",
     "high-performance-z4":     "High Perf. Zone 4 (Vancouver)",
-    "high-performance-z5":     "High Perf. Zone 5 (Toronto / Ottawa)",
+    "high-performance-z5":     "High Perf. Zone 5 (Toronto)",
     "high-performance-z6":     "High Perf. Zone 6 (Montréal)",
     "high-performance-z7a":    "High Perf. Zone 7A (Winnipeg)",
     "high-performance-z7b":    "High Perf. Zone 7B (Fort McMurray)",
     "high-performance-z8":     "High Perf. Zone 8 (Chisasibi)",
     "high-performance-necb":   "High Perf. Zone 6 (Montréal)",
-    "vintage-1983-z6":         "1983 Vintage, NECB Zone 6 (Montréal)"
+    // CHV, 2026-08-24: the displayed name is the reference envelope wording.
+    // The KEY stays historical, which is why it still reads "vintage".
+    "vintage-1983-z6":         "1983 Quebec reference envelope, NECB Zone 6 (Montréal)"
   },
 
   // D3.5, task 3.2. Which key holds the no-measure baseline for a given
@@ -316,35 +366,35 @@ const LMN_CONFIG = {
     {
       nu: "RC-D",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
-      label: "Results under revision",
+      label: "Not available in this climate",
       reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-ML",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
-      label: "Results under revision",
+      label: "Not available in this climate",
       reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-MR1",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
-      label: "Results under revision",
+      label: "Not available in this climate",
       reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-R",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
-      label: "Results under revision",
+      label: "Not available in this climate",
       reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-T",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
-      label: "Results under revision",
+      label: "Not available in this climate",
       reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     }
@@ -388,12 +438,22 @@ const LMN_CONFIG = {
   // guess.
   provenance: {
     simulatedLabel: "Directly simulated",
-    derivedLabel: "Derived",
+    // CHV, 2026-08-24, her section 4 item 4: "When a result is calculated from
+    // another simulated scenario, label it Derived from simulation rather than
+    // Simulation-backed." The point of her item is the classification, not the
+    // string: every row that carries a provenance label is one of the two, and
+    // the results map below is what decides which.
+    derivedLabel: "Derived from simulation",
     simulatedNote: "This number comes straight from an EnergyPlus run of this neighbourhood in this climate.",
     results: {
       eui:            { kind: "simulated", note: "EnergyPlus Total End Uses for this neighbourhood, this climate and this scenario." },
-      pvIntensity:    { kind: "simulated", note: "EnergyPlus PV generation for the same run, divided by the heated and cooled floor area of the same run." },
+      // CHV, 2026-08-24: the intensity is no longer displayed. It is kept here
+      // because it is still the value the total is computed from, and a reader
+      // of the assumptions block is entitled to know that.
+      pvIntensity:    { kind: "simulated", note: "EnergyPlus PV generation for the same run, divided by the heated and cooled floor area of the same run. It is no longer shown as a result, on her instruction of 2026-08-24, and it remains the value the total below is computed from." },
       pvTotal:        { kind: "derived",   note: "The simulated PV intensity multiplied by the heated and cooled floor area. D0.6." },
+      // CHV, 2026-08-24: "Replace it with total PV area (m2)." X23, DBG-038.
+      pvArea:         { kind: "simulated", note: "The photovoltaic array area injected on this neighbourhood, read from the simulation input that produced the generation above: the active area of each host roof face, plus the rack area on flat roofs. It is not an estimate and it is absent where the extraction produced no number." },
       highPerfBase:   { kind: "derived",   note: "The High-Performance Envelope arm has no baseline run of its own. Its baseline is the standard arm of the same climate, verified equal at 245 of 245 rows. D3.5." },
       rop:            { kind: "derived",   note: "Computed at render time from two simulated values, the PV generation and the total demand of the same run. It is a ratio, so it is never stored. D0.6, DBG-018." },
       landscapePv:    { kind: "derived",   note: "Not a building energy simulation. A fixed land area assumption multiplied by a specific yield, step by step. D7.1." },
@@ -407,23 +467,41 @@ const LMN_CONFIG = {
   // =====================================================================
 
   pv: {
-    // D0.2, decided by Koral 2026-08-10. SUPERSEDED IN PART by D4.3 and
-    // DBG-013 on the same day: read roofGroups below before using these.
+    // DBG-037, P0, closed 2026-08-24. CHV, point 3 of the same date: "one
+    // calculation uses 20% and the other 18.65% ... please show me the exact
+    // original model/source for both assumptions."
     //
-    // The original decision was "18.65 % everywhere". That was right about the
-    // 18.68 %, which appeared on all 35 NUs in js/data.js and in NO upstream
-    // source at all: it is deleted, and the field with it. It was wrong about
-    // the 20 %. The two are not competing estimates of one quantity. 18.65 %
-    // is the flat-roof cell efficiency the pipeline actually uses,
-    // BEM_utils/pv_tier1.py:105, and 20 % of APERTURE area with a 0.9 active
-    // fraction is the pitched-roof assumption, PV_methodology.md section 6.
+    // Measured in the upstream code on 2026-08-24, and the answer is that
+    // NEITHER of those two numbers produced a published result:
     //
-    // The two values below remain the default and the flat-roof case. Anything
-    // that knows its neighbourhood should call LMN_CONFIG.roofGroupFor() and
-    // read moduleEfficiencyLabel from the group instead.
-    // Source: PV_methodology.md, plus four upstream documents, RESULT-00.
-    moduleEfficiency: 0.1865,
-    moduleEfficiencyLabel: "18.65 %",
+    //   main_BEM.py:757  return "T3PV"   the improved PV track is always
+    //   Tier 3, Tier 2 retired 2026-05-29, and every Option 9 handler calls
+    //   pv_apply.apply_tier3_pv. So Tier 3 made every kWh on this site.
+    //
+    //   BEM_utils/pv_tier3.py:50  TIER3_PANEL_EFFICIENCY = 0.230, a PANEL
+    //   efficiency, injected into PhotovoltaicPerformance:Simple.
+    //
+    //   BEM_utils/pv_tier1.py:105 cell_efficiency = 0.1865, a CELL efficiency
+    //   behind an active fraction of 0.80 that was never stated on this site,
+    //   pv_utils.py:247. Tier 1 is retired and survives only in a tier scan.
+    //
+    //   PV_methodology.md lines 131 and 247, 20 % of APERTURE with a 0.9
+    //   active fraction, sourced to NREL [R1] and Ladybug Tools [R8]. It is a
+    //   literature reference row, not an injected value.
+    //
+    // This block used to publish 0.1865 and call it "the flat-roof cell
+    // efficiency the pipeline actually uses". That sentence was not true. The
+    // values below are the Tier 3 parameters that produced the results. NO
+    // RE-RUN: the generated energy is unchanged EnergyPlus output and only the
+    // assumption printed beside it was wrong. CHV allowed exactly this: "I do
+    // not want a large rerun now solely for this."
+    //
+    // The field names are kept because they are keys, not names. Anything that
+    // knows its neighbourhood should call LMN_CONFIG.roofGroupFor() and read
+    // moduleEfficiencyLabel from the group instead.
+    injectorTrack: "Tier 3",
+    moduleEfficiency: 0.230,
+    moduleEfficiencyLabel: "23 % panel efficiency",
 
     // Array and system assumptions, carried over from the existing pages.
     gcr: 0.40,
@@ -468,8 +546,10 @@ const LMN_CONFIG = {
       pitched: {
         nus: ["RC-R", "RC-D", "RC-ML", "RC-T"],
         surface: "Pitched roof, south facing face",
-        // 20 % of aperture area with a 0.9 active-area fraction, Group A.
-        moduleEfficiencyLabel: "20 % of aperture area",
+        // Tier 3, DBG-037. The cells sit on the south facing roof face itself
+        // at an active area fraction of 0.85, pv_tier3.py:51 and :651.
+        moduleEfficiencyLabel: "23 % panel, active fraction 0.85",
+        activeFraction: 0.85,
         mounting: "Flush on the roof face",
         tiltLabel: "Follows the roof pitch",
         gcrApplies: false,
@@ -477,7 +557,11 @@ const LMN_CONFIG = {
       },
       flat: {
         surface: "Flat roof",
-        moduleEfficiencyLabel: "18.65 %",
+        // Tier 3, DBG-037. The rack is a Shading:Building:Detailed surface of
+        // area sum(roof_area) x GCR 0.40 / cos 45, and the cells fill it,
+        // pv_tier3.py:617 to 623.
+        moduleEfficiencyLabel: "23 % panel, active fraction 1.0 on the rack",
+        activeFraction: 1.0,
         mounting: "Fixed Open Rack",
         tiltLabel: "45 degrees, facing south",
         gcrApplies: true,
@@ -485,38 +569,24 @@ const LMN_CONFIG = {
       }
     },
 
-    // CHV, 2026-08-17, point 5: "Please recheck the 18.65% versus 20%
-    // assumptions. If the same PV technology is used, I would expect one
-    // consistent module efficiency; roof differences should normally be
-    // represented through available area, tilt, orientation, active fraction,
-    // GCR, etc. Please show me clearly what each efficiency represents and the
-    // formula/assumptions behind each."
+    // CHV, 2026-08-17 point 5, reopened 2026-08-24 point 3: "Please show me
+    // the exact original model/source for both assumptions and clarify whether
+    // these are two different definitions applied to different reference areas
+    // or two legacy modelling conventions."
     //
-    // RECHECKED 2026-08-17 against the two sources, and she is essentially
-    // right. They are not two technologies:
-    //
-    //   Pitched, the 4 house NUs. 20 % module efficiency OF APERTURE AREA with
-    //   a 0.9 active area fraction. PV_methodology.md sections 6 and 11.
-    //   Effective on gross area: 0.20 x 0.9 = 0.18, so 18 %.
-    //
-    //   Flat, the other 31 NUs. 18.65 % CELL efficiency applied to the racked
-    //   module area. BEM_utils/pv_tier1.py line 105,
-    //   apply_tier1_pv(cell_efficiency=0.1865). PV_methodology.md section 6
-    //   also states 200 W/m2 of roof area for this group.
-    //
-    // 18.0 % against 18.65 % is a difference of 0.65 of a percentage point, and
-    // what separates them is the active area fraction and what the figure is
-    // applied to, which is exactly the mechanism she names. The panel is the
-    // same in both groups.
-    //
-    // Whether to harmonise the two into one number is an upstream question and
-    // it would change published results, so it is NOT decided here and nothing
-    // on the site moves because of it.
+    // Answered from the upstream code, DBG-037. They are two legacy modelling
+    // conventions, applied to two different reference areas, and the model that
+    // produced the results is a third one. The block below states the third one
+    // first and then names the other two for what they are. The keys are kept
+    // so that every page that already reads this block keeps working.
     efficiencyExplanation: {
-      sameTechnology: "The same module technology is assumed on both roof types. The two efficiency figures differ because of the active area fraction and the area each one is applied to, not because of a different panel.",
-      pitched: "Pitched roofs, the four house neighbourhoods: 20 % module efficiency of aperture area, with a 0.9 active area fraction. 0.20 x 0.9 = 0.18, so 18 % of the gross roof face. Source: PV_methodology.md, sections 6 and 11.",
-      flat: "Flat roofs, the other 31 neighbourhoods: 18.65 % cell efficiency applied to the racked module area. Source: BEM_utils/pv_tier1.py line 105. The same section also states 200 W/m2 of roof area for this group.",
-      shared: "Both groups share the rest of the chain: 14 % system DC to AC losses and 96 % inverter efficiency. Array tilt, azimuth, available area and, on flat roofs only, the ground coverage ratio, are what differ between the two."
+      sameTechnology: "One panel is assumed on every roof. Every PV number published in this tool was produced by the Tier 3 injector at a panel efficiency of 23.0 %. What changes between roof types is the mounting and the fraction of the surface that carries cells, not the panel. Source: BEM_utils/pv_tier3.py line 50, and main_BEM.py line 757, which fixes the improved PV track to Tier 3.",
+      pitched: "Pitched roofs, the four house neighbourhoods: the cells sit flush on the south facing roof face, with an active area fraction of 0.85. Effective on that face, 0.230 x 0.85, so 19.55 %. Source: BEM_utils/pv_tier3.py lines 51, 480 to 485 and 651.",
+      flat: "Flat roofs, the other 31 neighbourhoods: the cells sit on a 45 degree open rack whose area is the roof area multiplied by a ground coverage ratio of 0.40 and divided by cos 45. The cells fill the rack, so the active fraction there is 1.0. Source: BEM_utils/pv_tier3.py lines 617 to 623.",
+      shared: "Both groups share the rest of the chain: 14 % system DC to AC losses and 96 % inverter efficiency.",
+      retired: "Two other efficiency figures appear in the upstream documentation and neither of them produced a number in this tool. 18.65 % is a CELL efficiency from the Tier 1 injector, retired on 2026-05-29, and it sat behind an active area fraction of 0.80, BEM_utils/pv_tier1.py line 105 with pv_utils.py line 247. 20 % is a MODULE efficiency of aperture area with a 0.9 active fraction, quoted in PV_methodology.md lines 131 and 247 as a literature reference from NREL and Ladybug Tools. Comparing 18.65 % with 20 % without their active fractions compares a cell with a module, which is why the difference never closed.",
+      correction: "Until 2026-08-24 this tool printed 18.65 % as its own module efficiency. That was a retired convention, not the model behind the results, and it has been corrected here. The generated energy is unchanged: it is EnergyPlus output from the Tier 3 model, and only the assumption stated beside it was wrong. No simulation was re-run.",
+      preliminary: "These PV assumptions are Preliminary. Harmonising the three conventions into one upstream figure would change published results and is left to a later version."
     },
 
     // D0.1a, DBG-019. Snow cover is not modelled. Roof PV is optimistic in the
@@ -555,7 +625,21 @@ const LMN_CONFIG = {
     // currently available". Deliberately NOT added to statusTerms below,
     // which holds the four release terms she fixed earlier and which the
     // Layer 4 assumptions text is asserted to name in full.
-    underRevisionLabel: "Results under revision",
+    //
+    // REWORDED 2026-08-24 by CHV: "The Results under revision message currently
+    // shown at the bottom should not remain in the final published V1. It is
+    // fine internally during development, but those cases should either be
+    // corrected or disabled before publication."
+    //
+    // Correcting them is five upstream simulation campaigns and is not
+    // available to us, so they are DISABLED: the affected pairs are not offered
+    // and the boxes that explained them are off the selection page. The field
+    // names are kept because they are keys. The wording that survives is the
+    // one a visitor sees only if they type an address for a pair that is not
+    // published, and at that point "not available in this climate" is the true
+    // and useful sentence. The revision language stays in the debug register,
+    // which is where the state of our work belongs.
+    underRevisionLabel: "Not available in this climate",
     notAvailableLabel: "Not currently available"
   },
 
@@ -688,13 +772,31 @@ const LMN_CONFIG = {
   //
   // "Deep retrofit" was already removed on 2026-08-10; the comment recording
   // why is above this block and stays, because it is the record of the fix.
+
+  // SHORTENED 2026-08-24 by CHV, in her words: "The cumulative logic is
+  // correct, but the current names are too long for the interface. Please use:
+  // Baseline / HPerf / HPerf + Space HP / HPerf + Space HP + HPWH / HPerf +
+  // Space HP + HPWH + EEM. Please include a clear legend/terminology
+  // explanation where these abbreviations first appear ... Please do not use
+  // Deep Retrofit."
+  //
+  // Three strings move. The ladder itself does not: resolveScenarioKey, the
+  // gates and the cumulative rule are untouched, and she confirmed the logic is
+  // correct. EEM1 to EEM4 remain the DATA KEYS of js/data.js and appear on
+  // screen nowhere.
+  //
+  // The word EEM returns to the interface as the fifth rung name and as a
+  // defined abbreviation. That reverses the instruction of 2026-08-17 that "the
+  // word EEM appears on no control", and it is her own later instruction, so it
+  // is her reversal and not a defect. See LMN_CONFIG.abbreviations, which is
+  // the legend she asks for.
   eemLabelsPending: false,    // D3.3 answered, then confirmed and reworded by CHV
   eemLabels: {
     DEFAULT: "Baseline",
     EEM1:    "HPerf",
-    EEM2:    "HPerf + Heat Pump",
-    EEM3:    "HPerf + Heat Pump + DHW",
-    EEM4:    "HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling",
+    EEM2:    "HPerf + Space HP",
+    EEM3:    "HPerf + Space HP + HPWH",
+    EEM4:    "HPerf + Space HP + HPWH + EEM",
     IAL:     "Ideal thermal load"
   },
 
@@ -713,7 +815,15 @@ const LMN_CONFIG = {
   envelopeTiers: {
     standard:        { short: "Standard", full: "Standard", definition: "The building code baseline for the selected climate." },
     highPerformance: { short: "HPerf",    full: "High-Performance Envelope", definition: "HPerf is the High-Performance Envelope package: high performance opaque assemblies, triple glazed windows, foundation and slab insulation, and infiltration reduced to a quarter." },
-    vintage1983:     { short: "1983",     full: "1983 Quebec Vintage", definition: "The 1983 Quebec construction era, kept as a retrofit starting point. It is a different code era and is compared against itself." }
+    // CHV, 2026-08-24, asked what the 1983 model represents, so that the
+    // terminology is correct rather than only shorter. Confirmed from the
+    // upstream source, docs_LMN_web/LMN-1983/README.md and the validation
+    // report: it is a CODE ERA REFERENCE ENVELOPE, built to Quebec Regulation
+    // E-1.1, r. 1, Order in Council 89-83, and it is NOT a survey of existing
+    // buildings. Arm CAN_MTL_1983, all 35 neighbourhoods, Montreal only,
+    // validated against external statistical benchmarks rather than against
+    // measured meters.
+    vintage1983:     { short: "1983",     full: "1983 Quebec code-era reference envelope", definition: "An envelope built to the 1983 Quebec construction requirements, Regulation E-1.1, r. 1, Order in Council 89-83. It is a code-era reference, not a survey of the buildings that exist today, and it is available for Montreal only. It is a different code edition from NECB 2017, so it is compared against itself and never mixed with the NECB arms." }
   },
   acronyms: {
     HPerf: "High-Performance Envelope",
@@ -722,6 +832,24 @@ const LMN_CONFIG = {
     RoP:   "Ratio of Performance",
     GCR:   "Ground coverage ratio"
   },
+
+  // CHV, 2026-08-24: "Please include a clear legend/terminology explanation
+  // where these abbreviations first appear: HPerf = High-Performance Envelope,
+  // Space HP = Heat Pump for space conditioning, HPWH = Heat Pump Water Heater,
+  // EEM = Energy Efficiency Measures. The terminology should be consistent
+  // throughout the selections, graphs, results, summary and methodology."
+  //
+  // Her four, in her order, in her words. This is the ONLY place they are
+  // defined. LMN_CONFIG.terminologyLegend() below renders them, and every page
+  // that needs the legend calls that. acronyms above stays for the other five
+  // terms, which are not part of the scenario ladder; HPerf appears in both and
+  // both read the same string, which is checked by the verification suite.
+  abbreviations: [
+    { short: "HPerf",    full: "High-Performance Envelope",         note: "High performance opaque assemblies, triple glazed windows, foundation and slab insulation, and infiltration reduced to a quarter." },
+    { short: "Space HP", full: "Heat Pump for space conditioning",  note: "A cold climate air source heat pump for heating and cooling, COP 4.0 to 4.5, with inverter cooling and ventilation heat recovery." },
+    { short: "HPWH",     full: "Heat Pump Water Heater",            note: "A transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements." },
+    { short: "EEM",      full: "Energy Efficiency Measures",        note: "On the top rung only: automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads, and electrification of gas appliances in the residential archetypes." }
+  ],
 
   // The long form, for tooltips and for the assumptions box. Same source as
   // the labels above. Kept out of eemLabels so that a caller asking for a name
@@ -733,9 +861,9 @@ const LMN_CONFIG = {
   eemDetails: {
     DEFAULT: "Code compliant baseline as designed. Native PV only.",
     EEM1:    "HPerf, the High-Performance Envelope: high performance opaque assemblies, triple glazed windows (U 0.85, SHGC 0.40), foundation and slab insulation, infiltration reduced to a quarter.",
-    EEM2:    "Everything in HPerf, plus a cold climate air source heat pump (COP 4.0 to 4.5), inverter cooling, per zone heat pumps and ventilation heat recovery.",
-    EEM3:    "Everything in HPerf + Heat Pump, plus a transcritical CO2 heat pump water heater (DHW, domestic hot water) with a stratified tank, drain water heat recovery and distribution improvements.",
-    EEM4:    "Everything in HPerf + Heat Pump + DHW, plus automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads and electrification of gas appliances in the residential archetypes.",
+    EEM2:    "Everything in HPerf, plus Space HP: a cold climate air source heat pump (COP 4.0 to 4.5), inverter cooling, per zone heat pumps and ventilation heat recovery.",
+    EEM3:    "Everything in HPerf + Space HP, plus HPWH: a transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements.",
+    EEM4:    "Everything in HPerf + Space HP + HPWH, plus the EEM package: automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads and electrification of gas appliances in the residential archetypes.",
     IAL:     "HVAC replaced by ideal air loads to expose the pure thermal demand, for district energy sizing. Not directly comparable with delivered fuel or electricity."
   },
 
@@ -913,7 +1041,11 @@ const LMN_CONFIG = {
   //
   // These four terms, and no others, describe the maturity of a number.
 
-  statusTerms: ["Simulation-backed", "Preliminary", "In development", "Not modelled yet"]
+  // CHV, 2026-08-24 added the fifth term. The first four are the release terms
+  // she fixed on 2026-08-13. "Derived from simulation" joins them because she
+  // asked for it by name and because it is the label the provenance block above
+  // now prints on every derived row.
+  statusTerms: ["Simulation-backed", "Derived from simulation", "Preliminary", "In development", "Not modelled yet"]
 
 };
 
@@ -1172,6 +1304,367 @@ LMN_CONFIG.lpvChain = function () {
     generationMWhYr: Math.round(generationMWhYr * 10) / 10
   };
 };
+
+// ---------------------------------------------------------------------------
+// ComparisonMode v2, P3. The neighbourhood energy balance.
+//
+// Decision V2-D3, 2026-08-21. This is NOT the Ratio of Performance. RoP is
+// defined above as building only, on-site PV over building demand, and that
+// definition is quoted in documentation.html section D. The balance ratio below
+// adds the EV fleet to the demand side and landscape PV to the generation side,
+// so it answers a different question and carries a different name. Both are
+// shown, side by side, each with its own definition.
+//
+// The three quantities can legitimately be added because they already share one
+// basis: EV_V2G_DATA[nu].totalFloorArea was replaced by CONDITIONED_AREA_DATA
+// under DBG-032 / D6.10, so the EV chain and the EUI denominator are the same
+// heated and cooled floor area, on all 35 neighbourhoods.
+// ---------------------------------------------------------------------------
+
+LMN_CONFIG.neighbourhoodBalance = {
+  enabled: true,
+  name: "Neighbourhood energy balance ratio",
+  abbreviation: "NEB",
+  definition: "Annual on-site generation, rooftop PV plus landscape PV, divided by annual neighbourhood demand, building demand plus electric vehicle charging. Site energy, per Neighbourhood Unit.",
+  formula: "NEB = (rooftop PV + landscape PV) / (building demand + EV charging), all in MWh/yr",
+  unit: "dimensionless",
+  interpretation: "The ratio the whole neighbourhood achieves once the vehicles are counted as a load and the landscape array as a supply. It is always lower than RoP whenever an EV fleet is selected.",
+
+  // Which of the two ratios is which, in one line each, for the table.
+  ropContrast: "RoP counts the buildings only. The balance ratio counts the buildings, the vehicles and both arrays.",
+
+  // Decision V2-D1, 2026-08-21. Basis: docs/layer3_mobility_report.md, which
+  // models daily vehicle mileage as a static average of 15 kWh per EV per day,
+  // roughly 200 km of range, with no seasonal, vacancy or cold weather term.
+  // The stored figure is therefore a daily average and 365 is the right factor,
+  // but the assumption is printed beside the number rather than absorbed.
+  evAnnualisation: {
+    daysPerYear: 365,
+    basis: "daily average",
+    note: "Preliminary. The stored EV figure is a daily average, so the annual total assumes 365 identical days: no seasonal variation, no vacancy and no cold weather range loss. docs/layer3_mobility_report.md."
+  },
+
+  // Decision V2-D2, 2026-08-21. Landscape PV enters the generation sum, but
+  // always on its own line, never merged into a single PV figure, because the
+  // 5 acre allocation is uniform across all 35 NUs and is a project decision
+  // rather than a result. See lpv.uniformityNote.
+  lpvInclusion: {
+    included: true,
+    note: "Landscape PV is kept as a separate line inside the generation total, so a reader can subtract it by eye. The allocation is the same on every neighbourhood."
+  },
+
+  // Every row in the balance block is arithmetic on values shown above it.
+  // Nothing here is a new simulation.
+  derivedNote: "Every row in this block is arithmetic on the intensities above and the heated and cooled floor area. No new simulation."
+};
+
+// ---------------------------------------------------------------------------
+// ComparisonMode v2, P1. The one scenario resolver.
+//
+// Until 2026-08-21 the rung was resolved twice, once in finish-design.js and
+// once in comparison.js, and the two copies disagreed: comparison.js promoted
+// a design to EEM4 on the appliance measure alone. The ladder in data.js is
+// cumulative and strictly nested, as eemDetails says in words - every rung
+// above EEM1 already contains the heat pump - so a rung cannot be entered
+// halfway. The same selections were therefore showing two different EUIs on
+// two pages that claim to show the same design.
+//
+// Both pages now call this function and nothing else. It reads no storage and
+// no query string: the caller supplies the selections it holds.
+//
+//   opts = { envelopeKey, nuCode, load: [...], demand: [...] }
+//
+// Returns { envelopeKey, refEnvelope, baseLevel, scenario, energyObject,
+//           measuresNotRepresented: [...], ladderNote: "" }
+//
+// ladderNote is a sentence for the screen, empty when the selections land on a
+// simulated rung exactly. It is never a silent promotion.
+// ---------------------------------------------------------------------------
+
+LMN_CONFIG.eemLadder = {
+  // The gate rule, in one place, in words. Quoted in documentation and in the
+  // not-a-rung sentence below.
+  rule: "The ladder is cumulative. Space HP opens every rung above HPerf, HPWH opens the rung above that, and the EEM package sits on the top rung only.",
+  gates: {
+    EEM2: ["cop4", "cop3.5", "cop3"],
+    EEM3: ["dhw"],
+    EEM4: ["appliances"]
+  },
+  // name plus the verb it takes, so the sentence below reads correctly
+  // whether one measure or several are unrepresented.
+  measureNames: {
+    cop4:     { name: "Space HP", verb: "is" },
+    "cop3.5": { name: "Space HP", verb: "is" },
+    cop3:     { name: "Space HP", verb: "is" },
+    dhw:      { name: "HPWH", verb: "is" },
+    appliances: { name: "the EEM package", verb: "is" }
+  }
+};
+
+LMN_CONFIG.resolveScenarioKey = function (opts) {
+  const o = opts || {};
+  const envelopeKey = o.envelopeKey || "";
+  const nuCode = o.nuCode || "";
+  const load = o.load || [];
+  const demand = o.demand || [];
+
+  // The high performance arms have no DEFAULT row: they start at EEM1.
+  let refEnvelope = envelopeKey;
+  let baseLevel = "DEFAULT";
+  if (envelopeKey.indexOf("high-performance-") === 0) {
+    baseLevel = "EEM1";
+    if (envelopeKey === "high-performance-necb") refEnvelope = "necb-2017";
+    else if (envelopeKey === "high-performance-ashrae") refEnvelope = "ashrae";
+  }
+
+  const nuTable = (typeof ENVELOPE_ENERGY_DATA !== "undefined" &&
+                   ENVELOPE_ENERGY_DATA[refEnvelope])
+    ? ENVELOPE_ENERGY_DATA[refEnvelope][nuCode]
+    : null;
+
+  let scenario;
+  const notRepresented = [];
+
+  if (load.indexOf("thermal_load") !== -1) {
+    // Ideal air loads, where they were simulated. Nothing else applies.
+    scenario = (nuTable && nuTable["IAL"]) ? "IAL" : baseLevel;
+  } else {
+    const hasHP = demand.indexOf("cop4") !== -1 ||
+                  demand.indexOf("cop3.5") !== -1 ||
+                  demand.indexOf("cop3") !== -1;
+    const hasDhw = demand.indexOf("dhw") !== -1;
+    const hasAppliances = demand.indexOf("appliances") !== -1;
+
+    if (hasHP) {
+      if (hasDhw && hasAppliances) scenario = "EEM4";
+      else if (hasDhw) scenario = "EEM3";
+      else scenario = "EEM2";
+      // The top rung carries the DHW measure with it, so appliances chosen
+      // without DHW cannot be credited.
+      if (hasAppliances && !hasDhw) notRepresented.push("appliances");
+    } else {
+      scenario = baseLevel;
+      if (hasDhw) notRepresented.push("dhw");
+      if (hasAppliances) notRepresented.push("appliances");
+    }
+  }
+
+  let ladderNote = "";
+  if (notRepresented.length) {
+    const entries = notRepresented
+      .map(function (k) {
+        return LMN_CONFIG.eemLadder.measureNames[k] || { name: k, verb: "is" };
+      })
+      .filter(function (v, i, a) {
+        return a.map(function (x) { return x.name; }).indexOf(v.name) === i;
+      });
+    const names = entries.map(function (e) { return e.name; });
+    const list = names.length > 1
+      ? names.slice(0, -1).join(", ") + " and " + names[names.length - 1]
+      : names[0];
+    const verb = names.length > 1 ? "are" : entries[0].verb;
+    ladderNote = LMN_CONFIG.eemLadder.rule +
+      " This design therefore resolves to " + LMN_CONFIG.eemLabel(scenario) +
+      ", the nearest simulated case, and " + list +
+      " " + verb + " not represented in the numbers below.";
+  }
+
+  const energyObject = nuTable ? nuTable[scenario] : null;
+
+  // refEnvelope and baseLevel are returned as well, because the baseline column
+  // is the same neighbourhood in the same climate at the rung the arm starts
+  // from: DEFAULT for the standard arms, EEM1 for the high performance ones.
+  return {
+    envelopeKey: envelopeKey,
+    refEnvelope: refEnvelope,
+    baseLevel: baseLevel,
+    scenario: scenario,
+    energyObject: energyObject || null,
+    measuresNotRepresented: notRepresented,
+    ladderNote: ladderNote
+  };
+};
+
+// CHV, 2026-08-24: "Please include a clear legend/terminology explanation
+// where these abbreviations first appear ... The terminology should be
+// consistent throughout the selections, graphs, results, summary and
+// methodology."
+//
+// One renderer, one definition, one box component. This does NOT invent a
+// second box: it builds the same .info-box that every other explanation on the
+// site uses. A page opts in by carrying an element with the class
+// js-terminology-legend and nothing else.
+// =========================================================================
+// THE REFERENCE CASE. CHV, 2026-08-24, in her words:
+//
+//   "I also do not want the 2017 baseline to appear automatically as the
+//   reference case and the comparison to be made immediately against it.
+//   Ideally, the comparison should eventually allow us to compare the selected
+//   scenario with the earlier-period/reference models that better represent the
+//   initial condition of the neighbourhood, rather than automatically treating
+//   NECB 2017 as the baseline. For V1, please remove the automatic baseline
+//   comparison where this would imply that 2017 is the existing/reference
+//   condition. The reference/comparison case should be clearly selected or
+//   defined rather than assumed."
+//
+// WHAT WAS WRONG, AND WHAT WAS NOT. The arithmetic was never wrong: the row
+// labelled "Baseline" is the same neighbourhood, in the same climate, at the
+// rung the arm starts from, which is a NECB 2017 code minimum model with no
+// measures applied. What was wrong is that the tool drew it without being
+// asked, and called it Baseline, which reads as "the neighbourhood as it exists
+// today". Nothing in this tool has ever looked at how those buildings are
+// actually built today.
+//
+// KORAL, 2026-08-24, option A: the reader chooses the reference case, and
+// nothing is compared until they do. Montreal offers a real choice, because the
+// 1983 Quebec reference envelope exists there. The other four climates carry
+// the code minimum only, and the control says so rather than offering a choice
+// that is not there.
+//
+// The DEFAULT IS "none". A page that has not been told what to compare against
+// shows the selected case alone.
+LMN_CONFIG.referenceCase = {
+  storageKey: "referenceCase",
+  noneKey: "none",
+  noneLabel: "No reference case",
+  prompt: "Compare against",
+  title: "Reference case",
+  intro: "Nothing is compared until you choose a reference case. A reference case is a model of the same neighbourhood, in the same climate, built to a stated code edition. It is not a survey of how the buildings there are built today: no such survey is in this tool.",
+  noneNote: "No reference case is selected, so the figures below are the selected scenario alone.",
+  singleOptionNote: "One reference case exists for this climate. The 1983 Quebec reference envelope was simulated for Montreal only.",
+  options: [
+    {
+      key: "necb2017",
+      label: "NECB 2017 code minimum",
+      level: "DEFAULT",
+      // The standard arm of whichever climate is active, resolved through
+      // baselineEnvelopeFor, which is why no envelope key is written here.
+      envelope: null,
+      note: "The same neighbourhood, in the same climate, built to the NECB 2017 code minimum with no measures applied. It is a code minimum model, not the existing building stock."
+    },
+    {
+      key: "quebec1983",
+      label: "1983 Quebec reference envelope",
+      level: "DEFAULT",
+      envelope: "vintage-1983-z6",
+      climates: ["necb-z6"],
+      note: "The same neighbourhood built to the 1983 Quebec construction requirements, Regulation E-1.1, r. 1, Order in Council 89-83. It is the earlier code era, and it is available for Montreal only."
+    }
+  ]
+};
+
+// The options that really exist for this climate. Montreal gets two, every
+// other climate gets one, and the caller is expected to say so rather than
+// draw a chooser with a single item that looks like a choice.
+LMN_CONFIG.referenceOptionsFor = function (envelopeKey) {
+  const climate = LMN_CONFIG.climateOfEnvelope(envelopeKey);
+  return LMN_CONFIG.referenceCase.options.filter(function (o) {
+    return !o.climates || o.climates.indexOf(climate) !== -1;
+  });
+};
+
+// Read the stored choice, and return "none" when there is none, when the store
+// is unreachable, or when the stored key is not offered in this climate. The
+// last case matters: a reader who picks the 1983 envelope in Montreal and then
+// switches to Vancouver must not carry a Montreal reference into Vancouver.
+LMN_CONFIG.selectedReferenceKey = function (envelopeKey, storage) {
+  const none = LMN_CONFIG.referenceCase.noneKey;
+  let stored = null;
+  try {
+    stored = storage ? storage.getItem(LMN_CONFIG.referenceCase.storageKey) : null;
+  } catch (e) {
+    return none;
+  }
+  if (!stored || stored === none) return none;
+  const offered = LMN_CONFIG.referenceOptionsFor(envelopeKey).map(function (o) { return o.key; });
+  return offered.indexOf(stored) !== -1 ? stored : none;
+};
+
+// Resolve a chosen reference to the pair of keys the data is stored under.
+// Returns null when nothing is chosen, which is what stops the comparison.
+LMN_CONFIG.resolveReference = function (envelopeKey, refKey) {
+  if (!refKey || refKey === LMN_CONFIG.referenceCase.noneKey) return null;
+  const opt = LMN_CONFIG.referenceCase.options.find(function (o) { return o.key === refKey; });
+  if (!opt) return null;
+  const offered = LMN_CONFIG.referenceOptionsFor(envelopeKey).map(function (o) { return o.key; });
+  if (offered.indexOf(refKey) === -1) return null;
+  return {
+    key: opt.key,
+    label: opt.label,
+    note: opt.note,
+    envelope: opt.envelope || LMN_CONFIG.baselineEnvelopeFor(envelopeKey),
+    level: opt.level
+  };
+};
+
+// The control. One radio group, the "no reference case" option first and
+// selected by default, so that the page a reader lands on compares nothing.
+LMN_CONFIG.referenceChooserHtml = function (envelopeKey, currentKey) {
+  const rc = LMN_CONFIG.referenceCase;
+  const options = LMN_CONFIG.referenceOptionsFor(envelopeKey);
+  const current = currentKey || rc.noneKey;
+  const item = function (key, label) {
+    const checked = (key === current) ? ' checked' : '';
+    return '<label class="reference-option">' +
+      '<input type="radio" name="reference-case" value="' + key + '"' + checked + '> ' +
+      '<span>' + label + '</span></label>';
+  };
+  const rows = [item(rc.noneKey, rc.noneLabel)]
+    .concat(options.map(function (o) { return item(o.key, o.label); }))
+    .join("");
+  const tail = (options.length < 2)
+    ? '<p class="info-box-line">' + rc.singleOptionNote + '</p>'
+    : '';
+  const chosen = LMN_CONFIG.resolveReference(envelopeKey, current);
+  const chosenNote = chosen
+    ? '<p class="info-box-line"><strong>' + chosen.label + '.</strong> ' + chosen.note + '</p>'
+    : '<p class="info-box-line">' + rc.noneNote + '</p>';
+  return '<div class="info-box reference-chooser">' +
+    '<div class="info-box-body">' +
+    '<p class="info-box-title">' + rc.title + '</p>' +
+    '<p class="info-box-line">' + rc.intro + '</p>' +
+    '<div class="reference-options" role="radiogroup" aria-label="' + rc.prompt + '">' + rows + '</div>' +
+    chosenNote +
+    tail +
+    '</div></div>';
+};
+
+LMN_CONFIG.terminologyLegendHtml = function () {
+  const lines = LMN_CONFIG.abbreviations.map(function (a) {
+    return '<p class="info-box-line"><strong>' + a.short + '</strong> = ' + a.full +
+      '. ' + a.note + '</p>';
+  }).join("");
+  return '<div class="info-box">' +
+    '<div class="info-box-body">' +
+    '<p class="info-box-title">Terminology</p>' +
+    '<p class="info-box-line">' + LMN_CONFIG.eemLadder.rule + '</p>' +
+    lines +
+    '</div></div>';
+};
+
+// The mount. Several verification suites run the pages against a STUB DOM that
+// implements only the handful of methods those pages call, so the guard has to
+// test for the method and not only for the object. Session 15's rule: config.js
+// must load in node without a browser.
+if (typeof document !== "undefined" && typeof document.querySelectorAll === "function") {
+  const mountTerminologyLegend = function () {
+    try {
+      const slots = document.querySelectorAll('.js-terminology-legend');
+      if (!slots) { return; }
+      for (let i = 0; i < slots.length; i++) {
+        slots[i].innerHTML = LMN_CONFIG.terminologyLegendHtml();
+      }
+    } catch (e) {
+      // A stub DOM is not a failure condition. The legend is an explanation,
+      // never a number, so a page that cannot mount it still renders.
+    }
+  };
+  if (document.readyState === "loading" && typeof document.addEventListener === "function") {
+    document.addEventListener("DOMContentLoaded", mountTerminologyLegend);
+  } else {
+    mountTerminologyLegend();
+  }
+}
 
 // Make the constants available to a module loader without changing the
 // browser behaviour, which relies on the global const above.

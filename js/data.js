@@ -1,5 +1,5 @@
 /**
- * Neighbourhood Design Interface - Data Module
+ * LMN V1, Layered Modular Neighbourhood Tool - Data Module
  * Contains concept and neighbourhood data derived from CSV files
  */
 
@@ -83845,7 +83845,68 @@ const CONDITIONED_AREA_DATA = {
   "IC-DC":     7528
 };
 
+// PV_AREA_DATA : total PV array area per neighbourhood, in m2. CHV asked for
+// this on 2026-08-24 in place of the PV generation intensity. X23, DBG-038.
+//
+// It is NOT an EnergyPlus output and it is not in any results CSV. It is a
+// parse of the Generator:Photovoltaic surfaces in the injected IDF of the
+// EEM4 run, campaign option_9_qc1983nu_20260807_all35, summed per NU and
+// multiplied by the active fraction the injector wrote for that roof group,
+// 0.85 pitched and 1.0 on the flat rack. It is the SAME area the published
+// generation was made from, which is why every row below was required to
+// reproduce that generation before it was allowed in.
+//
+// THE GATE. A neighbourhood is listed here only if the EEM4 generation in
+// its own eplustbl.csv or eplusout.sql reproduces the shipped value in
+// ENVELOPE_ENERGY_DATA["necb-z6"][NU]["EEM4"].pv * CONDITIONED_AREA_DATA[NU]
+// to within 2 %. 26 of 35 passed, 9 did not and ARE ABSENT.
+// The interface hides the row where the key is missing. Never fill a gap
+// here with an estimate: an area that does not reproduce the generation is
+// not the area behind the number the page prints.
+//
+// Absent, with the shortfall of the on-disk IDF against the shipped value:
+//   RC-MR1 -4.28 %, RC-D -20 %, RC-ML -12.65 %, RC-T -3.96 %, RC-R -11.06 %, RS-I1 -4.44 %, RS-S -10.46 %, RS-I3 -4.11 %, MU-HS -7.34 %
+// All nine are pitched roof house, townhouse or low rise archetypes and all
+// fall short in the same direction. Flat roof archetypes reconcile to within
+// 0.35 %. Logged against DBG-038, not resolved here.
+//
+// One area per neighbourhood, not one per climate: the injected array is
+// identical to the decimal across CAN_MTL, CAN_Z4 and CAN_Z7B, checked on
+// CC-B, RC-D and MU-C1.
+// RC-HR1, RC-HR2, RC-MR2 and RC-MR3 have no current code EEM4 run left on
+// disk, so they were read from the CAN_MTL_1983 arm. PV output does not
+// depend on the vintage and data.js carries bit identical PV values for the
+// two arms on all four.
+const PV_AREA_DATA = {
+  "RC-MR2":   5328.8,
+  "RC-MR3":   7993.3,
+  "RC-HR1":   4045.2,
+  "RC-HR2":   2761.6,
+  "RS-I2":    8302.5,
+  "RS-I4":    7004.4,
+  "MU-C1":    7841.0,
+  "MU-C2":    8626.7,
+  "MU-U1":    7236.7,
+  "MU-L":     3950.9,
+  "MU-S1":    8158.0,
+  "MU-S2":    6192.2,
+  "MU-W":     4495.5,
+  "MU-W2":    6488.8,
+  "MU-HC":    5780.5,
+  "CC-S1":    4393.1,
+  "CC-S2":    3095.0,
+  "CC-B":     6721.0,
+  "CC-E1":    6706.7,
+  "CC-E2":    6813.9,
+  "CC-E3":    7687.0,
+  "CC-FD1":   5990.4,
+  "CC-FD2":   6098.6,
+  "CC-FD3":   5944.4,
+  "IC-DE":    4305.5,
+  "IC-DC":    3782.9
+};
+
 // Export for use in app.js
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { CONCEPTS, NEIGHBOURHOODS, BUILDING_IMAGES, ENERGY_COLORS, ENVELOPE_ENERGY_DATA, getEnergyData, ENERGY_STATUS_IMAGES, EV_V2G_DATA, LPV_DATA, PV_GENERATION_DATA, GFA_DATA, CONDITIONED_AREA_DATA };
+  module.exports = { CONCEPTS, NEIGHBOURHOODS, BUILDING_IMAGES, ENERGY_COLORS, ENVELOPE_ENERGY_DATA, getEnergyData, ENERGY_STATUS_IMAGES, EV_V2G_DATA, LPV_DATA, PV_GENERATION_DATA, GFA_DATA, CONDITIONED_AREA_DATA, PV_AREA_DATA };
 }

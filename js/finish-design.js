@@ -1,6 +1,6 @@
 /**
  * finish-design.js
- * Consolidated Design Summary Logic
+ * Scenario summary logic
  * Loads all choices from sessionStorage and database constants and populates the dashboard.
  */
 
@@ -174,54 +174,29 @@ function resolveEnvelopeAndScenario(code) {
     const selections = JSON.parse(
         sessionStorage.getItem('energySelections') || '{"load":[], "demand":[]}'
     );
-    const loadSelections = selections.load || [];
-    const demandSelections = selections.demand || [];
 
-    let refEnvelope = envelope;
-    let baseLevel = 'DEFAULT';
-    if (envelope.startsWith('high-performance-')) {
-        baseLevel = 'EEM1';
-        if (envelope === 'high-performance-necb') {
-            refEnvelope = 'necb-2017';
-        } else if (envelope === 'high-performance-ashrae') {
-            refEnvelope = 'ashrae';
-        }
-    }
-
-    let scenario;
-    if (loadSelections.includes('thermal_load')) {
-        const hasIal = !!(ENVELOPE_ENERGY_DATA &&
-                         ENVELOPE_ENERGY_DATA[refEnvelope] &&
-                         ENVELOPE_ENERGY_DATA[refEnvelope][code] &&
-                         ENVELOPE_ENERGY_DATA[refEnvelope][code]['IAL']);
-        scenario = hasIal ? 'IAL' : (baseLevel === 'EEM1' ? 'EEM1' : 'DEFAULT');
-    } else {
-        const hasHP = demandSelections.includes('cop4') ||
-                      demandSelections.includes('cop3.5') ||
-                      demandSelections.includes('cop3');
-        const hasDhw = demandSelections.includes('dhw');
-        const hasAppliances = demandSelections.includes('appliances');
-
-        if (hasHP) {
-            if (hasDhw && hasAppliances) scenario = 'EEM4';
-            else if (hasDhw) scenario = 'EEM3';
-            else scenario = 'EEM2';
-        } else {
-            scenario = (baseLevel === 'EEM1') ? 'EEM1' : 'DEFAULT';
-        }
-    }
-
-    const energyObject = (ENVELOPE_ENERGY_DATA &&
-                          ENVELOPE_ENERGY_DATA[refEnvelope] &&
-                          ENVELOPE_ENERGY_DATA[refEnvelope][code])
-        ? ENVELOPE_ENERGY_DATA[refEnvelope][code][scenario]
-        : null;
+    // ComparisonMode v2, P1. The rung rule lives in config.js and nowhere else,
+    // so this page and comparison.html can no longer drift apart. Behaviour is
+    // unchanged here: this page already gated every rung on the heat pump.
+    const r = LMN_CONFIG.resolveScenarioKey({
+        envelopeKey: envelope,
+        nuCode: code,
+        load: selections.load || [],
+        demand: selections.demand || []
+    });
 
     // STAGE-08. refEnvelope and baseLevel are returned as well, because the
     // baseline column of the comparison table is the same neighbourhood in the
     // same climate at the rung the arm starts from: DEFAULT for the standard
     // arms, EEM1 for the high performance ones, which have no DEFAULT row.
-    return { envelope, refEnvelope, baseLevel, scenario, energyObject };
+    return {
+        envelope: envelope,
+        refEnvelope: r.refEnvelope,
+        baseLevel: r.baseLevel,
+        scenario: r.scenario,
+        energyObject: r.energyObject,
+        ladderNote: r.ladderNote
+    };
 }
 
 // =============================================================
@@ -230,12 +205,17 @@ function resolveEnvelopeAndScenario(code) {
 
 /**
  * Item 4, D8.1. A metric that was not selected is absent, not zero.
+ *
+ * CHV, 2026-08-24: the reference and change cells are drawn only when a
+ * reference case has been chosen. hasRef is the flag, and it is the same flag
+ * that shows or hides the two header cells, so a row can never carry a cell
+ * that has no header.
  */
-function fsRow(label, baseline, selected, change, status) {
+function fsRow(label, baseline, selected, change, status, hasRef) {
     return '<tr><td class="label-cell">' + label + '</td>'
-        + '<td class="value-cell">' + baseline + '</td>'
+        + (hasRef ? '<td class="value-cell">' + baseline + '</td>' : '')
         + '<td class="value-cell">' + selected + '</td>'
-        + '<td class="value-cell">' + change + '</td>'
+        + (hasRef ? '<td class="value-cell">' + change + '</td>' : '')
         + '<td class="value-cell">' + status + '</td></tr>';
 }
 
@@ -260,35 +240,54 @@ function fsBuildComparison(code, ctx) {
     const out = { metrics: [] };
     const NOT_SELECTED = 'Not selected';
 
+    // CHV, 2026-08-24. Nothing is compared until a reference case is chosen.
+    // ctx.reference is null when none is, and every row below then carries the
+    // selected value alone.
+    const ref = ctx.reference;
+    const hasRef = !!ref;
+
     const condArea = (typeof CONDITIONED_AREA_DATA !== 'undefined') ? CONDITIONED_AREA_DATA[code] : null;
-    const baseObj = (ENVELOPE_ENERGY_DATA[ctx.refEnvelope] && ENVELOPE_ENERGY_DATA[ctx.refEnvelope][code])
-        ? ENVELOPE_ENERGY_DATA[ctx.refEnvelope][code][ctx.baseLevel] : null;
+    const baseObj = (hasRef && ENVELOPE_ENERGY_DATA[ref.envelope] && ENVELOPE_ENERGY_DATA[ref.envelope][code])
+        ? ENVELOPE_ENERGY_DATA[ref.envelope][code][ref.level] : null;
     const selObj = ctx.energyObject;
 
+    // The two header cells follow the same flag, so a row can never carry a
+    // cell with no header above it.
+    const thRef = document.getElementById('fs-th-reference');
+    const thChange = document.getElementById('fs-th-change');
+    if (thRef) { thRef.hidden = !hasRef; thRef.textContent = hasRef ? ref.label : 'Reference case'; }
+    if (thChange) { thChange.hidden = !hasRef; }
+
     // 1. Energy use intensity. Always available, always simulation backed.
-    if (baseObj && selObj && baseObj.total != null && selObj.total != null) {
-        const d = selObj.total - baseObj.total;
-        const pct = baseObj.total ? (d / baseObj.total) * 100 : null;
+    if (selObj && selObj.total != null) {
+        const d = (hasRef && baseObj && baseObj.total != null) ? selObj.total - baseObj.total : null;
+        const pct = (d !== null && baseObj.total) ? (d / baseObj.total) * 100 : null;
         rows.push(fsRow(
             'Energy use intensity (' + LMN_CONFIG.units.euiCompact + ')',
-            fsNum(baseObj.total, 1), fsNum(selObj.total, 1),
-            fsSigned(d, 1, '') + (pct === null ? '' : ' (' + fsSigned(pct, 1, '%') + ')'),
-            'Simulation-backed'));
+            (baseObj && baseObj.total != null) ? fsNum(baseObj.total, 1) : NOT_SELECTED,
+            fsNum(selObj.total, 1),
+            (d === null) ? NOT_SELECTED
+                : fsSigned(d, 1, '') + (pct === null ? '' : ' (' + fsSigned(pct, 1, '%') + ')'),
+            'Simulation-backed', hasRef));
         out.metrics.push({ name: 'Energy use intensity', unit: LMN_CONFIG.units.eui,
-            baseline: baseObj.total, selected: selObj.total, change: d, status: 'Simulation-backed' });
+            baseline: (hasRef && baseObj) ? baseObj.total : null,
+            selected: selObj.total, change: d, status: 'Simulation-backed' });
     }
 
     // 2. Rooftop PV. Only when the visitor asked for it. The absolute total is
     // the intensity times the heated and cooled area, DBG-029, never the gross.
-    if (ctx.pvSelected && baseObj && selObj && condArea) {
-        const b = (baseObj.pv || 0) * condArea / 1000;
+    if (ctx.pvSelected && selObj && condArea) {
+        const b = (hasRef && baseObj) ? (baseObj.pv || 0) * condArea / 1000 : null;
         const s = (selObj.pv || 0) * condArea / 1000;
         rows.push(fsRow('Rooftop PV generation (MWh/yr)',
-            fsNum(b, 1), fsNum(s, 1), fsSigned(s - b, 1, ''), 'Simulation-backed'));
+            (b === null) ? NOT_SELECTED : fsNum(b, 1),
+            fsNum(s, 1),
+            (b === null) ? NOT_SELECTED : fsSigned(s - b, 1, ''),
+            'Simulation-backed', hasRef));
         out.metrics.push({ name: 'Rooftop PV generation', unit: 'MWh/yr',
-            baseline: b, selected: s, change: s - b, status: 'Simulation-backed' });
+            baseline: b, selected: s, change: (b === null) ? null : s - b, status: 'Simulation-backed' });
     } else {
-        rows.push(fsRow('Rooftop PV generation (MWh/yr)', NOT_SELECTED, NOT_SELECTED, '—', '—'));
+        rows.push(fsRow('Rooftop PV generation (MWh/yr)', NOT_SELECTED, NOT_SELECTED, '—', '—', hasRef));
     }
 
     // 3. Net mobility grid demand. The baseline neighbourhood has no EV fleet,
@@ -296,32 +295,71 @@ function fsBuildComparison(code, ctx) {
     if (ctx.evData) {
         const s = ctx.evData.netEnergyBalance_kWh;
         rows.push(fsRow(LMN_CONFIG.ev.netGridDemandTotalLabel + ' (' + LMN_CONFIG.ev.netGridDemandTotalUnit + ')',
-            '0', fsNum(s, 0), fsSigned(s, 0, ''), 'Preliminary'));
+            '0', fsNum(s, 0), fsSigned(s, 0, ''), 'Preliminary', hasRef));
         out.metrics.push({ name: LMN_CONFIG.ev.netGridDemandTotalLabel, unit: LMN_CONFIG.ev.netGridDemandTotalUnit,
-            baseline: 0, selected: s, change: s, status: 'Preliminary' });
+            baseline: hasRef ? 0 : null, selected: s, change: hasRef ? s : null, status: 'Preliminary' });
     } else {
-        rows.push(fsRow(LMN_CONFIG.ev.netGridDemandTotalLabel, NOT_SELECTED, NOT_SELECTED, '—', '—'));
+        rows.push(fsRow(LMN_CONFIG.ev.netGridDemandTotalLabel, NOT_SELECTED, NOT_SELECTED, '—', '—', hasRef));
     }
 
     // 4. Landscape PV. Same reasoning: no array in the baseline.
     if (ctx.lpvSelected) {
         const s = LMN_CONFIG.lpvChain().generationMWhYr;
         rows.push(fsRow('Landscape PV generation (MWh/yr)',
-            '0', fsNum(s, 1), fsSigned(s, 1, ''), 'Preliminary'));
+            '0', fsNum(s, 1), fsSigned(s, 1, ''), 'Preliminary', hasRef));
         out.metrics.push({ name: 'Landscape PV generation', unit: 'MWh/yr',
-            baseline: 0, selected: s, change: s, status: 'Preliminary' });
+            baseline: hasRef ? 0 : null, selected: s, change: hasRef ? s : null, status: 'Preliminary' });
     } else {
-        rows.push(fsRow('Landscape PV generation (MWh/yr)', NOT_SELECTED, NOT_SELECTED, '—', '—'));
+        rows.push(fsRow('Landscape PV generation (MWh/yr)', NOT_SELECTED, NOT_SELECTED, '—', '—', hasRef));
     }
 
     const body = document.getElementById('fs-comparison-body');
     if (body) body.innerHTML = rows.join('');
 
-    setText('fs-baseline-note', 'Baseline: ' + LMN_CONFIG.eemLabel(ctx.baseLevel)
-        + ' in ' + LMN_CONFIG.envelopeLabel(ctx.envelope)
-        + '. Intensities are ' + LMN_CONFIG.euiBasis() + '.');
+    // CHV, 2026-08-24. The note names the reference case the reader chose, and
+    // says plainly that nothing is compared when they have chosen none. It
+    // never names a reference they did not pick.
+    setText('fs-baseline-note', (hasRef
+        ? 'Reference case: ' + ref.label + ', ' + LMN_CONFIG.eemLabel(ref.level)
+          + ' in ' + LMN_CONFIG.envelopeLabel(ref.envelope) + '. ' + ref.note
+        : LMN_CONFIG.referenceCase.noneNote)
+        + ' Intensities are ' + LMN_CONFIG.euiBasis() + '.');
 
     return out;
+}
+
+/**
+ * CHV, 2026-08-24. The reference case chooser, the same control the Layer 2
+ * breakdown carries, built from the same config so the two pages cannot offer
+ * different options or different explanations.
+ *
+ * A change reloads the page rather than re-rendering it in place. This page
+ * draws nine blocks from one context object, and rebuilding that context by
+ * hand here is how the two would drift apart. The choice is in sessionStorage
+ * before the reload, so it survives it.
+ */
+function fsWireReferenceChooser(code, envelope) {
+    const host = document.getElementById('fs-reference-chooser');
+    if (!host || typeof LMN_CONFIG === 'undefined') return;
+
+    const current = LMN_CONFIG.selectedReferenceKey(envelope, window.sessionStorage);
+    host.innerHTML = LMN_CONFIG.referenceChooserHtml(envelope, current);
+
+    const inputs = host.querySelectorAll('input[name="reference-case"]');
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('change', function (ev) {
+            try {
+                window.sessionStorage.setItem(
+                    LMN_CONFIG.referenceCase.storageKey, ev.target.value);
+            } catch (e) {
+                // A blocked session store leaves the page as it is rather than
+                // reloading into an unchanged state, which would read as a
+                // broken control. Nothing on screen is wrong either way.
+                return;
+            }
+            window.location.reload();
+        });
+    }
 }
 
 /**
@@ -333,16 +371,26 @@ function fsMeaning(cmp, ctx) {
     const eui = cmp.metrics.filter(function (m) { return m.name === 'Energy use intensity'; })[0];
     const pv = cmp.metrics.filter(function (m) { return m.name === 'Rooftop PV generation'; })[0];
 
-    if (eui) {
+    // CHV, 2026-08-24. A sentence that says "the measures lower intensity FROM
+    // x TO y" is a comparison, so it is written only when the reader has chosen
+    // what x is. With no reference case the sentence states the result alone.
+    const refName = ctx.reference ? ctx.reference.label : null;
+    if (eui && (eui.change === null || eui.baseline === null)) {
+        parts.push('The selected scenario uses ' + fsNum(eui.selected, 1) + ' '
+            + LMN_CONFIG.units.euiCompact + '. No reference case is selected, so nothing is compared to it.');
+    } else if (eui) {
         if (eui.change < 0) {
-            parts.push('The selected measures lower energy use intensity from ' + fsNum(eui.baseline, 1)
+            parts.push('Against the ' + refName + ', the selected measures lower energy use intensity from '
+                + fsNum(eui.baseline, 1)
                 + ' to ' + fsNum(eui.selected, 1) + ' ' + LMN_CONFIG.units.euiCompact + ', a fall of '
                 + fsNum(Math.abs(eui.change / eui.baseline) * 100, 1) + ' per cent.');
         } else if (eui.change > 0) {
-            parts.push('The selected measures raise energy use intensity from ' + fsNum(eui.baseline, 1)
+            parts.push('Against the ' + refName + ', the selected measures raise energy use intensity from '
+                + fsNum(eui.baseline, 1)
                 + ' to ' + fsNum(eui.selected, 1) + ' ' + LMN_CONFIG.units.euiCompact + '.');
         } else {
-            parts.push('The selected measures leave energy use intensity at ' + fsNum(eui.baseline, 1)
+            parts.push('Against the ' + refName + ', the selected measures leave energy use intensity at '
+                + fsNum(eui.baseline, 1)
                 + ' ' + LMN_CONFIG.units.euiCompact + '.');
         }
     }
@@ -414,10 +462,13 @@ function fsAssumptions(code, ctx) {
         // CHV, 2026-08-17, points 5 and 7. The four PV parameters that used to
         // be rows of the Layer 2 card above, and the arithmetic behind the two
         // efficiency figures she asked about.
-        ['Rooftop PV', group.surface + ', module efficiency ' + group.moduleEfficiencyLabel
+        ['Rooftop PV', group.surface + ', ' + group.moduleEfficiencyLabel
             + ', mounting ' + group.mounting + ', tilt ' + group.tiltLabel
             + ', ground coverage ratio ' + (group.gcrApplies ? LMN_CONFIG.pv.gcr : 'does not apply on a pitched roof')],
-        ['PV module efficiency, both roof groups', eff.sameTechnology + ' ' + eff.pitched + ' ' + eff.flat + ' ' + eff.shared],
+        // DBG-036, 2026-08-24. The panel efficiency that produced the results,
+        // then the two figures that did not, each with its active fraction.
+        ['PV panel efficiency, both roof groups', eff.sameTechnology + ' ' + eff.pitched + ' ' + eff.flat + ' ' + eff.shared],
+        ['PV, the two retired efficiency conventions', eff.retired + ' ' + eff.correction + ' ' + eff.preliminary],
         // CHV, 2026-08-17, point 8: directly simulated against derived, for
         // every result this page repeats.
         ['Directly simulated on this page', prov.results.eui.note + ' The PV generation intensity is on the same footing.'],
@@ -465,7 +516,7 @@ function fsWireExport(code, ctx, cmp, meaning, constraint, assumptions) {
 
     exportBtn.addEventListener('click', function () {
         const payload = {
-            tool: 'LMN tool, Layered Modular Neighbourhood',
+            tool: LMN_CONFIG.productName,
             exported: new Date().toISOString(),
             scenario: {
                 neighbourhood: code,
@@ -476,7 +527,12 @@ function fsWireExport(code, ctx, cmp, meaning, constraint, assumptions) {
                 mobility: ctx.mobilityText,
                 greenInfrastructure: ctx.greenText
             },
-            baselineDefinition: LMN_CONFIG.eemLabel(ctx.baseLevel) + ' in ' + LMN_CONFIG.envelopeLabel(ctx.envelope),
+            referenceCase: ctx.reference
+                ? { key: ctx.reference.key, label: ctx.reference.label,
+                    envelope: ctx.reference.envelope, level: ctx.reference.level,
+                    definition: LMN_CONFIG.eemLabel(ctx.reference.level) + ' in ' + LMN_CONFIG.envelopeLabel(ctx.reference.envelope) }
+                : { key: LMN_CONFIG.referenceCase.noneKey, label: LMN_CONFIG.referenceCase.noneLabel,
+                    definition: LMN_CONFIG.referenceCase.noneNote },
             metrics: cmp.metrics,
             whatThisMeans: meaning,
             mainConstraint: constraint,
@@ -529,6 +585,12 @@ function initSummaryPage() {
     const backBtn = document.getElementById('back-step-btn');
     if (backBtn) {
         backBtn.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
+    }
+
+    // Set Comparison Mode button href
+    const compBtn = document.getElementById('comparison-btn');
+    if (compBtn) {
+        compBtn.href = `comparison.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
     }
 
     // Lookup neighbourhood
@@ -846,8 +908,14 @@ function initSummaryPage() {
     const ropValue = (!ropHidden && energyObject && energyObject.total && energyObject.pv != null)
         ? (energyObject.pv / energyObject.total) : null;
 
+    // CHV, 2026-08-24. The reference case is a choice, and its default is
+    // none. refEnvelope and baseLevel are kept in ctx because the export and
+    // the constraint text still describe the arm the scenario sits in, which is
+    // a different thing from what the reader chose to compare against.
+    const referenceKey = LMN_CONFIG.selectedReferenceKey(envelope, window.sessionStorage);
     const ctx = {
         envelope, refEnvelope, baseLevel, scenario, energyObject,
+        reference: LMN_CONFIG.resolveReference(envelope, referenceKey),
         pvSelected, lpvSelected, evData, ropValue, mobilityText, greenText
     };
 
@@ -856,6 +924,7 @@ function initSummaryPage() {
     const constraint = fsConstraint(ctx);
     const assumptions = fsAssumptions(code, ctx);
     fsWireExport(code, ctx, cmp, meaning, constraint, assumptions);
+    fsWireReferenceChooser(code, envelope);
 
     // -------------------------------------------------------------
     // SIDEBAR

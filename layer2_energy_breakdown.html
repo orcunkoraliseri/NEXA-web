@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Energy demand breakdown visualization for neighbourhood configurations.">
-    <title>Energy Breakdown | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=12">
+    <title>Energy Breakdown | LMN V1, Layered Modular Neighbourhood Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=14">
 </head>
 
 <body>
@@ -50,8 +50,25 @@
                     <p id="energy-basis-note" class="energy-basis-note info-box"></p>
                 </header>
 
-                <!-- Task 3.2, D3.5: baseline, selected and change, always
-                     visible together. Filled by js/energy.js. -->
+
+                <!-- CHV, 2026-08-24. The terminology legend, written by
+                     LMN_CONFIG.terminologyLegendHtml from
+                     LMN_CONFIG.abbreviations. The page carries no copy of the
+                     four definitions. -->
+                <div class="js-terminology-legend"></div>
+
+                <!-- CHV, 2026-08-24: "The reference/comparison case should be
+                     clearly selected or defined rather than assumed." The
+                     chooser is written by js/energy.js from
+                     LMN_CONFIG.referenceChooserHtml, so the page carries no
+                     copy of the options or of their explanations. It ships with
+                     nothing selected, which is what removes the automatic
+                     comparison. -->
+                <div id="reference-chooser"></div>
+
+                <!-- Task 3.2, D3.5, then CHV 2026-08-24. The reference row and
+                     the change row are drawn only once a reference case has
+                     been chosen. Filled by js/energy.js. -->
                 <div id="baseline-comparison" class="baseline-comparison"></div>
 
                 <!-- Treemap Container -->
@@ -77,10 +94,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=12"></script>
-    <script src="js/data.js?v=12"></script>
-    <script src="js/sidebar.js?v=12"></script>
-    <script src="js/energy.js?v=12"></script>
+    <script src="js/config.js?v=14"></script>
+    <script src="js/data.js?v=14"></script>
+    <script src="js/sidebar.js?v=14"></script>
+    <script src="js/energy.js?v=14"></script>
 </body>
 
 </html>

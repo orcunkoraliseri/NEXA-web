@@ -282,7 +282,7 @@ function initEnergySelectionPage() {
     if (!envelope) {
         const main = document.querySelector('main.container') || document.body;
         main.innerHTML = LMN_CONFIG.noClimateNoticeHtml();
-        titleElement.textContent = 'Layer 2: Energy Design';
+        titleElement.textContent = 'Layer 2: Energy scenario';
         return;
     }
 
@@ -296,14 +296,14 @@ function initEnergySelectionPage() {
         const main = document.querySelector('main.container') || document.body;
         main.innerHTML = gapNotice +
             '<p class="info-box"><a href="layer1_output.html">Back to the neighbourhood table</a></p>';
-        titleElement.textContent = 'Layer 2: Energy Design';
+        titleElement.textContent = 'Layer 2: Energy scenario';
         return;
     }
 
     if (neighbourhoodCode) {
         // Update title with neighbourhood code and envelope standard
         const envName = envelopeNames[envelope] || envelope;
-        titleElement.textContent = `Layer 2: Energy Design for ${neighbourhoodCode} (${envName})`;
+        titleElement.textContent = `Layer 2: Energy scenario for ${neighbourhoodCode} (${envName})`;
 
         // Update back button to maintain context (go back to selection page)
         if (backBtn) {

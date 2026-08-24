@@ -1,5 +1,5 @@
 /**
- * Neighbourhood Design Interface - Application Logic
+ * LMN V1, Layered Modular Neighbourhood Tool - Application Logic
  * Handles parameter selection and navigation
  */
 
@@ -680,9 +680,29 @@ function renderOutputTable(filters) {
 }
 
 /**
- * DBG-027, task 3.12. Print the reason for every neighbourhood withheld from
- * this climate, under the table. A withheld case that is not explained looks
- * like a filter result, which is the failure mode the release rule targets.
+ * DBG-027, task 3.12, then CHV 2026-08-13, then CHV 2026-08-24.
+ *
+ * WHAT THIS PRINTS NOW, AND WHAT IT STOPPED PRINTING.
+ *
+ * It prints one thing: the stop for a climate arm that is not published at all
+ * and was reached anyway, by a typed address or by a session stored before the
+ * arm was withdrawn. That case shows an empty table, and an empty table with no
+ * note reads as a broken filter.
+ *
+ * It no longer prints the per neighbourhood boxes under the table. CHV asked
+ * for those on 2026-08-13 and removed them on 2026-08-24, in her words: "The
+ * Results under revision message currently shown at the bottom should not
+ * remain in the final published V1. It is fine internally during development,
+ * but those cases should either be corrected or disabled before publication."
+ * Correcting them is five upstream campaigns and is not available to us, so
+ * they are disabled.
+ *
+ * THE GATE IS NOT TOUCHED. LMN_CONFIG.dataGapFor and dataGapNotice are
+ * unchanged, the withheld pairs are still absent from the table, and a typed
+ * address for one of them is still stopped with its reason on all four result
+ * pages. Session 23's rule: the reason moves to the point of the stop, and is
+ * not narrated in a flow where the visitor never sees the case.
+ *
  * @param {Object} filters - The active filter selections
  */
 function renderDataGapNotes(filters) {
@@ -703,50 +723,9 @@ function renderDataGapNotes(filters) {
         return;
     }
 
-    const gaps = LMN_CONFIG.dataGaps.filter(g => g.climates.indexOf(filters.envelope) !== -1);
-    if (gaps.length === 0) return;
-
-    // One box per reason, not one box per neighbourhood. CHV's decision of
-    // 2026-08-13 withholds five neighbourhoods at once in five climates, and
-    // five copies of one sentence is not an explanation, it is noise that
-    // gets skipped. Neighbourhoods sharing a reason are named together.
-    const groups = [];
-    gaps.forEach(gap => {
-        const existing = groups.find(group => group.reason === gap.reason);
-        if (existing) { existing.nus.push(gap.nu); return; }
-        groups.push({
-            label: gap.label || LMN_CONFIG.availability.notAvailableLabel,
-            reason: gap.reason,
-            nus: [gap.nu]
-        });
-    });
-
-    const climate = LMN_CONFIG.envelopeLabel(filters.envelope);
-
-    // The box, not a loose line: CHV asked for the reason to be stated, and
-    // session 16 settled what a stated reason looks like on this site.
-    holder.innerHTML = groups.map(group => {
-        const names = joinNuNames(group.nus);
-        const verb = group.nus.length > 1 ? 'are' : 'is';
-        return `
-    <div class="info-box">
-      <div class="info-box-body">
-        <p class="info-box-title">${group.label}</p>
-        <p class="info-box-line"><strong>${names}</strong> ${verb} not shown for ${climate}. ${group.reason}</p>
-      </div>
-    </div>`;
-    }).join('');
-}
-
-/**
- * "RC-D", "RC-D and RC-T", "RC-D, RC-ML and RC-T". Used only by the note
- * above, and kept here rather than in config because it is presentation.
- * @param {string[]} names - The neighbourhood codes
- * @returns {string} The codes as one readable list
- */
-function joinNuNames(names) {
-    if (names.length === 1) return names[0];
-    return names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
+    // CHV, 2026-08-24. Nothing further is printed here. The withheld pairs are
+    // simply not offered, and their reason is written at the point of the stop
+    // rather than under a table where the visitor never sees the case.
 }
 
 /**

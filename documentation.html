@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LMN &mdash; References &amp; Methodology</title>
-    <link rel="stylesheet" href="css/styles.css?v=12" />
+    <title>References &amp; Methodology | LMN V1, Layered Modular Neighbourhood Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=14" />
     <style>
         /* ===== Documentation page helpers (uses existing design tokens) ===== */
         .doc-page {
@@ -374,7 +374,7 @@
 
         <!-- Hero -->
         <div class="doc-hero">
-            <h1>LMN &mdash; References &amp; Methodology</h1>
+            <h1>LMN V1 &mdash; References &amp; Methodology</h1>
             <p>Standards, assumptions, methodologies, and references behind the LMN neighbourhood-energy tool.</p>
         </div>
 
@@ -403,7 +403,7 @@
                 <li><a href="#sec-green">Layer 4: Green Infrastructure / LPV</a></li>
                 <li><a href="#sec-resizing">Resizing Methodology</a></li>
                 <li><a href="#sec-validation">Validation Summary</a></li>
-                <li><a href="#sec-vintage-1983">1983 Vintage Envelope (Quebec)</a></li>
+                <li><a href="#sec-vintage-1983">1983 Quebec Reference Envelope</a></li>
                 <li><a href="#sec-limitations">Limitations</a></li>
                 <li><a href="#sec-references">Publications &amp; References</a></li>
             </ol>
@@ -417,9 +417,52 @@
                 neighbourhood energy explorer. The user composes a neighbourhood by typology
                 (Layer 1), then overlays energy demand + generation systems (Layer 2), electric mobility (Layer 3),
                 and green infrastructure (Layer 4). Behind each neighbourhood archetype sits a full EnergyPlus
-                simulation campaign across a ladder of energy-efficiency scenarios, so the user can compare code
-                baselines against progressively deeper retrofits.
+                simulation campaign across a cumulative ladder of energy-efficiency scenarios, so the user can
+                compare a code baseline against each successive measure.
             </p>
+
+            <!-- CHV, 2026-08-24: "Please use the same V1 designation consistently
+                 in the methodology, README, results/export and handover so that
+                 future developments can clearly become V2, etc." -->
+            <h3>What LMN V1 is, and what it is not yet</h3>
+            <p>
+                This release is <strong>LMN V1</strong>. Everything described on this page is what
+                V1 contains. Anything not listed here is not in V1, and later work becomes V2.
+            </p>
+            <table class="doc-table">
+                <thead><tr><th>In LMN V1</th><th>Not in V1</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>35 neighbourhood units across the publicly available climate
+                                    zones listed in section C.</li>
+                                <li>A cumulative energy scenario ladder: Baseline, HPerf,
+                                    HPerf&nbsp;+&nbsp;Space&nbsp;HP, HPerf&nbsp;+&nbsp;Space&nbsp;HP&nbsp;+&nbsp;HPWH,
+                                    HPerf&nbsp;+&nbsp;Space&nbsp;HP&nbsp;+&nbsp;HPWH&nbsp;+&nbsp;EEM.</li>
+                                <li>Rooftop photovoltaics, marked Preliminary.</li>
+                                <li>Electric mobility and V2G, as a stated assumption chain rather
+                                    than a building simulation.</li>
+                                <li>Green infrastructure and landscape PV, on the same footing.</li>
+                                <li>The 1983 Quebec reference envelope, Montreal only.</li>
+                                <li>CSV export of the scenario summary.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Any optimisation or ranking of scenarios.</li>
+                                <li>Cost, carbon or grid-interaction results.</li>
+                                <li>An earlier-period reference envelope outside Montreal.</li>
+                                <li>Neighbourhood-level facade photovoltaics: the upstream study is
+                                    three single buildings in Montreal only.</li>
+                                <li>Snow cover on photovoltaic arrays, which is stated as a
+                                    limitation rather than modelled.</li>
+                                <li>Any climate not listed as publicly available in section C.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h3>Intended use</h3>
             <p>
@@ -438,13 +481,26 @@
 
             <h3>Coverage, and what each status word means</h3>
             <p>
-                Seven climate arms are exposed and all seven are real simulation campaigns:
-                <strong>Vancouver (zone 4), Toronto / Ottawa (zone 5), Montr&eacute;al (zone 6),
-                Winnipeg (zone 7A), Fort McMurray (zone 7B), Chisasibi (zone 8)</strong>, each on
-                NECB 2017, and one <strong>ASHRAE 90.1</strong> arm. Each carries 35 neighbourhood
-                units and a five rung scenario ladder, and each has a high performance twin.
-                Montr&eacute;al additionally carries a 1983 vintage arm. The exceptions to that
-                coverage are listed in the limitations chapter and are not silent.
+                <strong>Five climate arms are published in LMN V1:</strong>
+                <strong>Vancouver (zone 4), Toronto (zone 5), Montr&eacute;al (zone 6),
+                Winnipeg (zone 7A), Fort McMurray (zone 7B)</strong>, each on NECB 2017. Each
+                carries 35 neighbourhood units and a five rung scenario ladder, and each has a
+                high performance twin. Montr&eacute;al additionally carries the 1983 Quebec
+                reference envelope. The exceptions to that coverage are listed in the limitations
+                chapter and are not silent.
+            </p>
+            <!-- CHV, 2026-08-17 point 1 and 2026-08-24: two arms were simulated
+                 and are not published. Her sentence on Zone 8 permits keeping it
+                 in the technical documentation, so the register in section J
+                 keeps both rows and marks them. -->
+            <p>
+                <strong>Two further arms were simulated and are not published in V1.</strong>
+                <strong>NECB Zone 8 (Chisasibi)</strong> remains part of the research database and
+                of the technical register in section J, and its quantitative results are not
+                exposed in the public tool at this stage. The <strong>ASHRAE 90.1</strong> arm is
+                withdrawn from the climate selection: it is a United States reference case, run
+                with United States prototypes on a United States weather file, and it is not a
+                Canadian climate.
             </p>
             <p>Four words, and no others, describe the maturity of a number anywhere in this tool:</p>
             <ul>
@@ -477,7 +533,7 @@
                     <li>
                         <a href="Content/References%20%26%20Methodology/Reports/LMN1983_NU_validation_all35.pdf" target="_blank" class="report-link">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
-                            1983 Vintage Validation Report &mdash; All 35 NUs (PDF)
+                            1983 Quebec Reference Envelope Validation Report &mdash; All 35 NUs (PDF)
                         </a>
                     </li>
                 </ul>
@@ -520,12 +576,15 @@
                     array tilt = roof pitch.</li>
             </ul>
 
-            <h3>Assumptions, and why two efficiency figures both belong here</h3>
-            <p>
-                The array assumptions are a property of the <strong>roof</strong>, not of the
-                neighbourhood. There are two roof groups, and they carry different figures because
-                the two figures measure different things. Common to both: DC&rarr;AC system losses
-                14%, inverter efficiency 96%, azimuth = world south.
+            <h3>Assumptions: one panel, two mountings, and two figures that are not ours</h3>
+            <p class="doc-note">
+                <strong>Preliminary.</strong> Every photovoltaic number published in this tool was
+                produced by the <strong>Tier&nbsp;3</strong> injector at a <strong>23.0% panel
+                efficiency</strong>. The array assumptions are a property of the
+                <strong>roof</strong>, not of the neighbourhood, and what changes between the two
+                roof groups is the mounting and the fraction of the surface that carries cells, not
+                the panel. Common to both: DC&rarr;AC system losses 14%, inverter efficiency 96%,
+                azimuth = world south.
             </p>
             <table class="doc-table">
                 <thead>
@@ -535,65 +594,116 @@
                     <tr><td><strong>Neighbourhoods</strong></td>
                         <td>31 of 35</td>
                         <td>4 of 35: RC-R, RC-D, RC-ML, RC-T</td></tr>
-                    <tr><td><strong>Efficiency</strong></td>
-                        <td><strong>18.65%</strong> module efficiency, equivalent to about
-                            200&nbsp;W/m&sup2; of installed power density</td>
-                        <td><strong>20%</strong> of <em>aperture</em> area, with a 0.9 active-area
-                            fraction</td></tr>
+                    <tr><td><strong>Panel efficiency</strong></td>
+                        <td><strong>23.0%</strong></td>
+                        <td><strong>23.0%</strong></td></tr>
+                    <tr><td><strong>Active-area fraction</strong></td>
+                        <td><strong>1.0</strong>: the cells fill the rack</td>
+                        <td><strong>0.85</strong> of the south-facing roof face</td></tr>
                     <tr><td><strong>Mounting</strong></td>
-                        <td>Fixed Open Rack, 45&deg; tilt</td>
+                        <td>Fixed Open Rack, 45&deg; tilt. The rack area is
+                            <code>&Sigma;roof area &times; 0.40 &divide; cos&nbsp;45&deg;</code></td>
                         <td>Flush on the south-facing face, tilt = roof pitch</td></tr>
                     <tr><td><strong>Ground-coverage ratio</strong></td>
                         <td>0.40</td>
                         <td>Does not apply: there is no row spacing on a flush array</td></tr>
+                    <tr><td><strong>Source</strong></td>
+                        <td colspan="2"><code>BEM_utils/pv_tier3.py</code>, lines 50, 51, 480&ndash;485,
+                            617&ndash;623 and 651; <code>main_BEM.py</code> line 757</td></tr>
                 </tbody>
             </table>
-            <!-- CHV, 2026-08-17, point 5: "If the same PV technology is used, I
-                 would expect one consistent module efficiency; roof differences
-                 should normally be represented through available area, tilt,
-                 orientation, active fraction, GCR, etc. Please show me clearly
-                 what each efficiency represents and the formula/assumptions
-                 behind each." Rechecked against both sources on 2026-08-17. She
-                 is right about the mechanism, and the arithmetic is worth
-                 printing because it is what makes the two figures agree. -->
+            <!-- CHV, 2026-08-17 point 5, reopened 2026-08-24 point 3: "Please show
+                 me the exact original model/source for both assumptions and clarify
+                 whether these are two different definitions applied to different
+                 reference areas or two legacy modelling conventions." Measured in
+                 the upstream code on 2026-08-24, DBG-037: they are two legacy
+                 conventions applied to two different reference areas, and the model
+                 that produced the published results is a third one. All three are
+                 printed below so the reader can see which is which. -->
             <div class="doc-note">
                 <p>
-                    <strong>The two figures are the same panel, measured against different
-                    areas.</strong> The same module technology is assumed on both roof types. What
-                    differs is the active-area fraction and the area each figure is applied to, not
-                    the panel:
+                    <strong>Three efficiency figures exist upstream. Only one of them produced a
+                    number in this tool.</strong>
                 </p>
-                <ul>
-                    <li><strong>Pitched roof, the four house neighbourhoods.</strong> 20% module
-                        efficiency <em>of aperture area</em>, with a 0.9 active-area fraction.
-                        <code>0.20 &times; 0.9 = 0.18</code>, so <strong>18% of the gross roof
-                        face</strong>. Source: <code>PV_methodology.md</code>, sections 6 and 11.</li>
-                    <li><strong>Flat roof, the other 31 neighbourhoods.</strong> 18.65% <em>cell</em>
-                        efficiency applied to the racked module area. Source:
-                        <code>BEM_utils/pv_tier1.py</code>, line 105,
-                        <code>apply_tier1_pv(cell_efficiency=0.1865)</code>. The same section also
-                        states 200&nbsp;W/m&sup2; of roof area for this group.</li>
-                </ul>
+                <table class="doc-table">
+                    <thead>
+                        <tr><th>Where it lives</th><th>Figure</th><th>What kind</th>
+                            <th>Active fraction behind it</th><th>Produced the published kWh?</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Tier&nbsp;3</strong>, <code>BEM_utils/pv_tier3.py</code></td>
+                            <td><strong>23.0%</strong></td><td><em>panel</em></td>
+                            <td>0.85 pitched, 1.0 on the flat-roof rack</td>
+                            <td><strong>Yes. Every one of them</strong></td></tr>
+                        <tr><td>Tier&nbsp;1, <code>BEM_utils/pv_tier1.py</code> line 105.
+                            Retired 2026-05-29</td>
+                            <td>18.65%</td><td><em>cell</em></td>
+                            <td>0.80, <code>pv_utils.py</code> line 247</td>
+                            <td>No</td></tr>
+                        <tr><td><code>PV_methodology.md</code> lines 131 and 247, a literature row
+                            sourced to NREL and Ladybug Tools</td>
+                            <td>20%</td><td><em>module</em>, of aperture area</td>
+                            <td>0.90</td>
+                            <td>No</td></tr>
+                    </tbody>
+                </table>
                 <p>
-                    18.0% against 18.65% is a difference of 0.65 of a percentage point. Everything
-                    downstream is shared: 14% DC&rarr;AC system losses and 96% inverter efficiency.
-                    Available area, tilt, orientation and, on flat roofs only, the ground-coverage
-                    ratio are what separate the two groups, which is exactly the set of mechanisms
-                    the difference should be carried by.
+                    <strong>So her question has a direct answer: two different definitions applied
+                    to two different reference areas.</strong> 18.65% is the efficiency of the cell
+                    material and it sits behind an 80% active fraction. 20% is the efficiency of a
+                    whole module and it sits behind a 90% active fraction. Comparing the two without
+                    their fractions compares a cell with a module, which is why the difference never
+                    closed. Neither is the model behind the results.
+                </p>
+                <p>
+                    <strong>Put on one basis, per square metre of gross roof surface:</strong>
+                    Tier&nbsp;3 pitched is <code>0.230 &times; 0.85 = 19.55%</code>; Tier&nbsp;1 was
+                    <code>0.1865 &times; 0.80 = 14.92%</code>; the literature row is
+                    <code>0.20 &times; 0.90 = 18.0%</code>. On a flat roof Tier&nbsp;3 is a
+                    nameplate rather than a fraction of the roof:
+                    <code>0.40 &divide; cos&nbsp;45&deg; &times; 0.230 = 0.130&nbsp;kW/m&sup2;</code>
+                    of roof.
                 </p>
             </div>
 
             <p class="doc-note">
+                <strong>Defect DBG-037, closed 2026-08-24. What changed, and what did not.</strong>
+                Until this date the tool published <strong>18.65%</strong> and called it the module
+                efficiency the pipeline uses. That sentence was not true: 18.65% belongs to the
+                Tier&nbsp;1 track, which was retired on 2026-05-29, and the published results were
+                produced by Tier&nbsp;3 at 23.0%. <strong>No simulation was re-run and no energy
+                figure moved.</strong> The generated kWh are unchanged EnergyPlus output; only the
+                assumption printed beside them was corrected. Harmonising the three conventions into
+                one upstream figure would change published results and is left to a later version,
+                which is why this whole block is marked Preliminary.
+            </p>
+            <p class="doc-note">
+                <strong>The total PV array area, and why nine neighbourhoods do not show one.</strong>
+                The array area is not an EnergyPlus result and it is in no results file. It is read
+                back out of the simulation input: every photovoltaic surface injected on the EEM4
+                run of a neighbourhood, summed, each roof face counted at the active fraction the
+                injector gave it, 0.85 on a pitched roof and 1.0 on the flat rack. A number is
+                published only where that array reproduces the generation already on the page, the
+                stored PV intensity times the conditioned area, to within 2%. <strong>Twenty-six of
+                the thirty-five neighbourhoods pass and carry an area. Nine do not and the row is
+                simply absent for them</strong>, rather than filled with an estimate: an array that
+                does not reproduce the generation is not the array the printed generation came from.
+                The nine are all pitched-roof house, townhouse and low-rise forms and all fall short
+                in the same direction, while every flat-roof form reproduces to within 0.35%, which
+                points at the south-facing-slope restriction the pitched-roof rule acquired when
+                Tier&nbsp;1 was retired. It is logged as <code>DBG-038</code> and it is open. The
+                area does not change with the climate: the injected array is identical to the
+                decimal in Montr&eacute;al, Vancouver and Fort McMurray, so it is stored once per
+                neighbourhood.
+            </p>
+            <p class="doc-note">
                 <strong>Decisions D0.2 and D4.3, and defect DBG-013, closed 2026-08-10.</strong>
-                Three efficiency figures were visible in the tool at once and were treated as three
-                versions of one number. They were not. <strong>18.65%</strong> is the cell efficiency
-                the pipeline actually uses on a flat roof and <strong>20% of aperture</strong> is the
-                pitched-roof assumption, so both survive and each is now shown only where it applies.
-                The third, <strong>18.68%</strong>, was stored on all thirty-five neighbourhoods and
-                appears in <em>no</em> upstream source; it is deleted. Separately, the mounting and
-                ground-coverage rows had been reporting the flat-roof set for all thirty-five, so the
-                four house neighbourhoods were described as sitting on racks they do not have. Both
-                sets now live once in <code>js/config.js</code> and every page reads them from there.
+                A fourth figure, <strong>18.68%</strong>, was stored on all thirty-five
+                neighbourhoods and appears in <em>no</em> upstream source; it was deleted.
+                Separately, the mounting and ground-coverage rows had been reporting the flat-roof
+                set for all thirty-five, so the four house neighbourhoods were described as sitting
+                on racks they do not have. Both roof sets now live once in
+                <code>js/config.js</code> and every page reads them from there.
             </p>
 
             <h3>Units &amp; normalization</h3>
@@ -694,7 +804,7 @@
                 <code>100.4&nbsp;kWh/m&sup2;&middot;yr</code> against a demand of
                 <code>107.0&nbsp;kWh/m&sup2;&middot;yr</code>, so
                 <code>RoP = 100.4 &divide; 107.0 = 0.94</code>: the roof covers about 94&nbsp;% of the
-                year. Climb to the top rung, <strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong>,
+                year. Climb to the top rung, <strong>HPerf + Space HP + HPWH + EEM</strong>,
                 and the roof is unchanged while demand falls to
                 <code>60.6</code>, giving <code>RoP = 1.66</code>. This is the general shape of the
                 result: RoP rises because the measures cut demand, not because more panels were added.
@@ -748,7 +858,7 @@
                             <td>NECB (National Energy Code for Buildings)</td>
                             <td>2017</td>
                             <td>Canadian commercial/institutional prescriptive baseline</td>
-                            <td>All Canadian commercial archetypes (CZ6 Montr&eacute;al, CZ7A Calgary)</td>
+                            <td>All Canadian commercial archetypes (CZ6 Montr&eacute;al, CZ7A)</td>
                         </tr>
                         <tr>
                             <td>NBC Section 9.36 (National Building Code)</td>
@@ -830,7 +940,7 @@
                         <td>Toronto, ON &mdash; NECB Zone 5</td>
                         <td><code>CAN_ON_Bishop-Toronto.City.AP.712650_CWEC2020v2.epw</code></td>
                         <td>NECB 2017</td>
-                        <td>Simulation-backed. The card reads &ldquo;Toronto / Ottawa&rdquo;: both are in Zone 5, and Toronto is the city that was simulated</td>
+                        <td>Simulation-backed. CHV, 2026-08-24: the card reads &ldquo;Toronto&rdquo;, because Toronto is the weather location that was simulated. Ottawa is in the same zone and was never run</td>
                     </tr>
                     <tr>
                         <td>Montr&eacute;al, QC &mdash; NECB Zone 6</td>
@@ -854,7 +964,7 @@
                         <td>Chisasibi, QC &mdash; NECB Zone 8</td>
                         <td><code>CAN_QC_La.Grande.Riviere.AP.718270_CWEC.epw</code></td>
                         <td>NECB 2017</td>
-                        <td>Simulation-backed. Chisasibi has no CWEC2020v2 file. The run uses the La Grande Rivi&egrave;re airport station, CYGL, about 90&nbsp;km inland, and it is a proxy</td>
+                        <td><strong>Not published in LMN V1.</strong> Simulation-backed, and the arm is complete, but CHV asked on 2026-08-24 that it not be published in the public tool at this stage. It stays in the research database and in this register. Chisasibi also has no CWEC2020v2 file: the run uses the La Grande Rivi&egrave;re airport station, CYGL, about 90&nbsp;km inland, and it is a proxy</td>
                     </tr>
                     <tr>
                         <td>ASHRAE reference case &mdash; United States</td>
@@ -955,9 +1065,44 @@
                     the High-Performance Envelope. HPerf is an envelope package only: it is applied
                     strictly to the building envelope of a building built to NECB 2017, and it is the
                     first rung of the scenario ladder. Montr&eacute;al additionally offers
-                    a <strong>1983 Quebec Vintage</strong> starting point. The ASHRAE 90.1 options
+                    a <strong>1983 Quebec reference envelope</strong> starting point. The ASHRAE 90.1 options
                     were withdrawn from the selection on 17 August 2026; see section F.</li>
             </ul>
+
+            <!-- CHV, 2026-08-24: "I also do not want the 2017 baseline to appear
+                 automatically as the reference case ... The reference/comparison
+                 case should be clearly selected or defined rather than assumed."
+                 Answered by building the chooser, and by saying here what a
+                 reference case is and what it is not. -->
+            <h3>The reference case, and why nothing is compared until you choose one</h3>
+            <p>
+                Until 24 August 2026 the results pages drew a column headed <strong>Baseline</strong>
+                without being asked. That column is the same neighbourhood, in the same climate,
+                built to the NECB 2017 code minimum with no measures applied. The arithmetic was
+                right and the name was not: a column called Baseline reads as
+                <em>the neighbourhood as it exists today</em>, and it is nothing of the kind.
+                <strong>Nothing in this tool has ever looked at how the buildings in a
+                neighbourhood are actually built today.</strong>
+            </p>
+            <p>
+                In LMN V1 the reference case is <strong>chosen by the reader</strong>, and nothing
+                is compared until it is. Two references exist:
+            </p>
+            <ul>
+                <li><strong>NECB 2017 code minimum.</strong> The same neighbourhood, in the same
+                    climate, at the code minimum with no measures applied. Available in every
+                    published climate.</li>
+                <li><strong>1983 Quebec reference envelope.</strong> The same neighbourhood built to
+                    Quebec Regulation E-1.1, r. 1, Order in Council 89-83. It is the earlier code
+                    era, and it was simulated for <strong>Montr&eacute;al only</strong>, so it is
+                    offered there and nowhere else. See section M.</li>
+            </ul>
+            <p>
+                Both are <strong>code-era models</strong>, not surveys of an existing building
+                stock. A comparison against either one is a comparison between two modelled code
+                editions of the same neighbourhood, and that is what the pages say when a reference
+                is chosen.
+            </p>
 
             <h3>How the EUI is computed</h3>
             <p>
@@ -1050,6 +1195,38 @@
             lists the nine that have.</p>
 
             <h3>Scenario ladder (cumulative)</h3>
+            <!-- CHV, 2026-08-24: "Please include a clear legend/terminology
+                 explanation where these abbreviations first appear ... The
+                 terminology should be consistent throughout the selections,
+                 graphs, results, summary and methodology." The tool renders the
+                 same four definitions from LMN_CONFIG.abbreviations on the
+                 selection, breakdown and summary pages. They are repeated here
+                 in the methodology because she asked for the methodology by
+                 name, and the wording is kept identical to the config. -->
+            <div class="doc-note">
+                <p><strong>Terminology.</strong> The ladder is cumulative. Space HP opens every rung
+                above HPerf, HPWH opens the rung above that, and the EEM package sits on the top
+                rung only.</p>
+                <ul>
+                    <li><strong>HPerf</strong> = High-Performance Envelope. High performance opaque
+                        assemblies, triple glazed windows, foundation and slab insulation, and
+                        infiltration reduced to a quarter.</li>
+                    <li><strong>Space HP</strong> = Heat Pump for space conditioning. A cold climate
+                        air source heat pump for heating and cooling, COP 4.0 to 4.5, with inverter
+                        cooling and ventilation heat recovery.</li>
+                    <li><strong>HPWH</strong> = Heat Pump Water Heater. A transcritical CO&#x2082;
+                        heat pump water heater with a stratified tank, drain water heat recovery and
+                        distribution improvements.</li>
+                    <li><strong>EEM</strong> = Energy Efficiency Measures. On the top rung only:
+                        automated shading and daylight dimming, LED lighting, occupancy sensor trim,
+                        ENERGY STAR plug loads, and electrification of gas appliances in the
+                        residential archetypes.</li>
+                </ul>
+                <p>The full description of each measure is the table below. The data keys
+                <code>DEFAULT</code>, <code>EEM1</code> to <code>EEM4</code> and <code>IAL</code>
+                remain the keys of <code>js/data.js</code> and of the source CSVs, and they are not
+                user-facing names.</p>
+            </div>
             <div class="doc-table-wrap">
                 <table class="doc-table">
                     <thead>
@@ -1083,16 +1260,16 @@
                             <td>High-performance opaque assemblies; triple-glazed windows U=0.85, SHGC=0.40; foundation/slab insulation (CZ6/CZ7A); infiltration &times;0.25 (Passive-House target)</td>
                         </tr>
                         <tr>
-                            <td><strong>HPerf + Heat Pump</strong></td>
+                            <td><strong>HPerf + Space HP</strong></td>
                             <td>HPerf + air-source heat pump (COP 4.0&ndash;4.5) with cold-climate (CCHP) curves; inverter cooling (SEER 22/EER 14); per-zone heat pumps; supplemental-heater lockout; defrost on-demand</td>
                         </tr>
                         <tr>
-                            <td><strong>HPerf + Heat Pump + DHW</strong><br><span class="doc-small">DHW: domestic hot water</span></td>
-                            <td>HPerf + Heat Pump + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
+                            <td><strong>HPerf + Space HP + HPWH</strong><br><span class="doc-small">HPWH: Heat Pump Water Heater, for domestic hot water</span></td>
+                            <td>HPerf + Space HP + transcritical CO&#x2082; heat-pump water heater (rated COP 4.0, stratified tank, outdoor-air intake, &minus;29&thinsp;&deg;C lockout); off-peak boost; R-25 tank jacket; MURB swing-tank / SF preheat-tank</td>
                         </tr>
                         <tr>
-                            <td><strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong></td>
-                            <td>HPerf + Heat Pump + DHW + automated blinds; daylight dimming; LED (LPD &times;0.55); occupancy-sensor trim; ENERGY STAR plug loads (EPD &times;0.75); smart power management; gas-appliance electrification (residential)</td>
+                            <td><strong>HPerf + Space HP + HPWH + EEM</strong></td>
+                            <td>HPerf + Space HP + HPWH + automated blinds; daylight dimming; LED (LPD &times;0.55); occupancy-sensor trim; ENERGY STAR plug loads (EPD &times;0.75); smart power management; gas-appliance electrification (residential)</td>
                         </tr>
                         <tr>
                             <td><strong>Ideal thermal load</strong></td>
@@ -1273,8 +1450,8 @@
             <ul>
                 <li>
                     <strong>Whole-building EUI ladder</strong> validated against deep-energy-retrofit literature
-                    (NRCan PEER/BTAP, PNNL, NEEA/WSU): <strong>HPerf + Heat Pump + DHW</strong> &asymp; &minus;33%
-                    to &minus;42%, <strong>HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling</strong> &asymp;
+                    (NRCan PEER/BTAP, PNNL, NEEA/WSU): <strong>HPerf + Space HP + HPWH</strong> &asymp; &minus;33%
+                    to &minus;42%, <strong>HPerf + Space HP + HPWH + EEM</strong> &asymp;
                     &minus;52% to &minus;62% vs baseline &mdash; <strong>within literature bands for 19 of 22
                     measures</strong> (2 conservative/under-credit, 1 no-direct-evidence).
                 </li>
@@ -1285,11 +1462,27 @@
             </ul>
         </section>
 
-        <!-- Section L: 1983 Vintage Envelope -->
+        <!-- Section L: 1983 Quebec reference envelope -->
         <section class="doc-section" id="sec-vintage-1983">
-            <h2>M &mdash; 1983 Vintage Envelope (Quebec NECB Zone 6)</h2>
+            <h2>M &mdash; 1983 Quebec Reference Envelope (NECB Zone 6, Montr&eacute;al)</h2>
+            <!-- CHV, 2026-08-24: "Please avoid the term vintage in the user
+                 interface ... Please confirm exactly what the 1983 model
+                 represents so that we use the correct terminology
+                 consistently." Confirmed below from the upstream source. -->
+            <p class="doc-note">
+                <strong>What the 1983 model is, exactly.</strong> It is a <strong>code-era
+                reference envelope</strong>, built to <strong>Quebec Regulation E-1.1, r. 1,
+                Order in Council 89-83</strong>, the 1983 Quebec construction requirements. It is
+                <strong>not</strong> a survey of how the buildings in a neighbourhood are actually
+                built today: no postal-code or feeder-resolved consumption data exists for
+                Montr&eacute;al, so the arm was validated against national and provincial survey
+                composites rather than against measured meters. The arm is
+                <code>CAN_MTL_1983</code>, it covers all 35 neighbourhood units, and it exists for
+                <strong>Montr&eacute;al only</strong>. Source: the <code>LMN-1983</code> chapter of
+                the upstream documentation and its validation report, closed 2026-08-09.
+            </p>
             <p>
-                The 1983 vintage envelope option represents the <strong>pre-code building stock</strong> typical of
+                The 1983 Quebec reference envelope represents the <strong>pre-code building stock</strong> typical of
                 Montr&eacute;al and Quebec&rsquo;s existing urban fabric. These envelope parameters are based on
                 construction practices prevalent before the adoption of modern energy codes, featuring
                 significantly lower insulation levels, higher infiltration rates, and single- or double-pane
@@ -1300,7 +1493,7 @@
             <p>
                 While the Standard (NECB 2017) and HPerf (High-Performance Envelope) options model <em>new
                 construction</em>,
-                the 1983 vintage captures the <strong>retrofit potential</strong> of existing buildings. By comparing
+                the 1983 reference envelope captures the <strong>retrofit potential</strong> of existing buildings. By comparing
                 1983 baseline EUI against progressively deeper scenarios on the ladder above, users can estimate the energy savings
                 achievable through envelope upgrades, HVAC electrification, DHW heat pumps, and efficient
                 lighting/equipment on <em>real existing building stock</em>.
@@ -1320,7 +1513,7 @@
                     <thead>
                         <tr>
                             <th>Parameter</th>
-                            <th>1983 Vintage</th>
+                            <th>1983 Quebec reference</th>
                             <th>NECB 2017 Standard</th>
                         </tr>
                     </thead>
@@ -1351,7 +1544,7 @@
 
             <h3>EUI Comparison (Baseline)</h3>
             <p>
-                The 1983 vintage baseline (the Baseline rung, no upgrade measures) shows substantially higher
+                The 1983 reference envelope at the Baseline rung (no upgrade measures) shows substantially higher
                 energy use intensities than the NECB 2017 baseline, primarily driven by increased
                 <strong>heating demand</strong> due to poor envelope thermal performance. Typical increases
                 range from <strong>+40% to +80%</strong> in heating EUI depending on the archetype, with
@@ -1363,13 +1556,13 @@
                 A comprehensive validation report covering all 35 neighbourhood units is available:
             </p>
             <div class="doc-reports-box">
-                <h4>1983 Vintage Validation Report</h4>
-                <p>Detailed comparison of 1983 vintage EUI results against literature benchmarks and the NECB 2017 baseline for all 35 NUs.</p>
+                <h4>1983 Quebec Reference Envelope Validation Report</h4>
+                <p>Detailed comparison of 1983 reference-envelope EUI results against literature benchmarks and the NECB 2017 baseline for all 35 NUs.</p>
                 <ul class="doc-reports-list">
                     <li>
                         <a href="Content/References%20%26%20Methodology/Reports/LMN1983_NU_validation_all35.pdf" target="_blank" class="report-link">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V8H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V8H15c.83 0 1.5.67 1.5 1.5v2zm4-3H19v1h1.5V10H19v2h-1.5V8h3v1.5zM9 9.5h1v-1H9v1zm5.5 2h1v-2h-1v2zM6 6H4v14c0 1.1.9 2 2 2h14v-2H6V6z"/></svg>
-                            1983 Vintage Validation Report &mdash; All 35 NUs (PDF)
+                            1983 Quebec Reference Envelope Validation Report &mdash; All 35 NUs (PDF)
                         </a>
                     </li>
                 </ul>
@@ -1377,10 +1570,10 @@
 
             <h3>Availability</h3>
             <p>
-                The 1983 vintage option is currently available <strong>only for NECB Zone 6 (Montr&eacute;al)</strong>.
-                When selecting an envelope in Layer&nbsp;1, the &ldquo;1983 &mdash; Quebec Vintage&rdquo; button
+                The 1983 Quebec reference envelope is currently available <strong>only for NECB Zone 6 (Montr&eacute;al)</strong>.
+                When selecting an envelope in Layer&nbsp;1, the &ldquo;1983 &mdash; Quebec reference&rdquo; button
                 appears exclusively in the NECB Zone&nbsp;6 performance-level popup. All 35 neighbourhood archetypes
-                are supported under this vintage.
+                are supported under this reference envelope.
             </p>
         </section>
 
@@ -1407,13 +1600,13 @@
             <h3>Solar Photovoltaic (PV) Modeling Constraints</h3>
             <ul>
                 <li>
-                    <strong>Facade PV Validation:</strong> Facade PV (building-integrated photovoltaics on vertical walls) is only applied to high-rise typologies (ApartmentHighRise, ST15, and ST20) where vertical area is significant. Additionally, facade PV yields have only been simulated and validated for Montreal (CZ6A), with Calgary (CZ7A) validation pending.
+                    <strong>Facade PV Validation:</strong> Facade PV (building-integrated photovoltaics on vertical walls) is only applied to high-rise typologies (ApartmentHighRise, ST15, and ST20) where vertical area is significant. Additionally, facade PV yields have only been simulated and validated for Montreal (CZ6A), with no second climate validated. The upstream facade study covered Montreal and Calgary, and Calgary is not one of the climates this tool offers.
                 </li>
                 <li>
                     <strong>Pitched Commercial PV Sizing:</strong> Sizing values for pitched commercial buildings (OfficeSmall, RestaurantFastFood, RestaurantSitDown) are pending re-simulation under the south-facing dominant-pitched-roof constraint; current reporting reflects pre-fix values across all slopes.
                 </li>
                 <li>
-                    <strong>Racking Tilt vs. Market Standards:</strong> While flat-roof PV racks are modeled at an energy-optimal tilt of 45&deg; (or 20&deg; on the top rung, HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling) for high-latitude winter performance, this tilt angle exceeds typical flat-roof commercial solar racking standards of 10&ndash;15&deg;, which are constrained in practice by wind-uplift and structural ballast load limits.
+                    <strong>Racking Tilt vs. Market Standards:</strong> While flat-roof PV racks are modeled at an energy-optimal tilt of 45&deg; (or 20&deg; on the top rung, HPerf + Space HP + HPWH + EEM) for high-latitude winter performance, this tilt angle exceeds typical flat-roof commercial solar racking standards of 10&ndash;15&deg;, which are constrained in practice by wind-uplift and structural ballast load limits.
                 </li>
                 <li>
                     <strong>Snow-Cover Losses:</strong> Current PV generation calculations do not account for snow accumulation, snow-shedding, or winter albedo gains, which may overestimate actual winter yields in cold Canadian climates.
@@ -1587,6 +1780,6 @@
 
     </div><!-- /.doc-page -->
 </main>
-    <script src="js/config.js?v=12"></script>
+    <script src="js/config.js?v=14"></script>
 </body>
 </html>

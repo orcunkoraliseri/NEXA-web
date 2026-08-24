@@ -62,14 +62,62 @@ function renderEnergyBasisNote() {
 }
 
 /**
- * Task 3.2, D3.5, CHV Stage 3 item 2. Show the baseline beside the selected
- * case, with the change in absolute and percentage terms.
+ * CHV, 2026-08-24. The reference case chooser.
  *
- * The baseline is the building with NO measure applied, so it is the DEFAULT
- * scenario of the STANDARD envelope for the chosen climate. Choosing the high
- * performance envelope does not move it: that envelope IS a measure, EEM1,
- * verified at 245 of 245 rows. Before this, ticking one measure made the
- * envelope choice change nothing visible on screen.
+ * "The reference/comparison case should be clearly selected or defined rather
+ * than assumed." The control ships with NOTHING selected, so the page a reader
+ * lands on compares nothing, which is the other half of her instruction:
+ * "please remove the automatic baseline comparison".
+ *
+ * The options, their explanations and the rule about which climates offer which
+ * option all live in LMN_CONFIG.referenceCase. This function only mounts the
+ * control and reacts to a change.
+ *
+ * @param {string} envelope - the active envelope key
+ * @param {string} neighbourhoodCode - the active NU
+ * @param {number} selectedTotal - the EUI now on screen
+ */
+function renderReferenceChooser(envelope, neighbourhoodCode, selectedTotal) {
+    const host = document.getElementById('reference-chooser');
+    if (!host || typeof LMN_CONFIG === 'undefined') return;
+
+    const current = LMN_CONFIG.selectedReferenceKey(envelope, window.sessionStorage);
+    host.innerHTML = LMN_CONFIG.referenceChooserHtml(envelope, current);
+
+    const inputs = host.querySelectorAll('input[name="reference-case"]');
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('change', function (ev) {
+            try {
+                window.sessionStorage.setItem(
+                    LMN_CONFIG.referenceCase.storageKey, ev.target.value);
+            } catch (e) {
+                // A blocked session store is not a reason to leave the reader
+                // with a control that does nothing: the redraw below still runs
+                // and the choice simply does not survive the next page.
+            }
+            renderReferenceChooser(envelope, neighbourhoodCode, selectedTotal);
+            renderBaselineComparison(envelope, neighbourhoodCode, selectedTotal);
+        });
+    }
+}
+
+/**
+ * Task 3.2, D3.5, CHV Stage 3 item 2, then CHV 2026-08-24.
+ *
+ * WHAT CHANGED. This used to draw three rows always: a row headed "Baseline",
+ * the selected case, and the change between them. The reader never chose that
+ * baseline row, and calling it Baseline invited the reading that the
+ * neighbourhood exists today at NECB 2017 and the measures are a retrofit from
+ * it. It is a code minimum model of the same building.
+ *
+ * NOW: the selected case is always drawn. The reference row and the change row
+ * are drawn only when the reader has chosen a reference case, and the reference
+ * row is labelled with the name of what they chose, never "Baseline".
+ *
+ * The arithmetic is unchanged. For the NECB 2017 code minimum reference it is
+ * still the DEFAULT scenario of the STANDARD envelope of the chosen climate,
+ * because the high performance envelope IS a measure, EEM1, verified at 245 of
+ * 245 rows.
  *
  * @param {string} envelope - the active envelope key
  * @param {string} neighbourhoodCode - the active NU
@@ -79,38 +127,46 @@ function renderBaselineComparison(envelope, neighbourhoodCode, selectedTotal) {
     const el = document.getElementById('baseline-comparison');
     if (!el) return;
 
-    // The standard arm of the same climate, whatever the user picked.
-    const standardEnvelope = LMN_CONFIG.baselineEnvelopeFor(envelope);
-    const baselineData = getEnergyData(standardEnvelope, neighbourhoodCode, 'DEFAULT');
+    if (typeof selectedTotal !== 'number') { el.innerHTML = ''; return; }
 
-    if (!baselineData || typeof selectedTotal !== 'number') {
-        el.innerHTML = '';
-        return;
-    }
-
-    const baseline = baselineData.total;
-    const change = selectedTotal - baseline;
-    const percent = baseline ? (change / baseline) * 100 : 0;
     const unit = (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.units.euiCompact : 'kWh/m²·yr';
     // Task 3.3. Dense table, so the compact unit stays and the long form is
     // the tooltip. The caption under the EUI scale carries the words.
     const long = (typeof LMN_CONFIG !== 'undefined') ? LMN_CONFIG.units.eui : '';
-    const sign = change > 0 ? '+' : '';
-    const direction = change < 0 ? 'saving' : (change > 0 ? 'increase' : 'no change');
 
-    el.innerHTML = `
-    <div class="comparison-row">
-      <span class="comparison-label">Baseline</span>
-      <span class="comparison-value">${baseline.toFixed(1)}</span>
-      <span class="comparison-unit" title="${long}">${unit}</span>
-      <span class="comparison-note">${LMN_CONFIG.envelopeLabel(standardEnvelope)}, no measure applied</span>
-    </div>
+    const selectedRow = `
     <div class="comparison-row comparison-row--selected">
       <span class="comparison-label">Selected</span>
       <span class="comparison-value">${selectedTotal.toFixed(1)}</span>
       <span class="comparison-unit" title="${long}">${unit}</span>
       <span class="comparison-note">${LMN_CONFIG.envelopeLabel(envelope)}, with your selection</span>
-    </div>
+    </div>`;
+
+    const refKey = LMN_CONFIG.selectedReferenceKey(envelope, window.sessionStorage);
+    const ref = LMN_CONFIG.resolveReference(envelope, refKey);
+    const refData = ref ? getEnergyData(ref.envelope, neighbourhoodCode, ref.level) : null;
+
+    // No reference chosen, or the chosen reference has no row for this
+    // neighbourhood. Either way, the selected case stands alone. Never an
+    // estimate and never a silent fallback to the code minimum.
+    if (!ref || !refData || refData.total == null) {
+        el.innerHTML = selectedRow;
+        return;
+    }
+
+    const baseline = refData.total;
+    const change = selectedTotal - baseline;
+    const percent = baseline ? (change / baseline) * 100 : 0;
+    const sign = change > 0 ? '+' : '';
+    const direction = change < 0 ? 'saving' : (change > 0 ? 'increase' : 'no change');
+
+    el.innerHTML = `
+    <div class="comparison-row">
+      <span class="comparison-label">${ref.label}</span>
+      <span class="comparison-value">${baseline.toFixed(1)}</span>
+      <span class="comparison-unit" title="${long}">${unit}</span>
+      <span class="comparison-note">${LMN_CONFIG.envelopeLabel(ref.envelope)}, no measure applied</span>
+    </div>` + selectedRow + `
     <div class="comparison-row comparison-row--change">
       <span class="comparison-label">Change</span>
       <span class="comparison-value">${sign}${change.toFixed(1)}</span>
@@ -652,6 +708,7 @@ function renderTreemap(neighbourhoodCode) {
     renderEnergyBasisNote();
 
     // Task 3.2, D3.5: baseline, selected and change, together.
+    renderReferenceChooser(envelope, neighbourhoodCode, energyData.total);
     renderBaselineComparison(envelope, neighbourhoodCode, energyData.total);
 
     // Task 3.5: assumptions and model info.

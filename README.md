@@ -1,4 +1,4 @@
-# Layered Modular Neighbourhood (LMN) Tool
+# LMN V1, Layered Modular Neighbourhood Tool
 
 An early-stage decision-support tool for **pre-feasibility comparison** of neighbourhood
 designs. It compares neighbourhood units that have already been simulated in EnergyPlus, so
@@ -103,7 +103,7 @@ Full methodology, assumptions and references: `documentation.html` on the live s
 
 ## Project Overview
 
-The LMN Tool supports the **Simplistic Modular Holistic (SMH)** methodology. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
+The LMN Tool supports the **Layered Modular Neighbourhood (LMN)** methodology. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
 
 Each layer adds a new set of systems on top of the previous, so the neighbourhood profile grows in complexity and completeness as the user progresses — from a blank canvas to a fully specified, energy-balanced urban unit.
 
@@ -218,7 +218,7 @@ layer4_output_selection.html   ← Layer 4 Results (complete neighbourhood profi
         │   └─► layer4_lpv_breakdown.html  (Landscape PV Profile)
         │
         ▼
-   [ Complete PED Profile ]
+   [ Scenario summary ]
 ```
 
 > **Note:** A `3dviewer.html` is also available for viewing 3D neighbourhood models (GLB format) via Google's `<model-viewer>` component.
@@ -331,7 +331,7 @@ From the sidebar or output, users can access:
 
 **Breakdown Page:** `layer4_lpv_breakdown.html`
 
-The final layer integrates **green systems** and **biophilic/agricultural elements** into the neighbourhood. This completes the holistic PED profile. The sidebar now reflects the full stack of selections from Layers 1 through 4.
+The final layer integrates **green systems** and **biophilic/agricultural elements** into the neighbourhood. This completes the scenario summary. The sidebar now reflects the full stack of selections from Layers 1 through 4.
 
 **Selection parameters:**
 

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PV Generation profile visualization for neighbourhood configurations.">
-    <title>PV Generation | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=12">
+    <title>PV Generation | LMN V1, Layered Modular Neighbourhood Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=14">
 </head>
 
 <body>
@@ -86,12 +86,25 @@
                              and 15. This label used to say "gross floor area",
                              which was the wording of her own Stage 4 item 6 and
                              was the thing that was wrong. -->
-                        <div class="pv-stat-item">
-                            <span class="pv-stat-label">PV generation intensity (kWh/m² of heated and cooled floor area per year)</span>
-                            <span class="pv-stat-value" id="pv-generation-val">—</span>
+                        <!-- CHV, 2026-08-24, second email: the intensity row is
+                             gone from the interface and total PV array area
+                             takes its place. The intensity is still what the
+                             total below is computed from, and it is still named
+                             in the assumptions block; it is only no longer a
+                             headline result, because a generation figure per
+                             square metre of FLOOR area invites being read as a
+                             figure per square metre of ARRAY.
+
+                             The area row is written by js/pv.js from
+                             PV_AREA_DATA. Where the upstream extraction has
+                             produced no number for a neighbourhood, THE ROW IS
+                             ABSENT rather than estimated. -->
+                        <div class="pv-stat-item" id="pv-area-item" hidden>
+                            <span class="pv-stat-label">Total PV array area</span>
+                            <span class="pv-stat-value" id="pv-area-val">—</span>
                         </div>
                         <div class="pv-stat-item">
-                            <span class="pv-stat-label">Total PV Generation</span>
+                            <span class="pv-stat-label">Total annual PV generation</span>
                             <span class="pv-stat-value" id="pv-total-val">—</span>
                         </div>
                         <div class="pv-stat-item">
@@ -103,6 +116,16 @@
                     <!-- STAGE-04, DBG-013. Why a house shows a different
                          parameter set. Filled by js/pv.js. -->
                     <p class="pv-roof-note info-box" id="pv-roof-note"></p>
+
+                    <!-- CHV, 2026-08-24, her section 4 item 5: "Add the snow
+                         cover PV limitation directly on the PV result page for
+                         the relevant cold-climate cases." The text is
+                         LMN_CONFIG.snowNote for the active climate, written by
+                         js/pv.js. It is EMPTY, and therefore invisible, in
+                         every climate that has no note, so no page carries a
+                         caution about a limitation it does not have. -->
+                    <div class="info-box info-box--caution" id="pv-snow-note" hidden></div>
+
 
                     <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
                          the number means and how to read it. Text from
@@ -165,9 +188,13 @@
                                  gets looked at, so every change here is made
                                  twice on purpose. -->
                             <div class="pv-section pv-kpis-section">
-                                <div class="pv-kpi-item">
-                                    <h3 class="pv-kpi-label">PV generation intensity (kWh/m&sup2; of heated and cooled floor area per year)</h3>
-                                    <div class="pv-kpi-value" id="pv-generation-val-legacy">—</div>
+                                <!-- CHV, 2026-08-24, second email. Same change
+                                     as the current layout above. This page has
+                                     two layouts and only one gets looked at, so
+                                     every change here is made twice on purpose. -->
+                                <div class="pv-kpi-item" id="pv-area-item-legacy" hidden>
+                                    <h3 class="pv-kpi-label">Total PV array area</h3>
+                                    <div class="pv-kpi-value" id="pv-area-val-legacy">—</div>
                                 </div>
                                 <div class="pv-kpi-item">
                                     <h3 class="pv-kpi-label">Total PV Generation</h3>
@@ -182,6 +209,16 @@
 
                     </div>
                     <p class="pv-roof-note info-box" id="pv-roof-note-legacy"></p>
+
+                    <!-- CHV, 2026-08-24, her section 4 item 5: "Add the snow
+                         cover PV limitation directly on the PV result page for
+                         the relevant cold-climate cases." The text is
+                         LMN_CONFIG.snowNote for the active climate, written by
+                         js/pv.js. It is EMPTY, and therefore invisible, in
+                         every climate that has no note, so no page carries a
+                         caution about a limitation it does not have. -->
+                    <div class="info-box info-box--caution" id="pv-snow-note-legacy" hidden></div>
+
 
                     <details class="assumptions-details" id="pv-assumptions-legacy">
                         <summary>Assumptions &amp; Model Information</summary>
@@ -224,10 +261,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=12"></script>
-    <script src="js/data.js?v=12"></script>
-    <script src="js/sidebar.js?v=12"></script>
-    <script src="js/pv.js?v=12"></script>
+    <script src="js/config.js?v=14"></script>
+    <script src="js/data.js?v=14"></script>
+    <script src="js/sidebar.js?v=14"></script>
+    <script src="js/pv.js?v=14"></script>
 </body>
 
 </html>

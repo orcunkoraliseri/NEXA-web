@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
-    <title>Design Summary | Neighbourhood Design Interface</title>
-    <link rel="stylesheet" href="css/styles.css?v=12">
+    <title>Scenario Summary | LMN V1, Layered Modular Neighbourhood Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=14">
     <style>
         /* Summary Dashboard Specific Styles */
         .summary-grid {
@@ -214,6 +214,16 @@
                     <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
             </a>
+            <a id="comparison-btn" href="#" class="next-button comparison-mode-btn">
+                Comparison Mode
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                </svg>
+            </a>
         </div>
 
         <div class="sidebar-layout">
@@ -222,7 +232,7 @@
             <div id="visual-content" class="main-content">
                 <!-- Header -->
                 <header class="header">
-                    <h1 id="neighbourhood-title">Consolidated Design Summary</h1>
+                    <h1 id="neighbourhood-title">Scenario summary</h1>
                     <p>Review the comprehensive outputs of your cumulative design parameters and configurations.</p>
                 </header>
 
@@ -244,6 +254,13 @@
                      the layer pages display, never from a literal.
                      ===================================================== -->
 
+
+                <!-- CHV, 2026-08-24. The terminology legend, written by
+                     LMN_CONFIG.terminologyLegendHtml from
+                     LMN_CONFIG.abbreviations. The page carries no copy of the
+                     four definitions. -->
+                <div class="js-terminology-legend"></div>
+
                 <!-- Item 1. The scenario, in one line, before any number. -->
                 <section class="final-block" id="scenario-block">
                     <h2 class="group-heading">Selected scenario</h2>
@@ -261,14 +278,23 @@
                      not select prints "Not selected" in all three columns rather
                      than a zero, because zero is a result and this is not. -->
                 <section class="final-block" id="comparison-block">
-                    <h2 class="group-heading">Baseline and selected pathway</h2>
+                    <h2 class="group-heading">Selected pathway</h2>
+
+                    <!-- CHV, 2026-08-24: "The reference/comparison case should
+                         be clearly selected or defined rather than assumed."
+                         Written by js/finish-design.js from
+                         LMN_CONFIG.referenceChooserHtml. It ships with nothing
+                         selected, and while nothing is selected the reference
+                         and change columns are not drawn at all. -->
+                    <div id="fs-reference-chooser" class="no-print"></div>
+
                     <table class="comparison-table" id="fs-comparison">
                         <thead>
                             <tr>
                                 <th>Metric</th>
-                                <th>Baseline</th>
+                                <th id="fs-th-reference" hidden>Reference case</th>
                                 <th>Selected pathway</th>
-                                <th>Change</th>
+                                <th id="fs-th-change" hidden>Change</th>
                                 <th>Status</th>
                             </tr>
                         </thead>
@@ -502,10 +528,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=12"></script>
-    <script src="js/data.js?v=12"></script>
-    <script src="js/sidebar.js?v=12"></script>
-    <script src="js/finish-design.js?v=12"></script>
+    <script src="js/config.js?v=14"></script>
+    <script src="js/data.js?v=14"></script>
+    <script src="js/sidebar.js?v=14"></script>
+    <script src="js/finish-design.js?v=14"></script>
 </body>
 
 </html>

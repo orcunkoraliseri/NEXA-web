@@ -9,8 +9,8 @@
        decision-support/pre-feasibility positioning." This page was the last one
        still carrying it, in the description and in the tab title. -->
   <meta name="description" content="LMN tool: early stage, pre-feasibility comparison of simulated neighbourhood units.">
-  <title>Neighbourhood Selection | Layered Modular Neighbourhood (LMN) Tool</title>
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <title>Neighbourhood Selection | LMN V1, Layered Modular Neighbourhood Tool</title>
+  <link rel="stylesheet" href="css/styles.css?v=14">
 </head>
 
 <body>
@@ -147,7 +147,7 @@
                       <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="ASHRAE">
                       <span>Standard (ASHRAE)</span>
                       <span class="envelope-card-standard">ASHRAE 90.1</span>
-                      <span class="card-status">Results under revision</span>
+                      <span class="card-status">Not available in this climate</span>
                       <span class="envelope-region-badge"></span>
                   </button>
                   -->
@@ -158,8 +158,8 @@
                       <span class="envelope-region-badge"></span>
                   </button>
                   <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z5">
-                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 5 (Toronto/Ottawa)">
-                      <span>NECB Zone 5<br>(Toronto / Ottawa)</span>
+                      <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 5 (Toronto)">
+                      <span>NECB Zone 5<br>(Toronto)</span>
                       <span class="envelope-card-standard">NECB 2017</span>
                       <span class="envelope-region-badge"></span>
                   </button>
@@ -181,12 +181,28 @@
                       <span class="envelope-card-standard">NECB 2017</span>
                       <span class="envelope-region-badge"></span>
                   </button>
+                  <!-- CHV, 2026-08-24: "I also do not want Chisasibi published
+                       in the public tool at this stage ... please disable it
+                       from the public climate selection and do not expose its
+                       quantitative results publicly for now."
+
+                       THE MARKUP IS KEPT HERE, COMMENTED, ON PURPOSE, exactly
+                       as the ASHRAE card above it. Nothing is deleted from
+                       js/data.js: all 35 neighbourhoods and all 5 scenarios
+                       stay under "necb-z8" and "high-performance-z8". Bringing
+                       the zone back is uncommenting this block and removing the
+                       necb-z8 entry from LMN_CONFIG.withdrawnClimates. While
+                       that entry is present, every gate in dataGapFor stays on
+                       whether or not a card exists, so the case cannot come
+                       back silently.
+
                   <button class="envelope-card envelope-region-btn" data-category="envelope" data-region="necb-z8">
                       <img src="Content/Images_Envelope_Parameters/standard construction.png" alt="NECB Zone 8 (Chisasibi)">
                       <span>NECB Zone 8<br>(Chisasibi)</span>
                       <span class="envelope-card-standard">NECB 2017</span>
                       <span class="envelope-region-badge"></span>
                   </button>
+                  -->
               </div>
 
               <!-- CHV, 2026-08-17, point 1. The home of the withdrawn climate
@@ -211,7 +227,7 @@
                       <div class="envelope-popup-options">
                           <button class="envelope-tier-btn" data-tier="vintage-1983" id="tier-btn-1983" style="display:none;">
                               <span class="tier-label">1983</span>
-                              <span class="tier-sub">Quebec Vintage</span>
+                              <span class="tier-sub">1983 Quebec reference</span>
                           </button>
                           <!-- CHV, 2026-08-17, point 2: "ASHRAE selection should
                                never show NECB 2017 in the following popup."
@@ -256,9 +272,9 @@
 </main>
 
   <!-- Scripts -->
-  <script src="js/config.js?v=12"></script>
-  <script src="js/data.js?v=12"></script>
-  <script src="js/app.js?v=12"></script>
+  <script src="js/config.js?v=14"></script>
+  <script src="js/data.js?v=14"></script>
+  <script src="js/app.js?v=14"></script>
 </body>
 
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Layered Modular Neighbourhood (LMN) Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=12" />
+    <title>LMN V1, Layered Modular Neighbourhood Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=14" />
 </head>
 <body>
     <header class="header" role="banner">
@@ -14,7 +14,8 @@
              No optimisation method is implemented and nothing here designs
              anything: the tool compares 35 neighbourhood units that were
              simulated in advance. DBG-020. -->
-        <h1 class="welcome-title">Welcome to the Layered Modular Neighbourhood (LMN) Tool</h1>
+        <h1 class="welcome-title">LMN V1</h1>
+        <p class="welcome-lede">Layered Modular Neighbourhood Tool</p>
         <p class="welcome-subtitle">An early stage decision support tool for comparing neighbourhood designs at pre-feasibility.</p>
     </header>
 
@@ -84,15 +85,17 @@
         </footer>
 </main>
 
-    <script src="js/config.js?v=12"></script>
+    <script src="js/config.js?v=14"></script>
     <script>(function () {
             // CHV, Stage 1 item 7. The version and the date come from
             // LMN_CONFIG, the same pair the assumptions box on the Layer 2
             // result prints, so the landing page cannot claim a different
             // version from the one the results were computed under.
+            // CHV, 2026-08-24: the release name leads the footer stamp so that
+            // "future developments can clearly become V2".
             const stamp = document.getElementById('site-version');
             if (stamp && typeof LMN_CONFIG !== 'undefined') {
-                stamp.textContent = 'Version ' + LMN_CONFIG.version +
+                stamp.textContent = LMN_CONFIG.releaseName + '. Version ' + LMN_CONFIG.version +
                     ', last updated ' + LMN_CONFIG.lastUpdated + '.';
             }
 

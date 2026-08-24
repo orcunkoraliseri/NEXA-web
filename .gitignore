@@ -43,3 +43,12 @@ docs_methodology/
 # public commit. Stage with `git add -u`, and keep this line either way.
 # Added 2026-08-17.
 docs_implementation/Demo/
+
+# The same folder, and every other closed implementation folder, after
+# docs_implementation/ was reorganised into DONE/ on 2026-08-24. That move
+# carried Demo/ out from under the line above and it carried the Comparison
+# Mode folder, which holds correspondence, into an unignored path. Measured on
+# 2026-08-24: 950 MB and 140 untracked paths, on a PUBLIC repository that
+# serves GitHub Pages. Added 2026-08-24, and it is the reason staging is always
+# `git add -u` and never `git add -A`.
+docs_implementation/DONE/
