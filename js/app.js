@@ -866,10 +866,15 @@ function createResultRow(concept, neighbourhood) {
     // opened a Yes/No popup and, because of stopPropagation, failed to select
     // the row at the same time. The popup and the picture handler are gone.
     const neighbourhoodCell = document.createElement('td');
-    const nuImage = neighbourhood.image || 'https://via.placeholder.com/200x150?text=' + encodeURIComponent(neighbourhood.code);
+    // DBG-044, P2, 2026-08-24. This used to name via.placeholder.com, a service
+    // that no longer answers: the request fails with ERR_CONNECTION_RESET and
+    // logs a console error, and it leaked a request to a third party on a site
+    // that should serve itself. An image that will not load is now hidden, which
+    // is what index.html already did.
+    const nuImage = neighbourhood.image || '';
     neighbourhoodCell.innerHTML = `
     <div class="neighbourhood-cell">
-      <img src="${nuImage}" alt="${neighbourhood.code}" onerror="this.src='https://via.placeholder.com/200x150?text=${encodeURIComponent(neighbourhood.code)}'">
+      <img src="${nuImage}" alt="${neighbourhood.code}" onerror="this.style.display='none'">
       <span class="code">${neighbourhood.code}</span>
       <div class="nu-actions">
         <button type="button" class="nu-action-btn nu-select-btn">Select this NU</button>

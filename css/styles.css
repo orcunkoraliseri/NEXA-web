@@ -474,6 +474,23 @@ h3 {
   white-space: nowrap;
 }
 
+/* DBG-046, P2, 2026-08-24. The same status word was drawn two ways inside one
+   grid: NOT MODELLED YET on the four cards built as generation cards and
+   Not Modelled Yet on the three built as consumption cards. The cause is
+   specificity, not wording: the source text is identical on all seven, but
+   ".consumption-card span", and the context, layout and density rules beside
+   it, are one point more specific than ".card-status" and set capitalize.
+   CHV Stage 9 item 6 asked for one status vocabulary, and one vocabulary
+   drawn two ways is not one vocabulary. The badge now states its own casing
+   at a specificity those card rules cannot beat, so a status word reads the
+   same on every card on the site. */
+/* The class is doubled on purpose: .consumption-card span sits LATER in this
+   file and is the same specificity, so source order would win. .card-status
+   twice is one point higher and settles it wherever the rule is written. */
+.card-status.card-status {
+  text-transform: uppercase;
+}
+
 /* An author rule that sets display beats the browser rule for [hidden], so
    the two elements the facade PV rule fills in have to say it themselves.
    Without this the page ships an empty grey badge on every neighbourhood. */
@@ -567,14 +584,57 @@ h3 {
   display: none;
 }
 
+/* DBG-042, P2, 2026-08-24. A line that exists only on paper. Hidden here, and
+   turned on inside the print block below. */
+.print-only {
+  display: none;
+}
+
 /* Item 9. Print carries the numbers, the assumptions and the status labels,
    and drops the parts of the page that mean nothing on paper. */
 @media print {
   .no-print,
   .sidebar,
-  .nav-buttons,
-  .site-footer {
+  .nav-buttons {
     display: none !important;
+  }
+
+  /* DBG-042. The tool names itself on paper. */
+  .print-only {
+    display: block;
+    margin: 2px 0 10px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: #444;
+  }
+
+  /* DBG-043, P2, 2026-08-24. The footer used to be hidden on paper with the
+     navigation, so the printed document carried no credit to the lab that
+     produced it: "Resilient Habitat Lab, directed by Dr. Caroline H-Vermette,
+     Concordia University", and the lab logo, were both on screen and absent
+     from the print. It now prints, smaller, at the foot of the last page. */
+  .site-footer {
+    display: block;
+    margin-top: 16px;
+    padding-top: 8px;
+    border-top: 1px solid #999;
+    text-align: center;
+    break-inside: avoid;
+  }
+
+  .site-footer .footer-logo {
+    max-height: 42px !important;
+    width: auto;
+  }
+
+  .site-footer .footer-text {
+    display: block;
+    font-size: 0.72rem;
+    color: #444;
+  }
+
+  .site-footer .footer-doc-link {
+    display: none;
   }
 
   body {

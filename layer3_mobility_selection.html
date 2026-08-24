@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select mobility parameters for neighbourhood analysis.">
     <title>Mobility Selection | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=15">
+    <link rel="stylesheet" href="css/styles.css?v=16">
+    <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
+         /favicon.ico and the browser console logged an error on every visit,
+         which is the first thing a technical reviewer sees on opening it. -->
+    <link rel="icon" href="Content/Images_Copyright/RHLab.png" type="image/png" />
 </head>
 
 <body>
@@ -70,19 +74,29 @@
                                     <span>V2G Stations</span>
                                     <span class="card-status">Requires EV</span>
                                 </button>
-                                <button class="generation-card transportation-card" data-category="transportation"
+                                <!-- DBG-045, P2, 2026-08-24. These two, and the two
+                                     mobility cards below, shipped greyed with no reason
+                                     given, while V2G Stations directly beside them said
+                                     "Requires EV". A reader could not tell "not built
+                                     yet" from "not available until you choose something
+                                     else". The word used is one of the four status
+                                     terms, the same one every other unbuilt option on
+                                     the site carries. -->
+                                <button class="generation-card transportation-card is-unavailable" data-category="transportation"
                                     data-value="ev_public_transport" disabled>
                                     <img src="Content/Images_Layer3_Transportation/ev public transport.png"
                                         alt="EV Public Transport"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>EV Public Transport</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
-                                <button class="generation-card transportation-card" data-category="transportation"
+                                <button class="generation-card transportation-card is-unavailable" data-category="transportation"
                                     data-value="ev_charging_stations" disabled>
                                     <img src="Content/Images_Layer3_Transportation/ev charging stations.png"
                                         alt="EV Charging Stations"
                                         onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='100px';">
                                     <span>EV Charging Stations</span>
+                                    <span class="card-status">Not modelled yet</span>
                                 </button>
                             </div>
                         </div>
@@ -92,19 +106,23 @@
                     <div class="parameter-group">
                         <div class="parameter-label">Mobility</div>
                         <div class="consumption-cards">
-                            <button class="consumption-card mobility-card" data-category="mobility"
+                            <!-- DBG-045, P2, 2026-08-24. Same as the two transportation
+                                 cards above: greyed, with no reason given. -->
+                            <button class="consumption-card mobility-card is-unavailable" data-category="mobility"
                                 data-value="bicycle_infrastructure" disabled>
                                 <img src="Content/Images_Layer3_Mobility/bicycle infrastructure.png"
                                     alt="Bicycle Infrastructure"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
                                 <span>Bicycle Infrastructure</span>
+                                <span class="card-status">Not modelled yet</span>
                             </button>
-                            <button class="consumption-card mobility-card" data-category="mobility"
+                            <button class="consumption-card mobility-card is-unavailable" data-category="mobility"
                                 data-value="pedestrian_oriented_design" disabled>
                                 <img src="Content/Images_Layer3_Mobility/pedestrian-oriented design.png"
                                     alt="Pedestrian-oriented design"
                                     onerror="this.src=''; this.style.backgroundColor='#e0e0e0'; this.style.minHeight='80px';">
                                 <span>Pedestrian-oriented design</span>
+                                <span class="card-status">Not modelled yet</span>
                             </button>
                         </div>
                     </div>
@@ -127,10 +145,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=15"></script>
-    <script src="js/data.js?v=15"></script>
-    <script src="js/sidebar.js?v=15"></script>
-    <script src="js/mobility-selection.js?v=15"></script>
+    <script src="js/config.js?v=16"></script>
+    <script src="js/data.js?v=16"></script>
+    <script src="js/sidebar.js?v=16"></script>
+    <script src="js/mobility-selection.js?v=16"></script>
 </body>
 
 </html>

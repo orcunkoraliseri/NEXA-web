@@ -12,54 +12,11 @@ function getNeighbourhoodFromURL() {
     return params.get('neighbourhood');
 }
 
-/**
- * Render the PV scale bar
- * @param {number} value - The PV generation value
- */
-function renderPVScale(value) {
-    const container = document.getElementById('pv-scale-container');
-    if (!container) return;
-
-    // Scale range 0-100
-    const MIN = 0;
-    const MAX = 100;
-
-    // Calculate position on scale (0-100%)
-    const position = Math.min(100, Math.max(0, ((value - MIN) / (MAX - MIN)) * 100));
-
-    // Calculate color based on position (Green -> Yellow -> Red)
-    // Using the same logic as EUI scale for visual consistency
-    let color;
-    if (position <= 50) {
-        // Green to Yellow
-        const ratio = position / 50;
-        const r = Math.round(34 + (234 - 34) * ratio);
-        const g = Math.round(197 + (234 - 197) * ratio);
-        const b = Math.round(94 + (8 - 94) * ratio);
-        color = `rgb(${r}, ${g}, ${b})`;
-    } else {
-        // Yellow to Red
-        const ratio = (position - 50) / 50;
-        const r = Math.round(234 + (239 - 234) * ratio);
-        const g = Math.round(179 + (68 - 179) * ratio);
-        const b = Math.round(8 + (68 - 8) * ratio);
-        color = `rgb(${r}, ${g}, ${b})`;
-    }
-
-    container.innerHTML = `
-        <div class="eui-scale-display">
-            <span class="eui-scale-value" style="color: ${color}">${value.toFixed(1)}</span>
-            <span class="eui-scale-unit">kWh/m²·yr</span>
-            <div class="eui-scale-bar">
-                <div class="eui-scale-indicator" style="left: ${position}%"></div>
-            </div>
-            <div class="eui-scale-labels">
-                <span>${MIN}</span>
-                <span>${MAX}</span>
-            </div>
-        </div>
-    `;
-}
+// DBG-040, P1, 2026-08-24. renderPVScale stood here. It drew the PV GENERATION
+// INTENSITY at 32px, unlabelled, at the top of the PV page, which is the metric
+// CHV asked on 2026-08-24 to take out of the interface. The function is deleted
+// with the bar. See the comment in layer2_pv_breakdown.html for why the bar was
+// removed rather than re-pointed at another quantity.
 
 /**
  * Render the Energy Status icon
@@ -262,7 +219,8 @@ function resolveEnvelopeAndScenario(code) {
  * RoP is only displayed when Heat Pump COP 4 is the active demand selection;
  * for all other selections (COP 3 or Thermal Load COP 1) it is shown as —.
  * @param {string} neighbourhoodCode - The neighbourhood code
- * @returns {number|undefined} pvIntensity for use in renderPVScale
+ * @returns {number|undefined} pvIntensity, still used to compute the total in
+ *          MWh/yr below. It is no longer displayed: DBG-040.
  */
 function updatePVParameters(neighbourhoodCode) {
     if (!PV_GENERATION_DATA || !PV_GENERATION_DATA[neighbourhoodCode]) return undefined;
@@ -605,15 +563,13 @@ function initPVPage() {
     if (newLayout) newLayout.style.display = isLegacy ? 'none' : 'block';
     if (legacyLayout) legacyLayout.style.display = isLegacy ? 'block' : 'none';
 
-    // Render Energy Status icon and PV Images; updatePVParameters returns pvIntensity
+    // Render the Energy Status icon and the PV images.
     if (neighbourhoodCode) {
         renderEnergyStatus(neighbourhoodCode);
         updatePVImages(neighbourhoodCode);
-        const pvIntensity = updatePVParameters(neighbourhoodCode);
-        // Drive the scale bar with real intensity (not a hardcoded dummy)
-        renderPVScale(pvIntensity ?? 0);
-    } else {
-        renderPVScale(0);
+        // DBG-040. updatePVParameters still returns the intensity, because the
+        // total in MWh/yr is computed from it. Nothing displays it any more.
+        updatePVParameters(neighbourhoodCode);
     }
 
     if (neighbourhoodCode) {

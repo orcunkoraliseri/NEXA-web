@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
     <title>Scenario Summary | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=15">
+    <link rel="stylesheet" href="css/styles.css?v=16">
+    <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
+         /favicon.ico and the browser console logged an error on every visit,
+         which is the first thing a technical reviewer sees on opening it. -->
+    <link rel="icon" href="Content/Images_Copyright/RHLab.png" type="image/png" />
     <style>
         /* Summary Dashboard Specific Styles */
         .summary-grid {
@@ -237,6 +241,13 @@
                 <!-- Header -->
                 <header class="header">
                     <h1 id="neighbourhood-title">Scenario summary</h1>
+                    <!-- DBG-042, P2, 2026-08-24. CHV asked for LMN V1 to be used
+                         consistently, exports included. The .json export carries the
+                         name; the printed page did not, and the print is the artefact a
+                         reviewer keeps and circulates. This line is drawn on paper only,
+                         so nothing on screen changes, and its text comes from
+                         LMN_CONFIG so it cannot drift from the version stamp. -->
+                    <p class="print-only" id="print-tool-name"></p>
                     <p>Review the comprehensive outputs of your cumulative design parameters and configurations.</p>
                 </header>
 
@@ -336,10 +347,12 @@
                         <span class="scale-box-title">Layer 2: Energy Use Intensity (EUI)</span>
                         <div id="eui-scale-container" class="eui-scale-container"></div>
                     </div>
-                    <div class="scale-box">
-                        <span class="scale-box-title">Layer 2: Roof &amp; Facade PV Generation</span>
-                        <div id="pv-scale-container" class="eui-scale-container"></div>
-                    </div>
+                    <!-- DBG-040, P1, 2026-08-24. This box carried the same
+                         withdrawn PV generation intensity as the PV page, at
+                         the same 32px, on the one page a reviewer prints and
+                         keeps. Removed for the same reason and in the same way.
+                         Total PV generation in MWh/yr and total PV array area
+                         remain in the Layer 2 card below. -->
                     <div class="scale-box">
                         <span class="scale-box-title">Layer 4: Landscape PV Generation</span>
                         <div id="lpv-scale-container" class="eui-scale-container"></div>
@@ -356,7 +369,9 @@
                             <span class="summary-card-badge">Neighbourhood Unit</span>
                         </div>
                         <div class="nu-preview-box">
-                            <img id="l1-nu-image" src="" alt="Neighbourhood Unit" class="nu-preview-img" onerror="this.src='https://via.placeholder.com/200x150?text=N/A'">
+                            <!-- DBG-044, P2, 2026-08-24. via.placeholder.com is dead and the request
+                                 failed on every visit to this page. -->
+                            <img id="l1-nu-image" src="" alt="Neighbourhood Unit" class="nu-preview-img" onerror="this.style.display='none'">
                             <div class="nu-preview-info">
                                 <span id="l1-nu-code" class="nu-preview-code">—</span>
                                 <span id="l1-nu-concept" class="nu-preview-concept">—</span>
@@ -532,10 +547,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=15"></script>
-    <script src="js/data.js?v=15"></script>
-    <script src="js/sidebar.js?v=15"></script>
-    <script src="js/finish-design.js?v=15"></script>
+    <script src="js/config.js?v=16"></script>
+    <script src="js/data.js?v=16"></script>
+    <script src="js/sidebar.js?v=16"></script>
+    <script src="js/finish-design.js?v=16"></script>
 </body>
 
 </html>

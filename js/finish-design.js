@@ -64,43 +64,9 @@ function renderEUIScale(euiValue) {
     `;
 }
 
-function renderPVScale(value) {
-    const container = document.getElementById('pv-scale-container');
-    if (!container) return;
-
-    const MIN = 0;
-    const MAX = 100;
-    const position = Math.min(100, Math.max(0, ((value - MIN) / (MAX - MIN)) * 100));
-
-    let color;
-    if (position <= 50) {
-        const ratio = position / 50;
-        const r = Math.round(34 + (234 - 34) * ratio);
-        const g = Math.round(197 + (234 - 197) * ratio);
-        const b = Math.round(94 + (8 - 94) * ratio);
-        color = `rgb(${r}, ${g}, ${b})`;
-    } else {
-        const ratio = (position - 50) / 50;
-        const r = Math.round(234 + (239 - 234) * ratio);
-        const g = Math.round(179 + (68 - 179) * ratio);
-        const b = Math.round(8 + (68 - 8) * ratio);
-        color = `rgb(${r}, ${g}, ${b})`;
-    }
-
-    container.innerHTML = `
-        <div class="eui-scale-display">
-            <span class="eui-scale-value" style="color: ${color}">${value.toFixed(1)}</span>
-            <span class="eui-scale-unit">kWh/m²·yr</span>
-            <div class="eui-scale-bar">
-                <div class="eui-scale-indicator" style="left: ${position}%"></div>
-            </div>
-            <div class="eui-scale-labels">
-                <span>${MIN}</span>
-                <span>${MAX}</span>
-            </div>
-        </div>
-    `;
-}
+// DBG-040, P1, 2026-08-24. renderPVScale stood here and drew the same withdrawn
+// PV generation intensity on the summary page, the one page a reviewer prints.
+// Deleted with its box.
 
 function renderLPVScale(value) {
     const container = document.getElementById('lpv-scale-container');
@@ -574,6 +540,16 @@ function isCOP4Selected() {
 // Populate page fields
 // -------------------------------------------------------------
 function initSummaryPage() {
+    // DBG-042. The printed page names the tool. Screen unchanged: the element
+    // carries .print-only. Written before the neighbourhood gate below, so the
+    // name is on the paper even when the page stops for want of a selection.
+    const printName = document.getElementById('print-tool-name');
+    if (printName && typeof LMN_CONFIG !== 'undefined') {
+        printName.textContent = LMN_CONFIG.releaseName + ', the Layered Modular ' +
+            'Neighbourhood tool. Version ' + LMN_CONFIG.version +
+            ', last updated ' + LMN_CONFIG.lastUpdated + '.';
+    }
+
     const code = getQueryParam('neighbourhood');
     if (!code) {
         alert("No neighbourhood selected. Redirecting to start.");
@@ -650,7 +626,8 @@ function initSummaryPage() {
     // -------------------------------------------------------------
     // CARD 1: LAYER 1 - Morphology
     // -------------------------------------------------------------
-    const nuImage = nu.image || 'https://via.placeholder.com/200x150?text=' + encodeURIComponent(code);
+    // DBG-044, P2, 2026-08-24. See js/app.js: the placeholder service is dead.
+    const nuImage = nu.image || '';
     const imgEl = document.getElementById('l1-nu-image');
     if (imgEl) imgEl.src = nuImage;
 
@@ -708,9 +685,10 @@ function initSummaryPage() {
         l2PillsContainer.innerHTML = pillsHtml || '<span>No selections made</span>';
     }
 
-    // PV details populating
+    // PV details populating. DBG-040: the intensity is still READ, because the
+    // total in MWh/yr and the ratio of performance below are computed from it.
+    // It is no longer DRAWN: the scale box that printed it is gone.
     const pvIntensity = energyObject ? energyObject.pv : 0;
-    renderPVScale(pvIntensity);
 
     const pvData = PV_GENERATION_DATA[code];
     if (pvData) {

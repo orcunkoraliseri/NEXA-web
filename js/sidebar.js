@@ -96,7 +96,8 @@ function buildSidebar(currentLayer, mode) {
 
     // --- LAYER 1 DATA ---
 
-    const nuImage = neighbourhood.image || 'https://via.placeholder.com/200x150?text=' + encodeURIComponent(neighbourhood.code);
+    // DBG-044, P2, 2026-08-24. See js/app.js: the placeholder service is dead.
+    const nuImage = neighbourhood.image || '';
     const conceptImage = concept ? concept.image : '';
     const conceptName = concept ? concept.name : 'Concept';
 
@@ -112,7 +113,7 @@ function buildSidebar(currentLayer, mode) {
         <div class="sidebar-block">
             <h3 class="sidebar-subtitle">Neighbourhood</h3>
             <div class="sidebar-item sidebar-item--large">
-                <img src="${nuImage}" alt="${neighbourhood.code}" onerror="this.src='https://via.placeholder.com/200x150?text=${encodeURIComponent(neighbourhood.code)}'">
+                <img src="${nuImage}" alt="${neighbourhood.code}" onerror="this.style.display='none'">
                 <span class="code">${neighbourhood.code}</span>
             </div>
             <!-- CHV, 2026-08-17, point 8: "ensure FAR/density is shown

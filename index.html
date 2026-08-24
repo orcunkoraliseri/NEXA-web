@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=15" />
+    <link rel="stylesheet" href="css/styles.css?v=16" />
+    <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
+         /favicon.ico and the browser console logged an error on every visit,
+         which is the first thing a technical reviewer sees on opening it. -->
+    <link rel="icon" href="Content/Images_Copyright/RHLab.png" type="image/png" />
 </head>
 <body>
     <header class="header" role="banner">
@@ -53,7 +57,17 @@
             </div>
 
             <div class="submit-section">
-                <button id="get-started-btn" class="submit-btn" type="button">Get Started</button>
+                <!-- DBG-041, P1, 2026-08-24. CHV, Stage 1 item 4, wrote of the
+                     button beside this one: "It used to accept a click and do
+                     nothing, which reads as a choice." The same fault was still
+                     here, one element away. Get Started shipped enabled with
+                     nothing chosen, and its handler returned in silence: no
+                     navigation, no message, no error. It now ships disabled
+                     with the reason printed under it, which is the treatment
+                     every other gate in the tool uses, #view-results-btn on the
+                     next page included. -->
+                <button id="get-started-btn" class="submit-btn" type="button" disabled aria-disabled="true">Get Started</button>
+                <p id="get-started-hint" class="submit-hint">Choose a pathway above to continue.</p>
             </div>
 
             <!-- CHV, Stage 1, 2026-08-13. The scope sentence, in the same
@@ -85,7 +99,7 @@
         </footer>
 </main>
 
-    <script src="js/config.js?v=15"></script>
+    <script src="js/config.js?v=16"></script>
     <script>(function () {
             // CHV, Stage 1 item 7. The version and the date come from
             // LMN_CONFIG, the same pair the assumptions box on the Layer 2
@@ -110,7 +124,20 @@
                     btn.setAttribute('aria-pressed', isTarget ? 'true' : 'false');
                 });
                 selected = target ? target.dataset.choice : null;
+                updateGetStartedGate();
             }
+
+            // DBG-041. The gate, in one place, in the same shape
+            // checkAllFiltersSelected() uses on the climate page: the button
+            // and its reason are driven together, so they cannot disagree.
+            function updateGetStartedGate() {
+                const ready = selected === 'existing';
+                getStarted.disabled = !ready;
+                getStarted.setAttribute('aria-disabled', String(!ready));
+                const hint = document.getElementById('get-started-hint');
+                if (hint) hint.style.display = ready ? 'none' : 'block';
+            }
+            updateGetStartedGate();
 
             choices.forEach(btn => {
                 btn.addEventListener('click', () => updateSelection(btn));
@@ -120,11 +147,11 @@
             });
 
             getStarted.addEventListener('click', () => {
-                // Navigate only when "Existing Neighborhood" is selected.
-                if (selected === 'existing') {
-                    window.location.href = 'layer1_NUs_selection.html';
-                }
-                // If "existing" is not selected, intentionally do nothing per spec.
+                // DBG-041. Second gate, so the pathway cannot be skipped by
+                // clearing the disabled attribute in the browser inspector.
+                // The same second gate #view-results-btn carries.
+                if (selected !== 'existing') { updateGetStartedGate(); return; }
+                window.location.href = 'layer1_NUs_selection.html';
             });
         })();</script>
 </body>
