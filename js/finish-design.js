@@ -587,10 +587,23 @@ function initSummaryPage() {
         backBtn.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
     }
 
-    // Set Comparison Mode button href
+    // Comparison Mode entry point. The page it opens, comparison.html, is not
+    // published, so the button stays hidden and carries no href at all: it
+    // rendered on the live site and every click reached a 404. Stage 10,
+    // EXT-01, P0, 2026-08-24. It returns on its own the day
+    // LMN_CONFIG.comparisonMode.published is turned on.
     const compBtn = document.getElementById('comparison-btn');
     if (compBtn) {
-        compBtn.href = `comparison.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
+        const comparisonPublished = !!(window.LMN_CONFIG &&
+            LMN_CONFIG.comparisonMode &&
+            LMN_CONFIG.comparisonMode.published);
+        if (comparisonPublished) {
+            compBtn.href = `comparison.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
+            compBtn.hidden = false;
+        } else {
+            compBtn.removeAttribute('href');
+            compBtn.hidden = true;
+        }
     }
 
     // Lookup neighbourhood

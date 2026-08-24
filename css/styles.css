@@ -482,6 +482,14 @@ h3 {
   display: none;
 }
 
+/* Same reasoning for the Comparison Mode entry point on the final results
+   page: .next-button sets display to inline-flex, which beats the browser
+   rule for [hidden], so a button we mean to withhold would be drawn anyway.
+   EXT-01, 2026-08-24. */
+.next-button[hidden] {
+  display: none;
+}
+
 /* =====================================================================
    STAGE-08. The final results page. CHV Stage 8 items 1 to 9.
    ===================================================================== */

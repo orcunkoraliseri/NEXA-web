@@ -617,6 +617,19 @@ const LMN_CONFIG = {
   // everywhere, and hers for this case is "Not modelled yet". The value
   // changed, and the key changed with it, because a key that still said
   // comingSoonLabel would tell the next maintainer the opposite of the truth.
+  // Comparison Mode is built, reviewed and NOT published: comparison.html and
+  // js/comparison.js are deliberately not committed. The final results page
+  // still carries the entry point, so the button has to be told to stay away.
+  // An entry point that reaches a 404 is worse than no entry point.
+  //
+  // Found on the live site by an external model on 2026-08-24, Stage 10,
+  // EXT-01, P0. Turn published to true on the same day comparison.html is
+  // committed, and not one day before.
+  comparisonMode: {
+    published: false,
+    reason: "Comparison Mode is not published in LMN V1."
+  },
+
   availability: {
     notModelledLabel: "Not modelled yet",
 

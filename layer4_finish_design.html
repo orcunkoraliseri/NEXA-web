@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
     <title>Scenario Summary | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=14">
+    <link rel="stylesheet" href="css/styles.css?v=15">
     <style>
         /* Summary Dashboard Specific Styles */
         .summary-grid {
@@ -214,7 +214,11 @@
                     <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
             </a>
-            <a id="comparison-btn" href="#" class="next-button comparison-mode-btn">
+            <!-- Hidden in the markup, not by script: if the page script never
+                 reaches its end, a button that opens a page we do not publish
+                 must still not be there. js/finish-design.js reveals it only
+                 when LMN_CONFIG.comparisonMode.published is true. EXT-01. -->
+            <a id="comparison-btn" href="#" class="next-button comparison-mode-btn" hidden>
                 Comparison Mode
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -528,10 +532,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=14"></script>
-    <script src="js/data.js?v=14"></script>
-    <script src="js/sidebar.js?v=14"></script>
-    <script src="js/finish-design.js?v=14"></script>
+    <script src="js/config.js?v=15"></script>
+    <script src="js/data.js?v=15"></script>
+    <script src="js/sidebar.js?v=15"></script>
+    <script src="js/finish-design.js?v=15"></script>
 </body>
 
 </html>
