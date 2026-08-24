@@ -61,3 +61,7 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# Vendored third party code is kept byte for byte as it was downloaded, so no
+# line ending normalisation touches it. DBG-044, 2026-08-24.
+vendor/** -text

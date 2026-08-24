@@ -9,7 +9,12 @@
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
     <link rel="icon" href="Content/Images_Copyright/RHLab.png" type="image/png" />
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+    <!-- DBG-044, P2, 2026-08-24, second half. This named
+         ajax.googleapis.com, which was the last external host the site
+         called. The library is now vendored, version 4.2.0, byte for byte as
+         it was downloaded, BSD-3-Clause. See vendor/model-viewer/README.md
+         for what updating it involves. -->
+    <script type="module" src="vendor/model-viewer/model-viewer-4.2.0.min.js?v=16"></script>
 
     <style>
         body, html {
