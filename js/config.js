@@ -1346,7 +1346,8 @@ LMN_CONFIG.neighbourhoodBalance = {
   // Which of the two ratios is which, in one line each, for the table.
   ropContrast: "RoP counts the buildings only. The balance ratio counts the buildings, the vehicles and both arrays.",
 
-  // Decision V2-D1, 2026-08-21. Basis: docs/layer3_mobility_report.md, which
+  // Decision V2-D1, 2026-08-21. Basis: the Layer 3 mobility report, archived
+  // 2026-08-27 out of the published tree under docs_implementation/DONE/, which
   // models daily vehicle mileage as a static average of 15 kWh per EV per day,
   // roughly 200 km of range, with no seasonal, vacancy or cold weather term.
   // The stored figure is therefore a daily average and 365 is the right factor,
@@ -1354,7 +1355,7 @@ LMN_CONFIG.neighbourhoodBalance = {
   evAnnualisation: {
     daysPerYear: 365,
     basis: "daily average",
-    note: "Preliminary. The stored EV figure is a daily average, so the annual total assumes 365 identical days: no seasonal variation, no vacancy and no cold weather range loss. docs/layer3_mobility_report.md."
+    note: "Preliminary. The stored EV figure is a daily average, so the annual total assumes 365 identical days: no seasonal variation, no vacancy and no cold weather range loss."
   },
 
   // Decision V2-D2, 2026-08-21. Landscape PV enters the generation sum, but

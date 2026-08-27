@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare design pathways side by side for the same neighbourhood.">
+    <title>Comparison Mode | LMN V1, Layered Modular Neighbourhood Tool</title>
+    <link rel="stylesheet" href="css/styles.css?v=18">
+    <!-- Page-specific styles -->
+    <style>
+        /* ── Comparison Mode ── */
+        .comp-locked-header {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        .comp-locked-header h1 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin: 0 0 0.25rem 0;
+        }
+        .comp-locked-header p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0 0 var(--spacing-sm) 0;
+        }
+        .comp-locked-context {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        .comp-context-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .comp-context-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+        }
+        .comp-context-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Scenario panels */
+        .comp-scenarios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        .comp-scenario-panel {
+            background: var(--bg-card);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        .comp-scenario--a { border-left: 4px solid var(--accent-gold); }
+        .comp-scenario--b { border-left: 4px solid var(--accent-teal); }
+        .comp-scenario--c { border-left: 4px solid var(--accent-sage); }
+
+        .comp-scenario-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            border-bottom: 2px solid var(--accent-burnt);
+            padding-bottom: var(--spacing-xs);
+        }
+        .comp-scenario-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+        .comp-scenario--a .comp-scenario-badge { background: var(--accent-gold); color: #333; }
+        .comp-scenario--b .comp-scenario-badge { background: var(--accent-teal); }
+        .comp-scenario--c .comp-scenario-badge { background: var(--accent-sage); }
+
+        .comp-scenario-header h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 0;
+        }
+        .comp-scenario-tag {
+            margin-left: auto;
+            font-size: 0.75rem;
+            background: rgba(245,196,0,0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .comp-scenario-body { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+        .comp-scenario-footer { margin-top: var(--spacing-sm); }
+
+        /* Layer groups and collapsible */
+        .comp-layer-group {
+            background: rgba(0,0,0,0.015);
+            border-radius: var(--radius-sm);
+            padding: var(--spacing-xs) var(--spacing-sm);
+        }
+        .comp-layer-title {
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 0;
+        }
+        .comp-collapsible-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-xs) 0;
+        }
+        .comp-collapsible-btn:hover .comp-layer-title { color: var(--text-primary); }
+        .comp-chevron { transition: transform 0.2s ease; color: var(--text-secondary); }
+        .comp-collapsible-btn.open .comp-chevron { transform: rotate(180deg); }
+        .comp-collapsible-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .comp-collapsible-body.open { max-height: 1600px; }
+
+        /* Selection Pills (Scenario A) */
+        .selection-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        .selection-pill {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .selection-pill img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            vertical-align: middle;
+        }
+
+        /* Card groups inside collapsible panels */
+        .comp-card-group { margin-bottom: var(--spacing-sm); }
+        .comp-card-group-label {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+        .comp-card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        /* Selection cards inside comparison panels — matches Layer 2 dimensions */
+        .comp-card,
+        .comp-mini-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.6rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            width: 130px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .comp-card:hover:not(:disabled),
+        .comp-mini-card:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(232, 134, 10, 0.3);
+            border-color: rgba(232, 134, 10, 0.5);
+        }
+        .comp-card.active,
+        .comp-mini-card.active {
+            border-color: #E8860A;
+            background: rgba(245, 196, 0, 0.30);
+            box-shadow: 0 0 15px rgba(232, 134, 10, 0.25);
+        }
+        .comp-card:disabled,
+        .comp-mini-card:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            filter: grayscale(80%);
+        }
+        .comp-card img,
+        .comp-mini-card img {
+            width: 105px;
+            height: 68px;
+            object-fit: contain;
+            background-color: #fff;
+            border-radius: var(--radius-sm);
+            transition: transform var(--transition-normal);
+        }
+        .comp-card:hover:not(:disabled) img,
+        .comp-mini-card:hover:not(:disabled) img {
+            transform: scale(1.03);
+        }
+        .comp-card span,
+        .comp-mini-card span {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+            line-height: 1.25;
+        }
+
+        /* Add scenario button */
+        .comp-add-scenario {
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+        }
+        .comp-add-btn {
+            background: none;
+            border: 2px dashed rgba(0,0,0,0.15);
+            border-radius: var(--radius-md);
+            padding: 0.6rem 1.5rem;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .comp-add-btn:hover {
+            border-color: var(--accent-teal);
+            color: var(--accent-teal);
+        }
+        .comp-add-btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+
+        /* Results section */
+        .comp-results {
+            margin-bottom: var(--spacing-md);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            box-shadow: var(--shadow-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+        .comparison-table thead th {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: var(--spacing-sm) 1rem;
+            text-align: left;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-bottom: 2px solid var(--accent-burnt);
+        }
+        .comparison-table tbody tr {
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .comparison-table tbody tr:last-child { border-bottom: none; }
+        .comparison-table tbody tr:hover { background: rgba(232,134,10,0.04); }
+        .comparison-table td {
+            padding: 0.7rem 1rem;
+            vertical-align: middle;
+        }
+        .comparison-table td.label-cell {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .comparison-table td.value-cell {
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: right;
+        }
+        .comp-delta-positive { color: #22c55e; }
+        .comp-delta-negative { color: #ef4444; }
+        .comp-delta-neutral { color: var(--text-secondary); }
+        .comp-best-value {
+            background: rgba(34,197,94,0.08);
+        }
+
+        /* Chart section */
+        .comp-chart-section { margin-bottom: var(--spacing-md); }
+        .comp-chart-container {
+            background: var(--bg-card);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-card);
+            max-height: 450px;
+        }
+
+        /* Export buttons */
+        .comp-export {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* ---- ComparisonMode v2 ---- */
+
+        /* The header now carries a caption line and, when a selection cannot
+           reach a simulated rung, a note. Both need a row of their own. */
+        .comp-scenario-header { flex-wrap: wrap; }
+
+        /* The sentence that carries an assumption or a basis. Always visible,
+           never a tooltip, because these are the lines that keep a derived
+           number honest. */
+        .comp-fine-note {
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            margin: var(--spacing-xs) 0 0 0;
+        }
+
+        /* The two basis notes below the table, matched in style and set
+           side by side so neither reads as a footnote to the other. */
+        .comp-note-pair {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            align-items: stretch;
+        }
+        .comp-note-pair > p {
+            flex: 1 1 320px;
+            margin: var(--spacing-sm) 0 0 0;
+        }
+
+        /* P5. Which rung the selections resolved to, under each scenario badge. */
+        .comp-rung-caption {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin: 0.15rem 0 0 0;
+            width: 100%;
+        }
+        .comp-rung-caption strong { color: var(--text-primary); font-weight: 600; }
+
+        /* P1. Shown only when a selection cannot reach a simulated rung. */
+        .comp-ladder-note {
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: #8a5a00;
+            background: rgba(245,196,0,0.12);
+            border-left: 3px solid #F5C400;
+            padding: 0.5rem 0.7rem;
+            margin: 0.4rem 0 0 0;
+            border-radius: var(--radius-sm);
+            width: 100%;
+        }
+
+        /* P4. Two charts, one unit family each. */
+        .comp-chart-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+        .comp-chart-container { max-height: none; }
+        .comp-chart-title {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin: 0 0 var(--spacing-sm) 0;
+        }
+
+        /* P4. RoP leaves the bar chart: a ratio is not a quantity. */
+        .comp-ratio-strip {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+        .comp-gauge {
+            flex: 1 1 180px;
+            background: var(--bg-card);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-sm);
+            box-shadow: var(--shadow-card);
+        }
+        .comp-gauge-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        .comp-gauge-value {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .comp-gauge-track {
+            position: relative;
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(0,0,0,0.07);
+            margin: 0.45rem 0 0.3rem 0;
+            overflow: hidden;
+        }
+        .comp-gauge-fill { height: 100%; border-radius: 4px; }
+        .comp-gauge-threshold {
+            position: absolute;
+            top: -2px;
+            bottom: -2px;
+            width: 2px;
+            background: var(--text-secondary);
+            opacity: 0.55;
+        }
+        .comp-gauge-foot { font-size: 0.72rem; color: var(--text-secondary); }
+
+        /* P3. The balance block is arithmetic, and says so. */
+        .comparison-table tr.comp-section-row td {
+            background: var(--bg-secondary);
+            font-family: var(--font-display);
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-primary);
+            padding-top: 0.85rem;
+            padding-bottom: 0.35rem;
+        }
+        .comparison-table tr.comp-section-row .comp-section-sub {
+            display: block;
+            text-transform: none;
+            letter-spacing: 0;
+            font-family: var(--font-body);
+            font-size: 0.76rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
+        .comparison-table tr.comp-total-row td { font-weight: 700; }
+        .comparison-table tr.comp-note-row td {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            padding-top: 0.15rem;
+            padding-bottom: 0.6rem;
+        }
+        .comparison-table td.maturity-cell {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .comparison-table td.value-cell.comp-absent {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .comp-baseline-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+        }
+        .comp-copy-btn {
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--accent-burnt);
+            background: transparent;
+            color: var(--accent-burnt);
+            cursor: pointer;
+        }
+        .comp-copy-btn:hover { background: rgba(232,134,10,0.08); }
+
+        @media (max-width: 1000px) {
+            .comp-chart-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 800px) {
+            .comp-scenarios { grid-template-columns: 1fr; }
+            .comp-locked-context { flex-direction: column; }
+        }
+
+        /* P6. One sheet of paper: both charts, the strip and the whole table,
+           with the deltas still readable without colour. */
+        @media print {
+            .no-print { display: none !important; }
+            .comp-chart-grid { grid-template-columns: 1fr 1fr; gap: 8mm; }
+            .comp-chart-container { box-shadow: none; border: 1px solid #999; page-break-inside: avoid; }
+            .comp-ratio-strip { page-break-inside: avoid; }
+            .comp-gauge { box-shadow: none; border: 1px solid #999; }
+            .comp-results { page-break-inside: auto; }
+            .comparison-table { box-shadow: none; font-size: 0.72rem; }
+            .comparison-table tbody tr { page-break-inside: avoid; }
+            .comp-delta-positive::after { content: " (better)"; font-size: 0.85em; }
+            .comp-delta-negative::after { content: " (worse)"; font-size: 0.85em; }
+            .comp-delta-positive, .comp-delta-negative { color: #000 !important; }
+            .comp-best-value { background: none !important; text-decoration: underline; }
+            .comp-scenario-footer, .comp-add-scenario { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <main class="container container-wide">
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a id="back-btn" href="layer4_finish_design.html" class="back-button">
+                <!-- SVG arrow -->
+                Back to Scenario summary
+            </a>
+        </div>
+
+        <!-- Locked Header: shows the neighbourhood and climate (read-only from Layer 1) -->
+        <section class="comp-locked-header">
+            <h1 id="comp-title">Comparison Mode</h1>
+            <p>Compare alternative design pathways for the same neighbourhood and climate.</p>
+            <div class="comp-locked-context">
+                <div class="comp-context-item">
+                    <span class="comp-context-label">Neighbourhood</span>
+                    <span id="comp-nu-code" class="comp-context-value">—</span>
+                </div>
+                <div class="comp-context-item">
+                    <span class="comp-context-label">Climate & Envelope</span>
+                    <span id="comp-envelope" class="comp-context-value">—</span>
+                </div>
+                <div class="comp-context-item">
+                    <span class="comp-context-label">Floor area</span>
+                    <span id="comp-areas" class="comp-context-value">—</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Visual Comparison (Chart on Top) -->
+        <section class="comp-chart-section" id="comp-chart-section">
+            <h2 class="group-heading">Visual Comparison</h2>
+            <div class="comp-chart-grid">
+                <div class="comp-chart-container">
+                    <h3 class="comp-chart-title">Intensity</h3>
+                    <canvas id="comp-chart"></canvas>
+                    <p class="comp-fine-note" id="comp-chart-note"></p>
+                </div>
+                <div class="comp-chart-container">
+                    <h3 class="comp-chart-title">Where the energy goes</h3>
+                    <canvas id="comp-chart-enduse"></canvas>
+                    <p class="comp-fine-note">End uses from the same EnergyPlus run as the intensity beside it.</p>
+                </div>
+            </div>
+            <div class="comp-ratio-strip" id="comp-ratio-strip"></div>
+        </section>
+
+        <!-- 2. Scenario Panels (Selection in the Middle) -->
+        <div id="scenarios-container" class="comp-scenarios">
+            <!-- Scenario A (pre-filled from session) -->
+            <div class="comp-scenario-panel comp-scenario--a" id="scenario-a">
+                <div class="comp-scenario-header">
+                    <span class="comp-scenario-badge">A</span>
+                    <h2>Your Design</h2>
+                    <span class="comp-scenario-tag">Current session</span>
+                </div>
+                <div class="comp-scenario-body">
+                    <!-- Layer 2 pills -->
+                    <div class="comp-layer-group">
+                        <h3 class="comp-layer-title">Layer 2 — Energy</h3>
+                        <div id="scen-a-l2-pills" class="selection-pills"></div>
+                    </div>
+                    <!-- Layer 3 pills -->
+                    <div class="comp-layer-group">
+                        <h3 class="comp-layer-title">Layer 3 — Mobility</h3>
+                        <div id="scen-a-l3-pills" class="selection-pills"></div>
+                    </div>
+                    <!-- Layer 4 pills -->
+                    <div class="comp-layer-group">
+                        <h3 class="comp-layer-title">Layer 4 — Green Infrastructure</h3>
+                        <div id="scen-a-l4-pills" class="selection-pills"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario B (user builds) -->
+            <div class="comp-scenario-panel comp-scenario--b" id="scenario-b">
+                <div class="comp-scenario-header">
+                    <span class="comp-scenario-badge">B</span>
+                    <h2>Alternative</h2>
+                </div>
+                <div class="comp-scenario-body">
+                    <!-- Layer 2 selector (collapsible) -->
+                    <div class="comp-layer-group">
+                        <button class="comp-collapsible-btn" data-target="scen-b-l2-body">
+                            <h3 class="comp-layer-title">Layer 2 — Energy</h3>
+                            <svg class="comp-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div id="scen-b-l2-body" class="comp-collapsible-body">
+                            <!-- LOAD -->
+                            <div class="comp-card-group">
+                                <span class="comp-card-group-label">Load</span>
+                                <div class="comp-card-row" id="scen-b-load-cards"></div>
+                            </div>
+                            <!-- ENERGY SYSTEMS -->
+                            <div class="comp-card-group">
+                                <span class="comp-card-group-label">Energy Systems</span>
+                                <div class="comp-card-row" id="scen-b-demand-cards"></div>
+                            </div>
+                            <!-- ENERGY GENERATION -->
+                            <div class="comp-card-group">
+                                <span class="comp-card-group-label">Energy Generation</span>
+                                <div class="comp-card-row" id="scen-b-generation-cards"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 3 selector (collapsible) -->
+                    <div class="comp-layer-group">
+                        <button class="comp-collapsible-btn" data-target="scen-b-l3-body">
+                            <h3 class="comp-layer-title">Layer 3 — Mobility</h3>
+                            <svg class="comp-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div id="scen-b-l3-body" class="comp-collapsible-body">
+                            <div class="comp-card-group">
+                                <span class="comp-card-group-label">Transportation</span>
+                                <div class="comp-card-row" id="scen-b-transportation-cards"></div>
+                            </div>
+                            <div class="comp-card-group">
+                                <span class="comp-card-group-label">Mobility</span>
+                                <div class="comp-card-row" id="scen-b-mobility-cards"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 4 selector (collapsible) -->
+                    <div class="comp-layer-group">
+                        <button class="comp-collapsible-btn" data-target="scen-b-l4-body">
+                            <h3 class="comp-layer-title">Layer 4 — Green Infrastructure</h3>
+                            <svg class="comp-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div id="scen-b-l4-body" class="comp-collapsible-body">
+                            <div class="comp-card-group">
+                                <span class="comp-card-group-label">Energy-Integrated GI</span>
+                                <div class="comp-card-row" id="scen-b-green-cards"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comp-scenario-footer">
+                    <button id="copy-a-to-b" class="comp-copy-btn" type="button">Copy Scenario A into B</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Scenario C button -->
+        <div class="comp-add-scenario">
+            <button id="add-scenario-c" class="comp-add-btn">+ Add Scenario C</button>
+        </div>
+
+        <!-- 3. Comparison Results Table (at the Bottom) -->
+        <section class="comp-results" id="comp-results">
+            <h2 class="group-heading">Comparison Results</h2>
+            <label class="comp-baseline-toggle no-print">
+                <input type="checkbox" id="comp-show-baseline"> Show the NECB 2017 code minimum column
+            </label>
+            <table class="comparison-table" id="comp-table">
+                <thead>
+                    <tr id="comp-table-header">
+                        <th>Metric</th>
+                        <th>Scenario A</th>
+                        <th>Scenario B</th>
+                        <th>Δ (B − A)</th>
+                    </tr>
+                </thead>
+                <tbody id="comp-table-body"></tbody>
+            </table>
+            <!-- The two basis notes sit together under the table: what the
+                 numbers are (site energy, absent vs zero) and what they are
+                 divided by (heated and cooled floor area). Side by side on a
+                 wide screen, stacked on a narrow one. -->
+            <div class="comp-note-pair">
+                <p id="comp-baseline-note" class="selection-note info-box"></p>
+                <p id="comp-area-note" class="selection-note info-box"></p>
+            </div>
+        </section>
+
+        <!-- Export -->
+        <section class="comp-export no-print">
+            <button id="comp-print-btn" class="submit-btn">Print Comparison</button>
+            <button id="comp-export-btn" class="submit-btn">Download Comparison (.json)</button>
+            <button id="comp-export-csv-btn" class="submit-btn">Download Comparison (.csv)</button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
+            <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
+            <a class="footer-doc-link" href="documentation.html#sec-limitations">Methodology: Assumptions and limitations</a>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/config.js?v=18"></script>
+    <script src="js/data.js?v=18"></script>
+    <script src="js/sidebar.js?v=18"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/comparison.js?v=18"></script>
+</body>
+</html>

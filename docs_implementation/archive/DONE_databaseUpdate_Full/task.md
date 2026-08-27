@@ -1,8 +1,0 @@
-- [x] 1. Create and run `Templates/scripts/convert_master_csv.py`
-- [x] 2. Update `Templates` directory with new CSVs
-- [x] 3. Update `js/data.js` with new `NEIGHBOURHOODS` array
-- [x] 4. Update `js/data.js` with new `ENVELOPE_ENERGY_DATA`
-- [x] 5. Update `js/data.js` with new `PV_GENERATION_DATA` and `BUILDING_IMAGES`
-- [x] 6. Update `layer1_NUs_selection.html` filter cards
-- [x] 7. Update downstream JS files with null checks for missing data (EV, LPV, Heatmap)
-- [x] 8. Verify the UI and selection flows
