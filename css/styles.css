@@ -3939,3 +3939,469 @@ img.icon-missing {
   object-fit: contain;
   vertical-align: middle;
 }
+
+/* =====================================================================
+   Card Info Badges and Popovers (CHV / Supervisor Feedback)
+   ===================================================================== */
+.demand-card,
+.generation-card,
+.load-card,
+.usage-card,
+.consumption-card,
+.mobility-card {
+  position: relative;
+}
+
+.card-info-wrap {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border: 1.4px solid var(--accent-teal);
+  border-radius: 50%;
+  background: var(--bg-card, #ffffff);
+  color: var(--accent-teal);
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.15s ease);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  user-select: none;
+}
+
+.card-info-btn:hover,
+.card-info-btn:focus-visible,
+.card-info-wrap.is-open .card-info-btn {
+  background: var(--accent-teal);
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.card-info-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: -4px;
+  width: max-content;
+  min-width: 200px;
+  max-width: min(280px, calc(100vw - 32px));
+  padding: 8px 12px;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-subtle, #e0e0e0);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: var(--radius-sm, 4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: var(--text-secondary, #555555);
+  font-family: var(--font-primary);
+  font-size: 0.74rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast, 0.15s ease), visibility var(--transition-fast, 0.15s ease);
+  white-space: normal;
+  text-transform: none;
+}
+
+.card-info-wrap:hover .card-info-popover,
+.card-info-wrap.is-open .card-info-popover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.card-info-popover-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-primary, #1a1a1a);
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+.card-info-popover-text {
+  display: block;
+  color: var(--text-secondary, #555555);
+  font-family: var(--font-primary);
+  font-size: 0.73rem;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+/* =====================================================================
+   Terminology Compact Trigger and Popover (CHV & Supervisor Feedback)
+   ===================================================================== */
+.terminology-compact-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 16px auto;
+  z-index: 80;
+}
+
+.terminology-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  background: rgba(107, 168, 184, 0.09);
+  border: 1px solid rgba(107, 168, 184, 0.4);
+  border-radius: 20px;
+  color: var(--text-primary, #222222);
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.15s ease);
+  user-select: none;
+}
+
+.terminology-trigger-btn:hover,
+.terminology-trigger-btn:focus-visible,
+.terminology-compact-wrap.is-open .terminology-trigger-btn {
+  background: rgba(107, 168, 184, 0.18);
+  border-color: var(--accent-teal);
+  box-shadow: 0 2px 8px rgba(107, 168, 184, 0.25);
+  outline: none;
+}
+
+.terminology-trigger-text {
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
+.terminology-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(540px, calc(100vw - 32px));
+  padding: 12px 16px;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-subtle, #e0e0e0);
+  border-left: 4px solid var(--accent-teal);
+  border-radius: var(--radius-sm, 4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast, 0.15s ease), visibility var(--transition-fast, 0.15s ease);
+  text-align: left;
+}
+
+.terminology-compact-wrap:hover .terminology-popover,
+.terminology-compact-wrap.is-open .terminology-popover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.terminology-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.terminology-popover-title {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.terminology-popover-rule {
+  margin: 0 0 10px 0;
+  color: var(--text-secondary);
+  font-size: 0.77rem;
+  line-height: 1.5;
+}
+
+/* =====================================================================
+   Discreet Info Popovers (Replaces bulky static blue explanation boxes)
+   ===================================================================== */
+.info-popover-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 8px auto 14px auto;
+}
+
+.info-popover-row .info-popover-wrap {
+  margin: 0;
+}
+
+.info-popover-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 8px auto 14px auto;
+  z-index: 70;
+}
+
+.info-popover-wrap[hidden] {
+  display: none !important;
+}
+
+.info-popover-wrap:has(.info-popover-line:empty:only-of-type) {
+  display: none;
+}
+
+.info-popover-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 12px;
+  background: rgba(107, 168, 184, 0.08);
+  border: 1px solid rgba(107, 168, 184, 0.35);
+  border-radius: 18px;
+  color: var(--text-primary, #333333);
+  font-family: var(--font-primary);
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.15s ease);
+  user-select: none;
+}
+
+.info-popover-btn:hover,
+.info-popover-btn:focus-visible,
+.info-popover-wrap.is-open .info-popover-btn {
+  background: rgba(107, 168, 184, 0.18);
+  border-color: var(--accent-teal);
+  box-shadow: 0 2px 8px rgba(107, 168, 184, 0.2);
+  outline: none;
+}
+
+.info-popover-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 10px 14px;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-subtle, #e0e0e0);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: var(--radius-sm, 4px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.14);
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  text-align: left;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast, 0.15s ease), visibility var(--transition-fast, 0.15s ease);
+}
+
+.info-popover-wrap:hover .info-popover-panel,
+.info-popover-wrap.is-open .info-popover-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.info-popover-title {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.info-popover-line {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.48;
+}
+
+.info-popover-line + .info-popover-line {
+  margin-top: 6px;
+}
+
+.info-popover-panel .selection-note,
+.info-popover-panel .info-box {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: auto;
+  max-width: none;
+}
+
+.info-popover-panel .info-box::before {
+  display: none;
+}
+
+/* =====================================================================
+   Terminology Legend and Term Chips (CHV, 2026-08-30, WP22)
+   ===================================================================== */
+.term-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.term-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  user-select: none;
+}
+
+.term-chip-label {
+  display: inline-block;
+}
+
+.term-info-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.term-info-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border-radius: 50%;
+  color: var(--accent-teal);
+  transition: transform var(--transition-fast);
+}
+
+.term-info-btn:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+.term-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border: 1.2px solid var(--accent-teal);
+  border-radius: 50%;
+  color: var(--accent-teal);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.term-info-btn:hover .term-info-icon,
+.term-info-wrap.is-open .term-info-icon,
+.term-info-btn[aria-expanded="true"] .term-info-icon {
+  background: var(--accent-teal);
+  color: var(--bg-card);
+}
+
+.term-def-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(320px, calc(100vw - 32px));
+  padding: 8px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+  white-space: normal;
+}
+
+.term-info-wrap:hover .term-def-panel,
+.term-info-wrap.is-open .term-def-panel,
+.term-info-btn[aria-expanded="true"] + .term-def-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.term-def-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.term-def-body {
+  display: block;
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}

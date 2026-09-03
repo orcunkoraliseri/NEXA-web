@@ -88,7 +88,8 @@ function setupLoadCards() {
     const cards = document.querySelectorAll('.load-card');
 
     cards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            if (e && e.target && e.target.closest && e.target.closest('.card-info-wrap')) return;
             if (card.disabled) return; // Respect disabled state
 
             const value = card.dataset.value;
@@ -127,7 +128,8 @@ function setupDemandCards() {
     const cards = document.querySelectorAll('.demand-card');
 
     cards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            if (e && e.target && e.target.closest && e.target.closest('.card-info-wrap')) return;
             if (card.disabled) return; // Respect disabled state
 
             const value = card.dataset.value;
@@ -173,7 +175,8 @@ function setupGenerationCards() {
     const cards = document.querySelectorAll('.generation-card');
 
     cards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            if (e && e.target && e.target.closest && e.target.closest('.card-info-wrap')) return;
             if (card.disabled) return; // Respect disabled state
 
             const value = card.dataset.value;
@@ -216,12 +219,14 @@ function applyFacadePvRule(neighbourhoodCode, envelope) {
     const allowed = LMN_CONFIG.facadePvAllowed(neighbourhoodCode, envelope);
     const status = document.getElementById('pv-facade-status');
     const note = document.getElementById('pv-facade-note');
+    const wrap = document.getElementById('pv-facade-wrap');
 
     if (allowed) {
         card.disabled = false;
         card.classList.remove('is-unavailable');
         if (status) { status.hidden = true; status.textContent = ''; }
         if (note) { note.hidden = true; note.textContent = ''; }
+        if (wrap) { wrap.hidden = true; }
         return;
     }
 
@@ -237,6 +242,9 @@ function applyFacadePvRule(neighbourhoodCode, envelope) {
     if (note) {
         note.hidden = false;
         note.textContent = LMN_CONFIG.facadePv.restrictionNote;
+    }
+    if (wrap) {
+        wrap.hidden = false;
     }
 }
 

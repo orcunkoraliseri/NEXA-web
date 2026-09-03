@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select green parameters for neighbourhood analysis.">
     <title>Green Selection | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -57,13 +57,29 @@
                          badge. The two are now separate groups with their own
                          headings. -->
                     <h2 class="group-heading">Available now</h2>
-                    <p class="group-heading-note info-box">This option has a calculation method, so it produces a number.</p>
+                    <div class="info-popover-wrap">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Calculation Method Note">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Calculation Method Available</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Calculation Method</strong>
+                            <p class="info-popover-line">This option has a calculation method, so it produces an energy number.</p>
+                        </div>
+                    </div>
 
                     <div class="parameter-group">
                         <div class="parameter-label">Energy-Integrated GI</div>
                         <div class="consumption-cards">
                             <button class="consumption-card green-card" data-category="energy_integrated"
                                 data-value="pv_vgs">
+                                <span class="card-info-wrap">
+                                    <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about Landscape PV">i</span>
+                                    <span class="card-info-popover" role="tooltip">
+                                        <strong class="card-info-popover-title">Landscape PV (Preliminary)</strong>
+                                        <span class="card-info-popover-text">Ground-mounted photovoltaic arrays integrated into urban green infrastructure and open spaces.</span>
+                                    </span>
+                                </span>
                                 <img src="Content/Images_Layer4_EnergyIntegratedGI/lpv.png"
                                     alt="Landscape PV"
                                     onerror="LMN_CONFIG.iconMissing(this)">
@@ -74,7 +90,16 @@
                     </div>
 
                     <h2 class="group-heading">Future capabilities</h2>
-                    <p class="group-heading-note info-box">No quantitative method exists for these yet, so they cannot be selected and the tool shows no energy result for them.</p>
+                    <div class="info-popover-wrap">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Future Capabilities Note">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Method Under Development</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Future Capabilities</strong>
+                            <p class="info-popover-line">No quantitative method exists for these yet, so they cannot be selected and the tool shows no energy result for them.</p>
+                        </div>
+                    </div>
 
                     <!-- INFRASTRUCTURE -->
                     <div class="parameter-group">
@@ -167,10 +192,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/green-selection.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/green-selection.js?v=23"></script>
 </body>
 
 </html>

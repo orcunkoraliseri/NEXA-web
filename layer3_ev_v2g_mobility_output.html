@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EV & V2G mobility output and energy breakdown for the selected neighbourhood.">
     <title>EV &amp; V2G Mobility Output | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -45,7 +45,16 @@
                     <h1 id="neighbourhood-title">Layer 3: EV &amp; V2G Mobility Output</h1>
                     <!-- STAGE-06 task 6.9, CHV Stage 6 item 9. -->
                     <p class="status-badge-line"><span class="status-badge">Preliminary</span></p>
-                    <p id="ev-preliminary-note" class="selection-note info-box"></p>
+                    <div class="info-popover-wrap" id="ev-preliminary-wrap">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Preliminary calculation note">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Calculation basis</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Preliminary Calculation</strong>
+                            <p id="ev-preliminary-note" class="selection-note info-popover-line"></p>
+                        </div>
+                    </div>
                 </header>
 
                 <!-- Top Disclaimer Box -->
@@ -180,12 +189,16 @@
                      sign, in words, under the numbers it applies to. D6.11 keeps
                      the ISO 52000-1 and ASHRAE 228 convention, where energy the
                      grid delivers is positive. -->
-                <aside id="ev-notes-box" class="info-box">
-                    <div class="info-box-body">
-                        <p class="info-box-title">How to read these numbers</p>
-                        <p id="ev-sign-note" class="selection-note info-box-line"></p>
-                        <p id="ev-intensity-note" class="selection-note info-box-line"></p>
-                        <p id="ev-discharge-eff-note" class="selection-note info-box-line"></p>
+                <aside id="ev-notes-box" class="info-popover-wrap">
+                    <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle How to read these numbers">
+                        <span class="term-info-icon" aria-hidden="true">i</span>
+                        <span>How to read these numbers</span>
+                    </button>
+                    <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                        <strong class="info-popover-title">How to read these numbers</strong>
+                        <p id="ev-sign-note" class="selection-note info-popover-line"></p>
+                        <p id="ev-intensity-note" class="selection-note info-popover-line"></p>
+                        <p id="ev-discharge-eff-note" class="selection-note info-popover-line"></p>
                     </div>
                 </aside>
             </div>
@@ -198,10 +211,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/ev-v2g-breakdown.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/ev-v2g-breakdown.js?v=23"></script>
 </body>
 
 </html>

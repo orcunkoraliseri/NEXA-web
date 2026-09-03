@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Compare design pathways side by side for the same neighbourhood.">
     <title>Comparison Mode | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- Page-specific styles -->
     <style>
         /* ── Comparison Mode ── */
@@ -719,9 +719,27 @@
                  numbers are (site energy, absent vs zero) and what they are
                  divided by (heated and cooled floor area). Side by side on a
                  wide screen, stacked on a narrow one. -->
-            <div class="comp-note-pair">
-                <p id="comp-baseline-note" class="selection-note info-box"></p>
-                <p id="comp-area-note" class="selection-note info-box"></p>
+            <div class="comp-note-pair info-popover-row">
+                <div class="info-popover-wrap" id="comp-baseline-wrap">
+                    <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Baseline comparison note">
+                        <span class="term-info-icon" aria-hidden="true">i</span>
+                        <span>Baseline comparison note</span>
+                    </button>
+                    <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                        <strong class="info-popover-title">Baseline Comparison</strong>
+                        <p id="comp-baseline-note" class="selection-note info-popover-line"></p>
+                    </div>
+                </div>
+                <div class="info-popover-wrap" id="comp-area-wrap">
+                    <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Floor area basis note">
+                        <span class="term-info-icon" aria-hidden="true">i</span>
+                        <span>Floor area basis</span>
+                    </button>
+                    <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                        <strong class="info-popover-title">Floor Area Basis</strong>
+                        <p id="comp-area-note" class="selection-note info-popover-line"></p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -741,10 +759,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/comparison.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="vendor/chartjs/chart.umd.js"></script>
+    <script src="js/comparison.js?v=23"></script>
 </body>
 </html>

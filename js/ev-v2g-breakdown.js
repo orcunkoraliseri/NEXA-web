@@ -48,7 +48,7 @@ function showEmptyState() {
     // them. Without this the empty state still ships a titled box with
     // nothing inside it.
     ['ev-sign-note', 'ev-intensity-note', 'ev-discharge-eff-note', 'ev-preliminary-note',
-     'ev-notes-box'].forEach(id => {
+     'ev-notes-box', 'ev-preliminary-wrap'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.hidden = true;
     });
@@ -76,6 +76,7 @@ function showEmptyState() {
  * this page, written once from LMN_CONFIG.ev.
  */
 function applyLabels() {
+    if (typeof LMN_CONFIG === 'undefined') return;
     const ev = LMN_CONFIG.ev;
 
     setText('lbl-ev-ownership',        ev.ownershipRateLabel);
@@ -98,6 +99,10 @@ function applyLabels() {
     setText('ev-intensity-note',       'The intensity is measured ' + ev.intensityBasis + '.');
     setText('ev-discharge-eff-note',   ev.dischargeEfficiencyLabel + ': ' + ev.dischargeEfficiencyNote);
     setText('ev-preliminary-note',     ev.preliminaryNote);
+    const prelimWrap = document.getElementById('ev-preliminary-wrap');
+    if (prelimWrap) {
+        prelimWrap.hidden = !ev.preliminaryNote;
+    }
 }
 
 const TRANSPORT_LABEL_MAP = {

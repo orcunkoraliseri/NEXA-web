@@ -644,6 +644,8 @@ function renderComparisonTable(code, envelope, activeScenarios) {
         + LMN_CONFIG.envelopeLabel(envelope) + '. ' + LMN_CONFIG.units.energyBasisSentence
         + ' A metric that was not selected reads "Not selected" rather than zero, except where a zero is the measured answer: '
         + 'a neighbourhood with no fleet draws nothing to charge one, and a neighbourhood with no landscape array generates nothing from it.');
+    const compBaseWrap = document.getElementById('comp-baseline-wrap');
+    if (compBaseWrap) compBaseWrap.hidden = false;
 
     return results;
 }
@@ -1179,6 +1181,8 @@ function initComparisonPage() {
         setText('comp-areas', fsNum(condArea, 0) + ' m² heated and cooled'
             + (gfa != null ? '  ·  ' + fsNum(gfa, 0) + ' m² total built' : ''));
         setText('comp-area-note', LMN_CONFIG.units.floorAreaBasisNote);
+        const compAreaWrap = document.getElementById('comp-area-wrap');
+        if (compAreaWrap) compAreaWrap.hidden = false;
     }
 
     // ─── Scenario A: load from sessionStorage (read-only) ───

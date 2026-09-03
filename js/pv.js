@@ -384,7 +384,14 @@ function updatePVParameters(neighbourhoodCode) {
     // 2. Why the parameters above look different on a house. Same pattern as
     //    the notes already carried by the other result pages.
     const roofNoteEl = document.querySelector(isLegacy ? '#pv-roof-note-legacy' : '#pv-roof-note');
-    if (roofNoteEl && roof) roofNoteEl.textContent = roof.note;
+    const roofWrap = document.querySelector(isLegacy ? '#pv-roof-wrap-legacy' : '#pv-roof-wrap');
+    if (roofNoteEl) {
+        const roofText = (roof && roof.note) ? roof.note : '';
+        roofNoteEl.textContent = roofText;
+        if (roofWrap) {
+            roofWrap.hidden = !roofText;
+        }
+    }
 
     // 2b. What the Ratio of Performance means, on the page that prints it.
     //     CHV, 2026-08-13: keep RoP, and give it "a short and understandable
@@ -397,8 +404,20 @@ function updatePVParameters(neighbourhoodCode) {
     //     test is that the value starts with a digit, so this line does not
     //     have to carry a copy of the placeholder character.
     const ropNoteEl = document.querySelector(isLegacy ? '#pv-rop-note-legacy' : '#pv-rop-note');
+    const ropWrap = document.querySelector(isLegacy ? '#pv-rop-wrap-legacy' : '#pv-rop-wrap');
     if (ropNoteEl && typeof LMN_CONFIG !== 'undefined') {
-        ropNoteEl.textContent = /^[0-9]/.test(String(ropValue)) ? LMN_CONFIG.rop.interfaceNote : '';
+        const ropText = /^[0-9]/.test(String(ropValue)) ? LMN_CONFIG.rop.interfaceNote : '';
+        ropNoteEl.textContent = ropText;
+        if (ropWrap) {
+            ropWrap.hidden = !ropText;
+        }
+    }
+
+    const notesRow = document.querySelector(isLegacy ? '#pv-notes-row-legacy' : '#pv-notes-row');
+    if (notesRow) {
+        const hasRoof = roofWrap && !roofWrap.hidden;
+        const hasRop = ropWrap && !ropWrap.hidden;
+        notesRow.hidden = (!hasRoof && !hasRop);
     }
 
     // 3. STAGE-04 tasks 4.2 and 4.3, CHV action plan Stage 4 items 2 and 3.
@@ -406,8 +425,13 @@ function updatePVParameters(neighbourhoodCode) {
     //    figure is the same on every rung of the ladder. Wording lives in
     //    LMN_CONFIG so it cannot drift from the documentation.
     const scenNoteEl = document.querySelector(isLegacy ? '#pv-scenario-note-legacy' : '#pv-scenario-note');
+    const scenWrap = document.querySelector(isLegacy ? '#pv-scenario-wrap-legacy' : '#pv-scenario-wrap');
     if (scenNoteEl && typeof LMN_CONFIG !== 'undefined') {
-        scenNoteEl.textContent = LMN_CONFIG.pvScenarioNote(scenario);
+        const scenText = LMN_CONFIG.pvScenarioNote(scenario);
+        scenNoteEl.textContent = scenText;
+        if (scenWrap) {
+            scenWrap.hidden = !scenText;
+        }
     }
 
     // 4. CHV, 2026-08-17, points 1, 5 and 7. The Assumptions & Model

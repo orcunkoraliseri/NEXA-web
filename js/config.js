@@ -367,35 +367,35 @@ const LMN_CONFIG = {
       nu: "RC-D",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
       label: "Not available in this climate",
-      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
+      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-ML",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
       label: "Not available in this climate",
-      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
+      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-MR1",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
       label: "Not available in this climate",
-      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
+      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-R",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
       label: "Not available in this climate",
-      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
+      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     },
     {
       nu: "RC-T",
       climates: ["necb-z4", "necb-z5", "necb-z7a", "necb-z7b", "necb-z8", "high-performance-z4", "high-performance-z5", "high-performance-z7a", "high-performance-z7b", "high-performance-z8"],
       label: "Not available in this climate",
-      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are under revision and are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
+      reason: "The results behind them in this climate were merged upstream from a US detached house prototype rather than from the Canadian baseline, so they are not published. The corrected campaign exists for Montreal only. A re-run is needed before this neighbourhood can be shown for this climate.",
       debugRef: "DBG-028"
     }
   ],
@@ -853,10 +853,11 @@ const LMN_CONFIG = {
   // throughout the selections, graphs, results, summary and methodology."
   //
   // Her four, in her order, in her words. This is the ONLY place they are
-  // defined. LMN_CONFIG.terminologyLegend() below renders them, and every page
-  // that needs the legend calls that. acronyms above stays for the other five
-  // terms, which are not part of the scenario ladder; HPerf appears in both and
-  // both read the same string, which is checked by the verification suite.
+  // defined. LMN_CONFIG.terminologyLegendHtml() and LMN_CONFIG.termChipHtml()
+  // render them, and every page that needs the legend calls that. acronyms
+  // above stays for the other five terms, which are not part of the scenario
+  // ladder; HPerf appears in both and both read the same string, which is
+  // checked by the verification suite.
   abbreviations: [
     { short: "HPerf",    full: "High-Performance Envelope",         note: "High performance opaque assemblies, triple glazed windows, foundation and slab insulation, and infiltration reduced to a quarter." },
     { short: "Space HP", full: "Heat Pump for space conditioning",  note: "A cold climate air source heat pump for heating and cooling, COP 4.0 to 4.5, with inverter cooling and ventilation heat recovery." },
@@ -872,7 +873,7 @@ const LMN_CONFIG = {
   // read on screen, in the tooltip and in the assumptions box. The data keys
   // survive as the keys of this object and in documentation.html.
   eemDetails: {
-    DEFAULT: "Code compliant baseline as designed. Native PV only.",
+    DEFAULT: "Code compliant reference case built to NECB 2017 as designed (not a survey of existing buildings). Native PV only.",
     EEM1:    "HPerf, the High-Performance Envelope: high performance opaque assemblies, triple glazed windows (U 0.85, SHGC 0.40), foundation and slab insulation, infiltration reduced to a quarter.",
     EEM2:    "Everything in HPerf, plus Space HP: a cold climate air source heat pump (COP 4.0 to 4.5), inverter cooling, per zone heat pumps and ventilation heat recovery.",
     EEM3:    "Everything in HPerf + Space HP, plus HPWH: a transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements.",
@@ -982,6 +983,27 @@ const LMN_CONFIG = {
   // 6. Electric vehicles and V2G. D0.4, D0.4a, source RT01
   // =====================================================================
   //
+  // Layer 3 is marked Preliminary (not a building energy simulation).
+  // The six calculation values are the default arguments of
+  // Templates/Content_Layer3_Transportation/calculate_ev_scenarios.py. The equations
+  // in that file are numbered 12 to 18, and the source is identified (2026-08-31):
+  // Hachem-Vermette, C. (2025), Designing energy-positive neighborhoods: a modular
+  // framework for integrated planning and policy guidance, Energy Reports 14,
+  // 4492 to 4507, section 2.4, equations 12 to 18. The match is exact, symbol for
+  // symbol, for all seven equations, and equations 1 to 11 of the paper are the
+  // photovoltaic, district heating and heat pump chain, which is why the EV block
+  // starts at 12. Local copy:
+  // docs_implementation/documentation-revisions/Resources/1-s2.0-S2352484725006365-main.pdf
+  // (the earlier negative search is kept in
+  // docs_implementation/documentation-revisions/DeepResearchPrompts/responses/RT02_chv_ev_v2g_source_paper.md).
+  // Dr. Hachem-Vermette's instruction of 2026-08-30 was to use her paper's
+  // assumptions as the provisional basis, and the paper is now named.
+  // The 50 % stationary storage share (calculate_ev_scenarios.py line 31) is the
+  // paper's own, written inside equation 13 and not justified there; a candidate
+  // physical reading is vehicle standby drain (0.83 kWh/EV/day, unconfirmed, flag f2).
+  // As noted by Dr. Hachem-Vermette (2026-08-30), the V2G methodology,
+  // efficiencies and losses will require further development and validation in future work.
+  //
   // All four numeric fields are DAILY ENERGY. None of them is a power.
   // Two name collisions were confirmed as Blocking by RT01 section C:
   // "dischargeCapacity" with the unit string "10 kW / day" is not a valid
@@ -989,18 +1011,18 @@ const LMN_CONFIG = {
   // The recommended terms below come from IEC, ISO and SAE, not invented.
 
   ev: {
-    ownershipRateLabel: "EV ownership rate (EVs/household)",       // RT01 row 1
-    dailyChargingDemandLabel: "Daily charging demand per EV",      // RT01 row 2
+    ownershipRateLabel: "EV ownership rate (EVs/household)",       // RT01 row 1 (provisional V1 basis: 1.5 EVs/household)
+    dailyChargingDemandLabel: "Daily charging demand per EV",      // RT01 row 2 (provisional V1 basis: 15 kWh/(EV·day))
     dailyChargingDemandUnit: "kWh/(EV·day)",
 
-    chargingEfficiencyLabel: "Charging efficiency",                // RT01 row 3, keep
-    v2gParticipationLabel: "V2G participation rate",               // RT01 row 4, keep
-    dischargeEfficiencyLabel: "Discharge efficiency (V2G)",        // RT01 row 5
+    chargingEfficiencyLabel: "Charging efficiency",                // RT01 row 3 (provisional V1 basis: 90 %)
+    v2gParticipationLabel: "V2G participation rate",               // RT01 row 4 (provisional V1 basis: 50 %)
+    dischargeEfficiencyLabel: "Discharge efficiency (V2G)",        // RT01 row 5 (provisional V1 basis: 90 %, displayed and not applied)
 
-    dailyV2gExportPerEvLabel: "Daily V2G export per participating EV", // RT01 row 6
+    dailyV2gExportPerEvLabel: "Daily V2G export per participating EV", // RT01 row 6 (provisional V1 basis: 10 kWh/(EV·day))
     dailyV2gExportPerEvUnit: "kWh/(EV·day)",
 
-    dailyV2gEnergyLabel: "Daily V2G energy delivered",             // RT01 row 7
+    dailyV2gEnergyLabel: "Daily V2G energy delivered",             // RT01 row 7 (provisional V1 basis)
     dailyV2gEnergyUnit: "kWh/day",
 
     netGridDemandTotalLabel: "Net grid demand (total)",            // RT01 row 8a
@@ -1037,7 +1059,7 @@ const LMN_CONFIG = {
     dischargeEfficiencyNote: "Shown for reference. It is not applied to the exported energy in this version; the method is under review.",
 
     // D6.12, CHV Stage 6 item 9. Why these results are Preliminary, in one line.
-    preliminaryNote: "Preliminary. These figures come from a fixed calculation chain, households x EVs per household x daily charging demand, not from a building energy simulation.",
+    preliminaryNote: "Preliminary. These figures come from a fixed calculation chain, households x EVs per household x daily charging demand, not from a building energy simulation. The V2G methodology, efficiencies and losses will require further development and validation in future work.",
 
     // D6.13, CHV Stage 6 item 2. What the results page shows when the visitor
     // arrives without having chosen anything. It must show no numbers at all.
@@ -1643,31 +1665,239 @@ LMN_CONFIG.referenceChooserHtml = function (envelopeKey, currentKey) {
     '</div></div>';
 };
 
-LMN_CONFIG.terminologyLegendHtml = function () {
-  const lines = LMN_CONFIG.abbreviations.map(function (a) {
-    return '<p class="info-box-line"><strong>' + a.short + '</strong> = ' + a.full +
-      '. ' + a.note + '</p>';
-  }).join("");
-  return '<div class="info-box">' +
-    '<div class="info-box-body">' +
-    '<p class="info-box-title">Terminology</p>' +
-    '<p class="info-box-line">' + LMN_CONFIG.eemLadder.rule + '</p>' +
-    lines +
-    '</div></div>';
+LMN_CONFIG.termChipHtml = function (short) {
+  const term = typeof short === "string" ? short : (short && short.short ? short.short : "");
+  let item = null;
+  if (Array.isArray(LMN_CONFIG.abbreviations)) {
+    for (let i = 0; i < LMN_CONFIG.abbreviations.length; i++) {
+      if (LMN_CONFIG.abbreviations[i].short === term || LMN_CONFIG.abbreviations[i].short.toLowerCase() === term.toLowerCase()) {
+        item = LMN_CONFIG.abbreviations[i];
+        break;
+      }
+    }
+  }
+  if (!item) {
+    return term;
+  }
+  const slug = item.short.toLowerCase().replace(/[^a-z0-9]/g, "-");
+  const panelId = "term-def-" + slug;
+  return '<span class="term-chip">' +
+    '<span class="term-chip-label">' + item.short + '</span>' +
+    '<span class="term-info-wrap">' +
+      '<button type="button" class="term-info-btn" aria-label="Definition of ' + item.short + '" aria-describedby="' + panelId + '" aria-expanded="false">' +
+        '<span class="term-info-icon" aria-hidden="true">i</span>' +
+      '</button>' +
+      '<span id="' + panelId + '" class="term-def-panel" role="tooltip" aria-hidden="true">' +
+        '<strong class="term-def-title">' + item.short + ' = ' + item.full + '</strong>' +
+        '<span class="term-def-body">' + item.note + '</span>' +
+      '</span>' +
+    '</span>' +
+  '</span>';
 };
 
-// The mount. Several verification suites run the pages against a STUB DOM that
-// implements only the handful of methods those pages call, so the guard has to
-// test for the method and not only for the object. Session 15's rule: config.js
-// must load in node without a browser.
+LMN_CONFIG.terminologyLegendHtml = function () {
+  const chips = LMN_CONFIG.abbreviations.map(function (a) {
+    return LMN_CONFIG.termChipHtml(a.short);
+  }).join("");
+  return '<div class="terminology-compact-wrap terminology-legend">' +
+    '<button type="button" class="terminology-trigger-btn" aria-expanded="false" aria-label="Toggle Terminology and Cumulative Ladder">' +
+      '<span class="term-info-icon" aria-hidden="true">i</span>' +
+      '<span class="terminology-trigger-text">Terminology &amp; Cumulative Ladder</span>' +
+    '</button>' +
+    '<div class="terminology-popover" role="tooltip" aria-hidden="true">' +
+      '<div class="terminology-popover-header">' +
+        '<strong class="terminology-popover-title">Terminology &amp; Cumulative Ladder</strong>' +
+      '</div>' +
+      '<p class="terminology-popover-rule">' + LMN_CONFIG.eemLadder.rule + '</p>' +
+      '<div class="term-chips-row">' + chips + '</div>' +
+    '</div>' +
+  '</div>';
+};
+
+// The mount and interaction handlers. Several verification suites run the pages
+// against a STUB DOM that implements only the handful of methods those pages
+// call, so the guard has to test for the method and not only for the object.
+// Session 15 rule: config.js must load in node without a browser.
 if (typeof document !== "undefined" && typeof document.querySelectorAll === "function") {
+  const adjustTermPanelPosition = function (panel, wrap) {
+    try {
+      if (!panel) { return; }
+      const parentWrap = wrap || (typeof panel.closest === "function" ? panel.closest(".term-info-wrap, .terminology-compact-wrap, .info-popover-wrap, .card-info-wrap") : panel.parentElement);
+      if (!parentWrap || typeof parentWrap.getBoundingClientRect !== "function") { return; }
+      const winWidth = window.innerWidth || (document.documentElement ? document.documentElement.clientWidth : 1024) || 1024;
+      const wrapRect = parentWrap.getBoundingClientRect();
+      const panelRect = panel.getBoundingClientRect();
+      const panelWidth = panelRect.width || Math.min(300, winWidth - 32);
+
+      let desiredLeft = (wrapRect.left + wrapRect.width / 2) - (panelWidth / 2);
+      if (desiredLeft + panelWidth > winWidth - 8) {
+        desiredLeft = winWidth - 8 - panelWidth;
+      }
+      if (desiredLeft < 8) {
+        desiredLeft = 8;
+      }
+
+      const relLeft = desiredLeft - wrapRect.left;
+      panel.style.left = relLeft + "px";
+      panel.style.right = "auto";
+      panel.style.transform = "none";
+    } catch (e) {}
+  };
+
+  const closeAllTermPanels = function () {
+    try {
+      const openWraps = document.querySelectorAll(".term-info-wrap.is-open, .terminology-compact-wrap.is-open, .info-popover-wrap.is-open, .card-info-wrap.is-open");
+      if (openWraps) {
+        for (let i = 0; i < openWraps.length; i++) {
+          openWraps[i].classList.remove("is-open");
+        }
+      }
+      const openBtns = document.querySelectorAll('.term-info-btn[aria-expanded="true"], .terminology-trigger-btn[aria-expanded="true"], .info-popover-btn[aria-expanded="true"], .card-info-btn[aria-expanded="true"]');
+      if (openBtns) {
+        for (let i = 0; i < openBtns.length; i++) {
+          openBtns[i].setAttribute("aria-expanded", "false");
+        }
+      }
+      const openPanels = document.querySelectorAll('.term-def-panel[aria-hidden="false"], .terminology-popover[aria-hidden="false"], .info-popover-panel[aria-hidden="false"]');
+      if (openPanels) {
+        for (let i = 0; i < openPanels.length; i++) {
+          openPanels[i].setAttribute("aria-hidden", "true");
+          openPanels[i].style.left = "";
+          openPanels[i].style.right = "";
+          openPanels[i].style.transform = "";
+        }
+      }
+    } catch (e) {}
+  };
+
+  let termEventsInitialized = false;
+  const initTerminologyLegendEvents = function () {
+    if (termEventsInitialized) { return; }
+    if (typeof document.addEventListener !== "function") { return; }
+    termEventsInitialized = true;
+
+    try {
+      document.addEventListener("click", function (e) {
+        const target = e.target;
+        if (!target) { return; }
+
+        // Card info buttons
+        const cardBtn = (typeof target.closest === "function") ? target.closest(".card-info-btn") : null;
+        if (cardBtn) {
+          if (typeof e.preventDefault === "function") { e.preventDefault(); }
+          if (typeof e.stopPropagation === "function") { e.stopPropagation(); }
+          const wrap = (typeof cardBtn.closest === "function") ? cardBtn.closest(".card-info-wrap") : cardBtn.parentElement;
+          const wasOpen = wrap && wrap.classList.contains("is-open");
+          closeAllTermPanels();
+          if (!wasOpen && wrap) {
+            wrap.classList.add("is-open");
+            cardBtn.setAttribute("aria-expanded", "true");
+          }
+          return;
+        }
+
+        // Terminology trigger button
+        const termTrigger = (typeof target.closest === "function") ? target.closest(".terminology-trigger-btn") : null;
+        if (termTrigger) {
+          if (typeof e.preventDefault === "function") { e.preventDefault(); }
+          if (typeof e.stopPropagation === "function") { e.stopPropagation(); }
+          const wrap = (typeof termTrigger.closest === "function") ? termTrigger.closest(".terminology-compact-wrap") : termTrigger.parentElement;
+          const popover = wrap ? wrap.querySelector(".terminology-popover") : null;
+          const wasExpanded = termTrigger.getAttribute("aria-expanded") === "true";
+          closeAllTermPanels();
+          if (!wasExpanded && wrap && popover) {
+            wrap.classList.add("is-open");
+            termTrigger.setAttribute("aria-expanded", "true");
+            popover.setAttribute("aria-hidden", "false");
+            adjustTermPanelPosition(popover, wrap);
+          }
+          return;
+        }
+
+        // Info popover button
+        const infoBtn = (typeof target.closest === "function") ? target.closest(".info-popover-btn") : null;
+        if (infoBtn) {
+          if (typeof e.preventDefault === "function") { e.preventDefault(); }
+          if (typeof e.stopPropagation === "function") { e.stopPropagation(); }
+          const wrap = (typeof infoBtn.closest === "function") ? infoBtn.closest(".info-popover-wrap") : infoBtn.parentElement;
+          const panel = wrap ? wrap.querySelector(".info-popover-panel") : null;
+          const wasExpanded = infoBtn.getAttribute("aria-expanded") === "true";
+          closeAllTermPanels();
+          if (!wasExpanded && wrap && panel) {
+            wrap.classList.add("is-open");
+            infoBtn.setAttribute("aria-expanded", "true");
+            panel.setAttribute("aria-hidden", "false");
+            adjustTermPanelPosition(panel, wrap);
+          }
+          return;
+        }
+
+        // Term info button
+        const btn = (typeof target.closest === "function") ? target.closest(".term-info-btn") : null;
+        if (btn) {
+          if (typeof e.preventDefault === "function") { e.preventDefault(); }
+          if (typeof e.stopPropagation === "function") { e.stopPropagation(); }
+          const wrap = (typeof btn.closest === "function") ? btn.closest(".term-info-wrap") : btn.parentElement;
+          const panel = wrap ? wrap.querySelector(".term-def-panel") : null;
+          const wasExpanded = btn.getAttribute("aria-expanded") === "true";
+          closeAllTermPanels();
+          if (!wasExpanded && wrap && panel) {
+            wrap.classList.add("is-open");
+            btn.setAttribute("aria-expanded", "true");
+            panel.setAttribute("aria-hidden", "false");
+            adjustTermPanelPosition(panel, wrap);
+          }
+          return;
+        }
+
+        const insideAny = (typeof target.closest === "function") ? target.closest(".term-info-wrap, .terminology-compact-wrap, .info-popover-wrap, .card-info-wrap") : null;
+        if (!insideAny) {
+          closeAllTermPanels();
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" || e.key === "Esc") {
+          closeAllTermPanels();
+        }
+      });
+
+      document.addEventListener("mouseover", function (e) {
+        const target = e.target;
+        if (!target || typeof target.closest !== "function") { return; }
+        const termWrap = target.closest(".term-info-wrap");
+        if (termWrap) {
+          const panel = termWrap.querySelector(".term-def-panel");
+          if (panel) { adjustTermPanelPosition(panel, termWrap); }
+        }
+        const termPopWrap = target.closest(".terminology-compact-wrap");
+        if (termPopWrap) {
+          const popover = termPopWrap.querySelector(".terminology-popover");
+          if (popover) { adjustTermPanelPosition(popover, termPopWrap); }
+        }
+        const infoPopWrap = target.closest(".info-popover-wrap");
+        if (infoPopWrap) {
+          const panel = infoPopWrap.querySelector(".info-popover-panel");
+          if (panel) { adjustTermPanelPosition(panel, infoPopWrap); }
+        }
+        const cardInfoWrap = target.closest(".card-info-wrap");
+        if (cardInfoWrap) {
+          const panel = cardInfoWrap.querySelector(".card-info-popover");
+          if (panel) { adjustTermPanelPosition(panel, cardInfoWrap); }
+        }
+      });
+    } catch (e) {}
+  };
+
   const mountTerminologyLegend = function () {
     try {
-      const slots = document.querySelectorAll('.js-terminology-legend');
-      if (!slots) { return; }
-      for (let i = 0; i < slots.length; i++) {
-        slots[i].innerHTML = LMN_CONFIG.terminologyLegendHtml();
+      const slots = document.querySelectorAll(".js-terminology-legend");
+      if (slots && slots.length) {
+        for (let i = 0; i < slots.length; i++) {
+          slots[i].innerHTML = LMN_CONFIG.terminologyLegendHtml();
+        }
       }
+      initTerminologyLegendEvents();
     } catch (e) {
       // A stub DOM is not a failure condition. The legend is an explanation,
       // never a number, so a page that cannot mount it still renders.

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
     <title>Scenario Summary | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -315,7 +315,16 @@
                         </thead>
                         <tbody id="fs-comparison-body"></tbody>
                     </table>
-                    <p id="fs-baseline-note" class="selection-note info-box"></p>
+                    <div class="info-popover-wrap" id="fs-baseline-wrap">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Reference Case Note">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Reference Case &amp; Basis Note</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Reference Case Note</strong>
+                            <p id="fs-baseline-note" class="selection-note info-popover-line"></p>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Items 6 and 7, decision D8.3. The sentence is built only
@@ -547,10 +556,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/finish-design.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/finish-design.js?v=23"></script>
 </body>
 
 </html>

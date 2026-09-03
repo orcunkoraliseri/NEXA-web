@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18" />
+    <link rel="stylesheet" href="css/styles.css?v=23" />
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -70,17 +70,15 @@
                 <p id="get-started-hint" class="submit-hint">Choose a pathway above to continue.</p>
             </div>
 
-            <!-- CHV, Stage 1, 2026-08-13. The scope sentence, in the same
-                 component every other explanatory sentence on the site uses. -->
-            <div class="info-box" id="landing-scope-note">
-              <div class="info-box-body">
-                <p class="info-box-title">What this tool is for</p>
-                <!-- CHV, 2026-08-17, point 8: "remove 'fixed set of 35
-                     neighbourhood units' from the main introduction". The
-                     sentence keeps the pre-feasibility scope, which is what she
-                     asked for in Stage 1 and has not objected to, and drops the
-                     count. -->
-                <p class="info-box-line">It compares neighbourhood units that have already been simulated, so that an energy result can be read early, before a design exists. It is a pre-feasibility comparison tool. It does not design a neighbourhood, it does not optimise one, and it is not a substitute for detailed building energy modelling later in the project.</p>
+            <!-- CHV, Stage 1, 2026-08-13. The scope sentence, now using the discreet info trigger. -->
+            <div class="info-popover-wrap" id="landing-scope-note">
+              <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle What this tool is for">
+                <span class="term-info-icon" aria-hidden="true">i</span>
+                <span>What this tool is for</span>
+              </button>
+              <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                <strong class="info-popover-title">What this tool is for</strong>
+                <p class="info-popover-line">It compares neighbourhood units that have already been simulated, so that an energy result can be read early, before a design exists. It is a pre-feasibility comparison tool. It does not design a neighbourhood, it does not optimise one, and it is not a substitute for detailed building energy modelling later in the project.</p>
               </div>
             </div>
         </section>
@@ -99,7 +97,7 @@
         </footer>
 </main>
 
-    <script src="js/config.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
     <script>(function () {
             // CHV, Stage 1 item 7. The version and the date come from
             // LMN_CONFIG, the same pair the assumptions box on the Layer 2

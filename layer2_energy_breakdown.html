@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Energy demand breakdown visualization for neighbourhood configurations.">
     <title>Energy Breakdown | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -48,10 +48,18 @@
                     <div class="energy-indicators-row">
                         <div id="energy-status-container" class="energy-status-header"></div>
                         <div id="eui-scale-container" class="eui-scale-container"></div>
-                    </div>
                     <!-- Task 3.4, D3.2: what the number on the left actually is.
-                         Filled by js/energy.js from LMN_CONFIG. -->
-                    <p id="energy-basis-note" class="energy-basis-note info-box"></p>
+                         Filled by js/energy.js from LMN_CONFIG. Now using discreet info popover trigger. -->
+                    <div class="info-popover-wrap energy-basis-wrap" id="energy-basis-wrap">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Site Energy Basis">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Site Energy Basis</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Site Energy Basis</strong>
+                            <p id="energy-basis-note" class="info-popover-line"></p>
+                        </div>
+                    </div>
                 </header>
 
 
@@ -98,10 +106,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/energy.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/energy.js?v=23"></script>
 </body>
 
 </html>

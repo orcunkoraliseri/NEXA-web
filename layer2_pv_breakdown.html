@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PV Generation profile visualization for neighbourhood configurations.">
     <title>PV Generation | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -73,7 +73,16 @@
                     <!-- STAGE-04 tasks 4.2 and 4.3. What is being shown, and
                          why the rooftop figure does not move between rungs.
                          Filled by js/pv.js from LMN_CONFIG. -->
-                    <p class="pv-scenario-note info-box" id="pv-scenario-note"></p>
+                    <div class="info-popover-wrap" id="pv-scenario-wrap">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Rooftop PV Note">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Rooftop PV note</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Rooftop PV</strong>
+                            <p class="pv-scenario-note info-popover-line" id="pv-scenario-note"></p>
+                        </div>
+                    </div>
 
                     <!-- Row 1: the results.
                          CHV, 2026-08-17, point 7: "Please simplify the main
@@ -132,7 +141,33 @@
 
                     <!-- STAGE-04, DBG-013. Why a house shows a different
                          parameter set. Filled by js/pv.js. -->
-                    <p class="pv-roof-note info-box" id="pv-roof-note"></p>
+                    <div class="info-popover-row" id="pv-notes-row">
+                        <div class="info-popover-wrap" id="pv-roof-wrap">
+                            <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Roof Geometry Note">
+                                <span class="term-info-icon" aria-hidden="true">i</span>
+                                <span>Roof geometry note</span>
+                            </button>
+                            <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                                <strong class="info-popover-title">Roof Geometry</strong>
+                                <p class="pv-roof-note info-popover-line" id="pv-roof-note"></p>
+                            </div>
+                        </div>
+
+                        <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
+                             the number means and how to read it. Text from
+                             LMN_CONFIG.rop.interfaceNote, filled by js/pv.js, empty
+                             and therefore invisible when the ratio is not shown. -->
+                        <div class="info-popover-wrap" id="pv-rop-wrap">
+                            <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Ratio of Performance Note">
+                                <span class="term-info-icon" aria-hidden="true">i</span>
+                                <span>Ratio of Performance (RoP)</span>
+                            </button>
+                            <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                                <strong class="info-popover-title">Ratio of Performance (RoP)</strong>
+                                <p class="info-popover-line" id="pv-rop-note"></p>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- CHV, 2026-08-24, her section 4 item 5: "Add the snow
                          cover PV limitation directly on the PV result page for
@@ -142,13 +177,6 @@
                          every climate that has no note, so no page carries a
                          caution about a limitation it does not have. -->
                     <div class="info-box info-box--caution" id="pv-snow-note" hidden></div>
-
-
-                    <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
-                         the number means and how to read it. Text from
-                         LMN_CONFIG.rop.interfaceNote, filled by js/pv.js, empty
-                         and therefore invisible when the ratio is not shown. -->
-                    <p class="info-box" id="pv-rop-note"></p>
 
                     <!-- CHV, 2026-08-17, points 1, 5 and 7. Her named container.
                          Everything that is a model input rather than a result
@@ -195,7 +223,16 @@
                     <!-- STAGE-04 tasks 4.2 and 4.3. What is being shown, and
                          why the rooftop figure does not move between rungs.
                          Filled by js/pv.js from LMN_CONFIG. -->
-                    <p class="pv-scenario-note info-box" id="pv-scenario-note-legacy"></p>
+                    <div class="info-popover-wrap" id="pv-scenario-wrap-legacy">
+                        <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Rooftop PV Note">
+                            <span class="term-info-icon" aria-hidden="true">i</span>
+                            <span>Rooftop PV note</span>
+                        </button>
+                        <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                            <strong class="info-popover-title">Rooftop PV</strong>
+                            <p class="pv-scenario-note info-popover-line" id="pv-scenario-note-legacy"></p>
+                        </div>
+                    </div>
                     <div class="pv-profile-layout">
                         <div class="pv-left-column">
                             <!-- CHV, 2026-08-17, points 6 and 7. The same three
@@ -225,7 +262,33 @@
                         </div>
 
                     </div>
-                    <p class="pv-roof-note info-box" id="pv-roof-note-legacy"></p>
+                    <div class="info-popover-row" id="pv-notes-row-legacy">
+                        <div class="info-popover-wrap" id="pv-roof-wrap-legacy">
+                            <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Roof Geometry Note">
+                                <span class="term-info-icon" aria-hidden="true">i</span>
+                                <span>Roof geometry note</span>
+                            </button>
+                            <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                                <strong class="info-popover-title">Roof Geometry</strong>
+                                <p class="pv-roof-note info-popover-line" id="pv-roof-note-legacy"></p>
+                            </div>
+                        </div>
+
+                        <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
+                             the number means and how to read it. Text from
+                             LMN_CONFIG.rop.interfaceNote, filled by js/pv.js, empty
+                             and therefore invisible when the ratio is not shown. -->
+                        <div class="info-popover-wrap" id="pv-rop-wrap-legacy">
+                            <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Ratio of Performance Note">
+                                <span class="term-info-icon" aria-hidden="true">i</span>
+                                <span>Ratio of Performance (RoP)</span>
+                            </button>
+                            <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                                <strong class="info-popover-title">Ratio of Performance (RoP)</strong>
+                                <p class="info-popover-line" id="pv-rop-note-legacy"></p>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- CHV, 2026-08-24, her section 4 item 5: "Add the snow
                          cover PV limitation directly on the PV result page for
@@ -258,12 +321,6 @@
                         <div class="info-box" id="pv-provenance-note-legacy"></div>
                     </details>
 
-                    <!-- CHV, 2026-08-13, her answer on RoP: say on the page what
-                         the number means and how to read it. Text from
-                         LMN_CONFIG.rop.interfaceNote, filled by js/pv.js, empty
-                         and therefore invisible when the ratio is not shown. -->
-                    <p class="info-box" id="pv-rop-note-legacy"></p>
-
                     <!-- STAGE-04 task 4.9, CHV action plan Stage 4 item 8. -->
                     <p class="pv-method-link-wrap"><a class="pv-method-link" href="documentation.html#sec-pv">How this is calculated &rarr;</a></p>
                 </div>
@@ -278,10 +335,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/pv.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/pv.js?v=23"></script>
 </body>
 
 </html>

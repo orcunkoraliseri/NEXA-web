@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select energy parameters for neighbourhood energy analysis.">
     <title>Energy Selection | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -51,6 +51,13 @@
                         <div class="generation-container">
                             <div class="generation-row">
                                 <button class="load-card" data-category="load" data-value="thermal_load">
+                                    <span class="card-info-wrap">
+                                        <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about Thermal Load">i</span>
+                                        <span class="card-info-popover" role="tooltip">
+                                            <strong class="card-info-popover-title">Thermal Load</strong>
+                                            <span class="card-info-popover-text">Pure heating, cooling, and water heating thermal demand without mechanical system efficiencies applied.</span>
+                                        </span>
+                                    </span>
                                     <img src="Content/Images_Layer2_ThermalLoad/thermalload.png" alt="Thermal Load">
                                     <span>Thermal Load</span>
                                 </button>
@@ -64,15 +71,36 @@
                         <div class="generation-container">
                             <div class="generation-row">
                                 <button class="demand-card" data-category="demand" data-value="cop4">
+                                    <span class="card-info-wrap">
+                                        <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about Space HP">i</span>
+                                        <span class="card-info-popover" role="tooltip">
+                                            <strong class="card-info-popover-title">Space HP: Heat Pump (COP 4)</strong>
+                                            <span class="card-info-popover-text">A cold climate air source heat pump for heating and cooling, COP 4.0 to 4.5, with inverter cooling and ventilation heat recovery.</span>
+                                        </span>
+                                    </span>
                                     <img src="Content/Images_Layer2_EnergyDemand/heatpump_cop4.png" alt="COP 4 Heat Pump">
                                     <span>Heat Pump<br>(COP 4)</span>
                                 </button>
 
                                 <button class="demand-card" data-category="demand" data-value="dhw">
+                                    <span class="card-info-wrap">
+                                        <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about HPWH">i</span>
+                                        <span class="card-info-popover" role="tooltip">
+                                            <strong class="card-info-popover-title">HPWH: Heat Pump Water Heater</strong>
+                                            <span class="card-info-popover-text">A transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements.</span>
+                                        </span>
+                                    </span>
                                     <img src="Content/Images_Layer2_EnergyDemand/dhw.png" alt="Heat Pump for DHW">
                                     <span>Heat Pump<br>for DHW</span>
                                 </button>
                                 <button class="demand-card" data-category="demand" data-value="appliances">
+                                    <span class="card-info-wrap">
+                                        <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about EEM">i</span>
+                                        <span class="card-info-popover" role="tooltip">
+                                            <strong class="card-info-popover-title">EEM: Energy Efficiency Measures</strong>
+                                            <span class="card-info-popover-text">On top rung: automated shading, daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads, and appliance electrification.</span>
+                                        </span>
+                                    </span>
                                     <img src="Content/Images_Layer2_EnergyDemand/appliancesequipment.png"
                                         alt="Appliances and Equipment">
                                     <span>Efficient Appliances and Equipment</span>
@@ -92,10 +120,24 @@
                         <div class="generation-container">
                             <div class="generation-row">
                                 <button class="generation-card" data-category="generation" data-value="pv_roof">
+                                    <span class="card-info-wrap">
+                                        <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about PV on Roof">i</span>
+                                        <span class="card-info-popover" role="tooltip">
+                                            <strong class="card-info-popover-title">PV on Roof</strong>
+                                            <span class="card-info-popover-text">Photovoltaic array mounted on available roof area with crystalline silicon modules.</span>
+                                        </span>
+                                    </span>
                                     <img src="Content/Images_Layer2_EnergyGeneration/pv on roof.png" alt="PV on Roof">
                                     <span>PV on Roof</span>
                                 </button>
                                 <button class="generation-card" data-category="generation" data-value="pv_facade">
+                                    <span class="card-info-wrap">
+                                        <span class="card-info-btn" role="button" tabindex="0" aria-label="Information about PV on Facade">i</span>
+                                        <span class="card-info-popover" role="tooltip">
+                                            <strong class="card-info-popover-title">PV on Facade</strong>
+                                            <span class="card-info-popover-text">Building-integrated photovoltaic modules installed on vertical facade surfaces.</span>
+                                        </span>
+                                    </span>
                                     <img src="Content/Images_Layer2_EnergyGeneration/pv on facade.png"
                                         alt="PV on Facade">
                                     <span>PV on Facade</span>
@@ -145,7 +187,16 @@
                                     <span class="card-status">Not modelled yet</span>
                                 </button>
                             </div>
-                            <p class="selection-note info-box" id="pv-facade-note" hidden></p>
+                            <div class="info-popover-wrap" id="pv-facade-wrap" hidden>
+                                <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Facade PV Availability Note">
+                                    <span class="term-info-icon" aria-hidden="true">i</span>
+                                    <span>Facade PV availability note</span>
+                                </button>
+                                <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                                    <strong class="info-popover-title">Facade PV Availability</strong>
+                                    <p class="selection-note info-popover-line" id="pv-facade-note"></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -164,10 +215,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/energy-selection.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/energy-selection.js?v=23"></script>
 </body>
 
 </html>

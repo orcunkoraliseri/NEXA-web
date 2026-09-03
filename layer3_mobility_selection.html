@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Select mobility parameters for neighbourhood analysis.">
     <title>Mobility Selection | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=18">
+    <link rel="stylesheet" href="css/styles.css?v=23">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -132,7 +132,16 @@
                          is inside the click handler. -->
                     <div class="submit-section">
                         <button id="view-mobility-btn" class="submit-btn" disabled>View Mobility Performance</button>
-                        <p id="mobility-submit-reason" class="selection-note info-box">Select EV to see mobility results. V2G is an option on top of EV.</p>
+                        <div class="info-popover-wrap" id="mobility-submit-wrap">
+                            <button type="button" class="info-popover-btn" aria-expanded="false" aria-label="Toggle Selection Guidance">
+                                <span class="term-info-icon" aria-hidden="true">i</span>
+                                <span>Selection Guidance</span>
+                            </button>
+                            <div class="info-popover-panel" role="tooltip" aria-hidden="true">
+                                <strong class="info-popover-title">Selection Guidance</strong>
+                                <p id="mobility-submit-reason" class="info-popover-line">Select EV to see mobility results. V2G is an option on top of EV.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -145,10 +154,10 @@
 </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=18"></script>
-    <script src="js/data.js?v=18"></script>
-    <script src="js/sidebar.js?v=18"></script>
-    <script src="js/mobility-selection.js?v=18"></script>
+    <script src="js/config.js?v=23"></script>
+    <script src="js/data.js?v=23"></script>
+    <script src="js/sidebar.js?v=23"></script>
+    <script src="js/mobility-selection.js?v=23"></script>
 </body>
 
 </html>
