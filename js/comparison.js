@@ -1044,7 +1044,7 @@ function wireExport(code, envelope) {
     if (exportBtn) exportBtn.addEventListener('click', function () {
         const rows = buildExportRows(code, envelope);
         const payload = {
-            tool: 'LMN tool, Comparison Mode',
+            tool: 'N-LENS, Comparison Mode',
             exported: new Date().toISOString(),
             neighbourhood: code,
             climateAndStandard: LMN_CONFIG.envelopeLabel(envelope),

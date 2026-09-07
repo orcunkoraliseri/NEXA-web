@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>References &amp; Methodology | LMN V1, Layered Modular Neighbourhood Tool</title>
-    <link rel="stylesheet" href="css/styles.css?v=23" />
+    <title>References &amp; Methodology | N-LENS</title>
+    <link rel="stylesheet" href="css/styles.css?v=24" />
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -374,12 +374,12 @@
     <div class="doc-page">
 
         <!-- Back link -->
-        <a class="doc-back" href="index.html">&larr; Back to the LMN Tool</a>
+        <a class="doc-back" href="index.html">&larr; Back to N-LENS</a>
 
         <!-- Hero -->
         <div class="doc-hero">
-            <h1>LMN V1 &mdash; References &amp; Methodology</h1>
-            <p>Standards, assumptions, methodologies, and references behind the LMN neighbourhood-energy tool.</p>
+            <h1>N-LENS V1 &mdash; References &amp; Methodology</h1>
+            <p>Standards, assumptions, methodologies, and references behind the N-LENS neighbourhood-energy tool.</p>
         </div>
 
         <!-- DISCLAIMER -->
@@ -395,7 +395,7 @@
         <div class="doc-toc" role="navigation" aria-label="Table of Contents">
             <h2>Contents</h2>
             <ol>
-                <li><a href="#sec-what-is-lmn">What is LMN</a></li>
+                <li><a href="#sec-what-is-lmn">What is N-LENS</a></li>
                 <li><a href="#sec-layers">How the Four Layers Work</a></li>
                 <li><a href="#sec-pv">PV Methodology &amp; kWh/m&sup2; Definition</a></li>
                 <li><a href="#sec-rop">Ratio of Performance (RoP)</a></li>
@@ -415,9 +415,9 @@
 
         <!-- Section A: What is LMN -->
         <section class="doc-section" id="sec-what-is-lmn">
-            <h2>A &mdash; What is LMN</h2>
+            <h2>A &mdash; What is N-LENS</h2>
             <p>
-                <strong>LMN stands for Layered Modular Neighbourhood.</strong> It is an interactive
+                <strong>N-LENS stands for Neighbourhood Layered Energy &amp; Systems Explorer.</strong> It is an interactive
                 neighbourhood energy explorer. The user composes a neighbourhood by typology
                 (Layer 1), then overlays energy demand + generation systems (Layer 2), electric mobility (Layer 3),
                 and green infrastructure (Layer 4). Behind each neighbourhood archetype sits a full EnergyPlus
@@ -428,13 +428,13 @@
             <!-- CHV, 2026-08-24: "Please use the same V1 designation consistently
                  in the methodology, README, results/export and handover so that
                  future developments can clearly become V2, etc." -->
-            <h3>What LMN V1 is, and what it is not yet</h3>
+            <h3>What N-LENS V1 is, and what it is not yet</h3>
             <p>
-                This release is <strong>LMN V1</strong>. Everything described on this page is what
+                This release is <strong>N-LENS V1</strong>. Everything described on this page is what
                 V1 contains. Anything not listed here is not in V1, and later work becomes V2.
             </p>
             <table class="doc-table">
-                <thead><tr><th>In LMN V1</th><th>Not in V1</th></tr></thead>
+                <thead><tr><th>In N-LENS V1</th><th>Not in V1</th></tr></thead>
                 <tbody>
                     <tr>
                         <td>
@@ -470,7 +470,7 @@
 
             <h3>Intended use</h3>
             <p>
-                LMN is an <strong>early stage comparison tool</strong>. It is meant for a planner, a
+                N-LENS is an <strong>early stage comparison tool</strong>. It is meant for a planner, a
                 municipality or a researcher who wants to see how neighbourhood form, envelope standard,
                 on-site generation and electric mobility move a small set of energy indicators, before any
                 design work begins.
@@ -485,7 +485,7 @@
 
             <h3>Coverage, and what each status word means</h3>
             <p>
-                <strong>Five climate arms are published in LMN V1:</strong>
+                <strong>Five climate arms are published in N-LENS V1:</strong>
                 <strong>Vancouver (zone 4), Toronto (zone 5), Montr&eacute;al (zone 6),
                 Winnipeg (zone 7A), Fort McMurray (zone 7B)</strong>, each on NECB 2017. Each
                 carries 35 neighbourhood units and a five rung scenario ladder, and each has a
@@ -919,7 +919,7 @@
                  to EPW registry, and each is also carried in js/config.js so the
                  result pages print the same file this table lists. -->
             <p>
-                Seven climate arms were simulated. Five are published in LMN V1. The ASHRAE arm is a United States reference case and Zone 8, Chisasibi, is held back at the supervisor's request; both remain in the research database.
+                Seven climate arms were simulated. Five are published in N-LENS V1. The ASHRAE arm is a United States reference case and Zone 8, Chisasibi, is held back at the supervisor's request; both remain in the research database.
                 Each climate the tool offers is a separate EnergyPlus campaign on its own weather
                 file. The exact file is named on every result page, under
                 <strong>Assumptions &amp; Model Information</strong>.
@@ -969,7 +969,7 @@
                         <td>Chisasibi, QC &mdash; NECB Zone 8</td>
                         <td><code>CAN_QC_La.Grande.Riviere.AP.718270_CWEC.epw</code></td>
                         <td>NECB 2017</td>
-                        <td><strong>Not published in LMN V1.</strong> Simulation-backed, and the arm is complete, but CHV asked on 2026-08-24 that it not be published in the public tool at this stage. It stays in the research database and in this register. Chisasibi also has no CWEC2020v2 file: the run uses the La Grande Rivi&egrave;re airport station, CYGL, about 90&nbsp;km inland, and it is a proxy</td>
+                        <td><strong>Not published in N-LENS V1.</strong> Simulation-backed, and the arm is complete, but CHV asked on 2026-08-24 that it not be published in the public tool at this stage. It stays in the research database and in this register. Chisasibi also has no CWEC2020v2 file: the run uses the La Grande Rivi&egrave;re airport station, CYGL, about 90&nbsp;km inland, and it is a proxy</td>
                     </tr>
                     <tr>
                         <td>ASHRAE reference case &mdash; United States</td>
@@ -1090,7 +1090,7 @@
                 neighbourhood are actually built today.</strong>
             </p>
             <p>
-                In LMN V1 the reference case is <strong>chosen by the reader</strong>, and nothing
+                In N-LENS V1 the reference case is <strong>chosen by the reader</strong>, and nothing
                 is compared until it is. Two references exist:
             </p>
             <ul>
@@ -1780,11 +1780,11 @@
         <footer class="site-footer">
             <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
             <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
-            <a class="footer-doc-link" href="index.html">Back to the LMN Tool</a>
+            <a class="footer-doc-link" href="index.html">Back to N-LENS</a>
         </footer>
 
     </div><!-- /.doc-page -->
 </main>
-    <script src="js/config.js?v=23"></script>
+    <script src="js/config.js?v=24"></script>
 </body>
 </html>

@@ -215,6 +215,12 @@ h3 {
     margin: 0 auto 0.5rem auto;
 }
 
+.welcome-tagline {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0 auto 0.5rem auto;
+}
+
 .welcome-subtitle {
     color: var(--text-secondary);
     max-width: 760px;

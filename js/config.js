@@ -38,8 +38,12 @@ const LMN_CONFIG = {
   //
   // These two strings are the single source of the release name. No page, no
   // export and no report writes it as a literal.
-  releaseName: "LMN V1",
-  productName: "LMN V1, Layered Modular Neighbourhood Tool",
+  //
+  // CHV, 2026-09-07: her email renamed the release from LMN V1 to N-LENS and
+  // added the Version 1, Research Preview tagline shown under the name.
+  releaseName: "N-LENS",
+  productName: "N-LENS, Neighbourhood Layered Energy & Systems Explorer",
+  releaseTagline: "Version 1 · Research Preview",
 
   // 1.0.0, 2026-08-24. The release identity she asked for. The campaign, the
   // stored values and the engine are unchanged: this is the version number of
@@ -236,7 +240,7 @@ const LMN_CONFIG = {
       climates: ["necb-z8", "high-performance-z8"],
       showOnSelection: false,
       label: "Not available in this climate",
-      reason: "NECB Zone 8 is not published in LMN V1. The zone was simulated, and it remains part of the research database and the technical documentation, but its quantitative results are not exposed in the public tool at this stage. It is also the only zone in the campaign without a CWEC2020v2 weather file: the run uses La Grande Riviere airport, CYGL, about 90 km inland from Chisasibi, as a proxy station.",
+      reason: "NECB Zone 8 is not published in N-LENS. The zone was simulated, and it remains part of the research database and the technical documentation, but its quantitative results are not exposed in the public tool at this stage. It is also the only zone in the campaign without a CWEC2020v2 weather file: the run uses La Grande Riviere airport, CYGL, about 90 km inland from Chisasibi, as a proxy station.",
       debugRef: "CHV-2026-08-24"
     }
   ],
@@ -627,7 +631,7 @@ const LMN_CONFIG = {
   // committed, and not one day before.
   comparisonMode: {
     published: false,
-    reason: "Comparison Mode is not published in LMN V1."
+    reason: "Comparison Mode is not published in N-LENS."
   },
 
   availability: {

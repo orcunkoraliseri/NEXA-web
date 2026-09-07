@@ -510,7 +510,7 @@ function fsWireExport(code, ctx, cmp, meaning, constraint, assumptions) {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'LMN-scenario-' + code + '.json';
+        a.download = 'N-LENS-scenario-' + code + '.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -545,8 +545,7 @@ function initSummaryPage() {
     // name is on the paper even when the page stops for want of a selection.
     const printName = document.getElementById('print-tool-name');
     if (printName && typeof LMN_CONFIG !== 'undefined') {
-        printName.textContent = LMN_CONFIG.releaseName + ', the Layered Modular ' +
-            'Neighbourhood tool. Version ' + LMN_CONFIG.version +
+        printName.textContent = LMN_CONFIG.productName + '. Version ' + LMN_CONFIG.version +
             ', last updated ' + LMN_CONFIG.lastUpdated + '.';
     }
 
