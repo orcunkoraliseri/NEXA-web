@@ -567,8 +567,15 @@ function initSummaryPage() {
     // Comparison Mode entry point. The page it opens, comparison.html, is not
     // published, so the button stays hidden and carries no href at all: it
     // rendered on the live site and every click reached a 404. Stage 10,
-    // EXT-01, P0, 2026-08-24. It returns on its own the day
-    // LMN_CONFIG.comparisonMode.published is turned on.
+    // EXT-01, P0, 2026-08-24.
+    //
+    // COMMENTED OUT 2026-09-10, Koral's decision: Comparison Mode goes offline
+    // instead of to CHV for review, and is kept in the repository so it can
+    // come back. Nothing is deleted. The anchor it looked for is commented out
+    // in layer4_finish_design.html, so this block now has nothing to act on.
+    // To restore: uncomment both, set LMN_CONFIG.comparisonMode.published to
+    // true, and bump the ?v= stamp on every page in the same commit.
+    /*
     const compBtn = document.getElementById('comparison-btn');
     if (compBtn) {
         const comparisonPublished = !!(window.LMN_CONFIG &&
@@ -583,6 +590,7 @@ function initSummaryPage() {
             compBtn.hidden = true;
         }
     }
+    */
 
     // Lookup neighbourhood
     const nu = NEIGHBOURHOODS.find(n => n.code === code);

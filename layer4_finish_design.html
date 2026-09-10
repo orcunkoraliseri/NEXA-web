@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consolidated summary and outputs of all design layers.">
     <title>Scenario Summary | N-LENS</title>
-    <link rel="stylesheet" href="css/styles.css?v=26">
+    <link rel="stylesheet" href="css/styles.css?v=27">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -218,10 +218,17 @@
                     <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
             </a>
-            <!-- Hidden in the markup, not by script: if the page script never
-                 reaches its end, a button that opens a page we do not publish
-                 must still not be there. js/finish-design.js reveals it only
-                 when LMN_CONFIG.comparisonMode.published is true. EXT-01. -->
+            <!-- Comparison Mode entry point, COMMENTED OUT 2026-09-10 on
+                 Koral's decision: Comparison Mode goes offline rather than to
+                 CHV for review, and is kept in the repository so that it can
+                 come back. Nothing is deleted. It was already hidden in the
+                 markup and gated by LMN_CONFIG.comparisonMode.published, which
+                 stays false; the markup is commented out as well so that the
+                 button cannot be revealed by the flag alone. To restore:
+                 uncomment this anchor, uncomment the matching block in
+                 js/finish-design.js, set published to true, bump the ?v= stamp.
+                 EXT-01, Stage 10.
+
             <a id="comparison-btn" href="#" class="next-button comparison-mode-btn" hidden>
                 Comparison Mode
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -232,6 +239,7 @@
                     <rect x="14" y="14" width="7" height="7"></rect>
                 </svg>
             </a>
+            -->
         </div>
 
         <div class="sidebar-layout">
@@ -556,10 +564,10 @@
     </main>
 
     <!-- Scripts -->
-    <script src="js/config.js?v=26"></script>
-    <script src="js/data.js?v=26"></script>
-    <script src="js/sidebar.js?v=26"></script>
-    <script src="js/finish-design.js?v=26"></script>
+    <script src="js/config.js?v=27"></script>
+    <script src="js/data.js?v=27"></script>
+    <script src="js/sidebar.js?v=27"></script>
+    <script src="js/finish-design.js?v=27"></script>
 </body>
 
 </html>

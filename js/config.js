@@ -641,11 +641,19 @@ const LMN_CONFIG = {
   // reaches a 404 is worse than no entry point.
   //
   // Found on the live site by an external model on 2026-08-24, Stage 10,
-  // EXT-01, P0. Turn published to true only once CHV has reviewed and
-  // approved Comparison Mode for publication (E13).
+  // EXT-01, P0.
+  //
+  // SETTLED 2026-09-10, Koral's decision: Comparison Mode goes offline rather
+  // than to CHV for review, and may come back later. It is kept in the
+  // repository, nothing is deleted, and the question was taken out of EMAIL-13.
+  // Both entry points are now commented out as well, the anchor in
+  // layer4_finish_design.html and the block in js/finish-design.js, so this
+  // flag is the record of the decision rather than the only thing holding the
+  // button back. To bring it back: uncomment both, set published to true, and
+  // bump the ?v= stamp on every page in the same commit.
   comparisonMode: {
     published: false,
-    reason: "Comparison Mode is not published in N-LENS."
+    reason: "Comparison Mode is offline in N-LENS, kept for a possible return."
   },
 
   availability: {
