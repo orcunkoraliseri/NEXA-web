@@ -23,14 +23,16 @@ function setupNavigation() {
     const neighbourhoodCode = getNeighbourhoodFromURL();
 
     if (backBtn && neighbourhoodCode) {
-        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+        // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+        const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
         backBtn.href = `layer4_green_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
     }
 
     const lpvBtn = document.getElementById('proceed-lpv-btn');
     if (lpvBtn && neighbourhoodCode) {
         lpvBtn.addEventListener('click', () => {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+            // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
             window.location.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         });
     }

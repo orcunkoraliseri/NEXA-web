@@ -607,13 +607,15 @@ function initPVPage() {
 
         // Set back button href to energy-selection page
         if (backStepBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+            // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
             backStepBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 
         // Set next step button href
         if (nextStepBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+            // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
             nextStepBtn.href = `layer3_mobility_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
     } else {

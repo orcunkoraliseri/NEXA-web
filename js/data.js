@@ -1,23 +1,10 @@
 /**
  * LMN V1, Layered Modular Neighbourhood Tool - Data Module
- * Contains concept and neighbourhood data derived from CSV files
+ * Contains neighbourhood, energy and PV data derived from CSV files.
+ * A12, 2026-09-09: CONCEPTS and five other hand-maintained blocks moved to
+ * js/config.js, which loads before this file on every page. See its own
+ * header comment, rule 4.
  */
-
-// Concept definitions (for Concept column display)
-const CONCEPTS = [
-  { id: 1, name: "Financial Dist", image: "Content/Images_Concept/1-financial_district.png" },
-  { id: 2, name: "Downtown Residential", image: "Content/Images_Concept/2-dense_residential.png" },
-  { id: 3, name: "Urban Transition-Zone", image: "Content/Images_Concept/3-urban-transit-zone.png" },
-  { id: 4, name: "Suburban Transit-Zone", image: "Content/Images_Concept/4-suburban-transit-zone.png" },
-  { id: 5, name: "Streetcar Suburb", image: "Content/Images_Concept/5-streetcar_suburb.png" },
-  { id: 6, name: "Modern Suburb", image: "Content/Images_Concept/6-modern_suburb.png" },
-  { id: 7, name: "Suburban Outer", image: "Content/Images_Concept/7-suburban_outer.png" },
-  { id: 8, name: "Townhouse Cluster", image: "Content/Images_Concept/8-townhouse_cluster.png" },
-  { id: 9, name: "Rural Cluster", image: "Content/Images_Concept/9-rural_cluster.png" },
-  { id: 10, name: "Commercial Park", image: "Content/Images_Concept/10-commerical_park.png" },
-  { id: 11, name: "Data Center Node", image: "Content/Images_Concept/11-data_center_node.png" },
-  { id: 12, name: "Logistics/Industrial", image: "Content/Images_Concept/12-logistics_industrial.png" }
-];
 
 // Neighbourhood Units data based on Neighbourhoods_Concepts_Parameters_Buildings.csv
 // Each neighbourhood has its own parameters (context, usage, density, layout)
@@ -1547,28 +1534,6 @@ const PV_GENERATION_DATA = {
     "gcr": "0.4",
     "mounting": "Fixed Open Rack"
   }
-};
-
-// Energy category colors (updated for new CSV metric names)
-const ENERGY_COLORS = {
-  "Heating": "#ef4444",
-  "Cooling": "#3b82f6",
-  "DHW": "#06b6d4",
-  "Lighting": "#eab308",
-  "Equipment": "#8b5cf6",
-  "Fans & Pumps": "#22c55e",
-  // Legacy colors preserved for backward compatibility
-  "Interior Lighting": "#eab308",
-  "Electric Equipment": "#8b5cf6",
-  "Exterior Lighting": "#f59e0b",
-  "Equipment (Gas)": "#f97316",
-  "Elevators": "#6366f1",
-  "Water Systems": "#06b6d4",
-  "Fans": "#22c55e",
-  "VAV Fans": "#10b981",
-  "Pump (Electric)": "#14b8a6",
-  "Heat Rejection": "#f43f5e",
-  "FCU Fans": "#84cc16"
 };
 
 // ========================================================================
@@ -82596,12 +82561,6 @@ const ENERGY_DATA_ARCHIVED = {
   }
     */
 
-const ENERGY_STATUS_IMAGES = {
-  "Positive": "Content/Images_EnergyStatus/positive.png",
-  "Neutral": "Content/Images_EnergyStatus/neutral.png",
-  "Negative": "Content/Images_EnergyStatus/negative.png"
-};
-
 // EV & V2G data per neighbourhood, derived from Templates/NUS_EV.csv
 // DBG-032, D6.10, 2026-08-12: totalFloorArea used to hold a private copy of the
 // pre-correction GFA table, on 35 of 35 NUs. It now holds CONDITIONED_AREA_DATA,
@@ -83740,173 +83699,10 @@ const LPV_DATA = {
     }
   ]
 };
-// ========================================================================
-// FLOOR AREAS. Two of them, from one source, so they cannot drift apart.
-//
-// Rewritten 2026-08-10 (session 12) from the campaign that produced every
-// EUI and PV intensity in this file:
-//   idf_reader/docs_DONE/docs_LMN_web/LMN-1983/validation/
-//     LMN1983_NU_validation_all35.csv   columns area_gfa and area_cond
-//
-// Why this replaced the morphology export (`DBG-030`). The previous table
-// took 30 of 35 values from outputs_NUs_key_drivers/neighbourhood_morphology.csv,
-// a geometry model, and 5 from the simulation. The two disagree for 23 of the
-// 35 neighbourhoods. On CC-FD1 the morphology export gives 424254 against a
-// simulated 218365, which works out at 1.2 m per storey against the reported
-// mean height, a physical impossibility; the simulated area gives 2.3 m.
-// The deciding argument is coherence, not that one export is defective: every
-// energy number on this site comes from the simulation, so its floor areas
-// come from the same place.
-// ========================================================================
-
-// GFA_DATA : EnergyPlus "Total Building Area" per NU (m2). The whole enclosed
-// area, including unheated attics and basements. DISPLAY ONLY. It is not a
-// denominator for anything, and after DBG-029 it is in no calculation at all.
-const GFA_DATA = {
-  "RC-R":     10600,
-  "RC-D":     21201,
-  "RC-ML":    20681,
-  "RC-T":     20162,
-  "RC-MR1":   22618,
-  "RC-MR2":   25077,
-  "RC-MR3":   37615,
-  "RC-HR1":   28211,
-  "RC-HR2":   31346,
-  "RS-S":     17024,
-  "RS-I1":    19134,
-  "RS-I2":    32096,
-  "RS-I3":    14139,
-  "RS-I4":    26092,
-  "MU-C1":    80328,
-  "MU-C2":   124138,
-  "MU-U1":   111771,
-  "MU-L":     15828,
-  "MU-S1":    30540,
-  "MU-S2":    21079,
-  "MU-W":     12470,
-  "MU-W2":    12960,
-  "MU-HS":    20283,
-  "MU-HC":    35876,
-  "CC-S1":    11634,
-  "CC-S2":     5629,
-  "CC-B":     67775,
-  "CC-E1":    76149,
-  "CC-E2":    37815,
-  "CC-E3":    42637,
-  "CC-FD1":  218365,
-  "CC-FD2":  127315,
-  "CC-FD3":  155849,
-  "IC-DE":    11209,
-  "IC-DC":     7528
-};
-
-// CONDITIONED_AREA_DATA : EnergyPlus "Net Conditioned Building Area" per NU (m2).
-// The area the simulation actually heats and cools. This is the denominator
-// behind every EUI and every PV intensity in this file, confirmed three ways:
-//   1. main_BEM.py:1139 resolves the divisor as conditioned_floor_area first
-//   2. PV_methodology_and_calculation_report.md: "the same denominator as EUI"
-//   3. every vintage-1983-z6 total matches the upstream eui_cond column, 35/35
-// Use this, never GFA_DATA, whenever an intensity is turned back into a total.
-const CONDITIONED_AREA_DATA = {
-  "RC-R":      5300,
-  "RC-D":     10600,
-  "RC-ML":    10341,
-  "RC-T":     10081,
-  "RC-MR1":   16336,
-  "RC-MR2":   22592,
-  "RC-MR3":   33888,
-  "RC-HR1":   25416,
-  "RC-HR2":   28240,
-  "RS-S":      9335,
-  "RS-I1":    15682,
-  "RS-I2":    30543,
-  "RS-I3":     9099,
-  "RS-I4":    24538,
-  "MU-C1":    75380,
-  "MU-C2":   117926,
-  "MU-U1":   105558,
-  "MU-L":     14586,
-  "MU-S1":    28698,
-  "MU-S2":    19526,
-  "MU-W":     11849,
-  "MU-W2":    12960,
-  "MU-HS":    16831,
-  "MU-HC":    33413,
-  "CC-S1":    11634,
-  "CC-S2":     5629,
-  "CC-B":     67775,
-  "CC-E1":    75648,
-  "CC-E2":    37362,
-  "CC-E3":    41563,
-  "CC-FD1":  218077,
-  "CC-FD2":  127026,
-  "CC-FD3":  155849,
-  "IC-DE":    11209,
-  "IC-DC":     7528
-};
-
-// PV_AREA_DATA : total PV array area per neighbourhood, in m2. CHV asked for
-// this on 2026-08-24 in place of the PV generation intensity. X23, DBG-038.
-//
-// It is NOT an EnergyPlus output and it is not in any results CSV. It is a
-// parse of the Generator:Photovoltaic surfaces in the injected IDF of the
-// EEM4 run, campaign option_9_qc1983nu_20260807_all35, summed per NU and
-// multiplied by the active fraction the injector wrote for that roof group,
-// 0.85 pitched and 1.0 on the flat rack. It is the SAME area the published
-// generation was made from, which is why every row below was required to
-// reproduce that generation before it was allowed in.
-//
-// THE GATE. A neighbourhood is listed here only if the EEM4 generation in
-// its own eplustbl.csv or eplusout.sql reproduces the shipped value in
-// ENVELOPE_ENERGY_DATA["necb-z6"][NU]["EEM4"].pv * CONDITIONED_AREA_DATA[NU]
-// to within 2 %. 26 of 35 passed, 9 did not and ARE ABSENT.
-// The interface hides the row where the key is missing. Never fill a gap
-// here with an estimate: an area that does not reproduce the generation is
-// not the area behind the number the page prints.
-//
-// Absent, with the shortfall of the on-disk IDF against the shipped value:
-//   RC-MR1 -4.28 %, RC-D -20 %, RC-ML -12.65 %, RC-T -3.96 %, RC-R -11.06 %, RS-I1 -4.44 %, RS-S -10.46 %, RS-I3 -4.11 %, MU-HS -7.34 %
-// All nine are pitched roof house, townhouse or low rise archetypes and all
-// fall short in the same direction. Flat roof archetypes reconcile to within
-// 0.35 %. Logged against DBG-038, not resolved here.
-//
-// One area per neighbourhood, not one per climate: the injected array is
-// identical to the decimal across CAN_MTL, CAN_Z4 and CAN_Z7B, checked on
-// CC-B, RC-D and MU-C1.
-// RC-HR1, RC-HR2, RC-MR2 and RC-MR3 have no current code EEM4 run left on
-// disk, so they were read from the CAN_MTL_1983 arm. PV output does not
-// depend on the vintage and data.js carries bit identical PV values for the
-// two arms on all four.
-const PV_AREA_DATA = {
-  "RC-MR2":   5328.8,
-  "RC-MR3":   7993.3,
-  "RC-HR1":   4045.2,
-  "RC-HR2":   2761.6,
-  "RS-I2":    8302.5,
-  "RS-I4":    7004.4,
-  "MU-C1":    7841.0,
-  "MU-C2":    8626.7,
-  "MU-U1":    7236.7,
-  "MU-L":     3950.9,
-  "MU-S1":    8158.0,
-  "MU-S2":    6192.2,
-  "MU-W":     4495.5,
-  "MU-W2":    6488.8,
-  "MU-HC":    5780.5,
-  "CC-S1":    4393.1,
-  "CC-S2":    3095.0,
-  "CC-B":     6721.0,
-  "CC-E1":    6706.7,
-  "CC-E2":    6813.9,
-  "CC-E3":    7687.0,
-  "CC-FD1":   5990.4,
-  "CC-FD2":   6098.6,
-  "CC-FD3":   5944.4,
-  "IC-DE":    4305.5,
-  "IC-DC":    3782.9
-};
+// GFA_DATA, CONDITIONED_AREA_DATA and PV_AREA_DATA moved to js/config.js,
+// A12, 2026-09-09. Same global names, same values, no call site changed.
 
 // Export for use in app.js
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { CONCEPTS, NEIGHBOURHOODS, BUILDING_IMAGES, ENERGY_COLORS, ENVELOPE_ENERGY_DATA, getEnergyData, ENERGY_STATUS_IMAGES, EV_V2G_DATA, LPV_DATA, PV_GENERATION_DATA, GFA_DATA, CONDITIONED_AREA_DATA, PV_AREA_DATA };
+  module.exports = { NEIGHBOURHOODS, BUILDING_IMAGES, ENVELOPE_ENERGY_DATA, getEnergyData, EV_V2G_DATA, LPV_DATA, PV_GENERATION_DATA };
 }

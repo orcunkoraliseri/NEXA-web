@@ -1046,6 +1046,7 @@ function wireExport(code, envelope) {
         const payload = {
             tool: 'N-LENS, Comparison Mode',
             exported: new Date().toISOString(),
+            attribution: LMN_CONFIG.attribution,
             neighbourhood: code,
             climateAndStandard: LMN_CONFIG.envelopeLabel(envelope),
             envelopeKey: envelope,

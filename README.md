@@ -110,7 +110,7 @@ Full methodology, assumptions and references: `documentation.html` on the live s
 
 ## Project Overview
 
-The N-LENS tool supports the **Neighbourhood Layered Energy & Systems Explorer (N-LENS)** methodology. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
+N-LENS V1 is the current implementation of the **Neighbourhood Layered Energy & Systems Explorer** research framework, and it implements selected parts of it: four operational layers, thirty-five neighbourhood units, five public Canadian climate arms. The broader layered research framework is wider than what V1 builds, and V1 does not redefine or narrow it. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
 
 Each layer adds a new set of systems on top of the previous, so the neighbourhood profile grows in complexity and completeness as the user progresses — from a blank canvas to a fully specified, energy-balanced urban unit.
 
@@ -203,8 +203,8 @@ layer2_energy_selection.html   ← Layer 2 Selection
         │  User picks Load, Energy Systems, Energy Generation → "View Energy Performance"
         ▼
 layer2_output_energy.html      ← Layer 2 Results (energy footprint added to profile)
-        │   ├─► layer2_energy_breakdown.html  (Energy Demand Treemap — D3.js)
-        │   └─► layer2_pv_breakdown.html      (PV Generation Profile — Chart.js)
+        │   ├─► layer2_energy_breakdown.html  (Energy Demand Treemap)
+        │   └─► layer2_pv_breakdown.html      (PV Generation Profile)
         │
         │  User proceeds to Layer 3
         ▼
@@ -299,9 +299,9 @@ The energy layer overlays **demand-side systems** and **generation technologies*
 **Output:**  
 The results page displays the neighbourhood's energy footprint — combining demand and generation profiles. From the sidebar or output table, users can drill into:
 
-- **Energy Demand Treemap** (`layer2_energy_breakdown.html`) — Interactive treemap rendered with **D3.js** visualising the breakdown of thermal, electrical, and equipment loads sized proportionally to demand. Includes Energy Status indicators (Positive/Neutral/Negative) and EUI scale.
+- **Energy Demand Treemap** (`layer2_energy_breakdown.html`) — Interactive treemap, built from plain DOM elements and CSS by a squarified layout in `js/energy.js`, visualising the breakdown of thermal, electrical, and equipment loads sized proportionally to demand. Includes Energy Status indicators (Positive/Neutral/Negative) and EUI scale.
 - **PV Generation Profile** (`layer2_pv_breakdown.html`) — Dual-layout PV analysis page:
-  - **New layout:** three results, **PV generation intensity**, **Total PV Generation** and **Ratio of Performance**, plus wall and roof rows showing hourly charts (**Chart.js** canvas), incident radiation images, and direct sun hours images. The model inputs (PV surface, efficiency, mounting, ground coverage ratio, both floor areas, weather file, floor-area basis, model version) are under **Assumptions & Model Information** on the same page, since 17 August 2026.
+  - **New layout:** three results, **PV generation intensity**, **Total PV Generation** and **Ratio of Performance**, plus wall and roof rows showing incident radiation images, and direct sun hours images. The model inputs (PV surface, efficiency, mounting, ground coverage ratio, both floor areas, weather file, floor-area basis, model version) are under **Assumptions & Model Information** on the same page, since 17 August 2026.
   - **Legacy layout** (for RC-HR2): two-column layout with static chart images, carrying the same three results and the same assumptions block.
 
 **Energy data coverage:** all five rungs of the cumulative ladder, Baseline through HPerf + Heat Pump + DHW + Lighting/Equipment/Cooling, plus the ideal thermal load case, are stored and rendered for all 35 neighbourhood archetypes in every published climate. Those names are the only ones the tool uses; the keys they are stored under are listed once under [Scenario Coverage](#scenario-coverage).
@@ -371,12 +371,14 @@ The tool is a **pure client-side web application** — no build tools, bundlers,
 
 ### External Libraries
 
+**Nothing is fetched from a CDN.** Every external asset is vendored in `vendor/` and served from the repository, so the tool runs with no network access beyond the site itself.
+
 | Library                   | Source                                                                    | Purpose                                             |
 |---------------------------|---------------------------------------------------------------------------|-----------------------------------------------------|
-| **Google Fonts**          | `fonts.googleapis.com` (Inter, Outfit)                                   | Display and body typography                         |
-| **D3.js v7**              | `d3js.org/d3.v7.min.js`                                                 | Energy demand treemap visualisation                 |
-| **Chart.js**              | `cdn.jsdelivr.net/npm/chart.js`                                         | PV generation hourly charts (bar/line)              |
-| **Google Model Viewer**   | `ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js`  | Interactive 3D GLB model rendering                  |
+| **Inter, Outfit**         | `vendor/fonts/*.woff2`, vendored                                          | Display and body typography                         |
+| **Google Model Viewer**   | `vendor/model-viewer/model-viewer-4.2.0.min.js`, vendored                 | Interactive 3D GLB model rendering                  |
+
+**D3.js and Chart.js are not used and are not present.** Every chart, treemap and bar in the tool is built from plain DOM elements and CSS by the page's own script.
 
 ### Data Formats
 
@@ -406,8 +408,8 @@ LMN-tool/
 │
 ├── layer2_energy_selection.html         ─ Layer 2: Energy Selection
 ├── layer2_output_energy.html            ─ Layer 2: Energy Performance Results
-├── layer2_energy_breakdown.html         ─ Layer 2: Energy Demand Treemap (D3.js)
-├── layer2_pv_breakdown.html             ─ Layer 2: PV Generation Profile (Chart.js)
+├── layer2_energy_breakdown.html         ─ Layer 2: Energy Demand Treemap
+├── layer2_pv_breakdown.html             ─ Layer 2: PV Generation Profile
 │
 ├── layer3_mobility_selection.html       ─ Layer 3: Mobility Selection
 ├── layer3_ev_v2g_mobility_output.html   ─ Layer 3: Mobility Performance Results
@@ -432,7 +434,7 @@ LMN-tool/
 │   ├── sidebar.js                       ─ Persistent multi-layer sidebar construction
 │   ├── energy-selection.js              ─ Layer 2 selection state management
 │   ├── output_energy.js                 ─ Layer 2 output rendering
-│   ├── energy.js                        ─ Energy demand treemap rendering (D3.js)
+│   ├── energy.js                        ─ Energy demand treemap rendering
 │   ├── pv.js                            ─ PV generation profile (dual layout: new + legacy)
 │   ├── heatmap-data.js                  ─ PV heatmap data definitions (wall/roof irradiation)
 │   ├── mobility-selection.js            ─ Layer 3 selection state management
@@ -656,9 +658,9 @@ The following major development milestones have been completed in sequence:
 - Integrated 3D model viewer (`model-viewer`) for interactive neighbourhood GLB rendering.
 
 ### Phase 2 — Energy & PV Pages
-- Implemented the **D3.js energy demand treemap** (`layer2_energy_breakdown.html`) with dynamic sizing by energy category.
+- Implemented the **energy demand treemap** (`layer2_energy_breakdown.html`) with dynamic sizing by energy category. Built on D3.js at the time; **later rewritten in plain DOM and CSS, and D3.js was removed.**
 - Built the **dual-layout PV generation profile** (`layer2_pv_breakdown.html`):
-  - *New layout* for RC-R, RC-D, RC-T, RC-MR2, RC-MR3 — stats bar KPIs + hourly Chart.js charts + incident radiation images.
+  - *New layout* for RC-R, RC-D, RC-T, RC-MR2, RC-MR3 — stats bar KPIs + hourly Chart.js charts + incident radiation images. **The hourly charts were later removed as dead code, and Chart.js with them.**
   - *Legacy layout* for RC-HR2 — two-column format with static chart images.
 
 ### Phase 3 — Design System Refinement
@@ -741,7 +743,7 @@ Detailed documentation for each page and subsystem is available in the `docs/` d
 | [Welcome Page](docs/01_welcome_page.md) | Layer 0 parameter selection interface |
 | [Output Page](docs/02_output_page.md) | Layer 1 neighbourhood results table |
 | [Energy Selection](docs/03_energy_selection_page.md) | Layer 2 energy parameter selection |
-| [Energy Breakdown](docs/04_energy_breakdown_page.md) | D3.js treemap visualisation |
+| [Energy Breakdown](docs/04_energy_breakdown_page.md) | Treemap visualisation |
 | [PV Profile](docs/05_pv_profile_page.md) | PV generation analysis |
 | [LPV Profile](docs/06_lpv_profile_page.md) | Landscape PV profile |
 | [EV Profile](docs/07_ev_profile_page.md) | Electric vehicle integration |
@@ -758,6 +760,8 @@ Implementation change logs are in `docs_implementation/`:
 
 ---
 
-## License
+## Attribution and licence
 
-This project is part of ongoing academic research. Contact the research group for licensing information.
+**N-LENS is a research tool of the Resilient Habitat Lab (RHLab), Concordia University, directed by Dr. Caroline Hachem-Vermette.**
+
+© Resilient Habitat Lab, Concordia University. This project is part of ongoing academic research. Contact the research group for licensing information.

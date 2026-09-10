@@ -484,6 +484,7 @@ function fsWireExport(code, ctx, cmp, meaning, constraint, assumptions) {
         const payload = {
             tool: LMN_CONFIG.productName,
             exported: new Date().toISOString(),
+            attribution: LMN_CONFIG.attribution,
             scenario: {
                 neighbourhood: code,
                 climateAndStandard: LMN_CONFIG.envelopeLabel(ctx.envelope),
@@ -559,7 +560,8 @@ function initSummaryPage() {
     // Set Back button href
     const backBtn = document.getElementById('back-step-btn');
     if (backBtn) {
-        backBtn.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
+        // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+        backBtn.href = `layer4_lpv_breakdown.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || '')}`;
     }
 
     // Comparison Mode entry point. The page it opens, comparison.html, is not
@@ -573,7 +575,8 @@ function initSummaryPage() {
             LMN_CONFIG.comparisonMode &&
             LMN_CONFIG.comparisonMode.published);
         if (comparisonPublished) {
-            compBtn.href = `comparison.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017')}`;
+            // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+            compBtn.href = `comparison.html?neighbourhood=${encodeURIComponent(code)}&envelope=${encodeURIComponent(getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || '')}`;
             compBtn.hidden = false;
         } else {
             compBtn.removeAttribute('href');

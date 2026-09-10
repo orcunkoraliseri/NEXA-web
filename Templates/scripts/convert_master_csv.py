@@ -3,14 +3,19 @@ import json
 import os
 import re
 
-MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\2026-07-21\LMN_national_NU_master.csv"
-PV_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\2026-07-21\LMN_national_PV_generation.csv"
-LEGACY_MASTER_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\2026-07-19\LMN_full_NU_master_healed.csv"
-ARCHETYPES_CSV = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\2026-07-19\Full_NUs_Archetypes.csv"
+# Paths are derived from this file's own location, so the script runs from any
+# clone of the repository. This file lives in <repo>/Templates/scripts/.
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATES_DIR = os.path.dirname(SCRIPTS_DIR)
+REPO_ROOT = os.path.dirname(TEMPLATES_DIR)
 
-OUT_JS_DATA = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\scripts\out_data.js"
-TEMPLATES_DIR = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates"
-ARCHIVE_DIR = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\archive"
+MASTER_CSV = os.path.join(TEMPLATES_DIR, "2026-07-21", "LMN_national_NU_master.csv")
+PV_CSV = os.path.join(TEMPLATES_DIR, "2026-07-21", "LMN_national_PV_generation.csv")
+LEGACY_MASTER_CSV = os.path.join(TEMPLATES_DIR, "2026-07-19", "LMN_full_NU_master_healed.csv")
+ARCHETYPES_CSV = os.path.join(TEMPLATES_DIR, "2026-07-19", "Full_NUs_Archetypes.csv")
+
+OUT_JS_DATA = os.path.join(SCRIPTS_DIR, "out_data.js")
+ARCHIVE_DIR = os.path.join(TEMPLATES_DIR, "archive")
 
 CONCEPT_MAP = {
     "1. Financial District": 1,

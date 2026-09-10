@@ -831,7 +831,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const backBtn = document.getElementById('back-step-btn');
         const nextBtn = document.getElementById('next-step-btn');
 
-        const _envelopeForNav = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+        // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+        const _envelopeForNav = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
         if (backBtn) backBtn.href = `layer2_energy_selection.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(_envelopeForNav)}`;
         // Assume next page from Energy should be PV Generation (renderTreemap overwrites this with envelope included)
         if (nextBtn) nextBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(_envelopeForNav)}`;

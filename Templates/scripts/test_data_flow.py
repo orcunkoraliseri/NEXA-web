@@ -2,13 +2,69 @@ import json
 import re
 import sys
 
+
+def _literal(txt, name):
+    """Return `const <name> = {...};` from a js source, as parseable JSON.
+
+    A regex cannot do this. The literals span blank lines, so a non-greedy
+    match stops inside them, and they carry `//` maintenance comments, which
+    are legal JavaScript but not JSON. Walk the braces, drop the comments and
+    drop trailing commas.
+    """
+    marker = "const " + name + " = "
+    start = txt.index(marker) + len(marker)
+    opener = txt[start]
+    closer = {"{": "}", "[": "]"}[opener]
+    out = []
+    depth, i, in_str, esc = 0, start, False, False
+    while i < len(txt):
+        c = txt[i]
+        if in_str:
+            out.append(c)
+            if esc:
+                esc = False
+            elif c == "\\":
+                esc = True
+            elif c == '"':
+                in_str = False
+            i += 1
+            continue
+        if c == "/" and txt[i + 1:i + 2] == "/":
+            i = txt.find("\n", i)
+            if i == -1:
+                break
+            continue
+        if c == "/" and txt[i + 1:i + 2] == "*":
+            i = txt.index("*/", i) + 2
+            continue
+        if c == ",":
+            # a trailing comma is one followed only by whitespace and a closer
+            j = i + 1
+            while j < len(txt) and txt[j] in " \t\r\n":
+                j += 1
+            if txt[j:j + 1] in ("}", "]"):
+                i += 1
+                continue
+        out.append(c)
+        if c == '"':
+            in_str = True
+        elif c == opener:
+            depth += 1
+        elif c == closer:
+            depth -= 1
+            if depth == 0:
+                return "".join(out)
+        i += 1
+    raise ValueError("unterminated literal for " + name)
+
+
 def test_data_flow():
     with open('js/data.js', encoding='utf-8') as f:
         js_text = f.read()
 
-    neighbourhoods = json.loads(re.search(r'const NEIGHBOURHOODS = (\[.*?\]);\n\n', js_text, re.DOTALL).group(1))
-    energy_data = json.loads(re.search(r'const ENVELOPE_ENERGY_DATA = (\{.*?\});\n\n', js_text, re.DOTALL).group(1))
-    pv_data = json.loads(re.search(r'const PV_GENERATION_DATA = (\{.*?\});\n\n', js_text, re.DOTALL).group(1))
+    neighbourhoods = json.loads(_literal(js_text, 'NEIGHBOURHOODS'))
+    energy_data = json.loads(_literal(js_text, 'ENVELOPE_ENERGY_DATA'))
+    pv_data = json.loads(_literal(js_text, 'PV_GENERATION_DATA'))
 
     all_14_envelopes = [
         'ashrae',
@@ -66,8 +122,10 @@ def test_data_flow():
 
     for code, env in sample_cases:
         d = energy_data[env][code]['DEFAULT']
-        pv = pv_data.get(code, {}).get('generation', 'N/A')
-        print(f'Case ({code}, {env}): HP Baseline EUI={d["total"]:.1f} kWh/m2, PV={pv}')
+        # PV_GENERATION_DATA holds the array configuration, not a yield
+        cfg = pv_data.get(code, {})
+        pv = cfg.get('surface', 'absent') + ', ' + cfg.get('mounting', 'absent')
+        print(f'Case ({code}, {env}): HP Baseline EUI={d["total"]:.1f} kWh/m2, PV config={pv}')
 
     if null_lookups == 0:
         print('\nCONFIRMED: THE ENERGY.JS BUG IS 100% FIXED AND VERIFIED!')

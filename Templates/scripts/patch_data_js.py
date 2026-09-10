@@ -2,8 +2,13 @@ import re
 import os
 import json
 
-DATA_JS = r"C:\Users\o_iseri\Desktop\LMN-tool-main\js\data.js"
-OUT_DATA_JS = r"C:\Users\o_iseri\Desktop\LMN-tool-main\Templates\scripts\out_data.js"
+# Paths are derived from this file's own location, so the script runs from any
+# clone of the repository. This file lives in <repo>/Templates/scripts/.
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(os.path.dirname(SCRIPTS_DIR))
+
+DATA_JS = os.path.join(REPO_ROOT, "js", "data.js")
+OUT_DATA_JS = os.path.join(SCRIPTS_DIR, "out_data.js")
 
 with open(DATA_JS, "r", encoding="utf-8") as f:
     js_content = f.read()

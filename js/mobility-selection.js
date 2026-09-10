@@ -144,7 +144,8 @@ function setupSubmitButton() {
             sessionStorage.setItem('mobilitySelections', JSON.stringify(mobilitySelections));
 
             if (neighbourhoodCode) {
-                const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+                // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+                const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
                 window.location.href = `layer3_ev_v2g_mobility_output.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
             } else {
                 alert('No neighbourhood selected. Please go back and select a neighbourhood.');
@@ -167,7 +168,8 @@ function initMobilitySelectionPage() {
         titleElement.textContent = `Layer 3: Mobility Selection for ${neighbourhoodCode}`;
 
         if (backBtn) {
-            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || 'necb-2017';
+            // A15, closed 2026-09-09: the silent 'necb-2017' default is removed. With no climate chosen the link carries an empty envelope and the next page states it.
+            const envelope = new URLSearchParams(window.location.search).get('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
             backBtn.href = `layer2_pv_breakdown.html?neighbourhood=${encodeURIComponent(neighbourhoodCode)}&envelope=${encodeURIComponent(envelope)}`;
         }
 
