@@ -1140,6 +1140,29 @@ function wireExport(code, envelope) {
 // ─── Init ───────────────────────────────────────────────────
 
 function initComparisonPage() {
+    // OFFLINE 2026-09-10, Koral's decision. Comparison Mode is finished and
+    // working and stays off the site for now. Both entry points are commented
+    // out, so nothing on the site links here, but the page answered a typed URL
+    // with the working tool, which is not "offline". It now states that instead.
+    // Nothing below this guard is deleted and nothing is changed: setting
+    // LMN_CONFIG.comparisonMode.published to true runs the page exactly as it
+    // ran before. See js/config.js for the rest of the restore recipe.
+    if (!(typeof LMN_CONFIG !== 'undefined' &&
+          LMN_CONFIG.comparisonMode &&
+          LMN_CONFIG.comparisonMode.published)) {
+        const offlineMain = document.querySelector('main.container') || document.body;
+        offlineMain.innerHTML =
+            '<div class="info-box info-box--caution">' +
+            '<div class="info-box-body">' +
+            '<p class="info-box-title">Comparison Mode is offline</p>' +
+            '<p class="info-box-line">This page is not part of N-LENS at the moment. ' +
+            'It is finished and kept in the project, and it may be put back on the ' +
+            'site later.</p>' +
+            '<p class="info-box-line"><a href="index.html">Back to the start</a></p>' +
+            '</div></div>';
+        return;
+    }
+
     const code = getQueryParam('neighbourhood');
     const envelope = getQueryParam('envelope') || sessionStorage.getItem('selectedEnvelope') || '';
 

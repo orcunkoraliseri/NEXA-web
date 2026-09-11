@@ -651,6 +651,12 @@ const LMN_CONFIG = {
   // flag is the record of the decision rather than the only thing holding the
   // button back. To bring it back: uncomment both, set published to true, and
   // bump the ?v= stamp on every page in the same commit.
+  //
+  // 2026-09-10, same decision, one gap closed: comparison.html still answered a
+  // typed URL with the working tool, so initComparisonPage in js/comparison.js
+  // now reads this flag first and prints an offline notice instead. Nothing was
+  // deleted there either, and setting published to true runs the page as before,
+  // so the recipe above is unchanged.
   comparisonMode: {
     published: false,
     reason: "Comparison Mode is offline in N-LENS, kept for a possible return."
