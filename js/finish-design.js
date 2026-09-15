@@ -511,7 +511,7 @@ function fsWireExport(code, ctx, cmp, meaning, constraint, assumptions) {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'N-LENS-scenario-' + code + '.json';
+        a.download = 'NEXA-scenario-' + code + '.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

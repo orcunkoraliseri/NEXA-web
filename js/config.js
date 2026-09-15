@@ -44,8 +44,12 @@ const LMN_CONFIG = {
   //
   // CHV, 2026-09-07: her email renamed the release from LMN V1 to N-LENS and
   // added the Version 1, Research Preview tagline shown under the name.
-  releaseName: "N-LENS",
-  productName: "N-LENS, Neighbourhood Layered Energy & Systems Explorer",
+  //
+  // CHV, 2026-09-11: her email renamed it again, N-LENS to NEXA, Neighbourhood
+  // Energy eXploration & Analysis. The tagline is unchanged. Applied to the
+  // site only: nothing is pushed and no handover document is renamed with it.
+  releaseName: "NEXA",
+  productName: "NEXA, Neighbourhood Energy eXploration & Analysis",
   releaseTagline: "Version 1 · Research Preview",
 
   // A28, 2026-09-09. Same wording as README.md, "Attribution and licence".
@@ -54,7 +58,7 @@ const LMN_CONFIG = {
   attribution: {
     lab: "Resilient Habitat Lab (RHLab), Concordia University",
     director: "Dr. Caroline Hachem-Vermette",
-    tool: "N-LENS",
+    tool: "NEXA",
     copyright: "© Resilient Habitat Lab, Concordia University. This project is part of ongoing academic research. Contact the research group for licensing information."
   },
 
@@ -253,7 +257,7 @@ const LMN_CONFIG = {
       climates: ["necb-z8", "high-performance-z8"],
       showOnSelection: false,
       label: "Not available in this climate",
-      reason: "NECB Zone 8 is not published in N-LENS. The zone was simulated, and it remains part of the research database and the technical documentation, but its quantitative results are not exposed in the public tool at this stage. It is also the only zone in the campaign without a CWEC2020v2 weather file: the run uses La Grande Riviere airport, CYGL, about 90 km inland from Chisasibi, as a proxy station.",
+      reason: "NECB Zone 8 is not published in NEXA. The zone was simulated, and it remains part of the research database and the technical documentation, but its quantitative results are not exposed in the public tool at this stage. It is also the only zone in the campaign without a CWEC2020v2 weather file: the run uses La Grande Riviere airport, CYGL, about 90 km inland from Chisasibi, as a proxy station.",
       debugRef: "CHV-2026-08-24"
     }
   ],
@@ -659,7 +663,7 @@ const LMN_CONFIG = {
   // so the recipe above is unchanged.
   comparisonMode: {
     published: false,
-    reason: "Comparison Mode is offline in N-LENS, kept for a possible return."
+    reason: "Comparison Mode is offline in NEXA, kept for a possible return."
   },
 
   availability: {

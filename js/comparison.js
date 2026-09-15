@@ -1044,7 +1044,7 @@ function wireExport(code, envelope) {
     if (exportBtn) exportBtn.addEventListener('click', function () {
         const rows = buildExportRows(code, envelope);
         const payload = {
-            tool: 'N-LENS, Comparison Mode',
+            tool: 'NEXA, Comparison Mode',
             exported: new Date().toISOString(),
             attribution: LMN_CONFIG.attribution,
             neighbourhood: code,
@@ -1155,7 +1155,7 @@ function initComparisonPage() {
             '<div class="info-box info-box--caution">' +
             '<div class="info-box-body">' +
             '<p class="info-box-title">Comparison Mode is offline</p>' +
-            '<p class="info-box-line">This page is not part of N-LENS at the moment. ' +
+            '<p class="info-box-line">This page is not part of NEXA at the moment. ' +
             'It is finished and kept in the project, and it may be put back on the ' +
             'site later.</p>' +
             '<p class="info-box-line"><a href="index.html">Back to the start</a></p>' +

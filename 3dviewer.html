@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Neighbourhood Viewer | N-LENS</title>
-    <link rel="stylesheet" href="css/styles.css?v=29">
+    <title>3D Neighbourhood Viewer | NEXA</title>
+    <link rel="stylesheet" href="css/styles.css?v=31">
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -14,7 +14,7 @@
          called. The library is now vendored, version 4.2.0, byte for byte as
          it was downloaded, BSD-3-Clause. See vendor/model-viewer/README.md
          for what updating it involves. -->
-    <script type="module" src="vendor/model-viewer/model-viewer-4.2.0.min.js?v=29"></script>
+    <script type="module" src="vendor/model-viewer/model-viewer-4.2.0.min.js?v=31"></script>
 
     <style>
         body, html {
@@ -94,7 +94,7 @@
         </model-viewer>
     </div>
 
-    <script src="js/config.js?v=29"></script>
+    <script src="js/config.js?v=31"></script>
     <script>
         // 1. Get the model code from the URL (e.g., ?model=RC-I1 or ?model=rc-r)
         const urlParams = new URLSearchParams(window.location.search);

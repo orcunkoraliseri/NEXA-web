@@ -1,4 +1,4 @@
-# N-LENS, Neighbourhood Layered Energy & Systems Explorer
+# NEXA, Neighbourhood Energy eXploration & Analysis
 
 An early-stage decision-support tool for **pre-feasibility comparison** of neighbourhood
 designs. It compares neighbourhood units whose energy and solar results have already been
@@ -31,7 +31,7 @@ was built and is not a description of what it does today.*
 - **Climates:** **five published**, all Canadian, each simulated on its own CWEC weather file:
   NECB Zone 4 (Vancouver), Zone 5 (Toronto), Zone 6 (Montreal), Zone 7A (Winnipeg), and Zone
   7B (Fort McMurray). Montreal additionally offers a 1983 Quebec code-era reference starting
-  point. Seven climate arms were simulated. Five are published in N-LENS. The ASHRAE arm is a
+  point. Seven climate arms were simulated. Five are published in NEXA. The ASHRAE arm is a
   United States reference case and Zone 8, Chisasibi, is held back at the supervisor's request;
   both remain in the research database.
 - **Envelope and measures:** a cumulative ladder, **Baseline**, **HPerf**,
@@ -110,7 +110,7 @@ Full methodology, assumptions and references: `documentation.html` on the live s
 
 ## Project Overview
 
-N-LENS V1 is the current implementation of the **Neighbourhood Layered Energy & Systems Explorer** research framework, and it implements selected parts of it: four operational layers, thirty-five neighbourhood units, five public Canadian climate arms. The broader layered research framework is wider than what V1 builds, and V1 does not redefine or narrow it. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
+NEXA V1 is the current implementation of the **Neighbourhood Energy eXploration & Analysis** research framework, and it implements selected parts of it: four operational layers, thirty-five neighbourhood units, five public Canadian climate arms. The broader layered research framework is wider than what V1 builds, and V1 does not redefine or narrow it. Rather than requiring detailed simulation inputs upfront, it allows architects, planners, and researchers to compare pre-simulated neighbourhood configurations by filtering across four thematic layers. It is a comparison tool, not a design or optimisation tool; see [What the tool does and does not do](#what-the-tool-does-and-does-not-do).
 
 Each layer adds a new set of systems on top of the previous, so the neighbourhood profile grows in complexity and completeness as the user progresses — from a blank canvas to a fully specified, energy-balanced urban unit.
 
@@ -276,7 +276,7 @@ The user selects a neighbourhood from the results to carry it forward into Layer
 
 **Dynamic filtering:** Parameters that would result in zero matching neighbourhoods are automatically disabled (greyed out) as the user makes selections, preventing dead-end combinations.
 
-> **Envelope options, current as of 31 August 2026.** Each of the five published climate zones offers **Standard**, the NECB 2017 code baseline for that zone, and **HPerf**, the High-Performance Envelope package. Montreal additionally offers a **1983 Quebec reference envelope** starting point, which is compared against itself because it is a different code era. Choosing HPerf uses the envelope-only rung of the scenario ladder, and its baseline is the Standard arm of the same climate, so the envelope gain is what the reported change shows. Seven climate arms were simulated. Five are published in N-LENS. The ASHRAE arm is a United States reference case and Zone 8, Chisasibi, is held back at the supervisor's request; both remain in the research database.
+> **Envelope options, current as of 31 August 2026.** Each of the five published climate zones offers **Standard**, the NECB 2017 code baseline for that zone, and **HPerf**, the High-Performance Envelope package. Montreal additionally offers a **1983 Quebec reference envelope** starting point, which is compared against itself because it is a different code era. Choosing HPerf uses the envelope-only rung of the scenario ladder, and its baseline is the Standard arm of the same climate, so the envelope gain is what the reported change shows. Seven climate arms were simulated. Five are published in NEXA. The ASHRAE arm is a United States reference case and Zone 8, Chisasibi, is held back at the supervisor's request; both remain in the research database.
 
 ---
 
@@ -545,7 +545,7 @@ The central data file (~630 KB) contains:
 ### Envelope Model
 
 The data file holds 17 envelope keys. **Seven were selectable until 17 August 2026; five are
-selectable now in N-LENS**, each with a Standard and an HPerf tier (plus the 1983 Montreal envelope):
+selectable now in NEXA**, each with a Standard and an HPerf tier (plus the 1983 Montreal envelope):
 
 | Key | What the user reads | Baseline it is compared against |
 |---|---|---|
@@ -762,6 +762,6 @@ Implementation change logs are in `docs_implementation/`:
 
 ## Attribution and licence
 
-**N-LENS is a research tool of the Resilient Habitat Lab (RHLab), Concordia University, directed by Dr. Caroline Hachem-Vermette.**
+**NEXA is a research tool of the Resilient Habitat Lab (RHLab), Concordia University, directed by Dr. Caroline Hachem-Vermette.**
 
 © Resilient Habitat Lab, Concordia University. This project is part of ongoing academic research. Contact the research group for licensing information.
