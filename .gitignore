@@ -33,8 +33,23 @@ __pycache__/
 # public and serves GitHub Pages, so the emails, progress trackers, debug
 # register and session prompts stay on the local machine and are never
 # published. Added 2026-08-14.
-docs_implementation/documentation-revisions/
+docs_implementation/documentation-revisions/*
 docs_methodology/
+
+# Exception, added 2026-09-17: the HQP trial package tells the trainees to open
+# three things inside the ignored folder above, so those, and only those, are
+# tracked. The paths stay where the package says they are. Everything else in
+# documentation-revisions/ (Emails, Prompts, Progress, Debugs, Shivram-Furqan,
+# the rest of Submission) stays local and unpublished.
+!docs_implementation/documentation-revisions/Submission/
+docs_implementation/documentation-revisions/Submission/*
+!docs_implementation/documentation-revisions/Submission/NEXA_Handover-and-Maintenance-Guide_v3.4.md
+!docs_implementation/documentation-revisions/Submission/submission1/
+docs_implementation/documentation-revisions/Submission/submission1/*
+!docs_implementation/documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv
+!docs_implementation/documentation-revisions/Results/
+docs_implementation/documentation-revisions/Results/*
+!docs_implementation/documentation-revisions/Results/*.js
 
 # Walkthrough recordings and their working notes. About 250 MB of GIFs and
 # MP4s that nothing on the site links to, so publishing them would cost every
