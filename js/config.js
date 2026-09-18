@@ -1,5 +1,5 @@
 /**
- * LMN Tool, js/config.js
+ * NEXA, js/config.js
  *
  * SINGLE SOURCE OF TRUTH for the tool's global constants.
  *

@@ -1,7 +1,7 @@
 import os
 
-vintage_path = r"c:\Users\o_iseri\Desktop\LMN-tool-main\Templates\1983-Quebec\vintage_1983_z6_data.js"
-data_path = r"c:\Users\o_iseri\Desktop\LMN-tool-main\js\data.js"
+vintage_path = r"c:\Users\o_iseri\Desktop\NEXA-web\Templates\1983-Quebec\vintage_1983_z6_data.js"
+data_path = r"c:\Users\o_iseri\Desktop\NEXA-web\js\data.js"
 
 with open(vintage_path, "r", encoding="utf-8") as f:
     vintage_text = f.read().rstrip()

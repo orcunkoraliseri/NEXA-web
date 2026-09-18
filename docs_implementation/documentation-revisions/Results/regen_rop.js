@@ -12,7 +12,7 @@ const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
 
-const repo = 'C:/Users/o_iseri/Desktop/LMN-tool-main';
+const repo = 'C:/Users/o_iseri/Desktop/NEXA-web';
 const out = path.join(repo, 'docs_implementation/documentation-revisions/Results/RESULT-07_RoP-values.csv');
 
 const ctx = { console };

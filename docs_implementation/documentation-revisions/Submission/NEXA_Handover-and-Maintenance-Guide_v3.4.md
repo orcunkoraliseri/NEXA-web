@@ -3,8 +3,8 @@
 **Version:** 3.4
 **Guide date:** 2026-09-11
 **Release described:** NEXA V1, model and data version 1.0.0
-**Live at:** https://orcunkoraliseri.github.io/LMN-tool/, published 2026-08-24
-**Repositories:** `github.com/orcunkoraliseri/LMN-tool`, which serves the site, and
+**Live at:** https://orcunkoraliseri.github.io/NEXA-web/, published 2026-08-24
+**Repositories:** `github.com/orcunkoraliseri/NEXA-web`, which serves the site, and
 `github.com/CarolineHVermette/LMN-Web`, which mirrors the code and serves nothing
 **Prepared by:** Orcun Koral Iseri, Postdoc, Resilient Habitat Lab, Concordia University
 **Prepared for:** Dr. Caroline Hachem-Vermette / RHLab
@@ -622,9 +622,9 @@ this in a box, on CHV's instruction of 2026-08-13.
 |-------------------------------|-----------------------------------------------------------------------------------------|
 | **Repository** | `https://github.com/CarolineHVermette/LMN-Web` |
 | **Owner** | CHV account. This is the destination repository; see section 14 for what remains of the transfer |
-| **Predecessor repository** | `github.com/orcunkoraliseri/LMN-tool`, the original personal repository. Still a configured remote in the working copy |
+| **Predecessor repository** | `github.com/orcunkoraliseri/NEXA-web`, the original personal repository. Still a configured remote in the working copy |
 | **Branch used for the live tool** | `main` |
-| **Hosting** | GitHub Pages, served from the repository root of `main` (served today from `orcunkoraliseri/LMN-tool`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4) |
+| **Hosting** | GitHub Pages, served from the repository root of `main` (served today from `orcunkoraliseri/NEXA-web`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4) |
 | **`.nojekyll`** | Present at the repository root, and **required**. Without it, GitHub Pages applies Jekyll processing and silently drops every folder whose name begins with an underscore |
 | **Custom domain** | None. The site is served on the default `github.io` address |
 | **Build step** | None. What is committed is what is served |
@@ -1905,7 +1905,7 @@ or with the cache disabled.
 git add -u                 # NOT -A. See the two warnings below.
 git status                 # read every line of it before committing
 git commit -m "…"
-git push https://github.com/orcunkoraliseri/LMN-tool.git main
+git push https://github.com/orcunkoraliseri/NEXA-web.git main
 ```
 
 GitHub Pages redeploys in one to two minutes.
@@ -2100,7 +2100,7 @@ decision turns on.
 
 | | Class | What it is | Where it lives | Lost with the machine? |
 |-------|-----------------------|-------------------------------------------|------------------------------------|-----------|
-| 1 | **Version-controlled inputs** | The EnergyPlus toolkit, 4,655 input models, 33 weather files, the neighbourhood registry; and in the website repository the pipeline scripts, `Templates/`, `Content/`, `js/` | `idf_reader` on `main`, pushed, with a second remote on CHV's account. `LMN-tool` on `main` | **No.** Both are pushed |
+| 1 | **Version-controlled inputs** | The EnergyPlus toolkit, 4,655 input models, 33 weather files, the neighbourhood registry; and in the website repository the pipeline scripts, `Templates/`, `Content/`, `js/` | `idf_reader` on `main`, pushed, with a second remote on CHV's account. `NEXA` on `main` | **No.** Both are pushed |
 | 2 | **Validated and retained outputs** | The 12,734 tracked files under `outputs/`, the per building results the master CSVs were built from; the campaign master CSV in `Templates/<date>/`; `js/data.js` itself | Tracked in the two repositories | **No** |
 | 3 | **Unique raw campaign folders** | The neighbourhood run folders: for every run, the injected IDF, `eplusout.sql`, `eplustbl.csv`, the modified IDFs and the previews. **Measured 2026-09-09: 63 top level folders, of which 22 carry the `IAL` tag of a different project, and about 5,623 run folders in total at campaign / climate / neighbourhood / run depth, about 252 GB.** Section 6.12 quotes 27 campaigns and 3,169 run folders, which is a narrower count taken earlier; **the scope of what is archived has to be stated before anything is copied** | `idf_reader/0_BEM_Setup/SimResults_neighbourhoods/`, excluded by `.gitignore` line 60. **Zero files tracked** | **Yes. This is the only copy** |
 | 4 | **Reproducible scratch** | Intermediate run space: `tmp/`, the other `0_BEM_Setup/SimResults*` trees, staging for the cluster | Untracked, about 197 GB in `tmp/` | Yes, and it does not matter |
@@ -2179,7 +2179,7 @@ analytics service and no paid service of any kind.
 | Item | Status |
 |-----------------------------------|-------------------------------------------------------------------------------------|
 | Destination repository | `github.com/CarolineHVermette/LMN-Web`, created and configured as a remote |
-| Predecessor repository | `github.com/orcunkoraliseri/LMN-tool`, under a personal account, still a configured remote |
+| Predecessor repository | `github.com/orcunkoraliseri/NEXA-web`, under a personal account, still a configured remote |
 | CHV access | Granted |
 | Live site | GitHub Pages |
 | Master data copy | The repository, plus a personal machine for the simulation project |
@@ -2430,7 +2430,7 @@ discharge with no efficiency term, which is what the tool does.
 
 **Where everything is in the repository**, `github.com/CarolineHVermette/LMN-Web`, top level
 first. Section 4 describes each one in full; this table is for finding it. The predecessor
-repository, `github.com/orcunkoraliseri/LMN-tool`, holds the same tree and serves the live
+repository, `github.com/orcunkoraliseri/NEXA-web`, holds the same tree and serves the live
 site today, see section 3.
 
 | Path | What is in it | Detail |

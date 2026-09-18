@@ -2,7 +2,7 @@
 const fs = require('fs');
 const vm = require('vm');
 const path = require('path');
-const repo = 'C:/Users/o_iseri/Desktop/LMN-tool-main';
+const repo = 'C:/Users/o_iseri/Desktop/NEXA-web';
 const P = f => path.join(repo, f);
 
 let fails = 0;

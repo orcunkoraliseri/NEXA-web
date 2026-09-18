@@ -1,6 +1,6 @@
-# LMN Tool — Graphical Abstract (Image Prompt)
+# NEXA — Graphical Abstract (Image Prompt)
 
-> **Purpose:** This document contains a detailed image generation prompt for the LMN Tool graphical abstract.
+> **Purpose:** This document contains a detailed image generation prompt for the NEXA graphical abstract.
 > The abstract communicates the tool's **Simplistic Modular Holistic (SMH)** methodology through a layered,
 > isometric urban visualisation suitable for journal figures, conference posters, and repository headers.
 
@@ -124,7 +124,7 @@ equal vertical space. The right side of each band carries a short label. Below t
 
 ### Typography & Annotations
 
-- **Title (top of image):** `LMN Tool — Neighbourhood Design Interface` in large bold sans-serif
+- **Title (top of image):** `NEXA — Neighbourhood Design Interface` in large bold sans-serif
 - **Subtitle:** `A web-based decision-support tool for PED neighbourhood design`
 - **Layer labels** (right-side vertical labels for each band) in small caps, accent colour matching the band
 - **Arrow connectors** between bands: thin chevron arrows (▼) in mid-grey, with micro-labels: "Select → Filter → Advance"
@@ -163,7 +163,7 @@ equal vertical space. The right side of each band carries a short label. Below t
 
 > *Create a scientific graphical abstract in a flat-design isometric illustration style on a light off-white background.
 > The image has a vertical stack of five labelled horizontal bands connected by downward arrows, representing the
-> sequential layers of an urban design decision-support tool called the "LMN Tool."*
+> sequential layers of an urban design decision-support tool called the "NEXA."*
 >
 > *Band 1 (charcoal accent): A "New Neighbourhood" entry card with a "Get Started" button — labelled "LAYER 0 — Entry Point".*
 >
@@ -183,7 +183,7 @@ equal vertical space. The right side of each band carries a short label. Below t
 > combining all layers, with a persistent sidebar showing stacked selections from all four layers.
 > Bold centred label: "Positive-Energy District (PED) Profile". Small badge: "SMH Methodology — Simplistic · Modular · Holistic".*
 >
-> *Title at top: "LMN Tool — Neighbourhood Design Interface". Clean sans-serif typography. No photorealism.
+> *Title at top: "NEXA — Neighbourhood Design Interface". Clean sans-serif typography. No photorealism.
 > Polished diagrammatic style suitable for a Nature Energy journal figure.*
 
 ---
