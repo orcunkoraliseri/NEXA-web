@@ -1,6 +1,6 @@
-# NEXA — Graphical Abstract (Image Prompt)
+# NEXA-web — Graphical Abstract (Image Prompt)
 
-> **Purpose:** This document contains a detailed image generation prompt for the NEXA graphical abstract.
+> **Purpose:** This document contains a detailed image generation prompt for the NEXA-web graphical abstract.
 > The abstract communicates the tool's **Simplistic Modular Holistic (SMH)** methodology through a layered,
 > isometric urban visualisation suitable for journal figures, conference posters, and repository headers.
 

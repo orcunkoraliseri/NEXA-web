@@ -1,4 +1,4 @@
-# NEXA Tool, Handover and Maintenance Guide
+# NEXA-web, Handover and Maintenance Guide
 
 **Version:** 3.4
 **Guide date:** 2026-09-11
@@ -62,7 +62,7 @@ internal, so merging them does not touch that boundary.
 > `documentation.html` page.
 
 
-## A. The NEXA tool
+## A. The NEXA-web tool
 
 **NEXA stands for Neighbourhood Energy eXploration & Analysis.** It is an interactive
 neighbourhood energy explorer. You compose a neighbourhood by typology, then
@@ -83,7 +83,7 @@ climates that were simulated.
 
 ### Intended use
 
-NEXA is an **early stage comparison tool**, for a planner, a municipality or a
+NEXA-web is an **early stage comparison tool**, for a planner, a municipality or a
 researcher who wants to see how neighbourhood form, envelope standard, on site
 generation and electric mobility move a small set of energy indicators, before
 any design work begins.
@@ -93,7 +93,7 @@ building; **not an optimisation engine** — no formal optimisation method is
 implemented, so the tool never ranks the scenarios and never recommends one; and
 not a substitute for a project specific energy model.
 
-The distinction matters when the tool is presented. **NEXA answers "how do these
+The distinction matters when the tool is presented. **NEXA-web answers "how do these
 options compare to one another", not "what should be built here".**
 
 ---
@@ -404,7 +404,7 @@ Not modelled yet.
 
 ## H. The system in one paragraph
 
-NEXA is a **static site**. No server, no database, no build step, no dependency
+NEXA-web is a **static site**. No server, no database, no build step, no dependency
 install. Clone it, serve the folder over HTTP, and it runs. **Every number it
 displays was computed offline and shipped inside `js/data.js`; the website
 calculates nothing scientific of its own.** Offline means one of three things, and
@@ -429,7 +429,7 @@ fixed in that chain and the result regenerated. **Which of the three it is, is t
 first question to answer, and section 15.0 is how to answer it.**
 
 **Modularity:** The architecture and documentation remain modular so that future
-RHLab researchers can maintain and extend NEXA: one page per layer; one script per
+RHLab researchers can maintain and extend NEXA-web: one page per layer; one script per
 page in `js/`; **one source of truth in `js/config.js`**; `js/data.js` generated and
 never hand edited; the persistent sidebar generated once by `buildSidebar()` in
 `js/sidebar.js`; and a new layer added by following the section 8.9 procedure without
@@ -561,7 +561,7 @@ is Appendix F.
 ## 1. Purpose and scope
 
 This guide is the single reference that allows CHV and RHLab to understand,
-maintain, update, deploy and continue developing the NEXA tool independently,
+maintain, update, deploy and continue developing the NEXA-web tool independently,
 without depending on any personal file, personal account, personal machine or
 personal memory.
 
@@ -812,7 +812,7 @@ tool does not hold.
 
 ### 6.0 Origin of every published number
 
-**The NEXA tool generates none of its own numbers.** Every value on the website
+**The NEXA-web tool generates none of its own numbers.** Every value on the website
 was produced offline in a separate project, `idf_reader`, and transcribed into
 `js/data.js`. Nobody can maintain this tool without being able to reach that
 project, read its methodology, and re run it.
@@ -2755,7 +2755,7 @@ then `keyUp`, or every keyboard test reports a false negative.
 
 ## Appendix G, independent handover test
 
-This protocol provides an independent verification test for new researchers (Shiv and Furqan) to validate that the NEXA tool can be maintained, updated, and operated using this guide alone with minimal assistance from the author.
+This protocol provides an independent verification test for new researchers (Shiv and Furqan) to validate that the NEXA-web tool can be maintained, updated, and operated using this guide alone with minimal assistance from the author.
 
 **Deployment is not part of this test.** The seven tasks are the ones Dr. Hachem-Vermette named, and none of them is a deployment. Publishing an update is section 11.1, and it is covered by the walkthrough in section 14.4, T3, T10 and T11, not here. Appendix C row 7 says the same.
 
@@ -2778,7 +2778,7 @@ Before starting, ensure the working environment satisfies the prerequisites docu
 
 | # | Task | Guide section | Pass criterion | Result |
 |-------|--------------------------------------|------------|-----------------------------------------------------|----------|
-| 1 | Run NEXA locally | 10.1 | The site serves and every page loads with no console error. | |
+| 1 | Run NEXA-web locally | 10.1 | The site serves and every page loads with no console error. | |
 | 2 | Locate a neighbourhood and its associated simulation and IDF files | 6, 6.12 | Given one NU code, they name the IDF, the weather file and the output folder. | |
 | 3 | Trace one displayed result back to its source | 5, 6.0 | Given one number on screen, they reach the CSV row and the campaign that produced it. | |
 | 4 | Make a small interface modification | 8.10 | An accent colour, a heading face or one label changes and shows locally. | |
