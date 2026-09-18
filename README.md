@@ -7,7 +7,7 @@ simulated in EnergyPlus, so that an energy result can be read early, before a de
 **It does not design a neighbourhood, it does not optimise one, and it is not a substitute
 for detailed building energy modelling later in a project.**
 
-Live: **https://orcunkoraliseri.github.io/LMN-tool/** (served today from `orcunkoraliseri/LMN-tool`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4 of the Handover and Maintenance Guide).
+Live: **https://orcunkoraliseri.github.io/NEXA-web/** (served today from `orcunkoraliseri/NEXA-web`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4 of the Handover and Maintenance Guide).
 
 ---
 
@@ -398,7 +398,7 @@ The tool is a **pure client-side web application** — no build tools, bundlers,
 ## Project Structure
 
 ```text
-LMN-tool/
+NEXA-web/
 │
 ├── index.html                           ─ Alias for Layer 0 entry (GitHub Pages support)
 ├── layer0_initial.html                  ─ Layer 0: Entry Point
@@ -706,10 +706,10 @@ No build tools or server required. The tool runs entirely in a browser from loca
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/orcunkoraliseri/LMN-tool.git
-   cd LMN-tool
+   git clone https://github.com/orcunkoraliseri/NEXA-web.git
+   cd NEXA-web
    ```
-   (Served today from `orcunkoraliseri/LMN-tool`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4 of the Handover and Maintenance Guide.)
+   (Served today from `orcunkoraliseri/NEXA-web`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4 of the Handover and Maintenance Guide.)
 
 2. **Start a local server** (recommended):
    ```bash
