@@ -67,3 +67,10 @@ docs_implementation/Demo/
 # serves GitHub Pages. Added 2026-08-24, and it is the reason staging is always
 # `git add -u` and never `git add -A`.
 docs_implementation/DONE/
+
+# Local assistant working files. Kept on the working machine only.
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+memory/
+docs_implementation/Part2-historicalcode sims/Prompt/

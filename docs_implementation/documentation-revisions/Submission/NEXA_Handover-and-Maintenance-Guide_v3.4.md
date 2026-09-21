@@ -2450,9 +2450,7 @@ site today, see section 3.
 | `Templates/` | The data pipeline: the per climate CSVs that are the import layer, and the dated source datasets | 4.5 |
 | `Templates/scripts/` | The four Python scripts that carry a campaign into `js/data.js` | 4.5, 7 |
 | `vendor/` | The libraries and fonts kept in the repository: Chart.js, model-viewer, Inter and Outfit. **No page calls a CDN** | 9.1 |
-| `memory/` | Two working notes kept with the code, one of them the EV and landscape solar pipeline note | |
 | `README.md` | The repository readme | |
-| `CLAUDE.md` | The working rules followed while the revision round was carried out | |
 | `GraphicalAbstract.md` | The graphical abstract text | |
 | `.nojekyll` | Empty, and required. Without it GitHub Pages drops every folder whose name starts with an underscore | 3 |
 | `.gitattributes`, `.gitignore` | Line endings, and what is kept out of the published repository | 10.2 |
