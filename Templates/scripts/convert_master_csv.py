@@ -226,12 +226,15 @@ def process():
                     elif standard_raw in ("US_ASHRAE", "ASHRAE"):
                         zone_rows["ASHRAE"].append(csv_row)
 
-    # 1. Read main 2026-07-21 national master
-    read_master_file(MASTER_CSV)
-    
+
+
+   
     # 2. Read legacy master for US_ASHRAE fallback data if available
     if os.path.exists(LEGACY_MASTER_CSV):
         read_master_file(LEGACY_MASTER_CSV)
+
+    # 1. Read main 2026-07-21 national master
+    read_master_file(MASTER_CSV)
 
     # 3. Read PV CSV for PV_GENERATION_DATA
     if os.path.exists(PV_CSV):

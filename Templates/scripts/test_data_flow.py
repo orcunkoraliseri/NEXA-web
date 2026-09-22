@@ -86,7 +86,7 @@ def test_data_flow():
     print('=== STEP 1: LAYER 1 FILTERING TEST ===')
     for env in all_14_envelopes:
         matching = [n for n in neighbourhoods if env in n['envelope']]
-        assert len(matching) == 35, f'Envelope {env} matched only {len(matching)} NUs'
+        assert len(matching) == 36, f'Envelope {env} matched only {len(matching)} NUs'
         print(f'Envelope "{env}" matches {len(matching)}/35 NUs.')
 
     print('\n=== STEP 2: ENERGY.JS LOOKUP LOGIC TEST ===')
