@@ -57,7 +57,7 @@
   --text-primary: #1a1a2e;
   --text-secondary: #5c6370;
   --accent-gradient: linear-gradient(135deg, #F5C400 0%, #C93D0A 100%);
-  --accent-gold: #F5C400;
+  --accent-gold: #F5C400;  
   --accent-amber: #E8860A;          /* alias of --usage-color */
   --accent-burnt: #C93D0A;
   --bg-inactive-tile: #F1F2F4;       /* cool light-gray; reserved for explicit inactive-variant modifier */
