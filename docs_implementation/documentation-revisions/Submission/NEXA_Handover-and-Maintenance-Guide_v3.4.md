@@ -3,9 +3,9 @@
 **Version:** 3.4
 **Guide date:** 2026-09-11
 **Release described:** NEXA V1, model and data version 1.0.0
-**Live at:** https://orcunkoraliseri.github.io/NEXA-web/, published 2026-08-24
-**Repositories:** `github.com/orcunkoraliseri/NEXA-web`, which serves the site, and
-`github.com/CarolineHVermette/LMN-Web`, which mirrors the code and serves nothing
+**Live at:** https://carolinehvermette.github.io/NEXA-Web/, the permanent address since 2026-09-22 (first published 2026-08-24)
+**Repositories:** `github.com/CarolineHVermette/NEXA-Web`, which serves the site, and
+`github.com/orcunkoraliseri/NEXA-web`, the predecessor, which mirrors the code and serves nothing
 **Prepared by:** Orcun Koral Iseri, Postdoc, Resilient Habitat Lab, Concordia University
 **Prepared for:** Dr. Caroline Hachem-Vermette / RHLab
 
@@ -446,8 +446,8 @@ so a future maintainer does not spend time investigating what a neighbourhood ca
 ## I. Getting started
 
 ```bash
-git clone https://github.com/CarolineHVermette/LMN-Web.git
-cd LMN-Web
+git clone https://github.com/CarolineHVermette/NEXA-Web.git
+cd NEXA-Web
 python -m http.server 8000
 ```
 
@@ -620,11 +620,11 @@ this in a box, on CHV's instruction of 2026-08-13.
 
 | Item | Value |
 |-------------------------------|-----------------------------------------------------------------------------------------|
-| **Repository** | `https://github.com/CarolineHVermette/LMN-Web` |
+| **Repository** | `https://github.com/CarolineHVermette/NEXA-Web` |
 | **Owner** | CHV account. This is the destination repository; see section 14 for what remains of the transfer |
 | **Predecessor repository** | `github.com/orcunkoraliseri/NEXA-web`, the original personal repository. Still a configured remote in the working copy |
 | **Branch used for the live tool** | `main` |
-| **Hosting** | GitHub Pages, served from the repository root of `main` (served today from `orcunkoraliseri/NEXA-web`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4) |
+| **Hosting** | GitHub Pages, served from the repository root of `main` (served from `CarolineHVermette/NEXA-Web` since 2026-09-22, at https://carolinehvermette.github.io/NEXA-Web/; section 14.4, T7) |
 | **`.nojekyll`** | Present at the repository root, and **required**. Without it, GitHub Pages applies Jekyll processing and silently drops every folder whose name begins with an underscore |
 | **Custom domain** | None. The site is served on the default `github.io` address |
 | **Build step** | None. What is committed is what is served |
@@ -1905,12 +1905,12 @@ or with the cache disabled.
 git add -u                 # NOT -A. See the two warnings below.
 git status                 # read every line of it before committing
 git commit -m "…"
-git push https://github.com/orcunkoraliseri/NEXA-web.git main
+git push https://github.com/CarolineHVermette/NEXA-Web.git main
 ```
 
 GitHub Pages redeploys in one to two minutes.
 
-**Live deployment target:** Finalising the live deployment from the supervisor-controlled repository `github.com/CarolineHVermette/LMN-Web` is **Waiting for CHV** (joint item, after CHV's trips, her email of 2026-08-30; tracked as D1, section 14.4 T7).
+**Live deployment target:** the live site is deployed from the supervisor-controlled repository `github.com/CarolineHVermette/NEXA-Web`, at https://carolinehvermette.github.io/NEXA-Web/, since 2026-09-22 (D1, section 14.4 T7, completed).
 
 **Two warnings, corrected on 2026-08-24 after the first real release.**
 
@@ -2084,7 +2084,7 @@ acceptance criterion of this guide and is not met.*
 
 | Item | Location | In the repository |
 |-------------------------------------------------|--------------------------------------------------|--------------------:|
-| Website source, data, content | `github.com/CarolineHVermette/LMN-Web` | Yes |
+| Website source, data, content | `github.com/CarolineHVermette/NEXA-Web` | Yes |
 | Simulation methodology | `docs_methodology/` | **Yes, since 2026-08-14** |
 | Simulation code, input models, raw outputs | `github.com/orcunkoraliseri/idf_reader`, mirrored to `github.com/CarolineHVermette/LMN-Desktop` | **Yes.** Corrected 2026-08-24, section 6.0 |
 | The revision round record | `docs_implementation/` | Yes |
@@ -2178,10 +2178,10 @@ analytics service and no paid service of any kind.
 
 | Item | Status |
 |-----------------------------------|-------------------------------------------------------------------------------------|
-| Destination repository | `github.com/CarolineHVermette/LMN-Web`, created and configured as a remote |
-| Predecessor repository | `github.com/orcunkoraliseri/NEXA-web`, under a personal account, still a configured remote |
+| Destination repository | `github.com/CarolineHVermette/NEXA-Web`, created and configured as a remote, serves the live site since 2026-09-22 |
+| Predecessor repository | `github.com/orcunkoraliseri/NEXA-web`, under a personal account, still a configured remote, no longer serves the site |
 | CHV access | Granted |
-| Live site | GitHub Pages |
+| Live site | GitHub Pages, https://carolinehvermette.github.io/NEXA-Web/ |
 | Master data copy | The repository, plus a personal machine for the simulation project |
 
 ### 14.3 Target state
@@ -2194,20 +2194,20 @@ analytics service and no paid service of any kind.
 | Live site | Served from the RHLab controlled repository |
 | Simulation project | Present in an RHLab controlled archive. **Half done:** the mirror on CHV's account is current, an archive independent of either personal account is not agreed |
 
-**Status of handover items:** Finalising owner transfer, role permissions and long-term archive is **Waiting for CHV** *(joint items D1, D5, D6, after CHV's trips, her email of 2026-08-30)*.
+**Status of handover items:** Finalising owner transfer, role permissions and long-term archive is **Waiting for CHV** *(joint items D5, D6, after CHV's trips, her email of 2026-08-30)*.
 
 ### 14.4 Transfer checklist
 
 | # | Step | Owner | Status | Note |
-|-------|------------------------------------------------|---------|------------------|--------------------------------------|
+|-------|--------------------------------------------|--------|-----------------|---------------------------------------------|
 | T1 | CHV creates a GitHub account with the Concordia email | CHV | ✅ **Completed** | Done |
 | T2 | CHV given access to the repository | Koral | ✅ **Completed** | Done |
 | T3 | Walk CHV through the repository live: structure, branches, data location, how the site is generated, tested and deployed | Koral | 🟦 **Waiting for CHV** | joint item, after CHV's trips, her email of 2026-08-30 (D4; also closes Appendix C row 7) |
-| T4 | Agree the final destination | Both | ✅ **Completed** | Done, `CarolineHVermette/LMN-Web` |
+| T4 | Agree the final destination | Both | ✅ **Completed** | Done, `CarolineHVermette/NEXA-Web` |
 | T5 | Destination created with CHV at owner level | CHV | ✅ **Completed** | Done |
 | T6 | Content transferred | Koral | ✅ **Completed** | Done |
-| T7 | GitHub Pages enabled on the destination and the live URL verified | Both | 🟦 **Waiting for CHV** | joint item, after CHV's trips, her email of 2026-08-30 (D1) |
-| T8 | Every link updated to the new URL, in the documentation, the README and any published reference | Koral | 🟦 **Waiting for CHV** | joint item, after CHV's trips, her email of 2026-08-30 (D2) |
+| T7 | GitHub Pages enabled on the destination and the live URL verified | Both | ✅ **Completed** | Done, 2026-09-22: https://carolinehvermette.github.io/NEXA-Web/ answers 200 (D1) |
+| T8 | Every link updated to the new URL, in the documentation, the README and any published reference | Koral | ✅ **Completed** | Done, 2026-09-22, in this guide, the README and the trial packages (D2). Dated records keep the old URLs |
 | T9 | Koral added as contributor or admin on the destination | CHV | 🟦 **Waiting for CHV** | joint item, after CHV's trips, her email of 2026-08-30 (D6) |
 | T10 | Confirm the tool builds and deploys with no dependency on a personal machine | Both | 🟦 **Waiting for CHV** | joint item, after CHV's trips, her email of 2026-08-30 (D4) |
 | T11 | Repeat the walkthrough until CHV is comfortable navigating and deploying independently | Both | 🟦 **Waiting for CHV** | joint item, after CHV's trips, her email of 2026-08-30 (D4) |
@@ -2428,10 +2428,10 @@ discharge with no efficiency term, which is what the tool does.
 
 ### A.2 Folders and files
 
-**Where everything is in the repository**, `github.com/CarolineHVermette/LMN-Web`, top level
+**Where everything is in the repository**, `github.com/CarolineHVermette/NEXA-Web`, top level
 first. Section 4 describes each one in full; this table is for finding it. The predecessor
-repository, `github.com/orcunkoraliseri/NEXA-web`, holds the same tree and serves the live
-site today, see section 3.
+repository, `github.com/orcunkoraliseri/NEXA-web`, holds the same tree; it served the live
+site until 2026-09-22, see section 3.
 
 | Path | What is in it | Detail |
 |-----------------------------------|-------------------------------------------------------------------------|-----------|
@@ -2507,7 +2507,7 @@ called a report. The document is the same one.*
 | 7 | Someone other than the author can deploy an updated live version from this guide alone | ⚠ **To be tested** | Not covered by Appendix G (which carries no deployment task). Deployment is section 11.1; this criterion is tested by the walkthrough in section 14.4, T3, T10 and T11 (D4, Waiting for CHV) |
 | 8 | Backup and recovery are documented **and tested at least once** | ⚠ **To be tested** | Closes in the Appendix G test, task 7 |
 | 9 | The guide contains no passwords or tokens | ✅ **Completed** | Verified: clean of secrets, accounts listed by permission |
-| 10 | CHV has owner level control of the repository hosting the live tool | ✅ **Completed** | `github.com/CarolineHVermette/LMN-Web` configured at owner level |
+| 10 | CHV has owner level control of the repository hosting the live tool | ✅ **Completed** | `github.com/CarolineHVermette/NEXA-Web` configured at owner level |
 | 11 | CHV has reviewed the guide at least three times | 🟦 **Waiting for CHV** | One version has been shared, v1.0 on 2026-08-24, and she has commented twice since, on 2026-08-27 and 2026-08-30. **No further version has been shared**, and three reviews are not yet on record. This one, v3.2, is the second to be sent |
 | 12 | The embedded token is revoked and the remote is clean | 🟨 **In progress** | P0 security: remotes are clean; token revoke on GitHub is Koral's personal action (A1, section 14.5) |
 | 13 | The simulation project is in an RHLab controlled archive | 🟦 **Waiting for CHV** | Mirror on CHV account current (T12); long-term independent archive is joint item D5 |
@@ -2548,15 +2548,16 @@ Parts I and II, which repeated them.
 | **3.3**, fourth addendum | **2026-09-10** | **Appendix A extended into a directory glossary**, at Dr. Hachem-Vermette request of the same day, so that a reader can find a file or a folder from one table. The existing fifteen terms become **A.1 Terms**, unchanged, and **A.2 Folders and files** is new: every path at the top of the repository, what is in it, and the section that describes it. It also records that docs_implementation/documentation-revisions/ and docs_methodology/, both named in section 4.6, are in .gitignore and are therefore not on GitHub. **Section 12.0, question 2, is now answered**, at the meeting of the same day: 1 TB for each project at a ceiling of CAD 300 to 400, on a portable SSD that Mac and Windows both read and write, the earlier 4 TB and 8 TB recommendation withdrawn. **Section 12.0, question 3, is now answered**, on Koral's decision of the same day: Comparison Mode goes offline rather than to review, is kept in the repository so that it can come back, and its two entry points are commented out rather than deleted, which moved the cache stamp to `?v=27` on all fifteen pages. **No other content changed** | ⬜ |
 | **3.3**, fifth addendum | **2026-09-10** | **The Thermal Load data was imported, so `DBG-054` is half closed, and Comparison Mode was taken offline at the page itself.** The simulations the `IAL` column needed were commissioned and finished the same day in the simulation repository: **210 runs, all 35 neighbourhoods across the six NECB climate zones, zero EnergyPlus Fatals**. They were imported into `js/data.js` as an `IAL` block on each of those 210 cells, `total`, the six end uses and `pv`, taken at the one decimal the file already uses, and every one was read back out of the loaded file and checked against the source CSV, **8 fields on each of 210 rows and 0 mismatches**, no all-zero row and no negative residual. Both resolvers now return `IAL` there rather than falling back. **`DBG-054` is half closed and not closed**: the campaign covered the standard archetypes, so the high performance building still has no `IAL` column and the card still falls back there without saying so, **175 of the 350 combinations a visitor can reach**. Sections 12, 12.0 question 1, the 12.1 row and Appendix F2 record that split. Separately, `comparison.html` answered a typed address with the working tool although both its entry points were commented out, so `initComparisonPage` now reads `LMN_CONFIG.comparisonMode.published` first and prints an offline notice instead; nothing was deleted and setting the flag to `true` runs the page as before. The two js changes moved the cache stamp to **`?v=29` on all fifteen pages and 66 references**. **Both changes were published the same day**, commit `5a956fb`, pushed to the site repository and to the mirror on CHV's account, and **verified against the deployed server**: 30 cases in a real headless Chrome, 30 passing, no console error and no failed request | ⬜ |
 | **3.4** | **2026-09-11** | **Renamed the tool from N-LENS to NEXA**, on Dr. Hachem-Vermette's email of the same day: *"NEXA, Neighbourhood Energy eXploration & Analysis, Version 1 · Research Preview."* The name was applied in the running text, the title block, the glossary and the Group D items of this guide, in the website's fifteen pages and three scripts, and in the repository `README.md` and the HQP trial package. The tagline is unchanged. **As in the 3.3 rename, code tokens (`LMN_CONFIG`), repository and URL strings, and dated quoted historical text are unchanged**, since they are real identifiers, and so is the revision row of 3.3 above, which records the previous name. The single source of the name remains `LMN_CONFIG.releaseName` and `LMN_CONFIG.productName` in `js/config.js`; no page writes it as a literal. The two js edits moved the cache stamp to **`?v=30` on all fifteen pages and 66 references**. **Nothing was committed, pushed or published**: the rename is local, version 3.3 remains the document submitted on 2026-09-11, and this version is the one prepared for the next submission | ⬜ |
+| **3.4**, addendum | **2026-09-22** | **The live site moved to its permanent address**, https://carolinehvermette.github.io/NEXA-Web/, served from `github.com/CarolineHVermette/NEXA-Web`, the destination repository. Header, sections I, 3, 11.1, 13.1, 14.2, 14.4 (T4, T7, T8), A.2 and Appendix C row 10 updated; D1 and D2 completed | ⬜ |
 
 ### Items awaiting joint completion with CHV (Group D)
 
 *The following six items from Dr. Hachem-Vermette's email of 2026-08-30 are parked to be completed jointly with her following her upcoming travel. Note that other specific items across the guide (such as Layer 3 provenance in §6.8/§15.3 and solar reconciliation in §12.1) are also marked Waiting for CHV.*
 
 | ID | Item (CHV 2026-08-30) | Where tracked | Status | Date of request |
-|-------|---------------------------------------------|-------------------|------------------|------------------------------|
-| D1 | Finalise the live NEXA V1 deployment from the CHV or RHLab controlled repository | §11.1, §14.4 (T7) | 🟦 **Waiting for CHV** | 2026-08-30 (joint item, after CHV's trips) |
-| D2 | Update the remaining repository and live site links | §14.4 (T8) | 🟦 **Waiting for CHV** | 2026-08-30 (joint item, after CHV's trips) |
+|-------|---------------------------------------------|-------------------|--------------------|------------------------------|
+| D1 | Finalise the live NEXA V1 deployment from the CHV or RHLab controlled repository | §11.1, §14.4 (T7) | ✅ **Completed 2026-09-22** | 2026-08-30 (joint item, after CHV's trips) |
+| D2 | Update the remaining repository and live site links | §14.4 (T8) | ✅ **Completed 2026-09-22** | 2026-08-30 (joint item, after CHV's trips) |
 | D3 | Establish the final NEXA V1 release or tag | §11.5 | 🟦 **Waiting for CHV** | 2026-08-30 (joint item, after CHV's trips) |
 | D4 | Go through repository access, deployment and recovery together until she can manage independently (also closes Appendix C row 7) | §14.4 (T3, T10, T11) | 🟦 **Waiting for CHV** | 2026-08-30 (joint item, after CHV's trips) |
 | D5 | Finalise the long term RHLab controlled archive and backup | §13.5, Appendix C (row 13) | 🟦 **Waiting for CHV** | 2026-08-30 (joint item, after CHV's trips) |

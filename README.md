@@ -7,7 +7,7 @@ simulated in EnergyPlus, so that an energy result can be read early, before a de
 **It does not design a neighbourhood, it does not optimise one, and it is not a substitute
 for detailed building energy modelling later in a project.**
 
-Live: **https://orcunkoraliseri.github.io/NEXA-web/** (served today from `orcunkoraliseri/NEXA-web`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4 of the Handover and Maintenance Guide).
+Live: **https://carolinehvermette.github.io/NEXA-Web/** (served from `CarolineHVermette/NEXA-Web` since 2026-09-22; `orcunkoraliseri/NEXA-web` is the public copy of the code, see section 14.4 of the Handover and Maintenance Guide).
 
 ---
 
@@ -709,7 +709,7 @@ No build tools or server required. The tool runs entirely in a browser from loca
    git clone https://github.com/orcunkoraliseri/NEXA-web.git
    cd NEXA-web
    ```
-   (Served today from `orcunkoraliseri/NEXA-web`, moving to `CarolineHVermette/LMN-Web`, with the transfer tracked at section 14.4 of the Handover and Maintenance Guide.)
+   (This is the public copy of the code. The live site is served from `CarolineHVermette/NEXA-Web` since 2026-09-22, see section 14.4 of the Handover and Maintenance Guide.)
 
 2. **Start a local server** (recommended):
    ```bash
