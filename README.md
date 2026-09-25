@@ -706,10 +706,10 @@ No build tools or server required. The tool runs entirely in a browser from loca
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/orcunkoraliseri/NEXA-web.git
-   cd NEXA-web
+   git clone https://github.com/CarolineHVermette/NEXA-Web.git
+   cd NEXA-Web
    ```
-   (This is the public copy of the code. The live site is served from `CarolineHVermette/NEXA-Web` since 2026-09-22, see section 14.4 of the Handover and Maintenance Guide.)
+   (This repository is private: accept the GitHub collaborator invitation from Dr. Caroline Hachem-Vermette before cloning. It is also the repository the live site is served from, since 2026-09-22, see section 14.4 of the Handover and Maintenance Guide.)
 
 2. **Start a local server** (recommended):
    ```bash

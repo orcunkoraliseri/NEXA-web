@@ -708,7 +708,7 @@ naming is unchanged.
 ### 4.5 Data pipeline, `Templates/`
 
 | Path | Role |
-|-----------------------------------------------------|-------------------------------------------------------------------|
+|-------------------------------------------------|-----------------------------------------------------------------------|
 | `scripts/convert_master_csv.py` | Campaign master CSV to per climate CSV |
 | `scripts/patch_data_js.py` | Per climate CSV into `js/data.js` |
 | `scripts/check_keys.py` | Key coverage validation |
@@ -719,12 +719,22 @@ naming is unchanged.
 | `NUS_EV.csv`, `NUs_LPV.csv` | Mobility and landscape solar parameters |
 | `Interface_Connections.csv` | Navigation flow matrix |
 | `Welcome_Page_Parameters.csv` | Landing page parameters |
-| `1983-Quebec/`, `2026-07-19/`, `2026-07-21/` | Dated source datasets |
+| `2026-09-10/` | **Current dataset**, named by the `DATA_VERSION` constant in `convert_master_csv.py`: the post-dfix national master, the IAL combined CSV, PV and archetype CSVs |
+| `1983-Quebec/`, `2026-07-19/`, `2026-07-21/` | Earlier dated source datasets, kept as history. `2026-07-19/` is still read, restricted to its `US_ASHRAE`/`ASHRAE` rows, since no later dataset carries that standard |
 | `archive/`, `*.bak` | Historical |
 
 **This pipeline is the single most important thing in this guide.** It is how
 new simulation results become tool results, and it is the part most dependent on
 one person's knowledge. Section 7 documents it.
+
+**All pipeline inputs resolve through one constant.** `DATA_VERSION` in
+`convert_master_csv.py` names the current dated folder (`2026-09-10`). To move
+to a new campaign: create a new `Templates/<YYYY-MM-DD>/` folder, never over an
+existing one; copy in the national master, PV generation, archetype and (if
+produced) IAL CSVs, carrying forward any file the new campaign did not re-run;
+then change `DATA_VERSION` to that folder's name. Older dated folders are left
+in place as history and are not read again, except `2026-07-19/` for
+`US_ASHRAE`/`ASHRAE`.
 
 ### 4.6 Documentation folders
 
@@ -747,6 +757,7 @@ CHV specified the minimum columns. They are kept, in her order.
 |-----------|-----------|---------------|-----------------------|-----------------------|-----------------------|----------------|
 | Annual energy use intensity | kWh/m2 of heated and cooled area per year | `js/data.js` | `ENVELOPE_ENERGY_DATA[env][NU][scenario].total` | EnergyPlus neighbourhood simulation, campaign `option_9_j_20260707_v2`; Montreal from `option_9_qc1983nu_20260807_all35` | `convert_master_csv.py` then `patch_data_js.py` | Layer 2 breakdown, final summary |
 | Demand breakdown, six end uses | kWh/m2 of heated and cooled area per year | `js/data.js` | `…[scenario].breakdown[]`, in the order Heating, Cooling, DHW, Lighting, Equipment, Fans and Pumps | EnergyPlus end use output | same | Layer 2 breakdown |
+| Ideal thermal load (Thermal Load card) | kWh/m2 of heated and cooled area per year | `js/data.js` | `ENVELOPE_ENERGY_DATA[env][NU]["IAL"].total` and `.breakdown[]`, gated by `LMN_CONFIG.thermalLoadAllowed(env)` | EnergyPlus neighbourhood simulation, HVAC replaced by ideal air loads; campaigns `option_9_a1_IAL_20260910_v1` to `_v6`, one per NECB zone, combined in `IAL_ThermalLoadSims_Combined_6Zone_20260910.csv` | `convert_master_csv.py` then `patch_data_js.py`, imported 2026-09-10, DBG-054 | Layer 2 breakdown, Thermal Load card. **Standard NECB envelopes only, 210 of 210 cells; not currently available for the High-Performance envelope** |
 | "Other" end use block | kWh/m2 of heated and cooled area per year | computed at render | `total` minus the sum of `breakdown` | The seven EnergyPlus end use buckets the tool does not chart: exterior lighting, refrigeration, heat rejection, humidification, heat recovery | Computed by `js/energy.js`, never stored | Layer 2 breakdown |
 | Rooftop solar generation intensity | kWh/m2 of heated and cooled area per year | `js/data.js` | `ENVELOPE_ENERGY_DATA[env][NU][scenario].pv` | Tier 3 geometry sized solar injector, from EEM1 on. Native prototype solar only at DEFAULT | same | Solar profile, final summary |
 | **Authoritative solar source** | | | `LMN_CONFIG.pv.authoritativeSource` names the field above. `PV_GENERATION_DATA[NU].generation` was a second, non reproducing figure and was **deleted** on 2026-08-10 | Verified against the simulation output for all 35: the energy data reproduces it 35 of 35, the deleted field 2 of 35 | | |
@@ -1251,6 +1262,13 @@ simulation run behind the published tool, searchable in any spreadsheet:
 
 `docs_implementation/documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv`
 
+**The paths in the index point into the simulation repository, `idf_reader`, not
+into NEXA-web.** `idf_path` and `output_path` are paths inside an `idf_reader`
+clone: the models and the raw run folders live there, and NEXA-web holds only the
+published results. `output_path` is under
+`idf_reader/0_BEM_Setup/SimResults_neighbourhoods/`, which is not on GitHub
+(section 13.2).
+
 **4,116 rows, 35 neighbourhoods, 7 climate and envelope arms**, built
 2026-09-09. Nineteen columns, and every one of them comes from a source rather
 than from a judgement:
@@ -1319,11 +1337,15 @@ The path from raw simulation output to the data the website reads. **A result is
 ```
 
 | Script | Input | Output | How to run |
-|--------------------------|----------------------|------------------------------------|------------------------------------|
-| `convert_master_csv.py` | A campaign master CSV under `Templates/<date>/` | A pivoted per climate CSV in `Templates/` | `python Templates/scripts/convert_master_csv.py` from the repository root |
+|--------------------------|-------------------------------|---------------------------|------------------------------------|
+| `convert_master_csv.py` | The `Templates/<DATA_VERSION>/` folder (national master, IAL combined CSV, PV and archetype CSVs), plus `Templates/2026-07-19/` restricted to `US_ASHRAE`/`ASHRAE` rows | A pivoted per climate CSV in `Templates/`, with an `IAL` level on the 210 covered cells | `python Templates/scripts/convert_master_csv.py` |
 | `patch_data_js.py` | The per climate CSVs | Patches the generated structures into `js/data.js` in place | `python Templates/scripts/patch_data_js.py` |
 | `check_keys.py` | `js/data.js` | Reports missing or unexpected keys | `python Templates/scripts/check_keys.py` |
 | `test_data_flow.py` | `js/data.js` and the CSVs | End to end consistency check | `python Templates/scripts/test_data_flow.py` |
+
+**All four scripts derive their paths from their own file location**
+(`os.path.dirname(os.path.abspath(__file__))`), so each is runnable from any
+working directory on any clone, not only from the repository root.
 
 The scripts use only the Python standard library: `csv`, `json`, `os`, `re`,
 `sys`. There is no requirements file because there are no third party
@@ -1334,10 +1356,12 @@ requirements.
 **This is the highest risk part of the handover.** Each of these is done by
 hand today, and each has caused a defect.
 
-1. **Choosing which campaign folder to import.** Nothing enforces that the
-   folder you point at is the current run. This is exactly what produced the
-   superseded results in section 6.11. Record the campaign identifier in
-   `LMN_CONFIG.dataCampaign` as part of the import, every time.
+1. **Bumping `DATA_VERSION`.** `convert_master_csv.py` resolves every pipeline
+   input through this one constant, currently `2026-09-10`. Nothing enforces
+   that it names the current campaign; it must be changed by hand when a newer
+   dated folder is added. This is exactly what produced the superseded results
+   in section 6.11. Record the campaign identifier in `LMN_CONFIG.dataCampaign`
+   as part of the import, every time.
 2. **Importing the floor areas.** `GFA_DATA` and `CONDITIONED_AREA_DATA` live
    in `js/config.js` since 2026-09-09. They come
    from a validation CSV, not from the master CSV, and are copied in by hand.
@@ -1395,7 +1419,7 @@ on one machine.
 
 The update process follows a strict five-stage chain:
 1. **Simulation:** Run the EnergyPlus simulation campaign upstream (in `idf_reader`) and obtain the campaign master CSV.
-2. **`Templates/`:** Place the master CSV under `Templates/<YYYY-MM-DD>/`.
+2. **`Templates/`:** Create a new `Templates/<YYYY-MM-DD>/` folder, copy in the master (and IAL, PV and archetype CSVs where produced), and point `DATA_VERSION` in `convert_master_csv.py` at it.
 3. **Pipeline script:** Run `convert_master_csv.py` to create per-climate CSVs, then run `patch_data_js.py`.
 4. **`js/data.js`:** The pipeline updates `js/data.js`. Verify with `check_keys.py`, `test_data_flow.py`, and stage verification scripts.
 5. **`?v=` bump and publish:** Bump the cache parameter across pages (section 11.1) and publish to GitHub (section 11).
@@ -1403,16 +1427,20 @@ The update process follows a strict five-stage chain:
 #### Step by step procedure
 
 1. Obtain the campaign output and note its identifier.
-2. Place the master CSV under `Templates/<YYYY-MM-DD>/`.
-3. Run `convert_master_csv.py`, then `patch_data_js.py`.
-4. Update `LMN_CONFIG.dataCampaign` with the new identifier.
-5. Run `check_keys.py` and `test_data_flow.py`.
-6. Run the stage verification scripts under
+2. Create `Templates/<YYYY-MM-DD>/`, never over an existing folder, and copy in
+   the master CSV (and IAL, PV and archetype CSVs where the campaign produced
+   them, carrying forward any file it did not re-run).
+3. Change `DATA_VERSION` in `convert_master_csv.py` to the new folder's name.
+4. Run `convert_master_csv.py`, then `patch_data_js.py`. Both are runnable from
+   any working directory.
+5. Update `LMN_CONFIG.dataCampaign` with the new identifier.
+6. Run `check_keys.py` and `test_data_flow.py`.
+7. Run the stage verification scripts under
    `docs_implementation/documentation-revisions/Results/` with `node`.
-7. Open the affected neighbourhood on the Layer 2 breakdown **and** on the final
+8. Open the affected neighbourhood on the Layer 2 breakdown **and** on the final
    summary. Those two pages read the same stored cell by different routes, so
    disagreement between them is the fastest signal that something is wrong.
-8. Bump `?v=` and publish, section 11.
+9. Bump `?v=` and publish, section 11.
 
 **Never hand edit a value in `js/data.js` to correct it.** The next import
 overwrites it and nothing records that it was ever changed.
@@ -1467,13 +1495,46 @@ overwrites it and nothing records that it was ever changed.
 
 **Status:** **To be tested** *(written from the code, not rehearsed)*
 
-1. Add the key, display label and **explicit icon path** to the relevant group
-   of `LMN_CONFIG.selectionLabels`. Check the path against the real directory
-   listing, with exact case.
-2. If no quantitative model exists for it, leave it disabled and give it the
-   status term "Not modelled yet". Do not ship an option that accepts a click
-   and changes no number: that is what facade solar did on all 35
-   neighbourhoods before it was restricted.
+**One file is edited, and there is no HTML step.** Since the fix of
+2026-09-25, the Layer 2 generation cards are built by `renderGenerationCards()`
+in `js/energy-selection.js` from `LMN_CONFIG.selectionLabels.generation` in
+`js/config.js`. `layer2_energy_selection.html` carries no hand written cards
+for this group any more; editing `js/config.js` alone puts the card on the
+screen.
+
+| File | What to change |
+|--------------------------------------------------------------------|----------------------------------------------------|
+| `Content/Images_Layer2_EnergyGeneration/` | The icon, if the option needs a new one |
+| `js/config.js` | One entry in `LMN_CONFIG.selectionLabels.generation` |
+
+1. **Icon.** Put the icon in `Content/Images_Layer2_EnergyGeneration/`, or reuse
+   an existing one. Check the file name against the real directory listing, with
+   exact case: GitHub Pages is case sensitive.
+2. **Entry, `js/config.js`.** Add the key to `LMN_CONFIG.selectionLabels.generation`,
+   next to the existing entries (`biomass`, `wind`, `geothermal`). Fields:
+   - `label` (required): the display text.
+   - `image` (required): the explicit icon path.
+   - `popover` (optional): `{ title, text }`, shown by the card's info icon.
+   - `statusId` (optional): id of a hidden status `<span>` that other code
+     toggles at runtime; omit it for a card whose status never changes.
+   - `unavailable` (optional): `true` disables the card, adds
+     `data-permanently-disabled`, and shows the status text
+     `LMN_CONFIG.availability.notModelledLabel` ("Not modelled yet").
+   - `alt` (optional): image alt text; defaults to `label` when omitted.
+   ```
+   "new_key": { label: "New Technology", image: "Content/Images_Layer2_EnergyGeneration/new_key.png", unavailable: true }
+   ```
+   The sidebar and the finish-design summary read the label and the icon from
+   here too.
+3. If no quantitative model exists for the option, set `unavailable: true` as
+   above. Do not ship an option that accepts a click and changes no number:
+   that is what facade solar did on all 35 neighbourhoods before it was
+   restricted.
+4. **Cache stamp.** Because `js/config.js` changed, bump the `?v=N` stamp on
+   every page in the same commit (section 10.2).
+5. **Check.** Serve the site (section 10.1), open the Layer 2 selection page and
+   confirm the card renders correctly (enabled, or greyed with "Not modelled
+   yet" and unreachable by click or Tab if `unavailable`).
 
 ### 8.6 Update an image or a 3D model
 
@@ -1794,6 +1855,13 @@ routed. **Neighbourhood runs use a different airflow mode from single buildings*
 `master_status.json` into its run folder with every planned row marked `pending`
 before anything starts, then flips each row to `PASS` or `FAIL` as jobs finish.
 
+**"Run folder" means the batch folder the run creates**, not a folder named
+`Run`. It is in the `idf_reader` clone, under
+`0_BEM_Setup/SimResults_neighbourhoods/`, and is named from the menu option, the
+neighbourhood and a timestamp, for example
+`0_BEM_Setup/SimResults_neighbourhoods/option8_RS-I3_i_20260915_205718/`.
+`master_status.json` and `master_summary.csv` sit at the top of that folder.
+
 1. **Per job:** the row's state in `master_status.json`, with a failure reason if it failed. `version_mismatch` means mixed EnergyPlus versions in one merged neighbourhood.
 2. **Per run:** `eplusout.err` in the run folder. EnergyPlus reports `n_severes` and `n_warnings`, and both are carried through into the master CSV, so a run that completed with severe errors is visible without opening the folder.
 3. **Per batch:** `master_summary.csv`, rendered from the status file, one row per planned simulation.
@@ -1812,9 +1880,10 @@ last upstream artefact and the first input the website takes.
 
 1. The batch writes `master_summary.csv` into the campaign root. For the neighbourhood campaigns the consolidated file is `LMN_full_NU_master.csv`, at the root of `SimResults_neighbourhoods/`.
 2. **Check it before it travels.** Row count against the plan; `n_severes` zero on every row you intend to publish; `idf_path` and `output_path` present on every row, because they are the provenance trail; and the EUI columns within a plausible range for the climate.
-3. **Copy it into the website repository** as `Templates/<date>/LMN_national_NU_master.csv`, a new dated folder, never over an existing one.
-4. **Run the website pipeline**, section 7: `convert_master_csv.py`, then `patch_data_js.py`, then `check_keys.py` and `test_data_flow.py`.
-5. **Verify and publish**, sections 10.2 and 11.1.
+3. **Copy it into the website repository** as `Templates/<date>/LMN_national_NU_master.csv`, a new dated folder, never over an existing one, alongside the IAL, PV and archetype CSVs the campaign produced (carry forward any it did not re-run).
+4. **Point the pipeline at it.** Change `DATA_VERSION` in `convert_master_csv.py` to the new folder's name.
+5. **Run the website pipeline**, section 7: `convert_master_csv.py`, then `patch_data_js.py`, then `check_keys.py` and `test_data_flow.py`. All four are runnable from any working directory.
+6. **Verify and publish**, sections 10.2 and 11.1.
 
 #### 9.4.6 What this section does not cover
 
@@ -1831,13 +1900,20 @@ rather than being quietly left out of this runbook.
 
 ### 10.1 Serving the site
 
+Open a terminal in the repository root, the folder that holds `index.html`, and
+enter:
+
 ```bash
 python -m http.server 8000
 ```
 
-Then `http://localhost:8000/index.html`. **A static server is required.** Over a
-`file://` address the 3D models will not load, because of browser security
-rules on local files.
+Then open `http://localhost:8000/index.html` in the browser. **A static server is
+required.** Over a `file://` address the 3D models will not load, because of
+browser security rules on local files.
+
+**To stop the server**, return to the same terminal and press `Ctrl+C`. The
+terminal stays blocked while the server runs, so use a second terminal for git
+or the pipeline scripts.
 
 ### 10.2 Checks before committing
 
@@ -2013,14 +2089,14 @@ section.
 Items still requiring a code, credential or upstream fix.
 
 | Ref | Issue | Priority | State |
-|-----------|------------------------------------------|--------------|-----------------------------------------------------|
+|----------|------------------------------------------|--------------|------------------------------------------------------|
 | **DBG-001** | **A GitHub personal access token was embedded in the remote URLs of the working copy.** Anyone with a copy of that working directory held a live credential, for **both** repositories, because the same token stood in all three URLs | **P0, security** | 🟨 **In progress.** Half closed 2026-08-24. The credential is out of the configuration: all four URLs in the website working copy now read `https://github.com/...` with nothing before the host, and the simulation repository was already clean. A history search confirms **the token was never committed to a tracked file**, so it did not go public with the repository. **What remains is the revoke on GitHub, and it is Koral's alone**: a credential that has sat in a config file for months must be assumed seen. The token pushed on 2026-08-24, so it is the one showing *last used within the last day*. See section 14.5 |
 | DBG-004 | The silent climate fallback, last seen in 16 sites across 8 files | P2, downgraded | ✅ **Closed 2026-09-09, A15. Removed, not disclosed.** The last 16 sites built the next page's link rather than a number, and each now carries an empty envelope where it carried `necb-2017`, so the page it opens states the refusal. Two things settled it: the literal is not a key of `ENVELOPE_ENERGY_DATA` at all, so it never selected Montreal, it selected nothing; and the removal was measured in a real browser rather than assumed, 7 built links on six climate-less pages, 0 naming a climate, and the same links still carrying `necb-z6` when one is chosen |
 | DBG-051 | `js/pv.js` mixed line endings within itself, 621 CRLF against 6 bare LF. Found 2026-09-09 by the rewritten verification suites, and it was the only real failure among the 23 | P3 | ✅ **Closed 2026-09-09.** Normalised to 627 bare LF as a side effect of the A15 edit. The fear that it would bury the file history did not apply: `core.autocrlf` already keeps LF in the repository blob, so the recorded diff for the file is the A15 lines alone. Its two suite checks now pass |
 | DBG-052 | `comparison.html` loads a charting library that was not in the repository, so the request returned 404, `Chart` was never defined, and both charts on the page were blank at every pixel. The same tag was the page's only local reference with no `?v=` stamp, and the page was the only one of fifteen with no icon link. Found 2026-09-09 by the A23 pass | P2 | ✅ **Closed 2026-09-09.** Chart.js 4.4.3 vendored to `vendor/chartjs/`, with a README stating version, licence and provenance, exactly as `model-viewer` and the two fonts are vendored; no CDN call was added. The tag now names the vendored file and carries the stamp, and the missing icon link was added with it. Measured in a real browser: 200 on the request, `typeof Chart` is `function`, no failed request and no external host on the page, and both canvases draw where they were blank. Comparison Mode itself is still gated and unpublished under A27 |
 | DBG-053 | The seven card information icons on the option cards could be reached by keyboard and could not be opened by keyboard. Each is a `<span role="button" tabindex="0">` whose only opening handler is a `click` listener. Verified in both directions with real key events: they open on a mouse click, not on Enter or Space, while every popover built as a real `<button>` opens on Enter. Found 2026-09-09 by the A23 pass | P3 | ✅ **Closed 2026-09-09.** A `keydown` branch was added beside the existing `click` branch in `js/config.js`, so Enter, Space and the legacy `Spacebar` key name open the focused icon and the whole behaviour stays in one handler. Escape still closes. The `?v=` stamp moved to 26 on all 15 pages and 66 references in the same edit. Measured with real key events: 7 of 7 open on Enter, 7 of 7 on Space, 7 of 7 still take focus, and the mouse path is unchanged |
 | DBG-054 | **The Thermal Load card in Layer 2 was enabled on every neighbourhood and every climate and changed no number.** Both resolvers asked for an `IAL` column, `js/energy.js` line 566 and `js/config.js` line 1707, and no cell in `js/data.js` carried one: 17 envelope keys, 595 cells, `IAL` on 0 of them. Both fell back to the baseline without saying so. Measured on 70 of 70 rows, the intensity shown after clicking the card equals the stored `DEFAULT` total, the same number the page shows with no card clicked, and the end use slices are identical to the decimal. Meanwhile the assumptions box prints "Measures applied: Thermal Load" and "Directly simulated". Found 2026-09-09 by the A23 pass | **P1** | 🟨 **Half closed 2026-09-10. The data import was done and it covers the standard building only.** The simulations the column needed were commissioned and finished on 2026-09-10: **210 runs, 35 neighbourhoods across the six NECB climate zones, zero EnergyPlus Fatals**, and they were imported into `js/data.js` as an `IAL` block on each of those 210 cells. Every one of the 210 was read back out of the loaded file and checked against the source CSV field by field, **8 fields on each of 210 rows and 0 mismatches**, with no all-zero row and no negative residual. Both resolvers now return `IAL` on those cells instead of falling back. **What remains is the other arm**: the campaign was run against the standard archetypes, so the high performance building has no `IAL` column and the card still falls back there without saying so. Measured across what a visitor can actually reach, the five published climates on both arms: **350 combinations, 175 now answer with the simulated ideal load and 175 still fall back**, all 175 of them on `high-performance-z4`, `-z5`, `-z6`, `-z7a` and `-z7b`. The way out is the same as before and now applies to one arm rather than two: run the campaign against the high performance archetypes and import it the same way, or say so on the page. **Published 2026-09-10, commit `5a956fb`, and checked against the deployed server rather than the working copy**: a real headless Chrome driven over the DevTools protocol through the live pages, 30 cases, **30 passing**, no console error and no failed request. On the standard arm the intensity shown after clicking the card changed on 25 of 25 and equalled the stored ideal load total to the decimal on 25 of 25, across all five published climates. On the high performance arm it did not change on 5 of 5 and the assumptions box still printed *"Measures applied: Thermal Load"* beside the HPerf scenario, which is the half that stands open, measured rather than assumed. See Appendix F2 |
-| No register entry | The vehicle to grid discharge field is a confirmed naming and unit defect: `dischargeCapacity` in `js/data.js` holds a daily energy, and the interface unit string "10 kW / day" is not a valid unit. Confirmed in section 15.3 | Not yet triaged in the register | Open. Not applied to any published total; display only |
+| DBG-055 | The vehicle to grid discharge field was a confirmed naming and unit defect: `dischargeCapacity` in `js/data.js` holds a daily energy, and the interface printed "10 kW / day," which is not a valid unit. Confirmed in section 15.3 | P2 | ✅ **Closed 2026-09-25, V1 wrap-up, CHV item 3 (WP3).** Fixed 2026-08-12: `js/config.js` (RT01 terminology block, lines 1062 to 1108), `layer3_ev_v2g_mobility_output.html` and `js/ev-v2g-breakdown.js` now show "Daily V2G export per participating EV" in `kWh/(EV·day)`. See `Debugs/DEBUG-REGISTER.md` DBG-055 |
 
 ### 12.2 Accepted V1 limitations
 
@@ -2246,6 +2322,23 @@ Tracked as **DBG-001**, priority P0 security. **The token value is not written
 anywhere in this guide, and must not be written into any document in this
 folder.**
 
+### 14.6 Handover materials
+
+**Written 2026-09-24, on a suggestion from the HQP trial.** A new maintainer receives two
+repositories and a small set of documents. The files of each repository are listed in
+Appendix A: **A.2 for NEXA-web** and **A.3 for `idf_reader`**, the simulation repository.
+The documents are these:
+
+| Document | What it is for | Where it is |
+|---------------------|------------------------------------|--------------------------------------------------------------|
+| This guide | How the tool works and how to maintain it | NEXA-web, `docs_implementation/documentation-revisions/Submission/NEXA_Handover-and-Maintenance-Guide_v3.4.md`; also sent as `.docx` |
+| Simulation Model Index | One row per simulation run behind the published tool | NEXA-web, `docs_implementation/documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv`; section 6.13 |
+| Verification scripts | The checks run before a commit | NEXA-web, `docs_implementation/documentation-revisions/Results/*.js`; section 10.2 |
+| Handover closeout and HQP trial checklist | Dr. Hachem-Vermette's checklist: section A for Koral, section B for the trial preparation, section C for the trial tasks. The trial package cites its item numbers (B1, C1 and so on) | Sent by email as a `.docx`; not in either repository |
+| HQP trial package | The trial tasks and the findings log | Sent by email as a `.docx`; not in either repository |
+| Public methodology | The scientific basis shown to users | The site's `documentation.html` |
+| Simulation evidence | The origin of every published number | `idf_reader/docs_DONE/docs_LMN_web/`; section 6.0 |
+
 ---
 
 ## 15. Assumptions register
@@ -2343,7 +2436,7 @@ Changing an EV assumption means editing the default arguments in `Templates/Cont
 | Daily charging demand per vehicle | Post-processing | 15 kWh | `calculate_ev_scenarios.py` (`e_ev_per_day`); lands in `js/data.js` `….dailyEnergyDemand` | Default argument (Eq 12); **Energy Reports 14 (2025), Eq 12**. Basis in NUS_EV.csv is a 200 km daily range, and section 2.4 gives the same figure citing Dalla Chiara et al. (2019) |
 | Charging efficiency | Post-processing | 90 % | `calculate_ev_scenarios.py` (`eta_charging`); lands in `js/data.js` `….chargingEfficiency` | Default argument (Eq 12); **Energy Reports 14 (2025), Eq 12**, where it is the divisor grossing up demand. Section 2.4 states 90 per cent |
 | Vehicle to grid participation | Post-processing | 50 % | `calculate_ev_scenarios.py` (`p_v2g`); lands in `js/data.js` `….v2gParticipationRate` | Default argument (Eq 16); **Energy Reports 14 (2025), Eq 16**, where section 2.4.2 states 50 per cent. EV2 scenario only |
-| Discharge energy per vehicle per day | Post-processing | 10 kWh | `calculate_ev_scenarios.py` (`e_v2g_per_day`); lands in `js/data.js` `….dischargeCapacity` | Default argument (Eq 16); **Energy Reports 14 (2025), Eq 16**, where section 2.4.2 states 10 per participating vehicle per day and writes the unit as kW, which is the same defect. EV2 scenario only. The field name and the interface unit string are a confirmed naming defect, recorded in `js/config.js`: `dischargeCapacity` holds a daily energy, and `10 kW / day` is not a valid unit |
+| Discharge energy per vehicle per day | Post-processing | 10 kWh | `calculate_ev_scenarios.py` (`e_v2g_per_day`); lands in `js/data.js` `….dischargeCapacity` | Default argument (Eq 16); **Energy Reports 14 (2025), Eq 16**, where section 2.4.2 states 10 per participating vehicle per day and writes the unit as kW, which was the same defect. EV2 scenario only. The field name `dischargeCapacity` still holds a daily energy, but the interface unit string is fixed: **DBG-055, closed 2026-09-25 (fixed 2026-08-12)**, `js/config.js` now labels it "Daily V2G export per participating EV" in `kWh/(EV·day)` |
 | Discharge efficiency | Post-processing | 90 % | `calculate_ev_scenarios.py` (`eta_battery`); lands in `js/data.js` `….batteryEfficiency` | Default argument (Eq 13); the paper uses it in **Eq 13** but **never gives it a value**, so the 90 per cent is the code’s own. **Displayed but not applied** to exported energy, as in the paper’s Eq 17. Flag f1 **closed 2026-09-09**: not applied, stated as a V1 limitation, not claimed as the paper’s value |
 | Stationary storage share | Post-processing | 0.5 | `calculate_ev_scenarios.py` line 31 | **Unsourced**; assumed 50% through stationary storage; only undocumented constant in Layer 3 chain; no literature convention sets a 50 per cent pass through; a candidate reading is a standby drain of about 0.83 kWh per vehicle per day, unconfirmed. Flag f2 **closed 2026-09-09**: retained provisionally as the paper's own value, stated as an assumption, not validated |
 | Storage loss | Post-processing | 5 % of total EV demand | Derived as `0.5 x (1 - battery efficiency)`; lands in `js/data.js` `….storageLoss` as kWh/day | Derived calculation output, not an input (`30` kWh/day for RC-R, `60` for RC-D) |
@@ -2459,7 +2552,30 @@ site until 2026-09-22, see section 3.
 `docs_implementation/documentation-revisions/` and `docs_methodology/` are listed in
 `.gitignore` and live only on the working machine, because the repository is public and
 serves the site. Nothing on the site links to either, so nothing breaks; they are shared as
-documents instead.
+documents instead. **Three exceptions have been tracked since 2026-09-17**, so that a fresh
+clone carries what the HQP trial needs: this guide's `.md`, the Simulation Model Index and
+the verification scripts in `Results/` (section 14.6).
+
+### A.3 Simulation repository, `idf_reader`
+
+**The files a maintainer needs in the simulation repository**, `github.com/orcunkoraliseri/idf_reader`.
+Section 9.4 is the procedure; this table is for finding things.
+
+| Path | What is in it | Detail |
+|---------------------------------------------------|-----------------------------------------------------------|----------|
+| `README.md` | Install line, the pipeline menu, the cluster offload | 9.4 |
+| `main_BEM.py` | The single entry point for every simulation run, prompt driven | 9.4.3 |
+| `Content/neighbourhoods/neighbourhood_registry.py` | The canonical registry: which buildings make each neighbourhood. Definitions only, no results | 9.4.2 |
+| `Content/00.BaselineBuildings_NUs/` | The prototype building models | 9.4.2 |
+| `Content/00.Baseline_NUs_CAN_*/`, `Content/00.Neighbourhoods_US_ASHRAE/` | The merged neighbourhood models, one folder per climate arm | 9.4.2 |
+| `Content/WeatherFiles/` | The weather files | 6.3, 9.4.2 |
+| `Content/Resources/` | The code prescriptions | 6.0 |
+| `BEM_utils/config.py` | EnergyPlus version routing and the worker count | 9.3 |
+| `tests/test_neighbourhood_registry.py` | The install check | 9.4.1 |
+| `0_BEM_Setup/SimResults_neighbourhoods/` | The raw run folders, one batch folder per run, with `master_status.json`. **Not on GitHub, and the only copy** | 9.4.4, 13.2 |
+| `outputs/` | Derived tables | 6.0 |
+| `docs_DONE/docs_LMN_web/` | The evidence behind every published number | 6.0 |
+| `regenerate_master_report.py`, `recover_master_report_from_csvs.py` | Rebuild a batch summary after an interrupted run | 9.4.4 |
 
 ## Appendix B, status vocabulary
 
@@ -2549,6 +2665,8 @@ Parts I and II, which repeated them.
 | **3.3**, fifth addendum | **2026-09-10** | **The Thermal Load data was imported, so `DBG-054` is half closed, and Comparison Mode was taken offline at the page itself.** The simulations the `IAL` column needed were commissioned and finished the same day in the simulation repository: **210 runs, all 35 neighbourhoods across the six NECB climate zones, zero EnergyPlus Fatals**. They were imported into `js/data.js` as an `IAL` block on each of those 210 cells, `total`, the six end uses and `pv`, taken at the one decimal the file already uses, and every one was read back out of the loaded file and checked against the source CSV, **8 fields on each of 210 rows and 0 mismatches**, no all-zero row and no negative residual. Both resolvers now return `IAL` there rather than falling back. **`DBG-054` is half closed and not closed**: the campaign covered the standard archetypes, so the high performance building still has no `IAL` column and the card still falls back there without saying so, **175 of the 350 combinations a visitor can reach**. Sections 12, 12.0 question 1, the 12.1 row and Appendix F2 record that split. Separately, `comparison.html` answered a typed address with the working tool although both its entry points were commented out, so `initComparisonPage` now reads `LMN_CONFIG.comparisonMode.published` first and prints an offline notice instead; nothing was deleted and setting the flag to `true` runs the page as before. The two js changes moved the cache stamp to **`?v=29` on all fifteen pages and 66 references**. **Both changes were published the same day**, commit `5a956fb`, pushed to the site repository and to the mirror on CHV's account, and **verified against the deployed server**: 30 cases in a real headless Chrome, 30 passing, no console error and no failed request | ⬜ |
 | **3.4** | **2026-09-11** | **Renamed the tool from N-LENS to NEXA**, on Dr. Hachem-Vermette's email of the same day: *"NEXA, Neighbourhood Energy eXploration & Analysis, Version 1 · Research Preview."* The name was applied in the running text, the title block, the glossary and the Group D items of this guide, in the website's fifteen pages and three scripts, and in the repository `README.md` and the HQP trial package. The tagline is unchanged. **As in the 3.3 rename, code tokens (`LMN_CONFIG`), repository and URL strings, and dated quoted historical text are unchanged**, since they are real identifiers, and so is the revision row of 3.3 above, which records the previous name. The single source of the name remains `LMN_CONFIG.releaseName` and `LMN_CONFIG.productName` in `js/config.js`; no page writes it as a literal. The two js edits moved the cache stamp to **`?v=30` on all fifteen pages and 66 references**. **Nothing was committed, pushed or published**: the rename is local, version 3.3 remains the document submitted on 2026-09-11, and this version is the one prepared for the next submission | ⬜ |
 | **3.4**, addendum | **2026-09-22** | **The live site moved to its permanent address**, https://carolinehvermette.github.io/NEXA-Web/, served from `github.com/CarolineHVermette/NEXA-Web`, the destination repository. Header, sections I, 3, 11.1, 13.1, 14.2, 14.4 (T4, T7, T8), A.2 and Appendix C row 10 updated; D1 and D2 completed | ⬜ |
+| **3.4**, second addendum | **2026-09-24** | **Findings of the HQP trial.** Section 6.13 states that the index paths point into `idf_reader`; section 8.5 names both files a new technology option needs, `js/config.js` and `layer2_energy_selection.html`, step by step; section 9.4.4 says what the run folder is and where; section 10.1 says where to type the command and how to stop the server. New **section 14.6, handover materials**, and **Appendix A.3**, the files of `idf_reader`; the A.2 note on untracked folders corrected | ⬜ |
+| **3.4**, third addendum | **2026-09-25** | **V1 wrap-up (WP6).** Earlier the same day: `DBG-055` (the V2G discharge unit defect) recorded as closed in sections 12.1 and 15.3, and section 5 gained an IAL row (the High-Performance restriction, `DBG-054`). This addendum: new **Appendix G2, HQP trial findings and solutions**, condensing feedback log items 1 to 16 to one table. **Section 8.5 rewritten again**: the WP4b fix made `js/config.js` the only file a new generation technology needs, since Layer 2 cards are now built by `renderGenerationCards()` from `LMN_CONFIG.selectionLabels.generation`, so the `layer2_energy_selection.html` step is removed. **Sections 4.5, 7, 7.1, 8.1 and 9.4.5 rewritten** for the WP4 pipeline fix: one `DATA_VERSION` constant in `convert_master_csv.py`, currently `2026-09-10`, naming the dated `Templates/` folder that carries the post-dfix national master and the IAL combined CSV; the legacy `2026-07-19/` CSV read only for `US_ASHRAE`/`ASHRAE` rows; stale `CAN_MTL` rows in the post-dfix master skipped; all four pipeline scripts confirmed runnable from any working directory | ⬜ |
 
 ### Items awaiting joint completion with CHV (Group D)
 
@@ -2796,3 +2914,34 @@ Record every question asked, ambiguity encountered, or documentation fix require
 | 3 | | | |
 | 4 | | | |
 | 5 | | | |
+
+---
+
+## Appendix G2, HQP trial findings and solutions
+
+The independent handover trial of Appendix G ran through September 2026, with
+Shivram Gopala Krishnan and Furqan Wali as the two HQPs. The table below
+condenses the sixteen findings and questions they raised into one row each,
+finding and final solution. It is a summary, not the record: the full account,
+including root cause analysis, workarounds tried along the way and message
+references, is
+`docs_implementation/documentation-revisions/Shivram-Furqan/Feedback/FEEDBACK_LOG.md`.
+
+| # | Date | Task or section | Finding | Solution | Status |
+|-------|--------------|----------------|------------------------------------|------------------------------------|-----------|
+| 1 | 2026-09-17 | Setup, clean clone | `docs_implementation/documentation-revisions` was missing from Furqan's clone, gitignored by default | `.gitignore` given directory exceptions to track the three files the trial needs | Closed |
+| 2 | 2026-09-17 | Task 2 Step 8, traceability | `Templates/2026-07-21/` Montreal Baseline values (178.8) did not match `js/data.js` (179.2), a real gap left by the dfix baseline correction applied to `js/data.js` but not to `Templates/` | Pipeline fix of 2026-09-25: `convert_master_csv.py` now reads the post-dfix master from `Templates/2026-09-10/` (the `DATA_VERSION` constant), so a pipeline rerun reproduces the published 179.2 with 0 diff | Closed |
+| 3 | 2026-09-18 | Task 3 Steps 4-5, pipeline update | Master CSV edits did not reach `js/data.js`; `patch_data_js.py`'s path bug was confirmed already fixed, the real cause was `convert_master_csv.py` reading the whole legacy CSV with no standard filter and overwriting Montreal | Fixed 2026-09-25: the legacy `2026-07-19/` CSV is now read for `US_ASHRAE`/`ASHRAE` rows only, so it cannot clobber the `DATA_VERSION` master's NECB zones | Closed |
+| 4 | 2026-09-18 | Task 3, Montreal workaround | Commenting out the legacy CSV read raised an `IndentationError`, and dropping it entirely failed `test_data_flow.py` with 0 ASHRAE NUs matched, since the legacy CSV was the only ASHRAE source | Same fix as item 3: the legacy CSV stays in the read order, restricted to ASHRAE rows, so Montreal and ASHRAE both resolve correctly with no manual workaround | Closed |
+| 5 | 2026-09-21 | Task 4 Step 9, serve locally | The View Neighbourhoods button stayed grey after adding a trial neighbourhood; not reproduced, probably a script error in the edited `js/data.js` or `js/config.js` stopping `updateAvailableOptions()` before it finished | Check the browser console for the first script error after editing `js/data.js` or `js/config.js`; no code change applies | Answered |
+| 6 | 2026-09-21 | Task 3 and Task 5, reload | CSV and token changes were not visible after re-hosting, probably the browser's cache of the `?v=` stamped css/js files | Guide section 10.3 (private window or disable cache reload) | Answered |
+| 7 | 2026-09-21 | Task 6, guide 8.5 | Unclear whether a new technology needs `js/config.js` or `layer2_energy_selection.html` edited; confirmed both were needed under the procedure at the time | Fixed 2026-09-25: generation cards are now rendered by `renderGenerationCards()` from `LMN_CONFIG.selectionLabels.generation`; only `js/config.js` is edited, no HTML edit | Closed |
+| 8 | 2026-09-21 | Checklist | Checklist sections B and C could not be found among the materials sent to the HQPs | CHV's blank checklist sent (`NEXA_Handover-Closeout-and-HQP-Trial-Checklist.docx`), listed in guide 14.6 and trial sheet 01 | Answered |
+| 9 | 2026-09-22 | Task 2 Part B, trace one number | Furqan traced 253.2, the `IAL` (ideal air loads) value, as the Baseline EUI of RS-I3 Montreal, instead of the `DEFAULT` value 179.2 | Guided to redo Part B against the `DEFAULT` level; not a code issue | Answered |
+| 10 | 2026-09-22 | Task 2 Step 8 | Master CSV "approximately matches with unusual roundoff", actually the same pre/post-dfix gap as item 2 (178.8 vs 179.2), not a rounding difference | Same pipeline fix as item 2: `Templates/2026-09-10/` carries the post-dfix master, so the CSV and `js/data.js` agree | Closed |
+| 11 | 2026-09-22 | Task 1 and Task 2 Step 3 | Guide should add a step to stop the local server with Ctrl+C, and note that the index `idf_path` points into the `idf_reader` clone, not `NEXA-web` | Guide sections 10.1 (stop the server) and 6.13 (index paths are `idf_reader` paths) written | Answered |
+| 12 | 2026-09-24 | Guide 8.5, Task 6 | Section 8.5 did not say which file or files to change | Rewritten again on 2026-09-25 so the procedure is config only: icon, one `js/config.js` entry, cache stamp bump, check; no HTML edit any more | Closed |
+| 13 | 2026-09-16 | Task 8 Step 4, guide 9.4.4 | "Run folder" was read as a folder literally named `Run` | Guide 9.4.4 and Task 8 Step 4 define it as the batch folder under `idf_reader/0_BEM_Setup/SimResults_neighbourhoods/` | Closed |
+| 14 | 2026-09-24 | Checklist item 8 | Checklist cited in the materials but never received by the HQPs | Sent, same checklist as item 8; listed in guide 14.6 | Answered |
+| 15 | 2026-09-24 | Handover, email | Furqan suggested listing the files and documents of both `NEXA-web` and `idf_reader` in the handover section | Guide section 14.6 (handover materials) and Appendix A.3 (`idf_reader` files) written | Closed |
+| 16 | 2026-09-24 | Item 11 follow-up (Ctrl+C, 6.13) | Promised guide lines for stopping the server and the `idf_path` note | Guide sections 10.1 and 6.13 written | Closed |
