@@ -31,7 +31,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -64,7 +68,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -97,7 +105,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -131,7 +143,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -164,7 +180,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -198,7 +218,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -231,7 +255,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -264,7 +292,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -298,7 +330,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -331,7 +367,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -369,7 +409,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -407,7 +451,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -446,7 +494,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -482,7 +534,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -518,7 +574,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -557,7 +617,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -595,7 +659,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -631,7 +699,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -667,7 +739,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -706,7 +782,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -742,7 +822,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -779,7 +863,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -815,7 +903,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -854,7 +946,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -894,7 +990,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -933,7 +1033,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -969,7 +1073,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1008,7 +1116,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1044,7 +1156,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1080,7 +1196,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1118,7 +1238,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1158,7 +1282,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1198,7 +1326,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1237,7 +1369,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -1276,7 +1412,11 @@ const NEIGHBOURHOODS = [
       "high-performance-z7a",
       "high-performance-z7b",
       "high-performance-z8",
-      "vintage-1983-z6"
+      "vintage-1983-z6",
+      "vintage-1983-z4",
+      "vintage-1983-z5",
+      "vintage-1983-z7a",
+      "vintage-1983-z7b"
     ],
     "eui": null,
     "energyStatus": null,
@@ -87691,6 +87831,21314 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         }
       ],
       "pv": 97.4
+    }
+  }
+};
+
+// ========================================================================
+// 1983 Vintage — CAN_Z4_1983 (NECB Zone 4 (Vancouver)), hidden on the site for now
+// Source: idf_reader/docs_DONE/docs_LMN_web/HistoricalCodebaseSims/results/HIST_NU_CAN_Z4_1983_20260924_master.csv
+// ========================================================================
+ENVELOPE_ENERGY_DATA["vintage-1983-z4"] = {
+  "CC-B": {
+    "DEFAULT": {
+      "total": 169.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 41.6
+        },
+        {
+          "name": "Cooling",
+          "value": 4.7
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.4
+        }
+      ],
+      "pv": 3.2
+    },
+    "EEM1": {
+      "total": 148.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 26.9
+    },
+    "EEM2": {
+      "total": 131.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.0
+        }
+      ],
+      "pv": 26.9
+    },
+    "EEM3": {
+      "total": 119.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 2.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.0
+        }
+      ],
+      "pv": 26.9
+    },
+    "EEM4": {
+      "total": 77.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.3
+        },
+        {
+          "name": "DHW",
+          "value": 2.8
+        },
+        {
+          "name": "Lighting",
+          "value": 20.6
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 8.9
+        }
+      ],
+      "pv": 26.9
+    }
+  },
+  "CC-E1": {
+    "DEFAULT": {
+      "total": 149.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.5
+        },
+        {
+          "name": "Cooling",
+          "value": 4.9
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.2
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.0
+        }
+      ],
+      "pv": 1.6
+    },
+    "EEM1": {
+      "total": 130.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.6
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.2
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.8
+        }
+      ],
+      "pv": 25.4
+    },
+    "EEM2": {
+      "total": 124.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 1.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.9
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.2
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 25.4
+    },
+    "EEM3": {
+      "total": 113.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.9
+        },
+        {
+          "name": "DHW",
+          "value": 2.3
+        },
+        {
+          "name": "Lighting",
+          "value": 54.2
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 25.4
+    },
+    "EEM4": {
+      "total": 68.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.3
+        },
+        {
+          "name": "DHW",
+          "value": 2.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.0
+        },
+        {
+          "name": "Equipment",
+          "value": 17.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 7.7
+        }
+      ],
+      "pv": 25.4
+    }
+  },
+  "CC-E2": {
+    "DEFAULT": {
+      "total": 356.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 186.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 22.1
+        },
+        {
+          "name": "Lighting",
+          "value": 67.3
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.3
+        }
+      ],
+      "pv": 0.9
+    },
+    "EEM1": {
+      "total": 337.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 167.3
+        },
+        {
+          "name": "Cooling",
+          "value": 11.4
+        },
+        {
+          "name": "DHW",
+          "value": 22.0
+        },
+        {
+          "name": "Lighting",
+          "value": 67.6
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.4
+        }
+      ],
+      "pv": 45.7
+    },
+    "EEM2": {
+      "total": 187.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.0
+        },
+        {
+          "name": "DHW",
+          "value": 22.0
+        },
+        {
+          "name": "Lighting",
+          "value": 67.6
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.3
+        }
+      ],
+      "pv": 45.7
+    },
+    "EEM3": {
+      "total": 171.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.0
+        },
+        {
+          "name": "DHW",
+          "value": 4.7
+        },
+        {
+          "name": "Lighting",
+          "value": 67.6
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.3
+        }
+      ],
+      "pv": 45.7
+    },
+    "EEM4": {
+      "total": 126.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 4.7
+        },
+        {
+          "name": "Lighting",
+          "value": 37.4
+        },
+        {
+          "name": "Equipment",
+          "value": 23.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.7
+        }
+      ],
+      "pv": 45.7
+    }
+  },
+  "CC-E3": {
+    "DEFAULT": {
+      "total": 357.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 186.6
+        },
+        {
+          "name": "Cooling",
+          "value": 13.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.7
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.4
+        }
+      ],
+      "pv": 0.6
+    },
+    "EEM1": {
+      "total": 327.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 157.0
+        },
+        {
+          "name": "Cooling",
+          "value": 13.0
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.6
+        }
+      ],
+      "pv": 48.8
+    },
+    "EEM2": {
+      "total": 184.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.3
+        }
+      ],
+      "pv": 48.8
+    },
+    "EEM3": {
+      "total": 165.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 6.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.3
+        }
+      ],
+      "pv": 48.8
+    },
+    "EEM4": {
+      "total": 123.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.5
+        },
+        {
+          "name": "DHW",
+          "value": 6.1
+        },
+        {
+          "name": "Lighting",
+          "value": 34.4
+        },
+        {
+          "name": "Equipment",
+          "value": 27.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 28.7
+        }
+      ],
+      "pv": 48.8
+    }
+  },
+  "CC-FD1": {
+    "DEFAULT": {
+      "total": 185.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 53.1
+        },
+        {
+          "name": "Cooling",
+          "value": 5.4
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 44.2
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 0.2
+    },
+    "EEM1": {
+      "total": 167.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.8
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.6
+        }
+      ],
+      "pv": 8.0
+    },
+    "EEM2": {
+      "total": 143.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 1.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.8
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.2
+        }
+      ],
+      "pv": 8.0
+    },
+    "EEM3": {
+      "total": 122.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.0
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 8.8
+        },
+        {
+          "name": "Lighting",
+          "value": 43.8
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.2
+        }
+      ],
+      "pv": 8.0
+    },
+    "EEM4": {
+      "total": 79.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 1.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 8.9
+        },
+        {
+          "name": "Lighting",
+          "value": 22.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 8.0
+    }
+  },
+  "CC-FD2": {
+    "DEFAULT": {
+      "total": 164.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 34.5
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 1.1
+    },
+    "EEM1": {
+      "total": 147.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 14.0
+    },
+    "EEM2": {
+      "total": 136.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 1.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.4
+        }
+      ],
+      "pv": 14.0
+    },
+    "EEM3": {
+      "total": 120.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 6.4
+        },
+        {
+          "name": "Lighting",
+          "value": 44.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.5
+        }
+      ],
+      "pv": 14.0
+    },
+    "EEM4": {
+      "total": 78.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.8
+        },
+        {
+          "name": "Cooling",
+          "value": 4.8
+        },
+        {
+          "name": "DHW",
+          "value": 6.4
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 21.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.3
+        }
+      ],
+      "pv": 14.0
+    }
+  },
+  "CC-FD3": {
+    "DEFAULT": {
+      "total": 186.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 46.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 0.3
+    },
+    "EEM1": {
+      "total": 158.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 12.0
+    },
+    "EEM2": {
+      "total": 145.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 1.3
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 12.0
+    },
+    "EEM3": {
+      "total": 124.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 1.7
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 9.3
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 12.0
+    },
+    "EEM4": {
+      "total": 83.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.0
+        },
+        {
+          "name": "Cooling",
+          "value": 5.9
+        },
+        {
+          "name": "DHW",
+          "value": 9.3
+        },
+        {
+          "name": "Lighting",
+          "value": 23.2
+        },
+        {
+          "name": "Equipment",
+          "value": 23.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 12.0
+    }
+  },
+  "CC-S1": {
+    "DEFAULT": {
+      "total": 281.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 66.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.6
+        },
+        {
+          "name": "Lighting",
+          "value": 77.2
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.7
+        }
+      ],
+      "pv": 4.4
+    },
+    "EEM1": {
+      "total": 248.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.3
+        },
+        {
+          "name": "Cooling",
+          "value": 14.4
+        },
+        {
+          "name": "DHW",
+          "value": 26.5
+        },
+        {
+          "name": "Lighting",
+          "value": 78.5
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.9
+        }
+      ],
+      "pv": 116.5
+    },
+    "EEM2": {
+      "total": 227.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.7
+        },
+        {
+          "name": "Cooling",
+          "value": 11.1
+        },
+        {
+          "name": "DHW",
+          "value": 26.5
+        },
+        {
+          "name": "Lighting",
+          "value": 78.5
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 116.5
+    },
+    "EEM3": {
+      "total": 208.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.9
+        },
+        {
+          "name": "Cooling",
+          "value": 11.1
+        },
+        {
+          "name": "DHW",
+          "value": 3.6
+        },
+        {
+          "name": "Lighting",
+          "value": 78.5
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 116.5
+    },
+    "EEM4": {
+      "total": 151.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.2
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 3.7
+        },
+        {
+          "name": "Lighting",
+          "value": 36.9
+        },
+        {
+          "name": "Equipment",
+          "value": 41.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.1
+        }
+      ],
+      "pv": 116.5
+    }
+  },
+  "CC-S2": {
+    "DEFAULT": {
+      "total": 384.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 80.3
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 116.6
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 38.0
+        }
+      ],
+      "pv": 2.9
+    },
+    "EEM1": {
+      "total": 347.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 33.2
+        },
+        {
+          "name": "Cooling",
+          "value": 23.2
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 119.4
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 35.4
+        }
+      ],
+      "pv": 168.5
+    },
+    "EEM2": {
+      "total": 319.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.8
+        },
+        {
+          "name": "Cooling",
+          "value": 16.4
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 119.4
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 36.3
+        }
+      ],
+      "pv": 168.5
+    },
+    "EEM3": {
+      "total": 298.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.6
+        },
+        {
+          "name": "Cooling",
+          "value": 16.4
+        },
+        {
+          "name": "DHW",
+          "value": 2.7
+        },
+        {
+          "name": "Lighting",
+          "value": 119.4
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 36.3
+        }
+      ],
+      "pv": 168.5
+    },
+    "EEM4": {
+      "total": 218.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 2.8
+        },
+        {
+          "name": "Lighting",
+          "value": 56.0
+        },
+        {
+          "name": "Equipment",
+          "value": 50.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.2
+        }
+      ],
+      "pv": 168.5
+    }
+  },
+  "IC-DC": {
+    "DEFAULT": {
+      "total": 3733.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 41.3
+        },
+        {
+          "name": "Cooling",
+          "value": 465.6
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 41.8
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 340.4
+        }
+      ],
+      "pv": 3.8
+    },
+    "EEM1": {
+      "total": 3717.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.5
+        },
+        {
+          "name": "Cooling",
+          "value": 469.1
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.5
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 339.9
+        }
+      ],
+      "pv": 145.6
+    },
+    "EEM2": {
+      "total": 3703.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.1
+        },
+        {
+          "name": "Cooling",
+          "value": 469.2
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.5
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 340.3
+        }
+      ],
+      "pv": 145.6
+    },
+    "EEM3": {
+      "total": 3694.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.5
+        },
+        {
+          "name": "Cooling",
+          "value": 469.3
+        },
+        {
+          "name": "DHW",
+          "value": 0.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.5
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 340.3
+        }
+      ],
+      "pv": 145.6
+    },
+    "EEM4": {
+      "total": 3678.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.3
+        },
+        {
+          "name": "Cooling",
+          "value": 467.3
+        },
+        {
+          "name": "DHW",
+          "value": 0.9
+        },
+        {
+          "name": "Lighting",
+          "value": 34.0
+        },
+        {
+          "name": "Equipment",
+          "value": 2711.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 336.9
+        }
+      ],
+      "pv": 145.6
+    }
+  },
+  "IC-DE": {
+    "DEFAULT": {
+      "total": 12077.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 52.5
+        },
+        {
+          "name": "Cooling",
+          "value": 1439.3
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 39.7
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1115.5
+        }
+      ],
+      "pv": 5.7
+    },
+    "EEM1": {
+      "total": 12050.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.0
+        },
+        {
+          "name": "Cooling",
+          "value": 1440.1
+        },
+        {
+          "name": "DHW",
+          "value": 15.0
+        },
+        {
+          "name": "Lighting",
+          "value": 40.2
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1115.0
+        }
+      ],
+      "pv": 104.5
+    },
+    "EEM2": {
+      "total": 12034.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.4
+        },
+        {
+          "name": "Cooling",
+          "value": 1440.0
+        },
+        {
+          "name": "DHW",
+          "value": 15.0
+        },
+        {
+          "name": "Lighting",
+          "value": 40.2
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1115.5
+        }
+      ],
+      "pv": 104.5
+    },
+    "EEM3": {
+      "total": 12023.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.4
+        },
+        {
+          "name": "Cooling",
+          "value": 1440.0
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 40.2
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1115.5
+        }
+      ],
+      "pv": 104.5
+    },
+    "EEM4": {
+      "total": 12004.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.8
+        },
+        {
+          "name": "Cooling",
+          "value": 1439.1
+        },
+        {
+          "name": "DHW",
+          "value": 1.2
+        },
+        {
+          "name": "Lighting",
+          "value": 28.8
+        },
+        {
+          "name": "Equipment",
+          "value": 9029.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1114.1
+        }
+      ],
+      "pv": 104.5
+    }
+  },
+  "MU-C1": {
+    "DEFAULT": {
+      "total": 242.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 72.4
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 28.6
+        }
+      ],
+      "pv": 3.1
+    },
+    "EEM1": {
+      "total": 191.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.4
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.4
+        }
+      ],
+      "pv": 22.7
+    },
+    "EEM2": {
+      "total": 173.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.6
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.6
+        }
+      ],
+      "pv": 22.7
+    },
+    "EEM3": {
+      "total": 153.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.1
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 21.2
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.7
+        }
+      ],
+      "pv": 22.7
+    },
+    "EEM4": {
+      "total": 125.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.1
+        },
+        {
+          "name": "DHW",
+          "value": 21.2
+        },
+        {
+          "name": "Lighting",
+          "value": 15.5
+        },
+        {
+          "name": "Equipment",
+          "value": 39.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.7
+        }
+      ],
+      "pv": 22.7
+    }
+  },
+  "MU-C2": {
+    "DEFAULT": {
+      "total": 181.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 61.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.1
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 24.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 2.3
+    },
+    "EEM1": {
+      "total": 135.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.0
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 25.0
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 19.6
+    },
+    "EEM2": {
+      "total": 121.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.4
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 25.0
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.4
+        }
+      ],
+      "pv": 19.6
+    },
+    "EEM3": {
+      "total": 104.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 25.0
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 19.6
+    },
+    "EEM4": {
+      "total": 75.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.8
+        },
+        {
+          "name": "Cooling",
+          "value": 3.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.2
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.3
+        }
+      ],
+      "pv": 19.6
+    }
+  },
+  "MU-HC": {
+    "DEFAULT": {
+      "total": 227.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 87.8
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.8
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.2
+        }
+      ],
+      "pv": 3.8
+    },
+    "EEM1": {
+      "total": 171.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.6
+        },
+        {
+          "name": "Cooling",
+          "value": 15.0
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.5
+        }
+      ],
+      "pv": 42.4
+    },
+    "EEM2": {
+      "total": 145.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 42.4
+    },
+    "EEM3": {
+      "total": 118.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.5
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 19.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.8
+        }
+      ],
+      "pv": 42.4
+    },
+    "EEM4": {
+      "total": 92.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.8
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 19.1
+        },
+        {
+          "name": "Lighting",
+          "value": 10.5
+        },
+        {
+          "name": "Equipment",
+          "value": 24.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.5
+        }
+      ],
+      "pv": 42.4
+    }
+  },
+  "MU-HS": {
+    "DEFAULT": {
+      "total": 270.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 113.9
+        },
+        {
+          "name": "Cooling",
+          "value": 12.3
+        },
+        {
+          "name": "DHW",
+          "value": 48.2
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.5
+        }
+      ],
+      "pv": 1.7
+    },
+    "EEM1": {
+      "total": 195.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 42.2
+        },
+        {
+          "name": "Cooling",
+          "value": 13.3
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.4
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 76.5
+    },
+    "EEM2": {
+      "total": 158.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.6
+        },
+        {
+          "name": "Cooling",
+          "value": 10.4
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.4
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 76.5
+    },
+    "EEM3": {
+      "total": 125.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.0
+        },
+        {
+          "name": "Cooling",
+          "value": 10.2
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 27.4
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 76.5
+    },
+    "EEM4": {
+      "total": 99.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 13.6
+        },
+        {
+          "name": "Equipment",
+          "value": 35.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.7
+        }
+      ],
+      "pv": 76.5
+    }
+  },
+  "MU-L": {
+    "DEFAULT": {
+      "total": 254.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 105.8
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 54.3
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.7
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 171.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.6
+        },
+        {
+          "name": "Cooling",
+          "value": 11.8
+        },
+        {
+          "name": "DHW",
+          "value": 54.1
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.4
+        }
+      ],
+      "pv": 71.5
+    },
+    "EEM2": {
+      "total": 150.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 54.1
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.6
+        }
+      ],
+      "pv": 71.5
+    },
+    "EEM3": {
+      "total": 111.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 14.3
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.6
+        }
+      ],
+      "pv": 71.5
+    },
+    "EEM4": {
+      "total": 87.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.5
+        },
+        {
+          "name": "Cooling",
+          "value": 4.8
+        },
+        {
+          "name": "DHW",
+          "value": 14.4
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 28.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 71.5
+    }
+  },
+  "MU-S1": {
+    "DEFAULT": {
+      "total": 259.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 86.9
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 49.8
+        },
+        {
+          "name": "Lighting",
+          "value": 37.8
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.2
+        }
+      ],
+      "pv": 2.5
+    },
+    "EEM1": {
+      "total": 203.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.5
+        },
+        {
+          "name": "DHW",
+          "value": 49.7
+        },
+        {
+          "name": "Lighting",
+          "value": 38.3
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.6
+        }
+      ],
+      "pv": 69.6
+    },
+    "EEM2": {
+      "total": 178.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.3
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 49.8
+        },
+        {
+          "name": "Lighting",
+          "value": 38.3
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.0
+        }
+      ],
+      "pv": 69.6
+    },
+    "EEM3": {
+      "total": 144.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.8
+        },
+        {
+          "name": "Cooling",
+          "value": 10.1
+        },
+        {
+          "name": "DHW",
+          "value": 12.0
+        },
+        {
+          "name": "Lighting",
+          "value": 38.3
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.1
+        }
+      ],
+      "pv": 69.6
+    },
+    "EEM4": {
+      "total": 109.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 12.0
+        },
+        {
+          "name": "Lighting",
+          "value": 18.1
+        },
+        {
+          "name": "Equipment",
+          "value": 30.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 69.6
+    }
+  },
+  "MU-S2": {
+    "DEFAULT": {
+      "total": 274.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 99.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.1
+        },
+        {
+          "name": "DHW",
+          "value": 52.5
+        },
+        {
+          "name": "Lighting",
+          "value": 39.1
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.9
+        }
+      ],
+      "pv": 0.8
+    },
+    "EEM1": {
+      "total": 201.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.7
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 52.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.4
+        }
+      ],
+      "pv": 91.6
+    },
+    "EEM2": {
+      "total": 176.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 52.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.8
+        }
+      ],
+      "pv": 91.6
+    },
+    "EEM3": {
+      "total": 141.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.3
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.0
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.8
+        }
+      ],
+      "pv": 91.6
+    },
+    "EEM4": {
+      "total": 107.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.9
+        },
+        {
+          "name": "Cooling",
+          "value": 4.9
+        },
+        {
+          "name": "DHW",
+          "value": 14.9
+        },
+        {
+          "name": "Lighting",
+          "value": 18.9
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.5
+        }
+      ],
+      "pv": 91.6
+    }
+  },
+  "MU-U1": {
+    "DEFAULT": {
+      "total": 162.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 54.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 2.1
+    },
+    "EEM1": {
+      "total": 115.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.6
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.5
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.9
+        }
+      ],
+      "pv": 18.5
+    },
+    "EEM2": {
+      "total": 107.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.2
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.5
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.0
+        }
+      ],
+      "pv": 18.5
+    },
+    "EEM3": {
+      "total": 94.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.2
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.7
+        },
+        {
+          "name": "Lighting",
+          "value": 23.5
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.0
+        }
+      ],
+      "pv": 18.5
+    },
+    "EEM4": {
+      "total": 65.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.7
+        },
+        {
+          "name": "Cooling",
+          "value": 3.5
+        },
+        {
+          "name": "DHW",
+          "value": 15.5
+        },
+        {
+          "name": "Lighting",
+          "value": 10.5
+        },
+        {
+          "name": "Equipment",
+          "value": 14.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 10.8
+        }
+      ],
+      "pv": 18.5
+    }
+  },
+  "MU-W": {
+    "DEFAULT": {
+      "total": 218.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 100.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 38.8
+        },
+        {
+          "name": "Lighting",
+          "value": 14.9
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.7
+        }
+      ],
+      "pv": 2.4
+    },
+    "EEM1": {
+      "total": 145.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 38.7
+        },
+        {
+          "name": "Lighting",
+          "value": 15.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 72.9
+    },
+    "EEM2": {
+      "total": 120.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.2
+        },
+        {
+          "name": "DHW",
+          "value": 38.7
+        },
+        {
+          "name": "Lighting",
+          "value": 15.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.9
+        }
+      ],
+      "pv": 72.9
+    },
+    "EEM3": {
+      "total": 92.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.5
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 9.4
+        },
+        {
+          "name": "Lighting",
+          "value": 15.6
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.9
+        }
+      ],
+      "pv": 72.9
+    },
+    "EEM4": {
+      "total": 77.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.1
+        },
+        {
+          "name": "Cooling",
+          "value": 3.1
+        },
+        {
+          "name": "DHW",
+          "value": 9.4
+        },
+        {
+          "name": "Lighting",
+          "value": 7.4
+        },
+        {
+          "name": "Equipment",
+          "value": 28.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.9
+        }
+      ],
+      "pv": 72.9
+    }
+  },
+  "MU-W2": {
+    "DEFAULT": {
+      "total": 182.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 94.1
+        },
+        {
+          "name": "Cooling",
+          "value": 2.5
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.2
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.6
+        }
+      ],
+      "pv": 8.8
+    },
+    "EEM1": {
+      "total": 116.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 34.1
+        },
+        {
+          "name": "Cooling",
+          "value": 3.1
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 10.6
+        }
+      ],
+      "pv": 103.7
+    },
+    "EEM2": {
+      "total": 94.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.0
+        },
+        {
+          "name": "Cooling",
+          "value": 3.1
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.1
+        }
+      ],
+      "pv": 103.7
+    },
+    "EEM3": {
+      "total": 82.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.7
+        },
+        {
+          "name": "Cooling",
+          "value": 3.1
+        },
+        {
+          "name": "DHW",
+          "value": 1.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.1
+        }
+      ],
+      "pv": 103.7
+    },
+    "EEM4": {
+      "total": 66.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.6
+        },
+        {
+          "name": "Cooling",
+          "value": 1.5
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 10.8
+        },
+        {
+          "name": "Equipment",
+          "value": 23.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 7.8
+        }
+      ],
+      "pv": 103.7
+    }
+  },
+  "RC-D": {
+    "DEFAULT": {
+      "total": 193.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 69.5
+        },
+        {
+          "name": "Cooling",
+          "value": 11.3
+        },
+        {
+          "name": "DHW",
+          "value": 28.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.5
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 141.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.4
+        },
+        {
+          "name": "DHW",
+          "value": 27.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.3
+        }
+      ],
+      "pv": 93.5
+    },
+    "EEM2": {
+      "total": 120.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.3
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 27.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.8
+        }
+      ],
+      "pv": 93.5
+    },
+    "EEM3": {
+      "total": 99.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 3.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.0
+        }
+      ],
+      "pv": 93.5
+    },
+    "EEM4": {
+      "total": 72.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.9
+        },
+        {
+          "name": "Cooling",
+          "value": 6.1
+        },
+        {
+          "name": "DHW",
+          "value": 3.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.8
+        }
+      ],
+      "pv": 93.5
+    }
+  },
+  "RC-HR1": {
+    "DEFAULT": {
+      "total": 204.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 84.2
+        },
+        {
+          "name": "Cooling",
+          "value": 12.9
+        },
+        {
+          "name": "DHW",
+          "value": 54.9
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.7
+        }
+      ],
+      "pv": 1.7
+    },
+    "EEM1": {
+      "total": 129.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.2
+        },
+        {
+          "name": "Cooling",
+          "value": 13.6
+        },
+        {
+          "name": "DHW",
+          "value": 54.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 41.9
+    },
+    "EEM2": {
+      "total": 118.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.7
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 54.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 41.9
+    },
+    "EEM3": {
+      "total": 89.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.9
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 25.9
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 41.9
+    },
+    "EEM4": {
+      "total": 70.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 25.9
+        },
+        {
+          "name": "Lighting",
+          "value": 3.1
+        },
+        {
+          "name": "Equipment",
+          "value": 11.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.9
+        }
+      ],
+      "pv": 41.9
+    }
+  },
+  "RC-HR2": {
+    "DEFAULT": {
+      "total": 193.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 71.9
+        },
+        {
+          "name": "Cooling",
+          "value": 13.5
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.1
+        }
+      ],
+      "pv": 3.1
+    },
+    "EEM1": {
+      "total": 128.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.5
+        },
+        {
+          "name": "Cooling",
+          "value": 14.6
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.1
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM2": {
+      "total": 123.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.9
+        },
+        {
+          "name": "Cooling",
+          "value": 17.4
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM3": {
+      "total": 102.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.1
+        },
+        {
+          "name": "Cooling",
+          "value": 17.5
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM4": {
+      "total": 80.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.7
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 2.8
+        },
+        {
+          "name": "Equipment",
+          "value": 10.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.4
+        }
+      ],
+      "pv": 26.0
+    }
+  },
+  "RC-ML": {
+    "DEFAULT": {
+      "total": 186.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 57.0
+        },
+        {
+          "name": "Cooling",
+          "value": 10.2
+        },
+        {
+          "name": "DHW",
+          "value": 31.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.4
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 141.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.9
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.6
+        }
+      ],
+      "pv": 85.8
+    },
+    "EEM2": {
+      "total": 125.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.2
+        },
+        {
+          "name": "Cooling",
+          "value": 7.6
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.4
+        }
+      ],
+      "pv": 85.8
+    },
+    "EEM3": {
+      "total": 104.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 7.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.5
+        }
+      ],
+      "pv": 85.8
+    },
+    "EEM4": {
+      "total": 74.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 7.1
+        },
+        {
+          "name": "Lighting",
+          "value": 11.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.1
+        }
+      ],
+      "pv": 85.8
+    }
+  },
+  "RC-MR1": {
+    "DEFAULT": {
+      "total": 177.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 52.3
+        },
+        {
+          "name": "Cooling",
+          "value": 14.3
+        },
+        {
+          "name": "DHW",
+          "value": 48.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.1
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 131.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.1
+        },
+        {
+          "name": "Cooling",
+          "value": 15.9
+        },
+        {
+          "name": "DHW",
+          "value": 47.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.6
+        }
+      ],
+      "pv": 68.8
+    },
+    "EEM2": {
+      "total": 119.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.2
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 47.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.0
+        }
+      ],
+      "pv": 68.8
+    },
+    "EEM3": {
+      "total": 86.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.3
+        },
+        {
+          "name": "Cooling",
+          "value": 10.0
+        },
+        {
+          "name": "DHW",
+          "value": 14.9
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.0
+        }
+      ],
+      "pv": 68.8
+    },
+    "EEM4": {
+      "total": 64.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.9
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 14.9
+        },
+        {
+          "name": "Lighting",
+          "value": 5.8
+        },
+        {
+          "name": "Equipment",
+          "value": 18.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 68.8
+    }
+  },
+  "RC-MR2": {
+    "DEFAULT": {
+      "total": 219.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 103.1
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.9
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 131.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.6
+        },
+        {
+          "name": "Cooling",
+          "value": 11.7
+        },
+        {
+          "name": "DHW",
+          "value": 55.5
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.0
+        }
+      ],
+      "pv": 61.7
+    },
+    "EEM2": {
+      "total": 113.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 61.7
+    },
+    "EEM3": {
+      "total": 74.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.6
+        },
+        {
+          "name": "DHW",
+          "value": 16.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 61.7
+    },
+    "EEM4": {
+      "total": 57.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.1
+        },
+        {
+          "name": "Cooling",
+          "value": 4.5
+        },
+        {
+          "name": "DHW",
+          "value": 16.8
+        },
+        {
+          "name": "Lighting",
+          "value": 3.5
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.3
+        }
+      ],
+      "pv": 61.7
+    }
+  },
+  "RC-MR3": {
+    "DEFAULT": {
+      "total": 221.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 106.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.6
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 130.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.0
+        },
+        {
+          "name": "Cooling",
+          "value": 11.1
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 61.7
+    },
+    "EEM2": {
+      "total": 112.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.7
+        }
+      ],
+      "pv": 61.7
+    },
+    "EEM3": {
+      "total": 73.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 16.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.7
+        }
+      ],
+      "pv": 61.7
+    },
+    "EEM4": {
+      "total": 57.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.2
+        },
+        {
+          "name": "Cooling",
+          "value": 4.2
+        },
+        {
+          "name": "DHW",
+          "value": 16.8
+        },
+        {
+          "name": "Lighting",
+          "value": 3.5
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 61.7
+    }
+  },
+  "RC-R": {
+    "DEFAULT": {
+      "total": 193.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 68.2
+        },
+        {
+          "name": "Cooling",
+          "value": 12.1
+        },
+        {
+          "name": "DHW",
+          "value": 28.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 141.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.8
+        },
+        {
+          "name": "Cooling",
+          "value": 13.3
+        },
+        {
+          "name": "DHW",
+          "value": 27.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 83.5
+    },
+    "EEM2": {
+      "total": 120.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.5
+        },
+        {
+          "name": "DHW",
+          "value": 27.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.1
+        }
+      ],
+      "pv": 83.5
+    },
+    "EEM3": {
+      "total": 100.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.8
+        },
+        {
+          "name": "Cooling",
+          "value": 8.5
+        },
+        {
+          "name": "DHW",
+          "value": 3.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.3
+        }
+      ],
+      "pv": 83.5
+    },
+    "EEM4": {
+      "total": 72.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.0
+        }
+      ],
+      "pv": 83.5
+    }
+  },
+  "RC-T": {
+    "DEFAULT": {
+      "total": 178.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 43.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 34.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.2
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 142.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.4
+        },
+        {
+          "name": "DHW",
+          "value": 32.5
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.0
+        }
+      ],
+      "pv": 78.0
+    },
+    "EEM2": {
+      "total": 130.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 32.5
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.0
+        }
+      ],
+      "pv": 78.0
+    },
+    "EEM3": {
+      "total": 109.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.1
+        },
+        {
+          "name": "DHW",
+          "value": 11.1
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.0
+        }
+      ],
+      "pv": 78.0
+    },
+    "EEM4": {
+      "total": 77.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.8
+        },
+        {
+          "name": "Cooling",
+          "value": 4.8
+        },
+        {
+          "name": "DHW",
+          "value": 11.1
+        },
+        {
+          "name": "Lighting",
+          "value": 11.0
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 10.5
+        }
+      ],
+      "pv": 78.0
+    }
+  },
+  "RS-I1": {
+    "DEFAULT": {
+      "total": 250.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 103.9
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 20.9
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.1
+        }
+      ],
+      "pv": 3.3
+    },
+    "EEM1": {
+      "total": 172.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.5
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 47.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 100.6
+    },
+    "EEM2": {
+      "total": 147.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.5
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 100.6
+    },
+    "EEM3": {
+      "total": 115.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 13.0
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 100.6
+    },
+    "EEM4": {
+      "total": 89.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.5
+        },
+        {
+          "name": "Cooling",
+          "value": 5.2
+        },
+        {
+          "name": "DHW",
+          "value": 13.0
+        },
+        {
+          "name": "Lighting",
+          "value": 9.6
+        },
+        {
+          "name": "Equipment",
+          "value": 32.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 100.6
+    }
+  },
+  "RS-I2": {
+    "DEFAULT": {
+      "total": 213.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 93.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 35.9
+        },
+        {
+          "name": "Lighting",
+          "value": 26.6
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 5.7
+    },
+    "EEM1": {
+      "total": 141.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 35.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.9
+        }
+      ],
+      "pv": 76.6
+    },
+    "EEM2": {
+      "total": 121.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.0
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 35.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 76.6
+    },
+    "EEM3": {
+      "total": 97.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 10.6
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 76.6
+    },
+    "EEM4": {
+      "total": 72.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.6
+        },
+        {
+          "name": "DHW",
+          "value": 10.7
+        },
+        {
+          "name": "Lighting",
+          "value": 11.9
+        },
+        {
+          "name": "Equipment",
+          "value": 20.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 10.9
+        }
+      ],
+      "pv": 76.6
+    }
+  },
+  "RS-I3": {
+    "DEFAULT": {
+      "total": 231.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 84.5
+        },
+        {
+          "name": "Cooling",
+          "value": 9.5
+        },
+        {
+          "name": "DHW",
+          "value": 28.8
+        },
+        {
+          "name": "Lighting",
+          "value": 29.9
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 5.6
+    },
+    "EEM1": {
+      "total": 168.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.7
+        },
+        {
+          "name": "Cooling",
+          "value": 9.9
+        },
+        {
+          "name": "DHW",
+          "value": 28.0
+        },
+        {
+          "name": "Lighting",
+          "value": 30.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.4
+        }
+      ],
+      "pv": 125.7
+    },
+    "EEM2": {
+      "total": 146.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 28.0
+        },
+        {
+          "name": "Lighting",
+          "value": 30.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 125.7
+    },
+    "EEM3": {
+      "total": 127.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 7.1
+        },
+        {
+          "name": "Lighting",
+          "value": 30.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 125.7
+    },
+    "EEM4": {
+      "total": 93.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.0
+        },
+        {
+          "name": "Cooling",
+          "value": 4.8
+        },
+        {
+          "name": "DHW",
+          "value": 7.1
+        },
+        {
+          "name": "Lighting",
+          "value": 14.3
+        },
+        {
+          "name": "Equipment",
+          "value": 41.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.8
+        }
+      ],
+      "pv": 125.7
+    }
+  },
+  "RS-I4": {
+    "DEFAULT": {
+      "total": 222.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 103.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 38.6
+        },
+        {
+          "name": "Lighting",
+          "value": 23.1
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.7
+        }
+      ],
+      "pv": 5.6
+    },
+    "EEM1": {
+      "total": 139.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 38.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.9
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.6
+        }
+      ],
+      "pv": 83.4
+    },
+    "EEM2": {
+      "total": 117.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 38.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.9
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.9
+        }
+      ],
+      "pv": 83.4
+    },
+    "EEM3": {
+      "total": 92.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 12.1
+        },
+        {
+          "name": "Lighting",
+          "value": 23.9
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.0
+        }
+      ],
+      "pv": 83.4
+    },
+    "EEM4": {
+      "total": 68.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.7
+        },
+        {
+          "name": "Cooling",
+          "value": 3.9
+        },
+        {
+          "name": "DHW",
+          "value": 12.1
+        },
+        {
+          "name": "Lighting",
+          "value": 10.1
+        },
+        {
+          "name": "Equipment",
+          "value": 17.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.1
+        }
+      ],
+      "pv": 83.4
+    }
+  },
+  "RS-S": {
+    "DEFAULT": {
+      "total": 239.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 58.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.9
+        },
+        {
+          "name": "DHW",
+          "value": 43.5
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.0
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 206.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.1
+        },
+        {
+          "name": "Cooling",
+          "value": 13.9
+        },
+        {
+          "name": "DHW",
+          "value": 42.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 90.3
+    },
+    "EEM2": {
+      "total": 182.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.6
+        },
+        {
+          "name": "DHW",
+          "value": 42.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 90.3
+    },
+    "EEM3": {
+      "total": 154.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.5
+        },
+        {
+          "name": "DHW",
+          "value": 9.1
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 90.3
+    },
+    "EEM4": {
+      "total": 120.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.8
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.2
+        },
+        {
+          "name": "Lighting",
+          "value": 14.3
+        },
+        {
+          "name": "Equipment",
+          "value": 55.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 90.3
+    }
+  }
+};
+
+// ========================================================================
+// 1983 Vintage — CAN_Z5_1983 (NECB Zone 5 (Toronto)), hidden on the site for now
+// Source: idf_reader/docs_DONE/docs_LMN_web/HistoricalCodebaseSims/results/HIST_NU_CAN_Z5_1983_20260924_master.csv
+// ========================================================================
+ENVELOPE_ENERGY_DATA["vintage-1983-z5"] = {
+  "CC-B": {
+    "DEFAULT": {
+      "total": 202.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 70.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.1
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 3.5
+    },
+    "EEM1": {
+      "total": 177.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 45.3
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.3
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 30.8
+    },
+    "EEM2": {
+      "total": 139.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.3
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 30.8
+    },
+    "EEM3": {
+      "total": 127.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.1
+        },
+        {
+          "name": "Lighting",
+          "value": 45.3
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 30.8
+    },
+    "EEM4": {
+      "total": 83.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.1
+        },
+        {
+          "name": "Cooling",
+          "value": 5.3
+        },
+        {
+          "name": "DHW",
+          "value": 3.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.5
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 9.4
+        }
+      ],
+      "pv": 30.8
+    }
+  },
+  "CC-E1": {
+    "DEFAULT": {
+      "total": 164.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 38.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.0
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.5
+        }
+      ],
+      "pv": 1.7
+    },
+    "EEM1": {
+      "total": 139.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.4
+        },
+        {
+          "name": "Cooling",
+          "value": 8.0
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.0
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 27.9
+    },
+    "EEM2": {
+      "total": 129.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.0
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.9
+        }
+      ],
+      "pv": 27.9
+    },
+    "EEM3": {
+      "total": 119.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 2.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.0
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.9
+        }
+      ],
+      "pv": 27.9
+    },
+    "EEM4": {
+      "total": 72.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.2
+        },
+        {
+          "name": "DHW",
+          "value": 2.4
+        },
+        {
+          "name": "Lighting",
+          "value": 26.9
+        },
+        {
+          "name": "Equipment",
+          "value": 17.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 8.0
+        }
+      ],
+      "pv": 27.9
+    }
+  },
+  "CC-E2": {
+    "DEFAULT": {
+      "total": 383.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 205.2
+        },
+        {
+          "name": "Cooling",
+          "value": 18.6
+        },
+        {
+          "name": "DHW",
+          "value": 22.0
+        },
+        {
+          "name": "Lighting",
+          "value": 67.2
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.9
+        }
+      ],
+      "pv": 1.1
+    },
+    "EEM1": {
+      "total": 359.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 181.6
+        },
+        {
+          "name": "Cooling",
+          "value": 18.0
+        },
+        {
+          "name": "DHW",
+          "value": 22.0
+        },
+        {
+          "name": "Lighting",
+          "value": 67.4
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.9
+        }
+      ],
+      "pv": 51.9
+    },
+    "EEM2": {
+      "total": 198.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.3
+        },
+        {
+          "name": "Cooling",
+          "value": 17.5
+        },
+        {
+          "name": "DHW",
+          "value": 22.0
+        },
+        {
+          "name": "Lighting",
+          "value": 67.4
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 34.0
+        }
+      ],
+      "pv": 51.9
+    },
+    "EEM3": {
+      "total": 183.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.9
+        },
+        {
+          "name": "Cooling",
+          "value": 17.5
+        },
+        {
+          "name": "DHW",
+          "value": 4.9
+        },
+        {
+          "name": "Lighting",
+          "value": 67.4
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 34.0
+        }
+      ],
+      "pv": 51.9
+    },
+    "EEM4": {
+      "total": 137.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.0
+        },
+        {
+          "name": "Cooling",
+          "value": 14.1
+        },
+        {
+          "name": "DHW",
+          "value": 4.9
+        },
+        {
+          "name": "Lighting",
+          "value": 37.3
+        },
+        {
+          "name": "Equipment",
+          "value": 23.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.2
+        }
+      ],
+      "pv": 51.9
+    }
+  },
+  "CC-E3": {
+    "DEFAULT": {
+      "total": 379.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 200.2
+        },
+        {
+          "name": "Cooling",
+          "value": 20.0
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.6
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.0
+        }
+      ],
+      "pv": 0.7
+    },
+    "EEM1": {
+      "total": 348.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 169.7
+        },
+        {
+          "name": "Cooling",
+          "value": 19.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.2
+        }
+      ],
+      "pv": 55.0
+    },
+    "EEM2": {
+      "total": 195.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.5
+        },
+        {
+          "name": "Cooling",
+          "value": 18.2
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.0
+        }
+      ],
+      "pv": 55.0
+    },
+    "EEM3": {
+      "total": 176.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.5
+        },
+        {
+          "name": "Cooling",
+          "value": 18.2
+        },
+        {
+          "name": "DHW",
+          "value": 6.3
+        },
+        {
+          "name": "Lighting",
+          "value": 61.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.1
+        }
+      ],
+      "pv": 55.0
+    },
+    "EEM4": {
+      "total": 133.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.0
+        },
+        {
+          "name": "Cooling",
+          "value": 14.8
+        },
+        {
+          "name": "DHW",
+          "value": 6.3
+        },
+        {
+          "name": "Lighting",
+          "value": 34.3
+        },
+        {
+          "name": "Equipment",
+          "value": 27.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.3
+        }
+      ],
+      "pv": 55.0
+    }
+  },
+  "CC-FD1": {
+    "DEFAULT": {
+      "total": 215.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 80.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.1
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 44.0
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.0
+        }
+      ],
+      "pv": 0.2
+    },
+    "EEM1": {
+      "total": 185.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 42.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.9
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.2
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.0
+        }
+      ],
+      "pv": 8.9
+    },
+    "EEM2": {
+      "total": 147.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 2.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.2
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.9
+        }
+      ],
+      "pv": 8.9
+    },
+    "EEM3": {
+      "total": 126.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 9.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.2
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.9
+        }
+      ],
+      "pv": 8.9
+    },
+    "EEM4": {
+      "total": 84.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.0
+        },
+        {
+          "name": "DHW",
+          "value": 9.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.9
+        }
+      ],
+      "pv": 8.9
+    }
+  },
+  "CC-FD2": {
+    "DEFAULT": {
+      "total": 192.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 59.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.7
+        }
+      ],
+      "pv": 1.2
+    },
+    "EEM1": {
+      "total": 166.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.0
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.1
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 15.5
+    },
+    "EEM2": {
+      "total": 141.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.0
+        },
+        {
+          "name": "Cooling",
+          "value": 10.4
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.1
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.9
+        }
+      ],
+      "pv": 15.5
+    },
+    "EEM3": {
+      "total": 126.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.9
+        },
+        {
+          "name": "Cooling",
+          "value": 10.4
+        },
+        {
+          "name": "DHW",
+          "value": 6.7
+        },
+        {
+          "name": "Lighting",
+          "value": 44.1
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.9
+        }
+      ],
+      "pv": 15.5
+    },
+    "EEM4": {
+      "total": 83.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.1
+        },
+        {
+          "name": "DHW",
+          "value": 6.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.2
+        },
+        {
+          "name": "Equipment",
+          "value": 21.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 15.5
+    }
+  },
+  "CC-FD3": {
+    "DEFAULT": {
+      "total": 216.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 73.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.2
+        }
+      ],
+      "pv": 0.4
+    },
+    "EEM1": {
+      "total": 180.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 33.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.9
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.1
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 13.1
+    },
+    "EEM2": {
+      "total": 151.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.1
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.1
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.4
+        }
+      ],
+      "pv": 13.1
+    },
+    "EEM3": {
+      "total": 130.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.1
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.5
+        }
+      ],
+      "pv": 13.1
+    },
+    "EEM4": {
+      "total": 89.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 22.8
+        },
+        {
+          "name": "Equipment",
+          "value": 23.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 13.1
+    }
+  },
+  "CC-S1": {
+    "DEFAULT": {
+      "total": 313.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 93.3
+        },
+        {
+          "name": "Cooling",
+          "value": 14.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.6
+        },
+        {
+          "name": "Lighting",
+          "value": 76.6
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.3
+        }
+      ],
+      "pv": 5.0
+    },
+    "EEM1": {
+      "total": 270.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 46.3
+        },
+        {
+          "name": "Cooling",
+          "value": 17.7
+        },
+        {
+          "name": "DHW",
+          "value": 26.5
+        },
+        {
+          "name": "Lighting",
+          "value": 78.1
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.7
+        }
+      ],
+      "pv": 127.2
+    },
+    "EEM2": {
+      "total": 237.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.1
+        },
+        {
+          "name": "Cooling",
+          "value": 14.1
+        },
+        {
+          "name": "DHW",
+          "value": 26.6
+        },
+        {
+          "name": "Lighting",
+          "value": 78.1
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.1
+        }
+      ],
+      "pv": 127.2
+    },
+    "EEM3": {
+      "total": 219.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.3
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 3.9
+        },
+        {
+          "name": "Lighting",
+          "value": 78.1
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.1
+        }
+      ],
+      "pv": 127.2
+    },
+    "EEM4": {
+      "total": 162.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 4.0
+        },
+        {
+          "name": "Lighting",
+          "value": 36.6
+        },
+        {
+          "name": "Equipment",
+          "value": 41.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.6
+        }
+      ],
+      "pv": 127.2
+    }
+  },
+  "CC-S2": {
+    "DEFAULT": {
+      "total": 423.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 112.0
+        },
+        {
+          "name": "Cooling",
+          "value": 20.2
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 115.8
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 40.7
+        }
+      ],
+      "pv": 3.2
+    },
+    "EEM1": {
+      "total": 372.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 54.6
+        },
+        {
+          "name": "Cooling",
+          "value": 26.3
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 118.9
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 36.9
+        }
+      ],
+      "pv": 183.9
+    },
+    "EEM2": {
+      "total": 332.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.2
+        },
+        {
+          "name": "Cooling",
+          "value": 19.0
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 118.9
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 38.6
+        }
+      ],
+      "pv": 183.9
+    },
+    "EEM3": {
+      "total": 310.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.0
+        },
+        {
+          "name": "Cooling",
+          "value": 19.0
+        },
+        {
+          "name": "DHW",
+          "value": 2.9
+        },
+        {
+          "name": "Lighting",
+          "value": 118.9
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 38.6
+        }
+      ],
+      "pv": 183.9
+    },
+    "EEM4": {
+      "total": 231.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.1
+        },
+        {
+          "name": "DHW",
+          "value": 2.9
+        },
+        {
+          "name": "Lighting",
+          "value": 55.6
+        },
+        {
+          "name": "Equipment",
+          "value": 50.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.5
+        }
+      ],
+      "pv": 183.9
+    }
+  },
+  "IC-DC": {
+    "DEFAULT": {
+      "total": 3719.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 65.2
+        },
+        {
+          "name": "Cooling",
+          "value": 443.9
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 41.7
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 337.3
+        }
+      ],
+      "pv": 4.2
+    },
+    "EEM1": {
+      "total": 3698.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.2
+        },
+        {
+          "name": "Cooling",
+          "value": 449.3
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.3
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 340.4
+        }
+      ],
+      "pv": 163.9
+    },
+    "EEM2": {
+      "total": 3680.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.1
+        },
+        {
+          "name": "Cooling",
+          "value": 449.5
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.3
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 341.2
+        }
+      ],
+      "pv": 163.9
+    },
+    "EEM3": {
+      "total": 3670.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.5
+        },
+        {
+          "name": "Cooling",
+          "value": 449.5
+        },
+        {
+          "name": "DHW",
+          "value": 0.9
+        },
+        {
+          "name": "Lighting",
+          "value": 42.3
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 341.1
+        }
+      ],
+      "pv": 163.9
+    },
+    "EEM4": {
+      "total": 3655.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.8
+        },
+        {
+          "name": "Cooling",
+          "value": 447.7
+        },
+        {
+          "name": "DHW",
+          "value": 1.0
+        },
+        {
+          "name": "Lighting",
+          "value": 33.9
+        },
+        {
+          "name": "Equipment",
+          "value": 2711.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 337.4
+        }
+      ],
+      "pv": 163.9
+    }
+  },
+  "IC-DE": {
+    "DEFAULT": {
+      "total": 12004.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 76.4
+        },
+        {
+          "name": "Cooling",
+          "value": 1380.2
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 39.5
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1116.0
+        }
+      ],
+      "pv": 6.4
+    },
+    "EEM1": {
+      "total": 11972.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 39.7
+        },
+        {
+          "name": "Cooling",
+          "value": 1382.1
+        },
+        {
+          "name": "DHW",
+          "value": 15.0
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1118.2
+        }
+      ],
+      "pv": 119.5
+    },
+    "EEM2": {
+      "total": 11948.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.8
+        },
+        {
+          "name": "Cooling",
+          "value": 1382.0
+        },
+        {
+          "name": "DHW",
+          "value": 15.0
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1119.1
+        }
+      ],
+      "pv": 119.5
+    },
+    "EEM3": {
+      "total": 11936.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.8
+        },
+        {
+          "name": "Cooling",
+          "value": 1382.0
+        },
+        {
+          "name": "DHW",
+          "value": 1.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1119.1
+        }
+      ],
+      "pv": 119.5
+    },
+    "EEM4": {
+      "total": 11918.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.6
+        },
+        {
+          "name": "Cooling",
+          "value": 1380.5
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 28.6
+        },
+        {
+          "name": "Equipment",
+          "value": 9028.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1117.7
+        }
+      ],
+      "pv": 119.5
+    }
+  },
+  "MU-C1": {
+    "DEFAULT": {
+      "total": 264.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 83.2
+        },
+        {
+          "name": "Cooling",
+          "value": 20.1
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.4
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.7
+        }
+      ],
+      "pv": 3.5
+    },
+    "EEM1": {
+      "total": 214.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 37.7
+        },
+        {
+          "name": "Cooling",
+          "value": 18.5
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.7
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM2": {
+      "total": 187.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.5
+        },
+        {
+          "name": "Cooling",
+          "value": 19.2
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 28.2
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM3": {
+      "total": 167.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.9
+        },
+        {
+          "name": "Cooling",
+          "value": 19.3
+        },
+        {
+          "name": "DHW",
+          "value": 21.3
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 28.2
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM4": {
+      "total": 138.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.6
+        },
+        {
+          "name": "Cooling",
+          "value": 14.9
+        },
+        {
+          "name": "DHW",
+          "value": 21.3
+        },
+        {
+          "name": "Lighting",
+          "value": 15.4
+        },
+        {
+          "name": "Equipment",
+          "value": 39.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.9
+        }
+      ],
+      "pv": 26.0
+    }
+  },
+  "MU-C2": {
+    "DEFAULT": {
+      "total": 202.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 76.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 24.7
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 2.5
+    },
+    "EEM1": {
+      "total": 154.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.6
+        },
+        {
+          "name": "Cooling",
+          "value": 10.1
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 21.4
+    },
+    "EEM2": {
+      "total": 130.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.4
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 21.4
+    },
+    "EEM3": {
+      "total": 113.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.3
+        },
+        {
+          "name": "Cooling",
+          "value": 11.4
+        },
+        {
+          "name": "DHW",
+          "value": 15.5
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 21.4
+    },
+    "EEM4": {
+      "total": 84.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 11.1
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.5
+        }
+      ],
+      "pv": 21.4
+    }
+  },
+  "MU-HC": {
+    "DEFAULT": {
+      "total": 245.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 99.3
+        },
+        {
+          "name": "Cooling",
+          "value": 17.3
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.2
+        }
+      ],
+      "pv": 4.3
+    },
+    "EEM1": {
+      "total": 190.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 45.0
+        },
+        {
+          "name": "Cooling",
+          "value": 18.8
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.5
+        }
+      ],
+      "pv": 48.0
+    },
+    "EEM2": {
+      "total": 154.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.7
+        },
+        {
+          "name": "Cooling",
+          "value": 18.1
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.1
+        }
+      ],
+      "pv": 48.0
+    },
+    "EEM3": {
+      "total": 128.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.9
+        },
+        {
+          "name": "Cooling",
+          "value": 18.2
+        },
+        {
+          "name": "DHW",
+          "value": 19.4
+        },
+        {
+          "name": "Lighting",
+          "value": 21.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.2
+        }
+      ],
+      "pv": 48.0
+    },
+    "EEM4": {
+      "total": 102.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.8
+        },
+        {
+          "name": "DHW",
+          "value": 19.4
+        },
+        {
+          "name": "Lighting",
+          "value": 10.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 48.0
+    }
+  },
+  "MU-HS": {
+    "DEFAULT": {
+      "total": 288.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 126.6
+        },
+        {
+          "name": "Cooling",
+          "value": 15.8
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 27.2
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.2
+        }
+      ],
+      "pv": 1.9
+    },
+    "EEM1": {
+      "total": 219.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 60.8
+        },
+        {
+          "name": "Cooling",
+          "value": 16.4
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 83.4
+    },
+    "EEM2": {
+      "total": 168.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.7
+        },
+        {
+          "name": "DHW",
+          "value": 47.9
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 83.4
+    },
+    "EEM3": {
+      "total": 135.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.9
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 12.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 83.4
+    },
+    "EEM4": {
+      "total": 110.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.5
+        },
+        {
+          "name": "Cooling",
+          "value": 9.5
+        },
+        {
+          "name": "DHW",
+          "value": 12.8
+        },
+        {
+          "name": "Lighting",
+          "value": 13.5
+        },
+        {
+          "name": "Equipment",
+          "value": 35.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.2
+        }
+      ],
+      "pv": 83.4
+    }
+  },
+  "MU-L": {
+    "DEFAULT": {
+      "total": 268.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 114.5
+        },
+        {
+          "name": "Cooling",
+          "value": 14.0
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.0
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 189.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 40.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.9
+        },
+        {
+          "name": "DHW",
+          "value": 54.1
+        },
+        {
+          "name": "Lighting",
+          "value": 17.6
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.7
+        }
+      ],
+      "pv": 79.3
+    },
+    "EEM2": {
+      "total": 158.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.9
+        },
+        {
+          "name": "Cooling",
+          "value": 10.7
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 17.6
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.5
+        }
+      ],
+      "pv": 79.3
+    },
+    "EEM3": {
+      "total": 120.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.5
+        },
+        {
+          "name": "Cooling",
+          "value": 10.5
+        },
+        {
+          "name": "DHW",
+          "value": 14.7
+        },
+        {
+          "name": "Lighting",
+          "value": 17.6
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.6
+        }
+      ],
+      "pv": 79.3
+    },
+    "EEM4": {
+      "total": 96.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 14.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.6
+        },
+        {
+          "name": "Equipment",
+          "value": 28.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.6
+        }
+      ],
+      "pv": 79.3
+    }
+  },
+  "MU-S1": {
+    "DEFAULT": {
+      "total": 276.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 98.9
+        },
+        {
+          "name": "Cooling",
+          "value": 15.4
+        },
+        {
+          "name": "DHW",
+          "value": 49.8
+        },
+        {
+          "name": "Lighting",
+          "value": 37.5
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.2
+        }
+      ],
+      "pv": 2.9
+    },
+    "EEM1": {
+      "total": 222.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 43.5
+        },
+        {
+          "name": "Cooling",
+          "value": 17.6
+        },
+        {
+          "name": "DHW",
+          "value": 49.7
+        },
+        {
+          "name": "Lighting",
+          "value": 38.1
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.5
+        }
+      ],
+      "pv": 75.9
+    },
+    "EEM2": {
+      "total": 186.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.5
+        },
+        {
+          "name": "DHW",
+          "value": 49.8
+        },
+        {
+          "name": "Lighting",
+          "value": 38.1
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.5
+        }
+      ],
+      "pv": 75.9
+    },
+    "EEM3": {
+      "total": 152.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.9
+        },
+        {
+          "name": "Cooling",
+          "value": 12.4
+        },
+        {
+          "name": "DHW",
+          "value": 12.5
+        },
+        {
+          "name": "Lighting",
+          "value": 38.1
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 75.9
+    },
+    "EEM4": {
+      "total": 117.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 18.0
+        },
+        {
+          "name": "Equipment",
+          "value": 30.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.7
+        }
+      ],
+      "pv": 75.9
+    }
+  },
+  "MU-S2": {
+    "DEFAULT": {
+      "total": 291.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 111.3
+        },
+        {
+          "name": "Cooling",
+          "value": 16.8
+        },
+        {
+          "name": "DHW",
+          "value": 52.5
+        },
+        {
+          "name": "Lighting",
+          "value": 38.8
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.8
+        }
+      ],
+      "pv": 0.9
+    },
+    "EEM1": {
+      "total": 220.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 42.6
+        },
+        {
+          "name": "Cooling",
+          "value": 17.5
+        },
+        {
+          "name": "DHW",
+          "value": 52.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.7
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.5
+        }
+      ],
+      "pv": 101.1
+    },
+    "EEM2": {
+      "total": 183.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.8
+        },
+        {
+          "name": "DHW",
+          "value": 52.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.7
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.5
+        }
+      ],
+      "pv": 101.1
+    },
+    "EEM3": {
+      "total": 149.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.3
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.7
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 101.1
+    },
+    "EEM4": {
+      "total": 115.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.9
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 18.7
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.3
+        }
+      ],
+      "pv": 101.1
+    }
+  },
+  "MU-U1": {
+    "DEFAULT": {
+      "total": 180.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 67.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.2
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 2.3
+    },
+    "EEM1": {
+      "total": 131.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.1
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.0
+        }
+      ],
+      "pv": 20.1
+    },
+    "EEM2": {
+      "total": 116.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 20.1
+    },
+    "EEM3": {
+      "total": 103.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 15.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.4
+        }
+      ],
+      "pv": 20.1
+    },
+    "EEM4": {
+      "total": 74.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.3
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.5
+        },
+        {
+          "name": "Lighting",
+          "value": 10.4
+        },
+        {
+          "name": "Equipment",
+          "value": 14.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.0
+        }
+      ],
+      "pv": 20.1
+    }
+  },
+  "MU-W": {
+    "DEFAULT": {
+      "total": 247.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 123.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 38.8
+        },
+        {
+          "name": "Lighting",
+          "value": 14.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.2
+        }
+      ],
+      "pv": 2.7
+    },
+    "EEM1": {
+      "total": 165.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 48.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.4
+        },
+        {
+          "name": "DHW",
+          "value": 38.7
+        },
+        {
+          "name": "Lighting",
+          "value": 15.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 82.3
+    },
+    "EEM2": {
+      "total": 131.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.2
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 38.8
+        },
+        {
+          "name": "Lighting",
+          "value": 15.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.3
+        }
+      ],
+      "pv": 82.3
+    },
+    "EEM3": {
+      "total": 104.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 15.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.3
+        }
+      ],
+      "pv": 82.3
+    },
+    "EEM4": {
+      "total": 88.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.9
+        },
+        {
+          "name": "Cooling",
+          "value": 4.5
+        },
+        {
+          "name": "DHW",
+          "value": 9.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 28.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 82.3
+    }
+  },
+  "MU-W2": {
+    "DEFAULT": {
+      "total": 232.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 136.8
+        },
+        {
+          "name": "Cooling",
+          "value": 3.4
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.6
+        }
+      ],
+      "pv": 9.9
+    },
+    "EEM1": {
+      "total": 140.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 54.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.9
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.4
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.4
+        }
+      ],
+      "pv": 121.7
+    },
+    "EEM2": {
+      "total": 111.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.5
+        },
+        {
+          "name": "Cooling",
+          "value": 3.9
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.4
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 121.7
+    },
+    "EEM3": {
+      "total": 100.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.9
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 22.4
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 121.7
+    },
+    "EEM4": {
+      "total": 84.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.8
+        },
+        {
+          "name": "Cooling",
+          "value": 2.2
+        },
+        {
+          "name": "DHW",
+          "value": 1.4
+        },
+        {
+          "name": "Lighting",
+          "value": 10.7
+        },
+        {
+          "name": "Equipment",
+          "value": 23.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 10.9
+        }
+      ],
+      "pv": 121.7
+    }
+  },
+  "RC-D": {
+    "DEFAULT": {
+      "total": 200.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 76.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.1
+        },
+        {
+          "name": "DHW",
+          "value": 28.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 149.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.0
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 27.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.4
+        }
+      ],
+      "pv": 101.0
+    },
+    "EEM2": {
+      "total": 125.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.2
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 27.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 101.0
+    },
+    "EEM3": {
+      "total": 104.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 3.3
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.2
+        }
+      ],
+      "pv": 101.0
+    },
+    "EEM4": {
+      "total": 76.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 3.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 101.0
+    }
+  },
+  "RC-HR1": {
+    "DEFAULT": {
+      "total": 213.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 88.0
+        },
+        {
+          "name": "Cooling",
+          "value": 17.6
+        },
+        {
+          "name": "DHW",
+          "value": 54.9
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.4
+        }
+      ],
+      "pv": 1.9
+    },
+    "EEM1": {
+      "total": 143.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.5
+        },
+        {
+          "name": "Cooling",
+          "value": 17.8
+        },
+        {
+          "name": "DHW",
+          "value": 54.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.5
+        }
+      ],
+      "pv": 46.2
+    },
+    "EEM2": {
+      "total": 126.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.9
+        },
+        {
+          "name": "Cooling",
+          "value": 17.7
+        },
+        {
+          "name": "DHW",
+          "value": 54.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 46.2
+    },
+    "EEM3": {
+      "total": 98.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.1
+        },
+        {
+          "name": "Cooling",
+          "value": 17.7
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.8
+        }
+      ],
+      "pv": 46.2
+    },
+    "EEM4": {
+      "total": 78.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.5
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 3.1
+        },
+        {
+          "name": "Equipment",
+          "value": 11.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 46.2
+    }
+  },
+  "RC-HR2": {
+    "DEFAULT": {
+      "total": 207.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 79.0
+        },
+        {
+          "name": "Cooling",
+          "value": 19.3
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.2
+        }
+      ],
+      "pv": 3.4
+    },
+    "EEM1": {
+      "total": 142.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.1
+        },
+        {
+          "name": "Cooling",
+          "value": 19.5
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.7
+        }
+      ],
+      "pv": 28.1
+    },
+    "EEM2": {
+      "total": 133.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.8
+        },
+        {
+          "name": "Cooling",
+          "value": 23.6
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.8
+        }
+      ],
+      "pv": 28.1
+    },
+    "EEM3": {
+      "total": 112.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.1
+        },
+        {
+          "name": "Cooling",
+          "value": 23.7
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.9
+        }
+      ],
+      "pv": 28.1
+    },
+    "EEM4": {
+      "total": 91.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.1
+        },
+        {
+          "name": "Cooling",
+          "value": 15.5
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 2.8
+        },
+        {
+          "name": "Equipment",
+          "value": 10.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 28.1
+    }
+  },
+  "RC-ML": {
+    "DEFAULT": {
+      "total": 196.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 66.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.3
+        },
+        {
+          "name": "DHW",
+          "value": 31.7
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 150.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.8
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.8
+        }
+      ],
+      "pv": 93.4
+    },
+    "EEM2": {
+      "total": 130.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.0
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 93.4
+    },
+    "EEM3": {
+      "total": 109.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.0
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 7.3
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.7
+        }
+      ],
+      "pv": 93.4
+    },
+    "EEM4": {
+      "total": 79.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 7.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.4
+        }
+      ],
+      "pv": 93.4
+    }
+  },
+  "RC-MR1": {
+    "DEFAULT": {
+      "total": 178.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 51.3
+        },
+        {
+          "name": "Cooling",
+          "value": 16.3
+        },
+        {
+          "name": "DHW",
+          "value": 48.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.8
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 139.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.3
+        },
+        {
+          "name": "Cooling",
+          "value": 17.3
+        },
+        {
+          "name": "DHW",
+          "value": 47.7
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 76.0
+    },
+    "EEM2": {
+      "total": 122.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.7
+        },
+        {
+          "name": "Cooling",
+          "value": 11.2
+        },
+        {
+          "name": "DHW",
+          "value": 47.7
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 76.0
+    },
+    "EEM3": {
+      "total": 90.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.8
+        },
+        {
+          "name": "Cooling",
+          "value": 10.9
+        },
+        {
+          "name": "DHW",
+          "value": 15.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 76.0
+    },
+    "EEM4": {
+      "total": 68.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.8
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.2
+        },
+        {
+          "name": "Lighting",
+          "value": 5.7
+        },
+        {
+          "name": "Equipment",
+          "value": 18.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 76.0
+    }
+  },
+  "RC-MR2": {
+    "DEFAULT": {
+      "total": 224.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 103.8
+        },
+        {
+          "name": "Cooling",
+          "value": 14.8
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.4
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 145.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.4
+        },
+        {
+          "name": "Cooling",
+          "value": 15.0
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 68.6
+    },
+    "EEM2": {
+      "total": 118.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.4
+        }
+      ],
+      "pv": 68.6
+    },
+    "EEM3": {
+      "total": 80.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.4
+        },
+        {
+          "name": "DHW",
+          "value": 17.1
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.4
+        }
+      ],
+      "pv": 68.6
+    },
+    "EEM4": {
+      "total": 63.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.8
+        },
+        {
+          "name": "Cooling",
+          "value": 6.3
+        },
+        {
+          "name": "DHW",
+          "value": 17.2
+        },
+        {
+          "name": "Lighting",
+          "value": 3.4
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.9
+        }
+      ],
+      "pv": 68.6
+    }
+  },
+  "RC-MR3": {
+    "DEFAULT": {
+      "total": 226.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 105.9
+        },
+        {
+          "name": "Cooling",
+          "value": 13.9
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.2
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 145.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.0
+        },
+        {
+          "name": "Cooling",
+          "value": 14.4
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.9
+        }
+      ],
+      "pv": 68.6
+    },
+    "EEM2": {
+      "total": 118.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.3
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 68.6
+    },
+    "EEM3": {
+      "total": 80.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.1
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 17.2
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 68.6
+    },
+    "EEM4": {
+      "total": 63.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.9
+        },
+        {
+          "name": "DHW",
+          "value": 17.2
+        },
+        {
+          "name": "Lighting",
+          "value": 3.5
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 68.6
+    }
+  },
+  "RC-R": {
+    "DEFAULT": {
+      "total": 200.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 75.3
+        },
+        {
+          "name": "Cooling",
+          "value": 12.7
+        },
+        {
+          "name": "DHW",
+          "value": 28.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.8
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 149.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.8
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 27.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 91.0
+    },
+    "EEM2": {
+      "total": 125.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 27.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 91.0
+    },
+    "EEM3": {
+      "total": 105.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.7
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.3
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.4
+        }
+      ],
+      "pv": 91.0
+    },
+    "EEM4": {
+      "total": 77.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 91.0
+    }
+  },
+  "RC-T": {
+    "DEFAULT": {
+      "total": 192.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 56.5
+        },
+        {
+          "name": "Cooling",
+          "value": 10.5
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.4
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 151.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.0
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 33.4
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.2
+        }
+      ],
+      "pv": 85.6
+    },
+    "EEM2": {
+      "total": 135.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 33.4
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.1
+        }
+      ],
+      "pv": 85.6
+    },
+    "EEM3": {
+      "total": 113.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.8
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 11.5
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.2
+        }
+      ],
+      "pv": 85.6
+    },
+    "EEM4": {
+      "total": 81.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 11.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.0
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 11.7
+        }
+      ],
+      "pv": 85.6
+    }
+  },
+  "RS-I1": {
+    "DEFAULT": {
+      "total": 269.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 117.3
+        },
+        {
+          "name": "Cooling",
+          "value": 14.8
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 20.6
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.0
+        }
+      ],
+      "pv": 3.6
+    },
+    "EEM1": {
+      "total": 191.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 43.2
+        },
+        {
+          "name": "Cooling",
+          "value": 14.9
+        },
+        {
+          "name": "DHW",
+          "value": 47.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.1
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.4
+        }
+      ],
+      "pv": 110.3
+    },
+    "EEM2": {
+      "total": 155.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.0
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.1
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 110.3
+    },
+    "EEM3": {
+      "total": 123.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.3
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 21.1
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 110.3
+    },
+    "EEM4": {
+      "total": 97.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 13.5
+        },
+        {
+          "name": "Lighting",
+          "value": 9.5
+        },
+        {
+          "name": "Equipment",
+          "value": 32.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 110.3
+    }
+  },
+  "RS-I2": {
+    "DEFAULT": {
+      "total": 227.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 103.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.3
+        },
+        {
+          "name": "DHW",
+          "value": 35.9
+        },
+        {
+          "name": "Lighting",
+          "value": 26.2
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 6.4
+    },
+    "EEM1": {
+      "total": 159.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 38.8
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 35.8
+        },
+        {
+          "name": "Lighting",
+          "value": 26.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.7
+        }
+      ],
+      "pv": 85.2
+    },
+    "EEM2": {
+      "total": 129.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.5
+        },
+        {
+          "name": "DHW",
+          "value": 35.8
+        },
+        {
+          "name": "Lighting",
+          "value": 26.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.6
+        }
+      ],
+      "pv": 85.2
+    },
+    "EEM3": {
+      "total": 106.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.4
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 10.9
+        },
+        {
+          "name": "Lighting",
+          "value": 26.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.7
+        }
+      ],
+      "pv": 85.2
+    },
+    "EEM4": {
+      "total": 79.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.7
+        },
+        {
+          "name": "DHW",
+          "value": 11.0
+        },
+        {
+          "name": "Lighting",
+          "value": 11.7
+        },
+        {
+          "name": "Equipment",
+          "value": 20.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.1
+        }
+      ],
+      "pv": 85.2
+    }
+  },
+  "RS-I3": {
+    "DEFAULT": {
+      "total": 252.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 102.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.7
+        },
+        {
+          "name": "DHW",
+          "value": 28.8
+        },
+        {
+          "name": "Lighting",
+          "value": 29.5
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.7
+        }
+      ],
+      "pv": 6.3
+    },
+    "EEM1": {
+      "total": 183.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 37.4
+        },
+        {
+          "name": "Cooling",
+          "value": 12.4
+        },
+        {
+          "name": "DHW",
+          "value": 28.0
+        },
+        {
+          "name": "Lighting",
+          "value": 30.3
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 136.6
+    },
+    "EEM2": {
+      "total": 154.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.9
+        },
+        {
+          "name": "DHW",
+          "value": 28.0
+        },
+        {
+          "name": "Lighting",
+          "value": 30.3
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 136.6
+    },
+    "EEM3": {
+      "total": 135.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 7.2
+        },
+        {
+          "name": "Lighting",
+          "value": 30.3
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 136.6
+    },
+    "EEM4": {
+      "total": 101.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.9
+        },
+        {
+          "name": "DHW",
+          "value": 7.2
+        },
+        {
+          "name": "Lighting",
+          "value": 14.2
+        },
+        {
+          "name": "Equipment",
+          "value": 41.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.2
+        }
+      ],
+      "pv": 136.6
+    }
+  },
+  "RS-I4": {
+    "DEFAULT": {
+      "total": 234.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 110.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.9
+        },
+        {
+          "name": "DHW",
+          "value": 38.5
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.6
+        }
+      ],
+      "pv": 6.3
+    },
+    "EEM1": {
+      "total": 155.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 36.1
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 38.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.6
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.6
+        }
+      ],
+      "pv": 91.8
+    },
+    "EEM2": {
+      "total": 125.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.1
+        },
+        {
+          "name": "DHW",
+          "value": 38.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.6
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 91.8
+    },
+    "EEM3": {
+      "total": 100.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 23.6
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 91.8
+    },
+    "EEM4": {
+      "total": 75.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.1
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 9.9
+        },
+        {
+          "name": "Equipment",
+          "value": 17.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.4
+        }
+      ],
+      "pv": 91.8
+    }
+  },
+  "RS-S": {
+    "DEFAULT": {
+      "total": 252.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 69.8
+        },
+        {
+          "name": "Cooling",
+          "value": 14.3
+        },
+        {
+          "name": "DHW",
+          "value": 43.4
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.9
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 221.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 41.2
+        },
+        {
+          "name": "Cooling",
+          "value": 15.5
+        },
+        {
+          "name": "DHW",
+          "value": 42.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.0
+        }
+      ],
+      "pv": 98.1
+    },
+    "EEM2": {
+      "total": 190.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.5
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 42.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 98.1
+    },
+    "EEM3": {
+      "total": 162.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.4
+        },
+        {
+          "name": "DHW",
+          "value": 9.5
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.8
+        }
+      ],
+      "pv": 98.1
+    },
+    "EEM4": {
+      "total": 127.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.3
+        },
+        {
+          "name": "Cooling",
+          "value": 8.2
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 14.2
+        },
+        {
+          "name": "Equipment",
+          "value": 55.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 98.1
+    }
+  }
+};
+
+// ========================================================================
+// 1983 Vintage — CAN_Z7A_1983 (NECB Zone 7A (Winnipeg)), hidden on the site for now
+// Source: idf_reader/docs_DONE/docs_LMN_web/HistoricalCodebaseSims/results/HIST_NU_CAN_Z7A_1983_20260924_master.csv
+// ========================================================================
+ENVELOPE_ENERGY_DATA["vintage-1983-z7a"] = {
+  "CC-B": {
+    "DEFAULT": {
+      "total": 239.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 107.9
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.2
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 3.3
+    },
+    "EEM1": {
+      "total": 211.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 80.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.1
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.0
+        }
+      ],
+      "pv": 30.3
+    },
+    "EEM2": {
+      "total": 145.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.4
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 30.3
+    },
+    "EEM3": {
+      "total": 133.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.9
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 2.9
+        },
+        {
+          "name": "Lighting",
+          "value": 45.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.3
+        }
+      ],
+      "pv": 30.3
+    },
+    "EEM4": {
+      "total": 88.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.1
+        },
+        {
+          "name": "Cooling",
+          "value": 4.5
+        },
+        {
+          "name": "DHW",
+          "value": 2.9
+        },
+        {
+          "name": "Lighting",
+          "value": 20.6
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 9.9
+        }
+      ],
+      "pv": 30.3
+    }
+  },
+  "CC-E1": {
+    "DEFAULT": {
+      "total": 194.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 70.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.8
+        },
+        {
+          "name": "DHW",
+          "value": 13.0
+        },
+        {
+          "name": "Lighting",
+          "value": 54.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.8
+        }
+      ],
+      "pv": 1.6
+    },
+    "EEM1": {
+      "total": 150.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 12.9
+        },
+        {
+          "name": "Lighting",
+          "value": 54.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 27.7
+    },
+    "EEM2": {
+      "total": 128.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 3.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.3
+        },
+        {
+          "name": "DHW",
+          "value": 13.0
+        },
+        {
+          "name": "Lighting",
+          "value": 54.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 27.7
+    },
+    "EEM3": {
+      "total": 118.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.3
+        },
+        {
+          "name": "DHW",
+          "value": 2.3
+        },
+        {
+          "name": "Lighting",
+          "value": 54.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 27.7
+    },
+    "EEM4": {
+      "total": 74.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.3
+        },
+        {
+          "name": "DHW",
+          "value": 2.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.0
+        },
+        {
+          "name": "Equipment",
+          "value": 17.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 8.1
+        }
+      ],
+      "pv": 27.7
+    }
+  },
+  "CC-E2": {
+    "DEFAULT": {
+      "total": 441.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 266.4
+        },
+        {
+          "name": "Cooling",
+          "value": 15.1
+        },
+        {
+          "name": "DHW",
+          "value": 21.2
+        },
+        {
+          "name": "Lighting",
+          "value": 67.2
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 31.3
+        }
+      ],
+      "pv": 1.0
+    },
+    "EEM1": {
+      "total": 397.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 225.1
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 21.2
+        },
+        {
+          "name": "Lighting",
+          "value": 67.5
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.9
+        }
+      ],
+      "pv": 50.1
+    },
+    "EEM2": {
+      "total": 205.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.6
+        },
+        {
+          "name": "Cooling",
+          "value": 13.7
+        },
+        {
+          "name": "DHW",
+          "value": 21.2
+        },
+        {
+          "name": "Lighting",
+          "value": 67.5
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.7
+        }
+      ],
+      "pv": 50.1
+    },
+    "EEM3": {
+      "total": 190.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.4
+        },
+        {
+          "name": "Cooling",
+          "value": 13.7
+        },
+        {
+          "name": "DHW",
+          "value": 4.8
+        },
+        {
+          "name": "Lighting",
+          "value": 67.5
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.7
+        }
+      ],
+      "pv": 50.1
+    },
+    "EEM4": {
+      "total": 146.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.2
+        },
+        {
+          "name": "Cooling",
+          "value": 10.9
+        },
+        {
+          "name": "DHW",
+          "value": 4.8
+        },
+        {
+          "name": "Lighting",
+          "value": 37.3
+        },
+        {
+          "name": "Equipment",
+          "value": 23.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.9
+        }
+      ],
+      "pv": 50.1
+    }
+  },
+  "CC-E3": {
+    "DEFAULT": {
+      "total": 431.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 256.4
+        },
+        {
+          "name": "Cooling",
+          "value": 16.4
+        },
+        {
+          "name": "DHW",
+          "value": 23.7
+        },
+        {
+          "name": "Lighting",
+          "value": 61.6
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.7
+        }
+      ],
+      "pv": 0.7
+    },
+    "EEM1": {
+      "total": 382.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 210.5
+        },
+        {
+          "name": "Cooling",
+          "value": 15.3
+        },
+        {
+          "name": "DHW",
+          "value": 23.7
+        },
+        {
+          "name": "Lighting",
+          "value": 61.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.3
+        }
+      ],
+      "pv": 53.2
+    },
+    "EEM2": {
+      "total": 199.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.2
+        },
+        {
+          "name": "Cooling",
+          "value": 14.4
+        },
+        {
+          "name": "DHW",
+          "value": 23.7
+        },
+        {
+          "name": "Lighting",
+          "value": 61.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.9
+        }
+      ],
+      "pv": 53.2
+    },
+    "EEM3": {
+      "total": 182.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.4
+        },
+        {
+          "name": "DHW",
+          "value": 6.2
+        },
+        {
+          "name": "Lighting",
+          "value": 61.8
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.0
+        }
+      ],
+      "pv": 53.2
+    },
+    "EEM4": {
+      "total": 141.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.5
+        },
+        {
+          "name": "Cooling",
+          "value": 11.7
+        },
+        {
+          "name": "DHW",
+          "value": 6.2
+        },
+        {
+          "name": "Lighting",
+          "value": 34.3
+        },
+        {
+          "name": "Equipment",
+          "value": 27.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.1
+        }
+      ],
+      "pv": 53.2
+    }
+  },
+  "CC-FD1": {
+    "DEFAULT": {
+      "total": 263.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 129.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.8
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 0.2
+    },
+    "EEM1": {
+      "total": 212.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 71.4
+        },
+        {
+          "name": "Cooling",
+          "value": 10.0
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.1
+        }
+      ],
+      "pv": 8.8
+    },
+    "EEM2": {
+      "total": 149.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.1
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.0
+        }
+      ],
+      "pv": 8.8
+    },
+    "EEM3": {
+      "total": 128.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.0
+        },
+        {
+          "name": "Lighting",
+          "value": 43.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.0
+        }
+      ],
+      "pv": 8.8
+    },
+    "EEM4": {
+      "total": 87.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.4
+        },
+        {
+          "name": "Cooling",
+          "value": 6.8
+        },
+        {
+          "name": "DHW",
+          "value": 9.0
+        },
+        {
+          "name": "Lighting",
+          "value": 22.0
+        },
+        {
+          "name": "Equipment",
+          "value": 19.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.7
+        }
+      ],
+      "pv": 8.8
+    }
+  },
+  "CC-FD2": {
+    "DEFAULT": {
+      "total": 233.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 100.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.4
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 1.1
+    },
+    "EEM1": {
+      "total": 189.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 53.5
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.2
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.3
+        }
+      ],
+      "pv": 15.4
+    },
+    "EEM2": {
+      "total": 144.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.2
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.1
+        }
+      ],
+      "pv": 15.4
+    },
+    "EEM3": {
+      "total": 128.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 6.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.2
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.1
+        }
+      ],
+      "pv": 15.4
+    },
+    "EEM4": {
+      "total": 87.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.8
+        },
+        {
+          "name": "Cooling",
+          "value": 6.1
+        },
+        {
+          "name": "DHW",
+          "value": 6.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.2
+        },
+        {
+          "name": "Equipment",
+          "value": 21.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 15.4
+    }
+  },
+  "CC-FD3": {
+    "DEFAULT": {
+      "total": 263.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 120.2
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.6
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.3
+        }
+      ],
+      "pv": 0.3
+    },
+    "EEM1": {
+      "total": 208.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 63.1
+        },
+        {
+          "name": "Cooling",
+          "value": 11.1
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.3
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 13.2
+    },
+    "EEM2": {
+      "total": 154.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.2
+        },
+        {
+          "name": "Cooling",
+          "value": 10.9
+        },
+        {
+          "name": "DHW",
+          "value": 30.6
+        },
+        {
+          "name": "Lighting",
+          "value": 45.3
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.8
+        }
+      ],
+      "pv": 13.2
+    },
+    "EEM3": {
+      "total": 133.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.6
+        },
+        {
+          "name": "Cooling",
+          "value": 10.9
+        },
+        {
+          "name": "DHW",
+          "value": 9.4
+        },
+        {
+          "name": "Lighting",
+          "value": 45.3
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.9
+        }
+      ],
+      "pv": 13.2
+    },
+    "EEM4": {
+      "total": 93.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.3
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 9.5
+        },
+        {
+          "name": "Lighting",
+          "value": 22.9
+        },
+        {
+          "name": "Equipment",
+          "value": 23.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 13.2
+    }
+  },
+  "CC-S1": {
+    "DEFAULT": {
+      "total": 370.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 150.9
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 26.6
+        },
+        {
+          "name": "Lighting",
+          "value": 77.0
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.4
+        }
+      ],
+      "pv": 4.6
+    },
+    "EEM1": {
+      "total": 308.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 86.8
+        },
+        {
+          "name": "Cooling",
+          "value": 15.5
+        },
+        {
+          "name": "DHW",
+          "value": 26.5
+        },
+        {
+          "name": "Lighting",
+          "value": 78.4
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.2
+        }
+      ],
+      "pv": 127.4
+    },
+    "EEM2": {
+      "total": 248.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.2
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 26.7
+        },
+        {
+          "name": "Lighting",
+          "value": 78.4
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.6
+        }
+      ],
+      "pv": 127.4
+    },
+    "EEM3": {
+      "total": 229.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.6
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 3.7
+        },
+        {
+          "name": "Lighting",
+          "value": 78.4
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.6
+        }
+      ],
+      "pv": 127.4
+    },
+    "EEM4": {
+      "total": 174.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 37.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 3.7
+        },
+        {
+          "name": "Lighting",
+          "value": 36.8
+        },
+        {
+          "name": "Equipment",
+          "value": 41.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.8
+        }
+      ],
+      "pv": 127.4
+    }
+  },
+  "CC-S2": {
+    "DEFAULT": {
+      "total": 486.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 176.0
+        },
+        {
+          "name": "Cooling",
+          "value": 17.0
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 116.6
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 43.8
+        }
+      ],
+      "pv": 3.0
+    },
+    "EEM1": {
+      "total": 413.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 98.7
+        },
+        {
+          "name": "Cooling",
+          "value": 23.3
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 119.4
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 37.6
+        }
+      ],
+      "pv": 184.7
+    },
+    "EEM2": {
+      "total": 344.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.8
+        },
+        {
+          "name": "Cooling",
+          "value": 16.7
+        },
+        {
+          "name": "DHW",
+          "value": 28.6
+        },
+        {
+          "name": "Lighting",
+          "value": 119.4
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 40.7
+        }
+      ],
+      "pv": 184.7
+    },
+    "EEM3": {
+      "total": 322.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 36.8
+        },
+        {
+          "name": "Cooling",
+          "value": 16.8
+        },
+        {
+          "name": "DHW",
+          "value": 2.8
+        },
+        {
+          "name": "Lighting",
+          "value": 119.4
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 40.8
+        }
+      ],
+      "pv": 184.7
+    },
+    "EEM4": {
+      "total": 242.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 41.2
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 2.6
+        },
+        {
+          "name": "Lighting",
+          "value": 55.9
+        },
+        {
+          "name": "Equipment",
+          "value": 50.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 34.4
+        }
+      ],
+      "pv": 184.7
+    }
+  },
+  "IC-DC": {
+    "DEFAULT": {
+      "total": 3731.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 109.4
+        },
+        {
+          "name": "Cooling",
+          "value": 422.6
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 41.8
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 339.3
+        }
+      ],
+      "pv": 3.9
+    },
+    "EEM1": {
+      "total": 3690.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 57.6
+        },
+        {
+          "name": "Cooling",
+          "value": 429.3
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.4
+        },
+        {
+          "name": "Equipment",
+          "value": 2713.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 341.4
+        }
+      ],
+      "pv": 162.3
+    },
+    "EEM2": {
+      "total": 3658.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.8
+        },
+        {
+          "name": "Cooling",
+          "value": 429.4
+        },
+        {
+          "name": "DHW",
+          "value": 11.9
+        },
+        {
+          "name": "Lighting",
+          "value": 42.4
+        },
+        {
+          "name": "Equipment",
+          "value": 2713.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 342.5
+        }
+      ],
+      "pv": 162.3
+    },
+    "EEM3": {
+      "total": 3649.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.3
+        },
+        {
+          "name": "Cooling",
+          "value": 429.4
+        },
+        {
+          "name": "DHW",
+          "value": 0.9
+        },
+        {
+          "name": "Lighting",
+          "value": 42.4
+        },
+        {
+          "name": "Equipment",
+          "value": 2713.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 342.5
+        }
+      ],
+      "pv": 162.3
+    },
+    "EEM4": {
+      "total": 3635.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.6
+        },
+        {
+          "name": "Cooling",
+          "value": 427.9
+        },
+        {
+          "name": "DHW",
+          "value": 0.9
+        },
+        {
+          "name": "Lighting",
+          "value": 33.9
+        },
+        {
+          "name": "Equipment",
+          "value": 2711.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 339.1
+        }
+      ],
+      "pv": 162.3
+    }
+  },
+  "IC-DE": {
+    "DEFAULT": {
+      "total": 11949.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 122.4
+        },
+        {
+          "name": "Cooling",
+          "value": 1323.1
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 39.6
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1120.5
+        }
+      ],
+      "pv": 5.9
+    },
+    "EEM1": {
+      "total": 11907.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 72.4
+        },
+        {
+          "name": "Cooling",
+          "value": 1326.4
+        },
+        {
+          "name": "DHW",
+          "value": 15.0
+        },
+        {
+          "name": "Lighting",
+          "value": 40.1
+        },
+        {
+          "name": "Equipment",
+          "value": 9036.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1123.6
+        }
+      ],
+      "pv": 118.0
+    },
+    "EEM2": {
+      "total": 11864.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.9
+        },
+        {
+          "name": "Cooling",
+          "value": 1326.3
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 40.1
+        },
+        {
+          "name": "Equipment",
+          "value": 9036.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1125.0
+        }
+      ],
+      "pv": 118.0
+    },
+    "EEM3": {
+      "total": 11852.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.9
+        },
+        {
+          "name": "Cooling",
+          "value": 1326.3
+        },
+        {
+          "name": "DHW",
+          "value": 1.2
+        },
+        {
+          "name": "Lighting",
+          "value": 40.1
+        },
+        {
+          "name": "Equipment",
+          "value": 9036.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1125.1
+        }
+      ],
+      "pv": 118.0
+    },
+    "EEM4": {
+      "total": 11835.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 33.2
+        },
+        {
+          "name": "Cooling",
+          "value": 1325.1
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 28.7
+        },
+        {
+          "name": "Equipment",
+          "value": 9029.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1123.6
+        }
+      ],
+      "pv": 118.0
+    }
+  },
+  "MU-C1": {
+    "DEFAULT": {
+      "total": 297.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 116.4
+        },
+        {
+          "name": "Cooling",
+          "value": 17.3
+        },
+        {
+          "name": "DHW",
+          "value": 41.2
+        },
+        {
+          "name": "Lighting",
+          "value": 32.4
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.1
+        }
+      ],
+      "pv": 3.2
+    },
+    "EEM1": {
+      "total": 238.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 63.6
+        },
+        {
+          "name": "Cooling",
+          "value": 15.5
+        },
+        {
+          "name": "DHW",
+          "value": 41.2
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.7
+        }
+      ],
+      "pv": 25.3
+    },
+    "EEM2": {
+      "total": 193.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.2
+        },
+        {
+          "name": "Cooling",
+          "value": 16.3
+        },
+        {
+          "name": "DHW",
+          "value": 41.2
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.4
+        }
+      ],
+      "pv": 25.3
+    },
+    "EEM3": {
+      "total": 174.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.7
+        },
+        {
+          "name": "Cooling",
+          "value": 16.3
+        },
+        {
+          "name": "DHW",
+          "value": 21.3
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.4
+        }
+      ],
+      "pv": 25.3
+    },
+    "EEM4": {
+      "total": 148.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.8
+        },
+        {
+          "name": "DHW",
+          "value": 21.3
+        },
+        {
+          "name": "Lighting",
+          "value": 15.5
+        },
+        {
+          "name": "Equipment",
+          "value": 39.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.4
+        }
+      ],
+      "pv": 25.3
+    }
+  },
+  "MU-C2": {
+    "DEFAULT": {
+      "total": 234.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 108.4
+        },
+        {
+          "name": "Cooling",
+          "value": 10.6
+        },
+        {
+          "name": "DHW",
+          "value": 33.7
+        },
+        {
+          "name": "Lighting",
+          "value": 24.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.7
+        }
+      ],
+      "pv": 2.3
+    },
+    "EEM1": {
+      "total": 177.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 57.4
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 33.7
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.3
+        }
+      ],
+      "pv": 21.7
+    },
+    "EEM2": {
+      "total": 136.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.6
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 33.7
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 21.7
+    },
+    "EEM3": {
+      "total": 120.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.9
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 21.7
+    },
+    "EEM4": {
+      "total": 93.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.2
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 21.7
+    }
+  },
+  "MU-HC": {
+    "DEFAULT": {
+      "total": 276.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 131.5
+        },
+        {
+          "name": "Cooling",
+          "value": 15.5
+        },
+        {
+          "name": "DHW",
+          "value": 45.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.8
+        }
+      ],
+      "pv": 3.9
+    },
+    "EEM1": {
+      "total": 214.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 72.4
+        },
+        {
+          "name": "Cooling",
+          "value": 16.5
+        },
+        {
+          "name": "DHW",
+          "value": 45.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.8
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.6
+        }
+      ],
+      "pv": 45.9
+    },
+    "EEM2": {
+      "total": 161.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.2
+        },
+        {
+          "name": "Cooling",
+          "value": 16.1
+        },
+        {
+          "name": "DHW",
+          "value": 45.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.8
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.9
+        }
+      ],
+      "pv": 45.9
+    },
+    "EEM3": {
+      "total": 138.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.5
+        },
+        {
+          "name": "Cooling",
+          "value": 16.1
+        },
+        {
+          "name": "DHW",
+          "value": 19.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.8
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.0
+        }
+      ],
+      "pv": 45.9
+    },
+    "EEM4": {
+      "total": 114.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.6
+        },
+        {
+          "name": "Cooling",
+          "value": 11.4
+        },
+        {
+          "name": "DHW",
+          "value": 19.2
+        },
+        {
+          "name": "Lighting",
+          "value": 10.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 45.9
+    }
+  },
+  "MU-HS": {
+    "DEFAULT": {
+      "total": 326.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 168.8
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 42.2
+        },
+        {
+          "name": "Lighting",
+          "value": 27.2
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.3
+        }
+      ],
+      "pv": 1.8
+    },
+    "EEM1": {
+      "total": 250.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 97.5
+        },
+        {
+          "name": "Cooling",
+          "value": 14.4
+        },
+        {
+          "name": "DHW",
+          "value": 42.0
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.9
+        }
+      ],
+      "pv": 80.4
+    },
+    "EEM2": {
+      "total": 174.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.7
+        },
+        {
+          "name": "Cooling",
+          "value": 11.0
+        },
+        {
+          "name": "DHW",
+          "value": 42.1
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.6
+        }
+      ],
+      "pv": 80.4
+    },
+    "EEM3": {
+      "total": 147.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.2
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 12.7
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.6
+        }
+      ],
+      "pv": 80.4
+    },
+    "EEM4": {
+      "total": 122.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.8
+        },
+        {
+          "name": "Cooling",
+          "value": 8.2
+        },
+        {
+          "name": "DHW",
+          "value": 12.8
+        },
+        {
+          "name": "Lighting",
+          "value": 13.5
+        },
+        {
+          "name": "Equipment",
+          "value": 35.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.5
+        }
+      ],
+      "pv": 80.4
+    }
+  },
+  "MU-L": {
+    "DEFAULT": {
+      "total": 302.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 155.2
+        },
+        {
+          "name": "Cooling",
+          "value": 12.8
+        },
+        {
+          "name": "DHW",
+          "value": 45.6
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.2
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 209.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 70.7
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 45.5
+        },
+        {
+          "name": "Lighting",
+          "value": 17.6
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.4
+        }
+      ],
+      "pv": 73.7
+    },
+    "EEM2": {
+      "total": 160.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 45.6
+        },
+        {
+          "name": "Lighting",
+          "value": 17.6
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.0
+        }
+      ],
+      "pv": 73.7
+    },
+    "EEM3": {
+      "total": 131.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 14.7
+        },
+        {
+          "name": "Lighting",
+          "value": 17.6
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.1
+        }
+      ],
+      "pv": 73.7
+    },
+    "EEM4": {
+      "total": 107.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 14.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.6
+        },
+        {
+          "name": "Equipment",
+          "value": 28.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.9
+        }
+      ],
+      "pv": 73.7
+    }
+  },
+  "MU-S1": {
+    "DEFAULT": {
+      "total": 313.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 141.4
+        },
+        {
+          "name": "Cooling",
+          "value": 13.5
+        },
+        {
+          "name": "DHW",
+          "value": 44.3
+        },
+        {
+          "name": "Lighting",
+          "value": 37.7
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.0
+        }
+      ],
+      "pv": 2.6
+    },
+    "EEM1": {
+      "total": 247.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 76.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.6
+        },
+        {
+          "name": "DHW",
+          "value": 44.3
+        },
+        {
+          "name": "Lighting",
+          "value": 38.2
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.7
+        }
+      ],
+      "pv": 69.6
+    },
+    "EEM2": {
+      "total": 189.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.5
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 44.4
+        },
+        {
+          "name": "Lighting",
+          "value": 38.2
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.6
+        }
+      ],
+      "pv": 69.6
+    },
+    "EEM3": {
+      "total": 161.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.1
+        },
+        {
+          "name": "Cooling",
+          "value": 10.1
+        },
+        {
+          "name": "DHW",
+          "value": 12.3
+        },
+        {
+          "name": "Lighting",
+          "value": 38.2
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.6
+        }
+      ],
+      "pv": 69.6
+    },
+    "EEM4": {
+      "total": 126.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.1
+        },
+        {
+          "name": "DHW",
+          "value": 12.2
+        },
+        {
+          "name": "Lighting",
+          "value": 18.0
+        },
+        {
+          "name": "Equipment",
+          "value": 30.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.6
+        }
+      ],
+      "pv": 69.6
+    }
+  },
+  "MU-S2": {
+    "DEFAULT": {
+      "total": 325.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 152.8
+        },
+        {
+          "name": "Cooling",
+          "value": 14.9
+        },
+        {
+          "name": "DHW",
+          "value": 44.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.1
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.1
+        }
+      ],
+      "pv": 0.9
+    },
+    "EEM1": {
+      "total": 240.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 74.0
+        },
+        {
+          "name": "Cooling",
+          "value": 14.6
+        },
+        {
+          "name": "DHW",
+          "value": 44.3
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.0
+        }
+      ],
+      "pv": 97.8
+    },
+    "EEM2": {
+      "total": 183.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.9
+        },
+        {
+          "name": "DHW",
+          "value": 44.4
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.1
+        }
+      ],
+      "pv": 97.8
+    },
+    "EEM3": {
+      "total": 156.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.2
+        }
+      ],
+      "pv": 97.8
+    },
+    "EEM4": {
+      "total": 122.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 18.8
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 97.8
+    }
+  },
+  "MU-U1": {
+    "DEFAULT": {
+      "total": 207.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 93.1
+        },
+        {
+          "name": "Cooling",
+          "value": 10.6
+        },
+        {
+          "name": "DHW",
+          "value": 28.6
+        },
+        {
+          "name": "Lighting",
+          "value": 23.3
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.7
+        }
+      ],
+      "pv": 2.2
+    },
+    "EEM1": {
+      "total": 149.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 41.3
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 28.6
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 20.7
+    },
+    "EEM2": {
+      "total": 120.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.9
+        },
+        {
+          "name": "Cooling",
+          "value": 10.4
+        },
+        {
+          "name": "DHW",
+          "value": 28.6
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 20.7
+    },
+    "EEM3": {
+      "total": 108.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.1
+        },
+        {
+          "name": "Cooling",
+          "value": 10.4
+        },
+        {
+          "name": "DHW",
+          "value": 15.6
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 20.7
+    },
+    "EEM4": {
+      "total": 82.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.9
+        },
+        {
+          "name": "DHW",
+          "value": 15.5
+        },
+        {
+          "name": "Lighting",
+          "value": 10.4
+        },
+        {
+          "name": "Equipment",
+          "value": 14.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 20.7
+    }
+  },
+  "MU-W": {
+    "DEFAULT": {
+      "total": 299.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 177.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.2
+        },
+        {
+          "name": "DHW",
+          "value": 33.5
+        },
+        {
+          "name": "Lighting",
+          "value": 14.9
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.5
+        }
+      ],
+      "pv": 2.5
+    },
+    "EEM1": {
+      "total": 194.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 83.2
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 33.4
+        },
+        {
+          "name": "Lighting",
+          "value": 15.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.4
+        }
+      ],
+      "pv": 72.3
+    },
+    "EEM2": {
+      "total": 140.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 33.5
+        },
+        {
+          "name": "Lighting",
+          "value": 15.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.0
+        }
+      ],
+      "pv": 72.3
+    },
+    "EEM3": {
+      "total": 118.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.1
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 15.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.0
+        }
+      ],
+      "pv": 72.3
+    },
+    "EEM4": {
+      "total": 102.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.4
+        },
+        {
+          "name": "Cooling",
+          "value": 3.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.4
+        },
+        {
+          "name": "Equipment",
+          "value": 28.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 72.3
+    }
+  },
+  "MU-W2": {
+    "DEFAULT": {
+      "total": 314.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 212.1
+        },
+        {
+          "name": "Cooling",
+          "value": 3.1
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.1
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.4
+        }
+      ],
+      "pv": 9.1
+    },
+    "EEM1": {
+      "total": 182.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 95.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.1
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.2
+        }
+      ],
+      "pv": 115.3
+    },
+    "EEM2": {
+      "total": 135.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 46.9
+        },
+        {
+          "name": "Cooling",
+          "value": 3.0
+        },
+        {
+          "name": "DHW",
+          "value": 14.3
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 115.3
+    },
+    "EEM3": {
+      "total": 124.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 48.8
+        },
+        {
+          "name": "Cooling",
+          "value": 3.0
+        },
+        {
+          "name": "DHW",
+          "value": 1.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.7
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 115.3
+    },
+    "EEM4": {
+      "total": 109.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 53.0
+        },
+        {
+          "name": "Cooling",
+          "value": 1.7
+        },
+        {
+          "name": "DHW",
+          "value": 1.2
+        },
+        {
+          "name": "Lighting",
+          "value": 10.8
+        },
+        {
+          "name": "Equipment",
+          "value": 23.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 115.3
+    }
+  },
+  "RC-D": {
+    "DEFAULT": {
+      "total": 231.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 108.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 28.0
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.0
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 172.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 51.5
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 26.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 98.6
+    },
+    "EEM2": {
+      "total": 134.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.0
+        }
+      ],
+      "pv": 98.6
+    },
+    "EEM3": {
+      "total": 116.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.2
+        },
+        {
+          "name": "DHW",
+          "value": 3.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 98.6
+    },
+    "EEM4": {
+      "total": 88.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 3.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 98.6
+    }
+  },
+  "RC-HR1": {
+    "DEFAULT": {
+      "total": 233.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 111.5
+        },
+        {
+          "name": "Cooling",
+          "value": 16.6
+        },
+        {
+          "name": "DHW",
+          "value": 48.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.8
+        }
+      ],
+      "pv": 1.8
+    },
+    "EEM1": {
+      "total": 154.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 40.4
+        },
+        {
+          "name": "Cooling",
+          "value": 16.1
+        },
+        {
+          "name": "DHW",
+          "value": 48.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.0
+        }
+      ],
+      "pv": 44.6
+    },
+    "EEM2": {
+      "total": 128.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.5
+        },
+        {
+          "name": "Cooling",
+          "value": 16.2
+        },
+        {
+          "name": "DHW",
+          "value": 48.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.2
+        }
+      ],
+      "pv": 44.6
+    },
+    "EEM3": {
+      "total": 105.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.7
+        },
+        {
+          "name": "Cooling",
+          "value": 16.2
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.2
+        }
+      ],
+      "pv": 44.6
+    },
+    "EEM4": {
+      "total": 87.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.8
+        },
+        {
+          "name": "Cooling",
+          "value": 10.6
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 3.1
+        },
+        {
+          "name": "Equipment",
+          "value": 11.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 44.6
+    }
+  },
+  "RC-HR2": {
+    "DEFAULT": {
+      "total": 228.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 99.5
+        },
+        {
+          "name": "Cooling",
+          "value": 18.0
+        },
+        {
+          "name": "DHW",
+          "value": 51.8
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.3
+        }
+      ],
+      "pv": 3.2
+    },
+    "EEM1": {
+      "total": 155.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 34.5
+        },
+        {
+          "name": "Cooling",
+          "value": 17.9
+        },
+        {
+          "name": "DHW",
+          "value": 51.8
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.6
+        }
+      ],
+      "pv": 29.5
+    },
+    "EEM2": {
+      "total": 137.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.6
+        },
+        {
+          "name": "Cooling",
+          "value": 21.6
+        },
+        {
+          "name": "DHW",
+          "value": 51.8
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.7
+        }
+      ],
+      "pv": 29.5
+    },
+    "EEM3": {
+      "total": 119.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.8
+        },
+        {
+          "name": "Cooling",
+          "value": 21.7
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.8
+        }
+      ],
+      "pv": 29.5
+    },
+    "EEM4": {
+      "total": 100.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.1
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 2.8
+        },
+        {
+          "name": "Equipment",
+          "value": 10.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.0
+        }
+      ],
+      "pv": 29.5
+    }
+  },
+  "RC-ML": {
+    "DEFAULT": {
+      "total": 226.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 97.2
+        },
+        {
+          "name": "Cooling",
+          "value": 10.9
+        },
+        {
+          "name": "DHW",
+          "value": 30.9
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 171.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 44.1
+        },
+        {
+          "name": "Cooling",
+          "value": 12.1
+        },
+        {
+          "name": "DHW",
+          "value": 29.3
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 91.1
+    },
+    "EEM2": {
+      "total": 138.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 29.3
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.1
+        }
+      ],
+      "pv": 91.1
+    },
+    "EEM3": {
+      "total": 119.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 7.8
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 91.1
+    },
+    "EEM4": {
+      "total": 90.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.6
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 7.8
+        },
+        {
+          "name": "Lighting",
+          "value": 11.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.1
+        }
+      ],
+      "pv": 91.1
+    }
+  },
+  "RC-MR1": {
+    "DEFAULT": {
+      "total": 193.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 75.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.9
+        },
+        {
+          "name": "DHW",
+          "value": 40.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.0
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 147.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.5
+        },
+        {
+          "name": "Cooling",
+          "value": 15.4
+        },
+        {
+          "name": "DHW",
+          "value": 39.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 71.7
+    },
+    "EEM2": {
+      "total": 121.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.3
+        },
+        {
+          "name": "Cooling",
+          "value": 9.9
+        },
+        {
+          "name": "DHW",
+          "value": 39.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.3
+        }
+      ],
+      "pv": 71.7
+    },
+    "EEM3": {
+      "total": 97.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.5
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.3
+        }
+      ],
+      "pv": 71.7
+    },
+    "EEM4": {
+      "total": 75.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.8
+        },
+        {
+          "name": "Cooling",
+          "value": 6.8
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 5.7
+        },
+        {
+          "name": "Equipment",
+          "value": 18.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 71.7
+    }
+  },
+  "RC-MR2": {
+    "DEFAULT": {
+      "total": 241.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 130.3
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 44.5
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 153.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 49.1
+        },
+        {
+          "name": "Cooling",
+          "value": 12.9
+        },
+        {
+          "name": "DHW",
+          "value": 44.4
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.9
+        }
+      ],
+      "pv": 63.4
+    },
+    "EEM2": {
+      "total": 116.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 44.5
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.3
+        }
+      ],
+      "pv": 63.4
+    },
+    "EEM3": {
+      "total": 88.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.2
+        },
+        {
+          "name": "DHW",
+          "value": 17.2
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.3
+        }
+      ],
+      "pv": 63.4
+    },
+    "EEM4": {
+      "total": 71.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.5
+        },
+        {
+          "name": "Cooling",
+          "value": 5.4
+        },
+        {
+          "name": "DHW",
+          "value": 17.3
+        },
+        {
+          "name": "Lighting",
+          "value": 3.4
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.1
+        }
+      ],
+      "pv": 63.4
+    }
+  },
+  "RC-MR3": {
+    "DEFAULT": {
+      "total": 242.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 132.3
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 44.5
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.4
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 153.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 49.9
+        },
+        {
+          "name": "Cooling",
+          "value": 12.3
+        },
+        {
+          "name": "DHW",
+          "value": 44.4
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.7
+        }
+      ],
+      "pv": 63.4
+    },
+    "EEM2": {
+      "total": 115.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.0
+        },
+        {
+          "name": "DHW",
+          "value": 44.5
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.2
+        }
+      ],
+      "pv": 63.4
+    },
+    "EEM3": {
+      "total": 88.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 17.2
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.2
+        }
+      ],
+      "pv": 63.4
+    },
+    "EEM4": {
+      "total": 70.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.5
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 17.3
+        },
+        {
+          "name": "Lighting",
+          "value": 3.5
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.0
+        }
+      ],
+      "pv": 63.4
+    }
+  },
+  "RC-R": {
+    "DEFAULT": {
+      "total": 229.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 105.4
+        },
+        {
+          "name": "Cooling",
+          "value": 12.1
+        },
+        {
+          "name": "DHW",
+          "value": 28.0
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.2
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 171.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 49.0
+        },
+        {
+          "name": "Cooling",
+          "value": 13.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.4
+        }
+      ],
+      "pv": 88.6
+    },
+    "EEM2": {
+      "total": 134.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 26.7
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.0
+        }
+      ],
+      "pv": 88.6
+    },
+    "EEM3": {
+      "total": 115.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.2
+        }
+      ],
+      "pv": 88.6
+    },
+    "EEM4": {
+      "total": 88.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.8
+        },
+        {
+          "name": "DHW",
+          "value": 3.6
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 88.6
+    }
+  },
+  "RC-T": {
+    "DEFAULT": {
+      "total": 221.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 85.7
+        },
+        {
+          "name": "Cooling",
+          "value": 10.2
+        },
+        {
+          "name": "DHW",
+          "value": 34.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 170.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 36.3
+        },
+        {
+          "name": "Cooling",
+          "value": 11.6
+        },
+        {
+          "name": "DHW",
+          "value": 32.1
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.0
+        }
+      ],
+      "pv": 83.5
+    },
+    "EEM2": {
+      "total": 142.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 32.2
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.3
+        }
+      ],
+      "pv": 83.5
+    },
+    "EEM3": {
+      "total": 122.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 10.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 12.2
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.3
+        }
+      ],
+      "pv": 83.5
+    },
+    "EEM4": {
+      "total": 91.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.3
+        },
+        {
+          "name": "DHW",
+          "value": 12.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.0
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 83.5
+    }
+  },
+  "RS-I1": {
+    "DEFAULT": {
+      "total": 315.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 169.1
+        },
+        {
+          "name": "Cooling",
+          "value": 13.4
+        },
+        {
+          "name": "DHW",
+          "value": 41.7
+        },
+        {
+          "name": "Lighting",
+          "value": 20.7
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.5
+        }
+      ],
+      "pv": 3.4
+    },
+    "EEM1": {
+      "total": 219.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 78.4
+        },
+        {
+          "name": "Cooling",
+          "value": 13.0
+        },
+        {
+          "name": "DHW",
+          "value": 41.5
+        },
+        {
+          "name": "Lighting",
+          "value": 21.2
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 107.8
+    },
+    "EEM2": {
+      "total": 158.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.4
+        },
+        {
+          "name": "DHW",
+          "value": 41.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.2
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.5
+        }
+      ],
+      "pv": 107.8
+    },
+    "EEM3": {
+      "total": 132.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.4
+        },
+        {
+          "name": "Cooling",
+          "value": 9.3
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 21.2
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.5
+        }
+      ],
+      "pv": 107.8
+    },
+    "EEM4": {
+      "total": 106.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.2
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 9.6
+        },
+        {
+          "name": "Equipment",
+          "value": 32.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.8
+        }
+      ],
+      "pv": 107.8
+    }
+  },
+  "RS-I2": {
+    "DEFAULT": {
+      "total": 267.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 147.4
+        },
+        {
+          "name": "Cooling",
+          "value": 10.1
+        },
+        {
+          "name": "DHW",
+          "value": 30.7
+        },
+        {
+          "name": "Lighting",
+          "value": 26.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.1
+        }
+      ],
+      "pv": 5.9
+    },
+    "EEM1": {
+      "total": 185.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 70.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.9
+        },
+        {
+          "name": "DHW",
+          "value": 30.7
+        },
+        {
+          "name": "Lighting",
+          "value": 27.0
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 82.6
+    },
+    "EEM2": {
+      "total": 134.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 30.7
+        },
+        {
+          "name": "Lighting",
+          "value": 27.0
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 82.6
+    },
+    "EEM3": {
+      "total": 116.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.5
+        },
+        {
+          "name": "Cooling",
+          "value": 6.9
+        },
+        {
+          "name": "DHW",
+          "value": 10.9
+        },
+        {
+          "name": "Lighting",
+          "value": 27.0
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 82.6
+    },
+    "EEM4": {
+      "total": 88.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.0
+        },
+        {
+          "name": "Cooling",
+          "value": 4.7
+        },
+        {
+          "name": "DHW",
+          "value": 10.9
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 20.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.6
+        }
+      ],
+      "pv": 82.6
+    }
+  },
+  "RS-I3": {
+    "DEFAULT": {
+      "total": 308.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 157.3
+        },
+        {
+          "name": "Cooling",
+          "value": 12.1
+        },
+        {
+          "name": "DHW",
+          "value": 27.4
+        },
+        {
+          "name": "Lighting",
+          "value": 29.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.9
+        }
+      ],
+      "pv": 5.8
+    },
+    "EEM1": {
+      "total": 219.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 73.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.2
+        },
+        {
+          "name": "DHW",
+          "value": 27.0
+        },
+        {
+          "name": "Lighting",
+          "value": 30.4
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.0
+        }
+      ],
+      "pv": 136.9
+    },
+    "EEM2": {
+      "total": 163.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.2
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 27.1
+        },
+        {
+          "name": "Lighting",
+          "value": 30.4
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.0
+        }
+      ],
+      "pv": 136.9
+    },
+    "EEM3": {
+      "total": 145.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.5
+        },
+        {
+          "name": "DHW",
+          "value": 7.3
+        },
+        {
+          "name": "Lighting",
+          "value": 30.4
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.0
+        }
+      ],
+      "pv": 136.9
+    },
+    "EEM4": {
+      "total": 112.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.1
+        },
+        {
+          "name": "DHW",
+          "value": 7.3
+        },
+        {
+          "name": "Lighting",
+          "value": 14.2
+        },
+        {
+          "name": "Equipment",
+          "value": 41.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.0
+        }
+      ],
+      "pv": 136.9
+    }
+  },
+  "RS-I4": {
+    "DEFAULT": {
+      "total": 273.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 153.9
+        },
+        {
+          "name": "Cooling",
+          "value": 11.7
+        },
+        {
+          "name": "DHW",
+          "value": 32.1
+        },
+        {
+          "name": "Lighting",
+          "value": 22.9
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.0
+        }
+      ],
+      "pv": 5.8
+    },
+    "EEM1": {
+      "total": 176.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 64.5
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 32.1
+        },
+        {
+          "name": "Lighting",
+          "value": 23.7
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.2
+        }
+      ],
+      "pv": 89.4
+    },
+    "EEM2": {
+      "total": 127.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.2
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 32.1
+        },
+        {
+          "name": "Lighting",
+          "value": 23.7
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.9
+        }
+      ],
+      "pv": 89.4
+    },
+    "EEM3": {
+      "total": 108.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.3
+        },
+        {
+          "name": "Cooling",
+          "value": 7.6
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 23.7
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.9
+        }
+      ],
+      "pv": 89.4
+    },
+    "EEM4": {
+      "total": 84.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 10.0
+        },
+        {
+          "name": "Equipment",
+          "value": 17.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.5
+        }
+      ],
+      "pv": 89.4
+    }
+  },
+  "RS-S": {
+    "DEFAULT": {
+      "total": 291.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 110.0
+        },
+        {
+          "name": "Cooling",
+          "value": 13.7
+        },
+        {
+          "name": "DHW",
+          "value": 41.6
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.1
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 256.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 78.0
+        },
+        {
+          "name": "Cooling",
+          "value": 14.3
+        },
+        {
+          "name": "DHW",
+          "value": 41.0
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.9
+        }
+      ],
+      "pv": 95.2
+    },
+    "EEM2": {
+      "total": 199.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.3
+        },
+        {
+          "name": "Cooling",
+          "value": 10.1
+        },
+        {
+          "name": "DHW",
+          "value": 41.1
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.1
+        }
+      ],
+      "pv": 95.2
+    },
+    "EEM3": {
+      "total": 172.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.2
+        },
+        {
+          "name": "Cooling",
+          "value": 10.0
+        },
+        {
+          "name": "DHW",
+          "value": 9.5
+        },
+        {
+          "name": "Lighting",
+          "value": 27.8
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.1
+        }
+      ],
+      "pv": 95.2
+    },
+    "EEM4": {
+      "total": 138.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.9
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 14.2
+        },
+        {
+          "name": "Equipment",
+          "value": 55.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.2
+        }
+      ],
+      "pv": 95.2
+    }
+  }
+};
+
+// ========================================================================
+// 1983 Vintage — CAN_Z7B_1983 (NECB Zone 7B (Fort McMurray)), hidden on the site for now
+// Source: idf_reader/docs_DONE/docs_LMN_web/HistoricalCodebaseSims/results/HIST_NU_CAN_Z7B_1983_20260924_master.csv
+// ========================================================================
+ENVELOPE_ENERGY_DATA["vintage-1983-z7b"] = {
+  "CC-B": {
+    "DEFAULT": {
+      "total": 246.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 115.2
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 2.7
+    },
+    "EEM1": {
+      "total": 218.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 87.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.8
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM2": {
+      "total": 147.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.2
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 17.8
+        },
+        {
+          "name": "Lighting",
+          "value": 45.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM3": {
+      "total": 134.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 2.9
+        },
+        {
+          "name": "Lighting",
+          "value": 45.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 26.0
+    },
+    "EEM4": {
+      "total": 90.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.9
+        },
+        {
+          "name": "Cooling",
+          "value": 4.5
+        },
+        {
+          "name": "DHW",
+          "value": 2.9
+        },
+        {
+          "name": "Lighting",
+          "value": 20.7
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 9.8
+        }
+      ],
+      "pv": 26.0
+    }
+  },
+  "CC-E1": {
+    "DEFAULT": {
+      "total": 201.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 77.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.3
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.6
+        }
+      ],
+      "pv": 1.3
+    },
+    "EEM1": {
+      "total": 154.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 30.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.3
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.3
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.3
+        }
+      ],
+      "pv": 23.9
+    },
+    "EEM2": {
+      "total": 128.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 4.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 13.4
+        },
+        {
+          "name": "Lighting",
+          "value": 54.3
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 23.9
+    },
+    "EEM3": {
+      "total": 118.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 5.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 2.3
+        },
+        {
+          "name": "Lighting",
+          "value": 54.3
+        },
+        {
+          "name": "Equipment",
+          "value": 28.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 23.9
+    },
+    "EEM4": {
+      "total": 74.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 6.8
+        },
+        {
+          "name": "Cooling",
+          "value": 4.3
+        },
+        {
+          "name": "DHW",
+          "value": 2.3
+        },
+        {
+          "name": "Lighting",
+          "value": 27.0
+        },
+        {
+          "name": "Equipment",
+          "value": 17.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 7.9
+        }
+      ],
+      "pv": 23.9
+    }
+  },
+  "CC-E2": {
+    "DEFAULT": {
+      "total": 456.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 286.2
+        },
+        {
+          "name": "Cooling",
+          "value": 9.5
+        },
+        {
+          "name": "DHW",
+          "value": 22.1
+        },
+        {
+          "name": "Lighting",
+          "value": 67.4
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 31.0
+        }
+      ],
+      "pv": 0.8
+    },
+    "EEM1": {
+      "total": 404.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 236.1
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 22.0
+        },
+        {
+          "name": "Lighting",
+          "value": 67.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.5
+        }
+      ],
+      "pv": 42.6
+    },
+    "EEM2": {
+      "total": 204.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 22.1
+        },
+        {
+          "name": "Lighting",
+          "value": 67.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.5
+        }
+      ],
+      "pv": 42.6
+    },
+    "EEM3": {
+      "total": 189.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 34.7
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 4.8
+        },
+        {
+          "name": "Lighting",
+          "value": 67.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.5
+        }
+      ],
+      "pv": 42.6
+    },
+    "EEM4": {
+      "total": 145.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 34.4
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 4.8
+        },
+        {
+          "name": "Lighting",
+          "value": 37.4
+        },
+        {
+          "name": "Equipment",
+          "value": 23.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 31.0
+        }
+      ],
+      "pv": 42.6
+    }
+  },
+  "CC-E3": {
+    "DEFAULT": {
+      "total": 447.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 276.6
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.7
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.4
+        }
+      ],
+      "pv": 0.6
+    },
+    "EEM1": {
+      "total": 392.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 223.4
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 28.9
+        }
+      ],
+      "pv": 45.1
+    },
+    "EEM2": {
+      "total": 200.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.2
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 26.1
+        },
+        {
+          "name": "Lighting",
+          "value": 61.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.0
+        }
+      ],
+      "pv": 45.1
+    },
+    "EEM3": {
+      "total": 181.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.4
+        },
+        {
+          "name": "Cooling",
+          "value": 9.8
+        },
+        {
+          "name": "DHW",
+          "value": 6.3
+        },
+        {
+          "name": "Lighting",
+          "value": 61.9
+        },
+        {
+          "name": "Equipment",
+          "value": 34.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 33.0
+        }
+      ],
+      "pv": 45.1
+    },
+    "EEM4": {
+      "total": 140.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.5
+        },
+        {
+          "name": "DHW",
+          "value": 6.3
+        },
+        {
+          "name": "Lighting",
+          "value": 34.4
+        },
+        {
+          "name": "Equipment",
+          "value": 27.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.4
+        }
+      ],
+      "pv": 45.1
+    }
+  },
+  "CC-FD1": {
+    "DEFAULT": {
+      "total": 277.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 141.0
+        },
+        {
+          "name": "Cooling",
+          "value": 9.3
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 44.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 0.2
+    },
+    "EEM1": {
+      "total": 225.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 80.1
+        },
+        {
+          "name": "Cooling",
+          "value": 14.4
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.9
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.9
+        }
+      ],
+      "pv": 7.6
+    },
+    "EEM2": {
+      "total": 155.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.4
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 30.1
+        },
+        {
+          "name": "Lighting",
+          "value": 43.9
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.0
+        }
+      ],
+      "pv": 7.6
+    },
+    "EEM3": {
+      "total": 134.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.9
+        },
+        {
+          "name": "Cooling",
+          "value": 14.2
+        },
+        {
+          "name": "DHW",
+          "value": 9.0
+        },
+        {
+          "name": "Lighting",
+          "value": 43.9
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.1
+        }
+      ],
+      "pv": 7.6
+    },
+    "EEM4": {
+      "total": 92.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.9
+        },
+        {
+          "name": "Cooling",
+          "value": 9.6
+        },
+        {
+          "name": "DHW",
+          "value": 9.1
+        },
+        {
+          "name": "Lighting",
+          "value": 22.4
+        },
+        {
+          "name": "Equipment",
+          "value": 19.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.8
+        }
+      ],
+      "pv": 7.6
+    }
+  },
+  "CC-FD2": {
+    "DEFAULT": {
+      "total": 243.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 108.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.5
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.8
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 0.9
+    },
+    "EEM1": {
+      "total": 199.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 60.1
+        },
+        {
+          "name": "Cooling",
+          "value": 13.1
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 13.2
+    },
+    "EEM2": {
+      "total": 149.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 7.8
+        },
+        {
+          "name": "Cooling",
+          "value": 12.7
+        },
+        {
+          "name": "DHW",
+          "value": 23.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.0
+        }
+      ],
+      "pv": 13.2
+    },
+    "EEM3": {
+      "total": 133.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.8
+        },
+        {
+          "name": "Cooling",
+          "value": 12.7
+        },
+        {
+          "name": "DHW",
+          "value": 6.6
+        },
+        {
+          "name": "Lighting",
+          "value": 44.5
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.1
+        }
+      ],
+      "pv": 13.2
+    },
+    "EEM4": {
+      "total": 91.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.3
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 6.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 21.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.1
+        }
+      ],
+      "pv": 13.2
+    }
+  },
+  "CC-FD3": {
+    "DEFAULT": {
+      "total": 277.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 131.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 46.1
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.1
+        }
+      ],
+      "pv": 0.3
+    },
+    "EEM1": {
+      "total": 221.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 70.9
+        },
+        {
+          "name": "Cooling",
+          "value": 16.3
+        },
+        {
+          "name": "DHW",
+          "value": 30.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.7
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.4
+        }
+      ],
+      "pv": 11.4
+    },
+    "EEM2": {
+      "total": 161.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 8.6
+        },
+        {
+          "name": "Cooling",
+          "value": 16.1
+        },
+        {
+          "name": "DHW",
+          "value": 30.6
+        },
+        {
+          "name": "Lighting",
+          "value": 45.7
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.6
+        }
+      ],
+      "pv": 11.4
+    },
+    "EEM3": {
+      "total": 140.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.1
+        },
+        {
+          "name": "Cooling",
+          "value": 16.1
+        },
+        {
+          "name": "DHW",
+          "value": 9.5
+        },
+        {
+          "name": "Lighting",
+          "value": 45.7
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 11.4
+    },
+    "EEM4": {
+      "total": 98.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.1
+        },
+        {
+          "name": "Cooling",
+          "value": 10.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.2
+        },
+        {
+          "name": "Equipment",
+          "value": 23.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.2
+        }
+      ],
+      "pv": 11.4
+    }
+  },
+  "CC-S1": {
+    "DEFAULT": {
+      "total": 379.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 163.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.1
+        },
+        {
+          "name": "DHW",
+          "value": 26.6
+        },
+        {
+          "name": "Lighting",
+          "value": 77.7
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.8
+        }
+      ],
+      "pv": 3.8
+    },
+    "EEM1": {
+      "total": 316.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 97.4
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 26.6
+        },
+        {
+          "name": "Lighting",
+          "value": 78.9
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.4
+        }
+      ],
+      "pv": 110.4
+    },
+    "EEM2": {
+      "total": 249.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 30.8
+        },
+        {
+          "name": "Cooling",
+          "value": 9.6
+        },
+        {
+          "name": "DHW",
+          "value": 26.7
+        },
+        {
+          "name": "Lighting",
+          "value": 78.9
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.0
+        }
+      ],
+      "pv": 110.4
+    },
+    "EEM3": {
+      "total": 230.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 35.2
+        },
+        {
+          "name": "Cooling",
+          "value": 9.6
+        },
+        {
+          "name": "DHW",
+          "value": 3.7
+        },
+        {
+          "name": "Lighting",
+          "value": 78.9
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.0
+        }
+      ],
+      "pv": 110.4
+    },
+    "EEM4": {
+      "total": 177.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 42.9
+        },
+        {
+          "name": "Cooling",
+          "value": 4.6
+        },
+        {
+          "name": "DHW",
+          "value": 3.7
+        },
+        {
+          "name": "Lighting",
+          "value": 37.1
+        },
+        {
+          "name": "Equipment",
+          "value": 41.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.2
+        }
+      ],
+      "pv": 110.4
+    }
+  },
+  "CC-S2": {
+    "DEFAULT": {
+      "total": 496.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 191.2
+        },
+        {
+          "name": "Cooling",
+          "value": 11.3
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 117.5
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 44.5
+        }
+      ],
+      "pv": 2.5
+    },
+    "EEM1": {
+      "total": 422.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 111.1
+        },
+        {
+          "name": "Cooling",
+          "value": 19.9
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 120.0
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 37.9
+        }
+      ],
+      "pv": 160.2
+    },
+    "EEM2": {
+      "total": 345.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 36.6
+        },
+        {
+          "name": "Cooling",
+          "value": 14.1
+        },
+        {
+          "name": "DHW",
+          "value": 28.7
+        },
+        {
+          "name": "Lighting",
+          "value": 120.0
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 41.4
+        }
+      ],
+      "pv": 160.2
+    },
+    "EEM3": {
+      "total": 323.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 40.7
+        },
+        {
+          "name": "Cooling",
+          "value": 14.1
+        },
+        {
+          "name": "DHW",
+          "value": 2.8
+        },
+        {
+          "name": "Lighting",
+          "value": 120.0
+        },
+        {
+          "name": "Equipment",
+          "value": 54.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 41.4
+        }
+      ],
+      "pv": 160.2
+    },
+    "EEM4": {
+      "total": 244.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 45.6
+        },
+        {
+          "name": "Cooling",
+          "value": 5.9
+        },
+        {
+          "name": "DHW",
+          "value": 2.7
+        },
+        {
+          "name": "Lighting",
+          "value": 56.2
+        },
+        {
+          "name": "Equipment",
+          "value": 50.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 35.1
+        }
+      ],
+      "pv": 160.2
+    }
+  },
+  "IC-DC": {
+    "DEFAULT": {
+      "total": 3742.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 118.2
+        },
+        {
+          "name": "Cooling",
+          "value": 415.4
+        },
+        {
+          "name": "DHW",
+          "value": 11.9
+        },
+        {
+          "name": "Lighting",
+          "value": 42.0
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 346.5
+        }
+      ],
+      "pv": 3.3
+    },
+    "EEM1": {
+      "total": 3689.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 60.2
+        },
+        {
+          "name": "Cooling",
+          "value": 420.2
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 42.6
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 345.1
+        }
+      ],
+      "pv": 139.4
+    },
+    "EEM2": {
+      "total": 3652.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 23.2
+        },
+        {
+          "name": "Cooling",
+          "value": 419.6
+        },
+        {
+          "name": "DHW",
+          "value": 11.9
+        },
+        {
+          "name": "Lighting",
+          "value": 42.6
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 346.3
+        }
+      ],
+      "pv": 139.4
+    },
+    "EEM3": {
+      "total": 3643.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.6
+        },
+        {
+          "name": "Cooling",
+          "value": 419.6
+        },
+        {
+          "name": "DHW",
+          "value": 0.9
+        },
+        {
+          "name": "Lighting",
+          "value": 42.6
+        },
+        {
+          "name": "Equipment",
+          "value": 2714.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 346.3
+        }
+      ],
+      "pv": 139.4
+    },
+    "EEM4": {
+      "total": 3630.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.3
+        },
+        {
+          "name": "Cooling",
+          "value": 418.3
+        },
+        {
+          "name": "DHW",
+          "value": 0.9
+        },
+        {
+          "name": "Lighting",
+          "value": 34.0
+        },
+        {
+          "name": "Equipment",
+          "value": 2712.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 343.0
+        }
+      ],
+      "pv": 139.4
+    }
+  },
+  "IC-DE": {
+    "DEFAULT": {
+      "total": 11940.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 131.7
+        },
+        {
+          "name": "Cooling",
+          "value": 1292.8
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 39.9
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1129.7
+        }
+      ],
+      "pv": 4.9
+    },
+    "EEM1": {
+      "total": 11886.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 77.0
+        },
+        {
+          "name": "Cooling",
+          "value": 1294.6
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 40.3
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1128.5
+        }
+      ],
+      "pv": 101.2
+    },
+    "EEM2": {
+      "total": 11839.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.4
+        },
+        {
+          "name": "Cooling",
+          "value": 1294.5
+        },
+        {
+          "name": "DHW",
+          "value": 15.1
+        },
+        {
+          "name": "Lighting",
+          "value": 40.3
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1130.0
+        }
+      ],
+      "pv": 101.2
+    },
+    "EEM3": {
+      "total": 11827.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 30.5
+        },
+        {
+          "name": "Cooling",
+          "value": 1294.5
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 40.3
+        },
+        {
+          "name": "Equipment",
+          "value": 9035.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1130.1
+        }
+      ],
+      "pv": 101.2
+    },
+    "EEM4": {
+      "total": 11811.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 34.2
+        },
+        {
+          "name": "Cooling",
+          "value": 1293.7
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 28.8
+        },
+        {
+          "name": "Equipment",
+          "value": 9028.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 1128.4
+        }
+      ],
+      "pv": 101.2
+    }
+  },
+  "MU-C1": {
+    "DEFAULT": {
+      "total": 316.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 142.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.5
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 32.9
+        }
+      ],
+      "pv": 2.7
+    },
+    "EEM1": {
+      "total": 245.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 76.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.6
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.6
+        }
+      ],
+      "pv": 21.6
+    },
+    "EEM2": {
+      "total": 189.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.6
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.4
+        }
+      ],
+      "pv": 21.6
+    },
+    "EEM3": {
+      "total": 169.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 21.3
+        },
+        {
+          "name": "Lighting",
+          "value": 32.6
+        },
+        {
+          "name": "Equipment",
+          "value": 45.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.5
+        }
+      ],
+      "pv": 21.6
+    },
+    "EEM4": {
+      "total": 145.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 23.7
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 21.3
+        },
+        {
+          "name": "Lighting",
+          "value": 15.5
+        },
+        {
+          "name": "Equipment",
+          "value": 39.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.4
+        }
+      ],
+      "pv": 21.6
+    }
+  },
+  "MU-C2": {
+    "DEFAULT": {
+      "total": 253.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 130.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 24.9
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.6
+        }
+      ],
+      "pv": 2.0
+    },
+    "EEM1": {
+      "total": 186.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 68.2
+        },
+        {
+          "name": "Cooling",
+          "value": 5.6
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 25.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 18.8
+    },
+    "EEM2": {
+      "total": 134.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.5
+        },
+        {
+          "name": "Cooling",
+          "value": 5.9
+        },
+        {
+          "name": "DHW",
+          "value": 34.8
+        },
+        {
+          "name": "Lighting",
+          "value": 25.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.3
+        }
+      ],
+      "pv": 18.8
+    },
+    "EEM3": {
+      "total": 117.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 17.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.9
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 25.1
+        },
+        {
+          "name": "Equipment",
+          "value": 28.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.4
+        }
+      ],
+      "pv": 18.8
+    },
+    "EEM4": {
+      "total": 93.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.6
+        },
+        {
+          "name": "Cooling",
+          "value": 3.7
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 11.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.0
+        }
+      ],
+      "pv": 18.8
+    }
+  },
+  "MU-HC": {
+    "DEFAULT": {
+      "total": 294.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 153.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.3
+        }
+      ],
+      "pv": 3.3
+    },
+    "EEM1": {
+      "total": 222.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 84.8
+        },
+        {
+          "name": "Cooling",
+          "value": 8.8
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.8
+        }
+      ],
+      "pv": 38.9
+    },
+    "EEM2": {
+      "total": 160.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.0
+        },
+        {
+          "name": "Cooling",
+          "value": 8.7
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.4
+        }
+      ],
+      "pv": 38.9
+    },
+    "EEM3": {
+      "total": 134.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.3
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 19.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.9
+        },
+        {
+          "name": "Equipment",
+          "value": 32.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.4
+        }
+      ],
+      "pv": 38.9
+    },
+    "EEM4": {
+      "total": 112.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.0
+        },
+        {
+          "name": "Cooling",
+          "value": 5.7
+        },
+        {
+          "name": "DHW",
+          "value": 19.2
+        },
+        {
+          "name": "Lighting",
+          "value": 10.5
+        },
+        {
+          "name": "Equipment",
+          "value": 24.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.2
+        }
+      ],
+      "pv": 38.9
+    }
+  },
+  "MU-HS": {
+    "DEFAULT": {
+      "total": 351.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 193.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.1
+        },
+        {
+          "name": "DHW",
+          "value": 48.1
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.6
+        }
+      ],
+      "pv": 1.5
+    },
+    "EEM1": {
+      "total": 265.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 112.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 47.9
+        },
+        {
+          "name": "Lighting",
+          "value": 27.4
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.0
+        }
+      ],
+      "pv": 68.9
+    },
+    "EEM2": {
+      "total": 182.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.4
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 48.0
+        },
+        {
+          "name": "Lighting",
+          "value": 27.4
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.3
+        }
+      ],
+      "pv": 68.9
+    },
+    "EEM3": {
+      "total": 150.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.0
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 12.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.4
+        },
+        {
+          "name": "Equipment",
+          "value": 44.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.3
+        }
+      ],
+      "pv": 68.9
+    },
+    "EEM4": {
+      "total": 125.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 30.7
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 12.8
+        },
+        {
+          "name": "Lighting",
+          "value": 13.6
+        },
+        {
+          "name": "Equipment",
+          "value": 35.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.1
+        }
+      ],
+      "pv": 68.9
+    }
+  },
+  "MU-L": {
+    "DEFAULT": {
+      "total": 334.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 185.4
+        },
+        {
+          "name": "Cooling",
+          "value": 6.0
+        },
+        {
+          "name": "DHW",
+          "value": 54.3
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.6
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 229.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 87.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.6
+        }
+      ],
+      "pv": 62.3
+    },
+    "EEM2": {
+      "total": 172.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 26.8
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 54.3
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.2
+        }
+      ],
+      "pv": 62.3
+    },
+    "EEM3": {
+      "total": 134.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 28.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.1
+        },
+        {
+          "name": "DHW",
+          "value": 14.8
+        },
+        {
+          "name": "Lighting",
+          "value": 17.7
+        },
+        {
+          "name": "Equipment",
+          "value": 37.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 25.2
+        }
+      ],
+      "pv": 62.3
+    },
+    "EEM4": {
+      "total": 111.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 30.5
+        },
+        {
+          "name": "Cooling",
+          "value": 4.2
+        },
+        {
+          "name": "DHW",
+          "value": 14.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 28.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.9
+        }
+      ],
+      "pv": 62.3
+    }
+  },
+  "MU-S1": {
+    "DEFAULT": {
+      "total": 335.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 163.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 49.9
+        },
+        {
+          "name": "Lighting",
+          "value": 38.0
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.0
+        }
+      ],
+      "pv": 2.2
+    },
+    "EEM1": {
+      "total": 260.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 89.6
+        },
+        {
+          "name": "Cooling",
+          "value": 9.4
+        },
+        {
+          "name": "DHW",
+          "value": 49.8
+        },
+        {
+          "name": "Lighting",
+          "value": 38.5
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.7
+        }
+      ],
+      "pv": 59.0
+    },
+    "EEM2": {
+      "total": 197.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 23.6
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 49.9
+        },
+        {
+          "name": "Lighting",
+          "value": 38.5
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.3
+        }
+      ],
+      "pv": 59.0
+    },
+    "EEM3": {
+      "total": 163.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 27.3
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 12.3
+        },
+        {
+          "name": "Lighting",
+          "value": 38.5
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.4
+        }
+      ],
+      "pv": 59.0
+    },
+    "EEM4": {
+      "total": 129.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.7
+        },
+        {
+          "name": "DHW",
+          "value": 12.2
+        },
+        {
+          "name": "Lighting",
+          "value": 18.2
+        },
+        {
+          "name": "Equipment",
+          "value": 30.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.3
+        }
+      ],
+      "pv": 59.0
+    }
+  },
+  "MU-S2": {
+    "DEFAULT": {
+      "total": 353.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 180.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.0
+        },
+        {
+          "name": "DHW",
+          "value": 52.5
+        },
+        {
+          "name": "Lighting",
+          "value": 39.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 29.2
+        }
+      ],
+      "pv": 0.7
+    },
+    "EEM1": {
+      "total": 257.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 89.1
+        },
+        {
+          "name": "Cooling",
+          "value": 8.4
+        },
+        {
+          "name": "DHW",
+          "value": 52.4
+        },
+        {
+          "name": "Lighting",
+          "value": 40.1
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.9
+        }
+      ],
+      "pv": 83.6
+    },
+    "EEM2": {
+      "total": 193.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.8
+        },
+        {
+          "name": "Cooling",
+          "value": 8.1
+        },
+        {
+          "name": "DHW",
+          "value": 52.6
+        },
+        {
+          "name": "Lighting",
+          "value": 40.1
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.9
+        }
+      ],
+      "pv": 83.6
+    },
+    "EEM3": {
+      "total": 158.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 23.4
+        },
+        {
+          "name": "Cooling",
+          "value": 8.0
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 40.1
+        },
+        {
+          "name": "Equipment",
+          "value": 29.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.0
+        }
+      ],
+      "pv": 83.6
+    },
+    "EEM4": {
+      "total": 124.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.6
+        },
+        {
+          "name": "Cooling",
+          "value": 4.2
+        },
+        {
+          "name": "DHW",
+          "value": 15.4
+        },
+        {
+          "name": "Lighting",
+          "value": 18.9
+        },
+        {
+          "name": "Equipment",
+          "value": 22.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 24.4
+        }
+      ],
+      "pv": 83.6
+    }
+  },
+  "MU-U1": {
+    "DEFAULT": {
+      "total": 224.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 114.4
+        },
+        {
+          "name": "Cooling",
+          "value": 5.2
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.4
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.5
+        }
+      ],
+      "pv": 1.8
+    },
+    "EEM1": {
+      "total": 155.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 50.7
+        },
+        {
+          "name": "Cooling",
+          "value": 4.9
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.6
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.2
+        }
+      ],
+      "pv": 18.0
+    },
+    "EEM2": {
+      "total": 118.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 12.6
+        },
+        {
+          "name": "Cooling",
+          "value": 5.3
+        },
+        {
+          "name": "DHW",
+          "value": 29.8
+        },
+        {
+          "name": "Lighting",
+          "value": 23.6
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 18.0
+    },
+    "EEM3": {
+      "total": 105.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.7
+        },
+        {
+          "name": "Cooling",
+          "value": 5.3
+        },
+        {
+          "name": "DHW",
+          "value": 15.5
+        },
+        {
+          "name": "Lighting",
+          "value": 23.6
+        },
+        {
+          "name": "Equipment",
+          "value": 24.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.8
+        }
+      ],
+      "pv": 18.0
+    },
+    "EEM4": {
+      "total": 82.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.6
+        },
+        {
+          "name": "Cooling",
+          "value": 3.3
+        },
+        {
+          "name": "DHW",
+          "value": 15.6
+        },
+        {
+          "name": "Lighting",
+          "value": 10.5
+        },
+        {
+          "name": "Equipment",
+          "value": 14.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.5
+        }
+      ],
+      "pv": 18.0
+    }
+  },
+  "MU-W": {
+    "DEFAULT": {
+      "total": 329.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 205.0
+        },
+        {
+          "name": "Cooling",
+          "value": 3.7
+        },
+        {
+          "name": "DHW",
+          "value": 38.8
+        },
+        {
+          "name": "Lighting",
+          "value": 15.1
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 28.9
+        }
+      ],
+      "pv": 2.1
+    },
+    "EEM1": {
+      "total": 209.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 96.3
+        },
+        {
+          "name": "Cooling",
+          "value": 3.9
+        },
+        {
+          "name": "DHW",
+          "value": 38.8
+        },
+        {
+          "name": "Lighting",
+          "value": 15.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 60.7
+    },
+    "EEM2": {
+      "total": 148.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.9
+        },
+        {
+          "name": "Cooling",
+          "value": 4.4
+        },
+        {
+          "name": "DHW",
+          "value": 38.9
+        },
+        {
+          "name": "Lighting",
+          "value": 15.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.0
+        }
+      ],
+      "pv": 60.7
+    },
+    "EEM3": {
+      "total": 121.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 33.8
+        },
+        {
+          "name": "Cooling",
+          "value": 4.3
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 15.7
+        },
+        {
+          "name": "Equipment",
+          "value": 33.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.0
+        }
+      ],
+      "pv": 60.7
+    },
+    "EEM4": {
+      "total": 105.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 35.1
+        },
+        {
+          "name": "Cooling",
+          "value": 2.7
+        },
+        {
+          "name": "DHW",
+          "value": 9.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.5
+        },
+        {
+          "name": "Equipment",
+          "value": 28.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.6
+        }
+      ],
+      "pv": 60.7
+    }
+  },
+  "MU-W2": {
+    "DEFAULT": {
+      "total": 336.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 231.1
+        },
+        {
+          "name": "Cooling",
+          "value": 2.5
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 35.3
+        }
+      ],
+      "pv": 7.6
+    },
+    "EEM1": {
+      "total": 188.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 100.7
+        },
+        {
+          "name": "Cooling",
+          "value": 2.8
+        },
+        {
+          "name": "DHW",
+          "value": 14.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.9
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 97.6
+    },
+    "EEM2": {
+      "total": 135.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 46.7
+        },
+        {
+          "name": "Cooling",
+          "value": 2.3
+        },
+        {
+          "name": "DHW",
+          "value": 14.3
+        },
+        {
+          "name": "Lighting",
+          "value": 22.9
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.5
+        }
+      ],
+      "pv": 97.6
+    },
+    "EEM3": {
+      "total": 124.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 48.5
+        },
+        {
+          "name": "Cooling",
+          "value": 2.3
+        },
+        {
+          "name": "DHW",
+          "value": 1.2
+        },
+        {
+          "name": "Lighting",
+          "value": 22.9
+        },
+        {
+          "name": "Equipment",
+          "value": 26.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.5
+        }
+      ],
+      "pv": 97.6
+    },
+    "EEM4": {
+      "total": 110.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 53.5
+        },
+        {
+          "name": "Cooling",
+          "value": 1.2
+        },
+        {
+          "name": "DHW",
+          "value": 1.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.0
+        },
+        {
+          "name": "Equipment",
+          "value": 23.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.6
+        }
+      ],
+      "pv": 97.6
+    }
+  },
+  "RC-D": {
+    "DEFAULT": {
+      "total": 228.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 105.3
+        },
+        {
+          "name": "Cooling",
+          "value": 10.3
+        },
+        {
+          "name": "DHW",
+          "value": 29.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.6
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 177.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 55.7
+        },
+        {
+          "name": "Cooling",
+          "value": 11.5
+        },
+        {
+          "name": "DHW",
+          "value": 27.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.3
+        }
+      ],
+      "pv": 87.0
+    },
+    "EEM2": {
+      "total": 136.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.8
+        },
+        {
+          "name": "DHW",
+          "value": 27.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 87.0
+    },
+    "EEM3": {
+      "total": 116.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.5
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 87.0
+    },
+    "EEM4": {
+      "total": 89.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 23.2
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 3.5
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 87.0
+    }
+  },
+  "RC-HR1": {
+    "DEFAULT": {
+      "total": 260.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 142.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.0
+        },
+        {
+          "name": "DHW",
+          "value": 54.9
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 27.5
+        }
+      ],
+      "pv": 1.5
+    },
+    "EEM1": {
+      "total": 165.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 54.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 54.8
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.2
+        }
+      ],
+      "pv": 38.1
+    },
+    "EEM2": {
+      "total": 129.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.2
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 54.9
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.8
+        }
+      ],
+      "pv": 38.1
+    },
+    "EEM3": {
+      "total": 100.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.7
+        },
+        {
+          "name": "DHW",
+          "value": 26.2
+        },
+        {
+          "name": "Lighting",
+          "value": 7.3
+        },
+        {
+          "name": "Equipment",
+          "value": 19.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.9
+        }
+      ],
+      "pv": 38.1
+    },
+    "EEM4": {
+      "total": 85.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.6
+        },
+        {
+          "name": "DHW",
+          "value": 26.2
+        },
+        {
+          "name": "Lighting",
+          "value": 3.1
+        },
+        {
+          "name": "Equipment",
+          "value": 11.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.4
+        }
+      ],
+      "pv": 38.1
+    }
+  },
+  "RC-HR2": {
+    "DEFAULT": {
+      "total": 250.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 129.3
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 30.7
+        }
+      ],
+      "pv": 2.7
+    },
+    "EEM1": {
+      "total": 161.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 47.8
+        },
+        {
+          "name": "Cooling",
+          "value": 7.1
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.2
+        }
+      ],
+      "pv": 25.9
+    },
+    "EEM2": {
+      "total": 129.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.0
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 54.2
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.3
+        }
+      ],
+      "pv": 25.9
+    },
+    "EEM3": {
+      "total": 108.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 15.2
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 6.9
+        },
+        {
+          "name": "Equipment",
+          "value": 19.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.3
+        }
+      ],
+      "pv": 25.9
+    },
+    "EEM4": {
+      "total": 96.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.4
+        },
+        {
+          "name": "Cooling",
+          "value": 4.8
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 2.9
+        },
+        {
+          "name": "Equipment",
+          "value": 10.9
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.8
+        }
+      ],
+      "pv": 25.9
+    }
+  },
+  "RC-ML": {
+    "DEFAULT": {
+      "total": 221.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 92.2
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 32.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.7
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 174.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 46.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.1
+        },
+        {
+          "name": "DHW",
+          "value": 30.2
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.7
+        }
+      ],
+      "pv": 79.5
+    },
+    "EEM2": {
+      "total": 139.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.5
+        },
+        {
+          "name": "DHW",
+          "value": 30.3
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.6
+        }
+      ],
+      "pv": 79.5
+    },
+    "EEM3": {
+      "total": 119.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.2
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 7.5
+        },
+        {
+          "name": "Lighting",
+          "value": 20.8
+        },
+        {
+          "name": "Equipment",
+          "value": 51.7
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.7
+        }
+      ],
+      "pv": 79.5
+    },
+    "EEM4": {
+      "total": 90.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.8
+        },
+        {
+          "name": "Cooling",
+          "value": 4.6
+        },
+        {
+          "name": "DHW",
+          "value": 7.5
+        },
+        {
+          "name": "Lighting",
+          "value": 11.4
+        },
+        {
+          "name": "Equipment",
+          "value": 31.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.6
+        }
+      ],
+      "pv": 79.5
+    }
+  },
+  "RC-MR1": {
+    "DEFAULT": {
+      "total": 208.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 89.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.9
+        },
+        {
+          "name": "DHW",
+          "value": 48.2
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 158.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 41.5
+        },
+        {
+          "name": "Cooling",
+          "value": 8.6
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 61.1
+    },
+    "EEM2": {
+      "total": 131.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.7
+        },
+        {
+          "name": "Cooling",
+          "value": 8.3
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.9
+        }
+      ],
+      "pv": 61.1
+    },
+    "EEM3": {
+      "total": 98.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.9
+        },
+        {
+          "name": "Cooling",
+          "value": 8.1
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 11.5
+        },
+        {
+          "name": "Equipment",
+          "value": 31.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.0
+        }
+      ],
+      "pv": 61.1
+    },
+    "EEM4": {
+      "total": 77.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 13.2
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 15.3
+        },
+        {
+          "name": "Lighting",
+          "value": 5.8
+        },
+        {
+          "name": "Equipment",
+          "value": 18.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.5
+        }
+      ],
+      "pv": 61.1
+    }
+  },
+  "RC-MR2": {
+    "DEFAULT": {
+      "total": 275.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 161.7
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.6
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 172.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 64.4
+        },
+        {
+          "name": "Cooling",
+          "value": 5.4
+        },
+        {
+          "name": "DHW",
+          "value": 55.6
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.7
+        }
+      ],
+      "pv": 53.4
+    },
+    "EEM2": {
+      "total": 129.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.5
+        },
+        {
+          "name": "Cooling",
+          "value": 6.9
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.2
+        }
+      ],
+      "pv": 53.4
+    },
+    "EEM3": {
+      "total": 91.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.6
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 17.4
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.3
+        }
+      ],
+      "pv": 53.4
+    },
+    "EEM4": {
+      "total": 73.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.0
+        },
+        {
+          "name": "Cooling",
+          "value": 4.2
+        },
+        {
+          "name": "DHW",
+          "value": 17.4
+        },
+        {
+          "name": "Lighting",
+          "value": 3.4
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.9
+        }
+      ],
+      "pv": 53.4
+    }
+  },
+  "RC-MR3": {
+    "DEFAULT": {
+      "total": 276.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 163.8
+        },
+        {
+          "name": "Cooling",
+          "value": 4.7
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.3
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 173.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 65.3
+        },
+        {
+          "name": "Cooling",
+          "value": 5.2
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.5
+        }
+      ],
+      "pv": 53.4
+    },
+    "EEM2": {
+      "total": 129.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.7
+        },
+        {
+          "name": "Cooling",
+          "value": 6.6
+        },
+        {
+          "name": "DHW",
+          "value": 55.7
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.1
+        }
+      ],
+      "pv": 53.4
+    },
+    "EEM3": {
+      "total": 91.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.8
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 17.4
+        },
+        {
+          "name": "Lighting",
+          "value": 7.7
+        },
+        {
+          "name": "Equipment",
+          "value": 19.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.1
+        }
+      ],
+      "pv": 53.4
+    },
+    "EEM4": {
+      "total": 73.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.0
+        },
+        {
+          "name": "Cooling",
+          "value": 4.0
+        },
+        {
+          "name": "DHW",
+          "value": 17.4
+        },
+        {
+          "name": "Lighting",
+          "value": 3.5
+        },
+        {
+          "name": "Equipment",
+          "value": 11.2
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.7
+        }
+      ],
+      "pv": 53.4
+    }
+  },
+  "RC-R": {
+    "DEFAULT": {
+      "total": 226.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 102.4
+        },
+        {
+          "name": "Cooling",
+          "value": 10.8
+        },
+        {
+          "name": "DHW",
+          "value": 29.2
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.7
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 175.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 52.9
+        },
+        {
+          "name": "Cooling",
+          "value": 12.2
+        },
+        {
+          "name": "DHW",
+          "value": 27.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.4
+        }
+      ],
+      "pv": 77.1
+    },
+    "EEM2": {
+      "total": 136.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 16.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 27.6
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.6
+        }
+      ],
+      "pv": 77.1
+    },
+    "EEM3": {
+      "total": 116.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 20.1
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 3.5
+        },
+        {
+          "name": "Lighting",
+          "value": 21.5
+        },
+        {
+          "name": "Equipment",
+          "value": 46.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 77.1
+    },
+    "EEM4": {
+      "total": 89.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.5
+        },
+        {
+          "name": "DHW",
+          "value": 3.5
+        },
+        {
+          "name": "Lighting",
+          "value": 11.8
+        },
+        {
+          "name": "Equipment",
+          "value": 28.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.7
+        }
+      ],
+      "pv": 77.1
+    }
+  },
+  "RC-T": {
+    "DEFAULT": {
+      "total": 213.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 78.4
+        },
+        {
+          "name": "Cooling",
+          "value": 9.0
+        },
+        {
+          "name": "DHW",
+          "value": 35.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.9
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 171.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 37.4
+        },
+        {
+          "name": "Cooling",
+          "value": 10.7
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 12.2
+        }
+      ],
+      "pv": 71.9
+    },
+    "EEM2": {
+      "total": 143.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.3
+        },
+        {
+          "name": "Cooling",
+          "value": 6.2
+        },
+        {
+          "name": "DHW",
+          "value": 33.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.6
+        }
+      ],
+      "pv": 71.9
+    },
+    "EEM3": {
+      "total": 122.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 11.5
+        },
+        {
+          "name": "Cooling",
+          "value": 6.1
+        },
+        {
+          "name": "DHW",
+          "value": 11.7
+        },
+        {
+          "name": "Lighting",
+          "value": 20.0
+        },
+        {
+          "name": "Equipment",
+          "value": 57.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.6
+        }
+      ],
+      "pv": 71.9
+    },
+    "EEM4": {
+      "total": 91.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 14.2
+        },
+        {
+          "name": "Cooling",
+          "value": 4.1
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 11.0
+        },
+        {
+          "name": "Equipment",
+          "value": 34.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.5
+        }
+      ],
+      "pv": 71.9
+    }
+  },
+  "RS-I1": {
+    "DEFAULT": {
+      "total": 344.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 197.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 48.0
+        },
+        {
+          "name": "Lighting",
+          "value": 20.9
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.8
+        }
+      ],
+      "pv": 2.8
+    },
+    "EEM1": {
+      "total": 236.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 94.0
+        },
+        {
+          "name": "Cooling",
+          "value": 7.4
+        },
+        {
+          "name": "DHW",
+          "value": 47.8
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.4
+        }
+      ],
+      "pv": 93.0
+    },
+    "EEM2": {
+      "total": 166.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.7
+        },
+        {
+          "name": "Cooling",
+          "value": 7.3
+        },
+        {
+          "name": "DHW",
+          "value": 48.0
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.4
+        }
+      ],
+      "pv": 93.0
+    },
+    "EEM3": {
+      "total": 134.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 22.3
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 13.5
+        },
+        {
+          "name": "Lighting",
+          "value": 21.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 22.4
+        }
+      ],
+      "pv": 93.0
+    },
+    "EEM4": {
+      "total": 108.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.0
+        },
+        {
+          "name": "Cooling",
+          "value": 4.6
+        },
+        {
+          "name": "DHW",
+          "value": 13.5
+        },
+        {
+          "name": "Lighting",
+          "value": 9.7
+        },
+        {
+          "name": "Equipment",
+          "value": 32.8
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.6
+        }
+      ],
+      "pv": 93.0
+    }
+  },
+  "RS-I2": {
+    "DEFAULT": {
+      "total": 294.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 173.1
+        },
+        {
+          "name": "Cooling",
+          "value": 5.3
+        },
+        {
+          "name": "DHW",
+          "value": 35.9
+        },
+        {
+          "name": "Lighting",
+          "value": 26.7
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.3
+        }
+      ],
+      "pv": 4.9
+    },
+    "EEM1": {
+      "total": 199.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 83.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.7
+        },
+        {
+          "name": "DHW",
+          "value": 35.8
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.1
+        }
+      ],
+      "pv": 70.7
+    },
+    "EEM2": {
+      "total": 141.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.9
+        },
+        {
+          "name": "Cooling",
+          "value": 5.1
+        },
+        {
+          "name": "DHW",
+          "value": 35.9
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.1
+        }
+      ],
+      "pv": 70.7
+    },
+    "EEM3": {
+      "total": 118.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 23.8
+        },
+        {
+          "name": "Cooling",
+          "value": 5.0
+        },
+        {
+          "name": "DHW",
+          "value": 10.9
+        },
+        {
+          "name": "Lighting",
+          "value": 27.3
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 70.7
+    },
+    "EEM4": {
+      "total": 91.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 25.4
+        },
+        {
+          "name": "Cooling",
+          "value": 3.2
+        },
+        {
+          "name": "DHW",
+          "value": 11.0
+        },
+        {
+          "name": "Lighting",
+          "value": 11.9
+        },
+        {
+          "name": "Equipment",
+          "value": 20.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 14.3
+        }
+      ],
+      "pv": 70.7
+    }
+  },
+  "RS-I3": {
+    "DEFAULT": {
+      "total": 323.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 172.7
+        },
+        {
+          "name": "Cooling",
+          "value": 9.7
+        },
+        {
+          "name": "DHW",
+          "value": 28.5
+        },
+        {
+          "name": "Lighting",
+          "value": 29.9
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.8
+        }
+      ],
+      "pv": 4.9
+    },
+    "EEM1": {
+      "total": 230.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 84.1
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 28.1
+        },
+        {
+          "name": "Lighting",
+          "value": 30.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.8
+        }
+      ],
+      "pv": 119.0
+    },
+    "EEM2": {
+      "total": 165.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.4
+        },
+        {
+          "name": "DHW",
+          "value": 28.2
+        },
+        {
+          "name": "Lighting",
+          "value": 30.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.2
+        }
+      ],
+      "pv": 119.0
+    },
+    "EEM3": {
+      "total": 146.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.0
+        },
+        {
+          "name": "Cooling",
+          "value": 6.3
+        },
+        {
+          "name": "DHW",
+          "value": 7.3
+        },
+        {
+          "name": "Lighting",
+          "value": 30.6
+        },
+        {
+          "name": "Equipment",
+          "value": 57.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.2
+        }
+      ],
+      "pv": 119.0
+    },
+    "EEM4": {
+      "total": 114.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.3
+        },
+        {
+          "name": "Cooling",
+          "value": 4.4
+        },
+        {
+          "name": "DHW",
+          "value": 7.4
+        },
+        {
+          "name": "Lighting",
+          "value": 14.3
+        },
+        {
+          "name": "Equipment",
+          "value": 41.6
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 17.2
+        }
+      ],
+      "pv": 119.0
+    }
+  },
+  "RS-I4": {
+    "DEFAULT": {
+      "total": 303.7,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 183.0
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 38.6
+        },
+        {
+          "name": "Lighting",
+          "value": 23.2
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 23.3
+        }
+      ],
+      "pv": 4.9
+    },
+    "EEM1": {
+      "total": 191.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 78.0
+        },
+        {
+          "name": "Cooling",
+          "value": 5.2
+        },
+        {
+          "name": "DHW",
+          "value": 38.5
+        },
+        {
+          "name": "Lighting",
+          "value": 24.0
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.2
+        }
+      ],
+      "pv": 76.8
+    },
+    "EEM2": {
+      "total": 136.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 18.0
+        },
+        {
+          "name": "Cooling",
+          "value": 5.9
+        },
+        {
+          "name": "DHW",
+          "value": 38.6
+        },
+        {
+          "name": "Lighting",
+          "value": 24.0
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.8
+        }
+      ],
+      "pv": 76.8
+    },
+    "EEM3": {
+      "total": 111.1,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 19.1
+        },
+        {
+          "name": "Cooling",
+          "value": 5.8
+        },
+        {
+          "name": "DHW",
+          "value": 12.4
+        },
+        {
+          "name": "Lighting",
+          "value": 24.0
+        },
+        {
+          "name": "Equipment",
+          "value": 25.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 19.8
+        }
+      ],
+      "pv": 76.8
+    },
+    "EEM4": {
+      "total": 87.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 21.7
+        },
+        {
+          "name": "Cooling",
+          "value": 3.6
+        },
+        {
+          "name": "DHW",
+          "value": 12.5
+        },
+        {
+          "name": "Lighting",
+          "value": 10.1
+        },
+        {
+          "name": "Equipment",
+          "value": 17.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 16.5
+        }
+      ],
+      "pv": 76.8
+    }
+  },
+  "RS-S": {
+    "DEFAULT": {
+      "total": 304.2,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 122.8
+        },
+        {
+          "name": "Cooling",
+          "value": 11.8
+        },
+        {
+          "name": "DHW",
+          "value": 43.1
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.8
+        }
+      ],
+      "pv": 0.0
+    },
+    "EEM1": {
+      "total": 270.0,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 90.6
+        },
+        {
+          "name": "Cooling",
+          "value": 12.6
+        },
+        {
+          "name": "DHW",
+          "value": 42.5
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.5
+        }
+      ],
+      "pv": 82.3
+    },
+    "EEM2": {
+      "total": 202.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 24.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 42.6
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.8
+        }
+      ],
+      "pv": 82.3
+    },
+    "EEM3": {
+      "total": 174.3,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 29.6
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 27.9
+        },
+        {
+          "name": "Equipment",
+          "value": 73.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.9
+        }
+      ],
+      "pv": 82.3
+    },
+    "EEM4": {
+      "total": 141.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 32.6
+        },
+        {
+          "name": "Cooling",
+          "value": 5.4
+        },
+        {
+          "name": "DHW",
+          "value": 9.6
+        },
+        {
+          "name": "Lighting",
+          "value": 14.3
+        },
+        {
+          "name": "Equipment",
+          "value": 55.1
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 20.1
+        }
+      ],
+      "pv": 82.3
     }
   }
 };

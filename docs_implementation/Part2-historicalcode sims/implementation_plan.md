@@ -65,3 +65,30 @@ subfolder, whichever is current at that time.
   folder's path there so the next `idf_reader` session on that track knows where the web-side
   handoff lands. Still nothing to do here: B-4, Stage 3 (the Speed campaign) and Stage 4
   (results) remain, and `HIST_NU_all_results.csv` does not exist yet.
+- 2026-09-24: Stage 5 started, **hidden rollout** by Koral's instruction: load the data, keep
+  the 1983 tier visible for Montreal only. Upstream results are the four per-arm masters in
+  `idf_reader/docs_DONE/docs_LMN_web/HistoricalCodebaseSims/results/`
+  (`HIST_NU_CAN_{Z4,Z5,Z7A,Z7B}_1983_20260924_master.csv`, 560 rows each, all 16 cells x 35 NUs),
+  not the single `HIST_NU_all_results.csv` this prompt expected. Upstream Control list still
+  reads TODO for Stages 3-4 and V-1 to V-4 (gates, external validation, results md) are not
+  recorded in its Progress Log; Koral declared the campaign complete, so data went in but
+  nothing is shown.
+  - Step 1, data: new `Templates/1983-National/convert_hist_csv.py` (one script replacing the
+    three Zone 6 ones, Zone 6 copies untouched). Same ladder map, 1-decimal rounding. Checks:
+    arm column matches, 35 NUs x 5 scenarios, NU set identical to the Zone 6 block. Appended
+    `ENVELOPE_ENERGY_DATA["vintage-1983-z4|z5|z7a|z7b"]` after the Zone 6 block and added the
+    four keys to all 35 `NEIGHBOURHOODS` envelope arrays. `node -c` clean; spot check CC-B
+    DEFAULT/EEM4: Z4 169.2/77.0, Z5 202.3/83.4, Z7A 239.2/88.6, Z7B 246.2/90.0 (Z4 DEFAULT
+    169.1811 in CSV). Zone 6 CC-B DEFAULT still 191.4.
+  - Step 2, config (partial): four keys added to `envelopeDisplayNames`, `baselineEnvelope`
+    (self-map), `climateOf`. Display name "1983 reference envelope, NECB Zone X (City)". Tier
+    text `vintage1983` NOT changed (it is shown for Montreal and still says Montreal only);
+    OD-2 sub-label and transfer-rule wording wait for go-live.
+  - Step 3, app.js: `getEnvelopeValue` / `parseEnvelopeValue` now zone-aware. Button visibility
+    and the region-card selection check read one list, `HISTORICAL_TIER_REGIONS = ['necb-z6']`.
+    **Go-live = add the four regions to that list** (plus the Step 2 text, Step 5 docs).
+    Round-trip tested in node for z4, z6, z7b. Four keys added to the construction-label map.
+  - Step 4: `energy.js` / `energy-selection.js` read names from `LMN_CONFIG`, nothing to add.
+  - Step 5, documentation: not done (would be visible). Validation PDFs not copied (none found
+    in `results/`).
+  - Step 6: `?v=32` -> `?v=33` on all 15 pages (66 refs). Browser check not run.

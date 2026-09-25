@@ -289,7 +289,12 @@ const LMN_CONFIG = {
     "high-performance-necb":   "High Perf. Zone 6 (Montréal)",
     // CHV, 2026-08-24: the displayed name is the reference envelope wording.
     // The KEY stays historical, which is why it still reads "vintage".
-    "vintage-1983-z6":         "1983 Quebec reference envelope, NECB Zone 6 (Montréal)"
+    "vintage-1983-z6":         "1983 Quebec reference envelope, NECB Zone 6 (Montréal)",
+    // Zones 4, 5, 7A, 7B: loaded but hidden until the historical tiers go live.
+    "vintage-1983-z4":         "1983 reference envelope, NECB Zone 4 (Vancouver)",
+    "vintage-1983-z5":         "1983 reference envelope, NECB Zone 5 (Toronto)",
+    "vintage-1983-z7a":        "1983 reference envelope, NECB Zone 7A (Winnipeg)",
+    "vintage-1983-z7b":        "1983 reference envelope, NECB Zone 7B (Fort McMurray)"
   },
 
   // D3.5, task 3.2. Which key holds the no-measure baseline for a given
@@ -319,7 +324,11 @@ const LMN_CONFIG = {
     "high-performance-z7b":    "necb-z7b",
     "high-performance-z8":     "necb-z8",
     "high-performance-necb":   "necb-z6",
-    "vintage-1983-z6":         "vintage-1983-z6"
+    "vintage-1983-z6":         "vintage-1983-z6",
+    "vintage-1983-z4":         "vintage-1983-z4",
+    "vintage-1983-z5":         "vintage-1983-z5",
+    "vintage-1983-z7a":        "vintage-1983-z7a",
+    "vintage-1983-z7b":        "vintage-1983-z7b"
   },
 
   // Which climate a key belongs to, for the assumptions box and the snow note.
@@ -340,7 +349,11 @@ const LMN_CONFIG = {
     "high-performance-z7b":    "necb-z7b",
     "high-performance-z8":     "necb-z8",
     "high-performance-necb":   "necb-z6",
-    "vintage-1983-z6":         "necb-z6"
+    "vintage-1983-z6":         "necb-z6",
+    "vintage-1983-z4":         "necb-z4",
+    "vintage-1983-z5":         "necb-z5",
+    "vintage-1983-z7a":        "necb-z7a",
+    "vintage-1983-z7b":        "necb-z7b"
   },
 
   // D2.9, DBG-022, P0. A user must not be able to reach results without

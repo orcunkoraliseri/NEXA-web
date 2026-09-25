@@ -199,6 +199,11 @@ function setupLayoutCards() {
 }
 
 
+// Regions whose 1983 tier is shown in the popup. Zones 4, 5, 7A and 7B
+// already have vintage-1983-z* data in data.js but stay hidden until the
+// historical tiers go live: add the region here to show its button.
+const HISTORICAL_TIER_REGIONS = ['necb-z6'];
+
 /**
  * Helper to compose envelope filter value from region and tier
  */
@@ -207,7 +212,7 @@ function getEnvelopeValue(region, tier) {
         return region;
     }
     if (tier === 'vintage-1983') {
-        return 'vintage-1983-z6';
+        return 'vintage-1983-' + region.replace('necb-', '');
     }
     if (region === 'ashrae') {
         return 'high-performance-ashrae';
@@ -224,7 +229,7 @@ function getEnvelopeValue(region, tier) {
 function parseEnvelopeValue(envelopeValue) {
     if (!envelopeValue) return { region: null, tier: null };
     if (envelopeValue.startsWith('vintage-1983-')) {
-        return { region: 'necb-z6', tier: 'vintage-1983' };
+        return { region: 'necb-' + envelopeValue.replace('vintage-1983-', ''), tier: 'vintage-1983' };
     }
     if (envelopeValue.startsWith('high-performance-')) {
         let r = envelopeValue.replace('high-performance-', '');
@@ -344,10 +349,10 @@ function setupEnvelopeCards() {
             const spanText = card.querySelector('span:not(.envelope-region-badge)').innerText.replace('\n', ' ');
             popupRegionName.textContent = spanText;
 
-            // Show/hide 1983 vintage button (only for Zone 6)
+            // Show/hide 1983 vintage button (only for HISTORICAL_TIER_REGIONS)
             const btn1983 = document.getElementById('tier-btn-1983');
             if (btn1983) {
-                btn1983.style.display = (region === 'necb-z6') ? '' : 'none';
+                btn1983.style.display = HISTORICAL_TIER_REGIONS.includes(region) ? '' : 'none';
             }
 
             // Highlight current tier in popup if this region is already active
@@ -515,7 +520,7 @@ function updateAvailableOptions() {
         const region = card.dataset.region;
         const stdVal = getEnvelopeValue(region, 'standard');
         const hpVal = getEnvelopeValue(region, 'high-performance');
-        const vintageVal = (region === 'necb-z6') ? getEnvelopeValue(region, 'vintage-1983') : null;
+        const vintageVal = HISTORICAL_TIER_REGIONS.includes(region) ? getEnvelopeValue(region, 'vintage-1983') : null;
         const isSelected = activeFilters.envelope === stdVal || activeFilters.envelope === hpVal || (vintageVal && activeFilters.envelope === vintageVal);
 
         if (!hasActiveFilters || availableValues.envelope.has(stdVal) || availableValues.envelope.has(hpVal) || (vintageVal && availableValues.envelope.has(vintageVal)) || isSelected) {
@@ -958,7 +963,11 @@ function createResultRow(concept, neighbourhood) {
         'high-performance-z7a': 'high-performance construction',
         'high-performance-z7b': 'high-performance construction',
         'high-performance-z8': 'high-performance construction',
-        'vintage-1983-z6': 'standard construction'
+        'vintage-1983-z6': 'standard construction',
+        'vintage-1983-z4': 'standard construction',
+        'vintage-1983-z5': 'standard construction',
+        'vintage-1983-z7a': 'standard construction',
+        'vintage-1983-z7b': 'standard construction'
     };
     // Envelope display names now come from LMN_CONFIG, D0.1 / DBG-016. The map
     // that used to sit here named four cities that were never simulated:
