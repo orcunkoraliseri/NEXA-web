@@ -9,10 +9,26 @@ SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.dirname(SCRIPTS_DIR)
 REPO_ROOT = os.path.dirname(TEMPLATES_DIR)
 
-MASTER_CSV = os.path.join(TEMPLATES_DIR, "2026-07-21", "LMN_national_NU_master.csv")
-PV_CSV = os.path.join(TEMPLATES_DIR, "2026-07-21", "LMN_national_PV_generation.csv")
+# Pipeline inputs all resolve through this one dated folder. Bump DATA_VERSION
+# when idf_reader publishes a newer post-dfix national master; the folder it
+# names must hold the national master, PV generation, archetypes and IAL
+# combined CSVs (copy forward any file idf_reader has not re-run). Older
+# Templates/<date>/ folders are left untouched as history, not read here.
+DATA_VERSION = "2026-09-10"
+DATA_DIR = os.path.join(TEMPLATES_DIR, DATA_VERSION)
+
+MASTER_CSV = os.path.join(DATA_DIR, "LMN_national_NU_master.csv")
+PV_CSV = os.path.join(DATA_DIR, "LMN_national_PV_generation.csv")
+ARCHETYPES_CSV = os.path.join(DATA_DIR, "Full_NUs_Archetypes.csv")
+# IAL (Thermal Load) campaign results: 210 runs, 35 NUs x 6 NECB zones, no
+# post-dfix re-run has been done for this, so it has its own file rather than
+# living inside MASTER_CSV.
+IAL_CSV = os.path.join(DATA_DIR, "IAL_ThermalLoadSims_Combined_6Zone_20260910.csv")
+# US_ASHRAE has never been part of a dfix re-run, so it still comes from the
+# original July 19 healed master. Only its US_ASHRAE/ASHRAE rows are read
+# (see read_master_file's only_standards filter) so it cannot clobber the
+# NECB zones, including Montreal (CAN_MTL/CAN_Z6), that MASTER_CSV provides.
 LEGACY_MASTER_CSV = os.path.join(TEMPLATES_DIR, "2026-07-19", "LMN_full_NU_master_healed.csv")
-ARCHETYPES_CSV = os.path.join(TEMPLATES_DIR, "2026-07-19", "Full_NUs_Archetypes.csv")
 
 OUT_JS_DATA = os.path.join(SCRIPTS_DIR, "out_data.js")
 ARCHIVE_DIR = os.path.join(TEMPLATES_DIR, "archive")
@@ -36,7 +52,8 @@ SCENARIO_MAPPING = {
     "EEM_J_ENVELOPE": "EEM1",
     "EEM_J_ENV_HVAC": "EEM2",
     "EEM_J_ENV_HVAC_DHW": "EEM3",
-    "EEM_J_ENV_HVAC_DHW_EEM4": "EEM4"
+    "EEM_J_ENV_HVAC_DHW_EEM4": "EEM4",
+    "IAL": "IAL"
 }
 
 # Standard mapping: Map both CAN_MTL and CAN_Z6 to necb-z6
@@ -170,15 +187,25 @@ def process():
         "ASHRAE": []
     }
     
-    def read_master_file(filepath):
+    def read_master_file(filepath, only_standards=None):
         with open(filepath, "r", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 b_id = row["building_id"].strip()
                 if b_id == "RC-R_Garage":
                     continue
-                    
+
                 standard_raw = row["standard"].strip()
+                if standard_raw == "CAN_MTL":
+                    # CAN_Z6 already covers Montreal (STANDARD_MAP maps both
+                    # to necb-z6). The post-dfix national master still carries
+                    # 45 old "legacy_web" CAN_MTL rows verbatim at its tail;
+                    # reading them here would silently revert those NUs to
+                    # their pre-dfix values because they are iterated after
+                    # the correct CAN_Z6 rows.
+                    continue
+                if only_standards is not None and standard_raw not in only_standards:
+                    continue
                 if standard_raw not in STANDARD_MAP:
                     continue
                 env_key = STANDARD_MAP[standard_raw]
@@ -226,12 +253,21 @@ def process():
                     elif standard_raw in ("US_ASHRAE", "ASHRAE"):
                         zone_rows["ASHRAE"].append(csv_row)
 
-    # 1. Read main 2026-07-21 national master
+    # 1. Read main national master (post-dfix, DATA_VERSION folder)
     read_master_file(MASTER_CSV)
-    
-    # 2. Read legacy master for US_ASHRAE fallback data if available
+
+    # 2. Read legacy master for US_ASHRAE rows only. No dfix or later master
+    #    carries US_ASHRAE, so this file is still the only source for it; the
+    #    filter keeps its CAN_MTL/CAN_Z6 rows (which map onto the same
+    #    necb-z6 key as Montreal) from clobbering MASTER_CSV's newer values.
     if os.path.exists(LEGACY_MASTER_CSV):
-        read_master_file(LEGACY_MASTER_CSV)
+        read_master_file(LEGACY_MASTER_CSV, only_standards=("US_ASHRAE", "ASHRAE"))
+
+    # 2.5 Read IAL (Thermal Load) results if available. Adds an "IAL" level
+    #     alongside DEFAULT/EEM1-4 for the 210 NU x NECB-zone combinations
+    #     the campaign covered.
+    if os.path.exists(IAL_CSV):
+        read_master_file(IAL_CSV)
 
     # 3. Read PV CSV for PV_GENERATION_DATA
     if os.path.exists(PV_CSV):
@@ -274,8 +310,10 @@ def process():
                         "EEM3": levels.get("EEM3", levels["EEM1"]),
                         "EEM4": levels.get("EEM4", levels["EEM1"])
                     }
-                    if "IAL" in levels:
-                        energy_data[hp_key][b_id]["IAL"] = levels["IAL"]
+                    # IAL is intentionally not carried to the high-performance
+                    # envelope: the Thermal Load campaign only ran the
+                    # standard NECB/ASHRAE envelopes, so js/data.js has no IAL
+                    # entries under any high-performance-* key either.
 
     # Alias necb-2017 & high-performance-necb to necb-z6 & high-performance-z6 for legacy compatibility
     energy_data["necb-2017"] = energy_data["necb-z6"]

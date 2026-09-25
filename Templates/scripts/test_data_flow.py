@@ -1,6 +1,14 @@
 import json
+import os
 import re
 import sys
+
+# Paths are derived from this file's own location, so the script runs from
+# any clone and any working directory. This file lives in
+# <repo>/Templates/scripts/.
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(os.path.dirname(SCRIPTS_DIR))
+DATA_JS = os.path.join(REPO_ROOT, "js", "data.js")
 
 
 def _literal(txt, name):
@@ -59,7 +67,7 @@ def _literal(txt, name):
 
 
 def test_data_flow():
-    with open('js/data.js', encoding='utf-8') as f:
+    with open(DATA_JS, encoding='utf-8') as f:
         js_text = f.read()
 
     neighbourhoods = json.loads(_literal(js_text, 'NEIGHBOURHOODS'))

@@ -1,5 +1,13 @@
 import json
+import os
 import re
+
+# Paths are derived from this file's own location, so the script runs from
+# any clone and any working directory. This file lives in
+# <repo>/Templates/scripts/.
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(os.path.dirname(SCRIPTS_DIR))
+DATA_JS = os.path.join(REPO_ROOT, "js", "data.js")
 
 
 def _literal(txt, name):
@@ -57,7 +65,7 @@ def _literal(txt, name):
     raise ValueError("unterminated literal for " + name)
 
 
-with open('js/data.js', encoding='utf-8') as f:
+with open(DATA_JS, encoding='utf-8') as f:
     txt = f.read()
 
 # Extract the base ENVELOPE_ENERGY_DATA object
