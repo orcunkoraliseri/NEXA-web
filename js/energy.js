@@ -587,17 +587,22 @@ function renderTreemap(neighbourhoodCode) {
     let scenarioKey = (baseLevel === "EEM1") ? "EEM1" : "DEFAULT";
     let scenarioExact = true;
 
-    if (loadSelections.includes('thermal_load')) {
+    // DBG-054. Thermal Load only takes effect when this envelope actually
+    // carries an IAL column (0 of the high-performance cells do, per the
+    // register). The selection page greys the card there, but a stale
+    // sessionStorage or a typed URL can still carry the selection here: it
+    // falls through to the baseline/demand branch below instead of labelling
+    // the untouched baseline as the applied measure.
+    if (loadSelections.includes('thermal_load') && baseIal) {
         // DBG-024: the stored total is authoritative here too, so the seventh
         // block is added rather than the six being re-summed.
-        const ialSource = baseIal || baseDefault;
         energyData = {
-            total: ialSource.total,
-            breakdown: withOtherEndUse(ialSource.breakdown, otherEndUseResidual(ialSource)),
-            pv: ialSource.pv
+            total: baseIal.total,
+            breakdown: withOtherEndUse(baseIal.breakdown, otherEndUseResidual(baseIal)),
+            pv: baseIal.pv
         };
         colName = LMN_CONFIG.selection('load', 'thermal_load').label;
-        if (baseIal) scenarioKey = "IAL";
+        scenarioKey = "IAL";
     } else {
         // Baseline is EEM1 for high-performance envelope, DEFAULT for standard envelope
         const baseDataset = (baseLevel === "EEM1" && baseEem1) ? baseEem1 : baseDefault;
@@ -712,7 +717,15 @@ function renderTreemap(neighbourhoodCode) {
     renderBaselineComparison(envelope, neighbourhoodCode, energyData.total);
 
     // Task 3.5: assumptions and model info.
-    renderAssumptionsBox(envelope, neighbourhoodCode, selections, scenarioKey, scenarioExact);
+    // DBG-054. A Thermal Load entry that did not take effect (no IAL column
+    // for this envelope) must not be named as an applied measure here either,
+    // same guard as the branch above, so a stale sessionStorage or URL
+    // selection cannot print "Measures applied: Thermal Load" beside a number
+    // that is the plain baseline.
+    const assumptionsSelections = (loadSelections.includes('thermal_load') && !baseIal)
+        ? Object.assign({}, selections, { load: loadSelections.filter(v => v !== 'thermal_load') })
+        : selections;
+    renderAssumptionsBox(envelope, neighbourhoodCode, assumptionsSelections, scenarioKey, scenarioExact);
 
     // Render Energy Status icon
     renderEnergyStatus(neighbourhoodCode);

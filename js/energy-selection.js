@@ -169,6 +169,89 @@ function setupDemandCards() {
 }
 
 /**
+ * Render the Energy Generation cards from LMN_CONFIG.selectionLabels.generation.
+ * HQP trial finding, 2026-09-25 (FEEDBACK_LOG item 7/12): these cards used to be
+ * hand-copied <button> markup in layer2_energy_selection.html, so adding a
+ * technology needed an HTML edit in addition to the config entry. This builds
+ * the same markup the hand-written cards used, from config alone. Must run
+ * before setupGenerationCards, applyFacadePvRule and restoreEnergySelections,
+ * since all three query these cards.
+ */
+function renderGenerationCards() {
+    const row = document.getElementById('generation-row');
+    if (!row) return;
+
+    const entries = LMN_CONFIG.selectionLabels.generation || {};
+    row.innerHTML = '';
+
+    Object.keys(entries).forEach(value => {
+        const def = entries[value];
+        const card = document.createElement('button');
+        card.className = def.unavailable ? 'generation-card is-unavailable' : 'generation-card';
+        card.setAttribute('data-category', 'generation');
+        card.setAttribute('data-value', value);
+        if (def.unavailable) {
+            card.disabled = true;
+            card.setAttribute('data-permanently-disabled', '');
+        }
+
+        if (def.popover) {
+            const wrap = document.createElement('span');
+            wrap.className = 'card-info-wrap';
+
+            const infoBtn = document.createElement('span');
+            infoBtn.className = 'card-info-btn';
+            infoBtn.setAttribute('role', 'button');
+            infoBtn.setAttribute('tabindex', '0');
+            infoBtn.setAttribute('aria-label', `Information about ${def.popover.title}`);
+            infoBtn.textContent = 'i';
+            wrap.appendChild(infoBtn);
+
+            const popover = document.createElement('span');
+            popover.className = 'card-info-popover';
+            popover.setAttribute('role', 'tooltip');
+
+            const popTitle = document.createElement('strong');
+            popTitle.className = 'card-info-popover-title';
+            popTitle.textContent = def.popover.title;
+            popover.appendChild(popTitle);
+
+            const popText = document.createElement('span');
+            popText.className = 'card-info-popover-text';
+            popText.textContent = def.popover.text;
+            popover.appendChild(popText);
+
+            wrap.appendChild(popover);
+            card.appendChild(wrap);
+        }
+
+        const img = document.createElement('img');
+        img.src = def.image;
+        img.alt = def.alt || def.label;
+        card.appendChild(img);
+
+        const labelSpan = document.createElement('span');
+        labelSpan.textContent = def.label;
+        card.appendChild(labelSpan);
+
+        if (def.statusId) {
+            const status = document.createElement('span');
+            status.className = 'card-status';
+            status.id = def.statusId;
+            status.hidden = true;
+            card.appendChild(status);
+        } else if (def.unavailable) {
+            const status = document.createElement('span');
+            status.className = 'card-status';
+            status.textContent = LMN_CONFIG.availability.notModelledLabel;
+            card.appendChild(status);
+        }
+
+        row.appendChild(card);
+    });
+}
+
+/**
  * Setup generation card event listeners (multi-selection).
  */
 function setupGenerationCards() {
@@ -249,6 +332,51 @@ function applyFacadePvRule(neighbourhoodCode, envelope) {
 }
 
 /**
+ * DBG-054, P1. The Thermal Load card asks for an IAL column that the
+ * ideal-load campaign never produced on the high-performance archetypes: 0 of
+ * those cells carry it (register, DBG-054). Until now the card stayed
+ * clickable there, changed nothing, and the breakdown page still said the
+ * measure was applied. Greyed here, before a click can happen, same pattern
+ * as applyFacadePvRule above: disabled, marked permanently so mutual
+ * exclusion cannot re-enable it, and the reason printed under the card.
+ */
+function applyThermalLoadRule(envelope) {
+    const card = document.querySelector('.load-card[data-value="thermal_load"]');
+    if (!card) return;
+
+    const allowed = LMN_CONFIG.thermalLoadAllowed(envelope);
+    const status = document.getElementById('thermal-load-status');
+    const note = document.getElementById('thermal-load-note');
+    const wrap = document.getElementById('thermal-load-wrap');
+
+    if (allowed) {
+        card.removeAttribute('data-permanently-disabled');
+        card.disabled = false;
+        card.classList.remove('is-unavailable');
+        if (status) { status.hidden = true; status.textContent = ''; }
+        if (note) { note.hidden = true; note.textContent = ''; }
+        if (wrap) { wrap.hidden = true; }
+        return;
+    }
+
+    card.classList.remove('active');
+    card.disabled = true;
+    card.setAttribute('data-permanently-disabled', '');
+    card.classList.add('is-unavailable');
+    if (status) {
+        status.hidden = false;
+        status.textContent = LMN_CONFIG.availability.notAvailableLabel;
+    }
+    if (note) {
+        note.hidden = false;
+        note.textContent = LMN_CONFIG.thermalLoad.restrictionNote;
+    }
+    if (wrap) {
+        wrap.hidden = false;
+    }
+}
+
+/**
  * Setup submit button to navigate to energy page.
  */
 function setupSubmitButton() {
@@ -322,6 +450,10 @@ function initEnergySelectionPage() {
         buildSidebar('layer2_selection', 'selection');
     }
 
+    // Build the generation cards from config before anything below queries
+    // them (event binding, the facade PV rule, restoring a stored selection).
+    renderGenerationCards();
+
     // Setup interactive elements
     setupLoadCards();
     setupDemandCards();
@@ -332,6 +464,11 @@ function initEnergySelectionPage() {
     // facade PV choice made on a Montreal neighbourhood cannot come back to
     // life on a neighbourhood where it is not offered.
     applyFacadePvRule(neighbourhoodCode, envelope);
+
+    // DBG-054. Same reasoning: before the stored selection is restored, so a
+    // Thermal Load choice made on a standard envelope cannot come back to
+    // life on a high-performance one that has no IAL column for it.
+    applyThermalLoadRule(envelope);
 
     // Task 3.8, CHV Stage 3 item 6: Back then Next must return the same
     // scenario. Until 2026-08-10 this page started empty on every load, so

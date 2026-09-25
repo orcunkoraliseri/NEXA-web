@@ -703,6 +703,16 @@ const LMN_CONFIG = {
     restrictionNote: "Facade PV is available only for the nine Montreal neighbourhoods that contain one of the three tall building archetypes it was tested on."
   },
 
+  // DBG-054, P1. The IAL (ideal thermal load) campaign that answers the
+  // Thermal Load card ran on the standard NECB archetypes only: measured in
+  // the register at 0 of the high-performance cells carrying an "IAL" column.
+  // Selecting the card there used to change nothing while the assumptions box
+  // still said the measure was applied. The one line shown under the card
+  // when LMN_CONFIG.thermalLoadAllowed answers false.
+  thermalLoad: {
+    restrictionNote: "Not currently available for the High-Performance envelope. The ideal thermal load campaign was run on the standard NECB archetypes only."
+  },
+
   // =====================================================================
   // 3b. Landscape PV. D7.1, D7.6, D7.7, DBG-014, P0
   // =====================================================================
@@ -944,16 +954,30 @@ const LMN_CONFIG = {
       "dhw":        { label: "Heat Pump for DHW",   image: "Content/Images_Layer2_EnergyDemand/dhw.png" },
       "appliances": { label: "Efficient Appliances and Equipment", image: "Content/Images_Layer2_EnergyDemand/appliancesequipment.png" }
     },
+    // 2026-09-25, HQP trial finding (FEEDBACK_LOG item 7/12): the generation
+    // cards on layer2_energy_selection.html used to be hand-copied <button>
+    // markup, so a new technology needed an HTML edit in addition to this
+    // list. js/energy-selection.js now renders the cards from this object
+    // alone (renderGenerationCards). Fields beyond label/image are what the
+    // old hand-written markup carried per card: "popover" for the (i) info
+    // bubble, "statusId" for the one card with its own live status span
+    // (pv_facade, toggled by applyFacadePvRule), "unavailable" for the greyed
+    // "Not modelled yet" cards, and "alt" only where the image alt text does
+    // not match the label (other_tba).
     generation: {
-      "pv_roof":     { label: "PV on Roof",     image: "Content/Images_Layer2_EnergyGeneration/pv on roof.png" },
-      "pv_facade":   { label: "PV on Facade",   image: "Content/Images_Layer2_EnergyGeneration/pv on facade.png" },
-      "pvt_roof":    { label: "PV-T on Roof",   image: "Content/Images_Layer2_EnergyGeneration/pv-t on roof.png" },
-      "pvt_facade":  { label: "PV-T on Facade", image: "Content/Images_Layer2_EnergyGeneration/pv-t on facade.png" },
-      "stc_roof":    { label: "STC on Roof",    image: "Content/Images_Layer2_EnergyGeneration/stc on roof.png" },
-      "stc_facade":  { label: "STC on Facade",  image: "Content/Images_Layer2_EnergyGeneration/stc on facade.png" },
-      "biomass":     { label: "Biomass",        image: "Content/Images_Layer2_EnergyGeneration/biomass.png" },
-      "wind":        { label: "Wind",           image: "Content/Images_Layer2_EnergyGeneration/wind.png" },
-      "geothermal":  { label: "Geothermal",     image: "Content/Images_Layer2_EnergyGeneration/geothermal.png" }
+      "pv_roof":     { label: "PV on Roof",     image: "Content/Images_Layer2_EnergyGeneration/pv on roof.png",
+        popover: { title: "PV on Roof", text: "Photovoltaic array mounted on available roof area with crystalline silicon modules." } },
+      "pv_facade":   { label: "PV on Facade",   image: "Content/Images_Layer2_EnergyGeneration/pv on facade.png",
+        popover: { title: "PV on Facade", text: "Building-integrated photovoltaic modules installed on vertical facade surfaces." },
+        statusId: "pv-facade-status" },
+      "pvt_roof":    { label: "PV-T on Roof",   image: "Content/Images_Layer2_EnergyGeneration/pv-t on roof.png",   unavailable: true },
+      "pvt_facade":  { label: "PV-T on Facade", image: "Content/Images_Layer2_EnergyGeneration/pv-t on facade.png", unavailable: true },
+      "stc_roof":    { label: "STC on Roof",    image: "Content/Images_Layer2_EnergyGeneration/stc on roof.png",    unavailable: true },
+      "stc_facade":  { label: "STC on Facade",  image: "Content/Images_Layer2_EnergyGeneration/stc on facade.png",  unavailable: true },
+      "biomass":     { label: "Biomass",        image: "Content/Images_Layer2_EnergyGeneration/biomass.png",        unavailable: true },
+      "wind":        { label: "Wind",           image: "Content/Images_Layer2_EnergyGeneration/wind.png",           unavailable: true },
+      "geothermal":  { label: "Geothermal",     image: "Content/Images_Layer2_EnergyGeneration/geothermal.png",     unavailable: true },
+      "other_tba":   { label: "Other (TBA)",    image: "Content/Images_Layer2_EnergyGeneration/geothermal.png",     unavailable: true, alt: "Other TBA" }
     },
 
     // STAGE-05 task 5.3 and 5.5, DBG-006, the second half. Layer 3 and Layer 4
@@ -1457,6 +1481,25 @@ LMN_CONFIG.facadePvAllowed = function (nuCode, envelopeKey) {
   if (!envelopeKey) return false;
   const climate = LMN_CONFIG.climateOfEnvelope(envelopeKey);
   return f.validClimates.indexOf(climate) !== -1;
+};
+
+// DBG-054, P1. Is the Thermal Load (IAL) card offered for this envelope?
+// Scoped to the high-performance arm, which is what DBG-054 is about: the
+// ideal-load campaign was run on the standard NECB archetypes only. Which of
+// the several high-performance keys (z4, z5, z6, z7a, z7b, and their necb/
+// ashrae aliases) actually lack the column is read from ENVELOPE_ENERGY_DATA
+// itself rather than listed here, so this self-corrects the day that arm is
+// imported instead of needing a name added to a list. Non-high-performance
+// envelopes are untouched by this rule.
+LMN_CONFIG.thermalLoadAllowed = function (envelopeKey) {
+  if (!envelopeKey) return false;
+  if (envelopeKey.indexOf("high-performance-") !== 0) return true;
+  const table = (typeof ENVELOPE_ENERGY_DATA !== "undefined") ? ENVELOPE_ENERGY_DATA[envelopeKey] : null;
+  if (!table) return true;
+  for (const nuCode in table) {
+    if (table[nuCode] && table[nuCode]["IAL"]) return true;
+  }
+  return false;
 };
 
 // The notice a result page shows in place of a withheld result. Caution
