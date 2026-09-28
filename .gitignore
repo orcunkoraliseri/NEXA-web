@@ -68,9 +68,6 @@ docs_implementation/Demo/
 # `git add -u` and never `git add -A`.
 docs_implementation/DONE/
 
-# Local assistant working files. Kept on the working machine only.
-CLAUDE.md
-CLAUDE.local.md
-.claude/
+# Local working files. Kept on the working machine only.
 memory/
 docs_implementation/Part2-historicalcode sims/Prompt/
