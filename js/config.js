@@ -953,7 +953,8 @@ const LMN_CONFIG = {
       "stc_facade":  { label: "STC on Facade",  image: "Content/Images_Layer2_EnergyGeneration/stc on facade.png" },
       "biomass":     { label: "Biomass",        image: "Content/Images_Layer2_EnergyGeneration/biomass.png" },
       "wind":        { label: "Wind",           image: "Content/Images_Layer2_EnergyGeneration/wind.png" },
-      "geothermal":  { label: "Geothermal",     image: "Content/Images_Layer2_EnergyGeneration/geothermal.png" }
+      "geothermal":  { label: "Geothermal",     image: "Content/Images_Layer2_EnergyGeneration/geothermal.png" },
+      "geothermal_copy":  { label: "Geothermal Copy",image: "Content/Images_Layer2_EnergyGeneration/geothermal copy.png" }
     },
 
     // STAGE-05 task 5.3 and 5.5, DBG-006, the second half. Layer 3 and Layer 4
