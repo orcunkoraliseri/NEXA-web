@@ -10,9 +10,9 @@ TEMPLATES_DIR = os.path.dirname(SCRIPTS_DIR)
 REPO_ROOT = os.path.dirname(TEMPLATES_DIR)
 
 # Pipeline inputs all resolve through this one dated folder. Bump DATA_VERSION
-# when idf_reader publishes a newer post-dfix national master; the folder it
+# when NEXA-desktop publishes a newer post-dfix national master; the folder it
 # names must hold the national master, PV generation, archetypes and IAL
-# combined CSVs (copy forward any file idf_reader has not re-run). Older
+# combined CSVs (copy forward any file NEXA-desktop has not re-run). Older
 # Templates/<date>/ folders are left untouched as history, not read here.
 DATA_VERSION = "2026-09-10"
 DATA_DIR = os.path.join(TEMPLATES_DIR, DATA_VERSION)

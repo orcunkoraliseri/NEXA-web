@@ -96,7 +96,7 @@ NU_RES = {
 }
 
 # Authoritative total floor area per NU (m2), from the simulation morphology dataset:
-#   C:/Users/o_iseri/Desktop/idf_reader/outputs/outputs_NUs_key_drivers/neighbourhood_morphology.csv
+#   C:/Users/o_iseri/Desktop/NEXA-desktop/outputs/outputs_NUs_key_drivers/neighbourhood_morphology.csv
 # (column total_floor_area_m2). Site/land area is uniform 21,717 m2 (~5 acres) for all NUs;
 # total floor area varies per neighbourhood. RC-R uses the base row (not RC-R_Garage = 8841).
 MORPH_FLOOR = {
