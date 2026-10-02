@@ -1,4 +1,4 @@
-# NEXA, Neighbourhood Energy eXploration & Analysis Testingg
+# NEXA, Neighbourhood Energy eXploration & Analysis
 
 An early-stage decision-support tool for **pre-feasibility comparison** of neighbourhood
 designs. It compares neighbourhood units whose energy and solar results have already been
