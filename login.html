@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign in | NEXA</title>
+    <script src="js/auth.js?v=36"></script>
+    <link rel="stylesheet" href="css/styles.css?v=36" />
+    <link rel="icon" href="Content/Images_Copyright/RHLab.png" type="image/png" />
+</head>
+<body>
+    <header class="header" role="banner">
+        <h1 class="welcome-title">NEXA</h1>
+        <p class="welcome-lede">Neighbourhood Energy eXploration & Analysis</p>
+        <p class="welcome-subtitle">An early stage decision support tool for comparing neighbourhood designs at pre-feasibility.</p>
+    </header>
+
+    <main class="container" role="main">
+        <section class="login-card" aria-labelledby="login-heading">
+            <h2 id="login-heading" class="login-heading">Sign in</h2>
+
+            <!-- Intended-use disclaimer, shown when the user opens the tool
+                 (Dr. Hachem-Vermette). Same wording as the RHlab Tools page. -->
+            <p class="login-disclaimer"><strong>Intended use.</strong> NEXA is intended for screening, pre-feasibility, and early-stage decision support. It does not replace detailed engineering analysis, compliance assessment, or site-specific feasibility studies.</p>
+
+            <form id="login-form" class="login-form" novalidate>
+                <label class="login-label" for="login-email">Email</label>
+                <input class="login-input" id="login-email" name="email" type="email" autocomplete="email" required />
+
+                <label class="login-label" for="login-password">Password</label>
+                <input class="login-input" id="login-password" name="password" type="password" autocomplete="current-password" required />
+
+                <button id="login-submit" class="submit-btn login-submit" type="submit">Sign in</button>
+                <p id="login-error" class="login-error" role="alert"></p>
+            </form>
+
+            <p class="login-request">No account yet? Request access from the
+                <a href="https://rhlab.encs.concordia.ca/tools.html" target="_blank" rel="noopener">RHlab Tools page</a>.</p>
+        </section>
+
+        <footer class="site-footer">
+            <img class="footer-logo" src="Content/Images_Copyright/RHLab.png" alt="Resilient Habitat Lab Logo" style="max-height: 120px; width: auto;">
+            <span class="footer-text">&copy; Resilient Habitat Lab,<br>directed by Dr. Caroline H-Vermette,<br>Concordia University</span>
+        </footer>
+    </main>
+
+    <script>(function () {
+        var auth = window.NEXA_AUTH;
+        var next = auth.safeNext(new URLSearchParams(location.search).get('next'));
+
+        // Gate off (file: copy, rollback switch, no service URL) or already
+        // signed in: nothing to do here.
+        if (!auth.active || auth.session()) {
+            location.replace(next);
+            return;
+        }
+
+        var form = document.getElementById('login-form');
+        var button = document.getElementById('login-submit');
+        var error = document.getElementById('login-error');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = document.getElementById('login-email').value.trim().toLowerCase();
+            var password = document.getElementById('login-password').value.trim();
+            if (!email || !password) {
+                error.textContent = 'Enter both your email and your password.';
+                return;
+            }
+            error.textContent = '';
+            button.disabled = true;
+            button.textContent = 'Checking...';
+
+            auth.signIn(email, password).then(function (result) {
+                if (result && result.status === 'success') {
+                    location.replace(next);
+                    return;
+                }
+                error.textContent = (result && result.message) || 'Sign in failed.';
+                button.disabled = false;
+                button.textContent = 'Sign in';
+            }).catch(function () {
+                error.textContent = 'Could not reach the sign-in service. Check your connection and try again.';
+                button.disabled = false;
+                button.textContent = 'Sign in';
+            });
+        });
+    })();</script>
+</body>
+</html>
