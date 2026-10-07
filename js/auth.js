@@ -16,7 +16,7 @@
 
     var SESSION_KEY = 'nexaAuthSession';
     var DEVICE_KEY = 'nexaDeviceId';
-    var SESSION_DAYS = 30;
+    var SESSION_DAYS = 7;
 
     function read(key) {
         try { return localStorage.getItem(key); } catch (e) { return null; }
