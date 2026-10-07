@@ -2339,6 +2339,85 @@ The documents are these:
 | Public methodology | The scientific basis shown to users | The site's `documentation.html` |
 | Simulation evidence | The origin of every published number | `idf_reader/docs_DONE/docs_LMN_web/`; section 6.0 |
 
+### 14.7 Site access gate
+
+**Live since 2026-10-07.** Every page of the published site asks for an email
+and a password. The offline copy, opened from disk, opens without one. The
+build notes and the test record are in `docs_implementation/passwordSystem/`.
+
+**How a request arrives.** A visitor clicks "Request access" on the NEXA-web card
+of the RHlab Tools page and fills in the form. The lab inbox,
+`resilienthabitatlab@gmail.com`, receives an email titled **NEXA-web Access
+Request** with the visitor's email, role and intended use. Replying to it
+answers the visitor directly.
+
+**How to approve a request.**
+
+1.  Open the Google Sheet **NEXA-web User Verification**, in the Drive folder
+    "NEXA-web". Row 1 holds the headers: Email, Password, DeviceID, Status,
+    LastLogin, Notes.
+2.  Add one row: the visitor's email, a password you choose, `active` under
+    Status. Leave DeviceID and LastLogin empty; the script fills them at the
+    first sign-in. Notes is free text.
+3.  Reply to the request with the invitation below.
+
+> Subject: Your access to NEXA-web
+>
+> Dear [Name],
+>
+> Thank you for your interest in NEXA-web. You can now access the platform
+> with the details below.
+>
+> Website: https://carolinehvermette.github.io/NEXA-Web/
+>
+> Email: [email]
+>
+> Password: [password]
+>
+> Your account is linked to the first browser you sign in with. If you need to
+> change computer or browser, reply to this email and we will reset it.
+>
+> NEXA-web is intended for early-stage pre-feasibility exploration, not detailed
+> design.
+>
+> Kind regards,
+>
+> Resilient Habitat Lab, Concordia University
+
+**Everyday changes.**
+
+- **New computer or browser.** An account works in one browser only. A private
+  window, another browser or cleared site data counts as a new device. Clear the
+  user's DeviceID cell and they can sign in again.
+- **Withdraw access.** Set Status to `revoked`. Any value other than `active`
+  blocks sign-in.
+- **Session length.** A sign-in lasts **7 days** in that browser, then the site
+  asks again. "Sign out" ends it at once. The value is `SESSION_DAYS` in
+  `js/auth.js`; changing it is a code change and needs the `?v=` bump of
+  section 10.2.
+
+**How it works.** `login.html` and `js/auth.js` send the email, password and
+browser identifier to a Google Apps Script bound to the sheet. The script
+checks the row, records the device at the first sign-in, and answers yes or no.
+Its source is `docs_implementation/passwordSystem/apps_script/Code.gs`. The
+script's `/exec` address in `js/auth.js` is the only Google identifier in the
+repository; the sheet's address is written nowhere.
+
+**Changing the script.** Edit `Code.gs`, push it to the bound script, then
+update the **existing** deployment to a new version. **Never create a new
+deployment**: it gets a new address and every sign-in fails until `js/auth.js`
+is changed and published.
+
+**What the gate does not do.** It is a door, not a lock. The result data is
+still a public file, so someone who knows its address can download it without
+signing in. Encrypting it was considered and set aside for this version.
+
+**Ownership.** The sheet and the script belong to `orcunkoraliseri@gmail.com`,
+Koral's personal Google account. Before the hand-over, **share the sheet with
+edit rights** with whoever approves requests, or **transfer its ownership** to
+the lab account. The script travels with the sheet. **No password from the
+sheet is written in this guide or in either repository.**
+
 ---
 
 ## 15. Assumptions register
@@ -2671,6 +2750,7 @@ Parts I and II, which repeated them.
 | **3.4**, fourth addendum | **2026-10-07** | **New Appendix H, trial troubleshooting**, at Dr. Hachem-Vermette's request of 2026-10-06: the questions and issues of the HQP trial grouped into four areas, each with its explanation or solution, the text of the one-page document sent to her the same day. **Nothing else changed** | ⬜ |
 | **3.4**, fifth addendum | **2026-10-07** | **Zhineng He's completed trial.** Section 9.4.1 step 4 corrected: `tests/test_neighbourhood_registry.py` is a full 35-neighbourhood simulation run, not an install check, and a one-line registry import replaces it. The simulation repository named by its current address, `NEXA-desktop`, in sections 6.0, 9.4.1, 13.2 and A.3. Appendix G2 rows Z1 to Z5, from his returned package. Appendix A.2: `docs_methodology/` now tracked, with this guide in `docs_methodology/HandoverDocument/` | ⬜ |
 | **3.4**, sixth addendum | **2026-10-07** | **The revision round archived.** `docs_implementation/documentation-revisions/` moved to `docs_implementation/DONE/DONE-documentation-revisions/`, and every path to it in this guide follows, except two dated rows that record the old one. The verification scripts in `Results/` find the repository root one folder further up. **Nothing else changed** | ⬜ |
+| **3.4**, seventh addendum | **2026-10-07** | **The site access gate went live.** New **section 14.7, site access gate**: how a request from the RHlab Tools page arrives, how to approve it in the sheet, the invitation text, device reset and withdrawal, the 7-day session, how to change the script without breaking the address, what the gate does not protect, and the sheet ownership to settle before the hand-over. **Nothing else changed** | ⬜ |
 
 ### Items awaiting joint completion with CHV (Group D)
 
