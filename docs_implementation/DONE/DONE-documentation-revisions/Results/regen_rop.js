@@ -3,7 +3,7 @@
 // changes of 2026-08-10.
 //
 // Reproduction command:
-//   node docs_implementation/documentation-revisions/Results/regen_rop.js
+//   node docs_implementation/DONE/DONE-documentation-revisions/Results/regen_rop.js
 //
 // RoP = pv / total, both in kWh/m²·yr, so the floor area cancels and D6.0 does
 // not affect it. Source of both numbers: ENVELOPE_ENERGY_DATA, which D0.6
@@ -13,7 +13,7 @@ const vm = require('vm');
 const path = require('path');
 
 const repo = 'C:/Users/o_iseri/Desktop/NEXA-web';
-const out = path.join(repo, 'docs_implementation/documentation-revisions/Results/RESULT-07_RoP-values.csv');
+const out = path.join(repo, 'docs_implementation/DONE/DONE-documentation-revisions/Results/RESULT-07_RoP-values.csv');
 
 const ctx = { console };
 vm.createContext(ctx);

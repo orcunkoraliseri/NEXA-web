@@ -7,7 +7,7 @@
  * the measurement behind DBG-029.
  *
  * Run from the repository root:
- *   node docs_implementation/documentation-revisions/Results/verify_session11.js
+ *   node docs_implementation/DONE/DONE-documentation-revisions/Results/verify_session11.js
  *
  * No packages. Exits non-zero on the first failure.
  */
@@ -16,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const ROOT = path.resolve(__dirname, '..', '..', '..');
+const ROOT = path.resolve(__dirname, '..', '..', '..', '..');
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 
 let pass = 0;
@@ -218,7 +218,7 @@ for (const field of ['surface', 'efficiency', 'mounting', 'gcr']) {
 }
 check('5.3 RESULT-08 exists and removes nothing',
     /Nothing has been removed/.test(
-        read('docs_implementation/documentation-revisions/Results/RESULT-08_Layer2-Field-Inventory-D3.4.md')));
+        read('docs_implementation/DONE/DONE-documentation-revisions/Results/RESULT-08_Layer2-Field-Inventory-D3.4.md')));
 
 // ===========================================================================
 // 6. Nothing from session 10 was broken

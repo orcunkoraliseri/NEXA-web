@@ -211,7 +211,7 @@ console.log('\n== 3.8, scenario survives Back then Next ==');
 ok('the selection page restores state', fs.readFileSync(P('js/energy-selection.js'), 'utf8').includes('function restoreEnergySelections'));
 
 console.log('\n== DBG-018, derived values ==');
-const csv = fs.readFileSync(P('docs_implementation/documentation-revisions/Results/RESULT-07_RoP-values.csv'), 'utf8').trim().split(/\r?\n/);
+const csv = fs.readFileSync(P('docs_implementation/DONE/DONE-documentation-revisions/Results/RESULT-07_RoP-values.csv'), 'utf8').trim().split(/\r?\n/);
 ok('RoP table regenerated, 2974 rows plus header', csv.length === 2975, csv.length + ' lines');
 ok('no page reads the null stored rop', !/pvData\.rop|data\.rop/.test(fs.readFileSync(P('js/pv.js'), 'utf8') + fs.readFileSync(P('js/finish-design.js'), 'utf8')));
 

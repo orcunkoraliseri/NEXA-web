@@ -464,7 +464,7 @@ Read in this order:
    why.
 3. `documentation.html` in a browser, the public methodology the users read.
 4. `docs_methodology/README.md`, the index of the simulation methodology.
-5. `docs_implementation/documentation-revisions/`, the working record of the
+5. `docs_implementation/DONE/DONE-documentation-revisions/`, the working record of the
    current revision round: decisions, defects, results and emails.
 
 *The complete folder and file map is Part III, section 4.*
@@ -532,7 +532,7 @@ real directory listing.
 
 There is no test framework and no continuous integration. Verification is by
 **standalone Node scripts** under
-`docs_implementation/documentation-revisions/Results/`, one per stage group, which
+`docs_implementation/DONE/DONE-documentation-revisions/Results/`, one per stage group, which
 load the real `js/data.js` and `js/config.js`, run the real page logic against a
 stub DOM, and assert against the data rather than against a snapshot. **Eight
 suites, 706 checks, 685 passing as measured on 2026-09-09.** All 21 failures are checks
@@ -741,7 +741,7 @@ in place as history and are not read again, except `2026-07-19/` for
 | Folder | Content |
 |------------------------------------------------------|------------------------------------------------------------------|
 | `docs_methodology/` | **New, 2026-08-14.** The curated simulation methodology, copied into the repository so citations resolve. See section 6 |
-| `docs_implementation/documentation-revisions/` | The revision round working record: `Implementation/` stage plans, `Progress/` decisions and status, `Debugs/` the defect register, `Results/` verification scripts and evidence, `Emails/` the correspondence, `Submission/` this guide and, in `previous/`, the drafts and the two shorter reports it replaces |
+| `docs_implementation/DONE/DONE-documentation-revisions/` | The revision round working record: `Implementation/` stage plans, `Progress/` decisions and status, `Debugs/` the defect register, `Results/` verification scripts and evidence, `Emails/` the correspondence, `Submission/` this guide and, in `previous/`, the drafts and the two shorter reports it replaces |
 | `docs/` | The original page by page implementation specifications |
 | `previous/` | Archived pages, scripts and design images |
 
@@ -1046,14 +1046,14 @@ document whose equations 1 to 11 came first. **That document is identified,
 > Hachem-Vermette, C. (2025). Designing energy-positive neighborhoods: a modular
 > framework for integrated planning and policy guidance. *Energy Reports*, **14**,
 > 4492 to 4507. **Section 2.4**, equations **12 to 18**. Local copy:
-> `docs_implementation/documentation-revisions/Resources/1-s2.0-S2352484725006365-main.pdf`.
+> `docs_implementation/DONE/DONE-documentation-revisions/Resources/1-s2.0-S2352484725006365-main.pdf`.
 
 **The match is exact, symbol for symbol**, for all seven equations, and
 **equations 1 to 11 of the paper are the photovoltaic, district heating and
 heat pump chain**, which is why the electric vehicle block starts at 12. The
 earlier bibliographic search, sixteen publications with four read in full text,
 did not reach it and is kept for the record in
-`docs_implementation/documentation-revisions/DeepResearchPrompts/responses/RT02_chv_ev_v2g_source_paper.md`.
+`docs_implementation/DONE/DONE-documentation-revisions/DeepResearchPrompts/responses/RT02_chv_ev_v2g_source_paper.md`.
 The 15 kWh per EV daily demand carries a stated basis in `Templates/NUS_EV.csv`,
 a 200 km daily range, and section 2.4 of the paper states the same figure and
 cites Dalla Chiara et al. (2019). Dr. Hachem-Vermette's instruction of
@@ -1189,7 +1189,7 @@ website is showing the current run"**. That is what the campaign stamp in
 To ensure that a future researcher can identify the NU/building, climate, envelope/scenario,
 IDF name, weather file and corresponding outputs without opening the file, standard naming
 patterns were settled on 2026-08-27 (recorded in
-`docs_implementation/documentation-revisions/Submission/previous/PROPOSAL_Simulation-File-Naming_v0.3.md`).
+`docs_implementation/DONE/DONE-documentation-revisions/Submission/previous/PROPOSAL_Simulation-File-Naming_v0.3.md`).
 
 #### The two naming patterns
 
@@ -1260,7 +1260,7 @@ The rename pass touches 4,655 input models outside this repository and must be e
 file name. **This is the file that means you do not have to.** One row per
 simulation run behind the published tool, searchable in any spreadsheet:
 
-`docs_implementation/documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv`
+`docs_implementation/DONE/DONE-documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv`
 
 **The paths in the index point into the simulation repository, `idf_reader`, not
 into NEXA-web.** `idf_path` and `output_path` are paths inside an `idf_reader`
@@ -1303,8 +1303,8 @@ before the rename pass of section 6.12 is run:**
 root:
 
 ```
-node docs_implementation/documentation-revisions/Submission/tools/dump_publication_state.js > pubstate.json
-python docs_implementation/documentation-revisions/Submission/tools/build_simulation_model_index.py pubstate.json
+node docs_implementation/DONE/DONE-documentation-revisions/Submission/tools/dump_publication_state.js > pubstate.json
+python docs_implementation/DONE/DONE-documentation-revisions/Submission/tools/build_simulation_model_index.py pubstate.json
 ```
 
 The first executes `js/config.js` and `js/data.js` and writes out what the
@@ -1436,7 +1436,7 @@ The update process follows a strict five-stage chain:
 5. Update `LMN_CONFIG.dataCampaign` with the new identifier.
 6. Run `check_keys.py` and `test_data_flow.py`.
 7. Run the stage verification scripts under
-   `docs_implementation/documentation-revisions/Results/` with `node`.
+   `docs_implementation/DONE/DONE-documentation-revisions/Results/` with `node`.
 8. Open the affected neighbourhood on the Layer 2 breakdown **and** on the final
    summary. Those two pages read the same stored cell by different routes, so
    disagreement between them is the fastest signal that something is wrong.
@@ -1920,7 +1920,7 @@ or the pipeline scripts.
 1. `python Templates/scripts/check_keys.py`
 2. `python Templates/scripts/test_data_flow.py`
 3. The stage verification scripts under
-   `docs_implementation/documentation-revisions/Results/`, run with `node`.
+   `docs_implementation/DONE/DONE-documentation-revisions/Results/`, run with `node`.
    They load the real `js/data.js` and `js/config.js`, run the real page logic
    against a stub DOM, and assert against the data rather than against a stored
    snapshot.
@@ -2039,7 +2039,7 @@ recovered by name and a report can name the exact state it describes.
 
 ## 12. Known issues, workarounds and unfinished features
 
-Sourced from `docs_implementation/documentation-revisions/Debugs/DEBUG-REGISTER.md`
+Sourced from `docs_implementation/DONE/DONE-documentation-revisions/Debugs/DEBUG-REGISTER.md`
 and this guide's own assumptions register, section 15. The classes below were built
 per CHV's instruction (A24) to separate real open defects, accepted V1 limitations,
 future research items and user choices, rather than mix them in one table. **They were
@@ -2330,10 +2330,10 @@ Appendix A: **A.2 for NEXA-web** and **A.3 for `idf_reader`**, the simulation re
 The documents are these:
 
 | Document | What it is for | Where it is |
-|---------------------|------------------------------------|--------------------------------------------------------------|
-| This guide | How the tool works and how to maintain it | NEXA-web, `docs_implementation/documentation-revisions/Submission/NEXA_Handover-and-Maintenance-Guide_v3.4.md`; also sent as `.docx` |
-| Simulation Model Index | One row per simulation run behind the published tool | NEXA-web, `docs_implementation/documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv`; section 6.13 |
-| Verification scripts | The checks run before a commit | NEXA-web, `docs_implementation/documentation-revisions/Results/*.js`; section 10.2 |
+|---------------------|-----------------------------------|----------------------------------------------------------------|
+| This guide | How the tool works and how to maintain it | NEXA-web, `docs_implementation/DONE/DONE-documentation-revisions/Submission/NEXA_Handover-and-Maintenance-Guide_v3.4.md`; also sent as `.docx` |
+| Simulation Model Index | One row per simulation run behind the published tool | NEXA-web, `docs_implementation/DONE/DONE-documentation-revisions/Submission/submission1/N-LENS_Simulation-Model-Index.csv`; section 6.13 |
+| Verification scripts | The checks run before a commit | NEXA-web, `docs_implementation/DONE/DONE-documentation-revisions/Results/*.js`; section 10.2 |
 | Handover closeout and HQP trial checklist | Dr. Hachem-Vermette's checklist: section A for Koral, section B for the trial preparation, section C for the trial tasks. The trial package cites its item numbers (B1, C1 and so on) | Sent by email as a `.docx`; not in either repository |
 | HQP trial package | The trial tasks and the findings log | Sent by email as a `.docx`; not in either repository |
 | Public methodology | The scientific basis shown to users | The site's `documentation.html` |
@@ -2417,7 +2417,7 @@ look equally editable, and only one of them is.**
 
 ### 15.3 Mobility and vehicle to grid
 
-Layer 3 figures are **Preliminary** in the maturity vocabulary of Appendix B (not a building energy simulation). On disk, the six calculation values are the default arguments of `Templates/Content_Layer3_Transportation/calculate_ev_scenarios.py`. The equations there are numbered 12 to 18, and **the source is identified, 2026-08-31**: Hachem-Vermette, C. (2025), *Designing energy-positive neighborhoods: a modular framework for integrated planning and policy guidance*, **Energy Reports 14, 4492 to 4507, section 2.4, equations 12 to 18**. The match is exact, symbol for symbol, and equations 1 to 11 of the paper are the photovoltaic and heating chain. The earlier negative search is kept in `docs_implementation/documentation-revisions/DeepResearchPrompts/responses/RT02_chv_ev_v2g_source_paper.md`. The 15 kWh per EV daily demand carries a stated basis in `Templates/NUS_EV.csv`, a 200 km daily range, and section 2.4 of the paper states the same figure. As stated by Dr. Hachem-Vermette on 2026-08-30, the V2G methodology, efficiencies and losses will require further development and validation in future work.
+Layer 3 figures are **Preliminary** in the maturity vocabulary of Appendix B (not a building energy simulation). On disk, the six calculation values are the default arguments of `Templates/Content_Layer3_Transportation/calculate_ev_scenarios.py`. The equations there are numbered 12 to 18, and **the source is identified, 2026-08-31**: Hachem-Vermette, C. (2025), *Designing energy-positive neighborhoods: a modular framework for integrated planning and policy guidance*, **Energy Reports 14, 4492 to 4507, section 2.4, equations 12 to 18**. The match is exact, symbol for symbol, and equations 1 to 11 of the paper are the photovoltaic and heating chain. The earlier negative search is kept in `docs_implementation/DONE/DONE-documentation-revisions/DeepResearchPrompts/responses/RT02_chv_ev_v2g_source_paper.md`. The 15 kWh per EV daily demand carries a stated basis in `Templates/NUS_EV.csv`, a 200 km daily range, and section 2.4 of the paper states the same figure. As stated by Dr. Hachem-Vermette on 2026-08-30, the V2G methodology, efficiencies and losses will require further development and validation in future work.
 
 **Execution and data flow chain:**
 
@@ -2484,7 +2484,7 @@ that the assumptions above can be checked against it.
 | **R1** | Hachem-Vermette, C. (2025). Designing energy-positive neighborhoods: a modular framework for integrated planning and policy guidance. *Energy Reports*, **14**, 4492 to 4507 | **Section 2.4, equations 12 to 18**: the whole Layer 3 electric vehicle and vehicle to grid chain, and the six default values it runs on. Equations 1 to 11 of the paper are the photovoltaic, district heating and heat pump chain, which is why the vehicle block starts at 12 | Sections 6.8 and 15.3, and the assumption table of 15.3 row by row |
 
 **Local copy:**
-`docs_implementation/documentation-revisions/Resources/1-s2.0-S2352484725006365-main.pdf`.
+`docs_implementation/DONE/DONE-documentation-revisions/Resources/1-s2.0-S2352484725006365-main.pdf`.
 Identified on 2026-08-31 and verified equation by equation against
 `Templates/Content_Layer3_Transportation/calculate_ev_scenarios.py`. **The match is exact,
 symbol for symbol, for all seven equations.**
@@ -2549,7 +2549,7 @@ site until 2026-09-22, see section 3.
 | `.gitattributes`, `.gitignore` | Line endings, and what is kept out of the published repository | 10.2 |
 
 **One folder named in section 4.6 is deliberately not on GitHub.**
-`docs_implementation/documentation-revisions/` is listed in `.gitignore` and lives only on
+`docs_implementation/DONE/DONE-documentation-revisions/` is listed in `.gitignore` and lives only on
 the working machine, because it holds the internal correspondence. Nothing on the site links
 to it, so nothing breaks. **`docs_methodology/` is tracked since 2026-10-07**: it holds the
 methodology of NEXA-web and, in `docs_methodology/HandoverDocument/`, this guide and the
@@ -2670,6 +2670,7 @@ Parts I and II, which repeated them.
 | **3.4**, third addendum | **2026-09-25** | **V1 wrap-up (WP6).** Earlier the same day: `DBG-055` (the V2G discharge unit defect) recorded as closed in sections 12.1 and 15.3, and section 5 gained an IAL row (the High-Performance restriction, `DBG-054`). This addendum: new **Appendix G2, HQP trial findings and solutions**, condensing feedback log items 1 to 16 to one table. **Section 8.5 rewritten again**: the WP4b fix made `js/config.js` the only file a new generation technology needs, since Layer 2 cards are now built by `renderGenerationCards()` from `LMN_CONFIG.selectionLabels.generation`, so the `layer2_energy_selection.html` step is removed. **Sections 4.5, 7, 7.1, 8.1 and 9.4.5 rewritten** for the WP4 pipeline fix: one `DATA_VERSION` constant in `convert_master_csv.py`, currently `2026-09-10`, naming the dated `Templates/` folder that carries the post-dfix national master and the IAL combined CSV; the legacy `2026-07-19/` CSV read only for `US_ASHRAE`/`ASHRAE` rows; stale `CAN_MTL` rows in the post-dfix master skipped; all four pipeline scripts confirmed runnable from any working directory | ⬜ |
 | **3.4**, fourth addendum | **2026-10-07** | **New Appendix H, trial troubleshooting**, at Dr. Hachem-Vermette's request of 2026-10-06: the questions and issues of the HQP trial grouped into four areas, each with its explanation or solution, the text of the one-page document sent to her the same day. **Nothing else changed** | ⬜ |
 | **3.4**, fifth addendum | **2026-10-07** | **Zhineng He's completed trial.** Section 9.4.1 step 4 corrected: `tests/test_neighbourhood_registry.py` is a full 35-neighbourhood simulation run, not an install check, and a one-line registry import replaces it. The simulation repository named by its current address, `NEXA-desktop`, in sections 6.0, 9.4.1, 13.2 and A.3. Appendix G2 rows Z1 to Z5, from his returned package. Appendix A.2: `docs_methodology/` now tracked, with this guide in `docs_methodology/HandoverDocument/` | ⬜ |
+| **3.4**, sixth addendum | **2026-10-07** | **The revision round archived.** `docs_implementation/documentation-revisions/` moved to `docs_implementation/DONE/DONE-documentation-revisions/`, and every path to it in this guide follows, except two dated rows that record the old one. The verification scripts in `Results/` find the repository root one folder further up. **Nothing else changed** | ⬜ |
 
 ### Items awaiting joint completion with CHV (Group D)
 
@@ -2787,7 +2788,7 @@ Appendix F. It was run on 2026-09-09 in a real Chrome driven over the DevTools p
 against a served copy of the working tree: real navigations, real mouse events at real
 coordinates, real key events, with the console, every network request and every dialog
 captured per page. The full record is
-`docs_implementation/documentation-revisions/Results/RESULT-16_A23_Live-Site-QA_2026-09-09.md`.
+`docs_implementation/DONE/DONE-documentation-revisions/Results/RESULT-16_A23_Live-Site-QA_2026-09-09.md`.
 
 **What it covered, against CHV's own wording.**
 
@@ -2929,7 +2930,7 @@ condenses the sixteen findings and questions they raised into one row each,
 finding and final solution. It is a summary, not the record: the full account,
 including root cause analysis, workarounds tried along the way and message
 references, is
-`docs_implementation/documentation-revisions/Shivram-Furqan/Feedback/FEEDBACK_LOG.md`.
+`docs_implementation/DONE/DONE-documentation-revisions/Shivram-Furqan/Feedback/FEEDBACK_LOG.md`.
 
 | # | Date | Task or section | Finding | Solution | Status |
 |-------|--------------|----------------|------------------------------------|------------------------------------|-----------|
