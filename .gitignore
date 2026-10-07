@@ -32,9 +32,9 @@ __pycache__/
 # Internal revision correspondence and working notes. This repository is
 # public and serves GitHub Pages, so the emails, progress trackers, debug
 # register and session prompts stay on the local machine and are never
-# published. Added 2026-08-14.
+# published. Added 2026-08-14. docs_methodology/ is tracked since 2026-10-07:
+# it holds the NEXA-web methodology and the handover document.
 docs_implementation/documentation-revisions/*
-docs_methodology/
 
 # Exception, added 2026-09-17: the HQP trial package tells the trainees to open
 # three things inside the ignored folder above, so those, and only those, are

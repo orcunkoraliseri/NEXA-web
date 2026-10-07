@@ -855,7 +855,7 @@ second remote pointing at CHV's own GitHub account.
 
 | Item | Value |
 |-------------------------|-----------------------------------------------------------------------------------------------|
-| Repository | `github.com/orcunkoraliseri/idf_reader` |
+| Repository | `github.com/orcunkoraliseri/NEXA-desktop`, named `idf_reader` until 2026-09-28. Private: access by collaborator invitation |
 | Branch | `main` |
 | Tracked files | **19,701** |
 | Second remote | `github.com/CarolineHVermette/LMN-Desktop`, on CHV's account |
@@ -1809,7 +1809,7 @@ repository. **Work through it in order the first time.**
 
 #### 9.4.1 Set the machine up
 
-1. **Clone the simulation repository.** `git clone https://github.com/orcunkoraliseri/idf_reader`, or, once the transfer of section 14 is complete, the RHLab controlled remote, which is the same history.
+1. **Clone the simulation repository.** `git clone https://github.com/orcunkoraliseri/NEXA-desktop` (named `idf_reader` until 2026-09-28; private, so accept the collaborator invitation first), or, once the transfer of section 14 is complete, the RHLab controlled remote, which is the same history.
 2. **Install EnergyPlus 22.1.0**, to the default location `C:\EnergyPlusV22-1-0`. Install 23.1 and 24.2 as well if you intend to run models that declare those versions. **Do not install to a different path**: the routing table in `BEM_utils/config.py` looks for these exact directories.
 3. **Create the environment and install the packages**, versions in section 9.3:
    ```
@@ -1817,7 +1817,7 @@ repository. **Work through it in order the first time.**
    .venv\Scripts\activate
    pip install matplotlib numpy pandas eppy pytest pydantic
    ```
-4. **Check the install before running anything**: `python -m pytest tests/test_neighbourhood_registry.py`. It loads the canonical registry and fails loudly if the clone is incomplete. It needs no EnergyPlus.
+4. **Check the install before running anything**: `python -c "from Content.neighbourhoods.neighbourhood_registry import NEIGHBOURHOODS; print(len(NEIGHBOURHOODS))"`, from the repository root. It loads the canonical registry, prints `35`, and fails loudly if the clone is incomplete. It needs no EnergyPlus. **Do not use `tests/test_neighbourhood_registry.py` as the install check**, as earlier versions of this guide said: it is a full simulation run, not a quick test. Its code runs at import, so pytest starts EnergyPlus for every one of the 35 neighbourhoods in the registry, one after the other, for hours; it writes a run folder per neighbourhood under `0_BEM_Setup/SimResults_neighbourhoods/` and rewrites the tracked input model `Content/neighbourhoods/onesquare_RS-I1.idf` in place (restore it with `git checkout -- Content/neighbourhoods/onesquare_RS-I1.idf`). Found in the HQP trial, 2026-10-07, Appendix G2 item Z3.
 
 #### 9.4.2 Find what you are going to run
 
@@ -2162,7 +2162,7 @@ acceptance criterion of this guide and is not met.*
 |-------------------------------------------------|--------------------------------------------------|--------------------:|
 | Website source, data, content | `github.com/CarolineHVermette/NEXA-Web` | Yes |
 | Simulation methodology | `docs_methodology/` | **Yes, since 2026-08-14** |
-| Simulation code, input models, raw outputs | `github.com/orcunkoraliseri/idf_reader`, mirrored to `github.com/CarolineHVermette/LMN-Desktop` | **Yes.** Corrected 2026-08-24, section 6.0 |
+| Simulation code, input models, raw outputs | `github.com/orcunkoraliseri/NEXA-desktop` (named `idf_reader` until 2026-09-28), mirrored to `github.com/CarolineHVermette/NEXA-Desktop`, both private | **Yes.** Corrected 2026-08-24, section 6.0 |
 | The revision round record | `docs_implementation/` | Yes |
 
 ### 13.2 What is in GitHub, what is only on the machine, and what would be lost
@@ -2548,21 +2548,22 @@ site until 2026-09-22, see section 3.
 | `.nojekyll` | Empty, and required. Without it GitHub Pages drops every folder whose name starts with an underscore | 3 |
 | `.gitattributes`, `.gitignore` | Line endings, and what is kept out of the published repository | 10.2 |
 
-**Two folders named in section 4.6 are deliberately not on GitHub.**
-`docs_implementation/documentation-revisions/` and `docs_methodology/` are listed in
-`.gitignore` and live only on the working machine, because the repository is public and
-serves the site. Nothing on the site links to either, so nothing breaks; they are shared as
-documents instead. **Three exceptions have been tracked since 2026-09-17**, so that a fresh
+**One folder named in section 4.6 is deliberately not on GitHub.**
+`docs_implementation/documentation-revisions/` is listed in `.gitignore` and lives only on
+the working machine, because it holds the internal correspondence. Nothing on the site links
+to it, so nothing breaks. **`docs_methodology/` is tracked since 2026-10-07**: it holds the
+methodology of NEXA-web and, in `docs_methodology/HandoverDocument/`, this guide and the
+complete trial package as `.docx`, the starting point for whoever takes the project over. **Three exceptions have been tracked since 2026-09-17**, so that a fresh
 clone carries what the HQP trial needs: this guide's `.md`, the Simulation Model Index and
 the verification scripts in `Results/` (section 14.6).
 
 ### A.3 Simulation repository, `idf_reader`
 
-**The files a maintainer needs in the simulation repository**, `github.com/orcunkoraliseri/idf_reader`.
+**The files a maintainer needs in the simulation repository**, `github.com/orcunkoraliseri/NEXA-desktop`, named `idf_reader` until 2026-09-28.
 Section 9.4 is the procedure; this table is for finding things.
 
 | Path | What is in it | Detail |
-|---------------------------------------------------|-----------------------------------------------------------|----------|
+|----------------------------------------------|---------------------------------------------------------------|----------|
 | `README.md` | Install line, the pipeline menu, the cluster offload | 9.4 |
 | `main_BEM.py` | The single entry point for every simulation run, prompt driven | 9.4.3 |
 | `Content/neighbourhoods/neighbourhood_registry.py` | The canonical registry: which buildings make each neighbourhood. Definitions only, no results | 9.4.2 |
@@ -2571,7 +2572,7 @@ Section 9.4 is the procedure; this table is for finding things.
 | `Content/WeatherFiles/` | The weather files | 6.3, 9.4.2 |
 | `Content/Resources/` | The code prescriptions | 6.0 |
 | `BEM_utils/config.py` | EnergyPlus version routing and the worker count | 9.3 |
-| `tests/test_neighbourhood_registry.py` | The install check | 9.4.1 |
+| `tests/test_neighbourhood_registry.py` | A full simulation run of all 35 neighbourhoods, hours long. **Not the install check** | 9.4.1 |
 | `0_BEM_Setup/SimResults_neighbourhoods/` | The raw run folders, one batch folder per run, with `master_status.json`. **Not on GitHub, and the only copy** | 9.4.4, 13.2 |
 | `outputs/` | Derived tables | 6.0 |
 | `docs_DONE/docs_LMN_web/` | The evidence behind every published number | 6.0 |
@@ -2667,6 +2668,8 @@ Parts I and II, which repeated them.
 | **3.4**, addendum | **2026-09-22** | **The live site moved to its permanent address**, https://carolinehvermette.github.io/NEXA-Web/, served from `github.com/CarolineHVermette/NEXA-Web`, the destination repository. Header, sections I, 3, 11.1, 13.1, 14.2, 14.4 (T4, T7, T8), A.2 and Appendix C row 10 updated; D1 and D2 completed | ⬜ |
 | **3.4**, second addendum | **2026-09-24** | **Findings of the HQP trial.** Section 6.13 states that the index paths point into `idf_reader`; section 8.5 names both files a new technology option needs, `js/config.js` and `layer2_energy_selection.html`, step by step; section 9.4.4 says what the run folder is and where; section 10.1 says where to type the command and how to stop the server. New **section 14.6, handover materials**, and **Appendix A.3**, the files of `idf_reader`; the A.2 note on untracked folders corrected | ⬜ |
 | **3.4**, third addendum | **2026-09-25** | **V1 wrap-up (WP6).** Earlier the same day: `DBG-055` (the V2G discharge unit defect) recorded as closed in sections 12.1 and 15.3, and section 5 gained an IAL row (the High-Performance restriction, `DBG-054`). This addendum: new **Appendix G2, HQP trial findings and solutions**, condensing feedback log items 1 to 16 to one table. **Section 8.5 rewritten again**: the WP4b fix made `js/config.js` the only file a new generation technology needs, since Layer 2 cards are now built by `renderGenerationCards()` from `LMN_CONFIG.selectionLabels.generation`, so the `layer2_energy_selection.html` step is removed. **Sections 4.5, 7, 7.1, 8.1 and 9.4.5 rewritten** for the WP4 pipeline fix: one `DATA_VERSION` constant in `convert_master_csv.py`, currently `2026-09-10`, naming the dated `Templates/` folder that carries the post-dfix national master and the IAL combined CSV; the legacy `2026-07-19/` CSV read only for `US_ASHRAE`/`ASHRAE` rows; stale `CAN_MTL` rows in the post-dfix master skipped; all four pipeline scripts confirmed runnable from any working directory | ⬜ |
+| **3.4**, fourth addendum | **2026-10-07** | **New Appendix H, trial troubleshooting**, at Dr. Hachem-Vermette's request of 2026-10-06: the questions and issues of the HQP trial grouped into four areas, each with its explanation or solution, the text of the one-page document sent to her the same day. **Nothing else changed** | ⬜ |
+| **3.4**, fifth addendum | **2026-10-07** | **Zhineng He's completed trial.** Section 9.4.1 step 4 corrected: `tests/test_neighbourhood_registry.py` is a full 35-neighbourhood simulation run, not an install check, and a one-line registry import replaces it. The simulation repository named by its current address, `NEXA-desktop`, in sections 6.0, 9.4.1, 13.2 and A.3. Appendix G2 rows Z1 to Z5, from his returned package. Appendix A.2: `docs_methodology/` now tracked, with this guide in `docs_methodology/HandoverDocument/` | ⬜ |
 
 ### Items awaiting joint completion with CHV (Group D)
 
@@ -2920,7 +2923,8 @@ Record every question asked, ambiguity encountered, or documentation fix require
 ## Appendix G2, HQP trial findings and solutions
 
 The independent handover trial of Appendix G ran through September 2026, with
-Shivram Gopala Krishnan and Furqan Wali as the two HQPs. The table below
+Shivram Gopala Krishnan and Furqan Wali as the two HQPs, and Zhineng He as a third from
+2026-09-21 to 2026-10-07 (rows Z1 to Z5). The table below
 condenses the sixteen findings and questions they raised into one row each,
 finding and final solution. It is a summary, not the record: the full account,
 including root cause analysis, workarounds tried along the way and message
@@ -2945,3 +2949,22 @@ references, is
 | 14 | 2026-09-24 | Checklist item 8 | Checklist cited in the materials but never received by the HQPs | Sent, same checklist as item 8; listed in guide 14.6 | Answered |
 | 15 | 2026-09-24 | Handover, email | Furqan suggested listing the files and documents of both `NEXA-web` and `idf_reader` in the handover section | Guide section 14.6 (handover materials) and Appendix A.3 (`idf_reader` files) written | Closed |
 | 16 | 2026-09-24 | Item 11 follow-up (Ctrl+C, 6.13) | Promised guide lines for stopping the server and the `idf_path` note | Guide sections 10.1 and 6.13 written | Closed |
+| Z1 | 2026-10-02 | Task 6, trial sheet 6 | Zhineng He: sheet 6 still asked for a static HTML card in `layer2_energy_selection.html`, and its example lacked `unavailable: true` | Sheet 6 rewritten 2026-10-07 to the config-only procedure of section 8.5 | Closed |
+| Z2 | 2026-10-02 | Task 8, clone | `idf_reader` answered "Repository not found": it was renamed `NEXA-desktop` and is private | Collaborator invitation; sections 6.0, 9.4.1, 13.2, A.3 and trial sheets 01 and 8 name `NEXA-desktop` | Closed |
+| Z3 | 2026-10-07 | Task 8 Step 1, guide 9.4.1 | The prerequisite `tests/test_neighbourhood_registry.py` could not be confirmed as passing after repeated attempts | It is not a quick test: it simulates all 35 neighbourhoods at import, for hours, and rewrites a tracked input model. Section 9.4.1 and sheet 8 now use a one-line registry import as the install check | Closed |
+| Z4 | 2026-10-07 | Task 2, Simulation Model Index | The index lists RS-I3 `component_buildings` as Restaurant Fast Food and Primary School 50pct, while the site shows 28 attached houses, a primary school, a small retail and a quick service restaurant | Real and known when the package was written (trial sheet 02). The index is generated in `NEXA-desktop` and is not corrected in this repository | Open |
+| Z5 | 2026-10-07 | Tasks 2 and 3, reference values | Sheets 2 and 3 still gave the pre-correction 178.8 kWh/m2 and one expected null lookup; the site shows 179.2 and `test_data_flow.py` reports 0 | Sheet 02 reference values moved to the `Templates/2026-09-10/` master, sheet 3 expects 0 null lookups (DBG-027 filled 2026-09-15) | Closed |
+
+## Appendix H, trial troubleshooting
+
+Questions and issues raised while testing NEXA in the independent trial, grouped into
+four areas, each with its explanation or solution. It was sent to Dr. Hachem-Vermette on
+2026-10-06 as a separate one-page document and added here at her request. The item by item
+record is Appendix G2.
+
+| Area | Issues raised | Explanation and solution |
+|----------------|----------------------------------------------|-----------------------------------------------------------|
+| **1. Setup and Access** | Missing documentation folder after cloning, no step to stop the server, empty 3D viewer, simulation repository "not found". | Trial files are now in the repository. The guide explains Ctrl+C, and the package opens the viewer through "View 3D". The simulation repository was renamed NEXA-desktop and is private: access by invitation. |
+| **2. Data and Traceability** | Master CSV and website values differed (178.8 vs 179.2 kWh/m²), Baseline traced to the wrong level, model paths outside NEXA-web, Montreal edits not reaching the site. | The old CSV predated the 15 September correction; the trial now uses the current folder. The script overwriting Montreal is fixed. The guide clarifies model paths and the Baseline entry. |
+| **3. Website Edits** | Changes hidden after reload, "View Neighbourhoods" stayed grey, colour and label edits not shown, unclear file for new technology options. | Browser cache: use a private window. Grey button: a typing error in an edited data file, shown in the console; both passed on retry. Colour and label steps corrected. Technology options now come from one config file (guide updated). |
+| **4. Recovery and Handover Materials** | Purpose of the rollback task unclear, "run folder" ambiguous, checklist not received, full handover file list requested. | Task 7 purpose added (undo with history kept, rebuild from the repository). Run folder defined. Checklist sent 24 September; guide 14.6 and Appendix A.3 list the handover files. |
