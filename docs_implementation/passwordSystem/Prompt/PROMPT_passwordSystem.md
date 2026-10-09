@@ -47,7 +47,7 @@ A step with no document shows as To do. Step numbers match the plan's checklist.
   in the checklist, add a Progress Log row, and update the tracker step.
 - Email to Dr. Hachem-Vermette opens "Dear Dr. Hachem-Vermette".
 
-## Current state (2026-10-07, all built and tested, waiting on CHV's answer for s12)
+## Current state (2026-10-09, reviewer link live and sent to CHV, waiting on her s12 answer)
 
 - Done: s01-s11 (s08 skipped). Gate live on all pages (`935c837`), 7-day session (`c9c62a8`,
   `?v=37`), Apps Script deployment @3, same `/exec` URL. Test rows and `Seed.gs` removed. Koral's
@@ -61,17 +61,34 @@ A step with no document shows as To do. Step numbers match the plan's checklist.
 - s12 active: completion email sent 2026-10-07 to Dr. Hachem-Vermette, Cc Ahmed, guide attached
   (`Emails/email_to_Dr_Hachem-Vermette_completion.md`). It asks whether to share the sheet with
   them or transfer it to the lab account, and whether Ahmed can add new users.
-- Not committed (only on Koral's request): the guide md and docx, `docs_implementation/
-  passwordSystem/`. Also uncommitted and unrelated to this task: `js/app.js`, `js/config.js`,
-  `js/data.js`, the Part2 plan, `Templates/1983-National/`.
+- Docs committed and pushed to both remotes: `25b7e8a` (guide md and docx, this folder except
+  `resources/`). `resources/` stays local on purpose: `activation.py.txt` holds URDM's live
+  `/exec` URL and the repos are public. Never commit it. Unrelated local edits, not this task:
+  `js/app.js`, `js/config.js`, `js/data.js`, the Part2 plan, `Templates/1983-National/`.
 - To edit the script again, `clasp clone` it from the sheet's script ID into a new scratch
   folder, then update the existing deployment (never a new one).
+- 2026-10-08: CHV asked by email for the password and whether the link alone could open NEXA.
+  Answer sent by Koral (`Emails/email_to_Dr_Hachem-Vermette_password.md`, password kept as
+  `[PASSWORD]` in the file): link alone not possible, she has a personal login, one browser per
+  account to limit and track usage, full explanation of the system to follow "tomorrow"
+  (2026-10-09, not drafted yet). Koral added her row to the sheet (Status `active`, DeviceID
+  empty, Notes "CHV entrance"). Checked against the live script without binding: her email is
+  found (wrong password gives "Invalid email or password"). Correct password not tested on
+  purpose, her first sign-in binds her browser and is the real test.
+- 2026-10-09: CHV asked for link-only access for reviewers (count unknown), Koral chose one
+  shared link. Built and pushed (`0784dab`, `?v=38`): `?key=<key>` on any page signs in through
+  sheet row `reviewer-link | <key> | * | active`; DeviceID `*` skips browser binding (Code.gs,
+  live as deployment @4). Tested: API success from two device IDs, Koral confirmed on two
+  computers. Link sent to CHV (`Emails/archive/email_to_Dr_Hachem-Vermette_reviewer_link.md`,
+  key kept as `[KEY]`). Revoke: set the row inactive or change its password. RHlab server copy
+  not redeployed (scp). Email files now live in `Emails/archive/` (moves not committed yet).
 
 ## On return
 
-1. Ask Koral for CHV's answer. Then Koral shares the sheet (edit rights) or transfers it to the
+1. Ask Koral whether CHV signed in. If she is locked out, Koral clears her DeviceID cell. Draft
+   the promised full explanation email if Koral asks (plain language, she is not technical).
+2. Ask Koral for CHV's answer to the completion email. Then Koral shares the sheet (edit rights) or transfers it to the
    lab account; the script travels with the sheet. Mark s12 Done in the checklist, the Progress
    Log and the tracker.
-2. Offer to commit the docs: `[docs]: Add site access gate section to handover guide` (guide md,
-   docx, `docs_implementation/passwordSystem/`), keeping the unrelated js edits out.
-3. Koral has the lab Gmail login; never put any login in chat or the repo.
+3. Commit new log or prompt changes only when Koral asks (`[docs]: ...`), never `resources/`.
+4. Koral has the lab Gmail login; never put any login in chat or the repo.
