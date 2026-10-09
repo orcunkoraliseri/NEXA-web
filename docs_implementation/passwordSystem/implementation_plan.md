@@ -386,3 +386,9 @@ Run against a local server and then the live site:
   3D viewer note "RC-I1.glb not found" comes from a model code Gemini made up, not the gate.
 - 2026-10-07: Completion email sent to Dr. Hachem-Vermette, Cc Ahmed, with the Handover Guide
   attached. s12 waits on their answer: share the sheet or transfer it to the lab account.
+- 2026-10-07: Docs pushed to both remotes (`25b7e8a`). `resources/` kept out of git: Ahmed's
+  `activation.py.txt` contains URDM's live `/exec` URL.
+- 2026-10-09: Shared reviewer link added at Dr. Hachem-Vermette's request (one link for all
+  reviewers, count unknown). `?key=<key>` on any page signs in through sheet row
+  `reviewer-link | <key> | * | active`; DeviceID `*` skips browser binding (Code.gs). Revoke by
+  setting Status to inactive or changing the key. Anyone the link is forwarded to gets in.

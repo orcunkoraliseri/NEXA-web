@@ -100,6 +100,24 @@
 
     if (!active || onLogin) return;
 
+    // Shared reviewer link (?key=...): signs in through the sheet row whose
+    // Email is LINK_EMAIL and whose DeviceID is * (no browser binding).
+    var LINK_EMAIL = 'reviewer-link';
+    var params = new URLSearchParams(location.search);
+    var linkKey = params.get('key');
+    if (!getSession() && linkKey) {
+        document.documentElement.style.visibility = 'hidden';
+        params.delete('key');
+        var rest = params.toString();
+        var clean = page + (rest ? '?' + rest : '') + location.hash;
+        var toLogin = function () { location.replace('login.html?next=' + encodeURIComponent(clean)); };
+        signIn(LINK_EMAIL, linkKey).then(function (result) {
+            if (result && result.status === 'success') location.replace(clean);
+            else toLogin();
+        }, toLogin);
+        return;
+    }
+
     if (!getSession()) {
         document.documentElement.style.visibility = 'hidden';
         location.replace('login.html?next=' + encodeURIComponent(page + location.search + location.hash));

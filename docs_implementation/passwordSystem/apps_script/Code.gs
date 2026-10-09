@@ -39,7 +39,8 @@ function doPost(e) {
       if (rowStatus !== 'active') {
         return reply_('error', 'This account is not active. Contact the Resilient Habitat Lab.');
       }
-      if (rowDevice && rowDevice !== deviceId) {
+      // DeviceID * marks the shared reviewer link row: any browser may use it.
+      if (rowDevice && rowDevice !== '*' && rowDevice !== deviceId) {
         return reply_('error', 'This account is already registered to a different browser. Reply to your invitation email to have it reset.');
       }
 
