@@ -1325,11 +1325,17 @@ const CONDITIONED_AREA_DATA = {
 // here with an estimate: an area that does not reproduce the generation is
 // not the area behind the number the page prints.
 //
-// Absent, with the shortfall of the on-disk IDF against the shipped value:
+// Nine did not pass the gate, with the shortfall of the on-disk IDF against
+// the shipped value:
 //   RC-MR1 -4.28 %, RC-D -20 %, RC-ML -12.65 %, RC-T -3.96 %, RC-R -11.06 %, RS-I1 -4.44 %, RS-S -10.46 %, RS-I3 -4.11 %, MU-HS -7.34 %
 // All nine are pitched roof house, townhouse or low rise archetypes and all
 // fall short in the same direction. Flat roof archetypes reconcile to within
-// 0.35 %. Logged against DBG-038, not resolved here.
+// 0.35 %. Logged against DBG-038.
+// Koral, 2026-10-14, on CHV's request that the PV area always be shown: the
+// nine are now listed anyway, without the gate, read by the same parse from
+// the ENV_HVAC_DHW_EEM4 IDF of the same campaign (CAN_MTL). The parse was
+// checked on CC-B, MU-C1 and MU-L, which it reproduces to the decimal. The
+// shipped generation of these nine is NOT reproduced by this area.
 //
 // One area per neighbourhood, not one per climate: the injected array is
 // identical to the decimal across CAN_MTL, CAN_Z4 and CAN_Z7B, checked on
@@ -1339,11 +1345,19 @@ const CONDITIONED_AREA_DATA = {
 // depend on the vintage and data.js carries bit identical PV values for the
 // two arms on all four.
 const PV_AREA_DATA = {
+  "RC-R":     1186.3,
+  "RC-D":     2372.6,
+  "RC-ML":    2327.1,
+  "RC-T":     2281.5,
+  "RC-MR1":   3805.2,
   "RC-MR2":   5328.8,
   "RC-MR3":   7993.3,
   "RC-HR1":   4045.2,
   "RC-HR2":   2761.6,
+  "RS-S":     2400.1,
+  "RS-I1":    4957.6,
   "RS-I2":    8302.5,
+  "RS-I3":    3391.6,
   "RS-I4":    7004.4,
   "MU-C1":    7841.0,
   "MU-C2":    8626.7,
@@ -1353,6 +1367,7 @@ const PV_AREA_DATA = {
   "MU-S2":    6192.2,
   "MU-W":     4495.5,
   "MU-W2":    6488.8,
+  "MU-HS":    4232.4,
   "MU-HC":    5780.5,
   "CC-S1":    4393.1,
   "CC-S2":    3095.0,
