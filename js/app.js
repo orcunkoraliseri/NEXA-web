@@ -350,6 +350,19 @@ function setupEnvelopeCards() {
                 btn1983.style.display = (region === 'necb-z6') ? '' : 'none';
             }
 
+            // CHV, 2026-10-14. The front-page pathway narrows the tiers. Existing:
+            // 1983 (where released) and Standard, no HPerf. New: HPerf only. No
+            // pathway stored (direct visit, reviewer link): all tiers, as before.
+            let pathway = null;
+            try { pathway = sessionStorage.getItem('nexaPathway'); } catch (e) { /* storage blocked */ }
+            const stdBtn = popup.querySelector('.envelope-tier-btn[data-tier="standard"]');
+            const hpBtn = popup.querySelector('.envelope-tier-btn[data-tier="high-performance"]');
+            const hpNote = document.getElementById('envelope-popup-hperf-definition');
+            if (btn1983 && pathway === 'new') btn1983.style.display = 'none';
+            if (stdBtn) stdBtn.style.display = (pathway === 'new') ? 'none' : '';
+            if (hpBtn) hpBtn.style.display = (pathway === 'existing') ? 'none' : '';
+            if (hpNote) hpNote.style.display = (pathway === 'existing') ? 'none' : '';
+
             // Highlight current tier in popup if this region is already active
             const currentParsed = parseEnvelopeValue(activeFilters.envelope);
             tierBtns.forEach(btn => {

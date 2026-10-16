@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NEXA</title>
-    <script src="js/auth.js?v=39"></script>
-    <link rel="stylesheet" href="css/styles.css?v=39" />
+    <script src="js/auth.js?v=40"></script>
+    <link rel="stylesheet" href="css/styles.css?v=40" />
     <!-- DBG-047, P2, 2026-08-24. Without this every page returned 404 on
          /favicon.ico and the browser console logged an error on every visit,
          which is the first thing a technical reviewer sees on opening it. -->
@@ -35,25 +35,21 @@
                             class="toggle-btn initial-choice initial-btn usage"
                             data-choice="existing"
                             aria-pressed="false">
-                        <img class="initial-btn-img" src="Content/Images_ProjectType/existing neighborhood.png" alt="Existing Neighborhood" onerror="this.style.display='none'">
-                        <span>Existing Neighborhood</span>
+                        <img class="initial-btn-img" src="Content/Images_ProjectType/existing neighborhood.png" alt="Existing Neighborhoods" onerror="this.style.display='none'">
+                        <span>Existing Neighborhoods</span>
                     </button>
 
-                    <!-- CHV, Stage 1 item 4. The second pathway is not built. It used to
-                         accept a click and do nothing, which reads as a choice. It now
-                         carries the same status vocabulary and the same greyed treatment
-                         every other unbuilt option on the site uses: the word comes from
-                         LMN_CONFIG.availability.notModelledLabel, and the picture and the
-                         name dim while the status stays readable. -->
+                    <!-- CHV, 2026-10-14. The second pathway is now open: New
+                         Neighborhoods leads to the High-Performance Envelope
+                         (HPerf) selection, the only tier it offers. Existing
+                         Neighborhoods offers 1983 and Standard only. The choice is
+                         passed on as nexaPathway, read by js/app.js. -->
                     <button type="button"
-                            class="toggle-btn initial-btn usage is-unavailable"
+                            class="toggle-btn initial-choice initial-btn usage"
                             data-choice="new"
-                            disabled
-                            aria-disabled="true"
-                            data-permanently-disabled>
-                        <img class="initial-btn-img" src="Content/Images_ProjectType/new neighborhood.png" alt="New Neighborhood" onerror="this.style.display='none'">
-                        <span>New Neighborhood</span>
-                        <span class="card-status">Not modelled yet</span>
+                            aria-pressed="false">
+                        <img class="initial-btn-img" src="Content/Images_ProjectType/new neighborhood.png" alt="New Neighborhoods" onerror="this.style.display='none'">
+                        <span>New Neighborhoods</span>
                     </button>
                 </div>
             </div>
@@ -99,7 +95,7 @@
         </footer>
 </main>
 
-    <script src="js/config.js?v=39"></script>
+    <script src="js/config.js?v=40"></script>
     <script>(function () {
             // CHV, Stage 1 item 7. The version and the date come from
             // LMN_CONFIG, the same pair the assumptions box on the Layer 2
@@ -131,7 +127,7 @@
             // checkAllFiltersSelected() uses on the climate page: the button
             // and its reason are driven together, so they cannot disagree.
             function updateGetStartedGate() {
-                const ready = selected === 'existing';
+                const ready = selected === 'existing' || selected === 'new';
                 getStarted.disabled = !ready;
                 getStarted.setAttribute('aria-disabled', String(!ready));
                 const hint = document.getElementById('get-started-hint');
@@ -150,7 +146,16 @@
                 // DBG-041. Second gate, so the pathway cannot be skipped by
                 // clearing the disabled attribute in the browser inspector.
                 // The same second gate #view-results-btn carries.
-                if (selected !== 'existing') { updateGetStartedGate(); return; }
+                if (selected !== 'existing' && selected !== 'new') { updateGetStartedGate(); return; }
+                // CHV, 2026-10-14. Pass the pathway on, and drop an envelope
+                // chosen under the other pathway so a stale key cannot carry over.
+                try {
+                    if (sessionStorage.getItem('nexaPathway') !== selected) {
+                        sessionStorage.removeItem('selectedEnvelope');
+                        sessionStorage.removeItem('activeFilters');
+                    }
+                    sessionStorage.setItem('nexaPathway', selected);
+                } catch (e) { /* storage blocked: Layer 1 falls back to all tiers */ }
                 window.location.href = 'layer1_NUs_selection.html';
             });
         })();</script>
