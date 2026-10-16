@@ -944,6 +944,11 @@ const LMN_CONFIG = {
     EEM3:    "Everything in Space HP, plus HPWH: a transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements.",
     EEM4:    "Everything in Space HP + HPWH, plus the EEM package: automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads and electrification of gas appliances in the residential archetypes."
   },
+  // 2026-10-16. The 1983 baseline is not NECB 2017 (Gemini QA). Applies to
+  // every vintage-1983-* key.
+  eemDetails1983: {
+    DEFAULT: "Code-era reference case built to the 1983 Quebec construction requirements, Regulation E-1.1, r. 1 (not a survey of existing buildings). Native PV only."
+  },
 
   // =====================================================================
   // 5a. The user's Layer 2 selections. STAGE-03 task 3.1
@@ -1424,6 +1429,8 @@ LMN_CONFIG.eemLabel = function (key, envelopeKey) {
 // than the key, so that an unknown scenario produces no tooltip at all instead
 // of a tooltip repeating the label.
 LMN_CONFIG.eemDetail = function (key, envelopeKey) {
+  if (String(envelopeKey).indexOf("vintage-1983-") === 0 &&
+      LMN_CONFIG.eemDetails1983[key]) return LMN_CONFIG.eemDetails1983[key];
   if (LMN_CONFIG.standardEnvelopeArms.indexOf(envelopeKey) !== -1 &&
       LMN_CONFIG.eemDetailsStandard[key]) return LMN_CONFIG.eemDetailsStandard[key];
   return LMN_CONFIG.eemDetails[key] || "";
