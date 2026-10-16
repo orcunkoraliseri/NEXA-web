@@ -927,6 +927,24 @@ const LMN_CONFIG = {
     IAL:     "HVAC replaced by ideal air loads to expose the pure thermal demand, for district energy sizing. Not directly comparable with delivered fuel or electricity."
   },
 
+  // 2026-10-16. The NECB 2017 standard arms (Existing pathway) read EEM2 to EEM4
+  // from the standard-envelope runs (EEM_J_HVAC_ONLY, EEM_J_HVAC_DHW,
+  // EEM_J_HVAC_DHW_EEM4), so on those arms the rungs carry no HPerf. These
+  // override eemLabels and eemDetails for the keys in standardEnvelopeArms.
+  // vintage-1983-z6 joined the same day (CAN_MTL_1983, same three tags). The
+  // other 1983 zones still hold the HPerf diagonal, so they are not listed.
+  standardEnvelopeArms: ["necb-z4", "necb-z5", "necb-z6", "necb-z7a", "necb-z7b", "necb-z8", "necb-2017", "vintage-1983-z6"],
+  eemLabelsStandard: {
+    EEM2:    "Space HP",
+    EEM3:    "Space HP + HPWH",
+    EEM4:    "Space HP + HPWH + EEM"
+  },
+  eemDetailsStandard: {
+    EEM2:    "The existing envelope, not upgraded, plus Space HP: a cold climate air source heat pump (COP 4.0 to 4.5), inverter cooling, per zone heat pumps and ventilation heat recovery.",
+    EEM3:    "Everything in Space HP, plus HPWH: a transcritical CO2 heat pump water heater with a stratified tank, drain water heat recovery and distribution improvements.",
+    EEM4:    "Everything in Space HP + HPWH, plus the EEM package: automated shading and daylight dimming, LED lighting, occupancy sensor trim, ENERGY STAR plug loads and electrification of gas appliances in the residential archetypes."
+  },
+
   // =====================================================================
   // 5a. The user's Layer 2 selections. STAGE-03 task 3.1
   // =====================================================================
@@ -1018,6 +1036,8 @@ const LMN_CONFIG = {
 
   // What each rung physically is, from the campaign tags. This is fact, not
   // wording, and is not pending. Source: Debugs/DONE/DBG-011 section 4.
+  // Since 2026-10-16 the standardEnvelopeArms read EEM2 to EEM4 from
+  // EEM_J_HVAC_ONLY, EEM_J_HVAC_DHW and EEM_J_HVAC_DHW_EEM4 instead.
   eemCampaignTags: {
     DEFAULT: "EEM_J_DEFAULT",
     EEM1:    "EEM_J_ENVELOPE",
@@ -1394,14 +1414,18 @@ LMN_CONFIG.envelopeLabel = function (key) {
 };
 
 // STAGE-03 task 3.1. Wording settled by D3.3 on 2026-08-10.
-LMN_CONFIG.eemLabel = function (key) {
+LMN_CONFIG.eemLabel = function (key, envelopeKey) {
+  if (LMN_CONFIG.standardEnvelopeArms.indexOf(envelopeKey) !== -1 &&
+      LMN_CONFIG.eemLabelsStandard[key]) return LMN_CONFIG.eemLabelsStandard[key];
   return LMN_CONFIG.eemLabels[key] || key;
 };
 
 // The long form of the same rung, for a title attribute. Empty string rather
 // than the key, so that an unknown scenario produces no tooltip at all instead
 // of a tooltip repeating the label.
-LMN_CONFIG.eemDetail = function (key) {
+LMN_CONFIG.eemDetail = function (key, envelopeKey) {
+  if (LMN_CONFIG.standardEnvelopeArms.indexOf(envelopeKey) !== -1 &&
+      LMN_CONFIG.eemDetailsStandard[key]) return LMN_CONFIG.eemDetailsStandard[key];
   return LMN_CONFIG.eemDetails[key] || "";
 };
 
@@ -1430,7 +1454,7 @@ LMN_CONFIG.roofGroupFor = function (nuCode) {
 // in the ladder wording settled by D3.3. The word "EEM" never appears.
 LMN_CONFIG.resultCaption = function (envelopeKey, scenarioKey) {
   const standard = LMN_CONFIG.envelopeLabel(envelopeKey);
-  const rung     = LMN_CONFIG.eemLabel(scenarioKey);
+  const rung     = LMN_CONFIG.eemLabel(scenarioKey, envelopeKey);
   if (!rung || rung === standard) return standard;
   // The rung is a name, not a continuation, since CHV's wording of 2026-08-17:
   // "NECB Zone 6 (Montréal), HPerf + Heat Pump".
@@ -1819,7 +1843,7 @@ LMN_CONFIG.resolveScenarioKey = function (opts) {
       : names[0];
     const verb = names.length > 1 ? "are" : entries[0].verb;
     ladderNote = LMN_CONFIG.eemLadder.rule +
-      " This design therefore resolves to " + LMN_CONFIG.eemLabel(scenario) +
+      " This design therefore resolves to " + LMN_CONFIG.eemLabel(scenario, envelopeKey) +
       ", the nearest simulated case, and " + list +
       " " + verb + " not represented in the numbers below.";
   }

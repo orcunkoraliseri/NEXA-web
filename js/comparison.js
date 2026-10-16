@@ -93,7 +93,7 @@ function computeMetrics(code, envelope, energySel, mobilitySel, greenSel) {
     metrics.baseLevel = baseLevel;
     metrics.ladderNote = r.ladderNote;
     metrics.caption = LMN_CONFIG.resultCaption(envelope, scenario);
-    metrics.rungDetail = LMN_CONFIG.eemDetail(scenario);
+    metrics.rungDetail = LMN_CONFIG.eemDetail(scenario, envelope);
     metrics.conditionedAreaM2 = condArea;
 
     // 1. EUI (kWh/m2.yr). Never absent: every rung is simulated.
@@ -1080,7 +1080,7 @@ function wireExport(code, envelope) {
             payload.scenarios['scenario_' + r.key.toUpperCase()] = {
                 selections: r.selections,
                 scenarioKey: m.scenario,
-                eemLabel: LMN_CONFIG.eemLabel(m.scenario),
+                eemLabel: LMN_CONFIG.eemLabel(m.scenario, envelope),
                 resolvedCaption: m.caption,
                 ladderNote: m.ladderNote || null,
                 evScenario: m.evScenario,

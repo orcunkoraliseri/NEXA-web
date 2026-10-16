@@ -286,7 +286,7 @@ function fsBuildComparison(code, ctx) {
     // says plainly that nothing is compared when they have chosen none. It
     // never names a reference they did not pick.
     setText('fs-baseline-note', (hasRef
-        ? 'Reference case: ' + ref.label + ', ' + LMN_CONFIG.eemLabel(ref.level)
+        ? 'Reference case: ' + ref.label + ', ' + LMN_CONFIG.eemLabel(ref.level, ref.envelope)
           + ' in ' + LMN_CONFIG.envelopeLabel(ref.envelope) + '. ' + ref.note
         : LMN_CONFIG.referenceCase.noneNote)
         + ' Intensities are ' + LMN_CONFIG.euiBasis() + '.');
@@ -489,15 +489,15 @@ function fsWireExport(code, ctx, cmp, meaning, constraint, assumptions) {
                 neighbourhood: code,
                 climateAndStandard: LMN_CONFIG.envelopeLabel(ctx.envelope),
                 envelopeKey: ctx.envelope,
-                measures: LMN_CONFIG.eemLabel(ctx.scenario),
-                measuresDetail: LMN_CONFIG.eemDetail(ctx.scenario),
+                measures: LMN_CONFIG.eemLabel(ctx.scenario, ctx.envelope),
+                measuresDetail: LMN_CONFIG.eemDetail(ctx.scenario, ctx.envelope),
                 mobility: ctx.mobilityText,
                 greenInfrastructure: ctx.greenText
             },
             referenceCase: ctx.reference
                 ? { key: ctx.reference.key, label: ctx.reference.label,
                     envelope: ctx.reference.envelope, level: ctx.reference.level,
-                    definition: LMN_CONFIG.eemLabel(ctx.reference.level) + ' in ' + LMN_CONFIG.envelopeLabel(ctx.reference.envelope) }
+                    definition: LMN_CONFIG.eemLabel(ctx.reference.level, ctx.reference.envelope) + ' in ' + LMN_CONFIG.envelopeLabel(ctx.reference.envelope) }
                 : { key: LMN_CONFIG.referenceCase.noneKey, label: LMN_CONFIG.referenceCase.noneLabel,
                     definition: LMN_CONFIG.referenceCase.noneNote },
             metrics: cmp.metrics,
@@ -894,8 +894,8 @@ function initSummaryPage() {
 
     setText('fs-nu', code + (concept ? ', ' + concept.name : ''));
     setText('fs-climate', LMN_CONFIG.envelopeLabel(envelope));
-    setText('fs-scenario', LMN_CONFIG.eemLabel(scenario) + (LMN_CONFIG.eemDetail(scenario)
-        ? ' (' + LMN_CONFIG.eemDetail(scenario) + ')' : ''));
+    setText('fs-scenario', LMN_CONFIG.eemLabel(scenario, envelope) + (LMN_CONFIG.eemDetail(scenario, envelope)
+        ? ' (' + LMN_CONFIG.eemDetail(scenario, envelope) + ')' : ''));
     setText('fs-mobility', mobilityText);
     setText('fs-green', greenText);
 

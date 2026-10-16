@@ -199,8 +199,8 @@ function renderAssumptionsBox(envelope, neighbourhoodCode, energySelections, sce
     // Task 3.1, D3.3. Name the rung of the simulated ladder, so a reader can
     // tell which stored case the number came from and not only which boxes
     // they ticked. The ladder is cumulative: each rung contains the one below.
-    const rungLabel = LMN_CONFIG.eemLabel(scenarioKey);
-    const rungDetail = LMN_CONFIG.eemDetail(scenarioKey);
+    const rungLabel = LMN_CONFIG.eemLabel(scenarioKey, envelope);
+    const rungDetail = LMN_CONFIG.eemDetail(scenarioKey, envelope);
     const rung = scenarioExact
         ? `${rungLabel}. ${rungDetail}`
         : `Nearest simulated rung: ${rungLabel}. Your combination was not simulated on its own, so the remaining measure is applied to that rung as a saving. ${rungDetail}`;

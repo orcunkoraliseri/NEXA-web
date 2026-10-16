@@ -1634,15 +1634,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 30.5
       },
       "EEM2": {
-        "total": 99.0,
+        "total": 99.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.5
+            "value": 5.3
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -1658,21 +1658,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.9
+            "value": 8.4
           }
         ],
         "pv": 30.5
       },
       "EEM3": {
-        "total": 85.8,
+        "total": 86.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.0
+            "value": 7.8
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -1688,21 +1688,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.9
+            "value": 8.4
           }
         ],
         "pv": 30.5
       },
       "EEM4": {
-        "total": 63.4,
+        "total": 65.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.2
+            "value": 8.9
           },
           {
             "name": "Cooling",
-            "value": 4.1
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -1718,7 +1718,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.0
+            "value": 6.6
           }
         ],
         "pv": 30.5
@@ -1816,15 +1816,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 28.0
       },
       "EEM2": {
-        "total": 81.3,
+        "total": 81.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.1
+            "value": 2.9
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 4.3
           },
           {
             "name": "DHW",
@@ -1840,21 +1840,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 8.1
           }
         ],
         "pv": 28.0
       },
       "EEM3": {
-        "total": 71.7,
+        "total": 72.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.3
+            "value": 4.0
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 4.3
           },
           {
             "name": "DHW",
@@ -1870,17 +1870,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 8.1
           }
         ],
         "pv": 28.0
       },
       "EEM4": {
-        "total": 48.6,
+        "total": 50.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.6
+            "value": 4.6
           },
           {
             "name": "Cooling",
@@ -1900,7 +1900,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.7
+            "value": 5.8
           }
         ],
         "pv": 28.0
@@ -1998,15 +1998,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 51.2
       },
       "EEM2": {
-        "total": 144.9,
+        "total": 150.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.2
+            "value": 22.3
           },
           {
             "name": "Cooling",
-            "value": 13.0
+            "value": 13.2
           },
           {
             "name": "DHW",
@@ -2022,21 +2022,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.2
+            "value": 31.6
           }
         ],
         "pv": 51.2
       },
       "EEM3": {
-        "total": 129.7,
+        "total": 135.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.4
+            "value": 24.5
           },
           {
             "name": "Cooling",
-            "value": 13.0
+            "value": 13.2
           },
           {
             "name": "DHW",
@@ -2052,21 +2052,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.3
+            "value": 31.7
           }
         ],
         "pv": 51.2
       },
       "EEM4": {
-        "total": 107.4,
+        "total": 113.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.8
+            "value": 24.3
           },
           {
             "name": "Cooling",
-            "value": 11.4
+            "value": 11.7
           },
           {
             "name": "DHW",
@@ -2074,7 +2074,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.8
+            "value": 12.7
           },
           {
             "name": "Equipment",
@@ -2082,7 +2082,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.0
+            "value": 30.7
           }
         ],
         "pv": 51.2
@@ -2180,15 +2180,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 54.4
       },
       "EEM2": {
-        "total": 143.4,
+        "total": 145.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.5
+            "value": 14.0
           },
           {
             "name": "Cooling",
-            "value": 14.3
+            "value": 14.5
           },
           {
             "name": "DHW",
@@ -2204,21 +2204,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.9
+            "value": 30.3
           }
         ],
         "pv": 54.4
       },
       "EEM3": {
-        "total": 126.6,
+        "total": 128.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.8
+            "value": 15.5
           },
           {
             "name": "Cooling",
-            "value": 14.3
+            "value": 14.5
           },
           {
             "name": "DHW",
@@ -2234,21 +2234,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.0
+            "value": 30.2
           }
         ],
         "pv": 54.4
       },
       "EEM4": {
-        "total": 106.3,
+        "total": 108.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.4
+            "value": 14.8
           },
           {
             "name": "Cooling",
-            "value": 12.6
+            "value": 12.9
           },
           {
             "name": "DHW",
@@ -2264,7 +2264,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 28.8
+            "value": 29.6
           }
         ],
         "pv": 54.4
@@ -2362,15 +2362,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 8.9
       },
       "EEM2": {
-        "total": 101.4,
+        "total": 99.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 3.0
           },
           {
             "name": "Cooling",
-            "value": 7.6
+            "value": 6.0
           },
           {
             "name": "DHW",
@@ -2378,7 +2378,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.3
+            "value": 12.2
           },
           {
             "name": "Equipment",
@@ -2386,21 +2386,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 14.1
+            "value": 12.1
           }
         ],
-        "pv": 8.9
+        "pv": 9.0
       },
       "EEM3": {
-        "total": 81.7,
+        "total": 79.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.1
+            "value": 3.4
           },
           {
             "name": "Cooling",
-            "value": 7.6
+            "value": 6.0
           },
           {
             "name": "DHW",
@@ -2408,7 +2408,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.3
+            "value": 12.2
           },
           {
             "name": "Equipment",
@@ -2416,29 +2416,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 14.1
+            "value": 12.1
           }
         ],
-        "pv": 8.9
+        "pv": 9.0
       },
       "EEM4": {
-        "total": 61.4,
+        "total": 59.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.4
+            "value": 4.0
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 9.0
+            "value": 8.9
           },
           {
             "name": "Lighting",
-            "value": 6.1
+            "value": 6.0
           },
           {
             "name": "Equipment",
@@ -2446,10 +2446,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.3
+            "value": 10.3
           }
         ],
-        "pv": 8.9
+        "pv": 9.0
       }
     },
     "CC-FD2": {
@@ -2544,15 +2544,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 15.5
       },
       "EEM2": {
-        "total": 100.3,
+        "total": 98.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.7
+            "value": 4.0
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 6.0
           },
           {
             "name": "DHW",
@@ -2560,7 +2560,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.2
+            "value": 13.1
           },
           {
             "name": "Equipment",
@@ -2568,29 +2568,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.2
+            "value": 9.4
           }
         ],
-        "pv": 15.5
+        "pv": 15.6
       },
       "EEM3": {
-        "total": 84.8,
+        "total": 82.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.7
+            "value": 5.0
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 6.4
+            "value": 6.3
           },
           {
             "name": "Lighting",
-            "value": 13.2
+            "value": 13.1
           },
           {
             "name": "Equipment",
@@ -2598,29 +2598,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.3
+            "value": 9.5
           }
         ],
-        "pv": 15.5
+        "pv": 15.6
       },
       "EEM4": {
-        "total": 62.3,
+        "total": 61.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.2
-          },
-          {
-            "name": "Cooling",
             "value": 5.7
           },
           {
+            "name": "Cooling",
+            "value": 4.6
+          },
+          {
             "name": "DHW",
             "value": 6.4
           },
           {
             "name": "Lighting",
-            "value": 6.3
+            "value": 6.2
           },
           {
             "name": "Equipment",
@@ -2628,10 +2628,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 7.6
           }
         ],
-        "pv": 15.5
+        "pv": 15.6
       }
     },
     "CC-FD3": {
@@ -2726,15 +2726,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 13.2
       },
       "EEM2": {
-        "total": 108.1,
+        "total": 107.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.3
+            "value": 4.1
           },
           {
             "name": "Cooling",
-            "value": 8.8
+            "value": 7.1
           },
           {
             "name": "DHW",
@@ -2742,7 +2742,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.4
+            "value": 13.3
           },
           {
             "name": "Equipment",
@@ -2750,21 +2750,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.8
+            "value": 10.9
           }
         ],
         "pv": 13.2
       },
       "EEM3": {
-        "total": 88.4,
+        "total": 87.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.8
+            "value": 4.5
           },
           {
             "name": "Cooling",
-            "value": 8.8
+            "value": 7.1
           },
           {
             "name": "DHW",
@@ -2772,7 +2772,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.4
+            "value": 13.3
           },
           {
             "name": "Equipment",
@@ -2780,7 +2780,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.9
+            "value": 11.0
           }
         ],
         "pv": 13.2
@@ -2790,19 +2790,19 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.1
+            "value": 5.3
           },
           {
             "name": "Cooling",
-            "value": 7.0
+            "value": 5.6
           },
           {
             "name": "DHW",
-            "value": 9.3
+            "value": 9.4
           },
           {
             "name": "Lighting",
-            "value": 6.7
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -2810,7 +2810,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 9.1
           }
         ],
         "pv": 13.2
@@ -2908,15 +2908,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 128.1
       },
       "EEM2": {
-        "total": 182.6,
+        "total": 196.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.5
+            "value": 36.8
           },
           {
             "name": "Cooling",
-            "value": 9.0
+            "value": 8.3
           },
           {
             "name": "DHW",
@@ -2924,7 +2924,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.3
+            "value": 36.5
           },
           {
             "name": "Equipment",
@@ -2932,21 +2932,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.3
+            "value": 12.8
           }
         ],
         "pv": 128.1
       },
       "EEM3": {
-        "total": 165.0,
+        "total": 179.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.7
+            "value": 41.2
           },
           {
             "name": "Cooling",
-            "value": 9.0
+            "value": 8.3
           },
           {
             "name": "DHW",
@@ -2954,7 +2954,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.3
+            "value": 36.5
           },
           {
             "name": "Equipment",
@@ -2962,21 +2962,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.4
+            "value": 12.9
           }
         ],
         "pv": 128.1
       },
       "EEM4": {
-        "total": 132.9,
+        "total": 151.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 27.9
+            "value": 46.1
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 5.3
           },
           {
             "name": "DHW",
@@ -2984,7 +2984,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 16.9
+            "value": 17.0
           },
           {
             "name": "Equipment",
@@ -2992,7 +2992,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.0
+            "value": 12.0
           }
         ],
         "pv": 128.1
@@ -3090,23 +3090,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 185.5
       },
       "EEM2": {
-        "total": 248.8,
+        "total": 268.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.5
+            "value": 44.6
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 10.6
           },
           {
             "name": "DHW",
-            "value": 25.0
+            "value": 25.1
           },
           {
             "name": "Lighting",
-            "value": 63.5
+            "value": 63.8
           },
           {
             "name": "Equipment",
@@ -3114,21 +3114,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 16.4
+            "value": 18.5
           }
         ],
         "pv": 185.5
       },
       "EEM3": {
-        "total": 230.7,
+        "total": 250.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 30.8
+            "value": 48.6
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 10.6
           },
           {
             "name": "DHW",
@@ -3136,7 +3136,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 63.5
+            "value": 63.8
           },
           {
             "name": "Equipment",
@@ -3144,29 +3144,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 16.5
+            "value": 18.5
           }
         ],
         "pv": 185.5
       },
       "EEM4": {
-        "total": 185.7,
+        "total": 208.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 31.8
+            "value": 51.4
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 5.9
           },
           {
             "name": "DHW",
-            "value": 2.6
+            "value": 2.5
           },
           {
             "name": "Lighting",
-            "value": 29.5
+            "value": 29.7
           },
           {
             "name": "Equipment",
@@ -3174,7 +3174,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 15.4
+            "value": 17.9
           }
         ],
         "pv": 185.5
@@ -3272,15 +3272,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 163.5
       },
       "EEM2": {
-        "total": 3645.3,
+        "total": 3636.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.2
+            "value": 18.3
           },
           {
             "name": "Cooling",
-            "value": 440.0
+            "value": 436.0
           },
           {
             "name": "DHW",
@@ -3296,21 +3296,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.6
+            "value": 325.8
           }
         ],
         "pv": 163.5
       },
       "EEM3": {
-        "total": 3637.2,
+        "total": 3628.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.7
+            "value": 19.8
           },
           {
             "name": "Cooling",
-            "value": 440.0
+            "value": 436.0
           },
           {
             "name": "DHW",
@@ -3326,25 +3326,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.6
+            "value": 325.8
           }
         ],
         "pv": 163.5
       },
       "EEM4": {
-        "total": 3632.5,
+        "total": 3623.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.1
+            "value": 21.2
           },
           {
             "name": "Cooling",
-            "value": 439.6
+            "value": 435.6
           },
           {
             "name": "DHW",
-            "value": 0.8
+            "value": 0.9
           },
           {
             "name": "Lighting",
@@ -3352,11 +3352,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2711.2
+            "value": 2711.3
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.3
+            "value": 325.5
           }
         ],
         "pv": 163.5
@@ -3454,15 +3454,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 118.7
       },
       "EEM2": {
-        "total": 11886.6,
+        "total": 11883.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.1
+            "value": 25.3
           },
           {
             "name": "Cooling",
-            "value": 1358.5
+            "value": 1356.5
           },
           {
             "name": "DHW",
@@ -3474,25 +3474,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9035.5
+            "value": 9035.3
           },
           {
             "name": "Fans & Pumps",
-            "value": 1115.8
+            "value": 1110.5
           }
         ],
         "pv": 118.7
       },
       "EEM3": {
-        "total": 11876.7,
+        "total": 11873.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.2
+            "value": 27.4
           },
           {
             "name": "Cooling",
-            "value": 1358.4
+            "value": 1356.5
           },
           {
             "name": "DHW",
@@ -3504,25 +3504,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9035.5
+            "value": 9035.3
           },
           {
             "name": "Fans & Pumps",
-            "value": 1115.8
+            "value": 1110.6
           }
         ],
         "pv": 118.7
       },
       "EEM4": {
-        "total": 11865.4,
+        "total": 11864.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.8
+            "value": 29.5
           },
           {
             "name": "Cooling",
-            "value": 1357.8
+            "value": 1355.8
           },
           {
             "name": "DHW",
@@ -3530,15 +3530,15 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.1
+            "value": 21.2
           },
           {
             "name": "Equipment",
-            "value": 9029.1
+            "value": 9028.8
           },
           {
             "name": "Fans & Pumps",
-            "value": 1115.2
+            "value": 1110.0
           }
         ],
         "pv": 118.7
@@ -3636,15 +3636,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 25.7
       },
       "EEM2": {
-        "total": 156.9,
+        "total": 158.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.0
+            "value": 20.0
           },
           {
             "name": "Cooling",
-            "value": 12.4
+            "value": 10.5
           },
           {
             "name": "DHW",
@@ -3660,25 +3660,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.9
+            "value": 19.3
           }
         ],
         "pv": 25.7
       },
       "EEM3": {
-        "total": 127.7,
+        "total": 129.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.9
+            "value": 25.1
           },
           {
             "name": "Cooling",
-            "value": 12.4
+            "value": 10.5
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 6.6
           },
           {
             "name": "Lighting",
@@ -3690,7 +3690,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 20.0
+            "value": 19.4
           }
         ],
         "pv": 25.7
@@ -3700,11 +3700,11 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.2
+            "value": 26.1
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 9.2
           },
           {
             "name": "DHW",
@@ -3712,7 +3712,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 5.3
+            "value": 5.4
           },
           {
             "name": "Equipment",
@@ -3720,7 +3720,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 18.8
+            "value": 18.1
           }
         ],
         "pv": 25.7
@@ -3818,15 +3818,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 21.7
       },
       "EEM2": {
-        "total": 98.7,
+        "total": 100.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.0
+            "value": 6.9
           },
           {
             "name": "Cooling",
-            "value": 7.5
+            "value": 6.1
           },
           {
             "name": "DHW",
@@ -3834,7 +3834,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.6
+            "value": 7.7
           },
           {
             "name": "Equipment",
@@ -3842,29 +3842,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.0
           }
         ],
         "pv": 21.7
       },
       "EEM3": {
-        "total": 74.6,
+        "total": 76.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.8
+            "value": 11.8
           },
           {
             "name": "Cooling",
-            "value": 7.5
+            "value": 6.1
           },
           {
             "name": "DHW",
-            "value": 5.0
+            "value": 4.9
           },
           {
             "name": "Lighting",
-            "value": 7.6
+            "value": 7.7
           },
           {
             "name": "Equipment",
@@ -3872,25 +3872,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 9.0
           }
         ],
         "pv": 21.7
       },
       "EEM4": {
-        "total": 57.8,
+        "total": 60.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.6
+            "value": 13.3
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.5
           },
           {
             "name": "DHW",
-            "value": 5.0
+            "value": 4.9
           },
           {
             "name": "Lighting",
@@ -4000,15 +4000,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 47.1
       },
       "EEM2": {
-        "total": 124.8,
+        "total": 126.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.3
+            "value": 15.9
           },
           {
             "name": "Cooling",
-            "value": 12.5
+            "value": 10.2
           },
           {
             "name": "DHW",
@@ -4024,21 +4024,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 10.3
           }
         ],
-        "pv": 47.1
+        "pv": 47.2
       },
       "EEM3": {
-        "total": 93.0,
+        "total": 94.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.2
+            "value": 20.8
           },
           {
             "name": "Cooling",
-            "value": 12.4
+            "value": 10.1
           },
           {
             "name": "DHW",
@@ -4054,21 +4054,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.9
+            "value": 10.4
           }
         ],
-        "pv": 47.1
+        "pv": 47.2
       },
       "EEM4": {
-        "total": 78.0,
+        "total": 82.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.6
+            "value": 22.6
           },
           {
             "name": "Cooling",
-            "value": 9.7
+            "value": 8.0
           },
           {
             "name": "DHW",
@@ -4076,7 +4076,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Equipment",
@@ -4084,10 +4084,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.9
+            "value": 9.6
           }
         ],
-        "pv": 47.1
+        "pv": 47.2
       }
     },
     "MU-HS": {
@@ -4182,19 +4182,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 82.7
       },
       "EEM2": {
-        "total": 136.8,
+        "total": 143.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.8
+            "value": 19.2
           },
           {
             "name": "Cooling",
-            "value": 12.0
+            "value": 11.0
           },
           {
             "name": "DHW",
-            "value": 40.6
+            "value": 40.7
           },
           {
             "name": "Lighting",
@@ -4206,25 +4206,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 11.6
           }
         ],
         "pv": 82.7
       },
       "EEM3": {
-        "total": 110.9,
+        "total": 117.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.3
+            "value": 21.7
           },
           {
             "name": "Cooling",
-            "value": 11.9
+            "value": 10.8
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.5
           },
           {
             "name": "Lighting",
@@ -4236,29 +4236,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 11.7
           }
         ],
         "pv": 82.7
       },
       "EEM4": {
-        "total": 95.8,
+        "total": 103.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.9
+            "value": 22.8
           },
           {
             "name": "Cooling",
-            "value": 9.6
+            "value": 8.9
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.5
           },
           {
             "name": "Lighting",
-            "value": 4.9
+            "value": 5.0
           },
           {
             "name": "Equipment",
@@ -4266,7 +4266,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 11.6
           }
         ],
         "pv": 82.7
@@ -4364,15 +4364,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 77.3
       },
       "EEM2": {
-        "total": 124.6,
+        "total": 133.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.8
+            "value": 21.7
           },
           {
             "name": "Cooling",
-            "value": 10.3
+            "value": 9.4
           },
           {
             "name": "DHW",
@@ -4380,7 +4380,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.3
+            "value": 7.4
           },
           {
             "name": "Equipment",
@@ -4388,29 +4388,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 10.3
           }
         ],
         "pv": 77.3
       },
       "EEM3": {
-        "total": 96.9,
+        "total": 106.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.4
+            "value": 23.4
           },
           {
             "name": "Cooling",
-            "value": 10.0
+            "value": 9.2
           },
           {
             "name": "DHW",
-            "value": 14.4
+            "value": 14.5
           },
           {
             "name": "Lighting",
-            "value": 7.3
+            "value": 7.4
           },
           {
             "name": "Equipment",
@@ -4418,25 +4418,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 10.3
           }
         ],
         "pv": 77.3
       },
       "EEM4": {
-        "total": 82.6,
+        "total": 93.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.0
+            "value": 25.4
           },
           {
             "name": "Cooling",
-            "value": 7.5
+            "value": 6.9
           },
           {
             "name": "DHW",
-            "value": 14.4
+            "value": 14.5
           },
           {
             "name": "Lighting",
@@ -4448,7 +4448,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.2
+            "value": 9.6
           }
         ],
         "pv": 77.3
@@ -4546,15 +4546,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 73.9
       },
       "EEM2": {
-        "total": 146.5,
+        "total": 149.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.9
+            "value": 17.5
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 9.2
           },
           {
             "name": "DHW",
@@ -4562,7 +4562,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -4570,29 +4570,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.3
+            "value": 10.4
           }
         ],
-        "pv": 73.9
+        "pv": 74.1
       },
       "EEM3": {
-        "total": 118.4,
+        "total": 121.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.4
+            "value": 21.2
           },
           {
             "name": "Cooling",
-            "value": 9.7
+            "value": 9.0
           },
           {
             "name": "DHW",
-            "value": 12.0
+            "value": 11.9
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -4600,29 +4600,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.3
+            "value": 10.5
           }
         ],
-        "pv": 73.9
+        "pv": 74.1
       },
       "EEM4": {
-        "total": 97.5,
+        "total": 102.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.8
+            "value": 22.6
           },
           {
             "name": "Cooling",
-            "value": 6.8
+            "value": 6.4
           },
           {
             "name": "DHW",
-            "value": 12.0
+            "value": 11.9
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -4633,7 +4633,7 @@ const ENVELOPE_ENERGY_DATA = {
             "value": 9.6
           }
         ],
-        "pv": 73.9
+        "pv": 74.1
       }
     },
     "MU-S2": {
@@ -4728,15 +4728,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 100.2
       },
       "EEM2": {
-        "total": 142.4,
+        "total": 146.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.6
+            "value": 14.0
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 10.2
           },
           {
             "name": "DHW",
@@ -4744,7 +4744,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -4752,21 +4752,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 11.5
           }
         ],
         "pv": 100.2
       },
       "EEM3": {
-        "total": 115.8,
+        "total": 120.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.2
+            "value": 16.6
           },
           {
             "name": "Cooling",
-            "value": 10.1
+            "value": 10.0
           },
           {
             "name": "DHW",
@@ -4774,7 +4774,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -4782,17 +4782,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 11.5
           }
         ],
         "pv": 100.2
       },
       "EEM4": {
-        "total": 94.2,
+        "total": 98.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.2
+            "value": 17.8
           },
           {
             "name": "Cooling",
@@ -4804,7 +4804,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.9
+            "value": 10.0
           },
           {
             "name": "Equipment",
@@ -4812,7 +4812,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.2
+            "value": 10.9
           }
         ],
         "pv": 100.2
@@ -4910,19 +4910,49 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 20.5
       },
       "EEM2": {
-        "total": 85.3,
+        "total": 86.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.0
+            "value": 6.1
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 5.9
           },
           {
             "name": "DHW",
             "value": 28.3
+          },
+          {
+            "name": "Lighting",
+            "value": 7.2
+          },
+          {
+            "name": "Equipment",
+            "value": 24.6
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 8.4
+          }
+        ],
+        "pv": 20.5
+      },
+      "EEM3": {
+        "total": 66.5,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 10.1
+          },
+          {
+            "name": "Cooling",
+            "value": 5.9
+          },
+          {
+            "name": "DHW",
+            "value": 3.9
           },
           {
             "name": "Lighting",
@@ -4939,16 +4969,16 @@ const ENVELOPE_ENERGY_DATA = {
         ],
         "pv": 20.5
       },
-      "EEM3": {
-        "total": 64.9,
+      "EEM4": {
+        "total": 50.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.1
+            "value": 11.7
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 4.3
           },
           {
             "name": "DHW",
@@ -4956,37 +4986,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.2
-          },
-          {
-            "name": "Equipment",
-            "value": 24.6
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 8.6
-          }
-        ],
-        "pv": 20.5
-      },
-      "EEM4": {
-        "total": 47.4,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 7.9
-          },
-          {
-            "name": "Cooling",
-            "value": 5.3
-          },
-          {
-            "name": "DHW",
-            "value": 4.0
-          },
-          {
-            "name": "Lighting",
-            "value": 3.1
+            "value": 3.2
           },
           {
             "name": "Equipment",
@@ -4994,7 +4994,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 6.8
           }
         ],
         "pv": 20.5
@@ -5092,15 +5092,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 78.1
       },
       "EEM2": {
-        "total": 104.8,
+        "total": 112.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.5
+            "value": 22.1
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 6.3
           },
           {
             "name": "DHW",
@@ -5108,7 +5108,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.5
+            "value": 6.6
           },
           {
             "name": "Equipment",
@@ -5116,29 +5116,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 8.0
           }
         ],
         "pv": 78.1
       },
       "EEM3": {
-        "total": 84.6,
+        "total": 92.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.3
+            "value": 24.0
           },
           {
             "name": "Cooling",
-            "value": 6.4
+            "value": 6.1
           },
           {
             "name": "DHW",
-            "value": 9.4
+            "value": 9.5
           },
           {
             "name": "Lighting",
-            "value": 6.5
+            "value": 6.6
           },
           {
             "name": "Equipment",
@@ -5146,25 +5146,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 8.1
           }
         ],
         "pv": 78.1
       },
       "EEM4": {
-        "total": 75.4,
+        "total": 83.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.4
+            "value": 25.3
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 9.4
+            "value": 9.5
           },
           {
             "name": "Lighting",
@@ -5176,7 +5176,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.4
+            "value": 7.6
           }
         ],
         "pv": 78.1
@@ -5274,15 +5274,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 118.5
       },
       "EEM2": {
-        "total": 85.4,
+        "total": 98.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.6
+            "value": 37.2
           },
           {
             "name": "Cooling",
-            "value": 1.9
+            "value": 2.5
           },
           {
             "name": "DHW",
@@ -5290,7 +5290,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.0
+            "value": 8.1
           },
           {
             "name": "Equipment",
@@ -5298,51 +5298,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.3
+            "value": 5.7
           }
         ],
         "pv": 118.5
       },
       "EEM3": {
-        "total": 75.6,
+        "total": 88.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.5
+            "value": 39.0
           },
           {
             "name": "Cooling",
-            "value": 1.9
-          },
-          {
-            "name": "DHW",
-            "value": 1.0
-          },
-          {
-            "name": "Lighting",
-            "value": 8.0
-          },
-          {
-            "name": "Equipment",
-            "value": 26.7
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 4.3
-          }
-        ],
-        "pv": 118.5
-      },
-      "EEM4": {
-        "total": 70.2,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 30.7
-          },
-          {
-            "name": "Cooling",
-            "value": 1.5
+            "value": 2.5
           },
           {
             "name": "DHW",
@@ -5350,7 +5320,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.9
+            "value": 8.1
+          },
+          {
+            "name": "Equipment",
+            "value": 26.7
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 5.7
+          }
+        ],
+        "pv": 118.5
+      },
+      "EEM4": {
+        "total": 82.6,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 41.2
+          },
+          {
+            "name": "Cooling",
+            "value": 2.1
+          },
+          {
+            "name": "DHW",
+            "value": 1.1
+          },
+          {
+            "name": "Lighting",
+            "value": 4.0
           },
           {
             "name": "Equipment",
@@ -5358,7 +5358,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.0
+            "value": 5.2
           }
         ],
         "pv": 118.5
@@ -5456,19 +5456,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 100.4
       },
       "EEM2": {
-        "total": 92.8,
+        "total": 101.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.0
+            "value": 13.1
           },
           {
             "name": "Cooling",
-            "value": 6.3
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 21.7
+            "value": 22.7
           },
           {
             "name": "Lighting",
@@ -5480,25 +5480,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 7.8
           }
         ],
-        "pv": 100.4
+        "pv": 100.5
       },
       "EEM3": {
-        "total": 80.7,
+        "total": 88.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.7
+            "value": 15.9
           },
           {
             "name": "Cooling",
-            "value": 6.3
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 7.1
           },
           {
             "name": "Lighting",
@@ -5510,25 +5510,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 8.0
           }
         ],
-        "pv": 100.4
+        "pv": 100.5
       },
       "EEM4": {
-        "total": 60.5,
+        "total": 68.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.2
+            "value": 16.9
           },
           {
             "name": "Cooling",
-            "value": 5.0
+            "value": 4.7
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 7.1
           },
           {
             "name": "Lighting",
@@ -5540,10 +5540,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 7.9
           }
         ],
-        "pv": 100.4
+        "pv": 100.5
       }
     },
     "RC-HR1": {
@@ -5638,15 +5638,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 45.8
       },
       "EEM2": {
-        "total": 99.8,
+        "total": 100.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.8
+            "value": 6.1
           },
           {
             "name": "Cooling",
-            "value": 13.2
+            "value": 10.4
           },
           {
             "name": "DHW",
@@ -5662,25 +5662,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.2
           }
         ],
         "pv": 45.8
       },
       "EEM3": {
-        "total": 67.2,
+        "total": 68.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.4
+            "value": 9.7
           },
           {
             "name": "Cooling",
-            "value": 13.0
+            "value": 10.3
           },
           {
             "name": "DHW",
-            "value": 12.1
+            "value": 12.2
           },
           {
             "name": "Lighting",
@@ -5692,29 +5692,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.2
           }
         ],
         "pv": 45.8
       },
       "EEM4": {
-        "total": 52.3,
+        "total": 55.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.0
+            "value": 11.1
           },
           {
             "name": "Cooling",
-            "value": 9.4
+            "value": 7.5
           },
           {
             "name": "DHW",
-            "value": 12.1
+            "value": 12.2
           },
           {
             "name": "Lighting",
-            "value": 1.7
+            "value": 1.8
           },
           {
             "name": "Equipment",
@@ -5722,7 +5722,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.9
+            "value": 8.4
           }
         ],
         "pv": 45.8
@@ -5824,11 +5824,11 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.2
+            "value": 7.4
           },
           {
             "name": "Cooling",
-            "value": 14.4
+            "value": 10.5
           },
           {
             "name": "DHW",
@@ -5844,7 +5844,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 9.9
           }
         ],
         "pv": 28.8
@@ -5854,15 +5854,15 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.6
+            "value": 13.8
           },
           {
             "name": "Cooling",
-            "value": 14.4
+            "value": 10.4
           },
           {
             "name": "DHW",
-            "value": 7.8
+            "value": 7.9
           },
           {
             "name": "Lighting",
@@ -5874,29 +5874,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.2
+            "value": 10.0
           }
         ],
         "pv": 28.8
       },
       "EEM4": {
-        "total": 53.6,
+        "total": 56.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.6
+            "value": 15.9
           },
           {
             "name": "Cooling",
-            "value": 10.2
+            "value": 7.5
           },
           {
             "name": "DHW",
-            "value": 7.9
+            "value": 8.0
           },
           {
             "name": "Lighting",
-            "value": 1.5
+            "value": 1.6
           },
           {
             "name": "Equipment",
@@ -5904,7 +5904,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 9.0
           }
         ],
         "pv": 28.8
@@ -6002,49 +6002,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 92.8
       },
       "EEM2": {
-        "total": 99.4,
+        "total": 107.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.4
+            "value": 10.9
           },
           {
             "name": "Cooling",
-            "value": 6.4
-          },
-          {
-            "name": "DHW",
-            "value": 23.8
-          },
-          {
-            "name": "Lighting",
-            "value": 5.2
-          },
-          {
-            "name": "Equipment",
-            "value": 51.7
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 6.8
-          }
-        ],
-        "pv": 92.8
-      },
-      "EEM3": {
-        "total": 85.9,
-        "breakdown": [
-          {
-            "name": "Heating",
             "value": 5.8
           },
           {
-            "name": "Cooling",
-            "value": 6.5
-          },
-          {
             "name": "DHW",
-            "value": 8.9
+            "value": 25.0
           },
           {
             "name": "Lighting",
@@ -6056,25 +6026,55 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 7.8
           }
         ],
-        "pv": 92.8
+        "pv": 92.9
       },
-      "EEM4": {
-        "total": 63.3,
+      "EEM3": {
+        "total": 93.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.3
+            "value": 12.3
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 8.9
+            "value": 9.4
+          },
+          {
+            "name": "Lighting",
+            "value": 5.2
+          },
+          {
+            "name": "Equipment",
+            "value": 51.7
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 7.9
+          }
+        ],
+        "pv": 92.9
+      },
+      "EEM4": {
+        "total": 70.6,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 13.5
+          },
+          {
+            "name": "Cooling",
+            "value": 4.5
+          },
+          {
+            "name": "DHW",
+            "value": 9.5
           },
           {
             "name": "Lighting",
@@ -6086,10 +6086,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 7.8
           }
         ],
-        "pv": 92.8
+        "pv": 92.9
       }
     },
     "RC-MR1": {
@@ -6184,19 +6184,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 74.6
       },
       "EEM2": {
-        "total": 96.5,
+        "total": 99.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.3
+            "value": 5.9
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 9.5
           },
           {
             "name": "DHW",
-            "value": 37.3
+            "value": 37.7
           },
           {
             "name": "Lighting",
@@ -6208,25 +6208,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 8.1
           }
         ],
         "pv": 74.6
       },
       "EEM3": {
-        "total": 73.9,
+        "total": 76.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.3
+            "value": 6.0
           },
           {
             "name": "Cooling",
-            "value": 10.9
+            "value": 9.3
           },
           {
             "name": "DHW",
-            "value": 14.9
+            "value": 15.2
           },
           {
             "name": "Lighting",
@@ -6238,29 +6238,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 8.2
           }
         ],
         "pv": 74.6
       },
       "EEM4": {
-        "total": 55.9,
+        "total": 59.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.0
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 8.2
+            "value": 7.0
           },
           {
             "name": "DHW",
-            "value": 14.9
+            "value": 15.2
           },
           {
             "name": "Lighting",
-            "value": 2.3
+            "value": 2.4
           },
           {
             "name": "Equipment",
@@ -6268,7 +6268,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.1
+            "value": 7.7
           }
         ],
         "pv": 74.6
@@ -6366,15 +6366,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 66.8
       },
       "EEM2": {
-        "total": 92.4,
+        "total": 94.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.5
+            "value": 6.1
           },
           {
             "name": "Cooling",
-            "value": 11.2
+            "value": 9.9
           },
           {
             "name": "DHW",
@@ -6390,25 +6390,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 8.2
           }
         ],
         "pv": 66.8
       },
       "EEM3": {
-        "total": 65.7,
+        "total": 67.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.6
+            "value": 6.2
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 9.6
           },
           {
             "name": "DHW",
-            "value": 17.2
+            "value": 17.3
           },
           {
             "name": "Lighting",
@@ -6420,25 +6420,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 8.3
           }
         ],
         "pv": 66.8
       },
       "EEM4": {
-        "total": 51.5,
+        "total": 54.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.9
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 8.0
+            "value": 7.1
           },
           {
             "name": "DHW",
-            "value": 17.2
+            "value": 17.3
           },
           {
             "name": "Lighting",
@@ -6450,7 +6450,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.0
+            "value": 7.6
           }
         ],
         "pv": 66.8
@@ -6548,15 +6548,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 66.8
       },
       "EEM2": {
-        "total": 92.0,
+        "total": 93.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.6
+            "value": 6.2
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 9.5
           },
           {
             "name": "DHW",
@@ -6572,25 +6572,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.2
           }
         ],
         "pv": 66.8
       },
       "EEM3": {
-        "total": 65.3,
+        "total": 67.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.6
+            "value": 6.3
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 9.2
           },
           {
             "name": "DHW",
-            "value": 17.2
+            "value": 17.3
           },
           {
             "name": "Lighting",
@@ -6602,25 +6602,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.2
           }
         ],
         "pv": 66.8
       },
       "EEM4": {
-        "total": 51.1,
+        "total": 54.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.9
+            "value": 7.1
           },
           {
             "name": "Cooling",
-            "value": 7.6
+            "value": 6.7
           },
           {
             "name": "DHW",
-            "value": 17.2
+            "value": 17.3
           },
           {
             "name": "Lighting",
@@ -6632,7 +6632,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 7.6
           }
         ],
         "pv": 66.8
@@ -6730,19 +6730,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 90.4
       },
       "EEM2": {
-        "total": 92.9,
+        "total": 101.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.7
+            "value": 13.0
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 21.7
+            "value": 22.7
           },
           {
             "name": "Lighting",
@@ -6754,25 +6754,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 7.9
           }
         ],
-        "pv": 90.4
+        "pv": 90.5
       },
       "EEM3": {
-        "total": 80.7,
+        "total": 89.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.5
+            "value": 15.7
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 6.1
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 7.1
           },
           {
             "name": "Lighting",
@@ -6784,25 +6784,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 8.0
           }
         ],
-        "pv": 90.4
+        "pv": 90.5
       },
       "EEM4": {
-        "total": 60.6,
+        "total": 68.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.0
+            "value": 16.8
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 7.1
           },
           {
             "name": "Lighting",
@@ -6814,10 +6814,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 8.0
           }
         ],
-        "pv": 90.4
+        "pv": 90.5
       }
     },
     "RC-T": {
@@ -6912,19 +6912,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 85.2
       },
       "EEM2": {
-        "total": 106.2,
+        "total": 113.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.7
+            "value": 8.7
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 26.1
+            "value": 27.5
           },
           {
             "name": "Lighting",
@@ -6936,25 +6936,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 7.7
           }
         ],
         "pv": 85.2
       },
       "EEM3": {
-        "total": 91.4,
+        "total": 98.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.7
+            "value": 8.6
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 11.2
+            "value": 11.9
           },
           {
             "name": "Lighting",
@@ -6966,25 +6966,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.0
+            "value": 7.8
           }
         ],
         "pv": 85.2
       },
       "EEM4": {
-        "total": 66.1,
+        "total": 72.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.3
+            "value": 10.0
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 4.3
           },
           {
             "name": "DHW",
-            "value": 11.2
+            "value": 11.9
           },
           {
             "name": "Lighting",
@@ -6996,7 +6996,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 7.6
           }
         ],
         "pv": 85.2
@@ -7094,23 +7094,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 109.8
       },
       "EEM2": {
-        "total": 124.6,
+        "total": 128.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.5
+            "value": 12.3
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 9.3
           },
           {
             "name": "DHW",
-            "value": 40.0
+            "value": 40.1
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -7118,29 +7118,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 10.4
           }
         ],
         "pv": 109.8
       },
       "EEM3": {
-        "total": 100.2,
+        "total": 103.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.0
+            "value": 14.8
           },
           {
             "name": "Cooling",
-            "value": 10.2
+            "value": 9.2
           },
           {
             "name": "DHW",
-            "value": 13.2
+            "value": 13.3
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -7148,29 +7148,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 10.5
           }
         ],
         "pv": 109.8
       },
       "EEM4": {
-        "total": 83.2,
+        "total": 87.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.8
+            "value": 15.9
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 7.1
           },
           {
             "name": "DHW",
-            "value": 13.2
+            "value": 13.3
           },
           {
             "name": "Lighting",
-            "value": 3.6
+            "value": 3.7
           },
           {
             "name": "Equipment",
@@ -7178,7 +7178,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.9
+            "value": 9.9
           }
         ],
         "pv": 109.8
@@ -7276,15 +7276,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 84.4
       },
       "EEM2": {
-        "total": 101.6,
+        "total": 107.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.3
+            "value": 15.4
           },
           {
             "name": "Cooling",
-            "value": 7.9
+            "value": 7.8
           },
           {
             "name": "DHW",
@@ -7292,7 +7292,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.3
+            "value": 9.5
           },
           {
             "name": "Equipment",
@@ -7300,17 +7300,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 9.5
           }
         ],
         "pv": 84.4
       },
       "EEM3": {
-        "total": 82.9,
+        "total": 89.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.1
+            "value": 17.2
           },
           {
             "name": "Cooling",
@@ -7322,7 +7322,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.3
+            "value": 9.5
           },
           {
             "name": "Equipment",
@@ -7330,21 +7330,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 9.5
           }
         ],
         "pv": 84.4
       },
       "EEM4": {
-        "total": 66.2,
+        "total": 74.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.4
+            "value": 18.5
           },
           {
             "name": "Cooling",
-            "value": 5.9
+            "value": 6.0
           },
           {
             "name": "DHW",
@@ -7352,7 +7352,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.0
+            "value": 4.1
           },
           {
             "name": "Equipment",
@@ -7360,7 +7360,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.0
+            "value": 8.6
           }
         ],
         "pv": 84.4
@@ -7458,23 +7458,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 137.6
       },
       "EEM2": {
-        "total": 122.8,
+        "total": 135.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.1
+            "value": 16.1
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 8.3
           },
           {
             "name": "DHW",
-            "value": 23.4
+            "value": 23.7
           },
           {
             "name": "Lighting",
-            "value": 10.2
+            "value": 10.4
           },
           {
             "name": "Equipment",
@@ -7482,29 +7482,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 14.2
           }
         ],
         "pv": 137.6
       },
       "EEM3": {
-        "total": 108.1,
+        "total": 120.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.9
+            "value": 17.9
           },
           {
             "name": "Cooling",
-            "value": 7.8
+            "value": 8.4
           },
           {
             "name": "DHW",
-            "value": 6.9
+            "value": 7.0
           },
           {
             "name": "Lighting",
-            "value": 10.2
+            "value": 10.4
           },
           {
             "name": "Equipment",
@@ -7512,29 +7512,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.9
+            "value": 14.2
           }
         ],
         "pv": 137.6
       },
       "EEM4": {
-        "total": 86.6,
+        "total": 98.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.4
+            "value": 19.7
           },
           {
             "name": "Cooling",
-            "value": 6.0
-          },
-          {
-            "name": "DHW",
             "value": 6.9
           },
           {
+            "name": "DHW",
+            "value": 7.1
+          },
+          {
             "name": "Lighting",
-            "value": 4.7
+            "value": 4.8
           },
           {
             "name": "Equipment",
@@ -7542,7 +7542,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 13.0
           }
         ],
         "pv": 137.6
@@ -7640,15 +7640,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 91.3
       },
       "EEM2": {
-        "total": 96.5,
+        "total": 103.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.1
+            "value": 11.6
           },
           {
             "name": "Cooling",
-            "value": 8.9
+            "value": 8.8
           },
           {
             "name": "DHW",
@@ -7656,7 +7656,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.9
+            "value": 9.1
           },
           {
             "name": "Equipment",
@@ -7664,51 +7664,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 10.7
           }
         ],
         "pv": 91.3
       },
       "EEM3": {
-        "total": 77.3,
+        "total": 83.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.1
+            "value": 12.7
           },
           {
             "name": "Cooling",
-            "value": 8.7
-          },
-          {
-            "name": "DHW",
-            "value": 12.2
-          },
-          {
-            "name": "Lighting",
-            "value": 8.9
-          },
-          {
-            "name": "Equipment",
-            "value": 25.4
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 8.7
-          }
-        ],
-        "pv": 91.3
-      },
-      "EEM4": {
-        "total": 62.0,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 8.7
-          },
-          {
-            "name": "Cooling",
-            "value": 6.6
+            "value": 8.6
           },
           {
             "name": "DHW",
@@ -7716,7 +7686,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.7
+            "value": 9.1
+          },
+          {
+            "name": "Equipment",
+            "value": 25.4
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 10.7
+          }
+        ],
+        "pv": 91.3
+      },
+      "EEM4": {
+        "total": 69.2,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 13.6
+          },
+          {
+            "name": "Cooling",
+            "value": 6.8
+          },
+          {
+            "name": "DHW",
+            "value": 12.3
+          },
+          {
+            "name": "Lighting",
+            "value": 3.8
           },
           {
             "name": "Equipment",
@@ -7724,7 +7724,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 9.9
           }
         ],
         "pv": 91.3
@@ -7822,19 +7822,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 97.4
       },
       "EEM2": {
-        "total": 153.7,
+        "total": 160.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.6
+            "value": 19.9
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 7.9
           },
           {
             "name": "DHW",
-            "value": 36.3
+            "value": 36.7
           },
           {
             "name": "Lighting",
@@ -7846,25 +7846,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.9
+            "value": 10.6
           }
         ],
-        "pv": 97.4
+        "pv": 97.5
       },
       "EEM3": {
-        "total": 131.6,
+        "total": 138.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.9
+            "value": 24.4
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 7.9
           },
           {
             "name": "DHW",
-            "value": 9.8
+            "value": 10.0
           },
           {
             "name": "Lighting",
@@ -7876,25 +7876,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 10.8
           }
         ],
-        "pv": 97.4
+        "pv": 97.5
       },
       "EEM4": {
-        "total": 109.3,
+        "total": 116.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.8
+            "value": 26.4
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 6.2
           },
           {
             "name": "DHW",
-            "value": 9.8
+            "value": 10.0
           },
           {
             "name": "Lighting",
@@ -7906,10 +7906,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 10.6
           }
         ],
-        "pv": 97.4
+        "pv": 97.5
       }
     }
   },
@@ -13328,15 +13328,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 26.9
       },
       "EEM2": {
-        "total": 94.0,
+        "total": 93.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 2.9
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 3.0
           },
           {
             "name": "DHW",
@@ -13344,7 +13344,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 14.7
+            "value": 14.8
           },
           {
             "name": "Equipment",
@@ -13352,21 +13352,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.5
           }
         ],
         "pv": 26.9
       },
       "EEM3": {
-        "total": 80.7,
+        "total": 80.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.1
+            "value": 5.3
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 3.0
           },
           {
             "name": "DHW",
@@ -13374,7 +13374,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 14.7
+            "value": 14.8
           },
           {
             "name": "Equipment",
@@ -13382,21 +13382,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.6
           }
         ],
         "pv": 26.9
       },
       "EEM4": {
-        "total": 58.9,
+        "total": 59.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.4
+            "value": 6.0
           },
           {
             "name": "Cooling",
-            "value": 2.6
+            "value": 2.1
           },
           {
             "name": "DHW",
@@ -13404,7 +13404,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.7
+            "value": 6.8
           },
           {
             "name": "Equipment",
@@ -13412,7 +13412,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 6.0
           }
         ],
         "pv": 26.9
@@ -13510,15 +13510,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 25.4
       },
       "EEM2": {
-        "total": 78.3,
+        "total": 77.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.3
+            "value": 1.6
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.7
           },
           {
             "name": "DHW",
@@ -13526,7 +13526,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 16.4
+            "value": 16.5
           },
           {
             "name": "Equipment",
@@ -13534,21 +13534,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 7.3
           }
         ],
         "pv": 25.4
       },
       "EEM3": {
-        "total": 68.6,
+        "total": 67.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.4
+            "value": 2.7
           },
           {
             "name": "Cooling",
-            "value": 3.1
+            "value": 2.7
           },
           {
             "name": "DHW",
@@ -13556,7 +13556,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 16.4
+            "value": 16.5
           },
           {
             "name": "Equipment",
@@ -13564,21 +13564,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 7.3
           }
         ],
         "pv": 25.4
       },
       "EEM4": {
-        "total": 45.6,
+        "total": 45.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.5
+            "value": 3.0
           },
           {
             "name": "Cooling",
-            "value": 2.3
+            "value": 2.0
           },
           {
             "name": "DHW",
@@ -13594,7 +13594,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.4
+            "value": 5.0
           }
         ],
         "pv": 25.4
@@ -13692,15 +13692,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 45.7
       },
       "EEM2": {
-        "total": 135.8,
+        "total": 138.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.3
+            "value": 16.4
           },
           {
             "name": "Cooling",
-            "value": 8.4
+            "value": 8.0
           },
           {
             "name": "DHW",
@@ -13708,7 +13708,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 22.9
           },
           {
             "name": "Equipment",
@@ -13716,21 +13716,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.3
+            "value": 31.1
           }
         ],
         "pv": 45.7
       },
       "EEM3": {
-        "total": 120.4,
+        "total": 122.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.2
+            "value": 18.5
           },
           {
             "name": "Cooling",
-            "value": 8.4
+            "value": 8.0
           },
           {
             "name": "DHW",
@@ -13738,7 +13738,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 22.9
           },
           {
             "name": "Equipment",
@@ -13746,21 +13746,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.3
+            "value": 31.2
           }
         ],
         "pv": 45.7
       },
       "EEM4": {
-        "total": 97.9,
+        "total": 101.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.7
+            "value": 17.9
           },
           {
             "name": "Cooling",
-            "value": 6.9
+            "value": 6.6
           },
           {
             "name": "DHW",
@@ -13776,7 +13776,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.8
+            "value": 30.1
           }
         ],
         "pv": 45.7
@@ -13874,23 +13874,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 48.8
       },
       "EEM2": {
-        "total": 134.9,
+        "total": 134.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.8
+            "value": 10.4
           },
           {
             "name": "Cooling",
-            "value": 10.0
+            "value": 9.7
           },
           {
             "name": "DHW",
-            "value": 23.2
+            "value": 23.3
           },
           {
             "name": "Lighting",
-            "value": 21.7
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -13898,21 +13898,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.9
+            "value": 29.6
           }
         ],
         "pv": 48.8
       },
       "EEM3": {
-        "total": 117.9,
+        "total": 117.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.1
+            "value": 11.8
           },
           {
             "name": "Cooling",
-            "value": 10.0
+            "value": 9.6
           },
           {
             "name": "DHW",
@@ -13920,7 +13920,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.7
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -13928,7 +13928,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.9
+            "value": 29.5
           }
         ],
         "pv": 48.8
@@ -13938,11 +13938,11 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.6
+            "value": 10.7
           },
           {
             "name": "Cooling",
-            "value": 8.5
+            "value": 8.0
           },
           {
             "name": "DHW",
@@ -13958,7 +13958,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 28.5
+            "value": 29.0
           }
         ],
         "pv": 48.8
@@ -14056,15 +14056,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 8.0
       },
       "EEM2": {
-        "total": 97.0,
+        "total": 93.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.0
+            "value": 1.8
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -14072,7 +14072,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.5
+            "value": 12.3
           },
           {
             "name": "Equipment",
@@ -14080,21 +14080,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.7
+            "value": 10.1
           }
         ],
         "pv": 8.0
       },
       "EEM3": {
-        "total": 77.2,
+        "total": 74.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.5
+            "value": 2.2
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -14102,7 +14102,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.5
+            "value": 12.3
           },
           {
             "name": "Equipment",
@@ -14110,21 +14110,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.7
+            "value": 10.1
           }
         ],
         "pv": 8.0
       },
       "EEM4": {
-        "total": 56.7,
+        "total": 54.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 2.7
           },
           {
             "name": "Cooling",
-            "value": 4.3
+            "value": 3.0
           },
           {
             "name": "DHW",
@@ -14132,7 +14132,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.2
+            "value": 6.1
           },
           {
             "name": "Equipment",
@@ -14140,7 +14140,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 8.4
           }
         ],
         "pv": 8.0
@@ -14238,15 +14238,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 14.0
       },
       "EEM2": {
-        "total": 95.9,
+        "total": 93.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.5
+            "value": 2.2
           },
           {
             "name": "Cooling",
-            "value": 5.1
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -14254,7 +14254,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.3
+            "value": 13.2
           },
           {
             "name": "Equipment",
@@ -14262,29 +14262,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 8.0
           }
         ],
         "pv": 14.0
       },
       "EEM3": {
-        "total": 80.3,
+        "total": 77.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.5
+            "value": 3.2
           },
           {
             "name": "Cooling",
-            "value": 5.1
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 6.4
+            "value": 6.3
           },
           {
             "name": "Lighting",
-            "value": 13.3
+            "value": 13.2
           },
           {
             "name": "Equipment",
@@ -14292,25 +14292,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 8.1
           }
         ],
         "pv": 14.0
       },
       "EEM4": {
-        "total": 58.0,
+        "total": 56.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.8
-          },
-          {
-            "name": "Cooling",
             "value": 3.8
           },
           {
+            "name": "Cooling",
+            "value": 2.8
+          },
+          {
             "name": "DHW",
-            "value": 6.4
+            "value": 6.3
           },
           {
             "name": "Lighting",
@@ -14322,7 +14322,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 6.4
           }
         ],
         "pv": 14.0
@@ -14420,15 +14420,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 12.0
       },
       "EEM2": {
-        "total": 103.0,
+        "total": 101.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.3
+            "value": 2.3
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 4.6
           },
           {
             "name": "DHW",
@@ -14436,7 +14436,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.6
+            "value": 13.4
           },
           {
             "name": "Equipment",
@@ -14444,21 +14444,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 9.3
           }
         ],
         "pv": 12.0
       },
       "EEM3": {
-        "total": 83.3,
+        "total": 81.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 2.8
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 4.6
           },
           {
             "name": "DHW",
@@ -14466,7 +14466,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.6
+            "value": 13.4
           },
           {
             "name": "Equipment",
@@ -14474,21 +14474,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 9.3
           }
         ],
         "pv": 12.0
       },
       "EEM4": {
-        "total": 61.7,
+        "total": 60.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.0
+            "value": 3.3
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 3.4
           },
           {
             "name": "DHW",
@@ -14496,7 +14496,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.8
+            "value": 6.6
           },
           {
             "name": "Equipment",
@@ -14504,7 +14504,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.4
           }
         ],
         "pv": 12.0
@@ -14602,15 +14602,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 116.5
       },
       "EEM2": {
-        "total": 169.2,
+        "total": 177.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.0
+            "value": 21.4
           },
           {
             "name": "Cooling",
-            "value": 6.8
+            "value": 5.7
           },
           {
             "name": "DHW",
@@ -14618,7 +14618,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.3
+            "value": 36.5
           },
           {
             "name": "Equipment",
@@ -14626,29 +14626,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 11.1
           }
         ],
         "pv": 116.5
       },
       "EEM3": {
-        "total": 151.7,
+        "total": 159.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.3
+            "value": 25.7
           },
           {
             "name": "Cooling",
-            "value": 6.8
+            "value": 5.7
           },
           {
             "name": "DHW",
-            "value": 3.4
+            "value": 3.5
           },
           {
             "name": "Lighting",
-            "value": 36.3
+            "value": 36.5
           },
           {
             "name": "Equipment",
@@ -14656,21 +14656,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 11.1
           }
         ],
         "pv": 116.5
       },
       "EEM4": {
-        "total": 120.3,
+        "total": 130.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.0
+            "value": 28.7
           },
           {
             "name": "Cooling",
-            "value": 3.5
+            "value": 3.0
           },
           {
             "name": "DHW",
@@ -14678,7 +14678,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 16.9
+            "value": 17.0
           },
           {
             "name": "Equipment",
@@ -14784,15 +14784,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 168.5
       },
       "EEM2": {
-        "total": 234.1,
+        "total": 245.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.9
+            "value": 26.8
           },
           {
             "name": "Cooling",
-            "value": 9.4
+            "value": 8.1
           },
           {
             "name": "DHW",
@@ -14800,7 +14800,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 63.5
+            "value": 63.9
           },
           {
             "name": "Equipment",
@@ -14808,29 +14808,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 15.0
+            "value": 15.7
           }
         ],
         "pv": 168.5
       },
       "EEM3": {
-        "total": 215.6,
+        "total": 227.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.9
+            "value": 30.8
           },
           {
             "name": "Cooling",
-            "value": 9.4
+            "value": 8.2
           },
           {
             "name": "DHW",
-            "value": 2.4
+            "value": 2.5
           },
           {
             "name": "Lighting",
-            "value": 63.5
+            "value": 63.9
           },
           {
             "name": "Equipment",
@@ -14838,17 +14838,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 15.0
+            "value": 15.7
           }
         ],
         "pv": 168.5
       },
       "EEM4": {
-        "total": 171.5,
+        "total": 185.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.6
+            "value": 33.2
           },
           {
             "name": "Cooling",
@@ -14856,11 +14856,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "DHW",
-            "value": 2.4
+            "value": 2.6
           },
           {
             "name": "Lighting",
-            "value": 29.5
+            "value": 29.8
           },
           {
             "name": "Equipment",
@@ -14868,7 +14868,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.9
+            "value": 15.1
           }
         ],
         "pv": 168.5
@@ -14966,15 +14966,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 145.6
       },
       "EEM2": {
-        "total": 3682.5,
+        "total": 3675.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.2
+            "value": 7.3
           },
           {
             "name": "Cooling",
-            "value": 467.3
+            "value": 464.0
           },
           {
             "name": "DHW",
@@ -14982,63 +14982,63 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 31.9
+            "value": 32.0
           },
           {
             "name": "Equipment",
-            "value": 2714.2
+            "value": 2714.1
           },
           {
             "name": "Fans & Pumps",
-            "value": 333.1
+            "value": 328.7
           }
         ],
         "pv": 145.6
       },
       "EEM3": {
-        "total": 3674.3,
+        "total": 3666.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.7
+            "value": 8.8
           },
           {
             "name": "Cooling",
-            "value": 467.3
+            "value": 464.1
           },
           {
             "name": "DHW",
-            "value": 0.7
+            "value": 0.8
           },
           {
             "name": "Lighting",
-            "value": 31.9
+            "value": 32.0
           },
           {
             "name": "Equipment",
-            "value": 2714.2
+            "value": 2714.1
           },
           {
             "name": "Fans & Pumps",
-            "value": 333.1
+            "value": 328.6
           }
         ],
         "pv": 145.6
       },
       "EEM4": {
-        "total": 3668.9,
+        "total": 3661.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.5
+            "value": 9.8
           },
           {
             "name": "Cooling",
-            "value": 466.7
+            "value": 463.7
           },
           {
             "name": "DHW",
-            "value": 0.7
+            "value": 0.8
           },
           {
             "name": "Lighting",
@@ -15046,11 +15046,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2711.6
+            "value": 2711.4
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.6
+            "value": 328.3
           }
         ],
         "pv": 145.6
@@ -15148,15 +15148,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 104.5
       },
       "EEM2": {
-        "total": 12013.8,
+        "total": 12015.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.9
+            "value": 12.9
           },
           {
             "name": "Cooling",
-            "value": 1439.2
+            "value": 1438.3
           },
           {
             "name": "DHW",
@@ -15164,63 +15164,63 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 24.4
+            "value": 24.5
           },
           {
             "name": "Equipment",
-            "value": 9035.5
+            "value": 9035.9
           },
           {
             "name": "Fans & Pumps",
-            "value": 1112.6
+            "value": 1110.8
           }
         ],
         "pv": 104.5
       },
       "EEM3": {
-        "total": 12003.9,
+        "total": 12004.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.0
+            "value": 14.9
           },
           {
             "name": "Cooling",
-            "value": 1439.2
+            "value": 1438.3
           },
           {
             "name": "DHW",
-            "value": 1.1
+            "value": 1.2
           },
           {
             "name": "Lighting",
-            "value": 24.4
+            "value": 24.5
           },
           {
             "name": "Equipment",
-            "value": 9035.6
+            "value": 9035.8
           },
           {
             "name": "Fans & Pumps",
-            "value": 1112.6
+            "value": 1110.3
           }
         ],
         "pv": 104.5
       },
       "EEM4": {
-        "total": 11993.8,
+        "total": 11996.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.7
+            "value": 16.8
           },
           {
             "name": "Cooling",
-            "value": 1438.9
+            "value": 1438.0
           },
           {
             "name": "DHW",
-            "value": 1.1
+            "value": 1.2
           },
           {
             "name": "Lighting",
@@ -15228,11 +15228,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9029.0
+            "value": 9029.5
           },
           {
             "name": "Fans & Pumps",
-            "value": 1112.0
+            "value": 1110.0
           }
         ],
         "pv": 104.5
@@ -15330,15 +15330,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 22.7
       },
       "EEM2": {
-        "total": 139.0,
+        "total": 137.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.0
+            "value": 7.3
           },
           {
             "name": "Cooling",
-            "value": 9.5
+            "value": 6.7
           },
           {
             "name": "DHW",
@@ -15346,7 +15346,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 11.4
+            "value": 11.5
           },
           {
             "name": "Equipment",
@@ -15354,29 +15354,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.1
+            "value": 18.0
           }
         ],
         "pv": 22.7
       },
       "EEM3": {
-        "total": 109.8,
+        "total": 108.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.8
+            "value": 12.2
           },
           {
             "name": "Cooling",
-            "value": 9.5
+            "value": 6.7
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 6.6
           },
           {
             "name": "Lighting",
-            "value": 11.4
+            "value": 11.5
           },
           {
             "name": "Equipment",
@@ -15384,25 +15384,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.2
+            "value": 18.1
           }
         ],
         "pv": 22.7
       },
       "EEM4": {
-        "total": 94.9,
+        "total": 95.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.3
+            "value": 13.5
           },
           {
             "name": "Cooling",
-            "value": 7.5
+            "value": 5.5
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 6.6
           },
           {
             "name": "Lighting",
@@ -15414,7 +15414,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 17.6
+            "value": 16.9
           }
         ],
         "pv": 22.7
@@ -15512,15 +15512,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 19.6
       },
       "EEM2": {
-        "total": 93.5,
+        "total": 92.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.1
+            "value": 3.7
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 3.3
           },
           {
             "name": "DHW",
@@ -15536,25 +15536,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.6
           }
         ],
         "pv": 19.6
       },
       "EEM3": {
-        "total": 69.3,
+        "total": 67.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.9
+            "value": 8.4
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 3.3
           },
           {
             "name": "DHW",
-            "value": 5.0
+            "value": 4.9
           },
           {
             "name": "Lighting",
@@ -15566,21 +15566,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.7
           }
         ],
         "pv": 19.6
       },
       "EEM4": {
-        "total": 52.1,
+        "total": 52.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.3
+            "value": 9.5
           },
           {
             "name": "Cooling",
-            "value": 3.4
+            "value": 2.0
           },
           {
             "name": "DHW",
@@ -15588,7 +15588,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.4
+            "value": 3.5
           },
           {
             "name": "Equipment",
@@ -15596,7 +15596,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 6.3
           }
         ],
         "pv": 19.6
@@ -15694,15 +15694,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 42.4
       },
       "EEM2": {
-        "total": 115.5,
+        "total": 114.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.2
+            "value": 8.4
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 7.3
           },
           {
             "name": "DHW",
@@ -15718,21 +15718,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.3
+            "value": 9.0
           }
         ],
         "pv": 42.4
       },
       "EEM3": {
-        "total": 83.6,
+        "total": 82.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.9
+            "value": 13.1
           },
           {
             "name": "Cooling",
-            "value": 10.7
+            "value": 7.2
           },
           {
             "name": "DHW",
@@ -15748,21 +15748,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 9.1
           }
         ],
         "pv": 42.4
       },
       "EEM4": {
-        "total": 68.5,
+        "total": 69.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.5
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 7.8
+            "value": 5.3
           },
           {
             "name": "DHW",
@@ -15770,7 +15770,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Equipment",
@@ -15778,7 +15778,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 8.3
           }
         ],
         "pv": 42.4
@@ -15876,19 +15876,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 76.5
       },
       "EEM2": {
-        "total": 127.1,
+        "total": 129.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.6
+            "value": 10.7
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 8.8
           },
           {
             "name": "DHW",
-            "value": 40.5
+            "value": 40.7
           },
           {
             "name": "Lighting",
@@ -15900,25 +15900,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 10.3
           }
         ],
-        "pv": 76.5
+        "pv": 76.6
       },
       "EEM3": {
-        "total": 101.1,
+        "total": 103.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.0
+            "value": 13.1
           },
           {
             "name": "Cooling",
-            "value": 10.6
+            "value": 8.7
           },
           {
             "name": "DHW",
-            "value": 12.3
+            "value": 12.4
           },
           {
             "name": "Lighting",
@@ -15930,29 +15930,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 10.3
           }
         ],
-        "pv": 76.5
+        "pv": 76.6
       },
       "EEM4": {
-        "total": 85.7,
+        "total": 89.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.6
+            "value": 14.1
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 6.9
           },
           {
             "name": "DHW",
-            "value": 12.3
+            "value": 12.4
           },
           {
             "name": "Lighting",
-            "value": 4.9
+            "value": 5.0
           },
           {
             "name": "Equipment",
@@ -15960,10 +15960,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.0
+            "value": 10.2
           }
         ],
-        "pv": 76.5
+        "pv": 76.6
       }
     },
     "MU-L": {
@@ -16058,19 +16058,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 71.5
       },
       "EEM2": {
-        "total": 117.3,
+        "total": 121.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.3
+            "value": 12.3
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 7.5
           },
           {
             "name": "DHW",
-            "value": 43.4
+            "value": 43.5
           },
           {
             "name": "Lighting",
@@ -16082,25 +16082,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 8.7
           }
         ],
         "pv": 71.5
       },
       "EEM3": {
-        "total": 89.5,
+        "total": 93.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.8
+            "value": 13.9
           },
           {
             "name": "Cooling",
-            "value": 9.6
+            "value": 7.3
           },
           {
             "name": "DHW",
-            "value": 14.3
+            "value": 14.4
           },
           {
             "name": "Lighting",
@@ -16112,25 +16112,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 8.7
           }
         ],
         "pv": 71.5
       },
       "EEM4": {
-        "total": 74.0,
+        "total": 79.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.9
+            "value": 15.3
           },
           {
             "name": "Cooling",
-            "value": 6.7
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 14.3
+            "value": 14.4
           },
           {
             "name": "Lighting",
@@ -16142,7 +16142,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 7.9
           }
         ],
         "pv": 71.5
@@ -16240,23 +16240,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 69.6
       },
       "EEM2": {
-        "total": 138.5,
+        "total": 138.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.9
+            "value": 9.7
           },
           {
             "name": "Cooling",
-            "value": 9.3
+            "value": 7.1
           },
           {
             "name": "DHW",
-            "value": 43.4
+            "value": 43.5
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -16264,29 +16264,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 9.2
           }
         ],
-        "pv": 69.6
+        "pv": 69.8
       },
       "EEM3": {
         "total": 110.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.3
+            "value": 13.2
           },
           {
             "name": "Cooling",
-            "value": 9.1
+            "value": 6.9
           },
           {
             "name": "DHW",
-            "value": 11.9
+            "value": 11.8
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -16294,29 +16294,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.9
+            "value": 9.2
           }
         ],
-        "pv": 69.6
+        "pv": 69.8
       },
       "EEM4": {
-        "total": 88.7,
+        "total": 90.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.9
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 4.3
           },
           {
             "name": "DHW",
-            "value": 11.9
+            "value": 11.8
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -16324,10 +16324,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 8.4
           }
         ],
-        "pv": 69.6
+        "pv": 69.8
       }
     },
     "MU-S2": {
@@ -16422,15 +16422,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 91.6
       },
       "EEM2": {
-        "total": 137.0,
+        "total": 137.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.0
+            "value": 8.3
           },
           {
             "name": "Cooling",
-            "value": 10.1
+            "value": 8.4
           },
           {
             "name": "DHW",
@@ -16438,7 +16438,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -16446,29 +16446,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 10.2
           }
         ],
         "pv": 91.6
       },
       "EEM3": {
-        "total": 110.2,
+        "total": 111.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.5
+            "value": 10.8
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 8.2
           },
           {
             "name": "DHW",
-            "value": 15.0
+            "value": 15.1
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -16476,21 +16476,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 10.2
           }
         ],
         "pv": 91.6
       },
       "EEM4": {
-        "total": 87.3,
+        "total": 89.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.0
+            "value": 11.8
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 5.1
           },
           {
             "name": "DHW",
@@ -16498,7 +16498,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.9
+            "value": 10.0
           },
           {
             "name": "Equipment",
@@ -16506,7 +16506,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.3
+            "value": 9.5
           }
         ],
         "pv": 91.6
@@ -16604,15 +16604,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.5
       },
       "EEM2": {
-        "total": 80.9,
+        "total": 79.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.5
+            "value": 3.0
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 3.3
           },
           {
             "name": "DHW",
@@ -16628,25 +16628,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 7.1
           }
         ],
         "pv": 18.5
       },
       "EEM3": {
-        "total": 60.4,
+        "total": 58.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.4
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 3.3
           },
           {
             "name": "DHW",
-            "value": 3.9
+            "value": 3.8
           },
           {
             "name": "Lighting",
@@ -16658,25 +16658,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 7.1
           }
         ],
         "pv": 18.5
       },
       "EEM4": {
-        "total": 42.3,
+        "total": 42.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.8
+            "value": 8.0
           },
           {
             "name": "Cooling",
-            "value": 3.4
+            "value": 1.9
           },
           {
             "name": "DHW",
-            "value": 3.9
+            "value": 3.8
           },
           {
             "name": "Lighting",
@@ -16688,7 +16688,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.1
+            "value": 5.7
           }
         ],
         "pv": 18.5
@@ -16786,15 +16786,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 72.9
       },
       "EEM2": {
-        "total": 95.5,
+        "total": 98.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.1
+            "value": 11.3
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 4.8
           },
           {
             "name": "DHW",
@@ -16810,25 +16810,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.3
+            "value": 6.6
           }
         ],
         "pv": 72.9
       },
       "EEM3": {
-        "total": 75.2,
+        "total": 78.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.9
+            "value": 13.1
           },
           {
             "name": "Cooling",
-            "value": 5.9
+            "value": 4.6
           },
           {
             "name": "DHW",
-            "value": 9.3
+            "value": 9.4
           },
           {
             "name": "Lighting",
@@ -16840,25 +16840,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.4
+            "value": 6.6
           }
         ],
         "pv": 72.9
       },
       "EEM4": {
-        "total": 65.2,
+        "total": 69.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.6
+            "value": 14.2
           },
           {
             "name": "Cooling",
-            "value": 4.2
+            "value": 3.3
           },
           {
             "name": "DHW",
-            "value": 9.3
+            "value": 9.4
           },
           {
             "name": "Lighting",
@@ -16870,7 +16870,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.7
+            "value": 6.1
           }
         ],
         "pv": 72.9
@@ -16968,11 +16968,11 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 103.7
       },
       "EEM2": {
-        "total": 68.1,
+        "total": 75.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.0
+            "value": 16.8
           },
           {
             "name": "Cooling",
@@ -16984,7 +16984,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.1
+            "value": 8.2
           },
           {
             "name": "Equipment",
@@ -16992,17 +16992,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 3.9
+            "value": 4.5
           }
         ],
         "pv": 103.7
       },
       "EEM3": {
-        "total": 58.3,
+        "total": 65.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.8
+            "value": 18.6
           },
           {
             "name": "Cooling",
@@ -17014,7 +17014,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.1
+            "value": 8.2
           },
           {
             "name": "Equipment",
@@ -17022,21 +17022,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 3.9
+            "value": 4.5
           }
         ],
         "pv": 103.7
       },
       "EEM4": {
-        "total": 51.8,
+        "total": 59.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.3
+            "value": 20.4
           },
           {
             "name": "Cooling",
-            "value": 1.0
+            "value": 1.2
           },
           {
             "name": "DHW",
@@ -17044,7 +17044,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.9
+            "value": 4.0
           },
           {
             "name": "Equipment",
@@ -17052,7 +17052,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 3.3
+            "value": 3.9
           }
         ],
         "pv": 103.7
@@ -17150,19 +17150,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 93.5
       },
       "EEM2": {
-        "total": 85.6,
+        "total": 89.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 5.3
           },
           {
             "name": "Cooling",
-            "value": 5.0
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 21.1
+            "value": 21.9
           },
           {
             "name": "Lighting",
@@ -17174,25 +17174,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.7
+            "value": 6.2
           }
         ],
-        "pv": 93.5
+        "pv": 93.6
       },
       "EEM3": {
-        "total": 73.7,
+        "total": 77.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.3
+            "value": 8.0
           },
           {
             "name": "Cooling",
-            "value": 5.0
+            "value": 4.0
           },
           {
             "name": "DHW",
-            "value": 6.3
+            "value": 6.7
           },
           {
             "name": "Lighting",
@@ -17204,25 +17204,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.9
+            "value": 6.4
           }
         ],
-        "pv": 93.5
+        "pv": 93.6
       },
       "EEM4": {
-        "total": 53.2,
+        "total": 57.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 9.4
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 3.0
           },
           {
             "name": "DHW",
-            "value": 6.3
+            "value": 6.7
           },
           {
             "name": "Lighting",
@@ -17234,10 +17234,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.8
+            "value": 6.4
           }
         ],
-        "pv": 93.5
+        "pv": 93.6
       }
     },
     "RC-HR1": {
@@ -17332,19 +17332,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 41.9
       },
       "EEM2": {
-        "total": 96.1,
+        "total": 93.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 0.9
+            "value": 2.6
           },
           {
             "name": "Cooling",
-            "value": 11.8
+            "value": 7.8
           },
           {
             "name": "DHW",
-            "value": 48.1
+            "value": 48.2
           },
           {
             "name": "Lighting",
@@ -17356,25 +17356,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 7.9
           }
         ],
         "pv": 41.9
       },
       "EEM3": {
-        "total": 63.5,
+        "total": 60.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.3
+            "value": 6.1
           },
           {
             "name": "Cooling",
-            "value": 11.6
+            "value": 7.6
           },
           {
             "name": "DHW",
-            "value": 12.3
+            "value": 12.1
           },
           {
             "name": "Lighting",
@@ -17386,29 +17386,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 8.0
           }
         ],
         "pv": 41.9
       },
       "EEM4": {
-        "total": 47.6,
+        "total": 46.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.6
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 4.7
           },
           {
             "name": "DHW",
-            "value": 12.2
+            "value": 12.1
           },
           {
             "name": "Lighting",
-            "value": 1.7
+            "value": 1.8
           },
           {
             "name": "Equipment",
@@ -17416,7 +17416,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.3
+            "value": 7.1
           }
         ],
         "pv": 41.9
@@ -17514,15 +17514,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 26.0
       },
       "EEM2": {
-        "total": 102.0,
+        "total": 97.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.6
+            "value": 3.6
           },
           {
             "name": "Cooling",
-            "value": 12.3
+            "value": 7.0
           },
           {
             "name": "DHW",
@@ -17538,25 +17538,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 8.5
           }
         ],
         "pv": 26.0
       },
       "EEM3": {
-        "total": 64.6,
+        "total": 60.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.7
+            "value": 9.8
           },
           {
             "name": "Cooling",
-            "value": 12.2
+            "value": 7.0
           },
           {
             "name": "DHW",
-            "value": 8.2
+            "value": 8.0
           },
           {
             "name": "Lighting",
@@ -17568,29 +17568,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 8.6
           }
         ],
         "pv": 26.0
       },
       "EEM4": {
-        "total": 48.2,
+        "total": 46.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.2
+            "value": 11.2
           },
           {
             "name": "Cooling",
-            "value": 7.8
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 8.2
+            "value": 8.1
           },
           {
             "name": "Lighting",
-            "value": 1.5
+            "value": 1.6
           },
           {
             "name": "Equipment",
@@ -17598,7 +17598,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.9
+            "value": 7.5
           }
         ],
         "pv": 26.0
@@ -17696,19 +17696,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 85.8
       },
       "EEM2": {
-        "total": 93.4,
+        "total": 96.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.0
+            "value": 3.9
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.1
           },
           {
             "name": "DHW",
-            "value": 23.1
+            "value": 24.1
           },
           {
             "name": "Lighting",
@@ -17720,25 +17720,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.1
+            "value": 6.3
           }
         ],
         "pv": 85.8
       },
       "EEM3": {
-        "total": 80.2,
+        "total": 82.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.3
+            "value": 5.2
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.1
           },
           {
             "name": "DHW",
-            "value": 8.5
+            "value": 8.9
           },
           {
             "name": "Lighting",
@@ -17750,25 +17750,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.2
+            "value": 6.4
           }
         ],
         "pv": 85.8
       },
       "EEM4": {
-        "total": 56.8,
+        "total": 60.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.3
+            "value": 6.6
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 2.9
           },
           {
             "name": "DHW",
-            "value": 8.5
+            "value": 9.0
           },
           {
             "name": "Lighting",
@@ -17780,7 +17780,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.9
+            "value": 6.4
           }
         ],
         "pv": 85.8
@@ -17878,19 +17878,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.8
       },
       "EEM2": {
-        "total": 94.5,
+        "total": 92.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 0.7
+            "value": 2.1
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 8.2
           },
           {
             "name": "DHW",
-            "value": 37.2
+            "value": 37.6
           },
           {
             "name": "Lighting",
@@ -17902,25 +17902,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 7.1
           }
         ],
         "pv": 68.8
       },
       "EEM3": {
-        "total": 71.7,
+        "total": 70.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 0.7
+            "value": 2.1
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 7.9
           },
           {
             "name": "DHW",
-            "value": 14.6
+            "value": 14.9
           },
           {
             "name": "Lighting",
@@ -17932,25 +17932,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 7.2
           }
         ],
         "pv": 68.8
       },
       "EEM4": {
-        "total": 52.7,
+        "total": 52.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 0.8
+            "value": 2.9
           },
           {
             "name": "Cooling",
-            "value": 7.8
+            "value": 5.6
           },
           {
             "name": "DHW",
-            "value": 14.6
+            "value": 14.9
           },
           {
             "name": "Lighting",
@@ -17962,7 +17962,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 6.6
           }
         ],
         "pv": 68.8
@@ -18060,19 +18060,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 61.7
       },
       "EEM2": {
-        "total": 89.6,
+        "total": 88.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.2
+            "value": 2.6
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 8.3
           },
           {
             "name": "DHW",
-            "value": 43.5
+            "value": 43.6
           },
           {
             "name": "Lighting",
@@ -18084,25 +18084,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 7.2
           }
         ],
         "pv": 61.7
       },
       "EEM3": {
-        "total": 62.8,
+        "total": 61.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.2
+            "value": 2.6
           },
           {
             "name": "Cooling",
-            "value": 10.7
+            "value": 8.0
           },
           {
             "name": "DHW",
-            "value": 17.1
+            "value": 17.2
           },
           {
             "name": "Lighting",
@@ -18114,25 +18114,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 7.2
           }
         ],
         "pv": 61.7
       },
       "EEM4": {
-        "total": 47.9,
+        "total": 47.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.3
+            "value": 3.2
           },
           {
             "name": "Cooling",
-            "value": 7.5
+            "value": 5.4
           },
           {
             "name": "DHW",
-            "value": 17.1
+            "value": 17.2
           },
           {
             "name": "Lighting",
@@ -18242,19 +18242,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 61.7
       },
       "EEM2": {
-        "total": 89.1,
+        "total": 87.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.2
+            "value": 2.6
           },
           {
             "name": "Cooling",
-            "value": 10.6
+            "value": 7.9
           },
           {
             "name": "DHW",
-            "value": 43.5
+            "value": 43.6
           },
           {
             "name": "Lighting",
@@ -18266,25 +18266,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 7.1
           }
         ],
         "pv": 61.7
       },
       "EEM3": {
-        "total": 62.3,
+        "total": 60.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.2
+            "value": 2.7
           },
           {
             "name": "Cooling",
-            "value": 10.2
+            "value": 7.6
           },
           {
             "name": "DHW",
-            "value": 17.1
+            "value": 17.2
           },
           {
             "name": "Lighting",
@@ -18296,25 +18296,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 7.1
           }
         ],
         "pv": 61.7
       },
       "EEM4": {
-        "total": 47.4,
+        "total": 47.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.3
+            "value": 3.2
           },
           {
             "name": "Cooling",
-            "value": 7.1
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 17.1
+            "value": 17.2
           },
           {
             "name": "Lighting",
@@ -18424,19 +18424,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 83.5
       },
       "EEM2": {
-        "total": 85.9,
+        "total": 89.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.6
+            "value": 5.2
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 21.1
+            "value": 21.9
           },
           {
             "name": "Lighting",
@@ -18448,25 +18448,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.8
+            "value": 6.2
           }
         ],
         "pv": 83.5
       },
       "EEM3": {
-        "total": 74.0,
+        "total": 77.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.2
+            "value": 7.8
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 6.3
+            "value": 6.7
           },
           {
             "name": "Lighting",
@@ -18478,25 +18478,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.9
+            "value": 6.4
           }
         ],
         "pv": 83.5
       },
       "EEM4": {
-        "total": 53.4,
+        "total": 57.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.3
+            "value": 9.2
           },
           {
             "name": "Cooling",
-            "value": 4.1
+            "value": 3.3
           },
           {
             "name": "DHW",
-            "value": 6.3
+            "value": 6.7
           },
           {
             "name": "Lighting",
@@ -18508,7 +18508,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.8
+            "value": 6.5
           }
         ],
         "pv": 83.5
@@ -18606,49 +18606,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 78.0
       },
       "EEM2": {
-        "total": 101.6,
+        "total": 103.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 0.2
+            "value": 2.3
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 25.2
-          },
-          {
-            "name": "Lighting",
-            "value": 5.8
-          },
-          {
-            "name": "Equipment",
-            "value": 57.1
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 6.4
-          }
-        ],
-        "pv": 78.0
-      },
-      "EEM3": {
-        "total": 87.1,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 0.2
-          },
-          {
-            "name": "Cooling",
-            "value": 5.8
-          },
-          {
-            "name": "DHW",
-            "value": 10.7
+            "value": 26.5
           },
           {
             "name": "Lighting",
@@ -18663,22 +18633,52 @@ const ENVELOPE_ENERGY_DATA = {
             "value": 6.5
           }
         ],
-        "pv": 78.0
+        "pv": 78.1
       },
-      "EEM4": {
-        "total": 60.5,
+      "EEM3": {
+        "total": 88.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 0.9
+            "value": 2.3
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 10.7
+            "value": 11.3
+          },
+          {
+            "name": "Lighting",
+            "value": 5.8
+          },
+          {
+            "name": "Equipment",
+            "value": 57.1
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 6.5
+          }
+        ],
+        "pv": 78.1
+      },
+      "EEM4": {
+        "total": 63.2,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 3.8
+          },
+          {
+            "name": "Cooling",
+            "value": 2.7
+          },
+          {
+            "name": "DHW",
+            "value": 11.3
           },
           {
             "name": "Lighting",
@@ -18690,10 +18690,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.1
+            "value": 6.4
           }
         ],
-        "pv": 78.0
+        "pv": 78.1
       }
     },
     "RS-I1": {
@@ -18792,19 +18792,19 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.7
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 9.4
+            "value": 7.1
           },
           {
             "name": "DHW",
-            "value": 39.9
+            "value": 40.1
           },
           {
             "name": "Lighting",
-            "value": 8.3
+            "value": 8.4
           },
           {
             "name": "Equipment",
@@ -18812,29 +18812,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 8.9
           }
         ],
         "pv": 100.6
       },
       "EEM3": {
-        "total": 94.5,
+        "total": 94.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.1
+            "value": 9.4
           },
           {
             "name": "Cooling",
-            "value": 9.2
+            "value": 7.0
           },
           {
             "name": "DHW",
-            "value": 13.0
+            "value": 13.2
           },
           {
             "name": "Lighting",
-            "value": 8.3
+            "value": 8.4
           },
           {
             "name": "Equipment",
@@ -18842,29 +18842,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 9.0
           }
         ],
         "pv": 100.6
       },
       "EEM4": {
-        "total": 76.8,
+        "total": 78.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.5
+            "value": 10.3
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 13.1
+            "value": 13.2
           },
           {
             "name": "Lighting",
-            "value": 3.6
+            "value": 3.7
           },
           {
             "name": "Equipment",
@@ -18872,7 +18872,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.2
           }
         ],
         "pv": 100.6
@@ -18970,15 +18970,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 76.6
       },
       "EEM2": {
-        "total": 93.8,
+        "total": 95.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.8
+            "value": 8.1
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 5.3
           },
           {
             "name": "DHW",
@@ -18986,7 +18986,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.4
+            "value": 9.6
           },
           {
             "name": "Equipment",
@@ -19000,15 +19000,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 76.6
       },
       "EEM3": {
-        "total": 75.0,
+        "total": 77.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.5
+            "value": 9.8
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 5.1
           },
           {
             "name": "DHW",
@@ -19016,7 +19016,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.4
+            "value": 9.6
           },
           {
             "name": "Equipment",
@@ -19030,15 +19030,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 76.6
       },
       "EEM4": {
-        "total": 59.1,
+        "total": 62.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.1
+            "value": 11.1
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 3.7
           },
           {
             "name": "DHW",
@@ -19046,7 +19046,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.0
+            "value": 4.1
           },
           {
             "name": "Equipment",
@@ -19054,7 +19054,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.4
+            "value": 6.6
           }
         ],
         "pv": 76.6
@@ -19152,23 +19152,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 125.7
       },
       "EEM2": {
-        "total": 115.2,
+        "total": 121.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.8
+            "value": 8.8
           },
           {
             "name": "Cooling",
-            "value": 6.0
+            "value": 5.5
           },
           {
             "name": "DHW",
-            "value": 23.2
+            "value": 23.8
           },
           {
             "name": "Lighting",
-            "value": 10.3
+            "value": 10.4
           },
           {
             "name": "Equipment",
@@ -19176,29 +19176,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 10.5
           }
         ],
         "pv": 125.7
       },
       "EEM3": {
-        "total": 100.4,
+        "total": 106.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.5
+            "value": 10.5
           },
           {
             "name": "Cooling",
-            "value": 6.0
+            "value": 5.5
           },
           {
             "name": "DHW",
-            "value": 6.7
+            "value": 7.0
           },
           {
             "name": "Lighting",
-            "value": 10.3
+            "value": 10.4
           },
           {
             "name": "Equipment",
@@ -19206,29 +19206,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 10.6
           }
         ],
         "pv": 125.7
       },
       "EEM4": {
-        "total": 78.5,
+        "total": 84.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.4
+            "value": 11.7
           },
           {
             "name": "Cooling",
-            "value": 4.3
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 7.1
           },
           {
             "name": "Lighting",
-            "value": 4.7
+            "value": 4.8
           },
           {
             "name": "Equipment",
@@ -19236,7 +19236,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 10.4
           }
         ],
         "pv": 125.7
@@ -19334,23 +19334,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 83.4
       },
       "EEM2": {
-        "total": 90.6,
+        "total": 92.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.3
+            "value": 6.2
           },
           {
             "name": "Cooling",
-            "value": 7.8
+            "value": 6.2
           },
           {
             "name": "DHW",
-            "value": 32.3
+            "value": 32.4
           },
           {
             "name": "Lighting",
-            "value": 9.0
+            "value": 9.2
           },
           {
             "name": "Equipment",
@@ -19358,29 +19358,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.4
           }
         ],
         "pv": 83.4
       },
       "EEM3": {
-        "total": 71.2,
+        "total": 73.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.3
+            "value": 7.2
           },
           {
             "name": "Cooling",
-            "value": 7.5
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 12.1
+            "value": 12.2
           },
           {
             "name": "Lighting",
-            "value": 9.0
+            "value": 9.2
           },
           {
             "name": "Equipment",
@@ -19388,25 +19388,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.4
           }
         ],
         "pv": 83.4
       },
       "EEM4": {
-        "total": 56.0,
+        "total": 58.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.7
+            "value": 7.9
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.3
           },
           {
             "name": "DHW",
-            "value": 12.1
+            "value": 12.2
           },
           {
             "name": "Lighting",
@@ -19418,7 +19418,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 7.2
           }
         ],
         "pv": 83.4
@@ -19516,49 +19516,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 90.3
       },
       "EEM2": {
-        "total": 145.7,
+        "total": 149.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.7
+            "value": 11.6
           },
           {
             "name": "Cooling",
-            "value": 7.0
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 36.1
-          },
-          {
-            "name": "Lighting",
-            "value": 7.8
-          },
-          {
-            "name": "Equipment",
-            "value": 73.3
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 9.2
-          }
-        ],
-        "pv": 90.3
-      },
-      "EEM3": {
-        "total": 123.8,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 12.1
-          },
-          {
-            "name": "Cooling",
-            "value": 7.1
-          },
-          {
-            "name": "DHW",
-            "value": 9.6
+            "value": 36.7
           },
           {
             "name": "Lighting",
@@ -19573,22 +19543,52 @@ const ENVELOPE_ENERGY_DATA = {
             "value": 9.3
           }
         ],
-        "pv": 90.3
+        "pv": 90.4
       },
-      "EEM4": {
-        "total": 100.3,
+      "EEM3": {
+        "total": 127.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.2
+            "value": 16.0
           },
           {
             "name": "Cooling",
-            "value": 5.1
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 9.6
+            "value": 9.9
+          },
+          {
+            "name": "Lighting",
+            "value": 7.8
+          },
+          {
+            "name": "Equipment",
+            "value": 73.3
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 9.4
+          }
+        ],
+        "pv": 90.4
+      },
+      "EEM4": {
+        "total": 104.7,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 17.5
+          },
+          {
+            "name": "Cooling",
+            "value": 4.4
+          },
+          {
+            "name": "DHW",
+            "value": 10.0
           },
           {
             "name": "Lighting",
@@ -19600,10 +19600,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 9.1
           }
         ],
-        "pv": 90.3
+        "pv": 90.4
       }
     }
   },
@@ -19700,15 +19700,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 30.8
       },
       "EEM2": {
-        "total": 97.8,
+        "total": 97.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.5
+            "value": 3.9
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -19724,21 +19724,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 8.0
           }
         ],
         "pv": 30.8
       },
       "EEM3": {
-        "total": 84.7,
+        "total": 84.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.9
+            "value": 6.3
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -19754,21 +19754,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.9
+            "value": 8.1
           }
         ],
         "pv": 30.8
       },
       "EEM4": {
-        "total": 62.3,
+        "total": 63.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.1
+            "value": 7.1
           },
           {
             "name": "Cooling",
-            "value": 4.1
+            "value": 3.5
           },
           {
             "name": "DHW",
@@ -19784,7 +19784,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 6.3
           }
         ],
         "pv": 30.8
@@ -19882,15 +19882,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 27.9
       },
       "EEM2": {
-        "total": 81.2,
+        "total": 80.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 2.2
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 4.3
           },
           {
             "name": "DHW",
@@ -19906,21 +19906,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.8
           }
         ],
         "pv": 27.9
       },
       "EEM3": {
-        "total": 71.6,
+        "total": 71.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.8
+            "value": 3.3
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 4.3
           },
           {
             "name": "DHW",
@@ -19936,21 +19936,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 7.8
           }
         ],
         "pv": 27.9
       },
       "EEM4": {
-        "total": 48.1,
+        "total": 48.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.9
+            "value": 3.7
           },
           {
             "name": "Cooling",
-            "value": 3.4
+            "value": 3.2
           },
           {
             "name": "DHW",
@@ -19966,7 +19966,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.7
+            "value": 5.4
           }
         ],
         "pv": 27.9
@@ -20064,15 +20064,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 51.9
       },
       "EEM2": {
-        "total": 143.7,
+        "total": 146.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.2
+            "value": 18.8
           },
           {
             "name": "Cooling",
-            "value": 13.4
+            "value": 13.1
           },
           {
             "name": "DHW",
@@ -20088,21 +20088,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.8
+            "value": 31.4
           }
         ],
         "pv": 51.9
       },
       "EEM3": {
-        "total": 128.6,
+        "total": 131.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.2
+            "value": 20.8
           },
           {
             "name": "Cooling",
-            "value": 13.4
+            "value": 13.1
           },
           {
             "name": "DHW",
@@ -20118,21 +20118,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.8
+            "value": 31.6
           }
         ],
         "pv": 51.9
       },
       "EEM4": {
-        "total": 105.3,
+        "total": 109.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.6
+            "value": 20.4
           },
           {
             "name": "Cooling",
-            "value": 11.7
+            "value": 11.4
           },
           {
             "name": "DHW",
@@ -20140,7 +20140,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.8
+            "value": 12.7
           },
           {
             "name": "Equipment",
@@ -20148,7 +20148,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.8
+            "value": 30.4
           }
         ],
         "pv": 51.9
@@ -20246,67 +20246,7 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 55.0
       },
       "EEM2": {
-        "total": 142.1,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 11.0
-          },
-          {
-            "name": "Cooling",
-            "value": 14.7
-          },
-          {
-            "name": "DHW",
-            "value": 23.2
-          },
-          {
-            "name": "Lighting",
-            "value": 21.6
-          },
-          {
-            "name": "Equipment",
-            "value": 34.5
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 30.1
-          }
-        ],
-        "pv": 55.0
-      },
-      "EEM3": {
-        "total": 125.4,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 12.3
-          },
-          {
-            "name": "Cooling",
-            "value": 14.6
-          },
-          {
-            "name": "DHW",
-            "value": 5.2
-          },
-          {
-            "name": "Lighting",
-            "value": 21.6
-          },
-          {
-            "name": "Equipment",
-            "value": 34.5
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 30.1
-          }
-        ],
-        "pv": 55.0
-      },
-      "EEM4": {
-        "total": 104.6,
+        "total": 142.4,
         "breakdown": [
           {
             "name": "Heating",
@@ -20314,7 +20254,67 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Cooling",
-            "value": 12.8
+            "value": 14.3
+          },
+          {
+            "name": "DHW",
+            "value": 23.3
+          },
+          {
+            "name": "Lighting",
+            "value": 21.6
+          },
+          {
+            "name": "Equipment",
+            "value": 34.5
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 30.0
+          }
+        ],
+        "pv": 55.0
+      },
+      "EEM3": {
+        "total": 125.5,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 13.0
+          },
+          {
+            "name": "Cooling",
+            "value": 14.3
+          },
+          {
+            "name": "DHW",
+            "value": 5.3
+          },
+          {
+            "name": "Lighting",
+            "value": 21.6
+          },
+          {
+            "name": "Equipment",
+            "value": 34.5
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 30.0
+          }
+        ],
+        "pv": 55.0
+      },
+      "EEM4": {
+        "total": 105.3,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 12.3
+          },
+          {
+            "name": "Cooling",
+            "value": 12.6
           },
           {
             "name": "DHW",
@@ -20330,7 +20330,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 28.7
+            "value": 29.2
           }
         ],
         "pv": 55.0
@@ -20428,15 +20428,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 8.9
       },
       "EEM2": {
-        "total": 100.5,
+        "total": 97.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.3
+            "value": 2.3
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 5.9
           },
           {
             "name": "DHW",
@@ -20444,7 +20444,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.3
+            "value": 12.1
           },
           {
             "name": "Equipment",
@@ -20452,29 +20452,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.5
+            "value": 11.4
           }
         ],
-        "pv": 8.9
+        "pv": 9.0
       },
       "EEM3": {
-        "total": 81.0,
+        "total": 78.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 2.7
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 5.9
           },
           {
             "name": "DHW",
-            "value": 9.2
+            "value": 9.1
           },
           {
             "name": "Lighting",
-            "value": 12.3
+            "value": 12.1
           },
           {
             "name": "Equipment",
@@ -20482,29 +20482,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.5
+            "value": 11.4
           }
         ],
-        "pv": 8.9
+        "pv": 9.0
       },
       "EEM4": {
-        "total": 60.2,
+        "total": 58.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.9
+            "value": 3.2
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 4.7
           },
           {
             "name": "DHW",
-            "value": 9.2
+            "value": 9.1
           },
           {
             "name": "Lighting",
-            "value": 6.1
+            "value": 5.9
           },
           {
             "name": "Equipment",
@@ -20512,10 +20512,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 9.7
           }
         ],
-        "pv": 8.9
+        "pv": 9.0
       }
     },
     "CC-FD2": {
@@ -20610,15 +20610,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 15.5
       },
       "EEM2": {
-        "total": 99.5,
+        "total": 96.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.0
+            "value": 2.9
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 5.9
           },
           {
             "name": "DHW",
@@ -20626,7 +20626,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.2
+            "value": 13.1
           },
           {
             "name": "Equipment",
@@ -20634,29 +20634,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 9.0
           }
         ],
-        "pv": 15.5
+        "pv": 15.6
       },
       "EEM3": {
-        "total": 84.2,
+        "total": 81.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.0
+            "value": 3.9
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 5.9
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 6.5
           },
           {
             "name": "Lighting",
-            "value": 13.2
+            "value": 13.1
           },
           {
             "name": "Equipment",
@@ -20664,29 +20664,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 9.1
           }
         ],
-        "pv": 15.5
+        "pv": 15.6
       },
       "EEM4": {
-        "total": 61.5,
+        "total": 59.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.3
+            "value": 4.5
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 4.5
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 6.5
           },
           {
             "name": "Lighting",
-            "value": 6.3
+            "value": 6.2
           },
           {
             "name": "Equipment",
@@ -20694,10 +20694,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 7.1
           }
         ],
-        "pv": 15.5
+        "pv": 15.6
       }
     },
     "CC-FD3": {
@@ -20792,15 +20792,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 13.1
       },
       "EEM2": {
-        "total": 107.1,
+        "total": 105.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.7
+            "value": 3.0
           },
           {
             "name": "Cooling",
-            "value": 8.8
+            "value": 7.0
           },
           {
             "name": "DHW",
@@ -20808,7 +20808,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.4
+            "value": 13.2
           },
           {
             "name": "Equipment",
@@ -20816,21 +20816,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 10.4
           }
         ],
         "pv": 13.1
       },
       "EEM3": {
-        "total": 87.7,
+        "total": 85.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.2
+            "value": 3.4
           },
           {
             "name": "Cooling",
-            "value": 8.8
+            "value": 7.0
           },
           {
             "name": "DHW",
@@ -20838,7 +20838,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.4
+            "value": 13.2
           },
           {
             "name": "Equipment",
@@ -20846,21 +20846,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 10.4
           }
         ],
         "pv": 13.1
       },
       "EEM4": {
-        "total": 65.4,
+        "total": 64.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.4
+            "value": 4.0
           },
           {
             "name": "Cooling",
-            "value": 6.9
+            "value": 5.5
           },
           {
             "name": "DHW",
@@ -20868,7 +20868,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.6
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -20876,7 +20876,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 8.4
           }
         ],
         "pv": 13.1
@@ -20974,15 +20974,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 127.2
       },
       "EEM2": {
-        "total": 178.0,
+        "total": 189.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.2
+            "value": 30.3
           },
           {
             "name": "Cooling",
-            "value": 8.9
+            "value": 8.0
           },
           {
             "name": "DHW",
@@ -20990,7 +20990,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.2
+            "value": 36.4
           },
           {
             "name": "Equipment",
@@ -21004,23 +21004,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 127.2
       },
       "EEM3": {
-        "total": 160.8,
+        "total": 172.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.5
+            "value": 34.5
           },
           {
             "name": "Cooling",
-            "value": 8.9
+            "value": 8.0
           },
           {
             "name": "DHW",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Lighting",
-            "value": 36.2
+            "value": 36.4
           },
           {
             "name": "Equipment",
@@ -21034,23 +21034,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 127.2
       },
       "EEM4": {
-        "total": 129.4,
+        "total": 143.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.4
+            "value": 38.1
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Lighting",
-            "value": 16.8
+            "value": 17.0
           },
           {
             "name": "Equipment",
@@ -21058,7 +21058,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 11.1
           }
         ],
         "pv": 127.2
@@ -21156,15 +21156,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 183.9
       },
       "EEM2": {
-        "total": 244.4,
+        "total": 260.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.6
+            "value": 38.1
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 10.2
           },
           {
             "name": "DHW",
@@ -21172,7 +21172,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 63.4
+            "value": 63.8
           },
           {
             "name": "Equipment",
@@ -21180,29 +21180,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 15.9
+            "value": 17.1
           }
         ],
         "pv": 183.9
       },
       "EEM3": {
-        "total": 226.2,
+        "total": 242.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.5
+            "value": 42.0
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 10.2
           },
           {
             "name": "DHW",
-            "value": 2.8
+            "value": 2.9
           },
           {
             "name": "Lighting",
-            "value": 63.4
+            "value": 63.8
           },
           {
             "name": "Equipment",
@@ -21210,21 +21210,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 16.0
+            "value": 17.2
           }
         ],
         "pv": 183.9
       },
       "EEM4": {
-        "total": 182.5,
+        "total": 199.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 29.0
+            "value": 44.5
           },
           {
             "name": "Cooling",
-            "value": 5.2
+            "value": 5.3
           },
           {
             "name": "DHW",
@@ -21232,7 +21232,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 29.4
+            "value": 29.7
           },
           {
             "name": "Equipment",
@@ -21240,7 +21240,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 14.9
+            "value": 16.4
           }
         ],
         "pv": 183.9
@@ -21338,15 +21338,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 163.9
       },
       "EEM2": {
-        "total": 3656.5,
+        "total": 3644.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.5
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 447.6
+            "value": 442.4
           },
           {
             "name": "DHW",
@@ -21354,29 +21354,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 31.8
+            "value": 31.9
           },
           {
             "name": "Equipment",
-            "value": 2714.1
+            "value": 2714.0
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.7
+            "value": 325.4
           }
         ],
         "pv": 163.9
       },
       "EEM3": {
-        "total": 3648.4,
+        "total": 3636.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.0
+            "value": 16.0
           },
           {
             "name": "Cooling",
-            "value": 447.6
+            "value": 442.5
           },
           {
             "name": "DHW",
@@ -21384,29 +21384,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 31.8
+            "value": 31.9
           },
           {
             "name": "Equipment",
-            "value": 2714.1
+            "value": 2714.0
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.8
+            "value": 325.4
           }
         ],
         "pv": 163.9
       },
       "EEM4": {
-        "total": 3643.2,
+        "total": 3631.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.1
+            "value": 17.3
           },
           {
             "name": "Cooling",
-            "value": 447.1
+            "value": 442.0
           },
           {
             "name": "DHW",
@@ -21422,7 +21422,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 332.3
+            "value": 325.0
           }
         ],
         "pv": 163.9
@@ -21520,15 +21520,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 119.5
       },
       "EEM2": {
-        "total": 11926.1,
+        "total": 11922.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.7
+            "value": 20.1
           },
           {
             "name": "Cooling",
-            "value": 1380.8
+            "value": 1378.5
           },
           {
             "name": "DHW",
@@ -21540,29 +21540,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9035.3
+            "value": 9035.6
           },
           {
             "name": "Fans & Pumps",
-            "value": 1115.4
+            "value": 1109.8
           }
         ],
         "pv": 119.5
       },
       "EEM3": {
-        "total": 11916.3,
+        "total": 11913.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.7
+            "value": 22.2
           },
           {
             "name": "Cooling",
-            "value": 1380.8
+            "value": 1378.5
           },
           {
             "name": "DHW",
-            "value": 1.3
+            "value": 1.4
           },
           {
             "name": "Lighting",
@@ -21570,29 +21570,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9035.3
+            "value": 9035.6
           },
           {
             "name": "Fans & Pumps",
-            "value": 1115.5
+            "value": 1109.8
           }
         ],
         "pv": 119.5
       },
       "EEM4": {
-        "total": 11905.4,
+        "total": 11903.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.8
+            "value": 23.8
           },
           {
             "name": "Cooling",
-            "value": 1380.0
+            "value": 1377.7
           },
           {
             "name": "DHW",
-            "value": 1.3
+            "value": 1.4
           },
           {
             "name": "Lighting",
@@ -21600,11 +21600,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9028.8
+            "value": 9029.1
           },
           {
             "name": "Fans & Pumps",
-            "value": 1114.9
+            "value": 1109.2
           }
         ],
         "pv": 119.5
@@ -21702,15 +21702,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 26.0
       },
       "EEM2": {
-        "total": 150.5,
+        "total": 150.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.2
+            "value": 13.4
           },
           {
             "name": "Cooling",
-            "value": 12.6
+            "value": 10.1
           },
           {
             "name": "DHW",
@@ -21726,25 +21726,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.8
+            "value": 18.8
           }
         ],
-        "pv": 26.0
+        "pv": 26.1
       },
       "EEM3": {
-        "total": 121.4,
+        "total": 121.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.1
+            "value": 18.3
           },
           {
             "name": "Cooling",
-            "value": 12.5
+            "value": 10.1
           },
           {
             "name": "DHW",
-            "value": 7.0
+            "value": 6.8
           },
           {
             "name": "Lighting",
@@ -21756,21 +21756,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.8
+            "value": 18.9
           }
         ],
-        "pv": 26.0
+        "pv": 26.1
       },
       "EEM4": {
-        "total": 105.9,
+        "total": 107.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.4
+            "value": 19.4
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 8.7
           },
           {
             "name": "DHW",
@@ -21778,7 +21778,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 5.3
+            "value": 5.4
           },
           {
             "name": "Equipment",
@@ -21786,10 +21786,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 18.1
+            "value": 17.6
           }
         ],
-        "pv": 26.0
+        "pv": 26.1
       }
     },
     "MU-C2": {
@@ -21888,11 +21888,11 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.9
+            "value": 5.1
           },
           {
             "name": "Cooling",
-            "value": 7.4
+            "value": 5.6
           },
           {
             "name": "DHW",
@@ -21900,7 +21900,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.6
+            "value": 7.7
           },
           {
             "name": "Equipment",
@@ -21908,21 +21908,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 8.5
           }
         ],
         "pv": 21.4
       },
       "EEM3": {
-        "total": 73.3,
+        "total": 73.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.6
+            "value": 9.9
           },
           {
             "name": "Cooling",
-            "value": 7.4
+            "value": 5.6
           },
           {
             "name": "DHW",
@@ -21930,7 +21930,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.6
+            "value": 7.7
           },
           {
             "name": "Equipment",
@@ -21938,21 +21938,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 8.6
           }
         ],
         "pv": 21.4
       },
       "EEM4": {
-        "total": 55.9,
+        "total": 57.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.1
+            "value": 11.0
           },
           {
             "name": "Cooling",
-            "value": 5.2
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -21968,7 +21968,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.2
+            "value": 7.0
           }
         ],
         "pv": 21.4
@@ -22066,15 +22066,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 48.0
       },
       "EEM2": {
-        "total": 121.2,
+        "total": 121.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.9
+            "value": 11.9
           },
           {
             "name": "Cooling",
-            "value": 12.7
+            "value": 9.5
           },
           {
             "name": "DHW",
@@ -22082,7 +22082,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.0
+            "value": 8.1
           },
           {
             "name": "Equipment",
@@ -22090,21 +22090,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 9.7
           }
         ],
-        "pv": 48.0
+        "pv": 48.1
       },
       "EEM3": {
-        "total": 89.4,
+        "total": 89.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.6
+            "value": 16.7
           },
           {
             "name": "Cooling",
-            "value": 12.6
+            "value": 9.5
           },
           {
             "name": "DHW",
@@ -22112,7 +22112,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.0
+            "value": 8.1
           },
           {
             "name": "Equipment",
@@ -22120,21 +22120,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 9.8
           }
         ],
-        "pv": 48.0
+        "pv": 48.1
       },
       "EEM4": {
-        "total": 74.1,
+        "total": 76.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.0
+            "value": 18.3
           },
           {
             "name": "Cooling",
-            "value": 9.7
+            "value": 7.3
           },
           {
             "name": "DHW",
@@ -22142,7 +22142,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Equipment",
@@ -22150,10 +22150,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 9.0
           }
         ],
-        "pv": 48.0
+        "pv": 48.1
       }
     },
     "MU-HS": {
@@ -22248,19 +22248,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 83.4
       },
       "EEM2": {
-        "total": 133.1,
+        "total": 137.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.7
+            "value": 15.2
           },
           {
             "name": "Cooling",
-            "value": 12.2
+            "value": 10.5
           },
           {
             "name": "DHW",
-            "value": 40.5
+            "value": 40.7
           },
           {
             "name": "Lighting",
@@ -22272,21 +22272,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 11.0
           }
         ],
         "pv": 83.4
       },
       "EEM3": {
-        "total": 107.5,
+        "total": 111.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.1
+            "value": 17.6
           },
           {
             "name": "Cooling",
-            "value": 12.1
+            "value": 10.3
           },
           {
             "name": "DHW",
@@ -22302,21 +22302,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 11.0
           }
         ],
         "pv": 83.4
       },
       "EEM4": {
-        "total": 92.2,
+        "total": 97.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.9
+            "value": 18.7
           },
           {
             "name": "Cooling",
-            "value": 9.7
+            "value": 8.4
           },
           {
             "name": "DHW",
@@ -22324,7 +22324,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.9
+            "value": 5.0
           },
           {
             "name": "Equipment",
@@ -22332,7 +22332,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 10.9
           }
         ],
         "pv": 83.4
@@ -22430,23 +22430,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 79.3
       },
       "EEM2": {
-        "total": 121.6,
+        "total": 127.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.2
+            "value": 16.7
           },
           {
             "name": "Cooling",
-            "value": 10.9
+            "value": 8.8
           },
           {
             "name": "DHW",
-            "value": 43.4
+            "value": 43.5
           },
           {
             "name": "Lighting",
-            "value": 7.3
+            "value": 7.4
           },
           {
             "name": "Equipment",
@@ -22454,21 +22454,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 9.4
           }
         ],
         "pv": 79.3
       },
       "EEM3": {
-        "total": 94.1,
+        "total": 100.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.8
+            "value": 18.3
           },
           {
             "name": "Cooling",
-            "value": 10.6
+            "value": 8.6
           },
           {
             "name": "DHW",
@@ -22476,7 +22476,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.3
+            "value": 7.4
           },
           {
             "name": "Equipment",
@@ -22484,25 +22484,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.4
           }
         ],
         "pv": 79.3
       },
       "EEM4": {
-        "total": 79.1,
+        "total": 86.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.2
+            "value": 19.9
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 6.3
           },
           {
             "name": "DHW",
-            "value": 14.7
+            "value": 14.8
           },
           {
             "name": "Lighting",
@@ -22514,7 +22514,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 8.7
           }
         ],
         "pv": 79.3
@@ -22612,15 +22612,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 75.9
       },
       "EEM2": {
-        "total": 143.9,
+        "total": 145.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.4
+            "value": 14.0
           },
           {
             "name": "Cooling",
-            "value": 10.7
+            "value": 8.9
           },
           {
             "name": "DHW",
@@ -22628,7 +22628,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 18.0
+            "value": 18.1
           },
           {
             "name": "Equipment",
@@ -22636,29 +22636,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.3
+            "value": 9.9
           }
         ],
-        "pv": 75.9
+        "pv": 76.2
       },
       "EEM3": {
-        "total": 115.9,
+        "total": 117.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.8
+            "value": 17.5
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 8.7
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.3
           },
           {
             "name": "Lighting",
-            "value": 18.0
+            "value": 18.1
           },
           {
             "name": "Equipment",
@@ -22666,29 +22666,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 9.9
           }
         ],
-        "pv": 75.9
+        "pv": 76.2
       },
       "EEM4": {
-        "total": 94.4,
+        "total": 97.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.2
+            "value": 18.9
           },
           {
             "name": "Cooling",
-            "value": 7.1
+            "value": 5.9
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.3
           },
           {
             "name": "Lighting",
-            "value": 8.3
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -22696,10 +22696,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.3
+            "value": 9.1
           }
         ],
-        "pv": 75.9
+        "pv": 76.2
       }
     },
     "MU-S2": {
@@ -22794,23 +22794,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 101.1
       },
       "EEM2": {
-        "total": 140.8,
+        "total": 143.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.4
+            "value": 11.6
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 9.8
           },
           {
             "name": "DHW",
-            "value": 44.1
+            "value": 44.2
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -22818,21 +22818,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.5
+            "value": 10.9
           }
         ],
         "pv": 101.1
       },
       "EEM3": {
-        "total": 114.4,
+        "total": 117.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.9
+            "value": 14.1
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 9.6
           },
           {
             "name": "DHW",
@@ -22840,7 +22840,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -22848,29 +22848,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 11.0
           }
         ],
         "pv": 101.1
       },
       "EEM4": {
-        "total": 91.6,
+        "total": 95.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.5
+            "value": 15.2
           },
           {
             "name": "Cooling",
-            "value": 7.1
+            "value": 6.4
           },
           {
             "name": "DHW",
-            "value": 15.5
+            "value": 15.6
           },
           {
             "name": "Lighting",
-            "value": 9.9
+            "value": 10.0
           },
           {
             "name": "Equipment",
@@ -22878,7 +22878,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 10.3
           }
         ],
         "pv": 101.1
@@ -22976,15 +22976,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 20.1
       },
       "EEM2": {
-        "total": 84.1,
+        "total": 84.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.0
+            "value": 4.3
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 5.4
           },
           {
             "name": "DHW",
@@ -23000,25 +23000,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 8.0
           }
         ],
         "pv": 20.1
       },
       "EEM3": {
-        "total": 63.8,
+        "total": 63.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.0
+            "value": 8.3
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 5.4
           },
           {
             "name": "DHW",
-            "value": 4.0
+            "value": 3.9
           },
           {
             "name": "Lighting",
@@ -23030,29 +23030,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 8.0
           }
         ],
         "pv": 20.1
       },
       "EEM4": {
-        "total": 45.6,
+        "total": 46.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.4
+            "value": 9.5
           },
           {
             "name": "Cooling",
-            "value": 5.0
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 4.1
+            "value": 3.9
           },
           {
             "name": "Lighting",
-            "value": 3.1
+            "value": 3.2
           },
           {
             "name": "Equipment",
@@ -23060,7 +23060,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.5
+            "value": 6.3
           }
         ],
         "pv": 20.1
@@ -23158,15 +23158,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 82.3
       },
       "EEM2": {
-        "total": 100.8,
+        "total": 105.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.3
+            "value": 16.8
           },
           {
             "name": "Cooling",
-            "value": 6.9
+            "value": 5.9
           },
           {
             "name": "DHW",
@@ -23182,25 +23182,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 7.2
           }
         ],
         "pv": 82.3
       },
       "EEM3": {
-        "total": 80.9,
+        "total": 86.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.1
+            "value": 18.6
           },
           {
             "name": "Cooling",
-            "value": 6.7
+            "value": 5.7
           },
           {
             "name": "DHW",
-            "value": 9.6
+            "value": 9.7
           },
           {
             "name": "Lighting",
@@ -23212,29 +23212,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 7.3
           }
         ],
         "pv": 82.3
       },
       "EEM4": {
-        "total": 71.3,
+        "total": 77.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.2
+            "value": 19.9
           },
           {
             "name": "Cooling",
-            "value": 5.1
+            "value": 4.4
           },
           {
             "name": "DHW",
-            "value": 9.6
+            "value": 9.7
           },
           {
             "name": "Lighting",
-            "value": 3.0
+            "value": 3.1
           },
           {
             "name": "Equipment",
@@ -23242,7 +23242,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.2
+            "value": 6.8
           }
         ],
         "pv": 82.3
@@ -23340,15 +23340,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 121.7
       },
       "EEM2": {
-        "total": 78.8,
+        "total": 88.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.8
+            "value": 28.6
           },
           {
             "name": "Cooling",
-            "value": 2.1
+            "value": 2.2
           },
           {
             "name": "DHW",
@@ -23356,7 +23356,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.0
+            "value": 8.1
           },
           {
             "name": "Equipment",
@@ -23364,21 +23364,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.3
+            "value": 5.0
           }
         ],
         "pv": 121.7
       },
       "EEM3": {
-        "total": 69.1,
+        "total": 78.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.6
+            "value": 30.4
           },
           {
             "name": "Cooling",
-            "value": 2.1
+            "value": 2.2
           },
           {
             "name": "DHW",
@@ -23386,7 +23386,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.0
+            "value": 8.1
           },
           {
             "name": "Equipment",
@@ -23394,21 +23394,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.4
+            "value": 5.0
           }
         ],
         "pv": 121.7
       },
       "EEM4": {
-        "total": 63.0,
+        "total": 72.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 23.6
+            "value": 32.3
           },
           {
             "name": "Cooling",
-            "value": 1.6
+            "value": 1.8
           },
           {
             "name": "DHW",
@@ -23424,7 +23424,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 3.7
+            "value": 4.5
           }
         ],
         "pv": 121.7
@@ -23522,79 +23522,79 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 101.0
       },
       "EEM2": {
-        "total": 89.8,
+        "total": 97.1,
         "breakdown": [
           {
             "name": "Heating",
+            "value": 10.2
+          },
+          {
+            "name": "Cooling",
+            "value": 5.0
+          },
+          {
+            "name": "DHW",
+            "value": 22.6
+          },
+          {
+            "name": "Lighting",
+            "value": 4.7
+          },
+          {
+            "name": "Equipment",
+            "value": 46.6
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 7.3
+          }
+        ],
+        "pv": 101.1
+      },
+      "EEM3": {
+        "total": 84.4,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 12.8
+          },
+          {
+            "name": "Cooling",
+            "value": 5.0
+          },
+          {
+            "name": "DHW",
+            "value": 7.0
+          },
+          {
+            "name": "Lighting",
+            "value": 4.7
+          },
+          {
+            "name": "Equipment",
+            "value": 46.6
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 7.4
+          }
+        ],
+        "pv": 101.1
+      },
+      "EEM4": {
+        "total": 64.5,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 14.2
+          },
+          {
+            "name": "Cooling",
             "value": 4.0
           },
           {
-            "name": "Cooling",
-            "value": 5.8
-          },
-          {
             "name": "DHW",
-            "value": 21.7
-          },
-          {
-            "name": "Lighting",
-            "value": 4.7
-          },
-          {
-            "name": "Equipment",
-            "value": 46.6
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 6.3
-          }
-        ],
-        "pv": 101.0
-      },
-      "EEM3": {
-        "total": 77.6,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 6.7
-          },
-          {
-            "name": "Cooling",
-            "value": 5.8
-          },
-          {
-            "name": "DHW",
-            "value": 6.6
-          },
-          {
-            "name": "Lighting",
-            "value": 4.7
-          },
-          {
-            "name": "Equipment",
-            "value": 46.6
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 6.4
-          }
-        ],
-        "pv": 101.0
-      },
-      "EEM4": {
-        "total": 57.4,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 8.0
-          },
-          {
-            "name": "Cooling",
-            "value": 4.5
-          },
-          {
-            "name": "DHW",
-            "value": 6.6
+            "value": 7.0
           },
           {
             "name": "Lighting",
@@ -23606,10 +23606,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.4
+            "value": 7.5
           }
         ],
-        "pv": 101.0
+        "pv": 101.1
       }
     },
     "RC-HR1": {
@@ -23704,15 +23704,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 46.2
       },
       "EEM2": {
-        "total": 98.6,
+        "total": 97.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.4
+            "value": 4.1
           },
           {
             "name": "Cooling",
-            "value": 13.4
+            "value": 9.7
           },
           {
             "name": "DHW",
@@ -23728,25 +23728,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 8.6
           }
         ],
         "pv": 46.2
       },
       "EEM3": {
-        "total": 66.1,
+        "total": 64.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.9
+            "value": 7.7
           },
           {
             "name": "Cooling",
-            "value": 13.2
+            "value": 9.5
           },
           {
             "name": "DHW",
-            "value": 12.3
+            "value": 12.2
           },
           {
             "name": "Lighting",
@@ -23758,29 +23758,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 8.7
           }
         ],
         "pv": 46.2
       },
       "EEM4": {
-        "total": 50.5,
+        "total": 51.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.3
+            "value": 8.8
           },
           {
             "name": "Cooling",
-            "value": 9.3
+            "value": 6.6
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.2
           },
           {
             "name": "Lighting",
-            "value": 1.7
+            "value": 1.8
           },
           {
             "name": "Equipment",
@@ -23788,7 +23788,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 7.8
           }
         ],
         "pv": 46.2
@@ -23886,15 +23886,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 28.1
       },
       "EEM2": {
-        "total": 105.1,
+        "total": 102.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.0
+            "value": 5.2
           },
           {
             "name": "Cooling",
-            "value": 14.5
+            "value": 9.5
           },
           {
             "name": "DHW",
@@ -23910,25 +23910,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.0
+            "value": 9.3
           }
         ],
         "pv": 28.1
       },
       "EEM3": {
-        "total": 67.7,
+        "total": 65.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.2
+            "value": 11.5
           },
           {
             "name": "Cooling",
-            "value": 14.4
+            "value": 9.5
           },
           {
             "name": "DHW",
-            "value": 8.1
+            "value": 7.9
           },
           {
             "name": "Lighting",
@@ -23940,29 +23940,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 9.4
           }
         ],
         "pv": 28.1
       },
       "EEM4": {
-        "total": 51.4,
+        "total": 52.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.8
+            "value": 13.2
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 6.5
           },
           {
             "name": "DHW",
-            "value": 8.2
+            "value": 7.9
           },
           {
             "name": "Lighting",
-            "value": 1.5
+            "value": 1.6
           },
           {
             "name": "Equipment",
@@ -23970,7 +23970,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 8.4
           }
         ],
         "pv": 28.1
@@ -24068,19 +24068,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 93.4
       },
       "EEM2": {
-        "total": 96.9,
+        "total": 103.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.7
+            "value": 8.3
           },
           {
             "name": "Cooling",
-            "value": 6.0
+            "value": 5.1
           },
           {
             "name": "DHW",
-            "value": 23.8
+            "value": 24.9
           },
           {
             "name": "Lighting",
@@ -24092,25 +24092,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.5
+            "value": 7.3
           }
         ],
         "pv": 93.4
       },
       "EEM3": {
-        "total": 83.4,
+        "total": 89.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.1
+            "value": 9.6
           },
           {
             "name": "Cooling",
-            "value": 6.0
+            "value": 5.1
           },
           {
             "name": "DHW",
-            "value": 8.8
+            "value": 9.3
           },
           {
             "name": "Lighting",
@@ -24122,25 +24122,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.6
+            "value": 7.4
           }
         ],
         "pv": 93.4
       },
       "EEM4": {
-        "total": 60.5,
+        "total": 67.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 11.1
           },
           {
             "name": "Cooling",
-            "value": 4.4
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 8.8
+            "value": 9.3
           },
           {
             "name": "Lighting",
@@ -24152,7 +24152,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.5
+            "value": 7.3
           }
         ],
         "pv": 93.4
@@ -24250,19 +24250,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 76.0
       },
       "EEM2": {
-        "total": 95.4,
+        "total": 96.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.2
+            "value": 3.9
           },
           {
             "name": "Cooling",
-            "value": 11.4
+            "value": 8.9
           },
           {
             "name": "DHW",
-            "value": 37.3
+            "value": 37.7
           },
           {
             "name": "Lighting",
@@ -24274,25 +24274,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 7.6
           }
         ],
         "pv": 76.0
       },
       "EEM3": {
-        "total": 72.9,
+        "total": 73.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.2
+            "value": 3.9
           },
           {
             "name": "Cooling",
-            "value": 11.1
+            "value": 8.7
           },
           {
             "name": "DHW",
-            "value": 14.9
+            "value": 15.3
           },
           {
             "name": "Lighting",
@@ -24304,29 +24304,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 7.6
           }
         ],
         "pv": 76.0
       },
       "EEM4": {
-        "total": 54.4,
+        "total": 56.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.6
+            "value": 5.0
           },
           {
             "name": "Cooling",
-            "value": 8.2
+            "value": 6.5
           },
           {
             "name": "DHW",
-            "value": 14.9
+            "value": 15.3
           },
           {
             "name": "Lighting",
-            "value": 2.3
+            "value": 2.4
           },
           {
             "name": "Equipment",
@@ -24334,7 +24334,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 7.2
           }
         ],
         "pv": 76.0
@@ -24436,15 +24436,15 @@ const ENVELOPE_ENERGY_DATA = {
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.8
+            "value": 4.1
           },
           {
             "name": "Cooling",
-            "value": 11.7
+            "value": 9.4
           },
           {
             "name": "DHW",
-            "value": 43.5
+            "value": 43.6
           },
           {
             "name": "Lighting",
@@ -24462,19 +24462,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.6
       },
       "EEM3": {
-        "total": 64.6,
+        "total": 64.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.8
+            "value": 4.2
           },
           {
             "name": "Cooling",
-            "value": 11.4
+            "value": 9.1
           },
           {
             "name": "DHW",
-            "value": 17.4
+            "value": 17.5
           },
           {
             "name": "Lighting",
@@ -24492,19 +24492,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.6
       },
       "EEM4": {
-        "total": 50.1,
+        "total": 51.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.1
+            "value": 5.0
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 6.5
           },
           {
             "name": "DHW",
-            "value": 17.4
+            "value": 17.5
           },
           {
             "name": "Lighting",
@@ -24516,7 +24516,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 7.1
           }
         ],
         "pv": 68.6
@@ -24614,19 +24614,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.6
       },
       "EEM2": {
-        "total": 90.6,
+        "total": 90.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.8
+            "value": 4.2
           },
           {
             "name": "Cooling",
-            "value": 11.3
+            "value": 9.0
           },
           {
             "name": "DHW",
-            "value": 43.5
+            "value": 43.6
           },
           {
             "name": "Lighting",
@@ -24644,19 +24644,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.6
       },
       "EEM3": {
-        "total": 64.1,
+        "total": 64.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.9
+            "value": 4.3
           },
           {
             "name": "Cooling",
-            "value": 10.9
+            "value": 8.7
           },
           {
             "name": "DHW",
-            "value": 17.4
+            "value": 17.5
           },
           {
             "name": "Lighting",
@@ -24674,19 +24674,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.6
       },
       "EEM4": {
-        "total": 49.6,
+        "total": 51.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.2
+            "value": 5.1
           },
           {
             "name": "Cooling",
-            "value": 7.9
+            "value": 6.2
           },
           {
             "name": "DHW",
-            "value": 17.4
+            "value": 17.5
           },
           {
             "name": "Lighting",
@@ -24698,7 +24698,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 7.0
           }
         ],
         "pv": 68.6
@@ -24796,19 +24796,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 91.0
       },
       "EEM2": {
-        "total": 90.0,
+        "total": 97.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.8
+            "value": 10.0
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.2
           },
           {
             "name": "DHW",
-            "value": 21.7
+            "value": 22.6
           },
           {
             "name": "Lighting",
@@ -24820,25 +24820,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.3
+            "value": 7.3
           }
         ],
-        "pv": 91.0
+        "pv": 91.1
       },
       "EEM3": {
-        "total": 77.8,
+        "total": 84.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.5
+            "value": 12.7
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.3
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 7.0
           },
           {
             "name": "Lighting",
@@ -24850,25 +24850,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.5
+            "value": 7.5
           }
         ],
-        "pv": 91.0
+        "pv": 91.1
       },
       "EEM4": {
-        "total": 57.5,
+        "total": 64.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.8
+            "value": 14.1
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 6.6
+            "value": 7.0
           },
           {
             "name": "Lighting",
@@ -24880,10 +24880,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.5
+            "value": 7.5
           }
         ],
-        "pv": 91.0
+        "pv": 91.1
       }
     },
     "RC-T": {
@@ -24978,19 +24978,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 85.6
       },
       "EEM2": {
-        "total": 104.3,
+        "total": 109.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.4
+            "value": 6.3
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 5.2
           },
           {
             "name": "DHW",
-            "value": 26.0
+            "value": 27.3
           },
           {
             "name": "Lighting",
@@ -25002,25 +25002,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 7.3
           }
         ],
-        "pv": 85.6
+        "pv": 85.7
       },
       "EEM3": {
-        "total": 89.5,
+        "total": 94.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 1.4
-          },
-          {
-            "name": "Cooling",
             "value": 6.2
           },
           {
+            "name": "Cooling",
+            "value": 5.2
+          },
+          {
             "name": "DHW",
-            "value": 11.1
+            "value": 11.7
           },
           {
             "name": "Lighting",
@@ -25032,25 +25032,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 7.3
           }
         ],
-        "pv": 85.6
+        "pv": 85.7
       },
       "EEM4": {
-        "total": 63.8,
+        "total": 69.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 2.7
+            "value": 7.9
           },
           {
             "name": "Cooling",
-            "value": 4.4
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 11.2
+            "value": 11.8
           },
           {
             "name": "Lighting",
@@ -25062,10 +25062,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.5
+            "value": 7.2
           }
         ],
-        "pv": 85.6
+        "pv": 85.7
       }
     },
     "RS-I1": {
@@ -25160,23 +25160,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 110.3
       },
       "EEM2": {
-        "total": 122.9,
+        "total": 124.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.7
+            "value": 9.9
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 8.9
           },
           {
             "name": "DHW",
-            "value": 39.9
+            "value": 40.1
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -25184,29 +25184,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.5
+            "value": 9.7
           }
         ],
         "pv": 110.3
       },
       "EEM3": {
-        "total": 98.7,
+        "total": 100.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.1
+            "value": 12.3
           },
           {
             "name": "Cooling",
-            "value": 10.6
+            "value": 8.7
           },
           {
             "name": "DHW",
-            "value": 13.5
+            "value": 13.6
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -25214,29 +25214,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 9.8
           }
         ],
         "pv": 110.3
       },
       "EEM4": {
-        "total": 81.1,
+        "total": 84.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.7
+            "value": 13.4
           },
           {
             "name": "Cooling",
-            "value": 7.9
+            "value": 6.6
           },
           {
             "name": "DHW",
-            "value": 13.5
+            "value": 13.6
           },
           {
             "name": "Lighting",
-            "value": 3.6
+            "value": 3.7
           },
           {
             "name": "Equipment",
@@ -25244,7 +25244,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 9.2
           }
         ],
         "pv": 110.3
@@ -25342,15 +25342,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 85.2
       },
       "EEM2": {
-        "total": 98.3,
+        "total": 102.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.2
+            "value": 11.5
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 7.3
           },
           {
             "name": "DHW",
@@ -25358,7 +25358,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.3
+            "value": 9.4
           },
           {
             "name": "Equipment",
@@ -25366,21 +25366,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 8.5
           }
         ],
         "pv": 85.2
       },
       "EEM3": {
-        "total": 79.8,
+        "total": 83.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.9
+            "value": 13.2
           },
           {
             "name": "Cooling",
-            "value": 8.2
+            "value": 7.2
           },
           {
             "name": "DHW",
@@ -25388,7 +25388,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.3
+            "value": 9.4
           },
           {
             "name": "Equipment",
@@ -25396,21 +25396,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 8.5
           }
         ],
         "pv": 85.2
       },
       "EEM4": {
-        "total": 63.3,
+        "total": 68.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.4
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 5.5
           },
           {
             "name": "DHW",
@@ -25418,7 +25418,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.0
+            "value": 4.1
           },
           {
             "name": "Equipment",
@@ -25426,7 +25426,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.7
+            "value": 7.5
           }
         ],
         "pv": 85.2
@@ -25524,23 +25524,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 136.6
       },
       "EEM2": {
-        "total": 119.8,
+        "total": 128.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.3
+            "value": 12.7
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 7.6
           },
           {
             "name": "DHW",
-            "value": 23.2
+            "value": 23.7
           },
           {
             "name": "Lighting",
-            "value": 10.2
+            "value": 10.3
           },
           {
             "name": "Equipment",
@@ -25548,17 +25548,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 11.9
           }
         ],
         "pv": 136.6
       },
       "EEM3": {
-        "total": 105.3,
+        "total": 113.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.9
+            "value": 14.5
           },
           {
             "name": "Cooling",
@@ -25566,11 +25566,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "DHW",
-            "value": 7.0
+            "value": 7.1
           },
           {
             "name": "Lighting",
-            "value": 10.2
+            "value": 10.3
           },
           {
             "name": "Equipment",
@@ -25578,29 +25578,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 12.0
           }
         ],
         "pv": 136.6
       },
       "EEM4": {
-        "total": 83.4,
+        "total": 92.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.2
+            "value": 16.0
           },
           {
             "name": "Cooling",
-            "value": 5.9
+            "value": 6.1
           },
           {
             "name": "DHW",
-            "value": 7.0
+            "value": 7.2
           },
           {
             "name": "Lighting",
-            "value": 4.7
+            "value": 4.8
           },
           {
             "name": "Equipment",
@@ -25608,7 +25608,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 11.8
           }
         ],
         "pv": 136.6
@@ -25706,23 +25706,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 91.8
       },
       "EEM2": {
-        "total": 94.3,
+        "total": 98.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.8
+            "value": 8.6
           },
           {
             "name": "Cooling",
-            "value": 9.3
+            "value": 8.2
           },
           {
             "name": "DHW",
-            "value": 32.3
+            "value": 32.4
           },
           {
             "name": "Lighting",
-            "value": 8.9
+            "value": 9.1
           },
           {
             "name": "Equipment",
@@ -25730,29 +25730,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 9.4
           }
         ],
         "pv": 91.8
       },
       "EEM3": {
-        "total": 75.2,
+        "total": 79.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.8
+            "value": 9.6
           },
           {
             "name": "Cooling",
-            "value": 9.1
+            "value": 8.0
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.5
           },
           {
             "name": "Lighting",
-            "value": 8.9
+            "value": 9.1
           },
           {
             "name": "Equipment",
@@ -25760,29 +25760,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.5
+            "value": 9.5
           }
         ],
         "pv": 91.8
       },
       "EEM4": {
-        "total": 59.5,
+        "total": 64.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.3
+            "value": 10.5
           },
           {
             "name": "Cooling",
-            "value": 6.8
+            "value": 6.1
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.5
           },
           {
             "name": "Lighting",
-            "value": 3.7
+            "value": 3.8
           },
           {
             "name": "Equipment",
@@ -25790,7 +25790,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.1
+            "value": 8.4
           }
         ],
         "pv": 91.8
@@ -25888,19 +25888,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 98.1
       },
       "EEM2": {
-        "total": 150.7,
+        "total": 155.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.3
+            "value": 16.3
           },
           {
             "name": "Cooling",
-            "value": 8.1
+            "value": 7.2
           },
           {
             "name": "DHW",
-            "value": 36.0
+            "value": 36.7
           },
           {
             "name": "Lighting",
@@ -25912,25 +25912,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 10.0
           }
         ],
-        "pv": 98.1
+        "pv": 98.2
       },
       "EEM3": {
-        "total": 129.1,
+        "total": 133.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.6
+            "value": 20.7
           },
           {
             "name": "Cooling",
-            "value": 8.1
+            "value": 7.2
           },
           {
             "name": "DHW",
-            "value": 10.0
+            "value": 10.2
           },
           {
             "name": "Lighting",
@@ -25942,25 +25942,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 10.1
           }
         ],
-        "pv": 98.1
+        "pv": 98.2
       },
       "EEM4": {
-        "total": 106.2,
+        "total": 111.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.1
+            "value": 22.4
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.6
           },
           {
             "name": "DHW",
-            "value": 10.1
+            "value": 10.3
           },
           {
             "name": "Lighting",
@@ -25972,10 +25972,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.3
+            "value": 9.9
           }
         ],
-        "pv": 98.1
+        "pv": 98.2
       }
     }
   },
@@ -26072,15 +26072,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 30.3
       },
       "EEM2": {
-        "total": 100.4,
+        "total": 101.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.9
+            "value": 8.5
           },
           {
             "name": "Cooling",
-            "value": 4.6
+            "value": 4.1
           },
           {
             "name": "DHW",
@@ -26096,21 +26096,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 8.6
           }
         ],
         "pv": 30.3
       },
       "EEM3": {
-        "total": 87.2,
+        "total": 88.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.4
+            "value": 11.0
           },
           {
             "name": "Cooling",
-            "value": 4.6
+            "value": 4.1
           },
           {
             "name": "DHW",
@@ -26126,21 +26126,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 8.6
           }
         ],
         "pv": 30.3
       },
       "EEM4": {
-        "total": 65.2,
+        "total": 68.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.8
+            "value": 12.5
           },
           {
             "name": "Cooling",
-            "value": 3.4
+            "value": 2.9
           },
           {
             "name": "DHW",
@@ -26156,7 +26156,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.1
+            "value": 6.9
           }
         ],
         "pv": 30.3
@@ -26254,15 +26254,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 27.7
       },
       "EEM2": {
-        "total": 81.2,
+        "total": 82.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.0
+            "value": 4.2
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -26278,21 +26278,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 8.2
           }
         ],
         "pv": 27.7
       },
       "EEM3": {
-        "total": 71.6,
+        "total": 72.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.1
+            "value": 5.4
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -26308,21 +26308,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 8.2
           }
         ],
         "pv": 27.7
       },
       "EEM4": {
-        "total": 49.3,
+        "total": 51.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.0
+            "value": 6.5
           },
           {
             "name": "Cooling",
-            "value": 2.8
+            "value": 2.7
           },
           {
             "name": "DHW",
@@ -26338,7 +26338,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.8
+            "value": 6.0
           }
         ],
         "pv": 27.7
@@ -26436,15 +26436,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 50.1
       },
       "EEM2": {
-        "total": 149.1,
+        "total": 155.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 23.8
+            "value": 29.8
           },
           {
             "name": "Cooling",
-            "value": 10.3
+            "value": 10.5
           },
           {
             "name": "DHW",
@@ -26452,7 +26452,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 22.9
           },
           {
             "name": "Equipment",
@@ -26460,51 +26460,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.4
+            "value": 31.9
           }
         ],
         "pv": 50.1
       },
       "EEM3": {
-        "total": 133.8,
+        "total": 140.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 25.8
+            "value": 31.9
           },
           {
             "name": "Cooling",
-            "value": 10.3
-          },
-          {
-            "name": "DHW",
-            "value": 3.5
-          },
-          {
-            "name": "Lighting",
-            "value": 23.0
-          },
-          {
-            "name": "Equipment",
-            "value": 32.4
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 31.5
-          }
-        ],
-        "pv": 50.1
-      },
-      "EEM4": {
-        "total": 112.0,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 25.6
-          },
-          {
-            "name": "Cooling",
-            "value": 8.9
+            "value": 10.5
           },
           {
             "name": "DHW",
@@ -26512,7 +26482,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.8
+            "value": 22.9
+          },
+          {
+            "name": "Equipment",
+            "value": 32.4
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 31.9
+          }
+        ],
+        "pv": 50.1
+      },
+      "EEM4": {
+        "total": 120.0,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 32.7
+          },
+          {
+            "name": "Cooling",
+            "value": 9.1
+          },
+          {
+            "name": "DHW",
+            "value": 3.6
+          },
+          {
+            "name": "Lighting",
+            "value": 12.7
           },
           {
             "name": "Equipment",
@@ -26520,7 +26520,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.2
+            "value": 31.1
           }
         ],
         "pv": 50.1
@@ -26618,15 +26618,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 53.2
       },
       "EEM2": {
-        "total": 146.3,
+        "total": 149.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.5
+            "value": 19.9
           },
           {
             "name": "Cooling",
-            "value": 11.6
+            "value": 11.7
           },
           {
             "name": "DHW",
@@ -26642,21 +26642,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.3
+            "value": 30.6
           }
         ],
         "pv": 53.2
       },
       "EEM3": {
-        "total": 129.5,
+        "total": 132.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.9
+            "value": 21.2
           },
           {
             "name": "Cooling",
-            "value": 11.5
+            "value": 11.6
           },
           {
             "name": "DHW",
@@ -26672,21 +26672,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.3
+            "value": 30.7
           }
         ],
         "pv": 53.2
       },
       "EEM4": {
-        "total": 109.5,
+        "total": 112.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.6
+            "value": 20.8
           },
           {
             "name": "Cooling",
-            "value": 10.0
+            "value": 10.2
           },
           {
             "name": "DHW",
@@ -26702,7 +26702,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.1
+            "value": 30.0
           }
         ],
         "pv": 53.2
@@ -26800,15 +26800,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 8.8
       },
       "EEM2": {
-        "total": 102.0,
+        "total": 100.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.2
+            "value": 5.7
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 5.0
           },
           {
             "name": "DHW",
@@ -26816,7 +26816,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.3
+            "value": 12.2
           },
           {
             "name": "Equipment",
@@ -26824,21 +26824,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 14.1
+            "value": 12.0
           }
         ],
-        "pv": 8.8
+        "pv": 8.9
       },
       "EEM3": {
-        "total": 82.3,
+        "total": 81.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.7
+            "value": 6.2
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 5.0
           },
           {
             "name": "DHW",
@@ -26846,7 +26846,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.3
+            "value": 12.2
           },
           {
             "name": "Equipment",
@@ -26854,29 +26854,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 14.1
+            "value": 12.1
           }
         ],
-        "pv": 8.8
+        "pv": 8.9
       },
       "EEM4": {
-        "total": 62.6,
+        "total": 62.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.1
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.0
           },
           {
             "name": "DHW",
-            "value": 9.1
+            "value": 9.0
           },
           {
             "name": "Lighting",
-            "value": 6.1
+            "value": 6.0
           },
           {
             "name": "Equipment",
@@ -26884,10 +26884,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.7
+            "value": 10.5
           }
         ],
-        "pv": 8.8
+        "pv": 8.9
       }
     },
     "CC-FD2": {
@@ -26982,15 +26982,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 15.4
       },
       "EEM2": {
-        "total": 100.8,
+        "total": 100.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.5
+            "value": 6.8
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 5.0
           },
           {
             "name": "DHW",
@@ -26998,7 +26998,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.2
+            "value": 13.1
           },
           {
             "name": "Equipment",
@@ -27006,21 +27006,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.2
+            "value": 9.5
           }
         ],
         "pv": 15.4
       },
       "EEM3": {
-        "total": 85.4,
+        "total": 84.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 7.8
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 5.0
           },
           {
             "name": "DHW",
@@ -27028,7 +27028,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.2
+            "value": 13.1
           },
           {
             "name": "Equipment",
@@ -27036,21 +27036,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.3
+            "value": 9.5
           }
         ],
         "pv": 15.4
       },
       "EEM4": {
-        "total": 63.4,
+        "total": 63.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.2
+            "value": 8.9
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 3.8
           },
           {
             "name": "DHW",
@@ -27058,7 +27058,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.3
+            "value": 6.2
           },
           {
             "name": "Equipment",
@@ -27066,7 +27066,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.9
+            "value": 7.7
           }
         ],
         "pv": 15.4
@@ -27164,15 +27164,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 13.2
       },
       "EEM2": {
-        "total": 108.6,
+        "total": 108.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.3
+            "value": 7.0
           },
           {
             "name": "Cooling",
-            "value": 7.6
+            "value": 5.9
           },
           {
             "name": "DHW",
@@ -27180,7 +27180,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.5
+            "value": 13.3
           },
           {
             "name": "Equipment",
@@ -27188,21 +27188,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.8
+            "value": 10.9
           }
         ],
         "pv": 13.2
       },
       "EEM3": {
-        "total": 89.1,
+        "total": 89.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.7
+            "value": 7.5
           },
           {
             "name": "Cooling",
-            "value": 7.6
+            "value": 5.9
           },
           {
             "name": "DHW",
@@ -27210,7 +27210,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.5
+            "value": 13.3
           },
           {
             "name": "Equipment",
@@ -27218,21 +27218,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.8
+            "value": 10.9
           }
         ],
         "pv": 13.2
       },
       "EEM4": {
-        "total": 67.7,
+        "total": 69.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.4
+            "value": 8.6
           },
           {
             "name": "Cooling",
-            "value": 6.0
+            "value": 4.6
           },
           {
             "name": "DHW",
@@ -27240,7 +27240,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.7
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -27248,7 +27248,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 9.3
           }
         ],
         "pv": 13.2
@@ -27346,15 +27346,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 127.4
       },
       "EEM2": {
-        "total": 188.7,
+        "total": 207.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 29.9
+            "value": 48.7
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 7.1
           },
           {
             "name": "DHW",
@@ -27362,7 +27362,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.3
+            "value": 36.5
           },
           {
             "name": "Equipment",
@@ -27370,51 +27370,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.6
+            "value": 13.6
           }
         ],
         "pv": 127.4
       },
       "EEM3": {
-        "total": 171.5,
+        "total": 190.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 34.5
+            "value": 53.2
           },
           {
             "name": "Cooling",
-            "value": 7.7
-          },
-          {
-            "name": "DHW",
-            "value": 3.5
-          },
-          {
-            "name": "Lighting",
-            "value": 36.3
-          },
-          {
-            "name": "Equipment",
-            "value": 50.0
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 12.7
-          }
-        ],
-        "pv": 127.4
-      },
-      "EEM4": {
-        "total": 141.9,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 38.0
-          },
-          {
-            "name": "Cooling",
-            "value": 4.6
+            "value": 7.1
           },
           {
             "name": "DHW",
@@ -27422,7 +27392,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 16.9
+            "value": 36.5
+          },
+          {
+            "name": "Equipment",
+            "value": 50.0
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 13.7
+          }
+        ],
+        "pv": 127.4
+      },
+      "EEM4": {
+        "total": 165.8,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 60.6
+          },
+          {
+            "name": "Cooling",
+            "value": 4.4
+          },
+          {
+            "name": "DHW",
+            "value": 3.6
+          },
+          {
+            "name": "Lighting",
+            "value": 17.0
           },
           {
             "name": "Equipment",
@@ -27430,7 +27430,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 13.0
           }
         ],
         "pv": 127.4
@@ -27528,15 +27528,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 184.7
       },
       "EEM2": {
-        "total": 253.9,
+        "total": 280.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 33.5
+            "value": 57.0
           },
           {
             "name": "Cooling",
-            "value": 9.7
+            "value": 9.4
           },
           {
             "name": "DHW",
@@ -27544,7 +27544,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 63.5
+            "value": 63.9
           },
           {
             "name": "Equipment",
@@ -27552,51 +27552,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 16.9
+            "value": 19.7
           }
         ],
         "pv": 184.7
       },
       "EEM3": {
-        "total": 235.7,
+        "total": 261.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 37.7
+            "value": 61.2
           },
           {
             "name": "Cooling",
-            "value": 9.7
-          },
-          {
-            "name": "DHW",
-            "value": 2.6
-          },
-          {
-            "name": "Lighting",
-            "value": 63.5
-          },
-          {
-            "name": "Equipment",
-            "value": 54.6
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 17.0
-          }
-        ],
-        "pv": 184.7
-      },
-      "EEM4": {
-        "total": 191.6,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 39.4
-          },
-          {
-            "name": "Cooling",
-            "value": 4.4
+            "value": 9.4
           },
           {
             "name": "DHW",
@@ -27604,7 +27574,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 29.5
+            "value": 63.9
+          },
+          {
+            "name": "Equipment",
+            "value": 54.6
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 19.8
+          }
+        ],
+        "pv": 184.7
+      },
+      "EEM4": {
+        "total": 221.5,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 65.2
+          },
+          {
+            "name": "Cooling",
+            "value": 4.9
+          },
+          {
+            "name": "DHW",
+            "value": 2.6
+          },
+          {
+            "name": "Lighting",
+            "value": 29.7
           },
           {
             "name": "Equipment",
@@ -27612,7 +27612,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 15.8
+            "value": 19.3
           }
         ],
         "pv": 184.7
@@ -27710,19 +27710,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 162.3
       },
       "EEM2": {
-        "total": 3632.6,
+        "total": 3620.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.3
+            "value": 26.1
           },
           {
             "name": "Cooling",
-            "value": 427.8
+            "value": 420.9
           },
           {
             "name": "DHW",
-            "value": 10.5
+            "value": 10.6
           },
           {
             "name": "Lighting",
@@ -27730,25 +27730,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2713.9
+            "value": 2714.0
           },
           {
             "name": "Fans & Pumps",
-            "value": 333.3
+            "value": 323.9
           }
         ],
         "pv": 162.3
       },
       "EEM3": {
-        "total": 3624.4,
+        "total": 3612.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.8
+            "value": 27.6
           },
           {
             "name": "Cooling",
-            "value": 427.8
+            "value": 420.9
           },
           {
             "name": "DHW",
@@ -27760,25 +27760,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2713.9
+            "value": 2714.0
           },
           {
             "name": "Fans & Pumps",
-            "value": 333.3
+            "value": 324.0
           }
         ],
         "pv": 162.3
       },
       "EEM4": {
-        "total": 3620.3,
+        "total": 3607.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.8
+            "value": 29.3
           },
           {
             "name": "Cooling",
-            "value": 427.4
+            "value": 420.5
           },
           {
             "name": "DHW",
@@ -27794,7 +27794,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 333.0
+            "value": 323.7
           }
         ],
         "pv": 162.3
@@ -27892,15 +27892,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 118.0
       },
       "EEM2": {
-        "total": 11842.4,
+        "total": 11835.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.3
+            "value": 34.8
           },
           {
             "name": "Cooling",
-            "value": 1325.4
+            "value": 1321.6
           },
           {
             "name": "DHW",
@@ -27912,25 +27912,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9036.0
+            "value": 9035.4
           },
           {
             "name": "Fans & Pumps",
-            "value": 1120.9
+            "value": 1112.9
           }
         ],
         "pv": 118.0
       },
       "EEM3": {
-        "total": 11832.5,
+        "total": 11826.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 30.5
+            "value": 36.9
           },
           {
             "name": "Cooling",
-            "value": 1325.4
+            "value": 1321.6
           },
           {
             "name": "DHW",
@@ -27942,25 +27942,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9036.1
+            "value": 9035.4
           },
           {
             "name": "Fans & Pumps",
-            "value": 1120.8
+            "value": 1112.9
           }
         ],
         "pv": 118.0
       },
       "EEM4": {
-        "total": 11821.9,
+        "total": 11819.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 31.0
+            "value": 40.7
           },
           {
             "name": "Cooling",
-            "value": 1324.8
+            "value": 1321.0
           },
           {
             "name": "DHW",
@@ -27968,15 +27968,15 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.1
+            "value": 21.2
           },
           {
             "name": "Equipment",
-            "value": 9029.5
+            "value": 9029.0
           },
           {
             "name": "Fans & Pumps",
-            "value": 1120.2
+            "value": 1112.4
           }
         ],
         "pv": 118.0
@@ -28074,15 +28074,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 25.3
       },
       "EEM2": {
-        "total": 163.1,
+        "total": 166.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 23.8
+            "value": 29.9
           },
           {
             "name": "Cooling",
-            "value": 10.3
+            "value": 8.3
           },
           {
             "name": "DHW",
@@ -28090,7 +28090,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 11.4
+            "value": 11.5
           },
           {
             "name": "Equipment",
@@ -28098,29 +28098,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 20.0
+            "value": 19.5
           }
         ],
         "pv": 25.3
       },
       "EEM3": {
-        "total": 134.1,
+        "total": 137.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.9
+            "value": 35.0
           },
           {
             "name": "Cooling",
-            "value": 10.2
+            "value": 8.3
           },
           {
             "name": "DHW",
-            "value": 6.9
+            "value": 6.8
           },
           {
             "name": "Lighting",
-            "value": 11.4
+            "value": 11.5
           },
           {
             "name": "Equipment",
@@ -28128,29 +28128,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 20.1
+            "value": 19.6
           }
         ],
         "pv": 25.3
       },
       "EEM4": {
-        "total": 118.8,
+        "total": 124.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 29.0
+            "value": 36.5
           },
           {
             "name": "Cooling",
-            "value": 8.4
+            "value": 7.1
           },
           {
             "name": "DHW",
-            "value": 6.9
+            "value": 6.7
           },
           {
             "name": "Lighting",
-            "value": 5.3
+            "value": 5.4
           },
           {
             "name": "Equipment",
@@ -28158,7 +28158,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 18.4
+            "value": 18.3
           }
         ],
         "pv": 25.3
@@ -28256,15 +28256,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 21.7
       },
       "EEM2": {
-        "total": 100.1,
+        "total": 103.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.6
+            "value": 11.1
           },
           {
             "name": "Cooling",
-            "value": 6.3
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -28286,15 +28286,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 21.7
       },
       "EEM3": {
-        "total": 76.3,
+        "total": 79.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.6
+            "value": 16.0
           },
           {
             "name": "Cooling",
-            "value": 6.3
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -28316,15 +28316,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 21.7
       },
       "EEM4": {
-        "total": 60.2,
+        "total": 64.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.9
+            "value": 18.4
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 3.5
           },
           {
             "name": "DHW",
@@ -28332,7 +28332,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.4
+            "value": 3.5
           },
           {
             "name": "Equipment",
@@ -28340,7 +28340,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 7.8
           }
         ],
         "pv": 21.7
@@ -28438,15 +28438,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 45.9
       },
       "EEM2": {
-        "total": 129.0,
+        "total": 133.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.5
+            "value": 23.3
           },
           {
             "name": "Cooling",
-            "value": 10.8
+            "value": 8.6
           },
           {
             "name": "DHW",
@@ -28462,25 +28462,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.3
+            "value": 10.9
           }
         ],
-        "pv": 45.9
+        "pv": 46.0
       },
       "EEM3": {
-        "total": 97.5,
+        "total": 101.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.5
+            "value": 28.3
           },
           {
             "name": "Cooling",
-            "value": 10.7
+            "value": 8.5
           },
           {
             "name": "DHW",
-            "value": 8.6
+            "value": 8.5
           },
           {
             "name": "Lighting",
@@ -28492,29 +28492,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 11.0
           }
         ],
-        "pv": 45.9
+        "pv": 46.0
       },
       "EEM4": {
-        "total": 83.6,
+        "total": 90.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.7
+            "value": 31.2
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 6.6
           },
           {
             "name": "DHW",
-            "value": 8.6
+            "value": 8.5
           },
           {
             "name": "Lighting",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Equipment",
@@ -28522,10 +28522,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 10.3
           }
         ],
-        "pv": 45.9
+        "pv": 46.0
       }
     },
     "MU-HS": {
@@ -28620,19 +28620,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 80.4
       },
       "EEM2": {
-        "total": 141.3,
+        "total": 149.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.8
+            "value": 26.0
           },
           {
             "name": "Cooling",
-            "value": 10.4
+            "value": 9.4
           },
           {
             "name": "DHW",
-            "value": 40.7
+            "value": 40.8
           },
           {
             "name": "Lighting",
@@ -28644,25 +28644,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.7
+            "value": 12.5
           }
         ],
         "pv": 80.4
       },
       "EEM3": {
-        "total": 115.6,
+        "total": 124.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.3
+            "value": 28.5
           },
           {
             "name": "Cooling",
-            "value": 10.3
+            "value": 9.3
           },
           {
             "name": "DHW",
-            "value": 12.6
+            "value": 12.7
           },
           {
             "name": "Lighting",
@@ -28674,29 +28674,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.7
+            "value": 12.6
           }
         ],
         "pv": 80.4
       },
       "EEM4": {
-        "total": 100.8,
+        "total": 110.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.1
+            "value": 29.6
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 7.6
           },
           {
             "name": "DHW",
-            "value": 12.6
+            "value": 12.7
           },
           {
             "name": "Lighting",
-            "value": 4.9
+            "value": 5.0
           },
           {
             "name": "Equipment",
@@ -28704,7 +28704,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 12.5
           }
         ],
         "pv": 80.4
@@ -28802,15 +28802,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 73.7
       },
       "EEM2": {
-        "total": 128.0,
+        "total": 139.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.8
+            "value": 28.0
           },
           {
             "name": "Cooling",
-            "value": 9.0
+            "value": 8.1
           },
           {
             "name": "DHW",
@@ -28818,7 +28818,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.3
+            "value": 7.4
           },
           {
             "name": "Equipment",
@@ -28826,29 +28826,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.7
+            "value": 11.3
           }
         ],
         "pv": 73.7
       },
       "EEM3": {
-        "total": 100.5,
+        "total": 112.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.4
+            "value": 29.7
           },
           {
             "name": "Cooling",
-            "value": 8.8
+            "value": 7.9
           },
           {
             "name": "DHW",
-            "value": 14.6
+            "value": 14.7
           },
           {
             "name": "Lighting",
-            "value": 7.3
+            "value": 7.4
           },
           {
             "name": "Equipment",
@@ -28856,25 +28856,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 11.4
           }
         ],
         "pv": 73.7
       },
       "EEM4": {
-        "total": 86.7,
+        "total": 99.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.3
+            "value": 31.9
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 5.9
           },
           {
             "name": "DHW",
-            "value": 14.6
+            "value": 14.7
           },
           {
             "name": "Lighting",
@@ -28886,7 +28886,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 10.6
           }
         ],
         "pv": 73.7
@@ -28984,15 +28984,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 69.6
       },
       "EEM2": {
-        "total": 150.5,
+        "total": 154.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.5
+            "value": 23.2
           },
           {
             "name": "Cooling",
-            "value": 8.7
+            "value": 7.9
           },
           {
             "name": "DHW",
@@ -29000,7 +29000,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -29008,29 +29008,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 11.0
           }
         ],
-        "pv": 69.6
+        "pv": 69.8
       },
       "EEM3": {
-        "total": 122.6,
+        "total": 126.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.1
+            "value": 26.9
           },
           {
             "name": "Cooling",
-            "value": 8.5
+            "value": 7.7
           },
           {
             "name": "DHW",
-            "value": 12.2
+            "value": 12.1
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -29041,26 +29041,26 @@ const ENVELOPE_ENERGY_DATA = {
             "value": 11.1
           }
         ],
-        "pv": 69.6
+        "pv": 69.8
       },
       "EEM4": {
-        "total": 102.3,
+        "total": 107.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.9
+            "value": 29.1
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 5.3
           },
           {
             "name": "DHW",
-            "value": 12.2
+            "value": 12.1
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -29071,7 +29071,7 @@ const ENVELOPE_ENERGY_DATA = {
             "value": 10.2
           }
         ],
-        "pv": 69.6
+        "pv": 69.8
       }
     },
     "MU-S2": {
@@ -29166,23 +29166,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 97.8
       },
       "EEM2": {
-        "total": 144.2,
+        "total": 149.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.0
+            "value": 17.5
           },
           {
             "name": "Cooling",
-            "value": 9.2
+            "value": 8.9
           },
           {
             "name": "DHW",
-            "value": 44.2
+            "value": 44.3
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -29190,29 +29190,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 12.3
           }
         ],
         "pv": 97.8
       },
       "EEM3": {
-        "total": 117.9,
+        "total": 123.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.6
+            "value": 20.1
           },
           {
             "name": "Cooling",
-            "value": 9.0
+            "value": 8.7
           },
           {
             "name": "DHW",
-            "value": 15.4
+            "value": 15.5
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -29220,29 +29220,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 12.4
           }
         ],
         "pv": 97.8
       },
       "EEM4": {
-        "total": 96.7,
+        "total": 101.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.0
+            "value": 21.5
           },
           {
             "name": "Cooling",
-            "value": 6.0
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 15.4
+            "value": 15.5
           },
           {
             "name": "Lighting",
-            "value": 9.9
+            "value": 10.0
           },
           {
             "name": "Equipment",
@@ -29250,7 +29250,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.0
+            "value": 11.7
           }
         ],
         "pv": 97.8
@@ -29348,15 +29348,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 20.7
       },
       "EEM2": {
-        "total": 86.6,
+        "total": 89.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 10.2
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 4.8
           },
           {
             "name": "DHW",
@@ -29378,15 +29378,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 20.7
       },
       "EEM3": {
-        "total": 66.4,
+        "total": 69.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.6
+            "value": 14.3
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 4.8
           },
           {
             "name": "DHW",
@@ -29408,15 +29408,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 20.7
       },
       "EEM4": {
-        "total": 49.6,
+        "total": 54.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.0
+            "value": 16.9
           },
           {
             "name": "Cooling",
-            "value": 4.3
+            "value": 3.3
           },
           {
             "name": "DHW",
@@ -29424,7 +29424,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.1
+            "value": 3.2
           },
           {
             "name": "Equipment",
@@ -29432,7 +29432,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 7.1
           }
         ],
         "pv": 20.7
@@ -29530,15 +29530,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 72.3
       },
       "EEM2": {
-        "total": 109.1,
+        "total": 119.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.2
+            "value": 29.2
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 5.3
           },
           {
             "name": "DHW",
@@ -29546,7 +29546,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.5
+            "value": 6.6
           },
           {
             "name": "Equipment",
@@ -29554,21 +29554,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.9
           }
         ],
         "pv": 72.3
       },
       "EEM3": {
-        "total": 89.1,
+        "total": 99.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.1
+            "value": 31.1
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 5.2
           },
           {
             "name": "DHW",
@@ -29576,7 +29576,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.5
+            "value": 6.6
           },
           {
             "name": "Equipment",
@@ -29584,21 +29584,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.9
           }
         ],
         "pv": 72.3
       },
       "EEM4": {
-        "total": 80.2,
+        "total": 90.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 23.4
+            "value": 32.5
           },
           {
             "name": "Cooling",
-            "value": 4.2
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -29614,7 +29614,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.9
+            "value": 8.4
           }
         ],
         "pv": 72.3
@@ -29712,15 +29712,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 115.3
       },
       "EEM2": {
-        "total": 95.5,
+        "total": 111.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 36.7
+            "value": 50.5
           },
           {
             "name": "Cooling",
-            "value": 1.6
+            "value": 2.0
           },
           {
             "name": "DHW",
@@ -29736,25 +29736,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.6
+            "value": 6.3
           }
         ],
         "pv": 115.3
       },
       "EEM3": {
-        "total": 85.8,
+        "total": 101.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 38.6
+            "value": 52.4
           },
           {
             "name": "Cooling",
-            "value": 1.6
+            "value": 2.1
           },
           {
             "name": "DHW",
-            "value": 1.2
+            "value": 1.1
           },
           {
             "name": "Lighting",
@@ -29766,21 +29766,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.7
+            "value": 6.3
           }
         ],
         "pv": 115.3
       },
       "EEM4": {
-        "total": 80.9,
+        "total": 96.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 41.4
+            "value": 55.0
           },
           {
             "name": "Cooling",
-            "value": 1.2
+            "value": 1.7
           },
           {
             "name": "DHW",
@@ -29788,7 +29788,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.9
+            "value": 4.0
           },
           {
             "name": "Equipment",
@@ -29796,7 +29796,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.3
+            "value": 6.0
           }
         ],
         "pv": 115.3
@@ -29894,19 +29894,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 98.6
       },
       "EEM2": {
-        "total": 99.0,
+        "total": 110.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.8
+            "value": 21.2
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 22.3
+            "value": 23.6
           },
           {
             "name": "Lighting",
@@ -29918,25 +29918,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.7
           }
         ],
-        "pv": 98.6
+        "pv": 98.7
       },
       "EEM3": {
-        "total": 86.7,
+        "total": 97.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.6
+            "value": 24.0
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 7.1
+            "value": 7.7
           },
           {
             "name": "Lighting",
@@ -29948,25 +29948,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.8
           }
         ],
-        "pv": 98.6
+        "pv": 98.7
       },
       "EEM4": {
-        "total": 66.8,
+        "total": 76.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.1
+            "value": 24.6
           },
           {
             "name": "Cooling",
-            "value": 4.2
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 7.1
+            "value": 7.8
           },
           {
             "name": "Lighting",
@@ -29978,10 +29978,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.6
           }
         ],
-        "pv": 98.6
+        "pv": 98.7
       }
     },
     "RC-HR1": {
@@ -30076,15 +30076,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 44.6
       },
       "EEM2": {
-        "total": 100.9,
+        "total": 103.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.1
+            "value": 10.2
           },
           {
             "name": "Cooling",
-            "value": 11.6
+            "value": 9.0
           },
           {
             "name": "DHW",
@@ -30100,25 +30100,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.5
+            "value": 9.9
           }
         ],
         "pv": 44.6
       },
       "EEM3": {
-        "total": 68.7,
+        "total": 71.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.7
+            "value": 13.9
           },
           {
             "name": "Cooling",
-            "value": 11.4
+            "value": 8.9
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.3
           },
           {
             "name": "Lighting",
@@ -30130,29 +30130,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.5
+            "value": 9.9
           }
         ],
         "pv": 44.6
       },
       "EEM4": {
-        "total": 54.8,
+        "total": 59.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.9
+            "value": 15.9
           },
           {
             "name": "Cooling",
-            "value": 8.2
+            "value": 6.3
           },
           {
             "name": "DHW",
-            "value": 12.5
+            "value": 12.3
           },
           {
             "name": "Lighting",
-            "value": 1.7
+            "value": 1.8
           },
           {
             "name": "Equipment",
@@ -30160,7 +30160,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 9.1
           }
         ],
         "pv": 44.6
@@ -30258,49 +30258,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 29.5
       },
       "EEM2": {
-        "total": 107.4,
+        "total": 110.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.9
+            "value": 12.5
           },
           {
             "name": "Cooling",
-            "value": 12.6
+            "value": 8.8
           },
           {
             "name": "DHW",
             "value": 51.8
-          },
-          {
-            "name": "Lighting",
-            "value": 3.9
-          },
-          {
-            "name": "Equipment",
-            "value": 19.0
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 10.3
-          }
-        ],
-        "pv": 29.5
-      },
-      "EEM3": {
-        "total": 70.3,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 12.4
-          },
-          {
-            "name": "Cooling",
-            "value": 12.6
-          },
-          {
-            "name": "DHW",
-            "value": 8.2
           },
           {
             "name": "Lighting",
@@ -30317,12 +30287,12 @@ const ENVELOPE_ENERGY_DATA = {
         ],
         "pv": 29.5
       },
-      "EEM4": {
-        "total": 56.5,
+      "EEM3": {
+        "total": 73.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.3
+            "value": 19.1
           },
           {
             "name": "Cooling",
@@ -30330,11 +30300,41 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "DHW",
-            "value": 8.3
+            "value": 7.9
           },
           {
             "name": "Lighting",
-            "value": 1.5
+            "value": 3.9
+          },
+          {
+            "name": "Equipment",
+            "value": 19.0
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 10.6
+          }
+        ],
+        "pv": 29.5
+      },
+      "EEM4": {
+        "total": 62.2,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 22.4
+          },
+          {
+            "name": "Cooling",
+            "value": 6.1
+          },
+          {
+            "name": "DHW",
+            "value": 7.8
+          },
+          {
+            "name": "Lighting",
+            "value": 1.6
           },
           {
             "name": "Equipment",
@@ -30342,7 +30342,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 9.6
           }
         ],
         "pv": 29.5
@@ -30440,19 +30440,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 91.1
       },
       "EEM2": {
-        "total": 104.5,
+        "total": 115.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.2
+            "value": 18.2
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 24.5
+            "value": 26.1
           },
           {
             "name": "Lighting",
@@ -30464,25 +30464,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.5
           }
         ],
-        "pv": 91.1
+        "pv": 91.2
       },
       "EEM3": {
-        "total": 90.9,
+        "total": 101.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.7
+            "value": 19.6
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 9.4
+            "value": 10.2
           },
           {
             "name": "Lighting",
@@ -30494,25 +30494,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.6
           }
         ],
-        "pv": 91.1
+        "pv": 91.2
       },
       "EEM4": {
-        "total": 68.8,
+        "total": 78.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.5
+            "value": 20.5
           },
           {
             "name": "Cooling",
-            "value": 4.1
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 9.4
+            "value": 10.2
           },
           {
             "name": "Lighting",
@@ -30524,10 +30524,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.4
           }
         ],
-        "pv": 91.1
+        "pv": 91.2
       }
     },
     "RC-MR1": {
@@ -30622,19 +30622,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 71.7
       },
       "EEM2": {
-        "total": 98.2,
+        "total": 102.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.5
+            "value": 9.7
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 8.2
           },
           {
             "name": "DHW",
-            "value": 37.5
+            "value": 38.0
           },
           {
             "name": "Lighting",
@@ -30646,25 +30646,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 8.9
           }
         ],
         "pv": 71.7
       },
       "EEM3": {
-        "total": 75.8,
+        "total": 80.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.6
+            "value": 9.8
           },
           {
             "name": "Cooling",
-            "value": 9.7
+            "value": 8.1
           },
           {
             "name": "DHW",
-            "value": 15.2
+            "value": 15.5
           },
           {
             "name": "Lighting",
@@ -30676,29 +30676,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 8.9
           }
         ],
         "pv": 71.7
       },
       "EEM4": {
-        "total": 58.5,
+        "total": 63.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.6
+            "value": 10.8
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 15.2
+            "value": 15.6
           },
           {
             "name": "Lighting",
-            "value": 2.3
+            "value": 2.4
           },
           {
             "name": "Equipment",
@@ -30706,7 +30706,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.3
           }
         ],
         "pv": 71.7
@@ -30804,19 +30804,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 63.4
       },
       "EEM2": {
-        "total": 93.8,
+        "total": 96.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 9.1
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 8.6
           },
           {
             "name": "DHW",
-            "value": 43.6
+            "value": 43.7
           },
           {
             "name": "Lighting",
@@ -30828,25 +30828,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 9.1
           }
         ],
         "pv": 63.4
       },
       "EEM3": {
-        "total": 67.3,
+        "total": 70.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 9.2
           },
           {
             "name": "Cooling",
-            "value": 9.6
+            "value": 8.3
           },
           {
             "name": "DHW",
-            "value": 17.5
+            "value": 17.6
           },
           {
             "name": "Lighting",
@@ -30858,25 +30858,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 9.1
           }
         ],
         "pv": 63.4
       },
       "EEM4": {
-        "total": 53.4,
+        "total": 57.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.9
+            "value": 9.8
           },
           {
             "name": "Cooling",
-            "value": 7.1
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 17.5
+            "value": 17.6
           },
           {
             "name": "Lighting",
@@ -30888,7 +30888,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.3
           }
         ],
         "pv": 63.4
@@ -30986,19 +30986,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 63.4
       },
       "EEM2": {
-        "total": 93.3,
+        "total": 96.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.6
+            "value": 9.2
           },
           {
             "name": "Cooling",
-            "value": 9.5
+            "value": 8.2
           },
           {
             "name": "DHW",
-            "value": 43.6
+            "value": 43.7
           },
           {
             "name": "Lighting",
@@ -31010,25 +31010,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 9.0
           }
         ],
         "pv": 63.4
       },
       "EEM3": {
-        "total": 66.9,
+        "total": 70.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.6
+            "value": 9.3
           },
           {
             "name": "Cooling",
-            "value": 9.2
+            "value": 8.0
           },
           {
             "name": "DHW",
-            "value": 17.5
+            "value": 17.6
           },
           {
             "name": "Lighting",
@@ -31040,25 +31040,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.3
+            "value": 9.0
           }
         ],
         "pv": 63.4
       },
       "EEM4": {
-        "total": 53.0,
+        "total": 56.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.9
+            "value": 9.9
           },
           {
             "name": "Cooling",
-            "value": 6.7
+            "value": 5.7
           },
           {
             "name": "DHW",
-            "value": 17.5
+            "value": 17.6
           },
           {
             "name": "Lighting",
@@ -31070,7 +31070,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.2
           }
         ],
         "pv": 63.4
@@ -31168,19 +31168,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 88.6
       },
       "EEM2": {
-        "total": 98.8,
+        "total": 110.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.3
+            "value": 21.1
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 22.3
+            "value": 23.6
           },
           {
             "name": "Lighting",
@@ -31192,25 +31192,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.7
           }
         ],
-        "pv": 88.6
+        "pv": 88.7
       },
       "EEM3": {
-        "total": 86.5,
+        "total": 97.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.1
+            "value": 23.9
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 7.1
+            "value": 7.7
           },
           {
             "name": "Lighting",
@@ -31222,25 +31222,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.9
           }
         ],
-        "pv": 88.6
+        "pv": 88.7
       },
       "EEM4": {
-        "total": 66.7,
+        "total": 76.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.8
+            "value": 24.6
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 4.1
           },
           {
             "name": "DHW",
-            "value": 7.1
+            "value": 7.8
           },
           {
             "name": "Lighting",
@@ -31252,10 +31252,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.7
           }
         ],
-        "pv": 88.6
+        "pv": 88.7
       }
     },
     "RC-T": {
@@ -31350,19 +31350,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 83.5
       },
       "EEM2": {
-        "total": 110.3,
+        "total": 120.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.5
+            "value": 15.0
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 4.7
           },
           {
             "name": "DHW",
-            "value": 26.9
+            "value": 28.6
           },
           {
             "name": "Lighting",
@@ -31374,25 +31374,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.3
+            "value": 8.3
           }
         ],
-        "pv": 83.5
+        "pv": 83.6
       },
       "EEM3": {
-        "total": 95.3,
+        "total": 104.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.5
+            "value": 15.0
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 11.8
+            "value": 12.7
           },
           {
             "name": "Lighting",
@@ -31404,25 +31404,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.3
           }
         ],
-        "pv": 83.5
+        "pv": 83.6
       },
       "EEM4": {
-        "total": 70.8,
+        "total": 79.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.7
+            "value": 16.1
           },
           {
             "name": "Cooling",
-            "value": 4.0
+            "value": 3.5
           },
           {
             "name": "DHW",
-            "value": 11.8
+            "value": 12.8
           },
           {
             "name": "Lighting",
@@ -31434,10 +31434,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.3
+            "value": 8.1
           }
         ],
-        "pv": 83.5
+        "pv": 83.6
       }
     },
     "RS-I1": {
@@ -31532,23 +31532,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 107.8
       },
       "EEM2": {
-        "total": 126.8,
+        "total": 131.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.3
+            "value": 16.3
           },
           {
             "name": "Cooling",
-            "value": 9.0
+            "value": 7.9
           },
           {
             "name": "DHW",
-            "value": 40.1
+            "value": 40.2
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -31556,51 +31556,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 11.4
           }
         ],
         "pv": 107.8
       },
       "EEM3": {
-        "total": 102.6,
+        "total": 107.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.9
+            "value": 18.9
           },
           {
             "name": "Cooling",
-            "value": 8.9
-          },
-          {
-            "name": "DHW",
-            "value": 13.4
-          },
-          {
-            "name": "Lighting",
-            "value": 8.2
-          },
-          {
-            "name": "Equipment",
-            "value": 43.0
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 10.5
-          }
-        ],
-        "pv": 107.8
-      },
-      "EEM4": {
-        "total": 86.3,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 15.1
-          },
-          {
-            "name": "Cooling",
-            "value": 6.7
+            "value": 7.8
           },
           {
             "name": "DHW",
@@ -31608,7 +31578,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.6
+            "value": 8.3
+          },
+          {
+            "name": "Equipment",
+            "value": 43.0
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 11.4
+          }
+        ],
+        "pv": 107.8
+      },
+      "EEM4": {
+        "total": 91.6,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 20.1
+          },
+          {
+            "name": "Cooling",
+            "value": 6.0
+          },
+          {
+            "name": "DHW",
+            "value": 13.6
+          },
+          {
+            "name": "Lighting",
+            "value": 3.7
           },
           {
             "name": "Equipment",
@@ -31616,7 +31616,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 10.8
           }
         ],
         "pv": 107.8
@@ -31714,41 +31714,11 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 82.6
       },
       "EEM2": {
-        "total": 105.4,
+        "total": 113.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.5
-          },
-          {
-            "name": "Cooling",
-            "value": 6.8
-          },
-          {
-            "name": "DHW",
-            "value": 31.2
-          },
-          {
-            "name": "Lighting",
-            "value": 9.3
-          },
-          {
-            "name": "Equipment",
-            "value": 29.5
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 8.6
-          }
-        ],
-        "pv": 82.6
-      },
-      "EEM3": {
-        "total": 86.8,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 16.3
+            "value": 21.1
           },
           {
             "name": "Cooling",
@@ -31756,11 +31726,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "DHW",
-            "value": 10.9
+            "value": 31.2
           },
           {
             "name": "Lighting",
-            "value": 9.3
+            "value": 9.5
           },
           {
             "name": "Equipment",
@@ -31768,17 +31738,47 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 10.4
+          }
+        ],
+        "pv": 82.6
+      },
+      "EEM3": {
+        "total": 94.7,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 22.9
+          },
+          {
+            "name": "Cooling",
+            "value": 6.5
+          },
+          {
+            "name": "DHW",
+            "value": 10.9
+          },
+          {
+            "name": "Lighting",
+            "value": 9.5
+          },
+          {
+            "name": "Equipment",
+            "value": 29.5
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 10.4
           }
         ],
         "pv": 82.6
       },
       "EEM4": {
-        "total": 70.4,
+        "total": 80.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.7
+            "value": 24.5
           },
           {
             "name": "Cooling",
@@ -31790,7 +31790,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.0
+            "value": 4.1
           },
           {
             "name": "Equipment",
@@ -31798,7 +31798,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 9.6
           }
         ],
         "pv": 82.6
@@ -31896,23 +31896,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 136.9
       },
       "EEM2": {
-        "total": 126.7,
+        "total": 142.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.6
+            "value": 22.4
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 7.2
           },
           {
             "name": "DHW",
-            "value": 23.4
+            "value": 23.7
           },
           {
             "name": "Lighting",
-            "value": 10.2
+            "value": 10.3
           },
           {
             "name": "Equipment",
@@ -31920,29 +31920,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.5
+            "value": 16.6
           }
         ],
         "pv": 136.9
       },
       "EEM3": {
-        "total": 112.2,
+        "total": 127.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.4
+            "value": 24.2
           },
           {
             "name": "Cooling",
-            "value": 6.6
+            "value": 7.3
           },
           {
             "name": "DHW",
-            "value": 7.0
+            "value": 7.2
           },
           {
             "name": "Lighting",
-            "value": 10.2
+            "value": 10.3
           },
           {
             "name": "Equipment",
@@ -31950,29 +31950,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.5
+            "value": 16.6
           }
         ],
         "pv": 136.9
       },
       "EEM4": {
-        "total": 91.9,
+        "total": 105.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.4
+            "value": 26.3
           },
           {
             "name": "Cooling",
-            "value": 5.2
+            "value": 6.0
           },
           {
             "name": "DHW",
-            "value": 7.1
+            "value": 7.2
           },
           {
             "name": "Lighting",
-            "value": 4.7
+            "value": 4.8
           },
           {
             "name": "Equipment",
@@ -31980,7 +31980,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 14.8
           }
         ],
         "pv": 136.9
@@ -32078,41 +32078,11 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 89.4
       },
       "EEM2": {
-        "total": 99.1,
+        "total": 107.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.0
-          },
-          {
-            "name": "Cooling",
-            "value": 7.7
-          },
-          {
-            "name": "DHW",
-            "value": 32.4
-          },
-          {
-            "name": "Lighting",
-            "value": 8.9
-          },
-          {
-            "name": "Equipment",
-            "value": 25.4
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 9.4
-          }
-        ],
-        "pv": 89.4
-      },
-      "EEM3": {
-        "total": 80.0,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 11.0
+            "value": 15.6
           },
           {
             "name": "Cooling",
@@ -32120,11 +32090,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 32.5
           },
           {
             "name": "Lighting",
-            "value": 8.9
+            "value": 9.1
           },
           {
             "name": "Equipment",
@@ -32132,21 +32102,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.4
+            "value": 12.0
           }
         ],
         "pv": 89.4
       },
-      "EEM4": {
-        "total": 65.0,
+      "EEM3": {
+        "total": 88.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.7
+            "value": 16.7
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 7.4
           },
           {
             "name": "DHW",
@@ -32154,7 +32124,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.7
+            "value": 9.1
+          },
+          {
+            "name": "Equipment",
+            "value": 25.4
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 12.0
+          }
+        ],
+        "pv": 89.4
+      },
+      "EEM4": {
+        "total": 73.8,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 17.5
+          },
+          {
+            "name": "Cooling",
+            "value": 5.8
+          },
+          {
+            "name": "DHW",
+            "value": 12.4
+          },
+          {
+            "name": "Lighting",
+            "value": 3.8
           },
           {
             "name": "Equipment",
@@ -32162,7 +32162,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.2
+            "value": 11.2
           }
         ],
         "pv": 89.4
@@ -32260,19 +32260,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 95.2
       },
       "EEM2": {
-        "total": 157.4,
+        "total": 167.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.1
+            "value": 26.9
           },
           {
             "name": "Cooling",
-            "value": 7.1
+            "value": 6.6
           },
           {
             "name": "DHW",
-            "value": 36.3
+            "value": 36.7
           },
           {
             "name": "Lighting",
@@ -32284,25 +32284,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.4
+            "value": 11.5
           }
         ],
         "pv": 95.2
       },
       "EEM3": {
-        "total": 135.8,
+        "total": 145.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.7
+            "value": 31.5
           },
           {
             "name": "Cooling",
-            "value": 7.1
+            "value": 6.7
           },
           {
             "name": "DHW",
-            "value": 10.0
+            "value": 10.2
           },
           {
             "name": "Lighting",
@@ -32314,25 +32314,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.5
+            "value": 11.6
           }
         ],
         "pv": 95.2
       },
       "EEM4": {
-        "total": 114.1,
+        "total": 124.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 25.0
+            "value": 34.1
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 5.2
           },
           {
             "name": "DHW",
-            "value": 10.1
+            "value": 10.2
           },
           {
             "name": "Lighting",
@@ -32344,7 +32344,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.3
+            "value": 11.5
           }
         ],
         "pv": 95.2
@@ -32444,15 +32444,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 26.0
       },
       "EEM2": {
-        "total": 99.7,
+        "total": 101.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.3
+            "value": 9.5
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.7
           },
           {
             "name": "DHW",
@@ -32468,21 +32468,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 8.5
           }
         ],
         "pv": 26.0
       },
       "EEM3": {
-        "total": 86.6,
+        "total": 88.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.9
+            "value": 12.1
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.7
           },
           {
             "name": "DHW",
@@ -32498,21 +32498,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.9
+            "value": 8.5
           }
         ],
         "pv": 26.0
       },
       "EEM4": {
-        "total": 65.6,
+        "total": 68.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.8
+            "value": 13.9
           },
           {
             "name": "Cooling",
-            "value": 2.3
+            "value": 1.9
           },
           {
             "name": "DHW",
@@ -32520,7 +32520,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.7
+            "value": 6.8
           },
           {
             "name": "Equipment",
@@ -32528,7 +32528,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.1
+            "value": 6.9
           }
         ],
         "pv": 26.0
@@ -32626,15 +32626,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 23.9
       },
       "EEM2": {
-        "total": 79.9,
+        "total": 80.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 3.4
+            "value": 4.5
           },
           {
             "name": "Cooling",
-            "value": 2.7
+            "value": 2.6
           },
           {
             "name": "DHW",
@@ -32650,21 +32650,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.9
+            "value": 8.0
           }
         ],
         "pv": 23.9
       },
       "EEM3": {
-        "total": 70.3,
+        "total": 71.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.6
+            "value": 5.6
           },
           {
             "name": "Cooling",
-            "value": 2.7
+            "value": 2.6
           },
           {
             "name": "DHW",
@@ -32686,11 +32686,11 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 23.9
       },
       "EEM4": {
-        "total": 48.9,
+        "total": 50.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.9
+            "value": 7.0
           },
           {
             "name": "Cooling",
@@ -32710,7 +32710,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.7
+            "value": 5.9
           }
         ],
         "pv": 23.9
@@ -32808,15 +32808,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 42.6
       },
       "EEM2": {
-        "total": 147.7,
+        "total": 154.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.1
+            "value": 32.0
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 6.7
           },
           {
             "name": "DHW",
@@ -32824,7 +32824,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 23.1
           },
           {
             "name": "Equipment",
@@ -32832,21 +32832,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.5
+            "value": 32.0
           }
         ],
         "pv": 42.6
       },
       "EEM3": {
-        "total": 133.1,
+        "total": 139.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.8
+            "value": 34.2
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 6.7
           },
           {
             "name": "DHW",
@@ -32854,7 +32854,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 23.1
           },
           {
             "name": "Equipment",
@@ -32862,21 +32862,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 31.5
+            "value": 32.0
           }
         ],
         "pv": 42.6
       },
       "EEM4": {
-        "total": 111.9,
+        "total": 119.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.9
+            "value": 35.2
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 5.5
           },
           {
             "name": "DHW",
@@ -32892,7 +32892,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.3
+            "value": 31.2
           }
         ],
         "pv": 42.6
@@ -32990,15 +32990,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 45.1
       },
       "EEM2": {
-        "total": 145.4,
+        "total": 148.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.2
+            "value": 22.4
           },
           {
             "name": "Cooling",
-            "value": 7.8
+            "value": 8.0
           },
           {
             "name": "DHW",
@@ -33006,7 +33006,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.7
+            "value": 21.8
           },
           {
             "name": "Equipment",
@@ -33014,21 +33014,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.3
+            "value": 30.8
           }
         ],
         "pv": 45.1
       },
       "EEM3": {
-        "total": 128.7,
+        "total": 131.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.6
+            "value": 23.7
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 7.9
           },
           {
             "name": "DHW",
@@ -33036,7 +33036,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.7
+            "value": 21.8
           },
           {
             "name": "Equipment",
@@ -33044,21 +33044,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.4
+            "value": 30.8
           }
         ],
         "pv": 45.1
       },
       "EEM4": {
-        "total": 109.0,
+        "total": 112.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.2
+            "value": 23.3
           },
           {
             "name": "Cooling",
-            "value": 6.5
+            "value": 6.7
           },
           {
             "name": "DHW",
@@ -33074,7 +33074,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.3
+            "value": 30.2
           }
         ],
         "pv": 45.1
@@ -33172,15 +33172,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 7.6
       },
       "EEM2": {
-        "total": 100.8,
+        "total": 101.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.2
+            "value": 6.3
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 4.1
           },
           {
             "name": "DHW",
@@ -33188,7 +33188,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.5
+            "value": 12.8
           },
           {
             "name": "Equipment",
@@ -33196,21 +33196,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.8
+            "value": 12.2
           }
         ],
         "pv": 7.6
       },
       "EEM3": {
-        "total": 81.2,
+        "total": 81.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 4.7
+            "value": 6.8
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 4.1
           },
           {
             "name": "DHW",
@@ -33218,7 +33218,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.5
+            "value": 12.8
           },
           {
             "name": "Equipment",
@@ -33226,21 +33226,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.8
+            "value": 12.3
           }
         ],
         "pv": 7.6
       },
       "EEM4": {
-        "total": 61.7,
+        "total": 62.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.3
+            "value": 7.8
           },
           {
             "name": "Cooling",
-            "value": 3.9
+            "value": 3.2
           },
           {
             "name": "DHW",
@@ -33248,7 +33248,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.3
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -33256,7 +33256,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.1
+            "value": 10.6
           }
         ],
         "pv": 7.6
@@ -33354,15 +33354,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 13.2
       },
       "EEM2": {
-        "total": 99.4,
+        "total": 99.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 7.5
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 3.8
           },
           {
             "name": "DHW",
@@ -33370,7 +33370,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.3
+            "value": 13.5
           },
           {
             "name": "Equipment",
@@ -33378,21 +33378,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 9.4
           }
         ],
-        "pv": 13.2
+        "pv": 13.3
       },
       "EEM3": {
-        "total": 84.1,
+        "total": 84.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.5
+            "value": 8.5
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 3.8
           },
           {
             "name": "DHW",
@@ -33400,7 +33400,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.3
+            "value": 13.5
           },
           {
             "name": "Equipment",
@@ -33408,21 +33408,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 9.5
           }
         ],
-        "pv": 13.2
+        "pv": 13.3
       },
       "EEM4": {
-        "total": 63.1,
+        "total": 63.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.6
+            "value": 9.6
           },
           {
             "name": "Cooling",
-            "value": 3.4
+            "value": 2.8
           },
           {
             "name": "DHW",
@@ -33430,7 +33430,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.4
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -33438,10 +33438,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 7.7
           }
         ],
-        "pv": 13.2
+        "pv": 13.3
       }
     },
     "CC-FD3": {
@@ -33536,15 +33536,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 11.4
       },
       "EEM2": {
-        "total": 107.2,
+        "total": 108.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.5
+            "value": 7.7
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 4.7
           },
           {
             "name": "DHW",
@@ -33552,7 +33552,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.6
+            "value": 13.9
           },
           {
             "name": "Equipment",
@@ -33560,21 +33560,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.3
+            "value": 11.1
           }
         ],
         "pv": 11.4
       },
       "EEM3": {
-        "total": 87.8,
+        "total": 89.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.0
+            "value": 8.2
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 4.7
           },
           {
             "name": "DHW",
@@ -33582,7 +33582,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.6
+            "value": 13.9
           },
           {
             "name": "Equipment",
@@ -33590,21 +33590,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 11.2
           }
         ],
         "pv": 11.4
       },
       "EEM4": {
-        "total": 67.1,
+        "total": 69.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.0
+            "value": 9.5
           },
           {
             "name": "Cooling",
-            "value": 4.2
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -33612,7 +33612,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.8
+            "value": 7.0
           },
           {
             "name": "Equipment",
@@ -33620,7 +33620,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.3
+            "value": 9.4
           }
         ],
         "pv": 11.4
@@ -33718,15 +33718,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 110.4
       },
       "EEM2": {
-        "total": 191.0,
+        "total": 208.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 34.4
+            "value": 51.5
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 5.2
           },
           {
             "name": "DHW",
@@ -33734,7 +33734,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.4
+            "value": 36.6
           },
           {
             "name": "Equipment",
@@ -33742,21 +33742,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.8
+            "value": 13.6
           }
         ],
         "pv": 110.4
       },
       "EEM3": {
-        "total": 173.9,
+        "total": 191.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 39.0
+            "value": 56.1
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 5.2
           },
           {
             "name": "DHW",
@@ -33764,7 +33764,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.4
+            "value": 36.6
           },
           {
             "name": "Equipment",
@@ -33772,21 +33772,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.9
+            "value": 13.7
           }
         ],
         "pv": 110.4
       },
       "EEM4": {
-        "total": 146.8,
+        "total": 168.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 44.7
+            "value": 64.8
           },
           {
             "name": "Cooling",
-            "value": 3.0
+            "value": 2.8
           },
           {
             "name": "DHW",
@@ -33794,7 +33794,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 17.0
+            "value": 17.1
           },
           {
             "name": "Equipment",
@@ -33802,7 +33802,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.7
+            "value": 13.1
           }
         ],
         "pv": 110.4
@@ -33900,15 +33900,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 160.2
       },
       "EEM2": {
-        "total": 251.6,
+        "total": 281.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 33.4
+            "value": 61.0
           },
           {
             "name": "Cooling",
-            "value": 8.0
+            "value": 7.4
           },
           {
             "name": "DHW",
@@ -33916,7 +33916,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 63.7
+            "value": 64.0
           },
           {
             "name": "Equipment",
@@ -33924,21 +33924,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 17.3
+            "value": 19.7
           }
         ],
         "pv": 160.2
       },
       "EEM3": {
-        "total": 237.0,
+        "total": 262.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 41.4
+            "value": 65.3
           },
           {
             "name": "Cooling",
-            "value": 8.0
+            "value": 7.4
           },
           {
             "name": "DHW",
@@ -33946,7 +33946,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 63.7
+            "value": 64.0
           },
           {
             "name": "Equipment",
@@ -33954,21 +33954,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 17.3
+            "value": 19.8
           }
         ],
         "pv": 160.2
       },
       "EEM4": {
-        "total": 193.4,
+        "total": 223.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 43.3
+            "value": 69.8
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 3.4
           },
           {
             "name": "DHW",
@@ -33976,7 +33976,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 29.6
+            "value": 29.8
           },
           {
             "name": "Equipment",
@@ -33984,7 +33984,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 16.1
+            "value": 19.5
           }
         ],
         "pv": 160.2
@@ -34082,15 +34082,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 139.4
       },
       "EEM2": {
-        "total": 3626.2,
+        "total": 3618.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.2
+            "value": 24.0
           },
           {
             "name": "Cooling",
-            "value": 418.2
+            "value": 413.6
           },
           {
             "name": "DHW",
@@ -34102,25 +34102,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2714.7
+            "value": 2714.3
           },
           {
             "name": "Fans & Pumps",
-            "value": 337.1
+            "value": 330.2
           }
         ],
         "pv": 139.4
       },
       "EEM3": {
-        "total": 3618.1,
+        "total": 3610.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.7
+            "value": 25.5
           },
           {
             "name": "Cooling",
-            "value": 418.2
+            "value": 413.6
           },
           {
             "name": "DHW",
@@ -34132,25 +34132,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2714.6
+            "value": 2714.3
           },
           {
             "name": "Fans & Pumps",
-            "value": 337.1
+            "value": 330.2
           }
         ],
         "pv": 139.4
       },
       "EEM4": {
-        "total": 3614.3,
+        "total": 3606.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.9
+            "value": 27.4
           },
           {
             "name": "Cooling",
-            "value": 417.9
+            "value": 413.3
           },
           {
             "name": "DHW",
@@ -34158,15 +34158,15 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 29.2
+            "value": 29.3
           },
           {
             "name": "Equipment",
-            "value": 2712.1
+            "value": 2711.7
           },
           {
             "name": "Fans & Pumps",
-            "value": 336.8
+            "value": 330.0
           }
         ],
         "pv": 139.4
@@ -34264,15 +34264,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 101.2
       },
       "EEM2": {
-        "total": 11816.6,
+        "total": 11816.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.4
+            "value": 34.0
           },
           {
             "name": "Cooling",
-            "value": 1293.8
+            "value": 1291.9
           },
           {
             "name": "DHW",
@@ -34288,21 +34288,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 1125.5
+            "value": 1121.6
           }
         ],
         "pv": 101.2
       },
       "EEM3": {
-        "total": 11806.8,
+        "total": 11806.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 30.6
+            "value": 36.2
           },
           {
             "name": "Cooling",
-            "value": 1293.8
+            "value": 1291.9
           },
           {
             "name": "DHW",
@@ -34318,21 +34318,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 1125.6
+            "value": 1121.6
           }
         ],
         "pv": 101.2
       },
       "EEM4": {
-        "total": 11798.3,
+        "total": 11800.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 32.7
+            "value": 40.5
           },
           {
             "name": "Cooling",
-            "value": 1293.5
+            "value": 1291.5
           },
           {
             "name": "DHW",
@@ -34344,11 +34344,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9028.8
+            "value": 9028.9
           },
           {
             "name": "Fans & Pumps",
-            "value": 1125.1
+            "value": 1121.2
           }
         ],
         "pv": 101.2
@@ -34446,15 +34446,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 21.6
       },
       "EEM2": {
-        "total": 164.2,
+        "total": 166.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 27.1
+            "value": 32.1
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 5.8
           },
           {
             "name": "DHW",
@@ -34462,7 +34462,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 11.4
+            "value": 11.5
           },
           {
             "name": "Equipment",
@@ -34470,29 +34470,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.9
+            "value": 19.2
           }
         ],
         "pv": 21.6
       },
       "EEM3": {
-        "total": 135.3,
+        "total": 137.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 32.3
+            "value": 37.2
           },
           {
             "name": "Cooling",
-            "value": 7.6
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 6.9
+            "value": 6.8
           },
           {
             "name": "Lighting",
-            "value": 11.4
+            "value": 11.5
           },
           {
             "name": "Equipment",
@@ -34500,21 +34500,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.9
+            "value": 19.3
           }
         ],
         "pv": 21.6
       },
       "EEM4": {
-        "total": 120.7,
+        "total": 125.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 32.8
+            "value": 39.3
           },
           {
             "name": "Cooling",
-            "value": 5.9
+            "value": 4.6
           },
           {
             "name": "DHW",
@@ -34522,7 +34522,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 5.4
+            "value": 5.5
           },
           {
             "name": "Equipment",
@@ -34530,7 +34530,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 18.3
+            "value": 18.1
           }
         ],
         "pv": 21.6
@@ -34628,15 +34628,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.8
       },
       "EEM2": {
-        "total": 99.9,
+        "total": 102.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.1
+            "value": 11.6
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -34658,15 +34658,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.8
       },
       "EEM3": {
-        "total": 76.1,
+        "total": 78.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.1
+            "value": 16.6
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -34688,15 +34688,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.8
       },
       "EEM4": {
-        "total": 60.9,
+        "total": 64.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.1
+            "value": 19.7
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.3
           },
           {
             "name": "DHW",
@@ -34704,7 +34704,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.4
+            "value": 3.5
           },
           {
             "name": "Equipment",
@@ -34712,7 +34712,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 7.8
           }
         ],
         "pv": 18.8
@@ -34810,15 +34810,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 38.9
       },
       "EEM2": {
-        "total": 130.2,
+        "total": 133.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.3
+            "value": 24.6
           },
           {
             "name": "Cooling",
-            "value": 8.8
+            "value": 6.9
           },
           {
             "name": "DHW",
@@ -34826,7 +34826,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.1
+            "value": 8.2
           },
           {
             "name": "Equipment",
@@ -34834,51 +34834,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 11.0
           }
         ],
-        "pv": 38.9
+        "pv": 39.0
       },
       "EEM3": {
-        "total": 98.7,
+        "total": 101.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.3
+            "value": 29.7
           },
           {
             "name": "Cooling",
-            "value": 8.8
-          },
-          {
-            "name": "DHW",
-            "value": 8.6
-          },
-          {
-            "name": "Lighting",
-            "value": 8.1
-          },
-          {
-            "name": "Equipment",
-            "value": 32.1
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 11.5
-          }
-        ],
-        "pv": 38.9
-      },
-      "EEM4": {
-        "total": 86.0,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 26.4
-          },
-          {
-            "name": "Cooling",
-            "value": 6.6
+            "value": 6.8
           },
           {
             "name": "DHW",
@@ -34886,7 +34856,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.8
+            "value": 8.2
+          },
+          {
+            "name": "Equipment",
+            "value": 32.1
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 11.1
+          }
+        ],
+        "pv": 39.0
+      },
+      "EEM4": {
+        "total": 91.1,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 33.2
+          },
+          {
+            "name": "Cooling",
+            "value": 5.0
+          },
+          {
+            "name": "DHW",
+            "value": 8.5
+          },
+          {
+            "name": "Lighting",
+            "value": 3.9
           },
           {
             "name": "Equipment",
@@ -34894,10 +34894,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 10.4
           }
         ],
-        "pv": 38.9
+        "pv": 39.0
       }
     },
     "MU-HS": {
@@ -34992,19 +34992,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 68.9
       },
       "EEM2": {
-        "total": 143.5,
+        "total": 151.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.4
+            "value": 29.3
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 7.4
           },
           {
             "name": "DHW",
-            "value": 40.7
+            "value": 40.8
           },
           {
             "name": "Lighting",
@@ -35016,21 +35016,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.0
+            "value": 12.8
           }
         ],
         "pv": 68.9
       },
       "EEM3": {
-        "total": 117.9,
+        "total": 126.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 23.9
+            "value": 31.9
           },
           {
             "name": "Cooling",
-            "value": 8.2
+            "value": 7.3
           },
           {
             "name": "DHW",
@@ -35046,21 +35046,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.1
+            "value": 12.9
           }
         ],
         "pv": 68.9
       },
       "EEM4": {
-        "total": 103.4,
+        "total": 112.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.8
+            "value": 33.0
           },
           {
             "name": "Cooling",
-            "value": 6.4
+            "value": 5.8
           },
           {
             "name": "DHW",
@@ -35068,7 +35068,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.9
+            "value": 5.0
           },
           {
             "name": "Equipment",
@@ -35076,7 +35076,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.7
+            "value": 12.7
           }
         ],
         "pv": 68.9
@@ -35174,15 +35174,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 62.3
       },
       "EEM2": {
-        "total": 130.7,
+        "total": 142.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.4
+            "value": 31.2
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 6.9
           },
           {
             "name": "DHW",
@@ -35198,25 +35198,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.2
+            "value": 11.7
           }
         ],
         "pv": 62.3
       },
       "EEM3": {
-        "total": 103.3,
+        "total": 115.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.0
+            "value": 32.8
           },
           {
             "name": "Cooling",
-            "value": 7.4
+            "value": 6.7
           },
           {
             "name": "DHW",
-            "value": 14.7
+            "value": 14.8
           },
           {
             "name": "Lighting",
@@ -35228,25 +35228,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.2
+            "value": 11.7
           }
         ],
         "pv": 62.3
       },
       "EEM4": {
-        "total": 90.1,
+        "total": 102.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.3
+            "value": 35.3
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 14.7
+            "value": 14.8
           },
           {
             "name": "Lighting",
@@ -35258,7 +35258,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.3
+            "value": 10.8
           }
         ],
         "pv": 62.3
@@ -35356,15 +35356,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 59.0
       },
       "EEM2": {
-        "total": 152.3,
+        "total": 155.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.4
+            "value": 25.3
           },
           {
             "name": "Cooling",
-            "value": 7.4
+            "value": 6.5
           },
           {
             "name": "DHW",
@@ -35372,7 +35372,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -35380,29 +35380,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 11.3
           }
         ],
-        "pv": 59.0
+        "pv": 59.1
       },
       "EEM3": {
-        "total": 124.5,
+        "total": 127.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 25.2
+            "value": 29.0
           },
           {
             "name": "Cooling",
-            "value": 7.2
+            "value": 6.4
           },
           {
             "name": "DHW",
-            "value": 12.2
+            "value": 12.1
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -35410,21 +35410,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 11.3
           }
         ],
-        "pv": 59.0
+        "pv": 59.1
       },
       "EEM4": {
-        "total": 105.2,
+        "total": 109.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.7
+            "value": 31.5
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 4.1
           },
           {
             "name": "DHW",
@@ -35432,7 +35432,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -35440,10 +35440,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 10.4
           }
         ],
-        "pv": 59.0
+        "pv": 59.1
       }
     },
     "MU-S2": {
@@ -35538,15 +35538,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 83.6
       },
       "EEM2": {
-        "total": 145.6,
+        "total": 150.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.5
+            "value": 19.7
           },
           {
             "name": "Cooling",
-            "value": 7.9
+            "value": 7.6
           },
           {
             "name": "DHW",
@@ -35554,7 +35554,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.6
+            "value": 21.7
           },
           {
             "name": "Equipment",
@@ -35562,29 +35562,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.9
+            "value": 12.7
           }
         ],
         "pv": 83.6
       },
       "EEM3": {
-        "total": 119.3,
+        "total": 124.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.1
+            "value": 22.4
           },
           {
             "name": "Cooling",
-            "value": 7.7
+            "value": 7.5
           },
           {
             "name": "DHW",
-            "value": 15.5
+            "value": 15.6
           },
           {
             "name": "Lighting",
-            "value": 21.6
+            "value": 21.7
           },
           {
             "name": "Equipment",
@@ -35592,29 +35592,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.9
+            "value": 12.8
           }
         ],
         "pv": 83.6
       },
       "EEM4": {
-        "total": 98.6,
+        "total": 103.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.6
+            "value": 23.7
           },
           {
             "name": "Cooling",
-            "value": 5.0
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 15.5
+            "value": 15.6
           },
           {
             "name": "Lighting",
-            "value": 9.9
+            "value": 10.0
           },
           {
             "name": "Equipment",
@@ -35622,7 +35622,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.4
+            "value": 12.0
           }
         ],
         "pv": 83.6
@@ -35720,15 +35720,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.0
       },
       "EEM2": {
-        "total": 86.2,
+        "total": 88.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.8
+            "value": 10.5
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -35750,15 +35750,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.0
       },
       "EEM3": {
-        "total": 66.1,
+        "total": 68.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.9
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 4.8
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -35780,15 +35780,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.0
       },
       "EEM4": {
-        "total": 50.4,
+        "total": 54.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.1
+            "value": 18.0
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.3
           },
           {
             "name": "DHW",
@@ -35804,7 +35804,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.0
+            "value": 7.1
           }
         ],
         "pv": 18.0
@@ -35902,15 +35902,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 60.7
       },
       "EEM2": {
-        "total": 110.4,
+        "total": 120.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.1
+            "value": 30.8
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 4.4
           },
           {
             "name": "DHW",
@@ -35926,25 +35926,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 9.0
           }
         ],
         "pv": 60.7
       },
       "EEM3": {
-        "total": 90.5,
+        "total": 100.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.0
+            "value": 32.7
           },
           {
             "name": "Cooling",
-            "value": 4.6
+            "value": 4.3
           },
           {
             "name": "DHW",
-            "value": 9.6
+            "value": 9.7
           },
           {
             "name": "Lighting",
@@ -35956,25 +35956,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 9.0
           }
         ],
         "pv": 60.7
       },
       "EEM4": {
-        "total": 81.8,
+        "total": 91.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 25.4
+            "value": 34.1
           },
           {
             "name": "Cooling",
-            "value": 3.4
+            "value": 3.1
           },
           {
             "name": "DHW",
-            "value": 9.6
+            "value": 9.7
           },
           {
             "name": "Lighting",
@@ -35986,7 +35986,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.2
+            "value": 8.4
           }
         ],
         "pv": 60.7
@@ -36084,15 +36084,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 97.6
       },
       "EEM2": {
-        "total": 94.0,
+        "total": 109.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 35.4
+            "value": 49.1
           },
           {
             "name": "Cooling",
-            "value": 1.1
+            "value": 1.4
           },
           {
             "name": "DHW",
@@ -36100,7 +36100,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -36108,21 +36108,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.8
+            "value": 6.2
           }
         ],
         "pv": 97.6
       },
       "EEM3": {
-        "total": 84.3,
+        "total": 99.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 37.3
+            "value": 51.0
           },
           {
             "name": "Cooling",
-            "value": 1.1
+            "value": 1.4
           },
           {
             "name": "DHW",
@@ -36130,7 +36130,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.2
+            "value": 8.3
           },
           {
             "name": "Equipment",
@@ -36138,25 +36138,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.9
+            "value": 6.3
           }
         ],
         "pv": 97.6
       },
       "EEM4": {
-        "total": 79.8,
+        "total": 95.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 40.4
+            "value": 54.2
           },
           {
             "name": "Cooling",
-            "value": 0.8
+            "value": 1.0
           },
           {
             "name": "DHW",
-            "value": 1.2
+            "value": 1.1
           },
           {
             "name": "Lighting",
@@ -36168,7 +36168,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.5
+            "value": 5.9
           }
         ],
         "pv": 97.6
@@ -36266,19 +36266,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 87.0
       },
       "EEM2": {
-        "total": 98.5,
+        "total": 109.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.9
+            "value": 21.4
           },
           {
             "name": "Cooling",
-            "value": 4.3
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 21.6
+            "value": 23.1
           },
           {
             "name": "Lighting",
@@ -36290,25 +36290,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.7
           }
         ],
-        "pv": 87.0
+        "pv": 87.1
       },
       "EEM3": {
-        "total": 86.7,
+        "total": 96.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.7
+            "value": 24.2
           },
           {
             "name": "Cooling",
-            "value": 4.3
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 7.5
           },
           {
             "name": "Lighting",
@@ -36320,25 +36320,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 8.9
           }
         ],
-        "pv": 87.0
+        "pv": 87.1
       },
       "EEM4": {
-        "total": 66.6,
+        "total": 75.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.0
+            "value": 24.7
           },
           {
             "name": "Cooling",
-            "value": 3.3
+            "value": 2.9
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 7.5
           },
           {
             "name": "Lighting",
@@ -36350,10 +36350,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.7
           }
         ],
-        "pv": 87.0
+        "pv": 87.1
       }
     },
     "RC-HR1": {
@@ -36448,15 +36448,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 38.1
       },
       "EEM2": {
-        "total": 101.8,
+        "total": 104.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.2
+            "value": 11.3
           },
           {
             "name": "Cooling",
-            "value": 10.0
+            "value": 7.9
           },
           {
             "name": "DHW",
@@ -36472,25 +36472,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.8
+            "value": 10.1
           }
         ],
         "pv": 38.1
       },
       "EEM3": {
-        "total": 69.6,
+        "total": 71.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.9
+            "value": 15.0
           },
           {
             "name": "Cooling",
-            "value": 9.9
+            "value": 7.8
           },
           {
             "name": "DHW",
-            "value": 12.4
+            "value": 12.2
           },
           {
             "name": "Lighting",
@@ -36502,21 +36502,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.9
+            "value": 10.2
           }
         ],
         "pv": 38.1
       },
       "EEM4": {
-        "total": 56.2,
+        "total": 59.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.4
+            "value": 17.1
           },
           {
             "name": "Cooling",
-            "value": 6.8
+            "value": 5.2
           },
           {
             "name": "DHW",
@@ -36524,7 +36524,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 1.7
+            "value": 1.8
           },
           {
             "name": "Equipment",
@@ -36532,7 +36532,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 9.2
           }
         ],
         "pv": 38.1
@@ -36630,15 +36630,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 25.9
       },
       "EEM2": {
-        "total": 107.9,
+        "total": 109.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.8
+            "value": 12.7
           },
           {
             "name": "Cooling",
-            "value": 10.9
+            "value": 7.8
           },
           {
             "name": "DHW",
@@ -36660,19 +36660,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 25.9
       },
       "EEM3": {
-        "total": 70.9,
+        "total": 72.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.4
+            "value": 19.4
           },
           {
             "name": "Cooling",
-            "value": 10.9
+            "value": 7.8
           },
           {
             "name": "DHW",
-            "value": 8.2
+            "value": 7.9
           },
           {
             "name": "Lighting",
@@ -36690,23 +36690,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 25.9
       },
       "EEM4": {
-        "total": 58.0,
+        "total": 62.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.0
+            "value": 23.1
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 8.2
+            "value": 8.0
           },
           {
             "name": "Lighting",
-            "value": 1.5
+            "value": 1.6
           },
           {
             "name": "Equipment",
@@ -36714,7 +36714,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.3
+            "value": 9.7
           }
         ],
         "pv": 25.9
@@ -36812,19 +36812,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 79.5
       },
       "EEM2": {
-        "total": 103.5,
+        "total": 113.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.0
+            "value": 18.1
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 23.6
+            "value": 25.3
           },
           {
             "name": "Lighting",
@@ -36836,25 +36836,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.5
           }
         ],
-        "pv": 79.5
+        "pv": 79.6
       },
       "EEM3": {
-        "total": 90.4,
+        "total": 99.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.4
+            "value": 19.6
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 3.8
           },
           {
             "name": "DHW",
-            "value": 9.0
+            "value": 9.8
           },
           {
             "name": "Lighting",
@@ -36866,25 +36866,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.6
           }
         ],
-        "pv": 79.5
+        "pv": 79.6
       },
       "EEM4": {
-        "total": 68.3,
+        "total": 76.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.2
+            "value": 20.3
           },
           {
             "name": "Cooling",
-            "value": 3.3
+            "value": 2.8
           },
           {
             "name": "DHW",
-            "value": 9.0
+            "value": 9.9
           },
           {
             "name": "Lighting",
@@ -36896,10 +36896,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.4
           }
         ],
-        "pv": 79.5
+        "pv": 79.6
       }
     },
     "RC-MR1": {
@@ -36994,19 +36994,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 61.1
       },
       "EEM2": {
-        "total": 99.1,
+        "total": 103.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.6
+            "value": 11.3
           },
           {
             "name": "Cooling",
-            "value": 8.6
+            "value": 7.2
           },
           {
             "name": "DHW",
-            "value": 37.3
+            "value": 37.7
           },
           {
             "name": "Lighting",
@@ -37018,25 +37018,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 9.2
           }
         ],
         "pv": 61.1
       },
       "EEM3": {
-        "total": 76.9,
+        "total": 81.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.6
+            "value": 11.4
           },
           {
             "name": "Cooling",
-            "value": 8.4
+            "value": 7.0
           },
           {
             "name": "DHW",
-            "value": 15.2
+            "value": 15.5
           },
           {
             "name": "Lighting",
@@ -37048,25 +37048,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 9.2
           }
         ],
         "pv": 61.1
       },
       "EEM4": {
-        "total": 59.8,
+        "total": 64.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.7
+            "value": 12.2
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 5.1
           },
           {
             "name": "DHW",
-            "value": 15.2
+            "value": 15.5
           },
           {
             "name": "Lighting",
@@ -37078,7 +37078,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.6
           }
         ],
         "pv": 61.1
@@ -37176,15 +37176,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 53.4
       },
       "EEM2": {
-        "total": 95.3,
+        "total": 98.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.8
+            "value": 11.0
           },
           {
             "name": "Cooling",
-            "value": 8.7
+            "value": 7.7
           },
           {
             "name": "DHW",
@@ -37200,25 +37200,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 9.5
           }
         ],
         "pv": 53.4
       },
       "EEM3": {
-        "total": 69.0,
+        "total": 72.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.8
+            "value": 11.0
           },
           {
             "name": "Cooling",
-            "value": 8.4
+            "value": 7.5
           },
           {
             "name": "DHW",
-            "value": 17.6
+            "value": 17.7
           },
           {
             "name": "Lighting",
@@ -37230,25 +37230,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 9.5
           }
         ],
         "pv": 53.4
       },
       "EEM4": {
-        "total": 55.2,
+        "total": 58.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.2
+            "value": 11.3
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.2
           },
           {
             "name": "DHW",
-            "value": 17.6
+            "value": 17.7
           },
           {
             "name": "Lighting",
@@ -37260,7 +37260,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 8.6
           }
         ],
         "pv": 53.4
@@ -37358,15 +37358,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 53.4
       },
       "EEM2": {
-        "total": 95.0,
+        "total": 97.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.9
+            "value": 11.1
           },
           {
             "name": "Cooling",
-            "value": 8.3
+            "value": 7.4
           },
           {
             "name": "DHW",
@@ -37382,25 +37382,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 9.4
           }
         ],
         "pv": 53.4
       },
       "EEM3": {
-        "total": 68.6,
+        "total": 71.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.9
+            "value": 11.2
           },
           {
             "name": "Cooling",
-            "value": 8.1
+            "value": 7.1
           },
           {
             "name": "DHW",
-            "value": 17.6
+            "value": 17.7
           },
           {
             "name": "Lighting",
@@ -37412,25 +37412,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.7
+            "value": 9.4
           }
         ],
         "pv": 53.4
       },
       "EEM4": {
-        "total": 54.9,
+        "total": 58.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.2
+            "value": 11.4
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 4.9
           },
           {
             "name": "DHW",
-            "value": 17.6
+            "value": 17.7
           },
           {
             "name": "Lighting",
@@ -37442,7 +37442,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.9
+            "value": 8.5
           }
         ],
         "pv": 53.4
@@ -37540,19 +37540,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 77.1
       },
       "EEM2": {
-        "total": 98.4,
+        "total": 109.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.5
+            "value": 21.3
           },
           {
             "name": "Cooling",
-            "value": 4.6
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 21.6
+            "value": 23.1
           },
           {
             "name": "Lighting",
@@ -37564,25 +37564,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.8
           }
         ],
-        "pv": 77.1
+        "pv": 77.2
       },
       "EEM3": {
-        "total": 86.5,
+        "total": 96.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.3
+            "value": 24.1
           },
           {
             "name": "Cooling",
-            "value": 4.6
+            "value": 3.9
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 7.5
           },
           {
             "name": "Lighting",
@@ -37594,25 +37594,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 9.0
           }
         ],
-        "pv": 77.1
+        "pv": 77.2
       },
       "EEM4": {
-        "total": 66.7,
+        "total": 75.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.8
+            "value": 24.8
           },
           {
             "name": "Cooling",
-            "value": 3.6
+            "value": 3.1
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 7.5
           },
           {
             "name": "Lighting",
@@ -37624,10 +37624,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.7
           }
         ],
-        "pv": 77.1
+        "pv": 77.2
       }
     },
     "RC-T": {
@@ -37722,19 +37722,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 71.9
       },
       "EEM2": {
-        "total": 108.7,
+        "total": 118.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.9
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 3.8
           },
           {
             "name": "DHW",
-            "value": 25.7
+            "value": 27.6
           },
           {
             "name": "Lighting",
@@ -37746,25 +37746,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.3
           }
         ],
-        "pv": 71.9
+        "pv": 72.0
       },
       "EEM3": {
-        "total": 94.4,
+        "total": 103.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.9
+            "value": 14.7
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 3.8
           },
           {
             "name": "DHW",
-            "value": 11.3
+            "value": 12.3
           },
           {
             "name": "Lighting",
@@ -37776,25 +37776,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.4
           }
         ],
-        "pv": 71.9
+        "pv": 72.0
       },
       "EEM4": {
-        "total": 70.1,
+        "total": 77.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.1
+            "value": 15.7
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.6
           },
           {
             "name": "DHW",
-            "value": 11.4
+            "value": 12.3
           },
           {
             "name": "Lighting",
@@ -37806,10 +37806,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.4
+            "value": 8.2
           }
         ],
-        "pv": 71.9
+        "pv": 72.0
       }
     },
     "RS-I1": {
@@ -37904,23 +37904,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 93.0
       },
       "EEM2": {
-        "total": 128.2,
+        "total": 132.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.8
+            "value": 18.2
           },
           {
             "name": "Cooling",
-            "value": 7.4
+            "value": 6.4
           },
           {
             "name": "DHW",
-            "value": 40.1
+            "value": 40.2
           },
           {
             "name": "Lighting",
-            "value": 8.3
+            "value": 8.4
           },
           {
             "name": "Equipment",
@@ -37928,29 +37928,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.9
+            "value": 11.6
           }
         ],
         "pv": 93.0
       },
       "EEM3": {
-        "total": 104.1,
+        "total": 108.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.5
+            "value": 20.8
           },
           {
             "name": "Cooling",
-            "value": 7.3
+            "value": 6.3
           },
           {
             "name": "DHW",
-            "value": 13.5
+            "value": 13.6
           },
           {
             "name": "Lighting",
-            "value": 8.3
+            "value": 8.4
           },
           {
             "name": "Equipment",
@@ -37958,29 +37958,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.0
+            "value": 11.7
           }
         ],
         "pv": 93.0
       },
       "EEM4": {
-        "total": 88.1,
+        "total": 92.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.7
+            "value": 22.1
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 4.6
           },
           {
             "name": "DHW",
-            "value": 13.5
+            "value": 13.6
           },
           {
             "name": "Lighting",
-            "value": 3.6
+            "value": 3.7
           },
           {
             "name": "Equipment",
@@ -37988,7 +37988,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 11.1
           }
         ],
         "pv": 93.0
@@ -38086,15 +38086,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 70.7
       },
       "EEM2": {
-        "total": 107.3,
+        "total": 113.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.4
+            "value": 23.0
           },
           {
             "name": "Cooling",
-            "value": 5.2
+            "value": 5.0
           },
           {
             "name": "DHW",
@@ -38102,7 +38102,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.4
+            "value": 9.6
           },
           {
             "name": "Equipment",
@@ -38110,21 +38110,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 10.3
           }
         ],
         "pv": 70.7
       },
       "EEM3": {
-        "total": 88.7,
+        "total": 95.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.2
+            "value": 24.8
           },
           {
             "name": "Cooling",
-            "value": 5.1
+            "value": 4.9
           },
           {
             "name": "DHW",
@@ -38132,7 +38132,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.4
+            "value": 9.6
           },
           {
             "name": "Equipment",
@@ -38140,21 +38140,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 10.3
           }
         ],
         "pv": 70.7
       },
       "EEM4": {
-        "total": 73.1,
+        "total": 80.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.2
+            "value": 26.7
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -38170,7 +38170,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.0
+            "value": 9.4
           }
         ],
         "pv": 70.7
@@ -38268,23 +38268,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 119.0
       },
       "EEM2": {
-        "total": 127.0,
+        "total": 141.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.1
+            "value": 24.0
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 5.1
           },
           {
             "name": "DHW",
-            "value": 23.5
+            "value": 23.8
           },
           {
             "name": "Lighting",
-            "value": 10.3
+            "value": 10.4
           },
           {
             "name": "Equipment",
@@ -38292,29 +38292,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.9
+            "value": 15.9
           }
         ],
         "pv": 119.0
       },
       "EEM3": {
-        "total": 112.5,
+        "total": 126.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.9
+            "value": 25.7
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 5.1
           },
           {
             "name": "DHW",
-            "value": 7.1
+            "value": 7.3
           },
           {
             "name": "Lighting",
-            "value": 10.3
+            "value": 10.4
           },
           {
             "name": "Equipment",
@@ -38322,29 +38322,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.0
+            "value": 16.0
           }
         ],
         "pv": 119.0
       },
       "EEM4": {
-        "total": 92.4,
+        "total": 105.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.9
+            "value": 28.4
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 4.0
           },
           {
             "name": "DHW",
-            "value": 7.2
+            "value": 7.3
           },
           {
             "name": "Lighting",
-            "value": 4.7
+            "value": 4.8
           },
           {
             "name": "Equipment",
@@ -38352,7 +38352,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.2
+            "value": 14.3
           }
         ],
         "pv": 119.0
@@ -38450,15 +38450,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 76.8
       },
       "EEM2": {
-        "total": 100.7,
+        "total": 107.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.3
+            "value": 17.4
           },
           {
             "name": "Cooling",
-            "value": 6.2
+            "value": 6.0
           },
           {
             "name": "DHW",
@@ -38466,7 +38466,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.1
+            "value": 9.2
           },
           {
             "name": "Equipment",
@@ -38474,21 +38474,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.0
+            "value": 11.9
           }
         ],
         "pv": 76.8
       },
       "EEM3": {
-        "total": 81.6,
+        "total": 88.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.3
+            "value": 18.5
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.9
           },
           {
             "name": "DHW",
@@ -38496,7 +38496,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.1
+            "value": 9.2
           },
           {
             "name": "Equipment",
@@ -38504,21 +38504,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.0
+            "value": 11.9
           }
         ],
         "pv": 76.8
       },
       "EEM4": {
-        "total": 66.9,
+        "total": 73.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.1
+            "value": 19.2
           },
           {
             "name": "Cooling",
-            "value": 4.5
+            "value": 4.4
           },
           {
             "name": "DHW",
@@ -38526,7 +38526,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "Equipment",
@@ -38534,7 +38534,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 10.9
           }
         ],
         "pv": 76.8
@@ -38632,19 +38632,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 82.3
       },
       "EEM2": {
-        "total": 158.8,
+        "total": 168.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.9
+            "value": 30.1
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 36.4
+            "value": 36.8
           },
           {
             "name": "Lighting",
@@ -38656,25 +38656,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.7
+            "value": 11.7
           }
         ],
-        "pv": 82.3
+        "pv": 82.4
       },
       "EEM3": {
-        "total": 137.3,
+        "total": 147.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 25.6
+            "value": 34.8
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 5.0
           },
           {
             "name": "DHW",
-            "value": 10.1
+            "value": 10.3
           },
           {
             "name": "Lighting",
@@ -38686,25 +38686,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.8
+            "value": 11.9
           }
         ],
-        "pv": 82.3
+        "pv": 82.4
       },
       "EEM4": {
-        "total": 116.2,
+        "total": 126.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.1
+            "value": 37.6
           },
           {
             "name": "Cooling",
-            "value": 4.0
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 10.2
+            "value": 10.3
           },
           {
             "name": "Lighting",
@@ -38716,10 +38716,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 11.8
           }
         ],
-        "pv": 82.3
+        "pv": 82.4
       }
     }
   },
@@ -38816,15 +38816,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 27.0
       },
       "EEM2": {
-        "total": 98.3,
+        "total": 99.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.2
+            "value": 11.4
           },
           {
             "name": "Cooling",
-            "value": 1.5
+            "value": 1.3
           },
           {
             "name": "DHW",
@@ -38840,21 +38840,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 7.3
           }
         ],
         "pv": 27.0
       },
       "EEM3": {
-        "total": 85.5,
+        "total": 87.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.8
+            "value": 13.9
           },
           {
             "name": "Cooling",
-            "value": 1.5
+            "value": 1.3
           },
           {
             "name": "DHW",
@@ -38870,21 +38870,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 7.4
           }
         ],
         "pv": 27.0
       },
       "EEM4": {
-        "total": 63.7,
+        "total": 66.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.8
+            "value": 14.6
           },
           {
             "name": "Cooling",
-            "value": 0.9
+            "value": 0.7
           },
           {
             "name": "DHW",
@@ -38900,7 +38900,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.9
+            "value": 5.7
           }
         ],
         "pv": 27.0
@@ -38998,11 +38998,11 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 24.4
       },
       "EEM2": {
-        "total": 77.6,
+        "total": 78.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 5.0
+            "value": 5.7
           },
           {
             "name": "Cooling",
@@ -39022,17 +39022,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.3
+            "value": 6.2
           }
         ],
         "pv": 24.4
       },
       "EEM3": {
-        "total": 68.1,
+        "total": 68.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.2
+            "value": 6.8
           },
           {
             "name": "Cooling",
@@ -39052,21 +39052,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.3
+            "value": 6.2
           }
         ],
         "pv": 24.4
       },
       "EEM4": {
-        "total": 46.7,
+        "total": 47.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.7
+            "value": 7.6
           },
           {
             "name": "Cooling",
-            "value": 0.7
+            "value": 0.8
           },
           {
             "name": "DHW",
@@ -39082,7 +39082,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.3
+            "value": 4.4
           }
         ],
         "pv": 24.4
@@ -39180,15 +39180,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 44.3
       },
       "EEM2": {
-        "total": 153.5,
+        "total": 160.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 35.9
+            "value": 42.5
           },
           {
             "name": "Cooling",
-            "value": 2.8
+            "value": 2.9
           },
           {
             "name": "DHW",
@@ -39196,7 +39196,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 23.1
           },
           {
             "name": "Equipment",
@@ -39204,21 +39204,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.8
+            "value": 31.1
           }
         ],
         "pv": 44.3
       },
       "EEM3": {
-        "total": 138.7,
+        "total": 145.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 38.3
+            "value": 44.6
           },
           {
             "name": "Cooling",
-            "value": 2.8
+            "value": 2.9
           },
           {
             "name": "DHW",
@@ -39226,7 +39226,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 23.0
+            "value": 23.1
           },
           {
             "name": "Equipment",
@@ -39234,21 +39234,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 30.8
+            "value": 31.2
           }
         ],
         "pv": 44.3
       },
       "EEM4": {
-        "total": 117.1,
+        "total": 125.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 37.3
+            "value": 44.6
           },
           {
             "name": "Cooling",
-            "value": 2.2
+            "value": 2.3
           },
           {
             "name": "DHW",
@@ -39264,7 +39264,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.6
+            "value": 30.4
           }
         ],
         "pv": 44.3
@@ -39362,15 +39362,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 46.7
       },
       "EEM2": {
-        "total": 149.3,
+        "total": 152.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.0
+            "value": 30.5
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 3.9
           },
           {
             "name": "DHW",
@@ -39386,17 +39386,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.8
+            "value": 30.2
           }
         ],
         "pv": 46.7
       },
       "EEM3": {
-        "total": 132.8,
+        "total": 135.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 29.4
+            "value": 31.8
           },
           {
             "name": "Cooling",
@@ -39416,17 +39416,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 29.8
+            "value": 30.2
           }
         ],
         "pv": 46.7
       },
       "EEM4": {
-        "total": 113.4,
+        "total": 116.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.9
+            "value": 31.3
           },
           {
             "name": "Cooling",
@@ -39446,7 +39446,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 28.9
+            "value": 29.5
           }
         ],
         "pv": 46.7
@@ -39544,15 +39544,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 7.8
       },
       "EEM2": {
-        "total": 100.2,
+        "total": 101.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.1
+            "value": 9.0
           },
           {
             "name": "Cooling",
-            "value": 3.3
+            "value": 2.5
           },
           {
             "name": "DHW",
@@ -39560,7 +39560,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 12.4
+            "value": 12.8
           },
           {
             "name": "Equipment",
@@ -39568,47 +39568,17 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.9
+            "value": 11.3
           }
         ],
         "pv": 7.8
       },
       "EEM3": {
-        "total": 81.0,
+        "total": 82.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.6
-          },
-          {
-            "name": "Cooling",
-            "value": 3.3
-          },
-          {
-            "name": "DHW",
-            "value": 9.4
-          },
-          {
-            "name": "Lighting",
-            "value": 12.4
-          },
-          {
-            "name": "Equipment",
-            "value": 31.0
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 12.9
-          }
-        ],
-        "pv": 7.8
-      },
-      "EEM4": {
-        "total": 62.0,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 7.4
+            "value": 9.5
           },
           {
             "name": "Cooling",
@@ -39620,7 +39590,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.2
+            "value": 12.8
+          },
+          {
+            "name": "Equipment",
+            "value": 31.0
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 11.4
+          }
+        ],
+        "pv": 7.8
+      },
+      "EEM4": {
+        "total": 63.4,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 10.7
+          },
+          {
+            "name": "Cooling",
+            "value": 1.8
+          },
+          {
+            "name": "DHW",
+            "value": 9.4
+          },
+          {
+            "name": "Lighting",
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -39628,7 +39628,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 9.9
           }
         ],
         "pv": 7.8
@@ -39726,15 +39726,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 13.7
       },
       "EEM2": {
-        "total": 98.7,
+        "total": 99.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.8
+            "value": 10.3
           },
           {
             "name": "Cooling",
-            "value": 2.9
+            "value": 2.3
           },
           {
             "name": "DHW",
@@ -39742,7 +39742,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.3
+            "value": 13.5
           },
           {
             "name": "Equipment",
@@ -39750,29 +39750,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 8.4
           }
         ],
         "pv": 13.7
       },
       "EEM3": {
-        "total": 83.6,
+        "total": 84.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.9
+            "value": 11.4
           },
           {
             "name": "Cooling",
-            "value": 2.9
+            "value": 2.3
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 6.7
           },
           {
             "name": "Lighting",
-            "value": 13.3
+            "value": 13.5
           },
           {
             "name": "Equipment",
@@ -39780,29 +39780,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 8.4
           }
         ],
         "pv": 13.7
       },
       "EEM4": {
-        "total": 63.1,
+        "total": 64.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.0
+            "value": 12.3
           },
           {
             "name": "Cooling",
-            "value": 2.1
+            "value": 1.6
           },
           {
             "name": "DHW",
-            "value": 6.8
+            "value": 6.7
           },
           {
             "name": "Lighting",
-            "value": 6.3
+            "value": 6.5
           },
           {
             "name": "Equipment",
@@ -39810,7 +39810,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 6.9
           }
         ],
         "pv": 13.7
@@ -39908,15 +39908,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 11.6
       },
       "EEM2": {
-        "total": 107.3,
+        "total": 109.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.2
+            "value": 10.8
           },
           {
             "name": "Cooling",
-            "value": 3.9
+            "value": 2.9
           },
           {
             "name": "DHW",
@@ -39924,7 +39924,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.5
+            "value": 13.8
           },
           {
             "name": "Equipment",
@@ -39932,21 +39932,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.5
+            "value": 10.3
           }
         ],
         "pv": 11.6
       },
       "EEM3": {
-        "total": 88.1,
+        "total": 89.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.6
+            "value": 11.3
           },
           {
             "name": "Cooling",
-            "value": 3.9
+            "value": 2.9
           },
           {
             "name": "DHW",
@@ -39954,7 +39954,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 13.5
+            "value": 13.8
           },
           {
             "name": "Equipment",
@@ -39962,21 +39962,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.5
+            "value": 10.3
           }
         ],
         "pv": 11.6
       },
       "EEM4": {
-        "total": 67.5,
+        "total": 70.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.4
+            "value": 12.4
           },
           {
             "name": "Cooling",
-            "value": 2.8
+            "value": 2.1
           },
           {
             "name": "DHW",
@@ -39984,7 +39984,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 6.7
+            "value": 7.0
           },
           {
             "name": "Equipment",
@@ -39992,7 +39992,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.8
+            "value": 8.7
           }
         ],
         "pv": 11.6
@@ -40090,15 +40090,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 112.9
       },
       "EEM2": {
-        "total": 196.2,
+        "total": 218.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 41.8
+            "value": 63.7
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 3.3
           },
           {
             "name": "DHW",
@@ -40106,7 +40106,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.4
+            "value": 36.6
           },
           {
             "name": "Equipment",
@@ -40114,21 +40114,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.4
+            "value": 14.0
           }
         ],
         "pv": 112.9
       },
       "EEM3": {
-        "total": 179.2,
+        "total": 201.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 46.3
+            "value": 68.2
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 3.3
           },
           {
             "name": "DHW",
@@ -40136,7 +40136,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 36.4
+            "value": 36.6
           },
           {
             "name": "Equipment",
@@ -40144,21 +40144,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 13.5
+            "value": 14.0
           }
         ],
         "pv": 112.9
       },
       "EEM4": {
-        "total": 146.1,
+        "total": 175.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 46.0
+            "value": 73.5
           },
           {
             "name": "Cooling",
-            "value": 1.4
+            "value": 1.5
           },
           {
             "name": "DHW",
@@ -40166,7 +40166,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 16.9
+            "value": 17.1
           },
           {
             "name": "Equipment",
@@ -40174,7 +40174,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.7
+            "value": 13.4
           }
         ],
         "pv": 112.9
@@ -40272,23 +40272,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 164.0
       },
       "EEM2": {
-        "total": 257.7,
+        "total": 294.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 40.8
+            "value": 76.1
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 25.2
+            "value": 25.3
           },
           {
             "name": "Lighting",
-            "value": 63.6
+            "value": 63.9
           },
           {
             "name": "Equipment",
@@ -40296,29 +40296,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.2
+            "value": 21.1
           }
         ],
         "pv": 164.0
       },
       "EEM3": {
-        "total": 239.2,
+        "total": 276.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 44.6
+            "value": 80.4
           },
           {
             "name": "Cooling",
-            "value": 6.1
+            "value": 5.8
           },
           {
             "name": "DHW",
-            "value": 3.0
+            "value": 2.9
           },
           {
             "name": "Lighting",
-            "value": 63.6
+            "value": 63.9
           },
           {
             "name": "Equipment",
@@ -40326,29 +40326,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 19.2
+            "value": 21.1
           }
         ],
         "pv": 164.0
       },
       "EEM4": {
-        "total": 195.1,
+        "total": 238.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 46.6
+            "value": 86.2
           },
           {
             "name": "Cooling",
-            "value": 1.8
+            "value": 2.3
           },
           {
             "name": "DHW",
-            "value": 3.0
+            "value": 2.9
           },
           {
             "name": "Lighting",
-            "value": 29.5
+            "value": 29.8
           },
           {
             "name": "Equipment",
@@ -40356,7 +40356,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 17.1
+            "value": 20.6
           }
         ],
         "pv": 164.0
@@ -40454,15 +40454,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 143.6
       },
       "EEM2": {
-        "total": 3613.8,
+        "total": 3596.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 29.7
+            "value": 34.5
           },
           {
             "name": "Cooling",
-            "value": 402.8
+            "value": 393.7
           },
           {
             "name": "DHW",
@@ -40470,59 +40470,59 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 31.9
+            "value": 32.0
           },
           {
             "name": "Equipment",
-            "value": 2714.4
+            "value": 2714.1
           },
           {
             "name": "Fans & Pumps",
-            "value": 334.1
+            "value": 321.4
           }
         ],
         "pv": 143.6
       },
       "EEM3": {
-        "total": 3605.7,
+        "total": 3588.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 31.2
+            "value": 36.0
           },
           {
             "name": "Cooling",
-            "value": 402.8
+            "value": 393.8
           },
           {
             "name": "DHW",
-            "value": 1.0
+            "value": 1.1
           },
           {
             "name": "Lighting",
-            "value": 31.9
+            "value": 32.0
           },
           {
             "name": "Equipment",
-            "value": 2714.4
+            "value": 2714.1
           },
           {
             "name": "Fans & Pumps",
-            "value": 334.1
+            "value": 321.5
           }
         ],
         "pv": 143.6
       },
       "EEM4": {
-        "total": 3602.4,
+        "total": 3585.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 34.0
+            "value": 38.5
           },
           {
             "name": "Cooling",
-            "value": 402.5
+            "value": 393.6
           },
           {
             "name": "DHW",
@@ -40534,11 +40534,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 2711.7
+            "value": 2711.5
           },
           {
             "name": "Fans & Pumps",
-            "value": 333.7
+            "value": 321.2
           }
         ],
         "pv": 143.6
@@ -40636,15 +40636,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 105.0
       },
       "EEM2": {
-        "total": 11788.5,
+        "total": 11770.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 37.7
+            "value": 42.8
           },
           {
             "name": "Cooling",
-            "value": 1257.4
+            "value": 1250.0
           },
           {
             "name": "DHW",
@@ -40656,25 +40656,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9038.7
+            "value": 9037.3
           },
           {
             "name": "Fans & Pumps",
-            "value": 1134.4
+            "value": 1120.0
           }
         ],
         "pv": 105.0
       },
       "EEM3": {
-        "total": 11779.4,
+        "total": 11760.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 39.9
+            "value": 45.0
           },
           {
             "name": "Cooling",
-            "value": 1257.4
+            "value": 1250.0
           },
           {
             "name": "DHW",
@@ -40686,25 +40686,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9038.9
+            "value": 9037.4
           },
           {
             "name": "Fans & Pumps",
-            "value": 1134.8
+            "value": 1120.1
           }
         ],
         "pv": 105.0
       },
       "EEM4": {
-        "total": 11769.4,
+        "total": 11750.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 39.0
+            "value": 46.2
           },
           {
             "name": "Cooling",
-            "value": 1257.3
+            "value": 1249.6
           },
           {
             "name": "DHW",
@@ -40716,11 +40716,11 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Equipment",
-            "value": 9033.2
+            "value": 9030.7
           },
           {
             "name": "Fans & Pumps",
-            "value": 1135.0
+            "value": 1119.3
           }
         ],
         "pv": 105.0
@@ -40818,71 +40818,11 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 22.6
       },
       "EEM2": {
-        "total": 167.4,
+        "total": 171.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 34.1
-          },
-          {
-            "name": "Cooling",
-            "value": 4.6
-          },
-          {
-            "name": "DHW",
-            "value": 41.1
-          },
-          {
-            "name": "Lighting",
-            "value": 11.4
-          },
-          {
-            "name": "Equipment",
-            "value": 45.6
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 18.6
-          }
-        ],
-        "pv": 22.6
-      },
-      "EEM3": {
-        "total": 139.1,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 39.2
-          },
-          {
-            "name": "Cooling",
-            "value": 4.6
-          },
-          {
-            "name": "DHW",
-            "value": 7.6
-          },
-          {
-            "name": "Lighting",
-            "value": 11.4
-          },
-          {
-            "name": "Equipment",
-            "value": 45.6
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 18.7
-          }
-        ],
-        "pv": 22.6
-      },
-      "EEM4": {
-        "total": 125.6,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 40.1
+            "value": 39.6
           },
           {
             "name": "Cooling",
@@ -40890,11 +40830,71 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "DHW",
-            "value": 7.5
+            "value": 41.1
           },
           {
             "name": "Lighting",
-            "value": 5.4
+            "value": 11.5
+          },
+          {
+            "name": "Equipment",
+            "value": 45.6
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 18.3
+          }
+        ],
+        "pv": 22.7
+      },
+      "EEM3": {
+        "total": 142.9,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 44.7
+          },
+          {
+            "name": "Cooling",
+            "value": 3.4
+          },
+          {
+            "name": "DHW",
+            "value": 7.4
+          },
+          {
+            "name": "Lighting",
+            "value": 11.5
+          },
+          {
+            "name": "Equipment",
+            "value": 45.6
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 18.4
+          }
+        ],
+        "pv": 22.7
+      },
+      "EEM4": {
+        "total": 131.5,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 47.0
+          },
+          {
+            "name": "Cooling",
+            "value": 2.5
+          },
+          {
+            "name": "DHW",
+            "value": 7.4
+          },
+          {
+            "name": "Lighting",
+            "value": 5.5
           },
           {
             "name": "Equipment",
@@ -40902,10 +40902,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 17.4
+            "value": 17.2
           }
         ],
-        "pv": 22.6
+        "pv": 22.7
       }
     },
     "MU-C2": {
@@ -41000,19 +41000,49 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 19.4
       },
       "EEM2": {
-        "total": 99.5,
+        "total": 101.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 11.3
+            "value": 14.4
           },
           {
             "name": "Cooling",
-            "value": 2.6
+            "value": 1.8
           },
           {
             "name": "DHW",
             "value": 33.9
+          },
+          {
+            "name": "Lighting",
+            "value": 7.7
+          },
+          {
+            "name": "Equipment",
+            "value": 28.9
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 8.1
+          }
+        ],
+        "pv": 19.4
+      },
+      "EEM3": {
+        "total": 78.4,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 19.4
+          },
+          {
+            "name": "Cooling",
+            "value": 1.8
+          },
+          {
+            "name": "DHW",
+            "value": 5.6
           },
           {
             "name": "Lighting",
@@ -41029,46 +41059,16 @@ const ENVELOPE_ENERGY_DATA = {
         ],
         "pv": 19.4
       },
-      "EEM3": {
-        "total": 76.2,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 16.2
-          },
-          {
-            "name": "Cooling",
-            "value": 2.6
-          },
-          {
-            "name": "DHW",
-            "value": 5.6
-          },
-          {
-            "name": "Lighting",
-            "value": 7.7
-          },
-          {
-            "name": "Equipment",
-            "value": 28.9
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 8.3
-          }
-        ],
-        "pv": 19.4
-      },
       "EEM4": {
-        "total": 62.1,
+        "total": 65.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.5
+            "value": 22.8
           },
           {
             "name": "Cooling",
-            "value": 1.5
+            "value": 1.0
           },
           {
             "name": "DHW",
@@ -41084,7 +41084,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 6.8
+            "value": 6.9
           }
         ],
         "pv": 19.4
@@ -41182,67 +41182,7 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 41.0
       },
       "EEM2": {
-        "total": 132.1,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 25.3
-          },
-          {
-            "name": "Cooling",
-            "value": 5.2
-          },
-          {
-            "name": "DHW",
-            "value": 45.1
-          },
-          {
-            "name": "Lighting",
-            "value": 8.1
-          },
-          {
-            "name": "Equipment",
-            "value": 32.1
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 10.9
-          }
-        ],
-        "pv": 41.0
-      },
-      "EEM3": {
-        "total": 101.1,
-        "breakdown": [
-          {
-            "name": "Heating",
-            "value": 30.2
-          },
-          {
-            "name": "Cooling",
-            "value": 5.1
-          },
-          {
-            "name": "DHW",
-            "value": 9.2
-          },
-          {
-            "name": "Lighting",
-            "value": 8.1
-          },
-          {
-            "name": "Equipment",
-            "value": 32.1
-          },
-          {
-            "name": "Fans & Pumps",
-            "value": 11.0
-          }
-        ],
-        "pv": 41.0
-      },
-      "EEM4": {
-        "total": 88.0,
+        "total": 136.6,
         "breakdown": [
           {
             "name": "Heating",
@@ -41250,7 +41190,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Cooling",
-            "value": 3.5
+            "value": 3.8
+          },
+          {
+            "name": "DHW",
+            "value": 45.1
+          },
+          {
+            "name": "Lighting",
+            "value": 8.2
+          },
+          {
+            "name": "Equipment",
+            "value": 32.1
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 10.6
+          }
+        ],
+        "pv": 41.1
+      },
+      "EEM3": {
+        "total": 105.6,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 36.3
+          },
+          {
+            "name": "Cooling",
+            "value": 3.7
           },
           {
             "name": "DHW",
@@ -41258,7 +41228,37 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 3.9
+            "value": 8.2
+          },
+          {
+            "name": "Equipment",
+            "value": 32.1
+          },
+          {
+            "name": "Fans & Pumps",
+            "value": 10.7
+          }
+        ],
+        "pv": 41.1
+      },
+      "EEM4": {
+        "total": 94.9,
+        "breakdown": [
+          {
+            "name": "Heating",
+            "value": 39.2
+          },
+          {
+            "name": "Cooling",
+            "value": 2.5
+          },
+          {
+            "name": "DHW",
+            "value": 9.0
+          },
+          {
+            "name": "Lighting",
+            "value": 4.0
           },
           {
             "name": "Equipment",
@@ -41266,10 +41266,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.1
+            "value": 10.0
           }
         ],
-        "pv": 41.0
+        "pv": 41.1
       }
     },
     "MU-HS": {
@@ -41364,19 +41364,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 71.5
       },
       "EEM2": {
-        "total": 143.9,
+        "total": 156.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 23.9
+            "value": 35.7
           },
           {
             "name": "Cooling",
-            "value": 5.3
+            "value": 4.5
           },
           {
             "name": "DHW",
-            "value": 40.8
+            "value": 41.0
           },
           {
             "name": "Lighting",
@@ -41388,21 +41388,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.5
+            "value": 13.4
           }
         ],
         "pv": 71.5
       },
       "EEM3": {
-        "total": 118.7,
+        "total": 131.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.5
+            "value": 38.3
           },
           {
             "name": "Cooling",
-            "value": 5.2
+            "value": 4.4
           },
           {
             "name": "DHW",
@@ -41418,29 +41418,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.6
+            "value": 13.4
           }
         ],
         "pv": 71.5
       },
       "EEM4": {
-        "total": 104.3,
+        "total": 117.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 27.2
+            "value": 39.0
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 3.3
           },
           {
             "name": "DHW",
-            "value": 13.2
+            "value": 13.3
           },
           {
             "name": "Lighting",
-            "value": 4.9
+            "value": 5.0
           },
           {
             "name": "Equipment",
@@ -41448,7 +41448,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.2
+            "value": 13.2
           }
         ],
         "pv": 71.5
@@ -41546,19 +41546,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 65.8
       },
       "EEM2": {
-        "total": 132.4,
+        "total": 146.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 24.3
+            "value": 37.7
           },
           {
             "name": "Cooling",
-            "value": 5.1
+            "value": 4.2
           },
           {
             "name": "DHW",
-            "value": 43.7
+            "value": 43.8
           },
           {
             "name": "Lighting",
@@ -41570,21 +41570,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 12.3
           }
         ],
         "pv": 65.8
       },
       "EEM3": {
-        "total": 105.3,
+        "total": 119.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 25.9
+            "value": 39.4
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -41600,21 +41600,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.6
+            "value": 12.3
           }
         ],
         "pv": 65.8
       },
       "EEM4": {
-        "total": 93.1,
+        "total": 107.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.8
+            "value": 42.0
           },
           {
             "name": "Cooling",
-            "value": 3.3
+            "value": 2.5
           },
           {
             "name": "DHW",
@@ -41630,7 +41630,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 11.3
           }
         ],
         "pv": 65.8
@@ -41728,15 +41728,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 63.0
       },
       "EEM2": {
-        "total": 155.5,
+        "total": 158.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.5
+            "value": 30.7
           },
           {
             "name": "Cooling",
-            "value": 5.0
+            "value": 4.1
           },
           {
             "name": "DHW",
@@ -41744,7 +41744,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -41752,21 +41752,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.0
+            "value": 11.7
           }
         ],
-        "pv": 63.0
+        "pv": 63.2
       },
       "EEM3": {
-        "total": 128.1,
+        "total": 131.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 30.2
+            "value": 34.4
           },
           {
             "name": "Cooling",
-            "value": 4.9
+            "value": 4.0
           },
           {
             "name": "DHW",
@@ -41774,7 +41774,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Equipment",
@@ -41782,21 +41782,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.1
+            "value": 11.7
           }
         ],
-        "pv": 63.0
+        "pv": 63.2
       },
       "EEM4": {
-        "total": 108.3,
+        "total": 111.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 31.0
+            "value": 35.4
           },
           {
             "name": "Cooling",
-            "value": 3.0
+            "value": 2.3
           },
           {
             "name": "DHW",
@@ -41804,7 +41804,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -41812,10 +41812,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 10.6
           }
         ],
-        "pv": 63.0
+        "pv": 63.2
       }
     },
     "MU-S2": {
@@ -41910,23 +41910,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 86.4
       },
       "EEM2": {
-        "total": 146.1,
+        "total": 151.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 17.9
+            "value": 23.0
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 5.1
           },
           {
             "name": "DHW",
-            "value": 44.4
+            "value": 44.5
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -41934,21 +41934,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.5
+            "value": 13.4
           }
         ],
         "pv": 86.4
       },
       "EEM3": {
-        "total": 120.3,
+        "total": 125.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 20.6
+            "value": 25.7
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 5.0
           },
           {
             "name": "DHW",
@@ -41956,7 +41956,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 21.5
+            "value": 21.6
           },
           {
             "name": "Equipment",
@@ -41964,21 +41964,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 12.5
+            "value": 13.4
           }
         ],
         "pv": 86.4
       },
       "EEM4": {
-        "total": 100.0,
+        "total": 104.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.3
+            "value": 26.9
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.7
           },
           {
             "name": "DHW",
@@ -41986,7 +41986,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.9
+            "value": 10.0
           },
           {
             "name": "Equipment",
@@ -41994,7 +41994,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.9
+            "value": 12.4
           }
         ],
         "pv": 86.4
@@ -42092,15 +42092,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.5
       },
       "EEM2": {
-        "total": 85.5,
+        "total": 88.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.8
+            "value": 13.1
           },
           {
             "name": "Cooling",
-            "value": 2.7
+            "value": 1.8
           },
           {
             "name": "DHW",
@@ -42108,7 +42108,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 7.2
+            "value": 7.3
           },
           {
             "name": "Equipment",
@@ -42122,23 +42122,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 18.5
       },
       "EEM3": {
-        "total": 65.8,
+        "total": 68.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.8
+            "value": 17.2
           },
           {
             "name": "Cooling",
-            "value": 2.7
+            "value": 1.8
           },
           {
             "name": "DHW",
-            "value": 4.5
+            "value": 4.4
           },
           {
             "name": "Lighting",
-            "value": 7.2
+            "value": 7.3
           },
           {
             "name": "Equipment",
@@ -42146,29 +42146,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 7.5
           }
         ],
         "pv": 18.5
       },
       "EEM4": {
-        "total": 51.2,
+        "total": 55.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.5
+            "value": 21.0
           },
           {
             "name": "Cooling",
-            "value": 1.4
+            "value": 0.9
           },
           {
             "name": "DHW",
-            "value": 4.5
+            "value": 4.4
           },
           {
             "name": "Lighting",
-            "value": 3.2
+            "value": 3.3
           },
           {
             "name": "Equipment",
@@ -42274,19 +42274,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 67.0
       },
       "EEM2": {
-        "total": 115.5,
+        "total": 126.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.4
+            "value": 37.9
           },
           {
             "name": "Cooling",
-            "value": 3.2
+            "value": 2.7
           },
           {
             "name": "DHW",
-            "value": 31.4
+            "value": 31.5
           },
           {
             "name": "Lighting",
@@ -42298,21 +42298,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 9.7
           }
         ],
         "pv": 67.0
       },
       "EEM3": {
-        "total": 95.9,
+        "total": 106.7,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 30.3
+            "value": 39.8
           },
           {
             "name": "Cooling",
-            "value": 3.1
+            "value": 2.6
           },
           {
             "name": "DHW",
@@ -42328,21 +42328,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 9.7
           }
         ],
         "pv": 67.0
       },
       "EEM4": {
-        "total": 87.3,
+        "total": 98.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 31.7
+            "value": 41.3
           },
           {
             "name": "Cooling",
-            "value": 2.1
+            "value": 1.8
           },
           {
             "name": "DHW",
@@ -42358,7 +42358,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 9.0
           }
         ],
         "pv": 67.0
@@ -42456,15 +42456,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 103.4
       },
       "EEM2": {
-        "total": 108.6,
+        "total": 125.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 50.5
+            "value": 65.9
           },
           {
             "name": "Cooling",
-            "value": 0.6
+            "value": 0.8
           },
           {
             "name": "DHW",
@@ -42472,7 +42472,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.1
+            "value": 8.2
           },
           {
             "name": "Equipment",
@@ -42480,21 +42480,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.0
+            "value": 6.6
           }
         ],
         "pv": 103.4
       },
       "EEM3": {
-        "total": 99.0,
+        "total": 116.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 52.5
+            "value": 67.8
           },
           {
             "name": "Cooling",
-            "value": 0.6
+            "value": 0.8
           },
           {
             "name": "DHW",
@@ -42502,7 +42502,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 8.1
+            "value": 8.2
           },
           {
             "name": "Equipment",
@@ -42510,21 +42510,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 5.0
+            "value": 6.6
           }
         ],
         "pv": 103.4
       },
       "EEM4": {
-        "total": 95.6,
+        "total": 112.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 56.5
+            "value": 71.8
           },
           {
             "name": "Cooling",
-            "value": 0.4
+            "value": 0.6
           },
           {
             "name": "DHW",
@@ -42540,7 +42540,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 4.7
+            "value": 6.3
           }
         ],
         "pv": 103.4
@@ -42638,19 +42638,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 89.0
       },
       "EEM2": {
-        "total": 95.7,
+        "total": 103.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.6
+            "value": 16.4
           },
           {
             "name": "Cooling",
-            "value": 2.1
+            "value": 1.6
           },
           {
             "name": "DHW",
-            "value": 23.2
+            "value": 24.9
           },
           {
             "name": "Lighting",
@@ -42662,25 +42662,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.9
           }
         ],
-        "pv": 89.0
+        "pv": 89.1
       },
       "EEM3": {
-        "total": 83.4,
+        "total": 90.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.2
+            "value": 19.1
           },
           {
             "name": "Cooling",
-            "value": 2.1
+            "value": 1.6
           },
           {
             "name": "DHW",
-            "value": 8.0
+            "value": 8.9
           },
           {
             "name": "Lighting",
@@ -42692,25 +42692,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.9
+            "value": 9.1
           }
         ],
-        "pv": 89.0
+        "pv": 89.1
       },
       "EEM4": {
-        "total": 63.0,
+        "total": 70.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.9
+            "value": 19.4
           },
           {
             "name": "Cooling",
-            "value": 1.5
+            "value": 1.2
           },
           {
             "name": "DHW",
-            "value": 8.1
+            "value": 9.0
           },
           {
             "name": "Lighting",
@@ -42722,10 +42722,10 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 9.0
           }
         ],
-        "pv": 89.0
+        "pv": 89.1
       }
     },
     "RC-HR1": {
@@ -42820,15 +42820,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 40.1
       },
       "EEM2": {
-        "total": 99.8,
+        "total": 102.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.1
+            "value": 14.1
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 4.2
           },
           {
             "name": "DHW",
@@ -42844,25 +42844,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.6
           }
         ],
         "pv": 40.1
       },
       "EEM3": {
-        "total": 68.1,
+        "total": 71.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.7
+            "value": 17.8
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 4.1
           },
           {
             "name": "DHW",
-            "value": 13.0
+            "value": 12.9
           },
           {
             "name": "Lighting",
@@ -42874,29 +42874,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 9.6
           }
         ],
         "pv": 40.1
       },
       "EEM4": {
-        "total": 56.5,
+        "total": 60.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.1
+            "value": 20.7
           },
           {
             "name": "Cooling",
-            "value": 3.5
+            "value": 2.4
           },
           {
             "name": "DHW",
-            "value": 12.9
+            "value": 13.0
           },
           {
             "name": "Lighting",
-            "value": 1.8
+            "value": 1.9
           },
           {
             "name": "Equipment",
@@ -42904,7 +42904,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.8
           }
         ],
         "pv": 40.1
@@ -43002,15 +43002,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 27.0
       },
       "EEM2": {
-        "total": 105.2,
+        "total": 108.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 12.2
+            "value": 16.9
           },
           {
             "name": "Cooling",
-            "value": 5.5
+            "value": 3.6
           },
           {
             "name": "DHW",
@@ -43026,25 +43026,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 9.3
           }
         ],
         "pv": 27.0
       },
       "EEM3": {
-        "total": 68.7,
+        "total": 71.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.6
+            "value": 23.4
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 3.5
           },
           {
             "name": "DHW",
-            "value": 8.9
+            "value": 8.8
           },
           {
             "name": "Lighting",
@@ -43056,21 +43056,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.4
           }
         ],
         "pv": 27.0
       },
       "EEM4": {
-        "total": 59.1,
+        "total": 64.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 22.9
+            "value": 28.9
           },
           {
             "name": "Cooling",
-            "value": 3.0
+            "value": 1.8
           },
           {
             "name": "DHW",
@@ -43086,7 +43086,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.7
           }
         ],
         "pv": 27.0
@@ -43184,19 +43184,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 81.5
       },
       "EEM2": {
-        "total": 101.6,
+        "total": 109.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.5
+            "value": 14.0
           },
           {
             "name": "Cooling",
-            "value": 2.3
+            "value": 1.6
           },
           {
             "name": "DHW",
-            "value": 25.3
+            "value": 27.3
           },
           {
             "name": "Lighting",
@@ -43208,25 +43208,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.7
           }
         ],
         "pv": 81.5
       },
       "EEM3": {
-        "total": 88.1,
+        "total": 95.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.9
+            "value": 15.4
           },
           {
             "name": "Cooling",
-            "value": 2.3
+            "value": 1.7
           },
           {
             "name": "DHW",
-            "value": 10.3
+            "value": 11.4
           },
           {
             "name": "Lighting",
@@ -43238,25 +43238,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.7
+            "value": 8.8
           }
         ],
         "pv": 81.5
       },
       "EEM4": {
-        "total": 65.6,
+        "total": 72.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.9
+            "value": 16.1
           },
           {
             "name": "Cooling",
-            "value": 1.5
+            "value": 1.1
           },
           {
             "name": "DHW",
-            "value": 10.4
+            "value": 11.4
           },
           {
             "name": "Lighting",
@@ -43268,7 +43268,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.7
           }
         ],
         "pv": 81.5
@@ -43366,19 +43366,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 63.6
       },
       "EEM2": {
-        "total": 97.5,
+        "total": 101.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.1
+            "value": 11.3
           },
           {
             "name": "Cooling",
-            "value": 5.8
+            "value": 4.4
           },
           {
             "name": "DHW",
-            "value": 37.6
+            "value": 38.3
           },
           {
             "name": "Lighting",
@@ -43390,25 +43390,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 9.5
           }
         ],
         "pv": 63.6
       },
       "EEM3": {
-        "total": 75.6,
+        "total": 79.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.2
+            "value": 11.4
           },
           {
             "name": "Cooling",
-            "value": 5.6
+            "value": 4.3
           },
           {
             "name": "DHW",
-            "value": 15.7
+            "value": 16.1
           },
           {
             "name": "Lighting",
@@ -43420,25 +43420,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.0
+            "value": 9.6
           }
         ],
         "pv": 63.6
       },
       "EEM4": {
-        "total": 58.7,
+        "total": 62.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 8.2
+            "value": 11.8
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 2.8
           },
           {
             "name": "DHW",
-            "value": 15.8
+            "value": 16.2
           },
           {
             "name": "Lighting",
@@ -43450,7 +43450,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.2
+            "value": 8.8
           }
         ],
         "pv": 63.6
@@ -43548,19 +43548,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 56.0
       },
       "EEM2": {
-        "total": 94.3,
+        "total": 97.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.0
+            "value": 12.4
           },
           {
             "name": "Cooling",
-            "value": 5.9
+            "value": 4.8
           },
           {
             "name": "DHW",
-            "value": 43.8
+            "value": 43.9
           },
           {
             "name": "Lighting",
@@ -43572,25 +43572,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 9.9
           }
         ],
         "pv": 56.0
       },
       "EEM3": {
-        "total": 68.4,
+        "total": 71.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.1
+            "value": 12.5
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 4.5
           },
           {
             "name": "DHW",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Lighting",
@@ -43602,25 +43602,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.2
+            "value": 9.9
           }
         ],
         "pv": 56.0
       },
       "EEM4": {
-        "total": 54.7,
+        "total": 57.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.2
+            "value": 12.5
           },
           {
             "name": "Cooling",
-            "value": 3.8
+            "value": 2.8
           },
           {
             "name": "DHW",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Lighting",
@@ -43632,7 +43632,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.2
+            "value": 8.8
           }
         ],
         "pv": 56.0
@@ -43730,19 +43730,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 56.0
       },
       "EEM2": {
-        "total": 94.0,
+        "total": 97.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.1
+            "value": 12.6
           },
           {
             "name": "Cooling",
-            "value": 5.7
+            "value": 4.5
           },
           {
             "name": "DHW",
-            "value": 43.8
+            "value": 43.9
           },
           {
             "name": "Lighting",
@@ -43754,25 +43754,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.8
           }
         ],
         "pv": 56.0
       },
       "EEM3": {
-        "total": 68.1,
+        "total": 71.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.1
+            "value": 12.6
           },
           {
             "name": "Cooling",
-            "value": 5.4
+            "value": 4.3
           },
           {
             "name": "DHW",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Lighting",
@@ -43784,25 +43784,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.1
+            "value": 9.8
           }
         ],
         "pv": 56.0
       },
       "EEM4": {
-        "total": 54.4,
+        "total": 57.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 9.2
+            "value": 12.5
           },
           {
             "name": "Cooling",
-            "value": 3.6
+            "value": 2.6
           },
           {
             "name": "DHW",
-            "value": 18.1
+            "value": 18.2
           },
           {
             "name": "Lighting",
@@ -43814,7 +43814,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.1
+            "value": 8.7
           }
         ],
         "pv": 56.0
@@ -43912,19 +43912,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 79.1
       },
       "EEM2": {
-        "total": 95.9,
+        "total": 104.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 10.5
+            "value": 16.5
           },
           {
             "name": "Cooling",
-            "value": 2.4
+            "value": 1.8
           },
           {
             "name": "DHW",
-            "value": 23.2
+            "value": 24.9
           },
           {
             "name": "Lighting",
@@ -43936,25 +43936,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 9.0
           }
         ],
         "pv": 79.1
       },
       "EEM3": {
-        "total": 83.6,
+        "total": 91.2,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 13.2
+            "value": 19.2
           },
           {
             "name": "Cooling",
-            "value": 2.4
+            "value": 1.8
           },
           {
             "name": "DHW",
-            "value": 8.0
+            "value": 8.9
           },
           {
             "name": "Lighting",
@@ -43966,25 +43966,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.9
+            "value": 9.2
           }
         ],
         "pv": 79.1
       },
       "EEM4": {
-        "total": 63.4,
+        "total": 70.4,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.0
+            "value": 19.4
           },
           {
             "name": "Cooling",
-            "value": 1.7
+            "value": 1.3
           },
           {
             "name": "DHW",
-            "value": 8.1
+            "value": 9.0
           },
           {
             "name": "Lighting",
@@ -43996,7 +43996,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.8
+            "value": 9.0
           }
         ],
         "pv": 79.1
@@ -44094,19 +44094,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 73.8
       },
       "EEM2": {
-        "total": 107.8,
+        "total": 115.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.3
+            "value": 11.5
           },
           {
             "name": "Cooling",
-            "value": 2.5
+            "value": 1.7
           },
           {
             "name": "DHW",
-            "value": 27.6
+            "value": 29.9
           },
           {
             "name": "Lighting",
@@ -44118,25 +44118,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.4
           }
         ],
         "pv": 73.8
       },
       "EEM3": {
-        "total": 93.0,
+        "total": 99.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 6.3
+            "value": 11.5
           },
           {
             "name": "Cooling",
-            "value": 2.5
+            "value": 1.7
           },
           {
             "name": "DHW",
-            "value": 12.7
+            "value": 14.0
           },
           {
             "name": "Lighting",
@@ -44148,25 +44148,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.4
           }
         ],
         "pv": 73.8
       },
       "EEM4": {
-        "total": 68.4,
+        "total": 75.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 7.7
+            "value": 12.6
           },
           {
             "name": "Cooling",
-            "value": 1.5
+            "value": 1.0
           },
           {
             "name": "DHW",
-            "value": 12.8
+            "value": 14.0
           },
           {
             "name": "Lighting",
@@ -44178,7 +44178,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.5
+            "value": 8.4
           }
         ],
         "pv": 73.8
@@ -44276,23 +44276,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 95.8
       },
       "EEM2": {
-        "total": 127.9,
+        "total": 132.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.9
+            "value": 20.4
           },
           {
             "name": "Cooling",
-            "value": 4.7
+            "value": 3.7
           },
           {
             "name": "DHW",
-            "value": 40.2
+            "value": 40.4
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -44300,29 +44300,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.9
+            "value": 11.6
           }
         ],
         "pv": 95.8
       },
       "EEM3": {
-        "total": 104.2,
+        "total": 108.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.5
+            "value": 23.0
           },
           {
             "name": "Cooling",
-            "value": 4.6
+            "value": 3.6
           },
           {
             "name": "DHW",
-            "value": 14.0
+            "value": 14.2
           },
           {
             "name": "Lighting",
-            "value": 8.4
+            "value": 8.5
           },
           {
             "name": "Equipment",
@@ -44330,29 +44330,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.0
+            "value": 11.7
           }
         ],
         "pv": 95.8
       },
       "EEM4": {
-        "total": 88.2,
+        "total": 92.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.6
+            "value": 23.9
           },
           {
             "name": "Cooling",
-            "value": 3.0
+            "value": 2.4
           },
           {
             "name": "DHW",
-            "value": 14.1
+            "value": 14.2
           },
           {
             "name": "Lighting",
-            "value": 3.7
+            "value": 3.8
           },
           {
             "name": "Equipment",
@@ -44360,7 +44360,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 10.0
+            "value": 10.7
           }
         ],
         "pv": 95.8
@@ -44458,15 +44458,15 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 73.3
       },
       "EEM2": {
-        "total": 106.9,
+        "total": 114.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.4
+            "value": 25.7
           },
           {
             "name": "Cooling",
-            "value": 2.9
+            "value": 2.6
           },
           {
             "name": "DHW",
@@ -44474,7 +44474,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.6
+            "value": 9.7
           },
           {
             "name": "Equipment",
@@ -44482,21 +44482,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 10.0
           }
         ],
         "pv": 73.3
       },
       "EEM3": {
-        "total": 88.6,
+        "total": 95.8,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.2
+            "value": 27.5
           },
           {
             "name": "Cooling",
-            "value": 2.8
+            "value": 2.5
           },
           {
             "name": "DHW",
@@ -44504,7 +44504,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.6
+            "value": 9.7
           },
           {
             "name": "Equipment",
@@ -44512,21 +44512,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.6
+            "value": 10.0
           }
         ],
         "pv": 73.3
       },
       "EEM4": {
-        "total": 72.2,
+        "total": 80.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.2
+            "value": 28.1
           },
           {
             "name": "Cooling",
-            "value": 1.9
+            "value": 1.6
           },
           {
             "name": "DHW",
@@ -44534,7 +44534,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 4.1
+            "value": 4.2
           },
           {
             "name": "Equipment",
@@ -44542,7 +44542,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 7.6
+            "value": 8.7
           }
         ],
         "pv": 73.3
@@ -44640,23 +44640,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 121.5
       },
       "EEM2": {
-        "total": 128.9,
+        "total": 141.9,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 18.1
+            "value": 26.6
           },
           {
             "name": "Cooling",
-            "value": 2.5
+            "value": 2.4
           },
           {
             "name": "DHW",
-            "value": 23.6
+            "value": 23.9
           },
           {
             "name": "Lighting",
-            "value": 10.5
+            "value": 10.7
           },
           {
             "name": "Equipment",
@@ -44664,29 +44664,29 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 15.7
           }
         ],
         "pv": 121.5
       },
       "EEM3": {
-        "total": 114.5,
+        "total": 127.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 19.9
+            "value": 28.4
           },
           {
             "name": "Cooling",
-            "value": 2.5
+            "value": 2.4
           },
           {
             "name": "DHW",
-            "value": 7.5
+            "value": 7.7
           },
           {
             "name": "Lighting",
-            "value": 10.5
+            "value": 10.7
           },
           {
             "name": "Equipment",
@@ -44694,25 +44694,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.5
+            "value": 15.7
           }
         ],
         "pv": 121.5
       },
       "EEM4": {
-        "total": 94.7,
+        "total": 109.1,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.9
+            "value": 33.6
           },
           {
             "name": "Cooling",
-            "value": 1.6
+            "value": 1.8
           },
           {
             "name": "DHW",
-            "value": 7.6
+            "value": 7.7
           },
           {
             "name": "Lighting",
@@ -44724,7 +44724,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.8
+            "value": 14.3
           }
         ],
         "pv": 121.5
@@ -44822,23 +44822,23 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 79.3
       },
       "EEM2": {
-        "total": 101.2,
+        "total": 108.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 14.7
+            "value": 20.5
           },
           {
             "name": "Cooling",
-            "value": 3.7
+            "value": 3.3
           },
           {
             "name": "DHW",
-            "value": 32.5
+            "value": 32.6
           },
           {
             "name": "Lighting",
-            "value": 9.2
+            "value": 9.4
           },
           {
             "name": "Equipment",
@@ -44846,21 +44846,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 11.8
           }
         ],
         "pv": 79.3
       },
       "EEM3": {
-        "total": 82.4,
+        "total": 89.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 15.8
+            "value": 21.6
           },
           {
             "name": "Cooling",
-            "value": 3.6
+            "value": 3.2
           },
           {
             "name": "DHW",
@@ -44868,7 +44868,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Lighting",
-            "value": 9.2
+            "value": 9.4
           },
           {
             "name": "Equipment",
@@ -44876,21 +44876,21 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 9.6
+            "value": 11.8
           }
         ],
         "pv": 79.3
       },
       "EEM4": {
-        "total": 67.0,
+        "total": 74.6,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 16.2
+            "value": 21.8
           },
           {
             "name": "Cooling",
-            "value": 2.4
+            "value": 2.1
           },
           {
             "name": "DHW",
@@ -44906,7 +44906,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 8.4
+            "value": 10.7
           }
         ],
         "pv": 79.3
@@ -45004,19 +45004,19 @@ const ENVELOPE_ENERGY_DATA = {
         "pv": 85.2
       },
       "EEM2": {
-        "total": 158.1,
+        "total": 170.5,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 21.8
+            "value": 33.3
           },
           {
             "name": "Cooling",
-            "value": 3.3
+            "value": 2.8
           },
           {
             "name": "DHW",
-            "value": 36.6
+            "value": 37.0
           },
           {
             "name": "Lighting",
@@ -45028,25 +45028,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.2
+            "value": 12.3
           }
         ],
         "pv": 85.2
       },
       "EEM3": {
-        "total": 137.1,
+        "total": 149.3,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 26.4
+            "value": 37.9
           },
           {
             "name": "Cooling",
-            "value": 3.3
+            "value": 2.8
           },
           {
             "name": "DHW",
-            "value": 10.9
+            "value": 11.1
           },
           {
             "name": "Lighting",
@@ -45058,25 +45058,25 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.3
+            "value": 12.4
           }
         ],
         "pv": 85.2
       },
       "EEM4": {
-        "total": 115.8,
+        "total": 129.0,
         "breakdown": [
           {
             "name": "Heating",
-            "value": 28.4
+            "value": 40.4
           },
           {
             "name": "Cooling",
-            "value": 2.2
+            "value": 2.0
           },
           {
             "name": "DHW",
-            "value": 11.0
+            "value": 11.1
           },
           {
             "name": "Lighting",
@@ -45088,7 +45088,7 @@ const ENVELOPE_ENERGY_DATA = {
           },
           {
             "name": "Fans & Pumps",
-            "value": 11.1
+            "value": 12.4
           }
         ],
         "pv": 85.2
@@ -82435,23 +82435,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 30.5
     },
     "EEM2": {
-      "total": 134.1,
+      "total": 138.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 6.6
+          "value": 11.0
         },
         {
           "name": "Cooling",
-          "value": 8.7
+          "value": 8.0
         },
         {
           "name": "DHW",
-          "value": 18.5
+          "value": 18.6
         },
         {
           "name": "Lighting",
-          "value": 41.2
+          "value": 41.0
         },
         {
           "name": "Equipment",
@@ -82459,21 +82459,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.4
+          "value": 12.4
         }
       ],
       "pv": 30.5
     },
     "EEM3": {
-      "total": 120.6,
+      "total": 125.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 9.1
+          "value": 13.4
         },
         {
           "name": "Cooling",
-          "value": 8.7
+          "value": 8.0
         },
         {
           "name": "DHW",
@@ -82481,7 +82481,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 41.2
+          "value": 41.0
         },
         {
           "name": "Equipment",
@@ -82489,21 +82489,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.4
+          "value": 12.4
         }
       ],
       "pv": 30.5
     },
     "EEM4": {
-      "total": 80.9,
+      "total": 88.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 8.8
+          "value": 15.5
         },
         {
           "name": "Cooling",
-          "value": 6.2
+          "value": 5.8
         },
         {
           "name": "DHW",
@@ -82511,7 +82511,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 18.6
+          "value": 18.5
         },
         {
           "name": "Equipment",
@@ -82519,7 +82519,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.3
+          "value": 9.4
         }
       ],
       "pv": 30.5
@@ -82587,15 +82587,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 28.0
     },
     "EEM2": {
-      "total": 124.8,
+      "total": 128.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 2.5
+          "value": 5.1
         },
         {
           "name": "Cooling",
-          "value": 8.5
+          "value": 8.8
         },
         {
           "name": "DHW",
@@ -82611,21 +82611,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.0
+          "value": 12.0
         }
       ],
       "pv": 28.0
     },
     "EEM3": {
-      "total": 114.7,
+      "total": 118.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.6
+          "value": 6.3
         },
         {
           "name": "Cooling",
-          "value": 8.4
+          "value": 8.8
         },
         {
           "name": "DHW",
@@ -82641,21 +82641,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.0
+          "value": 12.0
         }
       ],
       "pv": 28.0
     },
     "EEM4": {
-      "total": 70.3,
+      "total": 75.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 4.0
+          "value": 7.8
         },
         {
           "name": "Cooling",
-          "value": 5.7
+          "value": 6.0
         },
         {
           "name": "DHW",
@@ -82671,7 +82671,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 6.7
+          "value": 8.0
         }
       ],
       "pv": 28.0
@@ -82739,15 +82739,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 51.2
     },
     "EEM2": {
-      "total": 197.9,
+      "total": 209.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.9
+          "value": 31.4
         },
         {
           "name": "Cooling",
-          "value": 16.9
+          "value": 17.9
         },
         {
           "name": "DHW",
@@ -82755,7 +82755,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 65.6
+          "value": 65.3
         },
         {
           "name": "Equipment",
@@ -82763,21 +82763,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 32.5
+          "value": 34.4
         }
       ],
       "pv": 51.2
     },
     "EEM3": {
-      "total": 182.1,
+      "total": 194.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 24.0
+          "value": 33.5
         },
         {
           "name": "Cooling",
-          "value": 16.9
+          "value": 17.9
         },
         {
           "name": "DHW",
@@ -82785,7 +82785,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 65.6
+          "value": 65.3
         },
         {
           "name": "Equipment",
@@ -82793,29 +82793,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 32.5
+          "value": 34.4
         }
       ],
       "pv": 51.2
     },
     "EEM4": {
-      "total": 137.5,
+      "total": 152.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 23.4
+          "value": 34.8
         },
         {
           "name": "Cooling",
-          "value": 13.8
+          "value": 14.7
         },
         {
           "name": "DHW",
-          "value": 3.4
+          "value": 3.5
         },
         {
           "name": "Lighting",
-          "value": 36.2
+          "value": 36.1
         },
         {
           "name": "Equipment",
@@ -82823,7 +82823,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 29.7
+          "value": 32.5
         }
       ],
       "pv": 51.2
@@ -82891,23 +82891,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 54.4
     },
     "EEM2": {
-      "total": 192.4,
+      "total": 199.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 17.8
+          "value": 21.9
         },
         {
           "name": "Cooling",
-          "value": 17.6
+          "value": 18.9
         },
         {
           "name": "DHW",
-          "value": 24.0
+          "value": 24.1
         },
         {
           "name": "Lighting",
-          "value": 60.6
+          "value": 60.3
         },
         {
           "name": "Equipment",
@@ -82915,29 +82915,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 30.6
+          "value": 32.4
         }
       ],
       "pv": 54.4
     },
     "EEM3": {
-      "total": 174.7,
+      "total": 181.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 19.2
+          "value": 23.3
         },
         {
           "name": "Cooling",
-          "value": 17.5
+          "value": 18.9
         },
         {
           "name": "DHW",
-          "value": 5.0
+          "value": 5.1
         },
         {
           "name": "Lighting",
-          "value": 60.6
+          "value": 60.3
         },
         {
           "name": "Equipment",
@@ -82945,21 +82945,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 30.6
+          "value": 32.4
         }
       ],
       "pv": 54.4
     },
     "EEM4": {
-      "total": 133.4,
+      "total": 142.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 18.2
+          "value": 23.2
         },
         {
           "name": "Cooling",
-          "value": 14.5
+          "value": 15.8
         },
         {
           "name": "DHW",
@@ -82967,7 +82967,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 33.6
+          "value": 33.4
         },
         {
           "name": "Equipment",
@@ -82975,7 +82975,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 27.8
+          "value": 30.8
         }
       ],
       "pv": 54.4
@@ -83043,15 +83043,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 8.9
     },
     "EEM2": {
-      "total": 141.7,
+      "total": 139.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 2.5
+          "value": 6.2
         },
         {
           "name": "Cooling",
-          "value": 13.7
+          "value": 9.6
         },
         {
           "name": "DHW",
@@ -83059,7 +83059,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 39.8
+          "value": 40.5
         },
         {
           "name": "Equipment",
@@ -83067,29 +83067,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 20.9
+          "value": 18.1
         }
       ],
-      "pv": 8.9
+      "pv": 9.0
     },
     "EEM3": {
-      "total": 122.4,
+      "total": 120.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.0
+          "value": 6.7
         },
         {
           "name": "Cooling",
-          "value": 13.7
+          "value": 9.6
         },
         {
           "name": "DHW",
-          "value": 8.9
+          "value": 8.8
         },
         {
           "name": "Lighting",
-          "value": 39.8
+          "value": 40.5
         },
         {
           "name": "Equipment",
@@ -83097,29 +83097,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 20.9
+          "value": 18.1
         }
       ],
-      "pv": 8.9
+      "pv": 9.0
     },
     "EEM4": {
-      "total": 82.8,
+      "total": 84.7,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.1
+          "value": 8.0
         },
         {
           "name": "Cooling",
-          "value": 9.9
+          "value": 7.1
         },
         {
           "name": "DHW",
-          "value": 8.9
+          "value": 8.8
         },
         {
           "name": "Lighting",
-          "value": 20.2
+          "value": 20.8
         },
         {
           "name": "Equipment",
@@ -83127,10 +83127,10 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.7
+          "value": 14.7
         }
       ],
-      "pv": 8.9
+      "pv": 9.0
     }
   },
   "CC-FD2": {
@@ -83195,15 +83195,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 15.5
     },
     "EEM2": {
-      "total": 136.5,
+      "total": 137.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.0
+          "value": 6.7
         },
         {
           "name": "Cooling",
-          "value": 12.7
+          "value": 10.0
         },
         {
           "name": "DHW",
@@ -83211,7 +83211,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 40.8
+          "value": 41.2
         },
         {
           "name": "Equipment",
@@ -83219,51 +83219,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 14.8
+          "value": 13.8
         }
       ],
-      "pv": 15.5
+      "pv": 15.6
     },
     "EEM3": {
-      "total": 121.5,
+      "total": 121.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.9
+          "value": 7.7
         },
         {
           "name": "Cooling",
-          "value": 12.7
-        },
-        {
-          "name": "DHW",
-          "value": 6.4
-        },
-        {
-          "name": "Lighting",
-          "value": 40.8
-        },
-        {
-          "name": "Equipment",
-          "value": 33.4
-        },
-        {
-          "name": "Fans & Pumps",
-          "value": 14.9
-        }
-      ],
-      "pv": 15.5
-    },
-    "EEM4": {
-      "total": 81.4,
-      "breakdown": [
-        {
-          "name": "Heating",
-          "value": 4.7
-        },
-        {
-          "name": "Cooling",
-          "value": 9.0
+          "value": 10.0
         },
         {
           "name": "DHW",
@@ -83271,7 +83241,37 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 19.6
+          "value": 41.2
+        },
+        {
+          "name": "Equipment",
+          "value": 33.4
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 13.8
+        }
+      ],
+      "pv": 15.6
+    },
+    "EEM4": {
+      "total": 84.5,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 9.5
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 6.3
+        },
+        {
+          "name": "Lighting",
+          "value": 19.9
         },
         {
           "name": "Equipment",
@@ -83279,10 +83279,10 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 10.8
+          "value": 10.6
         }
       ],
-      "pv": 15.5
+      "pv": 15.6
     }
   },
   "CC-FD3": {
@@ -83347,15 +83347,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 13.2
     },
     "EEM2": {
-      "total": 147.1,
+      "total": 150.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 2.7
+          "value": 7.8
         },
         {
           "name": "Cooling",
-          "value": 15.5
+          "value": 12.1
         },
         {
           "name": "DHW",
@@ -83363,7 +83363,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 42.0
+          "value": 42.5
         },
         {
           "name": "Equipment",
@@ -83371,21 +83371,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.9
+          "value": 16.5
         }
       ],
       "pv": 13.2
     },
     "EEM3": {
-      "total": 127.6,
+      "total": 130.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.2
+          "value": 8.2
         },
         {
           "name": "Cooling",
-          "value": 15.5
+          "value": 12.1
         },
         {
           "name": "DHW",
@@ -83393,7 +83393,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 42.0
+          "value": 42.5
         },
         {
           "name": "Equipment",
@@ -83401,21 +83401,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.9
+          "value": 16.6
         }
       ],
       "pv": 13.2
     },
     "EEM4": {
-      "total": 87.5,
+      "total": 93.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 3.9
+          "value": 10.0
         },
         {
           "name": "Cooling",
-          "value": 11.0
+          "value": 8.9
         },
         {
           "name": "DHW",
@@ -83423,7 +83423,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 21.2
+          "value": 21.7
         },
         {
           "name": "Equipment",
@@ -83431,7 +83431,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.8
+          "value": 13.1
         }
       ],
       "pv": 13.2
@@ -83499,23 +83499,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 128.1
     },
     "EEM2": {
-      "total": 232.0,
+      "total": 256.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 19.7
+          "value": 45.6
         },
         {
           "name": "Cooling",
-          "value": 12.9
+          "value": 10.1
         },
         {
           "name": "DHW",
-          "value": 27.3
+          "value": 27.4
         },
         {
           "name": "Lighting",
-          "value": 69.9
+          "value": 69.1
         },
         {
           "name": "Equipment",
@@ -83523,51 +83523,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 24.5
+          "value": 26.9
         }
       ],
       "pv": 128.1
     },
     "EEM3": {
-      "total": 212.5,
+      "total": 236.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 24.0
+          "value": 49.8
         },
         {
           "name": "Cooling",
-          "value": 12.9
-        },
-        {
-          "name": "DHW",
-          "value": 3.5
-        },
-        {
-          "name": "Lighting",
-          "value": 69.9
-        },
-        {
-          "name": "Equipment",
-          "value": 50.0
-        },
-        {
-          "name": "Fans & Pumps",
-          "value": 24.5
-        }
-      ],
-      "pv": 128.1
-    },
-    "EEM4": {
-      "total": 162.0,
-      "breakdown": [
-        {
-          "name": "Heating",
-          "value": 29.0
-        },
-        {
-          "name": "Cooling",
-          "value": 7.5
+          "value": 10.1
         },
         {
           "name": "DHW",
@@ -83575,7 +83545,37 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 32.9
+          "value": 69.1
+        },
+        {
+          "name": "Equipment",
+          "value": 50.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 26.9
+        }
+      ],
+      "pv": 128.1
+    },
+    "EEM4": {
+      "total": 194.8,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 59.1
+        },
+        {
+          "name": "Cooling",
+          "value": 6.7
+        },
+        {
+          "name": "DHW",
+          "value": 3.5
+        },
+        {
+          "name": "Lighting",
+          "value": 32.4
         },
         {
           "name": "Equipment",
@@ -83583,7 +83583,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 20.5
+          "value": 24.6
         }
       ],
       "pv": 128.1
@@ -83651,15 +83651,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 185.5
     },
     "EEM2": {
-      "total": 322.1,
+      "total": 342.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 23.9
+          "value": 47.0
         },
         {
           "name": "Cooling",
-          "value": 16.9
+          "value": 11.3
         },
         {
           "name": "DHW",
@@ -83667,7 +83667,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 105.8
+          "value": 104.3
         },
         {
           "name": "Equipment",
@@ -83675,29 +83675,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 39.1
+          "value": 43.4
         }
       ],
       "pv": 185.5
     },
     "EEM3": {
-      "total": 299.3,
+      "total": 319.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 27.7
+          "value": 50.9
         },
         {
           "name": "Cooling",
-          "value": 16.9
+          "value": 11.3
         },
         {
           "name": "DHW",
-          "value": 2.6
+          "value": 2.7
         },
         {
           "name": "Lighting",
-          "value": 105.8
+          "value": 104.3
         },
         {
           "name": "Equipment",
@@ -83705,29 +83705,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 39.2
+          "value": 43.5
         }
       ],
       "pv": 185.5
     },
     "EEM4": {
-      "total": 228.1,
+      "total": 259.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 32.1
+          "value": 57.9
         },
         {
           "name": "Cooling",
-          "value": 8.5
+          "value": 7.3
         },
         {
           "name": "DHW",
-          "value": 2.6
+          "value": 2.8
         },
         {
           "name": "Lighting",
-          "value": 49.6
+          "value": 48.7
         },
         {
           "name": "Equipment",
@@ -83735,7 +83735,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 33.1
+          "value": 40.8
         }
       ],
       "pv": 185.5
@@ -83803,15 +83803,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 163.5
     },
     "EEM2": {
-      "total": 3669.0,
+      "total": 3688.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 18.8
+          "value": 43.1
         },
         {
           "name": "Cooling",
-          "value": 441.4
+          "value": 437.5
         },
         {
           "name": "DHW",
@@ -83819,7 +83819,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 40.7
+          "value": 40.4
         },
         {
           "name": "Equipment",
@@ -83827,29 +83827,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 340.6
+          "value": 340.9
         }
       ],
       "pv": 163.5
     },
     "EEM3": {
-      "total": 3659.1,
+      "total": 3678.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 20.3
+          "value": 44.5
         },
         {
           "name": "Cooling",
-          "value": 441.5
+          "value": 437.6
         },
         {
           "name": "DHW",
-          "value": 0.8
+          "value": 0.9
         },
         {
           "name": "Lighting",
-          "value": 40.7
+          "value": 40.4
         },
         {
           "name": "Equipment",
@@ -83857,37 +83857,37 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 340.6
+          "value": 340.9
         }
       ],
       "pv": 163.5
     },
     "EEM4": {
-      "total": 3646.4,
+      "total": 3667.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.8
+          "value": 46.4
         },
         {
           "name": "Cooling",
-          "value": 440.1
+          "value": 436.5
         },
         {
           "name": "DHW",
-          "value": 0.8
+          "value": 0.9
         },
         {
           "name": "Lighting",
-          "value": 33.2
+          "value": 33.0
         },
         {
           "name": "Equipment",
-          "value": 2711.2
+          "value": 2711.3
         },
         {
           "name": "Fans & Pumps",
-          "value": 337.9
+          "value": 339.3
         }
       ],
       "pv": 163.5
@@ -83955,91 +83955,91 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 118.7
     },
     "EEM2": {
-      "total": 11908.0,
+      "total": 11932.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.2
+          "value": 49.6
         },
         {
           "name": "Cooling",
-          "value": 1359.5
+          "value": 1358.0
         },
         {
           "name": "DHW",
-          "value": 15.4
+          "value": 15.5
         },
         {
           "name": "Lighting",
-          "value": 38.2
+          "value": 38.0
         },
         {
           "name": "Equipment",
-          "value": 9035.5
+          "value": 9035.3
         },
         {
           "name": "Fans & Pumps",
-          "value": 1119.1
+          "value": 1118.2
         }
       ],
       "pv": 118.7
     },
     "EEM3": {
-      "total": 11895.8,
+      "total": 11920.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 23.3
+          "value": 51.7
         },
         {
           "name": "Cooling",
-          "value": 1359.5
+          "value": 1358.1
         },
         {
           "name": "DHW",
-          "value": 1.2
+          "value": 1.3
         },
         {
           "name": "Lighting",
-          "value": 38.2
+          "value": 38.0
         },
         {
           "name": "Equipment",
-          "value": 9035.5
+          "value": 9035.3
         },
         {
           "name": "Fans & Pumps",
-          "value": 1119.1
+          "value": 1118.2
         }
       ],
       "pv": 118.7
     },
     "EEM4": {
-      "total": 11878.0,
+      "total": 11905.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 24.8
+          "value": 55.9
         },
         {
           "name": "Cooling",
-          "value": 1358.2
+          "value": 1356.7
         },
         {
           "name": "DHW",
-          "value": 1.2
+          "value": 1.3
         },
         {
           "name": "Lighting",
-          "value": 27.8
+          "value": 27.7
         },
         {
           "name": "Equipment",
-          "value": 9028.9
+          "value": 9028.8
         },
         {
           "name": "Fans & Pumps",
-          "value": 1118.0
+          "value": 1117.1
         }
       ],
       "pv": 118.7
@@ -84107,15 +84107,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 25.7
     },
     "EEM2": {
-      "total": 186.3,
+      "total": 207.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 12.0
+          "value": 29.6
         },
         {
           "name": "Cooling",
-          "value": 17.7
+          "value": 19.3
         },
         {
           "name": "DHW",
@@ -84131,25 +84131,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 23.0
+          "value": 25.4
         }
       ],
       "pv": 25.7
     },
     "EEM3": {
-      "total": 154.7,
+      "total": 176.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 17.0
+          "value": 34.7
         },
         {
           "name": "Cooling",
-          "value": 17.7
+          "value": 19.3
         },
         {
           "name": "DHW",
-          "value": 6.8
+          "value": 6.7
         },
         {
           "name": "Lighting",
@@ -84161,29 +84161,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 23.1
+          "value": 25.5
         }
       ],
       "pv": 25.7
     },
     "EEM4": {
-      "total": 127.6,
+      "total": 152.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 18.8
+          "value": 38.9
         },
         {
           "name": "Cooling",
-          "value": 14.4
+          "value": 16.3
         },
         {
           "name": "DHW",
-          "value": 6.8
+          "value": 6.7
         },
         {
           "name": "Lighting",
-          "value": 15.7
+          "value": 15.6
         },
         {
           "name": "Equipment",
@@ -84191,7 +84191,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 20.5
+          "value": 23.3
         }
       ],
       "pv": 25.7
@@ -84259,15 +84259,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 21.7
     },
     "EEM2": {
-      "total": 126.9,
+      "total": 144.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 9.6
+          "value": 23.5
         },
         {
           "name": "Cooling",
-          "value": 11.4
+          "value": 12.7
         },
         {
           "name": "DHW",
@@ -84275,7 +84275,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 22.7
+          "value": 22.6
         },
         {
           "name": "Equipment",
@@ -84283,21 +84283,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 10.6
+          "value": 13.4
         }
       ],
       "pv": 21.7
     },
     "EEM3": {
-      "total": 100.2,
+      "total": 118.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 14.5
+          "value": 28.4
         },
         {
           "name": "Cooling",
-          "value": 11.4
+          "value": 12.7
         },
         {
           "name": "DHW",
@@ -84305,7 +84305,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 22.7
+          "value": 22.6
         },
         {
           "name": "Equipment",
@@ -84313,29 +84313,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 10.7
+          "value": 13.5
         }
       ],
       "pv": 21.7
     },
     "EEM4": {
-      "total": 74.3,
+      "total": 94.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 16.3
+          "value": 31.7
         },
         {
           "name": "Cooling",
-          "value": 8.3
+          "value": 9.8
         },
         {
           "name": "DHW",
-          "value": 4.7
+          "value": 4.8
         },
         {
           "name": "Lighting",
-          "value": 10.2
+          "value": 10.1
         },
         {
           "name": "Equipment",
@@ -84343,7 +84343,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.4
+          "value": 11.4
         }
       ],
       "pv": 21.7
@@ -84411,15 +84411,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 47.1
     },
     "EEM2": {
-      "total": 149.2,
+      "total": 174.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 14.4
+          "value": 34.7
         },
         {
           "name": "Cooling",
-          "value": 16.2
+          "value": 17.5
         },
         {
           "name": "DHW",
@@ -84427,7 +84427,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 20.6
+          "value": 20.5
         },
         {
           "name": "Equipment",
@@ -84435,29 +84435,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 14.1
+          "value": 17.4
         }
       ],
-      "pv": 47.1
+      "pv": 47.2
     },
     "EEM3": {
-      "total": 116.1,
+      "total": 140.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 19.3
+          "value": 39.5
         },
         {
           "name": "Cooling",
-          "value": 16.2
+          "value": 17.5
         },
         {
           "name": "DHW",
-          "value": 8.6
+          "value": 8.5
         },
         {
           "name": "Lighting",
-          "value": 20.6
+          "value": 20.5
         },
         {
           "name": "Equipment",
@@ -84465,29 +84465,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 14.2
+          "value": 17.5
         }
       ],
-      "pv": 47.1
+      "pv": 47.2
     },
     "EEM4": {
-      "total": 93.5,
+      "total": 121.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.2
+          "value": 44.3
         },
         {
           "name": "Cooling",
-          "value": 12.1
+          "value": 13.7
         },
         {
           "name": "DHW",
-          "value": 8.6
+          "value": 8.5
         },
         {
           "name": "Lighting",
-          "value": 9.9
+          "value": 9.8
         },
         {
           "name": "Equipment",
@@ -84495,10 +84495,10 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 12.0
+          "value": 15.7
         }
       ],
-      "pv": 47.1
+      "pv": 47.2
     }
   },
   "MU-HS": {
@@ -84563,23 +84563,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 82.7
     },
     "EEM2": {
-      "total": 162.2,
+      "total": 184.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 16.5
+          "value": 33.8
         },
         {
           "name": "Cooling",
-          "value": 12.3
+          "value": 13.0
         },
         {
           "name": "DHW",
-          "value": 42.8
+          "value": 43.0
         },
         {
           "name": "Lighting",
-          "value": 26.8
+          "value": 26.7
         },
         {
           "name": "Equipment",
@@ -84587,29 +84587,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 13.3
+          "value": 16.9
         }
       ],
       "pv": 82.7
     },
     "EEM3": {
-      "total": 134.3,
+      "total": 156.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 19.0
+          "value": 36.3
         },
         {
           "name": "Cooling",
-          "value": 12.2
+          "value": 12.9
         },
         {
           "name": "DHW",
-          "value": 12.5
+          "value": 12.6
         },
         {
           "name": "Lighting",
-          "value": 26.8
+          "value": 26.7
         },
         {
           "name": "Equipment",
@@ -84617,29 +84617,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 13.3
+          "value": 16.9
         }
       ],
       "pv": 82.7
     },
     "EEM4": {
-      "total": 110.5,
+      "total": 132.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 20.8
+          "value": 37.8
         },
         {
           "name": "Cooling",
-          "value": 9.5
+          "value": 10.6
         },
         {
           "name": "DHW",
-          "value": 12.5
+          "value": 12.6
         },
         {
           "name": "Lighting",
-          "value": 13.3
+          "value": 13.1
         },
         {
           "name": "Equipment",
@@ -84647,7 +84647,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 12.0
+          "value": 16.1
         }
       ],
       "pv": 82.7
@@ -84715,23 +84715,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 77.3
     },
     "EEM2": {
-      "total": 145.4,
+      "total": 180.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 17.7
+          "value": 44.6
         },
         {
           "name": "Cooling",
-          "value": 9.6
+          "value": 11.2
         },
         {
           "name": "DHW",
-          "value": 45.8
+          "value": 45.9
         },
         {
           "name": "Lighting",
-          "value": 16.1
+          "value": 16.0
         },
         {
           "name": "Equipment",
@@ -84739,29 +84739,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 14.4
+          "value": 20.8
         }
       ],
       "pv": 77.3
     },
     "EEM3": {
-      "total": 115.5,
+      "total": 150.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 19.3
+          "value": 46.3
         },
         {
           "name": "Cooling",
-          "value": 9.5
+          "value": 11.1
         },
         {
           "name": "DHW",
-          "value": 14.4
+          "value": 14.6
         },
         {
           "name": "Lighting",
-          "value": 16.1
+          "value": 16.0
         },
         {
           "name": "Equipment",
@@ -84769,29 +84769,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 14.5
+          "value": 20.8
         }
       ],
       "pv": 77.3
     },
     "EEM4": {
-      "total": 93.9,
+      "total": 131.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.2
+          "value": 48.9
         },
         {
           "name": "Cooling",
-          "value": 6.3
+          "value": 8.4
         },
         {
           "name": "DHW",
-          "value": 14.5
+          "value": 14.6
         },
         {
           "name": "Lighting",
-          "value": 6.9
+          "value": 6.8
         },
         {
           "name": "Equipment",
@@ -84799,7 +84799,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.5
+          "value": 18.9
         }
       ],
       "pv": 77.3
@@ -84867,41 +84867,11 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 73.9
     },
     "EEM2": {
-      "total": 174.1,
+      "total": 193.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 16.3
-        },
-        {
-          "name": "Cooling",
-          "value": 10.9
-        },
-        {
-          "name": "DHW",
-          "value": 43.3
-        },
-        {
-          "name": "Lighting",
-          "value": 34.0
-        },
-        {
-          "name": "Equipment",
-          "value": 38.3
-        },
-        {
-          "name": "Fans & Pumps",
-          "value": 18.5
-        }
-      ],
-      "pv": 73.9
-    },
-    "EEM3": {
-      "total": 146.4,
-      "breakdown": [
-        {
-          "name": "Heating",
-          "value": 19.9
+          "value": 33.0
         },
         {
           "name": "Cooling",
@@ -84909,11 +84879,11 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "DHW",
-          "value": 12.0
+          "value": 43.4
         },
         {
           "name": "Lighting",
-          "value": 34.0
+          "value": 33.6
         },
         {
           "name": "Equipment",
@@ -84921,29 +84891,59 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 18.6
+          "value": 21.6
         }
       ],
-      "pv": 73.9
+      "pv": 74.1
     },
-    "EEM4": {
-      "total": 114.8,
+    "EEM3": {
+      "total": 165.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.0
+          "value": 36.6
         },
         {
           "name": "Cooling",
-          "value": 6.9
+          "value": 10.8
         },
         {
           "name": "DHW",
-          "value": 12.0
+          "value": 11.8
         },
         {
           "name": "Lighting",
-          "value": 16.0
+          "value": 33.6
+        },
+        {
+          "name": "Equipment",
+          "value": 38.3
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 21.7
+        }
+      ],
+      "pv": 74.1
+    },
+    "EEM4": {
+      "total": 138.6,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 40.3
+        },
+        {
+          "name": "Cooling",
+          "value": 7.8
+        },
+        {
+          "name": "DHW",
+          "value": 11.8
+        },
+        {
+          "name": "Lighting",
+          "value": 15.8
         },
         {
           "name": "Equipment",
@@ -84951,10 +84951,10 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.7
+          "value": 19.6
         }
       ],
-      "pv": 73.9
+      "pv": 74.1
     }
   },
   "MU-S2": {
@@ -85019,23 +85019,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 100.2
     },
     "EEM2": {
-      "total": 167.3,
+      "total": 188.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 14.9
+          "value": 30.8
         },
         {
           "name": "Cooling",
-          "value": 10.1
+          "value": 11.1
         },
         {
           "name": "DHW",
-          "value": 44.6
+          "value": 44.7
         },
         {
           "name": "Lighting",
-          "value": 35.0
+          "value": 34.5
         },
         {
           "name": "Equipment",
@@ -85043,21 +85043,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 17.3
+          "value": 22.2
         }
       ],
       "pv": 100.2
     },
     "EEM3": {
-      "total": 140.3,
+      "total": 161.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 17.5
+          "value": 33.5
         },
         {
           "name": "Cooling",
-          "value": 9.9
+          "value": 11.0
         },
         {
           "name": "DHW",
@@ -85065,7 +85065,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 35.0
+          "value": 34.5
         },
         {
           "name": "Equipment",
@@ -85073,21 +85073,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 17.4
+          "value": 22.2
         }
       ],
       "pv": 100.2
     },
     "EEM4": {
-      "total": 110.3,
+      "total": 134.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 18.9
+          "value": 35.6
         },
         {
           "name": "Cooling",
-          "value": 6.0
+          "value": 8.2
         },
         {
           "name": "DHW",
@@ -85095,7 +85095,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 16.5
+          "value": 16.2
         },
         {
           "name": "Equipment",
@@ -85103,7 +85103,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.8
+          "value": 21.0
         }
       ],
       "pv": 100.2
@@ -85171,15 +85171,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 20.5
     },
     "EEM2": {
-      "total": 111.6,
+      "total": 130.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 7.4
+          "value": 22.2
         },
         {
           "name": "Cooling",
-          "value": 11.3
+          "value": 13.0
         },
         {
           "name": "DHW",
@@ -85195,21 +85195,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 9.5
+          "value": 12.5
         }
       ],
       "pv": 20.5
     },
     "EEM3": {
-      "total": 88.3,
+      "total": 107.7,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.5
+          "value": 26.3
         },
         {
           "name": "Cooling",
-          "value": 11.3
+          "value": 13.0
         },
         {
           "name": "DHW",
@@ -85225,21 +85225,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 9.6
+          "value": 12.5
         }
       ],
       "pv": 20.5
     },
     "EEM4": {
-      "total": 62.5,
+      "total": 84.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 13.8
+          "value": 30.5
         },
         {
           "name": "Cooling",
-          "value": 8.0
+          "value": 9.8
         },
         {
           "name": "DHW",
@@ -85247,7 +85247,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 9.6
+          "value": 9.5
         },
         {
           "name": "Equipment",
@@ -85255,7 +85255,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.3
+          "value": 10.4
         }
       ],
       "pv": 20.5
@@ -85323,15 +85323,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 78.1
     },
     "EEM2": {
-      "total": 128.5,
+      "total": 178.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 23.7
+          "value": 62.9
         },
         {
           "name": "Cooling",
-          "value": 6.2
+          "value": 7.3
         },
         {
           "name": "DHW",
@@ -85339,7 +85339,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 14.1
+          "value": 13.8
         },
         {
           "name": "Equipment",
@@ -85347,29 +85347,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 12.8
+          "value": 23.0
         }
       ],
       "pv": 78.1
     },
     "EEM3": {
-      "total": 106.0,
+      "total": 156.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 25.5
+          "value": 64.8
         },
         {
           "name": "Cooling",
-          "value": 6.1
+          "value": 7.2
         },
         {
           "name": "DHW",
-          "value": 9.4
+          "value": 9.6
         },
         {
           "name": "Lighting",
-          "value": 14.1
+          "value": 13.8
         },
         {
           "name": "Equipment",
@@ -85377,29 +85377,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 12.8
+          "value": 23.0
         }
       ],
       "pv": 78.1
     },
     "EEM4": {
-      "total": 91.8,
+      "total": 143.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 26.9
+          "value": 66.5
         },
         {
           "name": "Cooling",
-          "value": 4.3
+          "value": 5.7
         },
         {
           "name": "DHW",
-          "value": 9.5
+          "value": 9.6
         },
         {
           "name": "Lighting",
-          "value": 6.7
+          "value": 6.5
         },
         {
           "name": "Equipment",
@@ -85407,7 +85407,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.3
+          "value": 21.9
         }
       ],
       "pv": 78.1
@@ -85475,15 +85475,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 118.5
     },
     "EEM2": {
-      "total": 122.1,
+      "total": 203.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 36.4
+          "value": 101.3
         },
         {
           "name": "Cooling",
-          "value": 3.4
+          "value": 3.8
         },
         {
           "name": "DHW",
@@ -85491,7 +85491,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 20.5
+          "value": 20.0
         },
         {
           "name": "Equipment",
@@ -85499,21 +85499,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.3
+          "value": 31.9
         }
       ],
       "pv": 118.5
     },
     "EEM3": {
-      "total": 110.4,
+      "total": 191.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 38.2
+          "value": 103.1
         },
         {
           "name": "Cooling",
-          "value": 3.4
+          "value": 3.8
         },
         {
           "name": "DHW",
@@ -85521,7 +85521,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 20.5
+          "value": 20.0
         },
         {
           "name": "Equipment",
@@ -85529,21 +85529,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.3
+          "value": 31.9
         }
       ],
       "pv": 118.5
     },
     "EEM4": {
-      "total": 96.3,
+      "total": 179.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 41.7
+          "value": 106.7
         },
         {
           "name": "Cooling",
-          "value": 2.1
+          "value": 2.8
         },
         {
           "name": "DHW",
@@ -85551,7 +85551,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 9.7
+          "value": 9.4
         },
         {
           "name": "Equipment",
@@ -85559,7 +85559,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 12.5
+          "value": 30.4
         }
       ],
       "pv": 118.5
@@ -85627,19 +85627,19 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 100.4
     },
     "EEM2": {
-      "total": 142.3,
+      "total": 177.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 33.3
+          "value": 67.5
         },
         {
           "name": "Cooling",
-          "value": 9.7
+          "value": 9.0
         },
         {
           "name": "DHW",
-          "value": 26.1
+          "value": 27.2
         },
         {
           "name": "Lighting",
@@ -85651,25 +85651,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.4
+          "value": 7.7
         }
       ],
       "pv": 100.4
     },
     "EEM3": {
-      "total": 123.6,
+      "total": 157.7,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 37.3
+          "value": 71.5
         },
         {
           "name": "Cooling",
-          "value": 9.7
+          "value": 9.0
         },
         {
           "name": "DHW",
-          "value": 3.3
+          "value": 3.5
         },
         {
           "name": "Lighting",
@@ -85681,25 +85681,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.6
+          "value": 7.9
         }
       ],
       "pv": 100.4
     },
     "EEM4": {
-      "total": 103.3,
+      "total": 138.7,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 45.4
+          "value": 80.8
         },
         {
           "name": "Cooling",
-          "value": 7.9
+          "value": 7.5
         },
         {
           "name": "DHW",
-          "value": 3.3
+          "value": 3.5
         },
         {
           "name": "Lighting",
@@ -85711,7 +85711,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.3
+          "value": 7.6
         }
       ],
       "pv": 100.4
@@ -85779,19 +85779,19 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 45.8
     },
     "EEM2": {
-      "total": 114.7,
+      "total": 142.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 9.7
+          "value": 28.8
         },
         {
           "name": "Cooling",
-          "value": 15.4
+          "value": 19.0
         },
         {
           "name": "DHW",
-          "value": 51.2
+          "value": 51.3
         },
         {
           "name": "Lighting",
@@ -85803,21 +85803,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 9.8
+          "value": 14.6
         }
       ],
       "pv": 45.8
     },
     "EEM3": {
-      "total": 79.3,
+      "total": 106.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 13.4
+          "value": 32.5
         },
         {
           "name": "Cooling",
-          "value": 15.3
+          "value": 19.0
         },
         {
           "name": "DHW",
@@ -85833,21 +85833,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 9.9
+          "value": 14.7
         }
       ],
       "pv": 45.8
     },
     "EEM4": {
-      "total": 63.3,
+      "total": 93.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 15.0
+          "value": 36.2
         },
         {
           "name": "Cooling",
-          "value": 10.8
+          "value": 14.4
         },
         {
           "name": "DHW",
@@ -85855,7 +85855,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 2.6
+          "value": 2.5
         },
         {
           "name": "Equipment",
@@ -85863,7 +85863,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.7
+          "value": 13.7
         }
       ],
       "pv": 45.8
@@ -85931,15 +85931,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 28.8
     },
     "EEM2": {
-      "total": 125.8,
+      "total": 155.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 9.8
+          "value": 30.5
         },
         {
           "name": "Cooling",
-          "value": 20.0
+          "value": 24.4
         },
         {
           "name": "DHW",
@@ -85955,21 +85955,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 10.6
+          "value": 15.5
         }
       ],
       "pv": 28.8
     },
     "EEM3": {
-      "total": 83.7,
+      "total": 113.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 16.2
+          "value": 37.0
         },
         {
           "name": "Cooling",
-          "value": 20.0
+          "value": 24.4
         },
         {
           "name": "DHW",
@@ -85985,29 +85985,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 10.8
+          "value": 15.7
         }
       ],
       "pv": 28.8
     },
     "EEM4": {
-      "total": 67.7,
+      "total": 100.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 19.3
+          "value": 42.9
         },
         {
           "name": "Cooling",
-          "value": 14.2
+          "value": 18.5
         },
         {
           "name": "DHW",
-          "value": 8.0
+          "value": 8.2
         },
         {
           "name": "Lighting",
-          "value": 2.3
+          "value": 2.2
         },
         {
           "name": "Equipment",
@@ -86015,7 +86015,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 9.2
+          "value": 14.4
         }
       ],
       "pv": 28.8
@@ -86083,19 +86083,19 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 92.8
     },
     "EEM2": {
-      "total": 143.6,
+      "total": 176.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 27.3
+          "value": 59.2
         },
         {
           "name": "Cooling",
-          "value": 9.2
+          "value": 8.5
         },
         {
           "name": "DHW",
-          "value": 28.6
+          "value": 30.0
         },
         {
           "name": "Lighting",
@@ -86107,25 +86107,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.4
+          "value": 7.7
         }
       ],
       "pv": 92.8
     },
     "EEM3": {
-      "total": 124.6,
+      "total": 156.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 29.5
+          "value": 61.4
         },
         {
           "name": "Cooling",
-          "value": 9.2
+          "value": 8.4
         },
         {
           "name": "DHW",
-          "value": 7.3
+          "value": 7.8
         },
         {
           "name": "Lighting",
@@ -86137,25 +86137,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.5
+          "value": 7.8
         }
       ],
       "pv": 92.8
     },
     "EEM4": {
-      "total": 102.2,
+      "total": 135.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 37.9
+          "value": 71.2
         },
         {
           "name": "Cooling",
-          "value": 7.2
+          "value": 6.7
         },
         {
           "name": "DHW",
-          "value": 7.3
+          "value": 7.8
         },
         {
           "name": "Lighting",
@@ -86167,7 +86167,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.2
+          "value": 7.5
         }
       ],
       "pv": 92.8
@@ -86235,19 +86235,19 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 74.6
     },
     "EEM2": {
-      "total": 111.7,
+      "total": 129.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 10.2
+          "value": 24.9
         },
         {
           "name": "Cooling",
-          "value": 10.4
+          "value": 11.3
         },
         {
           "name": "DHW",
-          "value": 39.5
+          "value": 40.0
         },
         {
           "name": "Lighting",
@@ -86259,25 +86259,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.3
+          "value": 10.3
         }
       ],
       "pv": 74.6
     },
     "EEM3": {
-      "total": 87.3,
+      "total": 105.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 10.4
+          "value": 25.1
         },
         {
           "name": "Cooling",
-          "value": 10.2
+          "value": 11.1
         },
         {
           "name": "DHW",
-          "value": 15.0
+          "value": 15.3
         },
         {
           "name": "Lighting",
@@ -86289,25 +86289,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.4
+          "value": 10.4
         }
       ],
       "pv": 74.6
     },
     "EEM4": {
-      "total": 69.1,
+      "total": 77.0,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 13.4
+          "value": 17.5
         },
         {
           "name": "Cooling",
-          "value": 7.5
+          "value": 8.5
         },
         {
           "name": "DHW",
-          "value": 15.1
+          "value": 15.3
         },
         {
           "name": "Lighting",
@@ -86319,7 +86319,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.7
+          "value": 10.3
         }
       ],
       "pv": 74.6
@@ -86387,15 +86387,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 66.8
     },
     "EEM2": {
-      "total": 101.2,
+      "total": 125.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 10.9
+          "value": 28.9
         },
         {
           "name": "Cooling",
-          "value": 8.8
+          "value": 10.8
         },
         {
           "name": "DHW",
@@ -86411,21 +86411,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.8
+          "value": 13.3
         }
       ],
       "pv": 66.8
     },
     "EEM3": {
-      "total": 73.7,
+      "total": 98.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.0
+          "value": 29.0
         },
         {
           "name": "Cooling",
-          "value": 8.5
+          "value": 10.7
         },
         {
           "name": "DHW",
@@ -86441,21 +86441,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.9
+          "value": 13.4
         }
       ],
       "pv": 66.8
     },
     "EEM4": {
-      "total": 58.5,
+      "total": 84.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.1
+          "value": 30.0
         },
         {
           "name": "Cooling",
-          "value": 6.0
+          "value": 8.4
         },
         {
           "name": "DHW",
@@ -86471,7 +86471,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.1
+          "value": 12.8
         }
       ],
       "pv": 66.8
@@ -86539,15 +86539,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 66.8
     },
     "EEM2": {
-      "total": 101.0,
+      "total": 125.7,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.0
+          "value": 29.4
         },
         {
           "name": "Cooling",
-          "value": 8.4
+          "value": 10.2
         },
         {
           "name": "DHW",
@@ -86563,21 +86563,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.7
+          "value": 13.3
         }
       ],
       "pv": 66.8
     },
     "EEM3": {
-      "total": 73.4,
+      "total": 98.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.2
+          "value": 29.5
         },
         {
           "name": "Cooling",
-          "value": 8.2
+          "value": 10.1
         },
         {
           "name": "DHW",
@@ -86593,21 +86593,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.8
+          "value": 13.4
         }
       ],
       "pv": 66.8
     },
     "EEM4": {
-      "total": 58.3,
+      "total": 84.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.2
+          "value": 30.4
         },
         {
           "name": "Cooling",
-          "value": 5.7
+          "value": 7.9
         },
         {
           "name": "DHW",
@@ -86615,7 +86615,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 3.0
+          "value": 2.9
         },
         {
           "name": "Equipment",
@@ -86623,7 +86623,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.0
+          "value": 12.7
         }
       ],
       "pv": 66.8
@@ -86691,19 +86691,19 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 90.4
     },
     "EEM2": {
-      "total": 141.4,
+      "total": 175.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 31.8
+          "value": 65.4
         },
         {
           "name": "Cooling",
-          "value": 10.3
+          "value": 9.5
         },
         {
           "name": "DHW",
-          "value": 26.1
+          "value": 27.2
         },
         {
           "name": "Lighting",
@@ -86715,25 +86715,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.5
+          "value": 7.8
         }
       ],
       "pv": 90.4
     },
     "EEM3": {
-      "total": 122.8,
+      "total": 156.3,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 35.8
+          "value": 69.4
         },
         {
           "name": "Cooling",
-          "value": 10.2
+          "value": 9.5
         },
         {
           "name": "DHW",
-          "value": 3.3
+          "value": 3.5
         },
         {
           "name": "Lighting",
@@ -86745,25 +86745,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.7
+          "value": 8.0
         }
       ],
       "pv": 90.4
     },
     "EEM4": {
-      "total": 102.3,
+      "total": 137.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 43.8
+          "value": 78.6
         },
         {
           "name": "Cooling",
-          "value": 8.4
+          "value": 8.0
         },
         {
           "name": "DHW",
-          "value": 3.3
+          "value": 3.5
         },
         {
           "name": "Lighting",
@@ -86775,7 +86775,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.4
+          "value": 7.7
         }
       ],
       "pv": 90.4
@@ -86843,19 +86843,19 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 85.2
     },
     "EEM2": {
-      "total": 145.0,
+      "total": 175.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.0
+          "value": 50.5
         },
         {
           "name": "Cooling",
-          "value": 8.8
+          "value": 7.9
         },
         {
           "name": "DHW",
-          "value": 31.3
+          "value": 32.9
         },
         {
           "name": "Lighting",
@@ -86867,25 +86867,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.4
+          "value": 7.7
         }
       ],
       "pv": 85.2
     },
     "EEM3": {
-      "total": 125.6,
+      "total": 155.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 21.4
+          "value": 50.8
         },
         {
           "name": "Cooling",
-          "value": 8.7
+          "value": 7.9
         },
         {
           "name": "DHW",
-          "value": 11.6
+          "value": 12.3
         },
         {
           "name": "Lighting",
@@ -86897,25 +86897,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.4
+          "value": 7.7
         }
       ],
       "pv": 85.2
     },
     "EEM4": {
-      "total": 101.1,
+      "total": 132.7,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 30.0
+          "value": 61.1
         },
         {
           "name": "Cooling",
-          "value": 6.4
+          "value": 6.0
         },
         {
           "name": "DHW",
-          "value": 11.6
+          "value": 12.3
         },
         {
           "name": "Lighting",
@@ -86927,7 +86927,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 7.1
+          "value": 7.4
         }
       ],
       "pv": 85.2
@@ -86995,23 +86995,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 109.8
     },
     "EEM2": {
-      "total": 145.9,
+      "total": 166.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 13.1
+          "value": 27.5
         },
         {
           "name": "Cooling",
-          "value": 10.4
+          "value": 11.8
         },
         {
           "name": "DHW",
-          "value": 41.7
+          "value": 41.9
         },
         {
           "name": "Lighting",
-          "value": 19.7
+          "value": 19.4
         },
         {
           "name": "Equipment",
@@ -87019,51 +87019,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 13.4
+          "value": 18.1
         }
       ],
       "pv": 109.8
     },
     "EEM3": {
-      "total": 119.8,
+      "total": 139.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 15.7
+          "value": 30.0
         },
         {
           "name": "Cooling",
-          "value": 10.3
-        },
-        {
-          "name": "DHW",
-          "value": 13.1
-        },
-        {
-          "name": "Lighting",
-          "value": 19.7
-        },
-        {
-          "name": "Equipment",
-          "value": 43.0
-        },
-        {
-          "name": "Fans & Pumps",
-          "value": 13.4
-        }
-      ],
-      "pv": 109.8
-    },
-    "EEM4": {
-      "total": 96.1,
-      "breakdown": [
-        {
-          "name": "Heating",
-          "value": 17.4
-        },
-        {
-          "name": "Cooling",
-          "value": 7.4
+          "value": 11.7
         },
         {
           "name": "DHW",
@@ -87071,7 +87041,37 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 8.9
+          "value": 19.4
+        },
+        {
+          "name": "Equipment",
+          "value": 43.0
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 18.2
+        }
+      ],
+      "pv": 109.8
+    },
+    "EEM4": {
+      "total": 116.4,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 31.3
+        },
+        {
+          "name": "Cooling",
+          "value": 9.2
+        },
+        {
+          "name": "DHW",
+          "value": 13.3
+        },
+        {
+          "name": "Lighting",
+          "value": 8.7
         },
         {
           "name": "Equipment",
@@ -87079,7 +87079,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.6
+          "value": 16.9
         }
       ],
       "pv": 109.8
@@ -87147,23 +87147,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 84.4
     },
     "EEM2": {
-      "total": 122.2,
+      "total": 145.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 14.3
+          "value": 32.3
         },
         {
           "name": "Cooling",
-          "value": 7.9
+          "value": 9.2
         },
         {
           "name": "DHW",
-          "value": 30.9
+          "value": 31.0
         },
         {
           "name": "Lighting",
-          "value": 25.6
+          "value": 25.2
         },
         {
           "name": "Equipment",
@@ -87171,51 +87171,21 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 10.6
+          "value": 15.2
         }
       ],
       "pv": 84.4
     },
     "EEM3": {
-      "total": 103.8,
+      "total": 127.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 16.1
+          "value": 34.2
         },
         {
           "name": "Cooling",
-          "value": 7.9
-        },
-        {
-          "name": "DHW",
-          "value": 10.7
-        },
-        {
-          "name": "Lighting",
-          "value": 25.6
-        },
-        {
-          "name": "Equipment",
-          "value": 29.5
-        },
-        {
-          "name": "Fans & Pumps",
-          "value": 10.7
-        }
-      ],
-      "pv": 84.4
-    },
-    "EEM4": {
-      "total": 76.9,
-      "breakdown": [
-        {
-          "name": "Heating",
-          "value": 17.3
-        },
-        {
-          "name": "Cooling",
-          "value": 5.5
+          "value": 9.1
         },
         {
           "name": "DHW",
@@ -87223,7 +87193,37 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 11.1
+          "value": 25.2
+        },
+        {
+          "name": "Equipment",
+          "value": 29.5
+        },
+        {
+          "name": "Fans & Pumps",
+          "value": 15.3
+        }
+      ],
+      "pv": 84.4
+    },
+    "EEM4": {
+      "total": 103.9,
+      "breakdown": [
+        {
+          "name": "Heating",
+          "value": 37.4
+        },
+        {
+          "name": "Cooling",
+          "value": 7.2
+        },
+        {
+          "name": "DHW",
+          "value": 10.8
+        },
+        {
+          "name": "Lighting",
+          "value": 10.9
         },
         {
           "name": "Equipment",
@@ -87231,7 +87231,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 8.6
+          "value": 14.0
         }
       ],
       "pv": 84.4
@@ -87299,23 +87299,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 137.6
     },
     "EEM2": {
-      "total": 154.0,
+      "total": 170.4,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.7
+          "value": 23.1
         },
         {
           "name": "Cooling",
-          "value": 10.0
+          "value": 10.8
         },
         {
           "name": "DHW",
-          "value": 27.3
+          "value": 27.7
         },
         {
           "name": "Lighting",
-          "value": 29.1
+          "value": 28.6
         },
         {
           "name": "Equipment",
@@ -87323,29 +87323,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 13.9
+          "value": 18.7
         }
       ],
       "pv": 137.6
     },
     "EEM3": {
-      "total": 135.7,
+      "total": 151.9,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 13.5
+          "value": 24.9
         },
         {
           "name": "Cooling",
-          "value": 9.9
+          "value": 10.7
         },
         {
           "name": "DHW",
-          "value": 7.2
+          "value": 7.4
         },
         {
           "name": "Lighting",
-          "value": 29.1
+          "value": 28.6
         },
         {
           "name": "Equipment",
@@ -87353,29 +87353,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 13.9
+          "value": 18.7
         }
       ],
       "pv": 137.6
     },
     "EEM4": {
-      "total": 103.4,
+      "total": 120.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 16.1
+          "value": 27.2
         },
         {
           "name": "Cooling",
-          "value": 7.4
+          "value": 8.8
         },
         {
           "name": "DHW",
-          "value": 7.2
+          "value": 7.4
         },
         {
           "name": "Lighting",
-          "value": 13.5
+          "value": 13.3
         },
         {
           "name": "Equipment",
@@ -87383,7 +87383,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 12.5
+          "value": 18.1
         }
       ],
       "pv": 137.6
@@ -87451,15 +87451,15 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 91.3
     },
     "EEM2": {
-      "total": 115.5,
+      "total": 140.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 11.7
+          "value": 29.6
         },
         {
           "name": "Cooling",
-          "value": 8.6
+          "value": 10.1
         },
         {
           "name": "DHW",
@@ -87467,7 +87467,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Lighting",
-          "value": 22.9
+          "value": 22.4
         },
         {
           "name": "Equipment",
@@ -87475,29 +87475,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.7
+          "value": 17.9
         }
       ],
       "pv": 91.3
     },
     "EEM3": {
-      "total": 96.6,
+      "total": 121.8,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 12.7
+          "value": 30.7
         },
         {
           "name": "Cooling",
-          "value": 8.4
+          "value": 10.0
         },
         {
           "name": "DHW",
-          "value": 12.2
+          "value": 12.3
         },
         {
           "name": "Lighting",
-          "value": 22.9
+          "value": 22.4
         },
         {
           "name": "Equipment",
@@ -87505,29 +87505,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 11.8
+          "value": 17.9
         }
       ],
       "pv": 91.3
     },
     "EEM4": {
-      "total": 72.3,
+      "total": 99.1,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 15.1
+          "value": 32.6
         },
         {
           "name": "Cooling",
-          "value": 5.8
+          "value": 8.1
         },
         {
           "name": "DHW",
-          "value": 12.2
+          "value": 12.3
         },
         {
           "name": "Lighting",
-          "value": 9.6
+          "value": 9.3
         },
         {
           "name": "Equipment",
@@ -87535,7 +87535,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 9.2
+          "value": 16.5
         }
       ],
       "pv": 91.3
@@ -87603,23 +87603,23 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
       "pv": 97.4
     },
     "EEM2": {
-      "total": 186.8,
+      "total": 197.2,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 15.6
+          "value": 24.6
         },
         {
           "name": "Cooling",
-          "value": 11.4
+          "value": 10.9
         },
         {
           "name": "DHW",
-          "value": 41.4
+          "value": 41.9
         },
         {
           "name": "Lighting",
-          "value": 25.5
+          "value": 25.4
         },
         {
           "name": "Equipment",
@@ -87627,29 +87627,29 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.1
+          "value": 16.7
         }
       ],
       "pv": 97.4
     },
     "EEM3": {
-      "total": 159.4,
+      "total": 169.5,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 20.4
+          "value": 29.4
         },
         {
           "name": "Cooling",
-          "value": 11.4
+          "value": 10.8
         },
         {
           "name": "DHW",
-          "value": 9.2
+          "value": 9.4
         },
         {
           "name": "Lighting",
-          "value": 25.5
+          "value": 25.4
         },
         {
           "name": "Equipment",
@@ -87657,25 +87657,25 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 15.2
+          "value": 16.8
         }
       ],
       "pv": 97.4
     },
     "EEM4": {
-      "total": 127.4,
+      "total": 137.6,
       "breakdown": [
         {
           "name": "Heating",
-          "value": 23.2
+          "value": 31.5
         },
         {
           "name": "Cooling",
-          "value": 8.6
+          "value": 8.4
         },
         {
           "name": "DHW",
-          "value": 9.3
+          "value": 9.4
         },
         {
           "name": "Lighting",
@@ -87687,7 +87687,7 @@ ENVELOPE_ENERGY_DATA["vintage-1983-z6"] = {
         },
         {
           "name": "Fans & Pumps",
-          "value": 13.8
+          "value": 15.7
         }
       ],
       "pv": 97.4
